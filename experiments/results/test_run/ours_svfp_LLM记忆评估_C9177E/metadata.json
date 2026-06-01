@@ -1,0 +1,28 @@
+{
+  "baseline": "ours_svfp",
+  "arxiv_id": "LLM记忆评估_C9177E",
+  "paper_title": "LLM记忆评估_C9177E",
+  "started_at": "2026-06-01T10:21:41+00:00",
+  "finished_at": "2026-06-01T10:21:50+00:00",
+  "total_latency_ms": 9181.832541013137,
+  "exit_code": 0,
+  "error": "",
+  "config": {
+    "name": "ours_svfp",
+    "module": "experiments.baselines.ours_svfp",
+    "class": "OursSVFPRunner",
+    "description": "Our system with full SVFP feedback loop (use_commenter=true, max_iter=2).",
+    "use_commenter": true,
+    "max_iterations": 2,
+    "timeout_s": 1800,
+    "planner_source": "heuristic",
+    "feedback_mode": "svfp_closed_set",
+    "action_executability": 1.0,
+    "n_executed": 6,
+    "n_attempts": 6,
+    "n_iterations": 2,
+    "converged": true,
+    "convergence_reason": "no_issues",
+    "per_iter_visual_gain": 3.5999999999999996
+  }
+}
