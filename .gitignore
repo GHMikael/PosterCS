@@ -1,0 +1,61 @@
+# Local IDE / agent config
+.claude/
+
+# Python
+.venv/
+.venv312/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+.ipynb_checkpoints/
+
+# Secrets — never commit
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Generated / runtime artifacts
+outputs/
+orgin_cache3/
+orgin_cache2/
+origin_cache/
+origin_cache4/
+static/assets/
+static/tmp_*.png
+static/poster_debug_*.png
+static/*.png
+static/*.jpg
+static/*.jpeg
+*.pptx
+*.log
+
+# Experiments — heavy / generated artifacts (don't commit)
+experiments/datasets/papers/*.pdf
+experiments/datasets/gold/*/figures/
+experiments/baselines/_vendor/
+experiments/results/artifacts/
+experiments/results/metrics/
+experiments/results/aggregate/
+experiments/results/figures/
+experiments/results/artifacts_e1_preflight/
+experiments/results/artifacts_e1_smoke/
+experiments/results/artifacts_e2_preflight/
+experiments/results/metrics_e1_preflight/
+experiments/results/metrics_e2_preflight/
+experiments/results/aggregate_e1_preflight/
+experiments/results/batch_dify_report.json
+experiments/results/batch_dify_console.log
+experiments/results/import_report.json
+experiments/results/figure_audit.json
+experiments/datasets/planner_cache_raw/
+experiments/scratch/_workspace/
+experiments/scratch/reextract_test/
+experiments/.cache/
+experiments/results/user_study/
+experiments/results/expert_ratings.csv
+experiments/notebooks/*.ipynb
+
+# Keep planner_cache (frozen snapshots for reproducibility)
+!experiments/datasets/planner_cache/*.json
