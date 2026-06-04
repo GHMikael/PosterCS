@@ -75,7 +75,7 @@ def _build_context(cell_dir: Path, metric_config: Dict[str, Any], papers_manifes
             panels_json = json.loads(panels_path.read_text(encoding="utf-8"))
         except Exception:
             panels_json = None
-    pdf_path = Path(papers_manifest.get(arxiv_id, {}).get("source_pdf") or Path("experiments/datasets/papers") / f"{arxiv_id}.pdf")
+    pdf_path = Path(papers_manifest.get(arxiv_id, {}).get("source_pdf") or Path("datasets/papers") / f"{arxiv_id}.pdf")
     log_path = cell_dir / "experiment_log.jsonl"
     png_path = cell_dir / "poster.png"
     return MetricContext(

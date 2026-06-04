@@ -28,7 +28,7 @@ For each ``input.json`` we:
 
 1. Read its ``poster_title`` field.
 2. Normalise it (lowercase, strip whitespace).
-3. For each PDF in ``experiments/datasets/papers/``, extract the
+3. For each PDF in ``datasets/papers/``, extract the
    first-page text via PyMuPDF and normalise the same way.
 4. **Strong match**: the first 30 normalised chars of the title appear
    verbatim in the normalised page-1 text. Empirically, this finds the
@@ -47,7 +47,7 @@ Resolution rules:
 Output
 ------
 
-Writes ``experiments/datasets/planner_cache/<pdf_stem>.json`` per match.
+Writes ``datasets/planner_cache/<pdf_stem>.json`` per match.
 Refuses to overwrite an existing cache entry unless ``--force`` is set.
 Prints a summary table and (with ``--report-path``) a JSON report.
 """
@@ -65,8 +65,8 @@ import fitz  # PyMuPDF
 
 
 DEFAULT_RUNS_DIR = Path("outputs/runs")
-DEFAULT_PAPERS_DIR = Path("experiments/datasets/papers")
-DEFAULT_CACHE_DIR = Path("experiments/datasets/planner_cache")
+DEFAULT_PAPERS_DIR = Path("datasets/papers")
+DEFAULT_CACHE_DIR = Path("datasets/planner_cache")
 
 
 def _normalise(s: str) -> str:

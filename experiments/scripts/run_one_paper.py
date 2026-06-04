@@ -3,7 +3,7 @@
 Usage::
 
     .venv312/bin/python -m experiments.scripts.run_one_paper \\
-        --paper experiments/datasets/papers/2405.12345.pdf \\
+        --paper datasets/papers/2405.12345.pdf \\
         --baseline ours_svfp \\
         --out experiments/results/artifacts/_smoke
 

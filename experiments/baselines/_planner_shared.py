@@ -3,7 +3,7 @@
 Three strategies live here, in priority order for the ``Ours`` runners:
 
 1. :func:`cached_plan` — load a pre-recorded ``PosterTask`` JSON from
-   ``experiments/datasets/planner_cache/<arxiv_id>.json``. **This is how
+   ``datasets/planner_cache/<arxiv_id>.json``. **This is how
    experiments stay faithful to the production Dify pipeline**: you run
    the 30 papers through your real Dify workflow once, capture each
    produced PosterTask JSON, and check those into the planner cache.
@@ -41,7 +41,7 @@ __all__ = [
 ]
 
 
-PLANNER_CACHE_DIR = Path("experiments/datasets/planner_cache")
+PLANNER_CACHE_DIR = Path("datasets/planner_cache")
 
 
 _SECTION_PATTERNS: List[Tuple[str, List[str]]] = [
@@ -97,7 +97,7 @@ def cached_plan(
        payload (or pull it from the FastAPI logs via
        ``outputs/runs/<run>/input.json``).
     3. Copy each ``input.json`` to
-       ``experiments/datasets/planner_cache/<arxiv_id>.json``.
+       ``datasets/planner_cache/<arxiv_id>.json``.
 
     Returns ``None`` when no cache exists, so callers can fall back to
     ``heuristic_plan`` (M2) or ``gpt4o_plan`` (M3 ablation).

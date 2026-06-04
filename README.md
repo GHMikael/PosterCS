@@ -6,7 +6,7 @@
 
 Given a CS paper PDF, the system produces an editable A3 conference poster PPTX through a Dify **Chatflow** (content planning) and a Python renderer with an optional **SVFP closed-loop** (VLM critique → deterministic repair → convergence trace). Long-running jobs use **async HTTP + server-side long polling** for Dify compatibility.
 
-**Research framing (v3):** SVFP remains the primary contribution, now with E1/E2 preflight code in place, bounded-latency VLM calls, a cleaner figure pipeline, and an explicit list of remaining paper-strengthening work. See [`RESEARCH_DIRECTION_v3.md`](RESEARCH_DIRECTION_v3.md).
+**Research framing (v3):** SVFP remains the primary contribution, now with E1/E2 preflight code in place, bounded-latency VLM calls, a cleaner figure pipeline, and an explicit list of remaining paper-strengthening work. See [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md).
 
 ---
 
@@ -66,7 +66,7 @@ Aggregated from 15 metric JSON files (5 papers × 3 baselines). **None survive B
 
 **Historical pilot note:** in the original n=5 pilot, `ours_svfp` and `ours_no_svfp` had identical content because the loop was effectively layout-only. In v5.3, `reduce_bullet_count` is content-preserving rather than content-dropping, so content metrics must be recomputed before making new claims.
 
-**Current state:** E1/E2 preflight code paths are implemented and smoke-tested. Official n=30, independent visual validation, E3 ablation, user study, and external SOTA remain open. See [`RESEARCH_DIRECTION_v3.md`](RESEARCH_DIRECTION_v3.md).
+**Current state:** E1/E2 preflight code paths are implemented and smoke-tested. Official n=30, independent visual validation, E3 ablation, user study, and external SOTA remain open. See [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md).
 
 ---
 
@@ -106,8 +106,7 @@ poster_agent_backend/
 │   ├── metrics/                 # content, visual, protocol, user/pending, engineering
 │   ├── scripts/                 # batch_dify_runs, run_matrix, audit_figures, …
 │   └── datasets/planner_cache/  # 30 frozen PosterTask snapshots
-├── RESEARCH_DIRECTION_v3.md     # Current technical status & next optimization plan
-├── INTERNAL_EXPERIMENT_GUIDE.md # L0→L8 step-by-step ops manual
+├── PROJECT_OPTIMIZATION_DIRECTION_v4.md     # Current technical status & next optimization plan
 └── .env.example
 ```
 
@@ -193,7 +192,6 @@ python experiments/scripts/audit_figures.py --dry-run   # no API calls
 python experiments/scripts/audit_figures.py --limit 3   # smoke
 ```
 
-Details: [`experiments/README.md`](experiments/README.md) · [`INTERNAL_EXPERIMENT_GUIDE.md`](INTERNAL_EXPERIMENT_GUIDE.md)
 
 ---
 
@@ -228,9 +226,7 @@ python -m pytest experiments/tests/ -q
 | Doc | Audience | Content |
 |-----|----------|---------|
 | **README** (this file) | New clones | Overview, quick start, honest pilot summary |
-| [`RESEARCH_DIRECTION_v3.md`](RESEARCH_DIRECTION_v3.md) | Paper authors | Current status, remaining risks, next optimization plan |
-| [`RESEARCH_DIRECTION_v2.md`](RESEARCH_DIRECTION_v2.md) | Paper authors | Historical v2 pivot and original backlog |
-| [`INTERNAL_EXPERIMENT_GUIDE.md`](INTERNAL_EXPERIMENT_GUIDE.md) | Operators | L0→L8 commands, pitfalls |
+| [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md) | Paper authors | Current status, remaining risks, next optimization plan |
 | [`dify/DIFY_WORKFLOW_AND_PAPER_DESIGN.md`](dify/DIFY_WORKFLOW_AND_PAPER_DESIGN.md) | Method section | Chatflow topology & agent design |
 
 ---

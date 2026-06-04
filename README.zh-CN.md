@@ -6,7 +6,7 @@
 
 给定一篇 CS 论文 PDF，系统通过 Dify **Chatflow**（内容规划）与 Python 渲染器（可选 **SVFP 闭环**：VLM 批评 → 确定性修复 → 收敛留痕）生成可编辑的 A3 学术海报 PPTX。长耗时任务采用 **异步 HTTP + 服务端长轮询**，适配 Dify。
 
-**研究方向（v3）：** SVFP 仍是主贡献；当前已补齐 E1/E2 预检链路、VLM 延迟边界、图抽取过滤与协议级指标。当前状态与后续优化见 [`RESEARCH_DIRECTION_v3.md`](RESEARCH_DIRECTION_v3.md)。
+**研究方向（v3）：** SVFP 仍是主贡献；当前已补齐 E1/E2 预检链路、VLM 延迟边界、图抽取过滤与协议级指标。当前状态与后续优化见 [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md)。
 
 ---
 
@@ -66,7 +66,7 @@
 
 **历史 pilot 注记：** 原始 n=5 pilot 中 `ours_svfp` 与 `ours_no_svfp` 内容指标相同，因为当时闭环几乎只改排版。v5.3 已把 `reduce_bullet_count` 改为内容保留式合并，因此新的内容指标必须重算后再下结论。
 
-**当前状态：** E1/E2 预检链路已实现并 smoke-tested。正式 n=30、独立视觉验证、E3 消融、人评、外部 SOTA 仍未完成。见 [`RESEARCH_DIRECTION_v3.md`](RESEARCH_DIRECTION_v3.md)。
+**当前状态：** E1/E2 预检链路已实现并 smoke-tested。正式 n=30、独立视觉验证、E3 消融、人评、外部 SOTA 仍未完成。见 [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md)。
 
 ---
 
@@ -106,8 +106,7 @@ poster_agent_backend/
 │   ├── metrics/                 # 内容、视觉、协议、用户/待补、工程指标
 │   ├── scripts/                 # batch_dify_runs, run_matrix, audit_figures, …
 │   └── datasets/planner_cache/  # 30 份冻结 PosterTask 快照
-├── RESEARCH_DIRECTION_v3.md     # 当前技术状态与下一步优化计划
-├── INTERNAL_EXPERIMENT_GUIDE.md # L0→L8 逐步操作手册
+├── PROJECT_OPTIMIZATION_DIRECTION_v4.md     # 当前技术状态与下一步优化计划
 └── .env.example
 ```
 
@@ -193,7 +192,6 @@ python experiments/scripts/audit_figures.py --dry-run   # 不调 API
 python experiments/scripts/audit_figures.py --limit 3   # 小规模验证
 ```
 
-详见 [`experiments/README.md`](experiments/README.md) · [`INTERNAL_EXPERIMENT_GUIDE.md`](INTERNAL_EXPERIMENT_GUIDE.md)
 
 ---
 
@@ -228,9 +226,7 @@ python -m pytest experiments/tests/ -q
 | 文档 | 读者 | 内容 |
 |------|------|------|
 | **README**（本文） | 新克隆者 | 概览、快速开始、诚实试点摘要 |
-| [`RESEARCH_DIRECTION_v3.md`](RESEARCH_DIRECTION_v3.md) | 论文作者 | 当前状态、剩余风险、下一步优化计划 |
-| [`RESEARCH_DIRECTION_v2.md`](RESEARCH_DIRECTION_v2.md) | 论文作者 | 历史 v2 转向与原始 backlog |
-| [`INTERNAL_EXPERIMENT_GUIDE.md`](INTERNAL_EXPERIMENT_GUIDE.md) | 操作者 | L0→L8 命令与避坑 |
+| [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md) | 论文作者 | 当前状态、剩余风险、下一步优化计划 |
 | [`dify/DIFY_WORKFLOW_AND_PAPER_DESIGN.md`](dify/DIFY_WORKFLOW_AND_PAPER_DESIGN.md) | 方法章节 | Chatflow 拓扑与 Agent 设计 |
 
 ---

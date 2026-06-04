@@ -7,8 +7,8 @@
 seed: 42
 
 paths:
-  papers: experiments/datasets/papers
-  gold: experiments/datasets/gold
+  papers: datasets/papers
+  gold: datasets/gold
   artifacts: experiments/results/artifacts
   metrics: experiments/results/metrics
   aggregate: experiments/results/aggregate

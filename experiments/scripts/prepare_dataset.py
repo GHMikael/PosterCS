@@ -12,7 +12,7 @@ Filters:
   * Category balance: 10 cs.CV + 10 cs.CL + 10 cs.LG/AI (configurable)
 
 The script is rerun-safe and idempotent. PDFs are stored under
-``experiments/datasets/papers/`` (gitignored). Manifest is written to
+``datasets/papers/`` (gitignored). Manifest is written to
 ``experiments/configs/papers_30.json``.
 """
 
@@ -27,9 +27,9 @@ from typing import Any, Dict, List, Optional
 def main(argv: Optional[List[str]] = None) -> int:
     p = argparse.ArgumentParser(description="Build the 30-paper benchmark manifest.")
     p.add_argument("--out-manifest", type=Path, default=Path("experiments/configs/papers_30.json"))
-    p.add_argument("--out-papers", type=Path, default=Path("experiments/datasets/papers"))
-    p.add_argument("--out-gold", type=Path, default=Path("experiments/datasets/gold"))
-    p.add_argument("--planner-cache", type=Path, default=Path("experiments/datasets/planner_cache"),
+    p.add_argument("--out-papers", type=Path, default=Path("datasets/papers"))
+    p.add_argument("--out-gold", type=Path, default=Path("datasets/gold"))
+    p.add_argument("--planner-cache", type=Path, default=Path("datasets/planner_cache"),
                    help="Use existing planner_cache stems to build a local manifest when present.")
     p.add_argument("--seed-list", type=Path, default=None, help="Optional JSON list of arxiv_ids to seed.")
     p.add_argument("--target-n", type=int, default=30)

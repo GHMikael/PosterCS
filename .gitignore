@@ -32,8 +32,7 @@ static/*.jpeg
 *.log
 
 # Experiments — heavy / generated artifacts (don't commit)
-experiments/datasets/papers/*.pdf
-experiments/datasets/gold/*/figures/
+datasets/gold/*/figures/
 experiments/baselines/_vendor/
 experiments/results/artifacts/
 experiments/results/metrics/
@@ -49,7 +48,7 @@ experiments/results/batch_dify_report.json
 experiments/results/batch_dify_console.log
 experiments/results/import_report.json
 experiments/results/figure_audit.json
-experiments/datasets/planner_cache_raw/
+datasets/planner_cache_raw/
 experiments/scratch/_workspace/
 experiments/scratch/reextract_test/
 experiments/.cache/
@@ -58,4 +57,7 @@ experiments/results/expert_ratings.csv
 experiments/notebooks/*.ipynb
 
 # Keep planner_cache (frozen snapshots for reproducibility)
-!experiments/datasets/planner_cache/*.json
+!datasets/planner_cache/*.json
+
+# Parked/deprecated files — kept locally as a soft-delete, not tracked
+zcache/

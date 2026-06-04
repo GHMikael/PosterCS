@@ -1,0 +1,134 @@
+{
+  "asset_token": "6d025613997e4f2a",
+  "template": "template_classic",
+  "layout_variant": "auto",
+  "color_theme": "academic_blue",
+  "emphasis_level": "normal",
+  "poster_title": "Graph-Guided Concept Selection for Efficient Retrieval-Augmented Generation",
+  "authors": "Ziyu Liu, Yijing Liu, Jianfei Yuan, Minzhi Yan, Le Yue, Honghuai Xiong, Yi Yang",
+  "paper_info": "arXiv:2510.24120v1 [cs.LG] 28 Oct 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "Graph-based RAG enhances retrieval in specialized domains with multi-hop reasoning.",
+        "Current methods incur high costs due to multiple LLM calls for entity and relation extraction.",
+        "G2ConS aims to reduce costs while maintaining QA performance."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0
+    },
+    {
+      "section": "Problem",
+      "content": [
+        "High construction costs limit scalability of GraphRAG in enterprise settings.",
+        "Redesigning the pipeline can be costly and impractical.",
+        "Restricting graph structure affects retrieval accuracy on complex queries."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Core Chunk Selection reduces input chunks by removing low-ranked concepts.",
+        "Concept Graph Retrieval closes knowledge gaps at zero additional cost.",
+        "Dual-path retrieval leverages both KG and concept graph for efficient QA."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Overview of the Proposed G2ConS",
+      "layout_hint": "text_top_image_bottom",
+      "body_font_scale": 1.0
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Ablation studies on MuSiQue dataset identify important concepts.",
+        "Evaluation on real-world datasets compares G2ConS with baselines.",
+        "Performance metrics include construction cost, retrieval effectiveness, and answering quality."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Design and Results of Concept Deletion Experiment",
+      "layout_hint": "text_top_image_bottom",
+      "body_font_scale": 1.0
+    },
+    {
+      "section": "Results",
+      "content": [
+        "G2ConS outperforms baselines in construction cost, retrieval effectiveness, and answering quality.",
+        "Average improvement of 31.44% across multiple metrics in MuSiQue.",
+        "Performance gains are consistent across different κ and λ values."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Answer Quality by Varying κ and λ",
+      "layout_hint": "text_top_image_bottom",
+      "body_font_scale": 1.0
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "G2ConS balances construction cost and QA performance for enterprise-scale systems.",
+        "Proposed methods can be integrated with existing GraphRAG approaches.",
+        "Future work will explore G2ConS in diverse domains and applications."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Figure 1: The design and results of the concept deletion experiment. (a) We divide text chunks into different groups based on their associated words, referred to as concepts. (b) By deleting concepts in different orders, we find that some concepts have greater importance.",
+      "type": "ablation_study",
+      "description": "实验设计和结果展示了通过删除不同概念来评估其重要性。",
+      "best_matched_section": "Experiments",
+      "importance": "high",
+      "audit_status": "",
+      "image_source": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/static/assets/6d025613997e4f2a/Fig1.png",
+      "image_url": "http://host.docker.internal:8000/assets/6d025613997e4f2a/Fig1.png",
+      "thumbnail_url": "http://host.docker.internal:8000/assets/6d025613997e4f2a/Fig1_thumb.jpg"
+    },
+    "Fig2": {
+      "caption": "Figure 2: Overview of the Proposed G2ConS. (1) We extract concepts from text chunks and con- struct a concept graph based on semantic and co-occurrence relations. (2) We perform core chunk selection and build a low-cost core knowledge graph (core-KG). (3) G2ConS leverages dual-path retrieval to effe",
+      "type": "architecture",
+      "description": "G2ConS 系统架构的概述，包括概念提取、核心块选择和双路径检索。",
+      "best_matched_section": "Method",
+      "importance": "high",
+      "audit_status": "",
+      "image_source": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/static/assets/6d025613997e4f2a/Fig2.png",
+      "image_url": "http://host.docker.internal:8000/assets/6d025613997e4f2a/Fig2.png",
+      "thumbnail_url": "http://host.docker.internal:8000/assets/6d025613997e4f2a/Fig2_thumb.jpg"
+    },
+    "Fig4": {
+      "caption": "Figure 4: Answer quality by varying κ and λ.",
+      "type": "result_chart",
+      "description": "展示了在不同 κ 和 λ 值下答案质量的变化图。",
+      "best_matched_section": "Results",
+      "importance": "high",
+      "audit_status": "",
+      "image_source": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/static/assets/6d025613997e4f2a/Fig4.png",
+      "image_url": "http://host.docker.internal:8000/assets/6d025613997e4f2a/Fig4.png",
+      "thumbnail_url": "http://host.docker.internal:8000/assets/6d025613997e4f2a/Fig4_thumb.jpg"
+    }
+  },
+  "use_commenter": true,
+  "max_iterations": 4,
+  "save_debug_images": true,
+  "global_font_scale": 1.0
+}
