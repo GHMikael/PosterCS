@@ -101,12 +101,19 @@ def cached_plan(
 
     Returns ``None`` when no cache exists, so callers can fall back to
     ``heuristic_plan`` (M2) or ``gpt4o_plan`` (M3 ablation).
+
+    Note: cached JSON files omit ``image_source`` for portability (they
+    only contain ``asset_token`` + ``figure_id``). This function
+    hydrates the paths at runtime so figures can bind on any machine.
     """
     for candidate in (cache_dir / f"{paper_path.stem}.json", cache_dir / f"{paper_path.name}.json"):
         if candidate.exists():
             try:
+                from app.asset_store import hydrate_task_image_sources
                 data = json.loads(candidate.read_text(encoding="utf-8"))
-                return PosterTask(**data)
+                task = PosterTask(**data)
+                task = hydrate_task_image_sources(task)
+                return task
             except Exception as exc:
                 raise ValueError(f"planner_cache entry {candidate} is malformed: {exc}") from exc
     return None

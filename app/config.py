@@ -13,7 +13,7 @@ PORT = int(os.getenv("PORT", "8000"))
 OUTPUT_DIR = os.getenv("OUTPUT_DIR", "outputs")
 
 DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY", "")
-QWEN_VL_MODEL = os.getenv("QWEN_VL_MODEL", "Qwen/Qwen2.5-VL-7B-Instruct")
+QWEN_VL_MODEL = os.getenv("QWEN_VL_MODEL", "Qwen/Qwen3-VL-32B-Instruct")
 
 OUTPUT_PATH = PROJECT_ROOT / OUTPUT_DIR
 ASSET_PATH = PROJECT_ROOT / "static" / "assets"

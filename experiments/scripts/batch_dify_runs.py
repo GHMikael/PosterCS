@@ -56,7 +56,7 @@ Dry-run first to confirm which PDFs will be selected::
 
 Then run for real::
 
-    python -m experiments.scripts.batch_dify_runs --limit 25 --skip-cached
+    python -m experiments.scripts.batch_dify_runs --limit 3 --skip-cached
 
 Output
 ------
@@ -78,8 +78,8 @@ import requests
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_PAPERS_DIR = REPO_ROOT / "experiments" / "datasets" / "papers"
-DEFAULT_CACHE_DIR = REPO_ROOT / "experiments" / "datasets" / "planner_cache"
+DEFAULT_PAPERS_DIR = REPO_ROOT / "datasets" / "papers"
+DEFAULT_CACHE_DIR = REPO_ROOT / "datasets" / "planner_cache"
 DEFAULT_REPORT = REPO_ROOT / "experiments" / "results" / "batch_dify_report.json"
 
 
@@ -273,7 +273,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         epilog=__doc__,
     )
     p.add_argument("--papers-dir", type=Path, default=DEFAULT_PAPERS_DIR,
-                   help="Directory of PDFs (default: experiments/datasets/papers).")
+                   help="Directory of PDFs (default: datasets/papers).")
     p.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR,
                    help="Where existing planner_cache lives (used by --skip-cached).")
     p.add_argument("--report", type=Path, default=DEFAULT_REPORT,
@@ -387,7 +387,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     print("  1. Match Dify outputs to PDFs:")
     print("       python -m experiments.scripts.import_dify_runs")
     print("  2. Verify planner_cache count matches expectations:")
-    print("       ls experiments/datasets/planner_cache/ | wc -l")
+    print("       ls datasets/planner_cache/ | wc -l")
     print("  3. Run the experiment matrix:")
     print("       python -m experiments.scripts.run_matrix \\")
     print("           --papers experiments/configs/papers_30.json \\")

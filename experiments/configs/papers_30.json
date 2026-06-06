@@ -1,12 +1,12 @@
 [
   {
-    "arxiv_id": " APPLICATIONS_712E26",
+    "arxiv_id": "APPLICATIONS_712E26",
     "title": "",
     "authors": [],
     "category": "cs.AI",
     "year": 2026,
     "page_count": null,
-    "source_pdf": "datasets/papers/ APPLICATIONS_712E26.pdf",
+    "source_pdf": "datasets/papers/APPLICATIONS_712E26.pdf",
     "source_url": "",
     "license": "arXiv non-exclusive",
     "gold_figure_count": 0,
@@ -16,13 +16,13 @@
     "from_paper2poster_bench": false
   },
   {
-    "arxiv_id": " LISTENING_907E2D",
+    "arxiv_id": "LISTENING_907E2D",
     "title": "",
     "authors": [],
     "category": "cs.AI",
     "year": 2026,
     "page_count": null,
-    "source_pdf": "datasets/papers/ LISTENING_907E2D.pdf",
+    "source_pdf": "datasets/papers/LISTENING_907E2D.pdf",
     "source_url": "",
     "license": "arXiv non-exclusive",
     "gold_figure_count": 0,

@@ -207,6 +207,18 @@ def _interactive_resolve(record: Dict[str, Any]) -> Optional[Path]:
         print("    out of range")
 
 
+def _strip_image_sources(data: Dict[str, Any]) -> None:
+    """Strip machine-specific image_source paths for portability.
+
+    Cached JSON retains asset_token + figure_id; baselines re-hydrate
+    image_source at runtime via hydrate_task_image_sources().
+    """
+    for fig in data.get("figures", {}).values():
+        fig.pop("image_source", None)
+        fig.pop("image_url", None)
+        fig.pop("thumbnail_url", None)
+
+
 def _import_one(
     record: Dict[str, Any],
     cache_dir: Path,
@@ -226,7 +238,12 @@ def _import_one(
     if cache_path.exists() and not force:
         return False, f"exists (use --force to overwrite): {cache_path}"
     cache_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(record["input_json"], cache_path)
+
+    # Strip image_source for portability (baselines re-hydrate at runtime)
+    data = json.loads(Path(record["input_json"]).read_text(encoding="utf-8"))
+    _strip_image_sources(data)
+    cache_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
     return True, str(cache_path)
 
 
