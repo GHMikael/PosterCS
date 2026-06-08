@@ -85,11 +85,16 @@ class OursSVFPRunner(BaselineRunner):
                 }
                 for r in history
             ]
+            ax = result.get("action_executability_stats") or {}
+            n_att = int(ax.get("n_attempts", 0))
+            n_exec = int(ax.get("n_executed", 0))
             meta.config.update({
                 "feedback_mode": "svfp_closed_set",
-                "action_executability": 1.0 if n_feedback_items > 0 else None,
-                "n_executed": n_feedback_items,
-                "n_attempts": n_feedback_items,
+                # honest c1: executed/attempted measured by the applier (#10),
+                # not the old hardcoded 1.0.
+                "action_executability": (n_exec / n_att) if n_att > 0 else None,
+                "n_executed": n_exec,
+                "n_attempts": n_att,
                 "n_iterations": int(result.get("iterations") or len(history)),
                 "converged": bool(result.get("converged")),
                 "convergence_reason": result.get("convergence_reason", ""),

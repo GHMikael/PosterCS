@@ -312,14 +312,26 @@ class FeedbackApplier:
         next_task = copy.deepcopy(task)
         by_section = {panel.section: panel for panel in next_task.panels}
         touched: set[str] = set()
+        # c1 honest counting (counting only — behaviour unchanged): an "attempt"
+        # is a feedback item the VLM marked actionable (has an issue or a
+        # non-"none" action); "executed" means the applier actually mutated the
+        # task for it. Items whose target panel is missing count as failed
+        # attempts. Read by VisualFeedbackLoop after each apply().
+        n_attempts = 0
+        n_executed = 0
 
         for item in feedback.panel_feedback:
+            actionable = bool(item.issues) or (item.suggested_action or "").strip() not in ("", "none")
+            if actionable:
+                n_attempts += 1
             panel = by_section.get(item.section)
             if not panel:
                 continue
             applied = self._dispatch_panel_action(panel, item, next_task)
             if applied:
                 touched.add(panel.section)
+                if actionable:
+                    n_executed += 1
 
         # Global issues handled after the per-panel pass so panel-level
         # fixes are visible when we decide global remediation.
@@ -335,6 +347,7 @@ class FeedbackApplier:
             # the per-panel pass already trimmed/reduced the worst offenders.
             self._shrink_global_font(next_task)
 
+        self.last_stats = {"n_attempts": n_attempts, "n_executed": n_executed}
         return next_task
 
     # ------------------------------------------------------------------
@@ -803,6 +816,8 @@ class VisualFeedbackLoop:
         convergence_states: List[Dict[str, Any]] = []
         stop_reason = "max_iterations_reached"
         converged = False
+        n_att_total = 0   # c1: total actionable VLM items across applied iters
+        n_exec_total = 0  # c1: of those, how many the applier actually executed
 
         for iteration in range(1, max_iterations + 1):
             iter_started_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
@@ -936,6 +951,9 @@ class VisualFeedbackLoop:
                 break
 
             current = self.applier.apply(current, feedback)
+            _st = getattr(self.applier, "last_stats", {}) or {}
+            n_att_total += int(_st.get("n_attempts", 0))
+            n_exec_total += int(_st.get("n_executed", 0))
         else:
             stop_reason = "max_iterations_reached"
 
@@ -992,6 +1010,7 @@ class VisualFeedbackLoop:
             "converged": converged,
             "convergence_reason": stop_reason,
             "history": history,
+            "action_executability_stats": {"n_attempts": n_att_total, "n_executed": n_exec_total},
             "final_path": str(final_path),
             "final_filename": final_path.name,
             "task": best_task,

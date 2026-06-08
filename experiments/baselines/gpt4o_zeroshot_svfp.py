@@ -71,19 +71,44 @@ class GPT4oZeroShotSVFPRunner(BaselineRunner):
                 + sum(len(pf.get("issues") or []) for pf in ((r.get("feedback") or {}).get("panel_feedback") or []))
                 for r in history
             ]
-            n_feedback_items = sum(issue_counts)
             scores = [float(r.get("score", 0.0)) for r in history]
             positive_deltas = [b - a for a, b in zip(scores, scores[1:]) if b > a]
+
+            def _issue_keys(fb: Dict[str, Any]) -> list:
+                keys = [f"GLOBAL:{i}" for i in (fb.get("global_issues") or [])]
+                for pf in (fb.get("panel_feedback") or []):
+                    sec = pf.get("section", "?")
+                    for iss in (pf.get("issues") or []):
+                        keys.append(f"{sec}:{iss}")
+                return sorted(set(keys))
+
+            svfp_trace = [
+                {
+                    "iteration": r.get("iteration"),
+                    "issues": _issue_keys(r.get("feedback") or {}),
+                    "actions": [
+                        pf.get("suggested_action", "")
+                        for pf in ((r.get("feedback") or {}).get("panel_feedback") or [])
+                        if pf.get("suggested_action")
+                    ],
+                }
+                for r in history
+            ]
+            ax = result.get("action_executability_stats") or {}
+            n_att = int(ax.get("n_attempts", 0))
+            n_exec = int(ax.get("n_executed", 0))
             meta.config.update({
-                "action_executability": 1.0 if n_feedback_items > 0 else None,
-                "n_executed": n_feedback_items,
-                "n_attempts": n_feedback_items,
+                # honest c1 (#10): executed/attempted from the applier, not 1.0
+                "action_executability": (n_exec / n_att) if n_att > 0 else None,
+                "n_executed": n_exec,
+                "n_attempts": n_att,
                 "n_iterations": int(result.get("iterations") or len(history)),
                 "converged": bool(result.get("converged")),
                 "convergence_reason": result.get("convergence_reason", ""),
                 "per_iter_visual_gain": (
                     sum(positive_deltas) / len(positive_deltas) if positive_deltas else 0.0
                 ),
+                "svfp_trace": svfp_trace,
             })
 
             src_pptx = Path(result["final_path"])
