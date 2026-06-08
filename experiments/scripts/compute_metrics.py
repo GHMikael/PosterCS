@@ -4,7 +4,7 @@ Usage (single cell)::
 
     .venv312/bin/python -m experiments.scripts.compute_metrics \\
         --artifact experiments/results/artifacts/_smoke/ours_svfp_2405.12345 \\
-        --metrics d1_latency,d2_cost,d3_failure_rate
+        --metrics d1_latency,d2_cost,a3_semantic_fidelity
 
 Usage (all cells)::
 
@@ -30,27 +30,26 @@ from experiments.metrics.base import Metric, MetricContext, MetricRegistry, Metr
 # Ensures all built-in metrics register themselves at import time.
 def _import_all_metrics() -> None:
     for mod in [
-        # Content
-        "experiments.metrics.a1_information_retention",
-        "experiments.metrics.a2_figure_text_alignment",
-        "experiments.metrics.a3_hallucination",
-        "experiments.metrics.a4_section_coverage",
-        # Visual
-        "experiments.metrics.b1_layout_rationality",
+        # A — content fidelity
+        "experiments.metrics.a1_key_info_recall",
+        "experiments.metrics.a2_hallucination_rate",
+        "experiments.metrics.a3_semantic_fidelity",
+        # B — visual quality
+        "experiments.metrics.b1_layout_quality",
         "experiments.metrics.b2_readability",
-        "experiments.metrics.b3_academic_compliance",
-        "experiments.metrics.figure_reuse_rate",
-        "experiments.metrics.visual_smoke_check",
-        # User
-        "experiments.metrics.c1_paperquiz",
-        "experiments.metrics.c2_sus_likert",
-        "experiments.metrics.c3_time_saving",
-        # Protocol
+        "experiments.metrics.b3_figure_reuse_rate",
+        "experiments.metrics.b4_figure_text_align",
+        # C — protocol (Wave2 重做 c1 诚实/新建 c3,见 #10;暂留旧 protocol_metrics)
         "experiments.metrics.protocol_metrics",
-        # Engineering
+        # D — efficiency
         "experiments.metrics.d1_latency",
         "experiments.metrics.d2_cost",
-        "experiments.metrics.d3_failure_rate",
+        # E — external validation
+        "experiments.metrics.e1_paperquiz",
+        "experiments.metrics.e2_human_preference",
+        "experiments.metrics.e3_llm_judge",
+        # internal pre-check (not one of the 16 headline metrics)
+        "experiments.metrics.visual_smoke_check",
     ]:
         try:
             importlib.import_module(mod)

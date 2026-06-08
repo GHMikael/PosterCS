@@ -15,7 +15,7 @@ per event to ``$POSTER_EXPERIMENT_LOG``. Each event has at least:
 * ``stage``  — short, stable identifier (``vlm_call``, ``pptx_gen``, …)
 
 Consumers (``experiments/metrics/d1_latency.py``, ``d2_cost.py``,
-``d3_failure_rate.py``) parse the JSONL without needing to import
+``d1_latency.py``) parse the JSONL without needing to import
 production code.
 """
 

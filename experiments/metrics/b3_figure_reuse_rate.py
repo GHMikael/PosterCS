@@ -56,8 +56,8 @@ def _referenced_figures(panels_json: Dict[str, Any], source_to_id: Dict[str, str
 
 
 @MetricRegistry.register
-class FigureReuseRate(Metric):
-    metric_id = "figure_reuse_rate"
+class B3FigureReuseRate(Metric):
+    metric_id = "b3_figure_reuse_rate"
     description = "Fraction of valid source figures reused by poster panels."
 
     def compute(self, ctx: MetricContext) -> MetricResult:

@@ -30,8 +30,8 @@ from experiments.metrics.base import Metric, MetricContext, MetricResult, Metric
 
 
 @MetricRegistry.register
-class A1InformationRetention(Metric):
-    metric_id = "a1_information_retention"
+class A1KeyInfoRecall(Metric):
+    metric_id = "a1_key_info_recall"
     description = "Fraction of paper atomic claims preserved (paraphrased or verbatim) in the poster text."
 
     def compute(self, ctx: MetricContext) -> MetricResult:

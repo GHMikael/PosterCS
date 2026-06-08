@@ -42,8 +42,8 @@ _GRID_TOLERANCE_EMU = 91_440
 
 
 @MetricRegistry.register
-class B1LayoutRationality(Metric):
-    metric_id = "b1_layout_rationality"
+class B1LayoutQuality(Metric):
+    metric_id = "b1_layout_quality"
     description = "Layout quality: 5-component geometric score + GPT-4o 5-criteria rubric."
 
     def compute(self, ctx: MetricContext) -> MetricResult:

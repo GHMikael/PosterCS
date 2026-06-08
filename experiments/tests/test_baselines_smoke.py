@@ -127,11 +127,10 @@ class MetricsSmokeTest(unittest.TestCase):
             latency_ms=789.0,
         )
 
-    def test_d1_d2_d3_compute_from_cell(self) -> None:
+    def test_d1_d2_compute_from_cell(self) -> None:
         from experiments.metrics.base import MetricContext, MetricRegistry
         import experiments.metrics.d1_latency  # noqa: F401  registers
         import experiments.metrics.d2_cost  # noqa: F401
-        import experiments.metrics.d3_failure_rate  # noqa: F401
 
         ctx = MetricContext(
             artifact_dir=self.cell,
@@ -146,7 +145,6 @@ class MetricsSmokeTest(unittest.TestCase):
 
         d1 = MetricRegistry.get("d1_latency")().compute(ctx)
         d2 = MetricRegistry.get("d2_cost")().compute(ctx)
-        d3 = MetricRegistry.get("d3_failure_rate")().compute(ctx)
 
         self.assertFalse(d1.skipped)
         # run_total dominates so D1 score == 1234.5
@@ -156,9 +154,6 @@ class MetricsSmokeTest(unittest.TestCase):
         self.assertFalse(d2.skipped)
         self.assertGreater(d2.score, 0.0)
         self.assertIn("Qwen/Qwen2.5-VL-72B-Instruct", d2.extra["per_model"])
-
-        self.assertEqual(d3.score, 0.0)  # no failure
-        self.assertEqual(d3.extra["reasons"], [])
 
 
 if __name__ == "__main__":

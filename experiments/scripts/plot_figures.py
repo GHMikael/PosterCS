@@ -31,10 +31,10 @@ _BASELINE_COLORS = {
     "ours_svfp": "#2ca02c",
 }
 _QUALITY_METRICS = [
-    "a1_information_retention",
-    "a2_figure_text_alignment",
-    "a3_hallucination",
-    "b1_layout_rationality",
+    "a1_key_info_recall",
+    "a2_hallucination_rate",
+    "a3_semantic_fidelity",
+    "b1_layout_quality",
     "b2_readability",
 ]
 

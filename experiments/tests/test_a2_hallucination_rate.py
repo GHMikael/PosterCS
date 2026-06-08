@@ -1,4 +1,4 @@
-from experiments.metrics.a3_hallucination import _classify_nli_result
+from experiments.metrics.a2_hallucination_rate import _classify_nli_result
 
 
 def test_a3_neutral_abstention_is_unsupported_not_hallucination():

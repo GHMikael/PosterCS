@@ -30,8 +30,8 @@ from experiments.metrics.base import Metric, MetricContext, MetricResult, Metric
 
 
 @MetricRegistry.register
-class A3Hallucination(Metric):
-    metric_id = "a3_hallucination"
+class A2HallucinationRate(Metric):
+    metric_id = "a2_hallucination_rate"
     description = "Fraction of poster bullets that are not entailed by (and possibly contradicted by) the paper."
 
     def compute(self, ctx: MetricContext) -> MetricResult:

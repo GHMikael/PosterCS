@@ -27,8 +27,8 @@ from experiments.metrics.base import Metric, MetricContext, MetricResult, Metric
 
 
 @MetricRegistry.register
-class C1PaperQuiz(Metric):
-    metric_id = "c1_paperquiz"
+class E1PaperQuiz(Metric):
+    metric_id = "e1_paperquiz"
     description = "Mean answer accuracy across 2 VLM answerers (Qwen-VL-72B + GPT-4o) on 5 paper-derived MCQs."
 
     def compute(self, ctx: MetricContext) -> MetricResult:

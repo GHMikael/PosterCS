@@ -23,8 +23,8 @@ from experiments.metrics.base import Metric, MetricContext, MetricResult, Metric
 
 
 @MetricRegistry.register
-class A2FigureTextAlignment(Metric):
-    metric_id = "a2_figure_text_alignment"
+class B4FigureTextAlign(Metric):
+    metric_id = "b4_figure_text_align"
     description = "Mean VLM-rated figure-text alignment across panels that declare a figure (0-1, higher better)."
 
     def compute(self, ctx: MetricContext) -> MetricResult:

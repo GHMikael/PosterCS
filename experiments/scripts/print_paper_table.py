@@ -3,7 +3,7 @@
 
 读 results/aggregate/{aggregate,pairwise}.tsv,按 4 个 cluster 组织 headline
 主表(内容保真 / 视觉质量 / 协议 SVFP / 工程),并把**无区分度的天花板指标**
-(a4_section_coverage 模板强制=1.0、c1_paperquiz 5-MCQ 饱和)与**尚无数据**的
+(visual_smoke_check 内部预检、e3_llm_judge 默认关)与**尚无数据**的
 user-study 指标 (c2/c3) 降级到 Appendix——不再污染 headline 表。
 
 Protocol cluster 的指标 (action_executability / convergence_rate / ...) 由 E1
@@ -24,18 +24,17 @@ _BASELINE_ORDER = [
 
 # Headline clusters (v2 §三). Metrics absent from aggregate.tsv are skipped.
 _CLUSTERS = [
-    ("Content fidelity", ["a1_information_retention", "a2_figure_text_alignment", "a3_hallucination"]),
-    ("Visual quality", ["b1_layout_rationality", "b2_readability", "figure_reuse_rate", "visual_smoke_check", "b3_academic_compliance"]),
+    ("Content fidelity", ["a1_key_info_recall", "a2_hallucination_rate", "a3_semantic_fidelity"]),
+    ("Visual quality", ["b1_layout_quality", "b2_readability", "b3_figure_reuse_rate", "b4_figure_text_align"]),
     ("Protocol (SVFP)", ["action_executability", "convergence_rate", "mean_iters_to_converge", "per_iter_visual_gain"]),
-    ("Engineering", ["d1_latency", "d2_cost", "d3_failure_rate"]),
+    ("Efficiency", ["d1_latency", "d2_cost"]),
+    ("External validation", ["e1_paperquiz", "e2_human_preference", "e3_llm_judge"]),
 ]
 
 # Demoted to appendix with the reason shown to the reader.
 _APPENDIX_NOTE = {
-    "a4_section_coverage": "ceiling — template guarantees all six sections (=1.0 for every method); no discriminative power",
-    "c1_paperquiz": "ceiling — 5-MCQ saturates near 1.0; appendix until redesigned (≥10 harder, figure/number-grounded Qs)",
-    "c2_sus_likert": "user study — pending data",
-    "c3_time_saving": "user study — pending data",
+    "visual_smoke_check": "internal preflight quality gate; not one of the 16 headline metrics",
+    "e3_llm_judge": "gated off by default (API cost); report only with its correlation to E2 human preference",
 }
 
 

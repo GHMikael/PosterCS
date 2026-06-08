@@ -28,14 +28,14 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 # Metrics where higher is better
 _HIGHER_IS_BETTER = {
-    "a1_information_retention", "a2_figure_text_alignment", "a4_section_coverage",
-    "b1_layout_rationality", "b2_readability", "b3_academic_compliance",
-    "figure_reuse_rate", "visual_smoke_check",
-    "c1_paperquiz", "c2_sus_likert", "c3_time_saving",
+    "a1_key_info_recall", "a3_semantic_fidelity",
+    "b1_layout_quality", "b2_readability", "b3_figure_reuse_rate", "b4_figure_text_align",
+    "visual_smoke_check",
+    "e1_paperquiz", "e2_human_preference", "e3_llm_judge",
     "action_executability", "convergence_rate", "per_iter_visual_gain",
 }
 _LOWER_IS_BETTER = {
-    "a3_hallucination", "d1_latency", "d2_cost", "d3_failure_rate",
+    "a2_hallucination_rate", "d1_latency", "d2_cost",
     "mean_iters_to_converge",
 }
 

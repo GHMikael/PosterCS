@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from experiments.metrics.base import MetricContext, MetricRegistry
-import experiments.metrics.figure_reuse_rate  # noqa: F401
+import experiments.metrics.b3_figure_reuse_rate  # noqa: F401
 
 
 def _ctx(tmp_path: Path, panels_json: dict) -> MetricContext:
@@ -19,7 +19,7 @@ def _ctx(tmp_path: Path, panels_json: dict) -> MetricContext:
     )
 
 
-def test_figure_reuse_rate_counts_valid_reused_figures(tmp_path):
+def test_b3_figure_reuse_rate_counts_valid_reused_figures(tmp_path):
     fig1 = tmp_path / "fig1.png"
     fig2 = tmp_path / "fig2.png"
     fig1.write_bytes(b"fake")
@@ -39,14 +39,14 @@ def test_figure_reuse_rate_counts_valid_reused_figures(tmp_path):
         },
     )
 
-    result = MetricRegistry.get("figure_reuse_rate")().compute(ctx)
+    result = MetricRegistry.get("b3_figure_reuse_rate")().compute(ctx)
 
     assert result.score == 0.5
     assert result.extra["reused_valid_figure_ids"] == ["Fig1"]
     assert result.extra["missing_or_invalid_references"] == ["Fig3"]
 
 
-def test_figure_reuse_rate_filters_unsafe_audit_status(tmp_path):
+def test_b3_figure_reuse_rate_filters_unsafe_audit_status(tmp_path):
     fig1 = tmp_path / "fig1.png"
     fig1.write_bytes(b"fake")
     ctx = _ctx(
@@ -59,13 +59,13 @@ def test_figure_reuse_rate_filters_unsafe_audit_status(tmp_path):
         },
     )
 
-    result = MetricRegistry.get("figure_reuse_rate")().compute(ctx)
+    result = MetricRegistry.get("b3_figure_reuse_rate")().compute(ctx)
 
     assert result.skipped
     assert result.skip_reason == "no valid source figures"
 
 
-def test_figure_reuse_rate_resolves_direct_figure_source(tmp_path):
+def test_b3_figure_reuse_rate_resolves_direct_figure_source(tmp_path):
     fig1 = tmp_path / "fig1.png"
     fig1.write_bytes(b"fake")
     ctx = _ctx(
@@ -80,7 +80,7 @@ def test_figure_reuse_rate_resolves_direct_figure_source(tmp_path):
         },
     )
 
-    result = MetricRegistry.get("figure_reuse_rate")().compute(ctx)
+    result = MetricRegistry.get("b3_figure_reuse_rate")().compute(ctx)
 
     assert result.score == 1.0
     assert result.extra["reused_valid_figure_ids"] == ["Fig1"]

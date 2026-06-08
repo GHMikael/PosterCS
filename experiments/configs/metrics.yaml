@@ -1,4 +1,6 @@
-a1_information_retention:
+# 正式 16 指标配置(v5)。键名 = metric_id。改名后保留各自原有调参。
+# A — content fidelity
+a1_key_info_recall:
   claim_extractor:
     max_claims_per_paper: 25
     model: Qwen/Qwen3-32B
@@ -9,11 +11,7 @@ a1_information_retention:
     temperature: 0.0
     threshold_logprob: 0.6
   gold_validation_kappa_min: 0.7
-a2_figure_text_alignment:
-  cosine_threshold: 0.28
-  embedder: BAAI/AltCLIP-XLMR-L
-  enabled: true
-a3_hallucination:
+a2_hallucination_rate:
   contradict_min: 0.5
   enabled: true
   llm_nli:
@@ -26,21 +24,12 @@ a3_hallucination:
     enabled: true
     model: Qwen/Qwen2.5-72B-Instruct
     via: dashscope
-a4_section_coverage:
-  canonical_sections:
-  - Motivation
-  - Problem
-  - Method
-  - Experiments
-  - Results
-  - Conclusion
+a3_semantic_fidelity:
   enabled: true
-  report_scope: appendix
-  v2_note: "Template-enforced sanity check; excluded from headline tables because it saturates."
-  levenshtein_min: 0.8
-  llm_fallback_judge:
-    model: Qwen/Qwen3-32B
-b1_layout_rationality:
+  lang: en   # 'en' 用 roberta-large + rescale_with_baseline;'zh' 用中文编码器
+
+# B — visual quality
+b1_layout_quality:
   auto_geometric:
     grid_columns: 12
     grid_tolerance_px: 5
@@ -52,6 +41,8 @@ b1_layout_rationality:
       whitespace: 0.25
   enabled: true
   vlm_judge:
+    # v5 注意:VLM 版面打分继承"先验/不可靠"风险 → 以 auto_geometric 为主,
+    # VLM 用一个不同于 critic 的模型,且报几何为先(避免循环论证)。
     criteria:
     - balance
     - alignment
@@ -63,49 +54,16 @@ b2_readability:
   delta_lstar_reference: 50
   enabled: true
   font_pt_reference: 24
-b3_academic_compliance:
-  enabled: true
-  report_scope: pending_human
-  v3_note: "Requires expert_ratings.csv; keep implementation for appendix/user-study extension, exclude from headline until data exists."
-  rubric_items:
-  - title_accuracy
-  - author_completeness
-  - data_fidelity
-  - citation_compliance
-  - section_order
-  source_csv: experiments/results/expert_ratings.csv
-figure_reuse_rate:
+b3_figure_reuse_rate:
   enabled: true
   report_scope: headline_visual_support
-  v3_note: "Structural metric: valid original figures referenced by panels / valid source figures. Semantic alignment remains A2/audit."
-visual_smoke_check:
+  v3_note: "被 panel 引用的有效原文图 / 有效源图;语义对齐移到 b4_figure_text_align。"
+b4_figure_text_align:
+  cosine_threshold: 0.28
+  embedder: BAAI/AltCLIP-XLMR-L
   enabled: true
-  report_scope: preflight_quality_gate
-  v3_note: "Cheap PPTX structural guard for text overflow, ellipsis pressure and top-banner overlaps before n=30."
-c1_paperquiz:
-  answerers:
-  - id: qwen_vl_32b
-    model: Qwen/Qwen3-VL-32B-Instruct
-    temperature: 0.0
-  enabled: true
-  report_scope: appendix
-  v2_note: "Current 5-MCQ version saturates; redesign before using as a headline metric."
-  question_generator:
-    max_paper_chars: 16000
-    model: Qwen/Qwen3-32B
-    n_questions: 5
-c2_sus_likert:
-  enabled: true
-  report_scope: pending_human
-  v3_note: "Requires user-study CSV; not part of pre-n=30 automated smoke."
-  source_csv: experiments/results/user_study/sus_likert.csv
-  target_n: 12
-c3_time_saving:
-  enabled: true
-  report_scope: pending_human
-  v3_note: "Requires user-study CSV; not part of pre-n=30 automated smoke."
-  source_csv: experiments/results/user_study/timing.csv
-  target_n: 12
+
+# C — protocol（Wave2/#10:c1 改诚实重测、新建 c3_issue_resolution;暂留旧 protocol_metrics）
 action_executability:
   enabled: true
   report_scope: headline_protocol
@@ -118,15 +76,37 @@ mean_iters_to_converge:
 per_iter_visual_gain:
   enabled: true
   report_scope: headline_protocol
+
+# D — efficiency
 d1_latency:
   enabled: true
   source: experiment_log.jsonl
 d2_cost:
   enabled: true
   pricing_table: experiments/tools/pricing.py
-d3_failure_rate:
+
+# E — external validation
+e1_paperquiz:
+  answerers:
+  - id: qwen_vl_32b
+    model: Qwen/Qwen3-VL-32B-Instruct
+    temperature: 0.0
   enabled: true
-  fail_kinds:
-  - exception
-  - soffice_nonzero
-  - empty_pptx
+  report_scope: headline_external
+  v2_note: "5-MCQ 易饱和;作为 headline 前要难化题目。"
+  question_generator:
+    max_paper_chars: 16000
+    model: Qwen/Qwen3-32B
+    n_questions: 5
+e2_human_preference:
+  enabled: true
+  csv_path: experiments/results/human_preference.csv   # 无文件则该指标干净 skip
+e3_llm_judge:
+  enabled: false   # 默认关(省 API);置 true 才跑;须报与 e2 人评的相关性
+  model: Qwen/Qwen3-VL-32B-Instruct
+
+# 内部预检（不计入 16 个 headline 指标）
+visual_smoke_check:
+  enabled: true
+  report_scope: preflight_quality_gate
+  v3_note: "便宜的 PPTX 结构性预检:溢出/省略号/顶栏重叠。"
