@@ -1058,6 +1058,11 @@ class MinimalTemplate(DashboardTemplate):
         cy = y + Inches(0.65)
         cw = w - Inches(0.32)
         ch = h - Inches(0.82)
+        if getattr(panel, "headline", ""):
+            hl_h = Inches(0.26)
+            _add_headline(slide, cx, cy, cw, hl_h, panel.headline, p, accent)
+            cy += hl_h
+            ch -= hl_h
         if figure_source:
             fig_ratio = 0.78 if figure_squashed_in_vertical(figure_source, cw, ch * 0.48) else 0.48
             add_figure(slide, cx, cy, cw, ch * fig_ratio, figure_source, figure_caption, p)
