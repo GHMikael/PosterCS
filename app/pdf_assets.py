@@ -1,4 +1,5 @@
 import io
+import os
 import re
 from statistics import pstdev
 from typing import Dict, Tuple
@@ -91,6 +92,19 @@ def extract_pdf_assets_from_bytes(
     min_width: int = 120,
     min_height: int = 120,
 ) -> Tuple[str, Dict[str, ExtractedFigure]]:
+    # Prefer docling (captures vector figures + tables that fitz's raw-image
+    # extraction misses — e.g. 4 figs vs fitz's 0 on a method paper). Fall back
+    # to the fitz path below on any failure or if docling yields no figures.
+    # Disable with POSTER_USE_DOCLING=0. (Models are cached after first run.)
+    if os.getenv("POSTER_USE_DOCLING", "1") != "0":
+        try:
+            from app.docling_assets import extract_pdf_assets_docling
+
+            _text, _figs = extract_pdf_assets_docling(pdf_bytes=pdf_bytes)
+            if _figs:
+                return _text, _figs
+        except Exception as _exc:
+            print(f"docling extraction failed; falling back to fitz: {_exc}")
     doc = fitz.open(stream=pdf_bytes, filetype="pdf")
     all_text = []
     figures: Dict[str, ExtractedFigure] = {}
