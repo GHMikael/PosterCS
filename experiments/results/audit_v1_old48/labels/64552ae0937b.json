@@ -1,0 +1,47 @@
+{
+  "run_id": "64552ae0937b",
+  "paper_title": "EvoAgentX: An Automated Framework for Evolving Agentic Workflows",
+  "template": "template_storyflow",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260531_165536_EvoAgentX_An_Automated_Framewo_64552ae0937b/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260531_165536_EvoAgentX_An_Automated_Framewo_64552ae0937b",
+  "old_issues_initial": [
+    "overlapping_elements"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 20.0,
+    "mean_bullets_per_panel": 2.857,
+    "max_bullets_per_panel": 4.0,
+    "mean_chars_per_panel": 236.1,
+    "max_chars_per_panel": 318.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.286,
+    "text_only_panel_ratio": 0.714
+  },
+  "labels": [
+    {
+      "run_id": "64552ae0937b",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "space_imbalance"
+      ],
+      "guard_violations": [
+        "overflow_guard"
+      ],
+      "evidence": {
+        "primary": "The poster contains dense bullet points with small font sizes across all sections, creating a high text density and heavy reading burden, especially in Motivation, Problem, and Results.",
+        "secondary_issues": {
+          "visual_hierarchy_weak": "The main contribution and key results are not visually emphasized; the central figure and performance metrics are small and lack visual prominence compared to surrounding text.",
+          "space_imbalance": "The left column (Motivation, Problem) is densely packed, while the right column (Conclusion, Key Findings) has large empty spaces, creating uneven visual weight."
+        }
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"space_imbalance\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The poster contains dense bullet points with small font sizes across all sections, creating a high text density and heavy reading burden, especially in Motivation, Problem, and Results.\",\n    \"secondary_issues\": {\n      \"visual_hierarchy_weak\": \"The main contribution and key results are not visually emphasized; the central figure and performance metrics are small and lack visual prominence compared to surrounding text.\",\n      \"space_imbalance\": \"The left column (Motivation, Problem) is densely packed, while the right column (Conclusion, Key Findings) has large empty spaces, creating uneven visual weight.\"\n    }\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

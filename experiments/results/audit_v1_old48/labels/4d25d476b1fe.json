@@ -1,0 +1,52 @@
+{
+  "run_id": "4d25d476b1fe",
+  "paper_title": "Revisiting Hallucination Detection with Effective Rank-based Uncertainty",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_151419_Revisiting_Hallucination_Detec_4d25d476b1fe/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_151419_Revisiting_Hallucination_Detec_4d25d476b1fe",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 24.0,
+    "mean_bullets_per_panel": 3.429,
+    "max_bullets_per_panel": 5.0,
+    "mean_chars_per_panel": 223.7,
+    "max_chars_per_panel": 370.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.286,
+    "text_only_panel_ratio": 0.714
+  },
+  "labels": [
+    {
+      "run_id": "4d25d476b1fe",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "asset_utilization_error"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "Each section contains dense bullet points with small font size and high text density, creating a heavy reading burden across the entire poster.",
+        "secondary_issues": {
+          "visual_hierarchy_weak": "The main contribution (effective rank-based uncertainty) is not visually emphasized; all sections have similar visual weight, making it hard to identify the key innovation first.",
+          "asset_utilization_error": "The figure in the Method section is small and lacks a clear caption, and the figure in Experiments is not clearly linked to its description, reducing its impact."
+        }
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"asset_utilization_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Each section contains dense bullet points with small font size and high text density, creating a heavy reading burden across the entire poster.\",\n    \"secondary_issues\": {\n      \"visual_hierarchy_weak\": \"The main contribution (effective rank-based uncertainty) is not visually emphasized; all sections have similar visual weight, making it hard to identify the key innovation first.\",\n      \"asset_utilization_error\": \"The figure in the Method section is small and lacks a clear caption, and the figure in Experiments is not clearly linked to its description, reducing its impact.\"\n    }\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

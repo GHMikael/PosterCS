@@ -1,0 +1,52 @@
+{
+  "run_id": "7f47fa98fa57",
+  "paper_title": "Tree Search for LLM Agent Reinforcement Learning",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260524_000952_Tree_Search_for_LLM_Agent_Rein_7f47fa98fa57/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260524_000952_Tree_Search_for_LLM_Agent_Rein_7f47fa98fa57",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "figure_too_small",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 6.0,
+    "total_bullets": 19.0,
+    "mean_bullets_per_panel": 3.167,
+    "max_bullets_per_panel": 5.0,
+    "mean_chars_per_panel": 207.7,
+    "max_chars_per_panel": 314.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.333,
+    "text_only_panel_ratio": 0.667
+  },
+  "labels": [
+    {
+      "run_id": "7f47fa98fa57",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "visual_hierarchy_weak",
+      "secondary_issues": [
+        "text_overload",
+        "asset_utilization_error"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The main contribution (Tree-GRPO method) is not visually emphasized; all sections have similar blue headers and bullet-point formatting, making it hard to distinguish the core innovation from background or results.",
+        "secondary_issues": [
+          "text_overload: All sections use dense bullet lists with small font, creating high reading burden without visual relief.",
+          "asset_utilization_error: The figures in 'Method' and 'Experiments' are small, low-resolution placeholders with weak captions, failing to convey key visual information."
+        ]
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"visual_hierarchy_weak\",\n  \"secondary_issues\": [\"text_overload\", \"asset_utilization_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The main contribution (Tree-GRPO method) is not visually emphasized; all sections have similar blue headers and bullet-point formatting, making it hard to distinguish the core innovation from background or results.\",\n    \"secondary_issues\": [\n      \"text_overload: All sections use dense bullet lists with small font, creating high reading burden without visual relief.\",\n      \"asset_utilization_error: The figures in 'Method' and 'Experiments' are small, low-resolution placeholders with weak captions, failing to convey key visual information.\"\n    ]\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

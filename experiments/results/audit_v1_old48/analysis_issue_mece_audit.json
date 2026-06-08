@@ -1,0 +1,48 @@
+{
+  "n_posters": 48,
+  "n_labeled_ok": 47,
+  "n_failures": 47,
+  "coverage": 1.0,
+  "other_rate": 0.0,
+  "multi_label_rate": 1.0,
+  "primary_distribution": {
+    "space_imbalance": 0,
+    "text_overload": 39,
+    "visual_hierarchy_weak": 6,
+    "asset_utilization_error": 2,
+    "structure_alignment_error": 0,
+    "other": 0,
+    "none": 0
+  },
+  "primary_share": {
+    "space_imbalance": 0.0,
+    "text_overload": 0.83,
+    "visual_hierarchy_weak": 0.128,
+    "asset_utilization_error": 0.043,
+    "structure_alignment_error": 0.0,
+    "other": 0.0,
+    "none": 0.0
+  },
+  "space_imbalance_share": 0.0,
+  "agreement": {
+    "vlm_pass0_vs_pass1": null,
+    "vlm_vs_human": null
+  },
+  "legacy_low_freq_check": {
+    "overlap_plus_contrast": 41,
+    "legacy_total_mentions": 326,
+    "low_freq_share": 0.126,
+    "reading": "Low share ⇒ overlap/contrast are rare ⇒ demoting them to guards is justified."
+  },
+  "criteria": {
+    "coverage_min": 0.8,
+    "other_rate_max": 0.1,
+    "legacy_lowfreq_max": 0.25
+  },
+  "verdict": {
+    "coverage_pass": true,
+    "other_rate_pass": true,
+    "legacy_lowfreq_pass": true,
+    "overall_pass": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "run_id": "b112fe8cae47",
+  "paper_title": "Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_160129_Is_Chain-of-Thought_Reasoning__b112fe8cae47/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_160129_Is_Chain-of-Thought_Reasoning__b112fe8cae47",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 20.0,
+    "mean_bullets_per_panel": 2.857,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 177.4,
+    "max_chars_per_panel": 196.0,
+    "n_figures_available": 1.0,
+    "n_panels_with_figure": 1.0,
+    "figure_usage_ratio": 0.143,
+    "text_only_panel_ratio": 0.857
+  },
+  "labels": [
+    {
+      "run_id": "b112fe8cae47",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "asset_utilization_error"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "Each section contains dense bullet points with minimal white space, using small font size and high text density, creating a heavy reading burden across the entire poster.",
+        "secondary": "The main contribution (e.g., 'CoT reasoning is a brittle mirage...') is repeated in multiple places but lacks visual emphasis; the figure in 'Method' is a black placeholder with no informative content and is not clearly linked to its description."
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"asset_utilization_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Each section contains dense bullet points with minimal white space, using small font size and high text density, creating a heavy reading burden across the entire poster.\",\n    \"secondary\": \"The main contribution (e.g., 'CoT reasoning is a brittle mirage...') is repeated in multiple places but lacks visual emphasis; the figure in 'Method' is a black placeholder with no informative content and is not clearly linked to its description.\"\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

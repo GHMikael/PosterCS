@@ -1,0 +1,52 @@
+{
+  "run_id": "7cec2961fac4",
+  "paper_title": "Multi-Agent-as-Judge: Aligning LLM-Agent-Based Automated Evaluation with Multi-Dimensional Human Evaluation",
+  "template": "template_storyflow",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_214153_Multi-Agent-as-Judge_Aligning__7cec2961fac4/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_214153_Multi-Agent-as-Judge_Aligning__7cec2961fac4",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "figure_too_small",
+    "figure_too_small",
+    "empty_space",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 6.0,
+    "total_bullets": 29.0,
+    "mean_bullets_per_panel": 4.833,
+    "max_bullets_per_panel": 5.0,
+    "mean_chars_per_panel": 272.3,
+    "max_chars_per_panel": 308.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.333,
+    "text_only_panel_ratio": 0.667
+  },
+  "labels": [
+    {
+      "run_id": "7cec2961fac4",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "space_imbalance"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "Each panel contains dense bullet lists with small font, creating high text density and heavy reading burden across the entire poster.",
+        "secondary_issues": {
+          "visual_hierarchy_weak": "The main contribution (MAJ-EVAL framework) is not visually emphasized; all panels have similar visual weight, making it hard to identify the key result first.",
+          "space_imbalance": "The right column (Experiments/Results, Conclusion/Takeaways) has significantly more white space than the left and middle columns, creating uneven visual weight."
+        }
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Each panel contains dense bullet lists with small font, creating high text density and heavy reading burden across the entire poster.\",\n    \"secondary_issues\": {\n      \"visual_hierarchy_weak\": \"The main contribution (MAJ-EVAL framework) is not visually emphasized; all panels have similar visual weight, making it hard to identify the key result first.\",\n      \"space_imbalance\": \"The right column (Experiments/Results, Conclusion/Takeaways) has significantly more white space than the left and middle columns, creating uneven visual weight.\"\n    }\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

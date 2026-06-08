@@ -60,4 +60,12 @@ experiments/notebooks/*.ipynb
 !datasets/planner_cache/*.json
 
 # Parked/deprecated files — kept locally as a soft-delete, not tracked
+cache/
 zcache/
+
+# Editor config
+.vscode/
+
+# Ad-hoc hydrate test cells (regenerable; audit_v1_old48 + ablation JSON evidence are kept)
+experiments/results/hydrate_test/
+experiments/results/hydrate_test_rag/

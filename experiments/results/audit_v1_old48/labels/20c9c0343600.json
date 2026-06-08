@@ -1,0 +1,51 @@
+{
+  "run_id": "20c9c0343600",
+  "paper_title": "Test-Time Preference Optimization: On-the-Fly Alignment via Iterative Textual Feedback",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_043121_Test-Time_Preference_Optimizat_20c9c0343600/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_043121_Test-Time_Preference_Optimizat_20c9c0343600",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 21.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 212.6,
+    "max_chars_per_panel": 245.0,
+    "n_figures_available": 1.0,
+    "n_panels_with_figure": 1.0,
+    "figure_usage_ratio": 0.143,
+    "text_only_panel_ratio": 0.857
+  },
+  "labels": [
+    {
+      "run_id": "20c9c0343600",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "structure_alignment_error"
+      ],
+      "guard_violations": [
+        "overflow_guard"
+      ],
+      "evidence": {
+        "primary": "The 'Experiments' and 'Results' sections contain dense bullet points with small font and numerous technical terms, creating high text density and cognitive load.",
+        "secondary": "The main contribution (TPO) is not visually emphasized; the key figure in 'Method' is small and lacks context, and section headers are misaligned with inconsistent spacing between panels."
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"structure_alignment_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Experiments' and 'Results' sections contain dense bullet points with small font and numerous technical terms, creating high text density and cognitive load.\",\n    \"secondary\": \"The main contribution (TPO) is not visually emphasized; the key figure in 'Method' is small and lacks context, and section headers are misaligned with inconsistent spacing between panels.\"\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

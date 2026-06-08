@@ -1,0 +1,95 @@
+{
+  "asset_token": "54c1d7de19a54f24",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "INSIDE: LLMS’ INTERNAL STATES RETAIN THE POWER OF HALLUCINATION DETECTION",
+  "authors": "Chao Chen, Kai Liu, Ze Chen, Yi Gu, Yue Wu, Mingyuan Tao, Zhihang Fu, Jieping Ye",
+  "paper_info": "Published as a conference paper at ICLR 2024",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "LLMs often produce factually incorrect or nonsensical outputs, known as knowledge hallucination.",
+        "Previous methods focused on logit-level uncertainty or language-level self-consistency, losing semantic information.",
+        "INSIDE framework addresses these limitations by leveraging internal states for hallucination detection."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Proposed a generalized INSIDE framework for hallucination detection using LLMs' internal states."
+      ],
+      "figure": null,
+      "figure_id": "Fig6",
+      "figure_caption": "Method pipeline including data preprocessing, model training, and result output.",
+      "layout_hint": "text_top_image_bottom"
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Conducted experiments on popular LLMs and QA benchmarks.",
+        "Performed ablation studies to validate the effectiveness of the proposed methods."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Ablation study results showing the impact of each module on model performance.",
+      "layout_hint": "text_top_image_bottom"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "INSIDE framework achieved state-of-the-art performance in hallucination detection on multiple QA benchmarks."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Comparison of different methods in experimental performance, highlighting the advantages of INSIDE.",
+      "layout_hint": "text_top_image_bottom"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "INSIDE framework and EigenScore metric provide a novel and effective way to detect hallucinations in LLMs.",
+        "Feature clipping approach helps reduce overconfident hallucinations, improving LLM reliability."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig6": {
+      "caption": "Method pipeline including data preprocessing, model training, and result output.",
+      "type": "pipeline",
+      "description": "展示了方法的整个流程，包括数据预处理、模型训练和结果输出等步骤。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Ablation study results showing the impact of each module on model performance.",
+      "type": "ablation_study",
+      "description": "展示了消融实验的结果，帮助读者理解各个模块对模型性能的影响。",
+      "best_matched_section": "Experiments",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Comparison of different methods in experimental performance, highlighting the advantages of INSIDE.",
+      "type": "result_chart",
+      "description": "比较了不同方法在实验中的性能表现，展示了模型在不同指标上的优势。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

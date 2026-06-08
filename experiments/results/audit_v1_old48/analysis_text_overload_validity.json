@@ -1,0 +1,210 @@
+{
+  "n_ok": 47,
+  "n_vhw_caveat": "visual_hierarchy_weak n=6 is small; AUC is descriptive, not inferential.",
+  "primary_counts": {
+    "text_overload": 39,
+    "visual_hierarchy_weak": 6,
+    "asset_utilization_error": 2
+  },
+  "group_density_stats": {
+    "text_overload": {
+      "mean_chars_per_panel": {
+        "n": 39,
+        "mean": 203.3,
+        "median": 203.6,
+        "std": 39.1,
+        "min": 139.9,
+        "max": 273.3
+      },
+      "max_chars_per_panel": {
+        "n": 39,
+        "mean": 258.5,
+        "median": 245.0,
+        "std": 62.3,
+        "min": 177.0,
+        "max": 403.0
+      },
+      "mean_bullets_per_panel": {
+        "n": 39,
+        "mean": 3.1,
+        "median": 3.0,
+        "std": 0.5,
+        "min": 2.3,
+        "max": 4.8
+      },
+      "total_bullets": {
+        "n": 39,
+        "mean": 20.6,
+        "median": 20.0,
+        "std": 3.8,
+        "min": 16.0,
+        "max": 29.0
+      },
+      "text_only_panel_ratio": {
+        "n": 39,
+        "mean": 0.8,
+        "median": 0.7,
+        "std": 0.2,
+        "min": 0.5,
+        "max": 1.0
+      },
+      "figure_usage_ratio": {
+        "n": 39,
+        "mean": 0.2,
+        "median": 0.3,
+        "std": 0.2,
+        "min": 0.0,
+        "max": 0.5
+      }
+    },
+    "visual_hierarchy_weak": {
+      "mean_chars_per_panel": {
+        "n": 6,
+        "mean": 182.6,
+        "median": 176.8,
+        "std": 18.6,
+        "min": 161.0,
+        "max": 207.7
+      },
+      "max_chars_per_panel": {
+        "n": 6,
+        "mean": 243.7,
+        "median": 222.5,
+        "std": 51.7,
+        "min": 182.0,
+        "max": 314.0
+      },
+      "mean_bullets_per_panel": {
+        "n": 6,
+        "mean": 2.9,
+        "median": 3.0,
+        "std": 0.3,
+        "min": 2.4,
+        "max": 3.2
+      },
+      "total_bullets": {
+        "n": 6,
+        "mean": 18.3,
+        "median": 18.5,
+        "std": 0.7,
+        "min": 17.0,
+        "max": 19.0
+      },
+      "text_only_panel_ratio": {
+        "n": 6,
+        "mean": 0.7,
+        "median": 0.8,
+        "std": 0.1,
+        "min": 0.6,
+        "max": 0.9
+      },
+      "figure_usage_ratio": {
+        "n": 6,
+        "mean": 0.3,
+        "median": 0.2,
+        "std": 0.1,
+        "min": 0.1,
+        "max": 0.4
+      }
+    },
+    "asset_utilization_error": {
+      "mean_chars_per_panel": {
+        "n": 2,
+        "mean": 244.0,
+        "median": 244.0,
+        "std": 66.0,
+        "min": 178.0,
+        "max": 310.0
+      },
+      "max_chars_per_panel": {
+        "n": 2,
+        "mean": 302.5,
+        "median": 302.5,
+        "std": 77.5,
+        "min": 225.0,
+        "max": 380.0
+      },
+      "mean_bullets_per_panel": {
+        "n": 2,
+        "mean": 3.9,
+        "median": 3.9,
+        "std": 0.9,
+        "min": 3.0,
+        "max": 4.7
+      },
+      "total_bullets": {
+        "n": 2,
+        "mean": 25.5,
+        "median": 25.5,
+        "std": 7.5,
+        "min": 18.0,
+        "max": 33.0
+      },
+      "text_only_panel_ratio": {
+        "n": 2,
+        "mean": 0.8,
+        "median": 0.8,
+        "std": 0.1,
+        "min": 0.7,
+        "max": 0.9
+      },
+      "figure_usage_ratio": {
+        "n": 2,
+        "mean": 0.2,
+        "median": 0.2,
+        "std": 0.1,
+        "min": 0.1,
+        "max": 0.3
+      }
+    }
+  },
+  "separation_TO_vs_VHW": {
+    "mean_chars_per_panel": {
+      "auc_TO_vs_VHW": 0.637,
+      "TO_median": 203.6,
+      "VHW_median": 176.8
+    },
+    "max_chars_per_panel": {
+      "auc_TO_vs_VHW": 0.556,
+      "TO_median": 245.0,
+      "VHW_median": 222.5
+    },
+    "mean_bullets_per_panel": {
+      "auc_TO_vs_VHW": 0.536,
+      "TO_median": 3.0,
+      "VHW_median": 3.0
+    },
+    "total_bullets": {
+      "auc_TO_vs_VHW": 0.69,
+      "TO_median": 20.0,
+      "VHW_median": 18.5
+    },
+    "text_only_panel_ratio": {
+      "auc_TO_vs_VHW": 0.573,
+      "TO_median": 0.7,
+      "VHW_median": 0.8
+    },
+    "figure_usage_ratio": {
+      "auc_TO_vs_VHW": 0.427,
+      "TO_median": 0.3,
+      "VHW_median": 0.2
+    }
+  },
+  "presence_diagnostic": {
+    "text_overload_presence": "47/47",
+    "least_dense_quartile_n": 11,
+    "least_dense_with_TO_present": 11,
+    "least_dense_with_TO_primary": 10,
+    "non_TO_primary_n": 8,
+    "of_those_TO_as_secondary": 8
+  },
+  "blip_locator": {
+    "run_id": "44a0517194a2",
+    "primary": "text_overload",
+    "mean_chars_per_panel": 251.4,
+    "pct_rank_in_all": 83.0,
+    "pct_rank_in_TO_group": 82.1
+  },
+  "headline_auc_mean_chars": 0.637,
+  "verdict": "AMBIGUOUS — weak density separation; small n_VHW. Add human gold or a 2nd annotator to decide."
+}

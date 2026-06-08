@@ -1,0 +1,91 @@
+{
+  "asset_token": "89807c3c18e64436",
+  "template": "template_dashboard",
+  "color_theme": "academic_blue",
+  "poster_title": "MEMTRACK: Evaluating Long-Term Memory and State Tracking in Multi-Platform Dynamic Agent Environments",
+  "authors": "Darshan Deshpande, Varun Gangal, Hersh Mehta, Anand Kannappan, Rebecca Qian, Peng Wang",
+  "paper_info": "39th Conference on Neural Information Processing Systems (NeurIPS 2025) Workshop: Scaling Environments for Agents (SEA). arXiv:2510.01353v1 [cs.AI] 1 Oct 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "Context and memory benchmarking focused on conversational instances.",
+        "Need for evaluating memory in dynamic enterprise environments.",
+        "Memory essential for managing and evolving enterprise components."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "content": [
+        "Existing benchmarks lack ecological validity for real-world tasks.",
+        "Need to evaluate memory over long horizons and across platforms.",
+        "Quantitative evaluation of memory retrieval and maintenance is understudied."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "MEMTRACK benchmark for long-term memory and state tracking.",
+        "Models realistic workflows with asynchronous events across platforms.",
+        "Supports brief phrase outputs for evaluation using LLM-as-judge.",
+        "Three data curation methodologies: top-down, bottom-up, and hybrid."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Conducted on state-of-the-art LLMs and memory backends.",
+        "Dataset contains 47 curated long context datapoints.",
+        "Benchmark environment includes asynchronous tools and live servers."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "Best GPT-5 model achieves 60% Correctness on MEMTRACK.",
+        "LLMs struggle with context retention and repeated information reading.",
+        "Memory tools increase redundancy in planning and tool use."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "MEMTRACK advances evaluation research for memory-augmented agents.",
+        "State-of-the-art models face significant challenges in context reasoning and memory management."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {},
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

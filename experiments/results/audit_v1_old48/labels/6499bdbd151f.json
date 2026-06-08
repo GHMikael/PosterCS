@@ -1,0 +1,43 @@
+{
+  "run_id": "6499bdbd151f",
+  "paper_title": "Automated Evaluation of Personalized Text Generation using Large Language Models",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260531_170227_Automated_Evaluation_of_Person_6499bdbd151f/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260531_170227_Automated_Evaluation_of_Person_6499bdbd151f",
+  "old_issues_initial": [],
+  "proxies": {
+    "n_panels": 6.0,
+    "total_bullets": 16.0,
+    "mean_bullets_per_panel": 2.667,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 152.7,
+    "max_chars_per_panel": 196.0,
+    "n_figures_available": 3.0,
+    "n_panels_with_figure": 3.0,
+    "figure_usage_ratio": 0.5,
+    "text_only_panel_ratio": 0.5
+  },
+  "labels": [
+    {
+      "run_id": "6499bdbd151f",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "asset_utilization_error"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The poster contains numerous bullet points with dense text across all sections, using small font sizes that create a high reading burden without sufficient visual breathing room.",
+        "secondary_issues": {
+          "visual_hierarchy_weak": "The main contribution (AuPEL framework) is not visually emphasized; all sections use identical blue headers and bullet styles, making it hard to distinguish the core method or key result.",
+          "asset_utilization_error": "The figures in 'Method', 'Experiments', and 'Results' are small, lack clear captions, and are not visually integrated with their descriptions, reducing their impact."
+        }
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"asset_utilization_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The poster contains numerous bullet points with dense text across all sections, using small font sizes that create a high reading burden without sufficient visual breathing room.\",\n    \"secondary_issues\": {\n      \"visual_hierarchy_weak\": \"The main contribution (AuPEL framework) is not visually emphasized; all sections use identical blue headers and bullet styles, making it hard to distinguish the core method or key result.\",\n      \"asset_utilization_error\": \"The figures in 'Method', 'Experiments', and 'Results' are small, lack clear captions, and are not visually integrated with their descriptions, reducing their impact.\"\n    }\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

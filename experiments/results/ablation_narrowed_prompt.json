@@ -1,0 +1,583 @@
+{
+  "model": "Qwen/Qwen3-VL-32B-Instruct",
+  "prompt": "narrowed_5cue",
+  "per_poster": [
+    {
+      "run_id": "830c175603a1",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "asset_utilization_error",
+      "vlm_present": [
+        "text_overload",
+        "asset_utilization_error"
+      ],
+      "figure_mismatch_flag": true,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": true,
+            "evidence": "在 Method 模块的图片下方，文字 'The pipeline of HelloEval has two stages. (top): In the preparation stage, we...' 被裁切，未完整显示。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内部及模块间间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": true,
+            "evidence": "Results 模块中的交叉剑图，其下方文字为 'Scores of different model sizes for open-source LLMs'，但图中无任何数据或分数，仅为装饰性图标，与文字内容无关。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均匀，无大片连续空白区域。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "各模块大小一致，但标题栏和底部结论栏视觉突出，形成一定焦点。"
+          }
+        },
+        "primary_cue": "figure_text_mismatch",
+        "primary_evidence": "Results 模块中的交叉剑图与下方描述模型分数的文字完全无关，属于纯装饰性、不匹配的配图。"
+      }
+    },
+    {
+      "run_id": "6499bdbd151f",
+      "human_primary": "overlap_guard",
+      "vlm_primary": "space_imbalance",
+      "vlm_present": [
+        "space_imbalance"
+      ],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": false,
+            "evidence": "所有文字均在框内，无重叠或裁切现象。"
+          },
+          "loose_spacing": {
+            "present": true,
+            "evidence": "Motivation、Problem、Method等模块内部的bullet点之间间距过大，导致版面松散。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "Method模块的图展示不同评估方法的一致性，与文字中AuPEL框架使用LLM评估的主题相关；Experiments模块的图是T5生成器的成对比较，与文字中验证人类标注者和传统指标相关；Results模块的图是不同T5模型的Elo评分，与文字中LLM评估器随模型增大而改进相关，所有图均与文字主题匹配。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均匀，无大片连续空白区域。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "底部有突出的结论横幅，且各模块标题清晰，视觉焦点明确。"
+          }
+        },
+        "primary_cue": "loose_spacing",
+        "primary_evidence": "模块内部bullet点间距过大，导致版面松散，影响信息密度和阅读流畅性。"
+      }
+    },
+    {
+      "run_id": "c73909e80a4e",
+      "human_primary": "overlap_guard",
+      "vlm_primary": "text_overload",
+      "vlm_present": [
+        "text_overload"
+      ],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": true,
+            "evidence": "标题 'BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding...' 被裁切，显示为 'Underst...'，文字超出其框体。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内部及模块间间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "海报中无配图，因此不存在图文不匹配问题。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均匀，无大片连续空白区域。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "各模块大小一致，但标题和底部标语突出，形成视觉焦点。"
+          }
+        },
+        "primary_cue": "overflow",
+        "primary_evidence": "标题文字被裁切，导致信息不完整，影响专业性和可读性。"
+      }
+    },
+    {
+      "run_id": "a2ff21dc2919",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "structure_alignment_error",
+      "vlm_present": [
+        "space_imbalance",
+        "structure_alignment_error"
+      ],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": false,
+            "evidence": "所有文字均在框内，无重叠或裁切现象。"
+          },
+          "loose_spacing": {
+            "present": true,
+            "evidence": "各模块内部及模块之间间距较大，尤其在模块下方和右侧，显得内容稀疏。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "Results模块中的图是神经网络结构图，标注为'Example of a Reward Model (RM) in the survey'，与模块文字主题'详细分类、挑战、未来方向'相关，无明显不相关或装饰性图片。"
+          },
+          "large_blank": {
+            "present": true,
+            "evidence": "海报右下角及底部区域存在大片连续空白，内容主要集中在左上和中间区域。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "所有模块大小一致，但标题和编号有视觉区分，且底部有重复结论句，形成一定视觉焦点。"
+          }
+        },
+        "primary_cue": "large_blank",
+        "primary_evidence": "海报右下角及底部存在大片连续空白，内容过度集中在左上和中间，导致版面失衡。"
+      }
+    },
+    {
+      "run_id": "3fdda15fffcb",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "asset_utilization_error",
+      "vlm_present": [
+        "space_imbalance",
+        "asset_utilization_error"
+      ],
+      "figure_mismatch_flag": true,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": false,
+            "evidence": "所有文字均在框内，无重叠或裁切。"
+          },
+          "loose_spacing": {
+            "present": true,
+            "evidence": "Motivation、Problem、Method等模块内bullet点之间间距过大，导致内容稀疏。"
+          },
+          "figure_text_mismatch": {
+            "present": true,
+            "evidence": "Results模块中的两张人脸图片标注为'<face_35>'和'<face_34>'，下方标题为'Training curves of DAPO'，但图片内容为人脸而非训练曲线，与文字主题无关。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均匀，无大片连续空白区域。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "底部有突出的蓝色横幅作为视觉焦点，模块大小有区分，主次分明。"
+          }
+        },
+        "primary_cue": "figure_text_mismatch",
+        "primary_evidence": "Results模块中的图片内容为人脸，与文字描述的训练曲线无关，属于明显不相关图。"
+      }
+    },
+    {
+      "run_id": "6203fd2fd92e",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "text_overload",
+      "vlm_present": [
+        "text_overload"
+      ],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": true,
+            "evidence": "Method模块中的配图下方文字被裁切，无法完整显示，且图与文字重叠。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内bullet点间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "Method模块中的图展示GraphRAG框架结构，与文字描述的框架组件（query processor, retriever等）直接相关。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均匀，六模块布局完整，无大片连续空白区域。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "各模块大小一致，但标题和编号清晰，视觉上无明显主次，但未达到‘无焦点’程度。"
+          }
+        },
+        "primary_cue": "overflow",
+        "primary_evidence": "Method模块中的配图下方文字被裁切，无法完整显示，且图与文字重叠。"
+      }
+    },
+    {
+      "run_id": "b08f727827bb",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "text_overload",
+      "vlm_present": [
+        "text_overload"
+      ],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": true,
+            "evidence": "在 'Problem' 模块中，'Sample questions from the novel question bank' 的图片下方文字被裁切，且图片与下方 bullet point 文字重叠。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内部及模块间间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "Problem 模块中的图片展示的是问题样本，与文字主题‘标准心理测量测试不足’直接相关；Results 模块中的图表展示的是内向/外向代理的评估结果，与文字内容一致。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均匀，左右两侧均有模块，无大片连续空白区域。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "标题、Storyflow、Conclusion 和底部标语等元素形成视觉焦点，模块大小有主次区分。"
+          }
+        },
+        "primary_cue": "overflow",
+        "primary_evidence": "在 'Problem' 模块中，'Sample questions from the novel question bank' 的图片下方文字被裁切，且图片与下方 bullet point 文字重叠。"
+      }
+    },
+    {
+      "run_id": "da638e0471a6",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "text_overload",
+      "vlm_present": [
+        "text_overload"
+      ],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": true,
+            "evidence": "标题 'LeanRAG: Knowledge-Graph-Based Generation with Semantic Aggregation and Hierarchical...' 被裁切，未完整显示在蓝色标题栏内。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内部及模块间间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "实验模块中的图展示了不同RAG框架的对比，与文字描述的实验结果直接相关；方法模块中的图是框架概述，与文字描述的框架步骤一致。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均衡，六列模块填满主要区域，无大片连续空白。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "底部蓝色横幅突出核心结论，模块大小一致但通过位置和颜色区分主次，有视觉焦点。"
+          }
+        },
+        "primary_cue": "overflow",
+        "primary_evidence": "标题被裁切，影响信息完整性和专业性，是视觉上最直接的版面错误。"
+      }
+    },
+    {
+      "run_id": "1c72b772bccb",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "text_overload",
+      "vlm_present": [
+        "text_overload"
+      ],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": true,
+            "evidence": "在'Motivation'模块中，第二条文字'Previous methods lose semantic information through logit-level or language-level evaluati...'被截断，未完整显示，属于文字溢出。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内bullet点间距均匀，模块间布局紧凑，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "Method模块中的绿色图示标注为'illustration of the proposed hallucination detection pipeline'，内容与该模块文字描述的INSIDE框架、EigenScore和feature clipping一致，相关性强。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均匀，六列模块填满主要区域，无大片连续空白。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "底部蓝色横幅突出核心结论，各模块标题清晰，主次分明，有视觉焦点。"
+          }
+        },
+        "primary_cue": "overflow",
+        "primary_evidence": "Motivation模块中第二条文字被截断，导致信息不完整，影响阅读和理解。"
+      }
+    },
+    {
+      "run_id": "53730e3ca04c",
+      "human_primary": "",
+      "vlm_primary": "visual_hierarchy_weak",
+      "vlm_present": [
+        "visual_hierarchy_weak"
+      ],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": false,
+            "evidence": "所有文字均在框内，无重叠或裁切现象。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内 bullet 间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "Method 模块的图展示 KL loss 权重对 retriever 仿真的影响，与预训练 MLP Memory 的方法描述直接相关；Results 模块的图展示 QA 基准上的性能与效率对比，与结果描述一致。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均衡，无大片连续空白区域。"
+          },
+          "no_focus": {
+            "present": true,
+            "evidence": "所有模块大小和样式雷同，无视觉焦点，底部结论虽突出但未在布局上形成主次区分。"
+          }
+        },
+        "primary_cue": "no_focus",
+        "primary_evidence": "所有模块大小和样式雷同，缺乏视觉焦点，导致信息层级不清晰。"
+      }
+    },
+    {
+      "run_id": "20c9c0343600",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "asset_utilization_error",
+      "vlm_present": [
+        "asset_utilization_error"
+      ],
+      "figure_mismatch_flag": true,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": false,
+            "evidence": "所有文字均在框内，无重叠或裁切现象。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内 bullet 间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": true,
+            "evidence": "Method 模块中的插图是一个思考中的人物，带有问号气泡，其内容为抽象的‘思考’或‘疑问’，与‘Test-time Preference Optimization’这一具体技术框架无直接关联，属于装饰性或示意性图像，而非技术流程图或数据可视化，与文字主题不匹配。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均衡，无大片连续空白区域。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "底部蓝色横幅突出核心结论，模块大小有区分，存在视觉焦点。"
+          }
+        },
+        "primary_cue": "figure_text_mismatch",
+        "primary_evidence": "Method 模块中的插图内容为抽象思考人物，与技术框架描述无直接关联，属于不相关装饰图。"
+      }
+    },
+    {
+      "run_id": "f3d5eead40ba",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "text_overload",
+      "vlm_present": [],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": false,
+            "evidence": "所有文字均在框内，无重叠或裁切。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内 bullet 间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "Method 模块的图是机器人，标注为‘Basic steps of the Constitutional AI (CAI) process’，与文字描述的 CAI 方法步骤相关；Results 模块的图是 Harmlessness vs Helpfulness Elo scores，与文字描述的模型性能比较直接相关。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均匀，六模块布局完整，无大片连续空白区域。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "底部有突出的结论性标语，各模块标题清晰，视觉层级分明，有主次之分。"
+          }
+        },
+        "primary_cue": "overflow",
+        "primary_evidence": "所有文字均在框内，无重叠或裁切。"
+      }
+    },
+    {
+      "run_id": "d346898900a2",
+      "human_primary": "structure_alignment_error",
+      "vlm_primary": "text_overload",
+      "vlm_present": [
+        "text_overload"
+      ],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": true,
+            "evidence": "在'Motivation'模块中，第3点文字'impact of CoT prompting on hallucination detection is under-explored.'被裁切，部分文字被截断。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内部及模块间间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "Method模块中的图是流程图，与评估CoT提示对幻觉检测影响的文本主题相关；Experiments模块中的图是放大镜图标，与'confusing hallucination detection'的文本主题相关，无明显不相关或装饰性图片。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均匀，右侧虽有空白但未形成大片连续空白，内容未挤在一边。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "底部蓝色横幅突出结论，模块大小有区分，存在视觉焦点。"
+          }
+        },
+        "primary_cue": "overflow",
+        "primary_evidence": "在'Motivation'模块中，第3点文字'impact of CoT prompting on hallucination detection is under-explored.'被裁切，部分文字被截断。"
+      }
+    },
+    {
+      "run_id": "c9dd5cc03f4f",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "text_overload",
+      "vlm_present": [
+        "text_overload"
+      ],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": true,
+            "evidence": "在'Motivation'模块中，第5条文字'Introduces a multimodal mixture of encoder-decoder (MED) architecture.'被裁切，末尾文字不可见。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内bullet点间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "Method模块中的图是女孩抱猫，与'Pre-training model architecture'文字主题不直接相关，但可视为示例图像；Results模块中的日落图与'web text Tw and synthetic text Ts'相关，用于展示文本生成效果，整体无明显放错或纯装饰图。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均衡，六模块布局完整，无大片连续空白区域。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "各模块大小一致，但底部有突出的总结句，整体有视觉引导，无明显主次缺失。"
+          }
+        },
+        "primary_cue": "overflow",
+        "primary_evidence": "在'Motivation'模块中，第5条文字被裁切，导致信息不完整，影响阅读。"
+      }
+    },
+    {
+      "run_id": "44a0517194a2",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "text_overload",
+      "vlm_present": [
+        "text_overload"
+      ],
+      "figure_mismatch_flag": false,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": true,
+            "evidence": "在'Motivation'模块中，第5条文字'Introduces a multimodal mixture of encoder-decoder (MED) architecture.'被裁切，未完整显示。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内bullet点间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": false,
+            "evidence": "Method模块中的图是女孩抱猫，与'Pre-training model architecture'文字主题不直接相关，但可视为示例图；Results模块中的日落图与'web text Tw and synthetic text Ts'相关，用于说明数据生成，整体无纯装饰图。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均衡，六模块填满主要区域，无大片连续空白。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "各模块标题颜色和大小一致，但底部横幅突出总结句，形成视觉焦点。"
+          }
+        },
+        "primary_cue": "overflow",
+        "primary_evidence": "Motivation模块中第5条文字被裁切，影响信息完整传达。"
+      }
+    },
+    {
+      "run_id": "c1e8b5acfe13",
+      "human_primary": "asset_utilization_error",
+      "vlm_primary": "asset_utilization_error",
+      "vlm_present": [
+        "asset_utilization_error"
+      ],
+      "figure_mismatch_flag": true,
+      "source": "vlm",
+      "raw": {
+        "cues": {
+          "overflow": {
+            "present": false,
+            "evidence": "所有文字均在框内，无重叠或裁切现象。"
+          },
+          "loose_spacing": {
+            "present": false,
+            "evidence": "各模块内 bullet 间距均匀，无明显过大空隙。"
+          },
+          "figure_text_mismatch": {
+            "present": true,
+            "evidence": "Method 模块右侧的图仅显示 'Tencent AI Lab' 标志，无实际技术示意图，与模块文字描述的生成式评分技术无关，属于纯装饰图。"
+          },
+          "large_blank": {
+            "present": false,
+            "evidence": "海报内容分布均衡，无大片连续空白区域。"
+          },
+          "no_focus": {
+            "present": false,
+            "evidence": "底部蓝色横幅突出核心结论，模块大小有区分，存在视觉焦点。"
+          }
+        },
+        "primary_cue": "figure_text_mismatch",
+        "primary_evidence": "Method 模块中的图仅为实验室标志，与生成式评分技术内容无关，构成明显图文不匹配。"
+      }
+    }
+  ]
+}

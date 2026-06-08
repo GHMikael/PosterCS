@@ -1,0 +1,97 @@
+{
+  "asset_token": "3c733378d6824722",
+  "template": "template_minimal",
+  "layout_variant": "auto",
+  "color_theme": "minimal_gray",
+  "emphasis_level": "normal",
+  "poster_title": "A Comprehensive Survey of Reward Models: Taxonomy, Applications, Challenges, and Future",
+  "authors": "Jialun Zhong, Wei Shen, Yanzeng Li, Songyang Gao, Hua Lu, Yicheng Chen, Yang Zhang, Wei Zhou, Jinjie Gu, Lei Zou",
+  "paper_info": "arXiv:2504.12328v1 [cs.CL] 12 Apr 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "minimal_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Overview",
+      "content": [
+        "First comprehensive survey on Reward Models (RMs) in the Large Language Models (LLMs) era.",
+        "Covers taxonomy, applications, challenges, and future directions.",
+        "Aims to assist beginners and guide future research."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0
+    },
+    {
+      "section": "Research Background",
+      "content": [
+        "LLMs have driven advancements in various tasks.",
+        "Alignment techniques reduce human involvement in the alignment process.",
+        "RMs trained on human preferences provide reward signals for reinforcement learning."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0
+    },
+    {
+      "section": "Research Problem",
+      "content": [
+        "Previous surveys lack systematic organization of RMs.",
+        "Need for a comprehensive introduction to RMs for beginners and future research."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Presents a taxonomy of RMs: preference collection, reward modeling, and usage.",
+        "Reviews related works and introduces an elaborate taxonomy."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0
+    },
+    {
+      "section": "Key Findings",
+      "content": [
+        "Identifies key areas of research and provides a structured taxonomy for RMs.",
+        "Highlights the importance of improving preference collection efficiency and quality.",
+        "Discusses integration of AI and human preferences in reward modeling."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "Provides a comprehensive overview of RMs, including taxonomy, applications, and challenges.",
+        "Aims to assist beginners in understanding RMs and guide future research."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0
+    }
+  ],
+  "figures": {},
+  "use_commenter": true,
+  "max_iterations": 4,
+  "save_debug_images": true,
+  "global_font_scale": 1.0
+}

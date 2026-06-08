@@ -1,0 +1,88 @@
+{
+  "asset_token": "9378d5622e1c4117",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Test-Time Preference Optimization: On-the-Fly Alignment via Iterative Textual Feedback",
+  "authors": "Yafu Li, Xuyang Hu, Xiaoye Qu, Linjie Li, Yu Cheng",
+  "paper_info": "arXiv:2501.12895v1 [cs.CL] 22 Jan 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "Large language models (LLMs) may produce unsafe responses if not aligned.",
+        "Traditional alignment methods are not swift enough for real-time adaptation.",
+        "Need for a method to align LLMs during inference with textual feedback."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "content": [
+        "Aligning LLMs during inference to match human preferences.",
+        "Using interpretable textual feedback for preference optimization."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "TPO transforms numerical rewards into textual critiques.",
+        "Policy model refines outputs iteratively based on textual critiques.",
+        "TPO operates as an online, on-policy learning paradigm."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Evaluated on benchmark datasets: instruction following, preference alignment, safety, mathematics.",
+        "Compared unaligned and aligned models, with aligned models optimized at training time."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "TPO aligns the policy model with human preferences, improving reward model scores.",
+        "Unaligned Llama-3.1-70B-SFT surpasses Llama-3.1-70B-Instruct on most benchmarks.",
+        "TPO scales efficiently with search width and depth."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "TPO is a practical and lightweight method for test-time preference optimization.",
+        "Empirical findings show significant improvement in alignment with human preferences."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {},
+  "use_commenter": true,
+  "max_iterations": 4,
+  "save_debug_images": true
+}

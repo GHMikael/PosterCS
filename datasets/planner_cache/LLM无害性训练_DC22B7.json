@@ -1,0 +1,96 @@
+{
+  "asset_token": "fe335b50e0864885",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Constitutional AI: Harmlessness from AI Feedback",
+  "authors": "Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhoseini, Cameron McKinnon, Carol Chen, Catherine Olsson, Christopher Olah, Danny Hernandez, Dawn Drain, Deep Ganguli, Dustin Li, Eli Tran-Johnson, Ethan Perez, Jamie Kerr, Jared Mueller, Jeffrey Ladish, Joshua Landau, Kamal Ndousse, Kamile Lukosuite, Liane Lovitt, Michael Sellitto, Nelson Elhage, Nicholas Schiefer, Noemi Mercado, Nova DasSarma, Robert Lasenby, Robin Larson, Sam Ringer, Scott Johnston, Shauna Kravec, Sheer El Showk, Stanislav Fort, Tamera Lanham, Timothy Telleen-Lawton, Tom Conerly, Tom Henighan, Tom Brown, Jared Kaplan",
+  "paper_info": "arXiv:2212.08073v1 [cs.CL] 15 Dec 2022",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "AI systems require methods to ensure they are helpful, honest, and harmless.",
+        "Reinforcement learning from human feedback (RLHF) is effective but costly.",
+        "Constitutional AI (CAI) aims to train harmless AI assistants with minimal human input."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "content": [
+        "Tradeoff between helpfulness and harmlessness in AI systems.",
+        "Evasive responses are often rewarded, reducing AI utility.",
+        "Scaling supervision efficiently and transparently is crucial."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "CAI combines supervised learning (SL) and reinforcement learning (RL) phases.",
+        "SL phase: Initial model responses are critiqued and revised based on a set of principles (constitution).",
+        "RL phase: A preference model is trained using AI-generated preferences, and the model is further trained using these preferences as the reward signal (RLAIF)."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Models trained using a small set of natural language principles to guide behavior.",
+        "Experiments included generating responses to ‘Red Teaming’ prompts and evaluating model performance in open-ended conversations.",
+        "RL-CAI model was compared to models trained with human feedback."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "RL-CAI model preferred for harmlessness over human feedback models."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Harmlessness vs. helpfulness Elo scores for 52B RL models, with points further right indicating later training steps.",
+      "layout_hint": "text_top_image_bottom"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "CAI significantly improves harmlessness and helpfulness with minimal human input.",
+        "AI feedback scales supervision more efficiently and transparently."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Harmlessness vs. helpfulness Elo scores for 52B RL models, with points further right indicating later training steps.",
+      "type": "result_chart",
+      "description": "展示了通过众包工作者的模型比较计算出的无害性和帮助性 Elo 分数，反映了 52B RL 模型在不同训练步骤中的表现。Helpful 和 HH 模型是通过人类反馈训练的。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

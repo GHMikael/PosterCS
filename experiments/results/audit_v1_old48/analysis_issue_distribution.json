@@ -1,0 +1,112 @@
+{
+  "n_posters": 48,
+  "n_labeled_ok": 47,
+  "n_failed": 1,
+  "failed_sources": {
+    "vlm_error": 1
+  },
+  "distinct_papers": 31,
+  "primary_distribution": {
+    "space_imbalance": 0,
+    "text_overload": 39,
+    "visual_hierarchy_weak": 6,
+    "asset_utilization_error": 2,
+    "structure_alignment_error": 0,
+    "other": 0,
+    "none": 0
+  },
+  "primary_share": {
+    "space_imbalance": 0.0,
+    "text_overload": 0.83,
+    "visual_hierarchy_weak": 0.128,
+    "asset_utilization_error": 0.043,
+    "structure_alignment_error": 0.0,
+    "other": 0.0,
+    "none": 0.0
+  },
+  "secondary_distribution": {
+    "space_imbalance": 26,
+    "text_overload": 8,
+    "visual_hierarchy_weak": 41,
+    "asset_utilization_error": 16,
+    "structure_alignment_error": 3,
+    "other": 0
+  },
+  "presence_distribution": {
+    "space_imbalance": 26,
+    "text_overload": 47,
+    "visual_hierarchy_weak": 47,
+    "asset_utilization_error": 18,
+    "structure_alignment_error": 3,
+    "other": 0,
+    "none": 0
+  },
+  "guard_trigger_counts": {
+    "overlap_guard": 0,
+    "contrast_guard": 0,
+    "overflow_guard": 10,
+    "crop_guard": 0
+  },
+  "guard_trigger_rate": {
+    "overlap_guard": 0.0,
+    "contrast_guard": 0.0,
+    "overflow_guard": 0.213,
+    "crop_guard": 0.0
+  },
+  "legacy_issue_counts": {
+    "empty_space": 237,
+    "overlapping_elements": 1,
+    "low_contrast": 40,
+    "figure_too_small": 48
+  },
+  "legacy_mapped_to_new": {
+    "space_imbalance": 237,
+    "contrast_guard": 40,
+    "asset_utilization_error": 48,
+    "overlap_guard": 1
+  },
+  "legacy_low_freq_check": {
+    "overlap_plus_contrast": 41,
+    "legacy_total_mentions": 326,
+    "low_freq_share": 0.126,
+    "reading": "Low share ⇒ overlap/contrast are rare ⇒ demoting them to guards is justified."
+  },
+  "by_template_primary": {
+    "template_classic": {
+      "space_imbalance": 0,
+      "text_overload": 23,
+      "visual_hierarchy_weak": 3,
+      "asset_utilization_error": 2,
+      "structure_alignment_error": 0,
+      "other": 0,
+      "none": 0
+    },
+    "template_dashboard": {
+      "space_imbalance": 0,
+      "text_overload": 10,
+      "visual_hierarchy_weak": 1,
+      "asset_utilization_error": 0,
+      "structure_alignment_error": 0,
+      "other": 0,
+      "none": 0
+    },
+    "template_minimal": {
+      "space_imbalance": 0,
+      "text_overload": 0,
+      "visual_hierarchy_weak": 2,
+      "asset_utilization_error": 0,
+      "structure_alignment_error": 0,
+      "other": 0,
+      "none": 0
+    },
+    "template_storyflow": {
+      "space_imbalance": 0,
+      "text_overload": 6,
+      "visual_hierarchy_weak": 0,
+      "asset_utilization_error": 0,
+      "structure_alignment_error": 0,
+      "other": 0,
+      "none": 0
+    }
+  }
+}

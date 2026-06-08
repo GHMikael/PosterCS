@@ -1,0 +1,92 @@
+{
+  "asset_token": "a58554c20d8c4f4e",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens",
+  "authors": "Chengshuai Zhao, Zhen Tan, Pingchuan Ma, Dawei Li, Bohan Jiang, Yancheng Wang, Yingzhen Yang, Huan Liu",
+  "paper_info": "arXiv:2508.01191v3 [cs.AI] 13 Aug 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "CoT prompting improves LLMs' performance on various tasks.",
+        "Empirical successes suggest LLMs engage in deliberate inferential processes.",
+        "However, initial findings indicate CoT reasoning may be superficial."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Research Problem",
+      "content": [
+        "LLMs can produce logically inconsistent conclusions with CoT reasoning.",
+        "Models rely on surface-level semantics and token associations rather than logical procedures.",
+        "Performance degrades sharply on tasks deviating from familiar templates or commonsense heuristics."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Propose a data distribution lens to study CoT reasoning.",
+        "Hypothesize that CoT reasoning reflects inductive biases learned from in-distribution data.",
+        "Dissect CoT reasoning via task, length, and format dimensions.",
+        "Introduce DataAlchemy for controlled LLM training and probing under distribution shifts."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Design experiments to evaluate CoT reasoning across different tasks, lengths, and formats.",
+        "Train LLMs from scratch using DataAlchemy and test reasoning under in-distribution and out-of-distribution conditions.",
+        "Analyze the effects of distribution shifts on CoT reasoning performance and consistency."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "CoT reasoning is effective on in-distribution or near in-distribution data.",
+        "Performance degrades sharply under moderate distribution shifts, revealing reasoning fragility.",
+        "Models often generate fluent but logically incorrect reasoning steps on complex tasks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "CoT reasoning is a brittle mirage that vanishes beyond training distributions.",
+        "Effectiveness is fundamentally limited by distribution discrepancy between training and test data.",
+        "Developing LLMs with genuine and generalizable reasoning capabilities is an ongoing challenge."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {},
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

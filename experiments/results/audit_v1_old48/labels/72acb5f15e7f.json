@@ -1,0 +1,43 @@
+{
+  "run_id": "72acb5f15e7f",
+  "paper_title": "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation",
+  "template": "template_dashboard",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260531_175027_BLIP_Bootstrapping_Language-Im_72acb5f15e7f/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260531_175027_BLIP_Bootstrapping_Language-Im_72acb5f15e7f",
+  "old_issues_initial": [],
+  "proxies": {
+    "n_panels": 6.0,
+    "total_bullets": 18.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 154.2,
+    "max_chars_per_panel": 177.0,
+    "n_figures_available": 0.0,
+    "n_panels_with_figure": 0.0,
+    "figure_usage_ratio": 0.0,
+    "text_only_panel_ratio": 1.0
+  },
+  "labels": [
+    {
+      "run_id": "72acb5f15e7f",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "space_imbalance"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The poster contains dense bullet points with small font sizes across all sections, creating a high text density that overwhelms the reader and increases cognitive load.",
+        "secondary_issues": {
+          "visual_hierarchy_weak": "The main contribution (BLIP unifies understanding and generation) is not visually emphasized; the large title and bottom banner are the only prominent elements, but they are not linked to the core method or results.",
+          "space_imbalance": "The 'Method' section is visually sparse compared to the densely packed 'Problem' and 'Experiments' sections, creating an uneven visual weight across the top row."
+        }
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The poster contains dense bullet points with small font sizes across all sections, creating a high text density that overwhelms the reader and increases cognitive load.\",\n    \"secondary_issues\": {\n      \"visual_hierarchy_weak\": \"The main contribution (BLIP unifies understanding and generation) is not visually emphasized; the large title and bottom banner are the only prominent elements, but they are not linked to the core method or results.\",\n      \"space_imbalance\": \"The 'Method' section is visually sparse compared to the densely packed 'Problem' and 'Experiments' sections, creating an uneven visual weight across the top row.\"\n    }\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

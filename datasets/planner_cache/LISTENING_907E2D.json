@@ -1,0 +1,97 @@
+{
+  "asset_token": "075424903a2c4eaa",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory",
+  "authors": "Lin Long, Yichen He, Wentao Ye, Yiyuan Pan, Yuan Lin, Hang Li, Junbo Zhao, Wei Li",
+  "paper_info": "Date: October 10, 2025; arXiv:2508.09736v4 [cs.CV]",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation / Background",
+      "content": [
+        "Multimodal agents require real-time processing of visual and auditory inputs.",
+        "Traditional methods focus on low-level details, lacking long-term context.",
+        "LVQA benchmarks need to evaluate higher-level cognitive abilities."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem / Challenge",
+      "content": [
+        "Handle infinite multimodal input streams in real-time.",
+        "Incrementally build and maintain consistent world knowledge."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method / Framework",
+      "content": [
+        "M3-Agent processes real-time inputs to construct episodic and semantic memories.",
+        "Episodic memory captures concrete events; semantic memory stores general knowledge.",
+        "Entity-centric memory structure enables coherent reasoning over time.",
+        "Reinforcement learning for multi-turn reasoning and iterative memory retrieval."
+      ],
+      "figure": null,
+      "figure_id": "Fig7",
+      "figure_caption": "DAPO training process: average scores (training set) and accuracy (dev set) curves",
+      "layout_hint": "text_top_image_bottom"
+    },
+    {
+      "section": "Experiments / Results",
+      "content": [
+        "Evaluated on M3-Bench: 100 robot-perspective videos, 920 web-sourced videos.",
+        "M3-Bench includes five question types for memory-based reasoning.",
+        "M3-Agent outperforms Gemini-GPT4o-Hybrid by 6.7%, 7.7%, and 5.3% on M3-Bench-robot, M3-Bench-web, and VideoMME-long."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Key Findings",
+      "content": [
+        "Ablation studies highlight the importance of semantic memory and reinforcement learning.",
+        "M3-Agent demonstrates superior performance in long-term memory and reasoning tasks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion / Takeaways",
+      "content": [
+        "M3-Agent advances multimodal agents toward human-like long-term memory and reasoning.",
+        "Provides insights for designing practical multimodal agents with long-term memory."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig7": {
+      "caption": "Figure 4 Average scores (on training set) and accuracy (on dev set) curves during the DAPO training process. The smoothing method of the curve in the left figure is the exponential moving average(EMA) formula that aligns with the one used in WandB, and the smoothing weight is set to 0.9",
+      "type": "result_chart",
+      "description": "显示 DAPO 训练过程中训练集的平均得分和开发集的准确率曲线，左图使用指数移动平均（EMA）平滑方法，平滑权重为 0.9",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

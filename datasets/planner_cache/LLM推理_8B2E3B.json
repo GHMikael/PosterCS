@@ -1,0 +1,77 @@
+{
+  "asset_token": "a94605fdf26e422e",
+  "template": "template_minimal",
+  "color_theme": "academic_blue",
+  "poster_title": "From Efficiency to Adaptivity: A Deeper Look at Adaptive Reasoning in Large Language Models",
+  "authors": "Chao Wu, Baoheng Li, Mingchen Gao, Zhenyi Wang",
+  "paper_info": "arXiv:2511.10788v1 [cs.AI] 13 Nov 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "minimal_layout",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "Reasoning is crucial for systematic decision-making.",
+        "LLMs are key benchmarks for reasoning capabilities.",
+        "Most surveys focus on efficiency, not adaptivity."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "content": [
+        "Uniform reasoning strategies lead to inefficiency.",
+        "LLMs struggle with complex tasks.",
+        "Adaptivity is needed to adjust reasoning effort."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Formalize reasoning types in LLMs.",
+        "Adaptive reasoning as control-augmented policy optimization.",
+        "Develop taxonomy for existing methods."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "Taxonomy clarifies adaptive reasoning mechanisms.",
+        "Framework enables comparison of reasoning strategies."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "Adaptive reasoning is essential for LLMs.",
+        "Future research should focus on self-evaluation and human-aligned control."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {},
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

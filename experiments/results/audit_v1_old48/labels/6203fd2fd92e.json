@@ -1,0 +1,52 @@
+{
+  "run_id": "6203fd2fd92e",
+  "paper_title": "Retrieval-Augmented Generation with Graphs (GraphRAG)",
+  "template": "template_minimal",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_220356_Retrieval-Augmented_Generation_6203fd2fd92e/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_220356_Retrieval-Augmented_Generation_6203fd2fd92e",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 6.0,
+    "total_bullets": 18.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 176.2,
+    "max_chars_per_panel": 215.0,
+    "n_figures_available": 1.0,
+    "n_panels_with_figure": 1.0,
+    "figure_usage_ratio": 0.167,
+    "text_only_panel_ratio": 0.833
+  },
+  "labels": [
+    {
+      "run_id": "6203fd2fd92e",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "visual_hierarchy_weak",
+      "secondary_issues": [
+        "text_overload",
+        "space_imbalance"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The main contribution or key result is not visually emphasized; all six sections are presented with equal visual weight, making it difficult for the viewer to identify the most important content first.",
+        "secondary_issues": [
+          "text_overload: Each section contains dense bullet points with minimal white space, increasing reading burden.",
+          "space_imbalance: The 'Method' section (03) contains a figure and more content, while other sections like 'Conclusion' (05) and 'Overview' (06) are visually lighter, creating uneven visual weight across the grid."
+        ]
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"visual_hierarchy_weak\",\n  \"secondary_issues\": [\"text_overload\", \"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The main contribution or key result is not visually emphasized; all six sections are presented with equal visual weight, making it difficult for the viewer to identify the most important content first.\",\n    \"secondary_issues\": [\n      \"text_overload: Each section contains dense bullet points with minimal white space, increasing reading burden.\",\n      \"space_imbalance: The 'Method' section (03) contains a figure and more content, while other sections like 'Conclusion' (05) and 'Overview' (06) are visually lighter, creating uneven visual weight across the grid.\"\n    ]\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

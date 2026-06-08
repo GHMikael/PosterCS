@@ -1,0 +1,50 @@
+{
+  "run_id": "f3d5eead40ba",
+  "paper_title": "Constitutional AI: Harmlessness from AI Feedback",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_161539_Constitutional_AI_Harmlessness_f3d5eead40ba/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_161539_Constitutional_AI_Harmlessness_f3d5eead40ba",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 6.0,
+    "total_bullets": 18.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 233.0,
+    "max_chars_per_panel": 267.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.333,
+    "text_only_panel_ratio": 0.667
+  },
+  "labels": [
+    {
+      "run_id": "f3d5eead40ba",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "asset_utilization_error"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "Each section contains dense bullet points with small font, creating high text density and heavy reading burden across the entire poster.",
+        "visual_hierarchy_weak": "The main contribution is not visually emphasized; all sections use identical blue headers and bullet styles, making it hard to distinguish key results or the core method.",
+        "asset_utilization_error": "The figure in the Results section is small and lacks a clear caption, and the robot illustration in Method is decorative rather than explanatory."
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"asset_utilization_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Each section contains dense bullet points with small font, creating high text density and heavy reading burden across the entire poster.\",\n    \"visual_hierarchy_weak\": \"The main contribution is not visually emphasized; all sections use identical blue headers and bullet styles, making it hard to distinguish key results or the core method.\",\n    \"asset_utilization_error\": \"The figure in the Results section is small and lacks a clear caption, and the robot illustration in Method is decorative rather than explanatory.\"\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

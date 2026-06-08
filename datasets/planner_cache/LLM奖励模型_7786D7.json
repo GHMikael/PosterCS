@@ -1,0 +1,90 @@
+{
+  "asset_token": "87ec9734b9dd4e44",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Generalist Reward Models: Found Inside Large Language Models",
+  "authors": "Yi-Chen Li, Tian Xu, Yang Yu, Xuqin Zhang, Xiong-Hui Chen, Zhongxiang Ling, Ningjing Chao, Lei Yuan, Zhi-Hua Zhou",
+  "paper_info": "arXiv:2506.23235v1 [cs.CL] 29 Jun 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "RLHF is the main paradigm for aligning LLMs with human values.",
+        "Training RMs on human preferences is costly and difficult to scale.",
+        "Heuristic methods for internal reward extraction lack theoretical guarantees."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "content": [
+        "High-quality reward signals are essential for LLM alignment.",
+        "External RMs are expensive and not scalable.",
+        "Internal reward extraction methods lack rigorous theoretical foundations."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Discover endogenous reward within LLMs trained via next-token prediction.",
+        "Prove theoretical equivalence to offline IRL reward functions.",
+        "Extract reward function from LLM logits using inverse soft Bellman operator."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Validate theoretical findings on various LLMs.",
+        "Compare performance with LLM-as-a-judge and explicit RM training."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "Endogenous reward outperforms LLM-as-a-judge methods.",
+        "Surpasses explicitly trained RMs on expensive human-labeled data.",
+        "Fine-tuning with endogenous reward improves policy error bound."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "Endogenous reward can replace reward modeling stage in LLM alignment.",
+        "Proposes a more efficient and theoretically grounded paradigm.",
+        "Suggests viable alternative to costly human preference datasets."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {},
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

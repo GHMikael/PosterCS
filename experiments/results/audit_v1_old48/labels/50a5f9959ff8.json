@@ -1,0 +1,52 @@
+{
+  "run_id": "50a5f9959ff8",
+  "paper_title": "Evaluating LLM Agent Personality and Response Appropriateness",
+  "template": "template_dashboard",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_163841_Evaluating_LLM_Agent_Personali_50a5f9959ff8/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_163841_Evaluating_LLM_Agent_Personali_50a5f9959ff8",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 20.0,
+    "mean_bullets_per_panel": 2.857,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 157.9,
+    "max_chars_per_panel": 192.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.286,
+    "text_only_panel_ratio": 0.714
+  },
+  "labels": [
+    {
+      "run_id": "50a5f9959ff8",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "space_imbalance"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The 'Problem' and 'Results' sections contain dense bullet points with small font, creating high text density and heavy reading burden across multiple panels.",
+        "secondary_issues": {
+          "visual_hierarchy_weak": "The main contribution (novel question bank) is not visually emphasized; the large figure in 'Results' is not clearly linked to the key finding.",
+          "space_imbalance": "The 'Experiments' and 'Key Findings' panels are nearly empty compared to the crowded 'Problem' and 'Results' sections."
+        }
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Problem' and 'Results' sections contain dense bullet points with small font, creating high text density and heavy reading burden across multiple panels.\",\n    \"secondary_issues\": {\n      \"visual_hierarchy_weak\": \"The main contribution (novel question bank) is not visually emphasized; the large figure in 'Results' is not clearly linked to the key finding.\",\n      \"space_imbalance\": \"The 'Experiments' and 'Key Findings' panels are nearly empty compared to the crowded 'Problem' and 'Results' sections.\"\n    }\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

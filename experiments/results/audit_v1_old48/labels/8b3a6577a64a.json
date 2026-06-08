@@ -1,0 +1,52 @@
+{
+  "run_id": "8b3a6577a64a",
+  "paper_title": "Evaluating LLM Agent Personality and Response Appropriateness",
+  "template": "template_dashboard",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_145247_Evaluating_LLM_Agent_Personali_8b3a6577a64a/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_145247_Evaluating_LLM_Agent_Personali_8b3a6577a64a",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 21.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 216.1,
+    "max_chars_per_panel": 276.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.286,
+    "text_only_panel_ratio": 0.714
+  },
+  "labels": [
+    {
+      "run_id": "8b3a6577a64a",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "space_imbalance"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The 'Problem' and 'Method' sections contain dense bullet lists with small font, creating high text density and heavy reading burden across multiple panels.",
+        "secondary_issues": {
+          "visual_hierarchy_weak": "The main contribution (novel question bank and interdisciplinary approach) is not visually emphasized; key results are buried in text without strong visual cues.",
+          "space_imbalance": "The 'Results' panel is visually dominated by a large figure, while the 'Experiments' and 'Key Findings' panels are text-heavy and underutilize space, creating uneven visual weight."
+        }
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Problem' and 'Method' sections contain dense bullet lists with small font, creating high text density and heavy reading burden across multiple panels.\",\n    \"secondary_issues\": {\n      \"visual_hierarchy_weak\": \"The main contribution (novel question bank and interdisciplinary approach) is not visually emphasized; key results are buried in text without strong visual cues.\",\n      \"space_imbalance\": \"The 'Results' panel is visually dominated by a large figure, while the 'Experiments' and 'Key Findings' panels are text-heavy and underutilize space, creating uneven visual weight.\"\n    }\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "run_id": "da638e0471a6",
+  "paper_title": "LeanRAG: Knowledge-Graph-Based Generation with Semantic Aggregation and Hierarchical Retrieval",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_141028_LeanRAG_Knowledge-Graph-Based__da638e0471a6/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_141028_LeanRAG_Knowledge-Graph-Based__da638e0471a6",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 6.0,
+    "total_bullets": 18.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 4.0,
+    "mean_chars_per_panel": 178.0,
+    "max_chars_per_panel": 225.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.333,
+    "text_only_panel_ratio": 0.667
+  },
+  "labels": [
+    {
+      "run_id": "da638e0471a6",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "asset_utilization_error",
+      "secondary_issues": [
+        "text_overload",
+        "visual_hierarchy_weak"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The key framework figure in the Method section is a placeholder with no content, and the only actual figure in the Experiments section is small and lacks visual impact, failing to effectively communicate the method or results.",
+        "secondary": "Text density is high across all sections with many bullet points and small font, and the main contribution is not visually emphasized, making it hard to identify the key message at a glance."
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"asset_utilization_error\",\n  \"secondary_issues\": [\"text_overload\", \"visual_hierarchy_weak\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The key framework figure in the Method section is a placeholder with no content, and the only actual figure in the Experiments section is small and lacks visual impact, failing to effectively communicate the method or results.\",\n    \"secondary\": \"Text density is high across all sections with many bullet points and small font, and the main contribution is not visually emphasized, making it hard to identify the key message at a glance.\"\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

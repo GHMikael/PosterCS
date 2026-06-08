@@ -1,0 +1,52 @@
+{
+  "run_id": "a2ff21dc2919",
+  "paper_title": "A Comprehensive Survey of Reward Models: Taxonomy, Applications, Challenges, and Future",
+  "template": "template_minimal",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_043645_A_Comprehensive_Survey_of_Rewa_a2ff21dc2919/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_043645_A_Comprehensive_Survey_of_Rewa_a2ff21dc2919",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 6.0,
+    "total_bullets": 18.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 161.0,
+    "max_chars_per_panel": 182.0,
+    "n_figures_available": 1.0,
+    "n_panels_with_figure": 1.0,
+    "figure_usage_ratio": 0.167,
+    "text_only_panel_ratio": 0.833
+  },
+  "labels": [
+    {
+      "run_id": "a2ff21dc2919",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "visual_hierarchy_weak",
+      "secondary_issues": [
+        "text_overload",
+        "space_imbalance"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The main contribution (taxonomy, applications, challenges) is not visually emphasized; the 'Overview' section is placed in the bottom-right corner, making it less salient than the central 'Conclusion' or 'Results', and no single element draws immediate attention as the core message.",
+        "secondary_issues": [
+          "text_overload: All sections use dense bullet lists with small font size, creating a high reading burden across the entire poster.",
+          "space_imbalance: The top row panels are visually balanced, but the bottom row has uneven content density, with 'Results' containing a figure and more text, while 'Overview' is text-heavy but lacks visual weight, creating a lopsided bottom half."
+        ]
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"visual_hierarchy_weak\",\n  \"secondary_issues\": [\"text_overload\", \"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The main contribution (taxonomy, applications, challenges) is not visually emphasized; the 'Overview' section is placed in the bottom-right corner, making it less salient than the central 'Conclusion' or 'Results', and no single element draws immediate attention as the core message.\",\n    \"secondary_issues\": [\n      \"text_overload: All sections use dense bullet lists with small font size, creating a high reading burden across the entire poster.\",\n      \"space_imbalance: The top row panels are visually balanced, but the bottom row has uneven content density, with 'Results' containing a figure and more text, while 'Overview' is text-heavy but lacks visual weight, creating a lopsided bottom half.\"\n    ]\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

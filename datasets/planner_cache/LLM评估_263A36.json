@@ -1,0 +1,124 @@
+{
+  "asset_token": "a08be37161094d99",
+  "template": "template_storyflow",
+  "color_theme": "academic_blue",
+  "poster_title": "Multi-Agent-as-Judge: Aligning LLM-Agent-Based Automated Evaluation with Multi-Dimensional Human Evaluation",
+  "authors": "Jiaju Chen, Yuxuan Lu, Xiaojie Wang, Huimin Zeng, Jing Huang, Jiri Gesi, Ying Xu, Bingsheng Yao, Dakuo Wang",
+  "paper_info": "arXiv:2507.21028v1 [cs.CL] 28 Jul 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "Human work is often collaborative, requiring multi-dimensional evaluations.",
+        "Real-world NLP applications need evaluations that consider various stakeholder perspectives.",
+        "Traditional metrics often fall short in capturing domain-specific nuances."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "MAJ-EVAL constructs structured agent personas from domain-specific research papers."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "MAJ-EVAL’s two-step design: Step 1, extract personas; Step 2, in-group debate and aggregation.",
+      "layout_hint": "text_left_image_right"
+    },
+    {
+      "section": "Multi-Agent Debate",
+      "content": [
+        "Agents provide initial evaluations and engage in a free-form debate.",
+        "The moderator coordinates the debate, and the aggregator synthesizes the final evaluation."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "MAJ-EVAL’s multi-agent debate evaluation process.",
+      "layout_hint": "text_left_image_right"
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Evaluated on QAG for children’s storybook reading and medical literature summarization.",
+        "Stakeholder groups for QAG: children, parents, and teachers.",
+        "Stakeholder groups for medical summarization: care providers, family caregivers, and patients."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "MAJ-EVAL achieved better alignment with human ratings compared to traditional metrics."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Spearman’s ρ between evaluation methods and human ratings on StorySparkQA and MSLR-COCHRANE.",
+      "layout_hint": "text_left_image_right"
+    },
+    {
+      "section": "Improvement Analysis",
+      "content": [
+        "Debate significantly improved alignment with human ratings for both domains."
+      ],
+      "figure": null,
+      "figure_id": "Fig7",
+      "figure_caption": "Spearman correlations of MAJ-EVAL (Claude-3.7-Sonnet) agents’ scores with human judgments.",
+      "layout_hint": "text_left_image_right"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "MAJ-EVAL provides a robust framework for multi-dimensional real-world NLG evaluation.",
+        "Significantly improves alignment with human expert ratings, enhancing scalability and consistency."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "MAJ-EVAL’s two-step design: Step 1, MAJ-EVAL extracts stakeholders’ diverse perspectives from the provided research papers and constructs corresponding personas for the LLM agents. Step 2, agents within the same stakeholder group engage in an in-group debate. An aggregator synthesizes the final evaluation.",
+      "type": "pipeline",
+      "description": "MAJ-EVAL 的两步设计流程图，包含步骤 1 和步骤 2 的详细说明。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "MAJ-EVAL’s multi-agent-as-judge debate evaluation process (Step 2). Each agent first independently provides an initial evaluation. The moderator then coordinates a free-form debate, allowing agents to discuss and refine their evaluation. Finally, the aggregator synthesizes all agents’ evaluations.",
+      "type": "pipeline",
+      "description": "MAJ-EVAL 的多代理辩论评估过程图，详细描述了步骤 2 的流程。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Spearman’s ρ (rank-based correlation) between evaluation methods and human ratings on StorySparkQA (left) and MSLR-COCHRANE (right). Higher values indicate stronger alignments with human judgments. StorySparkQA’s dimensions include Grammar Correctness (GC), Answer Relevancy (AR), Contextuality (CT), and Naturalness (NL).",
+      "type": "result_chart",
+      "description": "评估方法与人类评分之间的 Spearman 相关性图表，展示了在 StorySparkQA 和 MSLR-COCHRANE 数据集上的表现。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig7": {
+      "caption": "Spearman correlations of MAJ-EVAL (Claude-3.7-Sonnet) stakeholder agents’ initial and final scores with human judgments on StorySparkQA (left) and MSLR-COCHRANE (right). Dark blue bars higher than light blue bars indicate improved alignment with human ratings after in-group debate.",
+      "type": "result_chart",
+      "description": "MAJ-EVAL (Claude-3.7-Sonnet) 代理的初始和最终评分与人类评分之间的 Spearman 相关性图表，展示了辩论前后的改进。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

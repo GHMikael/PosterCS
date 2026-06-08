@@ -1,0 +1,52 @@
+{
+  "run_id": "57424d32b76f",
+  "paper_title": "Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_160933_Take_a_Step_Back_Evoking_Reaso_57424d32b76f/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_160933_Take_a_Step_Back_Evoking_Reaso_57424d32b76f",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space",
+    "empty_space",
+    "figure_too_small"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 21.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 203.6,
+    "max_chars_per_panel": 252.0,
+    "n_figures_available": 3.0,
+    "n_panels_with_figure": 3.0,
+    "figure_usage_ratio": 0.429,
+    "text_only_panel_ratio": 0.571
+  },
+  "labels": [
+    {
+      "run_id": "57424d32b76f",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "space_imbalance"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The poster contains dense bullet points with small font sizes across all sections, leading to high text density and heavy reading burden, especially in Motivation, Problem, and Experiments.",
+        "secondary_issues": [
+          "visual_hierarchy_weak: The main contribution (STEP-BACK PROMPTING) is not visually emphasized; the title and bottom banner are the only prominent elements, but the core method and results lack visual salience.",
+          "space_imbalance: The top row panels (Motivation, Problem, Method) have uneven content density, with Method having a figure that occupies more space than the text, while Motivation and Problem are text-heavy with empty space."
+        ]
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The poster contains dense bullet points with small font sizes across all sections, leading to high text density and heavy reading burden, especially in Motivation, Problem, and Experiments.\",\n    \"secondary_issues\": [\n      \"visual_hierarchy_weak: The main contribution (STEP-BACK PROMPTING) is not visually emphasized; the title and bottom banner are the only prominent elements, but the core method and results lack visual salience.\",\n      \"space_imbalance: The top row panels (Motivation, Problem, Method) have uneven content density, with Method having a figure that occupies more space than the text, while Motivation and Problem are text-heavy with empty space.\"\n    ]\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "run_id": "5fc2f5f646cc",
+  "paper_title": "Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_215552_Query-Based_Router_by_Dual_Con_5fc2f5f646cc/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_215552_Query-Based_Router_by_Dual_Con_5fc2f5f646cc",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space",
+    "empty_space",
+    "figure_too_small"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 18.0,
+    "mean_bullets_per_panel": 2.571,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 233.4,
+    "max_chars_per_panel": 305.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.286,
+    "text_only_panel_ratio": 0.714
+  },
+  "labels": [
+    {
+      "run_id": "5fc2f5f646cc",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "none",
+      "secondary_issues": [],
+      "guard_violations": [],
+      "evidence": {},
+      "confidence": null,
+      "source": "vlm_error",
+      "notes": "APITimeoutError: Request timed out."
+    }
+  ]
+}

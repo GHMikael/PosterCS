@@ -1,0 +1,49 @@
+{
+  "run_id": "0479973b234d",
+  "paper_title": "From Efficiency to Adaptivity: A Deeper Look at Adaptive Reasoning in Large Language Models",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_094944_From_Efficiency_to_Adaptivity__0479973b234d/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_094944_From_Efficiency_to_Adaptivity__0479973b234d",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 6.0,
+    "total_bullets": 18.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 191.2,
+    "max_chars_per_panel": 205.0,
+    "n_figures_available": 0.0,
+    "n_panels_with_figure": 0.0,
+    "figure_usage_ratio": 0.0,
+    "text_only_panel_ratio": 1.0
+  },
+  "labels": [
+    {
+      "run_id": "0479973b234d",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "structure_alignment_error"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The poster contains dense bullet lists with small font sizes across all six main sections, creating a high text density and heavy reading burden without sufficient visual relief.",
+        "secondary": "The main contribution (e.g., the proposed taxonomy and framework) is not visually emphasized, making it hard to distinguish from other content; section headers are misaligned with inconsistent spacing and baseline shifts, breaking the grid structure."
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The poster contains dense bullet lists with small font sizes across all six main sections, creating a high text density and heavy reading burden without sufficient visual relief.\",\n    \"secondary\": \"The main contribution (e.g., the proposed taxonomy and framework) is not visually emphasized, making it hard to distinguish from other content; section headers are misaligned with inconsistent spacing and baseline shifts, breaking the grid structure.\"\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

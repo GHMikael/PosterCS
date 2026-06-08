@@ -1,0 +1,249 @@
+{
+  "n": 47,
+  "n_skipped": 0,
+  "skipped": [],
+  "min_chars_per_content_box": 10,
+  "primary_counts": {
+    "text_overload": 39,
+    "visual_hierarchy_weak": 6,
+    "asset_utilization_error": 2
+  },
+  "group_geom_stats": {
+    "text_overload": {
+      "chars_per_cm2_median": {
+        "n": 39,
+        "mean": 7.12,
+        "median": 7.01,
+        "std": 1.34,
+        "min": 5.06,
+        "max": 10.51
+      },
+      "chars_per_cm2_max": {
+        "n": 39,
+        "mean": 25.71,
+        "median": 21.53,
+        "std": 19.15,
+        "min": 8.09,
+        "max": 129.22
+      },
+      "chars_per_cm2_agg": {
+        "n": 39,
+        "mean": 6.82,
+        "median": 6.76,
+        "std": 1.25,
+        "min": 4.65,
+        "max": 10.61
+      },
+      "text_area_fraction": {
+        "n": 39,
+        "mean": 2.53,
+        "median": 2.53,
+        "std": 0.09,
+        "min": 2.28,
+        "max": 2.75
+      },
+      "body_font_pt_min": {
+        "n": 39,
+        "mean": 7.2,
+        "median": 7.2,
+        "std": 0.0,
+        "min": 7.2,
+        "max": 7.2
+      },
+      "body_font_pt_median": {
+        "n": 39,
+        "mean": 8.67,
+        "median": 8.8,
+        "std": 0.26,
+        "min": 8.0,
+        "max": 8.8
+      },
+      "n_content_boxes": {
+        "n": 39,
+        "mean": 29.95,
+        "median": 30,
+        "std": 3.39,
+        "min": 24,
+        "max": 38
+      }
+    },
+    "visual_hierarchy_weak": {
+      "chars_per_cm2_median": {
+        "n": 6,
+        "mean": 6.5,
+        "median": 6.43,
+        "std": 0.78,
+        "min": 5.61,
+        "max": 7.9
+      },
+      "chars_per_cm2_max": {
+        "n": 6,
+        "mean": 23.79,
+        "median": 19.66,
+        "std": 10.47,
+        "min": 16.38,
+        "max": 46.78
+      },
+      "chars_per_cm2_agg": {
+        "n": 6,
+        "mean": 6.31,
+        "median": 6.39,
+        "std": 0.49,
+        "min": 5.66,
+        "max": 7.14
+      },
+      "text_area_fraction": {
+        "n": 6,
+        "mean": 2.41,
+        "median": 2.52,
+        "std": 0.2,
+        "min": 2.13,
+        "max": 2.57
+      },
+      "body_font_pt_min": {
+        "n": 6,
+        "mean": 7.2,
+        "median": 7.2,
+        "std": 0.0,
+        "min": 7.2,
+        "max": 7.2
+      },
+      "body_font_pt_median": {
+        "n": 6,
+        "mean": 8.8,
+        "median": 8.8,
+        "std": 0.0,
+        "min": 8.8,
+        "max": 8.8
+      },
+      "n_content_boxes": {
+        "n": 6,
+        "mean": 27,
+        "median": 26.5,
+        "std": 1.53,
+        "min": 25,
+        "max": 29
+      }
+    },
+    "asset_utilization_error": {
+      "chars_per_cm2_median": {
+        "n": 2,
+        "mean": 6.41,
+        "median": 6.41,
+        "std": 0.29,
+        "min": 6.12,
+        "max": 6.69
+      },
+      "chars_per_cm2_max": {
+        "n": 2,
+        "mean": 28.22,
+        "median": 28.22,
+        "std": 2.48,
+        "min": 25.73,
+        "max": 30.7
+      },
+      "chars_per_cm2_agg": {
+        "n": 2,
+        "mean": 6.69,
+        "median": 6.69,
+        "std": 0.05,
+        "min": 6.64,
+        "max": 6.74
+      },
+      "text_area_fraction": {
+        "n": 2,
+        "mean": 2.58,
+        "median": 2.58,
+        "std": 0.08,
+        "min": 2.49,
+        "max": 2.66
+      },
+      "body_font_pt_min": {
+        "n": 2,
+        "mean": 7.2,
+        "median": 7.2,
+        "std": 0.0,
+        "min": 7.2,
+        "max": 7.2
+      },
+      "body_font_pt_median": {
+        "n": 2,
+        "mean": 8.8,
+        "median": 8.8,
+        "std": 0.0,
+        "min": 8.8,
+        "max": 8.8
+      },
+      "n_content_boxes": {
+        "n": 2,
+        "mean": 35,
+        "median": 35.0,
+        "std": 4.0,
+        "min": 31,
+        "max": 39
+      }
+    }
+  },
+  "separation_TO_vs_VHW": {
+    "chars_per_cm2_median": {
+      "auc_TO_vs_VHW": 0.645,
+      "TO_median": 7.01,
+      "VHW_median": 6.43
+    },
+    "chars_per_cm2_max": {
+      "auc_TO_vs_VHW": 0.534,
+      "TO_median": 21.53,
+      "VHW_median": 19.66
+    },
+    "chars_per_cm2_agg": {
+      "auc_TO_vs_VHW": 0.628,
+      "TO_median": 6.76,
+      "VHW_median": 6.39
+    },
+    "text_area_fraction": {
+      "auc_TO_vs_VHW": 0.662,
+      "TO_median": 2.53,
+      "VHW_median": 2.52
+    },
+    "body_font_pt_min": {
+      "auc_TO_vs_VHW": 0.5,
+      "TO_median": 7.2,
+      "VHW_median": 7.2
+    },
+    "body_font_pt_median": {
+      "auc_TO_vs_VHW": 0.397,
+      "TO_median": 8.8,
+      "VHW_median": 8.8
+    },
+    "n_content_boxes": {
+      "auc_TO_vs_VHW": 0.782,
+      "TO_median": 30,
+      "VHW_median": 26.5
+    }
+  },
+  "baseline_auc_mean_chars_per_panel": 0.637,
+  "headline_auc_chars_per_cm2_median": 0.645,
+  "blip_locator": {
+    "run_id": "44a0517194a2",
+    "primary": "text_overload",
+    "geom": {
+      "slide_area_cm2": 645.0,
+      "chars_per_cm2_median": 6.617,
+      "chars_per_cm2_max": 18.07,
+      "chars_per_cm2_agg": 6.236,
+      "text_area_fraction": 2.637,
+      "body_font_pt_min": 7.2,
+      "body_font_pt_median": 8.8,
+      "n_content_boxes": 33,
+      "n_font_samples": 74
+    },
+    "pct_chars_per_cm2_median": 38.3,
+    "pct_chars_per_cm2_max": 25.5,
+    "pct_chars_per_cm2_agg": 23.4,
+    "pct_text_area_fraction": 83.0,
+    "pct_body_font_pt_min": 0.0,
+    "pct_body_font_pt_median": 17.0,
+    "pct_n_content_boxes": 78.7
+  },
+  "verdict": "AMBIGUOUS — area-aware density helps only weakly; small n_VHW."
+}

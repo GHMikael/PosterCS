@@ -1,0 +1,564 @@
+{
+  "counts": {
+    "cached": 18,
+    "validation_error": 0,
+    "no_task": 0,
+    "errored": 0
+  },
+  "records": [
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM-AS-JUDGE_D22C07.pdf",
+      "stem": "LLM-AS-JUDGE_D22C07",
+      "status": "captured",
+      "workflow_run_id": "414dd3b9-3080-472d-b760-95bfdc457ef1",
+      "duration_s": 577.17,
+      "captured_at": 577.2,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM-AS-JUDGE_D22C07.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM偏好对齐_FF612F.pdf",
+      "stem": "LLM偏好对齐_FF612F",
+      "status": "captured",
+      "workflow_run_id": "101f0f65-e6af-4530-82d5-104ae10167c7",
+      "duration_s": 143.59,
+      "captured_at": 143.6,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "figures dict is empty (no images extracted)"
+        ]
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM偏好对齐_FF612F.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM内存优化_E0E138.pdf",
+      "stem": "LLM内存优化_E0E138",
+      "status": "captured",
+      "workflow_run_id": "4ad65a79-36ad-444f-ae36-8aead2cba5ef",
+      "duration_s": 132.5,
+      "captured_at": 88.9,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM内存优化_E0E138.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM奖励模型_7786D7.pdf",
+      "stem": "LLM奖励模型_7786D7",
+      "status": "captured",
+      "workflow_run_id": "ee2fa593-5305-4e19-a0cd-445987d760ff",
+      "duration_s": 98.22,
+      "captured_at": 56.4,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "figures dict is empty (no images extracted)"
+        ]
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM奖励模型_7786D7.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM幻觉检测_0521EC.pdf",
+      "stem": "LLM幻觉检测_0521EC",
+      "status": "captured",
+      "workflow_run_id": "6ceefeee-10e6-48d0-b594-de90d19a275e",
+      "duration_s": 173.5,
+      "captured_at": 80.6,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM幻觉检测_0521EC.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM幻觉检测_189DF0.pdf",
+      "stem": "LLM幻觉检测_189DF0",
+      "status": "captured",
+      "workflow_run_id": "a3986bcf-fee9-4d78-89e9-d7fd11e065ad",
+      "duration_s": 244.24,
+      "captured_at": 98.8,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM幻觉检测_189DF0.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM幻觉检测_919748.pdf",
+      "stem": "LLM幻觉检测_919748",
+      "status": "captured",
+      "workflow_run_id": "074fc3a4-9999-4439-9168-5fc821456ec3",
+      "duration_s": 134.96,
+      "captured_at": 131.5,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM幻觉检测_919748.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM幻觉检测_929837.pdf",
+      "stem": "LLM幻觉检测_929837",
+      "status": "captured",
+      "workflow_run_id": "9f7336bf-7972-4720-8d35-70265bc28a90",
+      "duration_s": 108.43,
+      "captured_at": 66.2,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM幻觉检测_929837.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM弃权策略_A145F3.pdf",
+      "stem": "LLM弃权策略_A145F3",
+      "status": "captured",
+      "workflow_run_id": "c0d17b9f-0824-4bd6-a313-a832040f5fec",
+      "duration_s": 85.03,
+      "captured_at": 46.4,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "figures dict is empty (no images extracted)"
+        ]
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM弃权策略_A145F3.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM强化学习_3D0648.pdf",
+      "stem": "LLM强化学习_3D0648",
+      "status": "captured",
+      "workflow_run_id": "328e5397-309f-48de-ab3e-341dfdbeab74",
+      "duration_s": 85.87,
+      "captured_at": 49.9,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "figures dict is empty (no images extracted)"
+        ]
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM强化学习_3D0648.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM推理_22583E.pdf",
+      "stem": "LLM推理_22583E",
+      "status": "captured",
+      "workflow_run_id": "ff0a989f-73b5-4971-9574-2ff2f90a3cbc",
+      "duration_s": 104.74,
+      "captured_at": 60.3,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "figures dict is empty (no images extracted)"
+        ]
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM推理_22583E.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM推理_8B2E3B.pdf",
+      "stem": "LLM推理_8B2E3B",
+      "status": "captured",
+      "workflow_run_id": "cc5bd9a7-8022-4e36-99f1-45c790b72f98",
+      "duration_s": 97.8,
+      "captured_at": 40.2,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "figures dict is empty (no images extracted)"
+        ]
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM推理_8B2E3B.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM推理_B75D3A.pdf",
+      "stem": "LLM推理_B75D3A",
+      "status": "captured",
+      "workflow_run_id": "3d199c20-8c8a-4351-92cd-02f3cdc28351",
+      "duration_s": 148.62,
+      "captured_at": 108.0,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM推理_B75D3A.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM无害性训练_DC22B7.pdf",
+      "stem": "LLM无害性训练_DC22B7",
+      "status": "captured",
+      "workflow_run_id": "9b1d21b3-3f5d-4d9e-9e2f-577b0f87f2ee",
+      "duration_s": 117.26,
+      "captured_at": 72.9,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM无害性训练_DC22B7.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM记忆评估_C9177E.pdf",
+      "stem": "LLM记忆评估_C9177E",
+      "status": "captured",
+      "workflow_run_id": "f992bf86-9b5e-49d6-9811-11391f1192ac",
+      "duration_s": 97.54,
+      "captured_at": 56.3,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "figures dict is empty (no images extracted)"
+        ]
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM记忆评估_C9177E.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM评估_263A36.pdf",
+      "stem": "LLM评估_263A36",
+      "status": "captured",
+      "workflow_run_id": "c115a4e1-e218-4f65-aa86-2c657eb2ff0b",
+      "duration_s": 246.15,
+      "captured_at": 246.2,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM评估_263A36.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM评估_28CF4D.pdf",
+      "stem": "LLM评估_28CF4D",
+      "status": "captured",
+      "workflow_run_id": "68a3bfc2-b841-4f7c-ac1a-3653ca635d7f",
+      "duration_s": 149.37,
+      "captured_at": 94.8,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM评估_28CF4D.json"
+    },
+    {
+      "pdf": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/papers/LLM评估_467761.pdf",
+      "stem": "LLM评估_467761",
+      "status": "captured",
+      "workflow_run_id": "f2b2ae4b-bc5b-4c70-8de5-70fe8eace513",
+      "duration_s": 221.37,
+      "captured_at": 177.3,
+      "event_types": [
+        "loop_completed",
+        "loop_next",
+        "loop_started",
+        "message",
+        "node_finished",
+        "node_started",
+        "parallel_branch_finished",
+        "parallel_branch_started",
+        "workflow_finished",
+        "workflow_started"
+      ],
+      "wf_outputs_keys": [
+        "answer"
+      ],
+      "error": "",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "cache_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/datasets/planner_cache/LLM评估_467761.json"
+    }
+  ]
+}

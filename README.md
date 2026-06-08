@@ -1,136 +1,107 @@
 **English** | [简体中文](README.zh-CN.md)
 
-# PosterCSP — Paper-to-Poster Backend
+# PosterCS — Paper-to-Poster Backend + SVFP
 
-> **Current version: v5.3** · FastAPI backend + **SVFP** (Structured Visual Feedback Protocol) + reproducible **CS-Poster-30** evaluation harness.
+> **Status: v6 — first usable release.** FastAPI backend + Dify Chatflow planner + a deterministic, content-adaptive renderer + the **SVFP** (Structured Visual Feedback Protocol) closed loop + a reproducible **CS-Poster-30** evaluation harness (16 metrics, baseline matrix).
 
-Given a CS paper PDF, the system produces an editable A3 conference poster PPTX through a Dify **Chatflow** (content planning) and a Python renderer with an optional **SVFP closed-loop** (VLM critique → deterministic repair → convergence trace). Long-running jobs use **async HTTP + server-side long polling** for Dify compatibility.
-
-**Research framing (v3):** SVFP remains the primary contribution, now with E1/E2 preflight code in place, bounded-latency VLM calls, a cleaner figure pipeline, and an explicit list of remaining paper-strengthening work. See [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md).
-
----
-
-## What this project is (and is not)
-
-| | |
-|---|---|
-| **Is** | A **planner-agnostic** structured visual feedback protocol (4 issue types × 9 atomic actions) that can plug into any poster planner |
-| **Is** | A reproducible **CS-Poster-30** pipeline (30 frozen planner snapshots, headline/appendix/protocol metrics, L0→L8 scripts) |
-| **Is not** | A claim that structured planning beats zero-shot on **content recall** (pilot: a1 lower than gpt4o_zeroshot) |
-| **Is not** | A claim that SVFP is faster than no-feedback; current framing is quality-latency Pareto |
-| **Is not** | Proof of 100 % figure reuse; figure extraction is guarded and audited, but reuse rate must be measured |
-
-**One-line pitch (paper):**
-
-> We propose **SVFP** — constraining VLM visual critique to a closed `{4 issues × 9 actions}` schema with a deterministic `FeedbackApplier`, yielding executable, convergent layout repairs. On CS-Poster-30, SVFP shows large-effect gains on visual quality (B1/B2, Cohen's d ≈ 1.8 at n=5) while honestly reporting a content precision–recall trade-off.
+Given a CS paper PDF, the system produces an editable A3 conference poster PPTX:
+**docling asset extraction → Dify Chatflow planning (`PosterTask` JSON) → content-adaptive PPTX renderer → optional SVFP loop (VLM critique → deterministic repair → convergence trace).**
 
 ---
 
-## Version snapshot (v5.3)
+## Design principle (the spine)
+
+> **Geometry-decidable things go to deterministic code; semantic/content things go to the LLM/VLM.**
+
+This runs through the whole system and the paper:
+- **Figure extraction** uses docling (a layout model) instead of raw raster grabbing, so vector figures + tables aren't lost.
+- **Figure layout** (top-bottom vs left-right, box size) is derived from the figure's **true aspect ratio** in the renderer — the planner doesn't guess it.
+- **The SVFP diagnosis** (below): a holistic VLM critic is unreliable for layout, so reliable repair must route each issue to the detector that actually has the signal.
+
+---
+
+## Pipeline
+
+```
+PDF ──/extract_pdf_assets──►  text + figures (docling; fitz fallback)
+                                   │
+        Dify Chatflow (planneragent_v2) ──► PosterTask JSON (panels, figures, headline)
+                                   │
+        content-adaptive renderer ──► editable PPTX
+          · content_spans: panel sizes scale with content (no fixed 6-grid)
+          · figure layout from aspect ratio; headline = per-panel visual focus
+                                   │
+        optional SVFP loop ──► VLM critique → deterministic FeedbackApplier → convergence
+                                   │
+                          final.pptx + run_report.json (+ svfp_trace for c3)
+```
+
+Experiments **replay frozen planner snapshots** (`datasets/planner_cache/*.json`) so baselines are compared on identical plans.
+
+---
+
+## What works in v6 (usable)
 
 | Area | Capability |
-|------|------------|
-| **SVFP protocol** | 4 root-cause issues × 9 deterministic actions; configurable convergence; bounded VLM calls |
-| **E1 baseline** | `ours_freeform` — free-text VLM critique + LLM best-effort apply; failures are recorded as non-executable feedback rather than crashed cells |
-| **E2 baseline** | `gpt4o_zeroshot_svfp` — zero-shot planner followed by SVFP, used to test planner-agnostic behavior |
-| **A3 fix** | NLI hallucination: neutral/abstain no longer counted as hallucination; split `contradicted_rate` vs `unsupported_rate` |
-| **Figure pipeline** | PDF extraction filters low-information images, records xref/bbox metadata, and supports VLM figure audit |
-| **Planner cache** | 30 frozen `PosterTask` snapshots; cleaned figure refs; `clean_planner_cache.py` + `import_dify_runs.py` |
-| **Dify Chatflow** | Three-agent pipeline; prompts in `dify/prompts/`; design in `dify/DIFY_WORKFLOW_AND_PAPER_DESIGN.md` |
-| **Batch Dify** | `batch_dify_runs.py` triggers Chatflow via API for scale runs |
-| **Renderer** | 4 templates × 4 themes; six-panel CS domain prior; async jobs + run archive |
-| **Experiments** | Baselines: `ours_svfp` · `ours_no_svfp` · `ours_freeform` · `gpt4o_zeroshot` · `gpt4o_zeroshot_svfp` · external SOTA (optional) |
-
-**Evolution**
-
-- **v4.1**: SVFP protocol, async jobs, layout quality guards
-- **v5.0**: experiments framework, 5-paper pilot, JSONL telemetry
-- **v5.1**: Dify batch automation, 30 planner snapshots, L0→L8 pipeline docs
-- **v5.2**: research re-anchor (PosterCSP / SVFP spine), E1 free-form baseline, A3 metric fix, figure audit + planner cache cleanup
-- **v5.3**: bounded-latency VLM calls, PDF figure filtering, protocol metrics, E1 smoke, E2 cross-planner baseline, v3 planning docs
+|---|---|
+| **Extraction** | docling semantic extraction (figures **and tables**, incl. vector); fitz fallback; `POSTER_USE_DOCLING=0` to disable |
+| **Planning** | Dify Chatflow → `PosterTask`; `planneragent_v2.txt` adds per-panel `headline` + CS-structured extraction; layout direction left to the renderer |
+| **Renderer** | content-adaptive `content_spans` (dashboard/classic/minimal); figure layout by aspect; `headline` focal line; 4 templates × 4 themes |
+| **SVFP loop** | closed `{4 issues × 9 actions}` + deterministic applier + convergence detector (production = the 4-class baseline; see framing) |
+| **Evaluation** | **16 metrics** (A content / B visual / C protocol / D efficiency / E external) + baseline matrix + `compute_metrics`/`aggregate_stats`/`print_paper_table` |
+| **Async** | async jobs + long-polling for Dify; run archive under `outputs/runs/` |
 
 ---
 
-## Pilot findings (n=5, honest summary)
+## Research framing (honest)
 
-Aggregated from 15 metric JSON files (5 papers × 3 baselines). **None survive BH-FDR correction at n=5** — treat as directional only.
+**Primary finding — the VLM layout critic is systematically unreliable (not a small-model artifact):**
+- Scale ablation (Qwen3-VL 8B/30B/32B, same 16 posters): every size is **prior-dominated** (8B → 100% one label; 32B → text_overload 11/16), and **none recovers the figure/asset problems a human flags** (≤1/12 at every scale). Narrowing the prompt only lifts asset recall to 4/12.
+- **`c3_issue_resolution_rate = 0.0`** on a real run: SVFP detected 8 issues, applied actions, and resolved **0** across two iterations — quantifying "the VLM can see problems but shallow closed-set actions can't fix them."
 
-| Cluster | Metric | gpt4o_zeroshot | ours_no_svfp | ours_svfp | Reading |
-|---------|--------|----------------|--------------|-----------|---------|
-| Content | A1 retention | **0.544** | 0.448 | 0.448 | Structured planner sacrifices recall |
-| Content | A3 hallucination | 0.117 | **0.100** | 0.117 | No clear winner (A3 logic fixed in v5.2) |
-| Visual | B1 layout | 0.745 | 0.766 | **0.781** | SVFP's clearest gain |
-| Visual | B2 readability | 0.748 | 0.748 | **0.782** | Same pattern as B1 |
-| Engineering | D1 latency (ms) | 23,025 | **38** | 160,612 | Quality–latency trade-off |
-| Engineering | D2 cost ($) | **0.004** | 0 | 0.012 | Multi-round VLM cost |
+**Therefore:** reliable repair must **route detection by issue type** — geometry for space/overflow/structure, a script + figure-caption + text-LLM check for figure–text mismatch, and the VLM only where it's reliable (saliency/hierarchy).
 
-**Historical pilot note:** in the original n=5 pilot, `ours_svfp` and `ours_no_svfp` had identical content because the loop was effectively layout-only. In v5.3, `reduce_bullet_count` is content-preserving rather than content-dropping, so content metrics must be recomputed before making new claims.
+**Where the code is vs. where the paper is going:**
+- **Production SVFP loop today = the old 4-class, holistic-VLM baseline** (`overlapping_elements / empty_space / low_contrast / figure_too_small` × 9 actions). This is what `c3=0.0` was measured on — i.e., the **baseline / counter-example**.
+- **The 5-class MECE taxonomy + routed detection + severity-gating** (the paper's improvement) is **designed** in [`SVFP_ISSUE_TAXONOMY_v5.md`](SVFP_ISSUE_TAXONOMY_v5.md) but **not yet migrated into the production loop**. That migration is the top post-v6 task.
 
-**Current state:** E1/E2 preflight code paths are implemented and smoke-tested. Official n=30, independent visual validation, E3 ablation, user study, and external SOTA remain open. See [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md).
+See [`项目现状与最终方向_v6.md`](项目现状与最终方向_v6.md) for the full status + roadmap.
 
 ---
 
-## Architecture
+## The 16 metrics
 
-```mermaid
-flowchart TB
-  PDF[PDF paper] --> Extract["/extract_pdf_assets"]
-  Extract --> Dify[Dify Chatflow<br/>Text / Visual / Planner]
-  Dify --> Task[PosterTask JSON]
-  Task --> Render[PPTX renderer]
-  Render --> SVFP{SVFP loop?}
-  SVFP -->|yes| VLM[VLM closed-schema critique]
-  VLM --> Apply[FeedbackApplier]
-  Apply --> Render
-  SVFP -->|no| Out[final.pptx + run_report]
-  Render --> Out
-  Dify -.-> Cache[planner_cache/]
-  Cache -.->|run_matrix replay| Task
-```
+| Tier | Metrics |
+|---|---|
+| **A — content fidelity** | `a1_key_info_recall` · `a2_hallucination_rate` · `a3_semantic_fidelity` (BERTScore) |
+| **B — visual quality** | `b1_layout_quality` · `b2_readability` · `b3_figure_reuse_rate` · `b4_figure_text_align` |
+| **C — protocol** | `action_executability` (c1, **honestly measured**) · `convergence_rate` (c2) · `c3_issue_resolution_rate` · `per_iter_visual_gain` (c4) |
+| **D — efficiency** | `d1_latency` · `d2_cost` |
+| **E — external** | `e1_paperquiz` · `e2_human_preference` (harness) · `e3_llm_judge` (gated) |
 
-1. **`/extract_pdf_assets`** — text preview + figure metadata (lightweight URLs for Dify).
-2. **Dify Chatflow** — three agents emit a `PosterTask` JSON.
-3. **Renderer + optional SVFP** — deterministic layout repair loop.
-4. **Experiments** — replay frozen planner snapshots; compare baselines on identical plans.
-
----
-
-## Project layout
-
-```
-poster_agent_backend/
-├── app/                         # Production FastAPI + SVFP + renderer
-├── dify/                        # Chatflow design & agent prompts
-├── experiments/
-│   ├── baselines/               # ours_svfp, ours_no_svfp, ours_freeform, gpt4o_zeroshot, …
-│   ├── metrics/                 # content, visual, protocol, user/pending, engineering
-│   ├── scripts/                 # batch_dify_runs, run_matrix, audit_figures, …
-│   └── datasets/planner_cache/  # 30 frozen PosterTask snapshots
-├── PROJECT_OPTIMIZATION_DIRECTION_v4.md     # Current technical status & next optimization plan
-└── .env.example
-```
+C-class only applies to feedback arms (`ours_svfp`, `ours_freeform`, `gpt4o_zeroshot_svfp`); N/A elsewhere. `c1` is now `executed/attempted` measured by the applier (no longer hardcoded), `c3` reads the per-iteration `svfp_trace`.
 
 ---
 
 ## Quick start
 
 ```bash
-cd poster_agent_backend
-python3.12 -m venv .venv312 && source .venv312/bin/activate
+cd PosterCS
+python3.12 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env          # DASHSCOPE_API_KEY, DIFY_* for batch runs
+cp .env.example .env          # DASHSCOPE_API_KEY (+ DIFY_* for batch runs)
 python -m app.main
 curl http://127.0.0.1:8000/health
 ```
 
 ---
 
-## API reference
+## API
 
 | Method | Path | Description |
-|--------|------|-------------|
+|---|---|---|
 | `GET` | `/health` | Service status |
-| `POST` | `/extract_pdf_assets` | PDF → `asset_token` + figure URLs |
+| `POST` | `/extract_pdf_assets` | PDF → `asset_token` + figures |
 | `POST` | `/generate_ppt` | Async generation (202 + `job_id`) |
 | `GET` | `/jobs/{job_id}?wait=20` | Long-poll job status |
 | `POST` | `/generate_ppt_file` | Sync generation (debug) |
@@ -139,100 +110,62 @@ curl http://127.0.0.1:8000/health
 
 ---
 
-## SVFP protocol
-
-Enable in Planner JSON:
-
-```json
-{ "use_commenter": true, "max_iterations": 3 }
-```
-
-| Issue | Typical deterministic action |
-|-------|------------------------------|
-| `overlapping_elements` | Reduce bullets, shrink font |
-| `empty_space` | Enlarge font, rebalance whitespace |
-| `low_contrast` | Switch palette (2-color guard) |
-| `figure_too_small` | Vertical panels → `image_focus` |
-
-Per-run trace analysis:
-
-```bash
-python -m experiments.tools.run_analysis outputs/runs/<run_folder>/run_report.json
-```
-
----
-
 ## Experiments
 
-**Baselines**
-
-| Name | What it isolates |
-|------|------------------|
-| `ours_svfp` | Full SVFP closed-loop |
-| `ours_no_svfp` | Same renderer, no feedback (layout ablation) |
-| `ours_freeform` | Free-text VLM critique + LLM apply (E1 arm) |
-| `gpt4o_zeroshot` | LLM planner only, same renderer & template |
-| `gpt4o_zeroshot_svfp` | Zero-shot planner + SVFP post-processor (E2 arm) |
-
-**Full matrix (local)**
+| Baseline | Isolates |
+|---|---|
+| `ours_svfp` | full SVFP closed loop |
+| `ours_no_svfp` | same renderer, no feedback |
+| `ours_freeform` | free-text VLM critique + LLM apply (c1 comparison arm) |
+| `gpt4o_zeroshot` | LLM planner only |
+| `gpt4o_zeroshot_svfp` | zero-shot planner + SVFP (planner-agnostic test) |
+| `paper2poster` / `posteragent` | external SOTA reference (repro pending) |
 
 ```bash
-python -m experiments.scripts.run_matrix \
-  --papers experiments/configs/papers_30.json \
+python -m experiments.scripts.run_matrix --papers experiments/configs/papers_30.json \
   --baselines ours_no_svfp,ours_freeform,ours_svfp,gpt4o_zeroshot_svfp
 python -m experiments.scripts.compute_metrics --all
 python -m experiments.scripts.aggregate_stats --out experiments/results/aggregate/
 python -m experiments.scripts.print_paper_table
 ```
 
-**Figure audit (B1 diagnostic)**
-
-```bash
-python experiments/scripts/audit_figures.py --dry-run   # no API calls
-python experiments/scripts/audit_figures.py --limit 3   # smoke
-```
-
+The failure-taxonomy audit + diagnosis analyses live in `experiments/audit/` and `experiments/scripts/analysis_*.py` / `ablation_*.py`.
 
 ---
 
-## Environment variables
+## Key environment variables
 
 | Variable | Purpose |
-|----------|---------|
-| `DASHSCOPE_API_KEY` | Qwen-VL critic + judges |
-| `OPENAI_API_KEY` | Metric judges (OpenAI-compatible) |
-| `POSTER_EXPERIMENT_MODE` | `1` = JSONL telemetry per run |
-| `POSTER_LLM_TIMEOUT_S` | SDK request timeout for text/VLM calls |
-| `POSTER_VLM_WALL_TIMEOUT_S` | Hard wall-clock guard for SVFP VLM review |
-| `POSTER_VLM_ALLOW_FALLBACK` | `0` avoids a second non-JSON VLM call in experiments |
-| `DIFY_API_KEY` / `DIFY_BASE_URL` | Batch Chatflow trigger |
-| `DIFY_WORKFLOW_INPUT_NAME` | Start node PDF variable (default `paper`) |
+|---|---|
+| `DASHSCOPE_API_KEY` | Qwen-VL critic + judges (SiliconFlow) |
+| `QWEN_VL_MODEL` | VLM model id (default `Qwen/Qwen3-VL-32B-Instruct`) |
+| `POSTER_USE_DOCLING` | `0` to fall back to fitz extraction |
+| `POSTER_LLM_TIMEOUT_S` | request timeout for text/VLM calls |
+| `DIFY_API_KEY` / `DIFY_BASE_URL` | batch Chatflow trigger |
 
 See [`.env.example`](.env.example) for the full list.
+
+---
+
+## Documentation map
+
+| Doc | Content |
+|---|---|
+| **README** (this file) | Overview, pipeline, honest framing, quick start |
+| [`项目现状与最终方向_v6.md`](项目现状与最终方向_v6.md) | **Current status, done/not-done, usable-v1 checklist, roadmap** |
+| [`SVFP_ISSUE_TAXONOMY_v5.md`](SVFP_ISSUE_TAXONOMY_v5.md) | 5-class taxonomy + routed-detection design (next iteration) |
+| [`LAYOUT_DESIGN_v2.md`](LAYOUT_DESIGN_v2.md) | content-adaptive layout design |
+| [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md) | original direction + P0–P7 roadmap |
+| `experiments/scripts/METRIC_REFACTOR_PLAN.md` | 16-metric refactor record |
 
 ---
 
 ## Tests
 
 ```bash
-python -m pytest tests/ -q
 python -m pytest experiments/tests/ -q
 ```
 
----
+## Notes
 
-## Documentation map
-
-| Doc | Audience | Content |
-|-----|----------|---------|
-| **README** (this file) | New clones | Overview, quick start, honest pilot summary |
-| [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md) | Paper authors | Current status, remaining risks, next optimization plan |
-| [`dify/DIFY_WORKFLOW_AND_PAPER_DESIGN.md`](dify/DIFY_WORKFLOW_AND_PAPER_DESIGN.md) | Method section | Chatflow topology & agent design |
-
----
-
-## GitHub notes
-
-**Gitignored:** `.env`, `outputs/`, PDFs, `experiments/.cache/`, metrics/aggregate/artifacts, `PAPER_DRAFT_v0.md`, internal conversation logs.
-
-**Committed:** source, `dify/prompts/`, `planner_cache/` (30 snapshots), `RESEARCH_DIRECTION*.md`, configs, tests.
+`.env`, `outputs/`, `*.pptx`, `zcache/`, heavy `experiments/results/` artifacts are gitignored. `datasets/planner_cache/*.json` (frozen snapshots) and the audit/diagnosis JSON evidence are committed for reproducibility.

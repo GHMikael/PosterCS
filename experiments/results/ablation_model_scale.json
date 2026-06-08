@@ -1,0 +1,628 @@
+{
+  "models": {
+    "8B": "Qwen/Qwen3-VL-8B-Instruct",
+    "30B-A3B": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+    "32B": "Qwen/Qwen3-VL-32B-Instruct"
+  },
+  "n_posters": 16,
+  "temp": 0.1,
+  "per_model": {
+    "8B": [
+      {
+        "run_id": "830c175603a1",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "0",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "6499bdbd151f",
+        "human_primary": "overlap_guard",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "6.4",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "c73909e80a4e",
+        "human_primary": "overlap_guard",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "12.8",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "a2ff21dc2919",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "visual_hierarchy_weak",
+        "density_pct": "21.3",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "3fdda15fffcb",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "visual_hierarchy_weak",
+        "density_pct": "23.4",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "6203fd2fd92e",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "visual_hierarchy_weak",
+        "density_pct": "25.5",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "b08f727827bb",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "27.7",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "da638e0471a6",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "asset_utilization_error",
+        "density_pct": "36.2",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "1c72b772bccb",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "44.7",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "53730e3ca04c",
+        "human_primary": "",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "53.2",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "20c9c0343600",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "61.7",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "f3d5eead40ba",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "70.2",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "d346898900a2",
+        "human_primary": "structure_alignment_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "80.9",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "c9dd5cc03f4f",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "83",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "44a0517194a2",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "83",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "c1e8b5acfe13",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "asset_utilization_error",
+        "density_pct": "97.9",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [],
+        "source": "vlm",
+        "notes": ""
+      }
+    ],
+    "30B-A3B": [
+      {
+        "run_id": "830c175603a1",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "0",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "6499bdbd151f",
+        "human_primary": "overlap_guard",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "6.4",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "c73909e80a4e",
+        "human_primary": "overlap_guard",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "12.8",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "a2ff21dc2919",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "visual_hierarchy_weak",
+        "density_pct": "21.3",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [
+          "text_overload",
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "3fdda15fffcb",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "visual_hierarchy_weak",
+        "density_pct": "23.4",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "6203fd2fd92e",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "visual_hierarchy_weak",
+        "density_pct": "25.5",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "b08f727827bb",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "27.7",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "da638e0471a6",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "asset_utilization_error",
+        "density_pct": "36.2",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "1c72b772bccb",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "44.7",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "53730e3ca04c",
+        "human_primary": "",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "53.2",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "20c9c0343600",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "61.7",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "f3d5eead40ba",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "70.2",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "d346898900a2",
+        "human_primary": "structure_alignment_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "80.9",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "c9dd5cc03f4f",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "83",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "44a0517194a2",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "83",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "c1e8b5acfe13",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "asset_utilization_error",
+        "density_pct": "97.9",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak"
+        ],
+        "source": "vlm",
+        "notes": ""
+      }
+    ],
+    "32B": [
+      {
+        "run_id": "830c175603a1",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "0",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "asset_utilization_error"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "6499bdbd151f",
+        "human_primary": "overlap_guard",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "6.4",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "asset_utilization_error"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "c73909e80a4e",
+        "human_primary": "overlap_guard",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "12.8",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "a2ff21dc2919",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "visual_hierarchy_weak",
+        "density_pct": "21.3",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [
+          "text_overload",
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "3fdda15fffcb",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "visual_hierarchy_weak",
+        "density_pct": "23.4",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [
+          "text_overload",
+          "asset_utilization_error"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "6203fd2fd92e",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "visual_hierarchy_weak",
+        "density_pct": "25.5",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [
+          "text_overload",
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "b08f727827bb",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "27.7",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "da638e0471a6",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "asset_utilization_error",
+        "density_pct": "36.2",
+        "vlm_primary": "asset_utilization_error",
+        "vlm_secondary": [
+          "text_overload",
+          "visual_hierarchy_weak"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "1c72b772bccb",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "44.7",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "asset_utilization_error"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "53730e3ca04c",
+        "human_primary": "",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "53.2",
+        "vlm_primary": "visual_hierarchy_weak",
+        "vlm_secondary": [
+          "text_overload",
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "20c9c0343600",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "61.7",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "asset_utilization_error"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "f3d5eead40ba",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "70.2",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "asset_utilization_error"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "d346898900a2",
+        "human_primary": "structure_alignment_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "80.9",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "c9dd5cc03f4f",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "83",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "asset_utilization_error"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "44a0517194a2",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "text_overload",
+        "density_pct": "83",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "space_imbalance"
+        ],
+        "source": "vlm",
+        "notes": ""
+      },
+      {
+        "run_id": "c1e8b5acfe13",
+        "human_primary": "asset_utilization_error",
+        "human_overload": "no",
+        "orig_vlm_primary": "asset_utilization_error",
+        "density_pct": "97.9",
+        "vlm_primary": "text_overload",
+        "vlm_secondary": [
+          "visual_hierarchy_weak",
+          "asset_utilization_error"
+        ],
+        "source": "vlm",
+        "notes": ""
+      }
+    ]
+  }
+}

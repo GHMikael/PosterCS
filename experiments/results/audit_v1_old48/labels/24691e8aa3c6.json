@@ -1,0 +1,52 @@
+{
+  "run_id": "24691e8aa3c6",
+  "paper_title": "DataGovBench: Benchmarking LLM Agents for Real-World Data Governance Workflows",
+  "template": "template_dashboard",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_215239_DataGovBench_Benchmarking_LLM__24691e8aa3c6/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_215239_DataGovBench_Benchmarking_LLM__24691e8aa3c6",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 16.0,
+    "mean_bullets_per_panel": 2.286,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 143.1,
+    "max_chars_per_panel": 203.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.286,
+    "text_only_panel_ratio": 0.714
+  },
+  "labels": [
+    {
+      "run_id": "24691e8aa3c6",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "space_imbalance"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The poster contains dense bullet points with small font sizes across all sections, creating high text density and a heavy reading burden, especially in Motivation, Problem, and Experiments.",
+        "secondary_issues": {
+          "visual_hierarchy_weak": "The main contribution (DataGovAgent's performance) is not visually emphasized; the large donut chart in Results is not the most salient element, and the title 'Workflows' is visually dominant but irrelevant.",
+          "space_imbalance": "The 'Key Findings' section is nearly empty compared to the densely packed 'Motivation' and 'Problem' sections, creating uneven visual weight."
+        }
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The poster contains dense bullet points with small font sizes across all sections, creating high text density and a heavy reading burden, especially in Motivation, Problem, and Experiments.\",\n    \"secondary_issues\": {\n      \"visual_hierarchy_weak\": \"The main contribution (DataGovAgent's performance) is not visually emphasized; the large donut chart in Results is not the most salient element, and the title 'Workflows' is visually dominant but irrelevant.\",\n      \"space_imbalance\": \"The 'Key Findings' section is nearly empty compared to the densely packed 'Motivation' and 'Problem' sections, creating uneven visual weight.\"\n    }\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "run_id": "4c820932156b",
+  "paper_title": "ESSAYBENCH: Evaluating Large Language Models in Multi-Genre Chinese Essay Writing",
+  "template": "template_dashboard",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_203532_ESSAYBENCH_Evaluating_Large_La_4c820932156b/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_203532_ESSAYBENCH_Evaluating_Large_La_4c820932156b",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space",
+    "figure_too_small",
+    "figure_too_small"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 16.0,
+    "mean_bullets_per_panel": 2.286,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 142.7,
+    "max_chars_per_panel": 204.0,
+    "n_figures_available": 3.0,
+    "n_panels_with_figure": 3.0,
+    "figure_usage_ratio": 0.429,
+    "text_only_panel_ratio": 0.571
+  },
+  "labels": [
+    {
+      "run_id": "4c820932156b",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "space_imbalance"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The 'Motivation', 'Problem', and 'Experiments' sections contain dense lists of bullet points with small font, creating a high text density and heavy reading burden across the top and bottom left panels.",
+        "secondary_issues": [
+          "visual_hierarchy_weak: The main contribution (the proposed evaluation framework) is not visually emphasized; the central figure in 'Results' is small and lacks prominence compared to the surrounding text.",
+          "space_imbalance: The 'Problem' panel is nearly empty while the 'Motivation' and 'Experiments' panels are text-heavy, creating an uneven visual weight across the top row."
+        ]
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation', 'Problem', and 'Experiments' sections contain dense lists of bullet points with small font, creating a high text density and heavy reading burden across the top and bottom left panels.\",\n    \"secondary_issues\": [\n      \"visual_hierarchy_weak: The main contribution (the proposed evaluation framework) is not visually emphasized; the central figure in 'Results' is small and lacks prominence compared to the surrounding text.\",\n      \"space_imbalance: The 'Problem' panel is nearly empty while the 'Motivation' and 'Experiments' panels are text-heavy, creating an uneven visual weight across the top row.\"\n    ]\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

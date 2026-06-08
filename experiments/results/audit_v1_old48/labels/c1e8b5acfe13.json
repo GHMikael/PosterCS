@@ -1,0 +1,49 @@
+{
+  "run_id": "c1e8b5acfe13",
+  "paper_title": "Expanding RL with Verifiable Rewards Across Diverse Domains",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_152043_Expanding_RL_with_Verifiable_R_c1e8b5acfe13/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_152043_Expanding_RL_with_Verifiable_R_c1e8b5acfe13",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 33.0,
+    "mean_bullets_per_panel": 4.714,
+    "max_bullets_per_panel": 5.0,
+    "mean_chars_per_panel": 310.0,
+    "max_chars_per_panel": 380.0,
+    "n_figures_available": 1.0,
+    "n_panels_with_figure": 1.0,
+    "figure_usage_ratio": 0.143,
+    "text_only_panel_ratio": 0.857
+  },
+  "labels": [
+    {
+      "run_id": "c1e8b5acfe13",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "asset_utilization_error",
+      "secondary_issues": [
+        "text_overload",
+        "visual_hierarchy_weak"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The Method section contains a large blank figure placeholder with only a logo and caption, failing to present the key paper figure or any meaningful visual asset.",
+        "secondary": "Text density is high across all sections with many bullet points and small font, and the main contribution is not visually emphasized beyond the bottom banner."
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"asset_utilization_error\",\n  \"secondary_issues\": [\"text_overload\", \"visual_hierarchy_weak\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The Method section contains a large blank figure placeholder with only a logo and caption, failing to present the key paper figure or any meaningful visual asset.\",\n    \"secondary\": \"Text density is high across all sections with many bullet points and small font, and the main contribution is not visually emphasized beyond the bottom banner.\"\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "run_id": "3907b9d59be3",
+  "paper_title": "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260524_005404_BLIP_Bootstrapping_Language-Im_3907b9d59be3/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260524_005404_BLIP_Bootstrapping_Language-Im_3907b9d59be3",
+  "old_issues_initial": [
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space",
+    "figure_too_small",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 28.0,
+    "mean_bullets_per_panel": 4.0,
+    "max_bullets_per_panel": 5.0,
+    "mean_chars_per_panel": 251.4,
+    "max_chars_per_panel": 329.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.286,
+    "text_only_panel_ratio": 0.714
+  },
+  "labels": [
+    {
+      "run_id": "3907b9d59be3",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "space_imbalance"
+      ],
+      "guard_violations": [
+        "overflow_guard"
+      ],
+      "evidence": {
+        "primary": "Each section contains dense bullet points with small font, creating high text density and heavy reading burden across the entire poster.",
+        "secondary_issues": [
+          "visual_hierarchy_weak: The main contribution is not visually salient; the reader cannot easily distinguish the most important result or method from the rest.",
+          "space_imbalance: The 'Method' and 'Results' sections have large empty spaces around figures, while text-heavy sections like 'Motivation' and 'Experiments' are cramped."
+        ]
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"space_imbalance\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"Each section contains dense bullet points with small font, creating high text density and heavy reading burden across the entire poster.\",\n    \"secondary_issues\": [\n      \"visual_hierarchy_weak: The main contribution is not visually salient; the reader cannot easily distinguish the most important result or method from the rest.\",\n      \"space_imbalance: The 'Method' and 'Results' sections have large empty spaces around figures, while text-heavy sections like 'Motivation' and 'Experiments' are cramped.\"\n    ]\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

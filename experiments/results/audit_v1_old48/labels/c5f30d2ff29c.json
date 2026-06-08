@@ -1,0 +1,43 @@
+{
+  "run_id": "c5f30d2ff29c",
+  "paper_title": "INSIDE: LLMS’ INTERNAL STATES RETAIN THE POWER OF HALLUCINATION DETECTION",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260531_170031_INSIDE_LLMS’_INTERNAL_STATES_R_c5f30d2ff29c/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260531_170031_INSIDE_LLMS’_INTERNAL_STATES_R_c5f30d2ff29c",
+  "old_issues_initial": [],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 21.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 198.4,
+    "max_chars_per_panel": 226.0,
+    "n_figures_available": 1.0,
+    "n_panels_with_figure": 0.0,
+    "figure_usage_ratio": 0.0,
+    "text_only_panel_ratio": 1.0
+  },
+  "labels": [
+    {
+      "run_id": "c5f30d2ff29c",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "space_imbalance"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "Each section contains dense bullet points with small font and high text density, creating a heavy reading burden across the entire poster.",
+        "secondary_issues": {
+          "visual_hierarchy_weak": "The main contribution (e.g., 'State-of-the-art hallucination detection performance') is not visually emphasized compared to other text, making it hard to identify the key takeaway.",
+          "space_imbalance": "The top row has three panels of similar size, but the bottom row's 'Key Findings' panel is visually lighter due to fewer bullets, creating an uneven visual weight distribution."
+        }
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Each section contains dense bullet points with small font and high text density, creating a heavy reading burden across the entire poster.\",\n    \"secondary_issues\": {\n      \"visual_hierarchy_weak\": \"The main contribution (e.g., 'State-of-the-art hallucination detection performance') is not visually emphasized compared to other text, making it hard to identify the key takeaway.\",\n      \"space_imbalance\": \"The top row has three panels of similar size, but the bottom row's 'Key Findings' panel is visually lighter due to fewer bullets, creating an uneven visual weight distribution.\"\n    }\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

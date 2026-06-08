@@ -1,0 +1,92 @@
+{
+  "asset_token": "1a6f6afb75184f65",
+  "template": "template_minimal",
+  "color_theme": "minimal_gray",
+  "poster_title": "Know Your Limits: A Survey of Abstention in Large Language Models",
+  "authors": "Bingbing Wen, Jihan Yao, Shangbin Feng, Chenjun Xu, Yulia Tsvetkov, Bill Howe, Lucy Lu Wang",
+  "paper_info": "arXiv:2407.18418v3 [cs.CL] 12 Feb 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "minimal_layout",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Overview",
+      "content": [
+        "Survey of abstention methods in large language models (LLMs)."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Background",
+      "content": [
+        "LLMs show generalization capabilities across NLP tasks.",
+        "LLMs are unreliable and prone to hallucinations, overly certain responses, and harmful outputs."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "content": [
+        "Current abstention methods rely on calibration techniques, insufficient for modeling human values or query answerability.",
+        "Need for robust abstention mechanisms to handle diverse tasks and contexts."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Framework",
+      "content": [
+        "Analyze abstention from three perspectives: query, model, and human values."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Methods",
+      "content": [
+        "Categorize existing abstention methods based on the model lifecycle (pretraining, alignment, and inference)."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Evaluation",
+      "content": [
+        "Provide an analysis of evaluation benchmarks and metrics for abstention."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "Abstention is crucial for enhancing the safety and reliability of LLMs.",
+        "Developing robust abstention mechanisms will improve the overall trustworthiness of LLM interactions."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {},
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

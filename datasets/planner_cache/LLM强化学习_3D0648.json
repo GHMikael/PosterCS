@@ -1,0 +1,90 @@
+{
+  "asset_token": "81cd1e77992c4bfd",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Expanding RL with Verifiable Rewards Across Diverse Domains",
+  "authors": "Yi Su, Dian Yu, Linfeng Song, Juntao Li, Haitao Mi, Zhaopeng Tu, Min Zhang, Dong Yu",
+  "paper_info": "arXiv:2503.23829v2 [cs.CL] 1 Apr 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "RLVR enhances reasoning capabilities of LLMs in structured tasks.",
+        "Challenges in verifying complex, unstructured reference answers.",
+        "Binary verification signals limit application in unstructured tasks.",
+        "Resource-intensive domain-specific annotation for reward models."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "content": [
+        "60.3% of mathematical problems have single-term numerical answers.",
+        "45.4% of multi-domain queries have verifiable answers by rule-based methods.",
+        "Need for scalable and robust reward signals in diverse domains."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Generative scoring for soft, model-based reward signals.",
+        "Training 7B LLMs as cross-domain generative reward models.",
+        "Using data from RL exploration supervised by a larger teacher model."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Conducted experiments in medicine, chemistry, psychology, economics, and education.",
+        "Used free-form, unstructured answers by domain experts for verification."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "Outperformed Qwen2.5-72B and DeepSeek-R1-Distill-Qwen-32B in free-form settings.",
+        "Achieved up to 8.0% accuracy boost in diverse reasoning tasks.",
+        "Model-based soft rewards produced more robust policies."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "Enhanced robustness, flexibility, and scalability of RLVR in complex scenarios.",
+        "Step towards practical RL applications in diverse, real-world domains."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {},
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

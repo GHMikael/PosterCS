@@ -1,0 +1,55 @@
+{
+  "n": 16,
+  "human_overload_counts": {
+    "no": 16
+  },
+  "human_primary_counts": {
+    "asset_utilization_error": 12,
+    "overlap_guard": 2,
+    "(blank)": 1,
+    "structure_alignment_error": 1
+  },
+  "vlm_primary_counts": {
+    "text_overload": 11,
+    "visual_hierarchy_weak": 3,
+    "asset_utilization_error": 2
+  },
+  "vlm_TO_present_count": 16,
+  "vlm_TO_primary_count": 11,
+  "kappa_text_overload_PRESENCE": {
+    "kappa": 0.0,
+    "p_observed_agreement": 0.0,
+    "note": ""
+  },
+  "kappa_text_overload_PRIMARY": {
+    "kappa": 0.0,
+    "p_observed_agreement": 0.312,
+    "note": ""
+  },
+  "kappa_PRIMARY_ISSUE_multiclass": {
+    "kappa": 0.034,
+    "p_observed_agreement": 0.125,
+    "note": ""
+  },
+  "threshold": {
+    "human_overload_yes_density_pcts": [],
+    "human_overload_borderline_density_pcts": [],
+    "human_overload_no_density_pct_range": [
+      0.0,
+      97.9
+    ],
+    "interpretation": "human never calls overload across the full 0-98 pct density range -> no threshold exists in this corpus"
+  },
+  "primary_confusion_human_to_vlm": {
+    "asset_utilization_error -> text_overload": 7,
+    "asset_utilization_error -> visual_hierarchy_weak": 3,
+    "overlap_guard -> text_overload": 2,
+    "asset_utilization_error -> asset_utilization_error": 2,
+    "(blank) -> text_overload": 1,
+    "structure_alignment_error -> text_overload": 1
+  },
+  "caveats": [
+    "n=16; single annotator who is also the system author -> internal evidence, needs >=1 independent annotator to be reviewer-proof.",
+    "human labels are near-constant (overload all 'no'; primary mostly space_imbalance), so kappa is descriptive of a near-total disagreement, not a calibrated coefficient."
+  ]
+}

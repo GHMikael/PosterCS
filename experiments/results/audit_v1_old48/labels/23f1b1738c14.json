@@ -1,0 +1,49 @@
+{
+  "run_id": "23f1b1738c14",
+  "paper_title": "Generalist Reward Models: Found Inside Large Language Models",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_063953_Generalist_Reward_Models_Found_23f1b1738c14/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_063953_Generalist_Reward_Models_Found_23f1b1738c14",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 6.0,
+    "total_bullets": 18.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 176.8,
+    "max_chars_per_panel": 211.0,
+    "n_figures_available": 0.0,
+    "n_panels_with_figure": 0.0,
+    "figure_usage_ratio": 0.0,
+    "text_only_panel_ratio": 1.0
+  },
+  "labels": [
+    {
+      "run_id": "23f1b1738c14",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "structure_alignment_error"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "Each section contains dense bullet points with minimal white space, using small font and high text density, creating a heavy reading burden across the entire poster.",
+        "secondary": "The main contribution is not visually emphasized; the bottom banner repeats the conclusion but lacks prominence, and the method section's flowchart is small and lacks visual weight. Additionally, the column widths are inconsistent, and section headers are not perfectly aligned across rows."
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Each section contains dense bullet points with minimal white space, using small font and high text density, creating a heavy reading burden across the entire poster.\",\n    \"secondary\": \"The main contribution is not visually emphasized; the bottom banner repeats the conclusion but lacks prominence, and the method section's flowchart is small and lacks visual weight. Additionally, the column widths are inconsistent, and section headers are not perfectly aligned across rows.\"\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

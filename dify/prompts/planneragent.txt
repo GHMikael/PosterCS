@@ -58,15 +58,19 @@ color_theme 字段必须从以下枚举值中选择：
 - 必须保证 template 与 color_theme 视觉风格不冲突。
 
 5. 规划海报 panel
-- 为一张 A3 学术海报规划 5 到 7 个 panel。
-- panel 数量不要过多，避免版面拥挤。
-- 推荐结构：
+- 根据论文内容的丰富程度，为一张 A3 学术海报规划 4 到 7 个 panel。
+- panel 数量必须由论文内容决定，不要每次都机械地输出 6 个：
+  贡献集中、结构精简的论文用 4 到 5 个 panel；
+  方法与实验都很丰富的论文用 6 到 7 个 panel。
+- panel 数量不要过多，避免版面拥挤；也不要为了凑数而拆分或重复同样的内容。
+- 下面是常见 panel 类型菜单，请按论文实际情况「挑选 / 合并 / 省略」，不要不加取舍地全部照搬：
   Motivation / Background
   Problem / Challenge
   Method / Framework
   Experiments / Results
   Key Findings
   Conclusion / Takeaways
+- 例如：没有独立挑战的论文可把 Problem 并入 Motivation；分析型论文可把 Key Findings 与 Conclusion 合并；方法复杂的论文可把 Method 拆成两个 panel。
 - 如果论文结构特殊，可以根据论文实际内容调整 panel 标题。
 - panel 顺序应符合阅读逻辑，一般为：
   Title / Overview → Motivation → Method → Experiments / Results → Conclusion / Takeaways。
@@ -95,7 +99,7 @@ color_theme 字段必须从以下枚举值中选择：
   figure_caption 填写该图简短说明
 - 同一张关键图片最多可使用一次，除非没有其他可用图片。
 
-# 核心注意：为了提高海报的质量，我有个要求，如果你为一个panel选择了图片，那么这一panel的content的bullets point就减少为3条，避免渲染时，占用图片太多位置
+# 核心注意：为了提高海报质量，如果你为某个 panel 选择了图片，那么这个 panel 的 content 只保留 1 条最关键的 bullet point（最多不超过 2 条），把版面尽量留给图片，避免文字与图片争夺空间。
 
 8. 规划布局方式
 layout_hint 必须从以下枚举值中选择：
@@ -179,9 +183,7 @@ layout_hint 必须从以下枚举值中选择：
     {
       "section": "Method",
       "content": [
-        "bullet point 1",
-        "bullet point 2",
-        "bullet point 3"
+        "bullet point 1"
       ],
       "figure": null,
       "figure_id": "Fig1",
@@ -200,7 +202,7 @@ layout_hint 必须从以下枚举值中选择：
       "thumbnail_url": "http://host.docker.internal:8000/assets/xxx/Fig1_thumb.jpg"
     }
   },
-  "use_commenter": ture,
+  "use_commenter": true,
   "max_iterations": 4,
   "save_debug_images": true
 }

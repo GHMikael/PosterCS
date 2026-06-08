@@ -1,238 +1,171 @@
 [English](README.md) | **简体中文**
 
-# PosterCSP — Paper-to-Poster Backend
+# PosterCS — 论文转海报后端 + SVFP
 
-> **当前版本：v5.3** · FastAPI 后端 + **SVFP**（Structured Visual Feedback Protocol，结构化视觉反馈协议）+ 可复现的 **CS-Poster-30** 评测框架。
+> **状态:v6 —— 第一个能用的版本。** FastAPI 后端 + Dify Chatflow 规划 + 确定性·内容自适应渲染器 + **SVFP**(结构化视觉反馈协议)闭环 + 可复现的 **CS-Poster-30** 评测套件(16 指标 + baseline 矩阵)。
 
-给定一篇 CS 论文 PDF，系统通过 Dify **Chatflow**（内容规划）与 Python 渲染器（可选 **SVFP 闭环**：VLM 批评 → 确定性修复 → 收敛留痕）生成可编辑的 A3 学术海报 PPTX。长耗时任务采用 **异步 HTTP + 服务端长轮询**，适配 Dify。
-
-**研究方向（v3）：** SVFP 仍是主贡献；当前已补齐 E1/E2 预检链路、VLM 延迟边界、图抽取过滤与协议级指标。当前状态与后续优化见 [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md)。
-
----
-
-## 项目定位（能说什么 / 不能说什么）
-
-| | |
-|---|---|
-| **是** | 一种 **planner-agnostic** 的结构化视觉反馈协议（4 类 issue × 9 个原子动作），可挂在任意 poster planner 之后 |
-| **是** | 可复现的 **CS-Poster-30** 流水线（30 份冻结规划快照、headline/appendix/protocol 指标、L0→L8 脚本） |
-| **不是** | 「结构化规划在内容召回上优于 zero-shot」（试点：a1 低于 gpt4o_zeroshot） |
-| **不是** | 「SVFP 比无反馈更快」的系统；当前应写成质量-延迟 Pareto |
-| **不是** | 「100% 原图复用」的已证结论；图抽取已加过滤和审计，但复用率仍需正式度量 |
-
-**一句话定位（论文用）：**
-
-> 我们提出 **SVFP**——将 VLM 视觉批评约束到 `{4 类问题 × 9 个动作}` 封闭 schema，并由确定性 `FeedbackApplier` 执行，使反馈可执行、可收敛。在 CS-Poster-30 上，SVFP 在视觉质量（B1/B2，n=5 时 Cohen's d ≈ 1.8）取得大效应提升，并诚实报告内容 precision–recall trade-off。
+输入一篇 CS 论文 PDF,产出可编辑的 A3 会议海报 PPTX:
+**docling 抽取图文 → Dify Chatflow 规划(`PosterTask` JSON)→ 内容自适应 PPTX 渲染器 → 可选 SVFP 闭环(VLM 批评 → 确定性修复 → 收敛留痕)。**
 
 ---
 
-## 版本概览（v5.3）
+## 设计原则(主线)
+
+> **几何可判的交给确定性代码;语义/内容相关的交给 LLM/VLM。**
+
+这条线贯穿整个系统和论文:
+- **图表抽取**用 docling(版面理解模型)而非抓原始位图,矢量图 + 表格都不漏。
+- **图的布局**(上下/左右、框多大)由渲染器按图的**真实长宽比**推导,不让 planner 猜。
+- **SVFP 的诊断**(见下):整图 VLM critic 对版面不可靠,所以可靠修复必须按问题类型路由到真正有信号的检测器。
+
+---
+
+## 流程
+
+```
+PDF ──/extract_pdf_assets──►  文本 + 图(docling;fitz 兜底)
+                                   │
+        Dify Chatflow(planneragent_v2) ──► PosterTask JSON(panels、figures、headline)
+                                   │
+        内容自适应渲染器 ──► 可编辑 PPTX
+          · content_spans:panel 尺寸随内容变(不再死六格)
+          · 图布局按长宽比;headline = 每个 panel 的视觉焦点
+                                   │
+        可选 SVFP 闭环 ──► VLM 批评 → 确定性 FeedbackApplier → 收敛
+                                   │
+                          final.pptx + run_report.json(+ 供 c3 的 svfp_trace)
+```
+
+实验从**冻结的 planner 快照**(`datasets/planner_cache/*.json`)重放,保证各 baseline 在同一份 plan 上对比。
+
+---
+
+## v6 已能用的能力
 
 | 模块 | 能力 |
-|------|------|
-| **SVFP 协议** | 4 类 root-cause issue × 9 确定性 action；可配置收敛；VLM 调用有 timeout/硬超时边界 |
-| **E1 基线** | `ours_freeform` — 自由文本 VLM 批评 + LLM best-effort 改写；失败记录为不可执行反馈，不再让 cell 崩溃 |
-| **E2 基线** | `gpt4o_zeroshot_svfp` — zero-shot planner 后接 SVFP，用于验证 planner-agnostic |
-| **A3 修复** | NLI 幻觉：中立/弃权不再误判为幻觉；拆分 `contradicted_rate` 与 `unsupported_rate` |
-| **图 pipeline** | PDF 抽图过滤低信息图片，记录 xref/bbox 元数据，并支持 VLM 图审计 |
-| **Planner 缓存** | 30 份冻结 `PosterTask`；错图引用清理；`clean_planner_cache.py` |
-| **Dify Chatflow** | 三 Agent 流水线；Prompt 见 `dify/prompts/` |
-| **批跑** | `batch_dify_runs.py` 通过 API 批量触发 Chatflow |
-| **渲染器** | 4 模板 × 4 主题；六模块 CS domain prior；异步 Job + 运行归档 |
-| **实验** | 基线：`ours_svfp` · `ours_no_svfp` · `ours_freeform` · `gpt4o_zeroshot` · `gpt4o_zeroshot_svfp` · 外部 SOTA（可选） |
-
-**演进主线**
-
-- **v4.1**：SVFP 协议、异步 Job、布局质量守卫
-- **v5.0**：实验框架、5 篇试点、JSONL 遥测
-- **v5.1**：Dify 批跑、30 份 planner 快照、L0→L8 文档
-- **v5.2**：研究重锚（PosterCSP / SVFP 脊柱）、E1 free-form 基线、A3 指标修复、图审计 + planner 清理
-- **v5.3**：VLM 延迟边界、PDF 图过滤、协议级指标、E1 smoke、E2 cross-planner baseline、v3 规划文档
+|---|---|
+| **抽取** | docling 语义抽取(图 **和表**,含矢量);fitz 兜底;`POSTER_USE_DOCLING=0` 可关 |
+| **规划** | Dify Chatflow → `PosterTask`;`planneragent_v2.txt` 加每个 panel 的 `headline` + CS 结构化抽取;布局方向交渲染器 |
+| **渲染器** | 内容自适应 `content_spans`(dashboard/classic/minimal);图按长宽比布局;`headline` 焦点行;4 模板 × 4 配色 |
+| **SVFP 闭环** | 闭集 `{4 类 issue × 9 动作}` + 确定性 applier + 收敛检测(生产 = 旧 4 类 baseline,见下) |
+| **评测** | **16 指标**(A 内容 / B 视觉 / C 协议 / D 效率 / E 外部)+ baseline 矩阵 + `compute_metrics`/`aggregate_stats`/`print_paper_table` |
+| **异步** | 异步 job + 长轮询(适配 Dify);run 归档在 `outputs/runs/` |
 
 ---
 
-## 试点结论（n=5，诚实摘要）
+## 研究定位(诚实)
 
-来自 15 个 metrics JSON（5 篇 × 3 方法）的均值。**n=5 下 BH-FDR 校正后无一显著**——仅作方向性参考。
+**主发现 —— VLM 版面 critic 系统性不可靠(不是模型太小):**
+- 规模消融(Qwen3-VL 8B/30B/32B,同 16 张):每个尺寸都**先验主导**(8B → 100% 单一标签;32B → text_overload 11/16),且**都找不到人工标注的图/asset 问题**(各尺寸 ≤1/12);窄提示词也只把 asset 召回提到 4/12。
+- 真实 run 上 **`c3_issue_resolution_rate = 0.0`**:SVFP 检测到 8 个 issue、应用了动作,两轮**解决了 0 个**——量化了"VLM 能看见问题,但浅闭集动作修不动"。
 
-| 类别 | 指标 | gpt4o_zeroshot | ours_no_svfp | ours_svfp | 解读 |
-|------|------|----------------|--------------|-----------|------|
-| 内容 | A1 信息保留 | **0.544** | 0.448 | 0.448 | 结构化规划牺牲召回 |
-| 内容 | A3 幻觉率 | 0.117 | **0.100** | 0.117 | 无明显赢家（v5.2 已修 A3 逻辑） |
-| 视觉 | B1 布局 | 0.745 | 0.766 | **0.781** | SVFP 最清晰赢点 |
-| 视觉 | B2 可读性 | 0.748 | 0.748 | **0.782** | 同 B1 模式 |
-| 工程 | D1 延迟 (ms) | 23,025 | **38** | 160,612 | 质量–延迟 trade-off |
-| 工程 | D2 成本 ($) | **0.004** | 0 | 0.012 | 多轮 VLM 成本 |
+**因此:** 可靠修复必须**按问题类型路由检测**——几何管空间/溢出/结构,脚本+图 caption+文本 LLM 管图文不匹配,VLM 只用在它可靠的地方(显著性/层级)。
 
-**历史 pilot 注记：** 原始 n=5 pilot 中 `ours_svfp` 与 `ours_no_svfp` 内容指标相同，因为当时闭环几乎只改排版。v5.3 已把 `reduce_bullet_count` 改为内容保留式合并，因此新的内容指标必须重算后再下结论。
+**代码现状 vs 论文方向:**
+- **生产 SVFP 闭环目前 = 旧 4 类、整图 VLM 的 baseline**(`overlapping_elements / empty_space / low_contrast / figure_too_small` × 9 动作)。`c3=0.0` 就是在它上面测的,即**基线 / 反例**。
+- **5 类 MECE taxonomy + 路由检测 + 严重性门控**(论文的改进)已在 [`SVFP_ISSUE_TAXONOMY_v5.md`](SVFP_ISSUE_TAXONOMY_v5.md) 里**设计好,但还没迁进生产闭环**。这是 v6 之后的首要任务。
 
-**当前状态：** E1/E2 预检链路已实现并 smoke-tested。正式 n=30、独立视觉验证、E3 消融、人评、外部 SOTA 仍未完成。见 [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md)。
+完整状态 + 路线见 [`项目现状与最终方向_v6.md`](项目现状与最终方向_v6.md)。
 
 ---
 
-## 架构
+## 16 个指标
 
-```mermaid
-flowchart TB
-  PDF[PDF 论文] --> Extract["/extract_pdf_assets"]
-  Extract --> Dify[Dify Chatflow<br/>Text / Visual / Planner]
-  Dify --> Task[PosterTask JSON]
-  Task --> Render[PPTX 渲染器]
-  Render --> SVFP{SVFP 闭环?}
-  SVFP -->|是| VLM[VLM 封闭 schema 批评]
-  VLM --> Apply[FeedbackApplier]
-  Apply --> Render
-  SVFP -->|否| Out[final.pptx + run_report]
-  Render --> Out
-  Dify -.-> Cache[planner_cache/]
-  Cache -.->|run_matrix 回放| Task
-```
+| 层 | 指标 |
+|---|---|
+| **A 内容保真** | `a1_key_info_recall` · `a2_hallucination_rate` · `a3_semantic_fidelity`(BERTScore) |
+| **B 视觉质量** | `b1_layout_quality` · `b2_readability` · `b3_figure_reuse_rate` · `b4_figure_text_align` |
+| **C 协议** | `action_executability`(c1,**真实测量**)· `convergence_rate`(c2)· `c3_issue_resolution_rate` · `per_iter_visual_gain`(c4) |
+| **D 效率** | `d1_latency` · `d2_cost` |
+| **E 外部** | `e1_paperquiz` · `e2_human_preference`(harness)· `e3_llm_judge`(默认关) |
 
-1. **`/extract_pdf_assets`** — 文本预览 + 插图元数据。
-2. **Dify Chatflow** — 三 Agent 输出 `PosterTask` JSON。
-3. **渲染器 + 可选 SVFP** — 确定性布局修复闭环。
-4. **实验** — 回放冻结规划，各基线在**相同规划**上对比。
-
----
-
-## 项目结构
-
-```
-poster_agent_backend/
-├── app/                         # 生产 FastAPI + SVFP + 渲染器
-├── dify/                        # Chatflow 设计与 Agent Prompt
-├── experiments/
-│   ├── baselines/               # ours_svfp, ours_no_svfp, ours_freeform, …
-│   ├── metrics/                 # 内容、视觉、协议、用户/待补、工程指标
-│   ├── scripts/                 # batch_dify_runs, run_matrix, audit_figures, …
-│   └── datasets/planner_cache/  # 30 份冻结 PosterTask 快照
-├── PROJECT_OPTIMIZATION_DIRECTION_v4.md     # 当前技术状态与下一步优化计划
-└── .env.example
-```
+C 类只适用于有反馈的臂(`ours_svfp` / `ours_freeform` / `gpt4o_zeroshot_svfp`),其余 N/A。`c1` 现在是 applier 数出来的 `executed/attempted`(不再写死),`c3` 读每轮的 `svfp_trace`。
 
 ---
 
 ## 快速开始
 
 ```bash
-cd poster_agent_backend
-python3.12 -m venv .venv312 && source .venv312/bin/activate
+cd PosterCS
+python3.12 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env          # 填写 DASHSCOPE_API_KEY、DIFY_*（批跑时）
+cp .env.example .env          # DASHSCOPE_API_KEY(批量跑加 DIFY_*)
 python -m app.main
 curl http://127.0.0.1:8000/health
 ```
 
 ---
 
-## API 一览
+## API
 
 | 方法 | 路径 | 说明 |
-|------|------|------|
+|---|---|---|
 | `GET` | `/health` | 服务状态 |
-| `POST` | `/extract_pdf_assets` | PDF → `asset_token` + 插图 URL |
-| `POST` | `/generate_ppt` | 异步生成（202 + `job_id`） |
-| `GET` | `/jobs/{job_id}?wait=20` | 长轮询任务状态 |
-| `POST` | `/generate_ppt_file` | 同步生成（调试） |
+| `POST` | `/extract_pdf_assets` | PDF → `asset_token` + 图 |
+| `POST` | `/generate_ppt` | 异步生成(202 + `job_id`) |
+| `GET` | `/jobs/{job_id}?wait=20` | 长轮询 job 状态 |
+| `POST` | `/generate_ppt_file` | 同步生成(调试) |
 | `GET` | `/download/run/{run_folder}` | 下载 `final.pptx` |
-| `GET` | `/assets/{asset_token}/{filename}` | 提取的插图 |
-
----
-
-## SVFP 协议
-
-在 Planner JSON 中开启：
-
-```json
-{ "use_commenter": true, "max_iterations": 3 }
-```
-
-| Issue | 典型确定性修复 |
-|-------|----------------|
-| `overlapping_elements` | 减少 bullet、缩小字号 |
-| `empty_space` | 放大字号、重平衡留白 |
-| `low_contrast` | 切换配色（2 色守卫） |
-| `figure_too_small` | 纵向面板 → `image_focus` |
-
-单次运行分析：
-
-```bash
-python -m experiments.tools.run_analysis outputs/runs/<run_folder>/run_report.json
-```
+| `GET` | `/assets/{asset_token}/{filename}` | 抽取的图 |
 
 ---
 
 ## 实验
 
-**基线对照**
-
-| 名称 | 隔离变量 |
-|------|----------|
+| Baseline | 隔离什么 |
+|---|---|
 | `ours_svfp` | 完整 SVFP 闭环 |
-| `ours_no_svfp` | 同渲染器、无反馈（布局消融） |
-| `ours_freeform` | 自由文本 VLM 批评 + LLM 改写（E1 臂） |
-| `gpt4o_zeroshot` | 仅 LLM 规划，同渲染器与同模板 |
-| `gpt4o_zeroshot_svfp` | zero-shot planner + SVFP 后处理（E2 臂） |
-
-**完整矩阵（本地）**
+| `ours_no_svfp` | 同渲染器,无反馈 |
+| `ours_freeform` | 自由文本 VLM 批评 + LLM 应用(c1 对照臂) |
+| `gpt4o_zeroshot` | 仅 LLM planner |
+| `gpt4o_zeroshot_svfp` | zero-shot planner + SVFP(planner-agnostic 验证) |
+| `paper2poster` / `posteragent` | 外部 SOTA 参照(待复现) |
 
 ```bash
-python -m experiments.scripts.run_matrix \
-  --papers experiments/configs/papers_30.json \
+python -m experiments.scripts.run_matrix --papers experiments/configs/papers_30.json \
   --baselines ours_no_svfp,ours_freeform,ours_svfp,gpt4o_zeroshot_svfp
 python -m experiments.scripts.compute_metrics --all
 python -m experiments.scripts.aggregate_stats --out experiments/results/aggregate/
 python -m experiments.scripts.print_paper_table
 ```
 
-**图污染体检（B1 诊断）**
-
-```bash
-python experiments/scripts/audit_figures.py --dry-run   # 不调 API
-python experiments/scripts/audit_figures.py --limit 3   # 小规模验证
-```
-
+失败 taxonomy 审计 + 诊断分析在 `experiments/audit/` 和 `experiments/scripts/analysis_*.py` / `ablation_*.py`。
 
 ---
 
-## 环境变量
+## 主要环境变量
 
-| 变量 | 说明 |
-|------|------|
-| `DASHSCOPE_API_KEY` | Qwen-VL 评审 + Judge |
-| `OPENAI_API_KEY` | 指标 Judge（OpenAI 兼容） |
-| `POSTER_EXPERIMENT_MODE` | `1` = 每次运行写 JSONL 遥测 |
-| `POSTER_LLM_TIMEOUT_S` | 文本/VLM SDK 请求 timeout |
-| `POSTER_VLM_WALL_TIMEOUT_S` | SVFP VLM 审查硬超时 |
-| `POSTER_VLM_ALLOW_FALLBACK` | 实验中设 `0`，避免第二次非 JSON VLM 长调用 |
-| `DIFY_API_KEY` / `DIFY_BASE_URL` | 批量触发 Chatflow |
-| `DIFY_WORKFLOW_INPUT_NAME` | Start 节点 PDF 变量名（默认 `paper`） |
+| 变量 | 用途 |
+|---|---|
+| `DASHSCOPE_API_KEY` | Qwen-VL critic + judges(SiliconFlow) |
+| `QWEN_VL_MODEL` | VLM 模型 id(默认 `Qwen/Qwen3-VL-32B-Instruct`) |
+| `POSTER_USE_DOCLING` | `0` 退回 fitz 抽取 |
+| `POSTER_LLM_TIMEOUT_S` | 文本/VLM 调用超时 |
+| `DIFY_API_KEY` / `DIFY_BASE_URL` | 批量 Chatflow 触发 |
 
-完整列表见 [`.env.example`](.env.example)。
+完整见 [`.env.example`](.env.example)。
+
+---
+
+## 文档地图
+
+| 文档 | 内容 |
+|---|---|
+| **README**(本文) | 概览、流程、诚实定位、快速开始 |
+| [`项目现状与最终方向_v6.md`](项目现状与最终方向_v6.md) | **当前状态、做到哪/没做、可用 v1 验收清单、路线** |
+| [`SVFP_ISSUE_TAXONOMY_v5.md`](SVFP_ISSUE_TAXONOMY_v5.md) | 5 类 taxonomy + 路由检测设计(下一迭代) |
+| [`LAYOUT_DESIGN_v2.md`](LAYOUT_DESIGN_v2.md) | 内容自适应布局设计 |
+| [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md) | 原始方向 + P0–P7 路线 |
+| `experiments/scripts/METRIC_REFACTOR_PLAN.md` | 16 指标重构记录 |
 
 ---
 
 ## 测试
 
 ```bash
-python -m pytest tests/ -q
 python -m pytest experiments/tests/ -q
 ```
 
----
+## 说明
 
-## 文档地图
-
-| 文档 | 读者 | 内容 |
-|------|------|------|
-| **README**（本文） | 新克隆者 | 概览、快速开始、诚实试点摘要 |
-| [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md) | 论文作者 | 当前状态、剩余风险、下一步优化计划 |
-| [`dify/DIFY_WORKFLOW_AND_PAPER_DESIGN.md`](dify/DIFY_WORKFLOW_AND_PAPER_DESIGN.md) | 方法章节 | Chatflow 拓扑与 Agent 设计 |
-
----
-
-## GitHub 说明
-
-**不会提交：** `.env`、`outputs/`、PDF、`experiments/.cache/`、metrics/aggregate/artifacts、`PAPER_DRAFT_v0.md`、内部对话记录。
-
-**会提交：** 源码、`dify/prompts/`、`planner_cache/`（30 份快照）、`RESEARCH_DIRECTION*.md`、configs、tests。
+`.env`、`outputs/`、`*.pptx`、`zcache/`、`experiments/results/` 的重产物已 gitignore。`datasets/planner_cache/*.json`(冻结快照)与审计/诊断的 JSON 证据已提交以便复现。

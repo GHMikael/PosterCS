@@ -1,0 +1,49 @@
+{
+  "run_id": "62313c0224ea",
+  "paper_title": "INSIDE: LLMS’ INTERNAL STATES RETAIN THE POWER OF HALLUCINATION DETECTION",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260524_001838_INSIDE_LLMS’_INTERNAL_STATES_R_62313c0224ea/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260524_001838_INSIDE_LLMS’_INTERNAL_STATES_R_62313c0224ea",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "figure_too_small",
+    "empty_space",
+    "empty_space",
+    "empty_space"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 21.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 198.4,
+    "max_chars_per_panel": 226.0,
+    "n_figures_available": 1.0,
+    "n_panels_with_figure": 1.0,
+    "figure_usage_ratio": 0.143,
+    "text_only_panel_ratio": 0.857
+  },
+  "labels": [
+    {
+      "run_id": "62313c0224ea",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "asset_utilization_error"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "Each section contains dense bullet points with minimal white space, using small font and high text density, creating a heavy reading burden across the entire poster.",
+        "secondary": "The main contribution (e.g., 'State-of-the-art hallucination detection performance') is not visually emphasized, and the key figure in the Method section is small, lacks detail, and has a weak caption."
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"asset_utilization_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Each section contains dense bullet points with minimal white space, using small font and high text density, creating a heavy reading burden across the entire poster.\",\n    \"secondary\": \"The main contribution (e.g., 'State-of-the-art hallucination detection performance') is not visually emphasized, and the key figure in the Method section is small, lacks detail, and has a weak caption.\"\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "run_id": "53730e3ca04c",
+  "paper_title": "MLP Memory: A Retriever-Pretrained Memory for Large Language Models",
+  "template": "template_classic",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_063732_MLP_Memory_A_Retriever-Pretrai_53730e3ca04c/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_063732_MLP_Memory_A_Retriever-Pretrai_53730e3ca04c",
+  "old_issues_initial": [
+    "figure_too_small",
+    "empty_space",
+    "figure_too_small"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 21.0,
+    "mean_bullets_per_panel": 3.0,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 205.7,
+    "max_chars_per_panel": 251.0,
+    "n_figures_available": 2.0,
+    "n_panels_with_figure": 2.0,
+    "figure_usage_ratio": 0.286,
+    "text_only_panel_ratio": 0.714
+  },
+  "labels": [
+    {
+      "run_id": "53730e3ca04c",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "text_overload",
+      "secondary_issues": [
+        "visual_hierarchy_weak",
+        "asset_utilization_error"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The poster contains dense bullet points across all sections with small font sizes, especially in Motivation, Problem, and Experiments, creating a high text density and heavy reading burden.",
+        "visual_hierarchy_weak": "The main contribution (MLP Memory) is not visually emphasized; the top banner and bottom conclusion are the only large text elements, but the core method and results are buried in dense bullet lists.",
+        "asset_utilization_error": "The figure in the Method section is small and lacks a clear caption, and the bar chart in Results is too small to read details, reducing visual impact."
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"visual_hierarchy_weak\", \"asset_utilization_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The poster contains dense bullet points across all sections with small font sizes, especially in Motivation, Problem, and Experiments, creating a high text density and heavy reading burden.\",\n    \"visual_hierarchy_weak\": \"The main contribution (MLP Memory) is not visually emphasized; the top banner and bottom conclusion are the only large text elements, but the core method and results are buried in dense bullet lists.\",\n    \"asset_utilization_error\": \"The figure in the Method section is small and lacks a clear caption, and the bar chart in Results is too small to read details, reducing visual impact.\"\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}

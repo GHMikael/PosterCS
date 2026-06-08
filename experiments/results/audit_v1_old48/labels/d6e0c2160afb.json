@@ -1,0 +1,53 @@
+{
+  "run_id": "d6e0c2160afb",
+  "paper_title": "MEMTRACK: Evaluating Long-Term Memory and State Tracking in Multi-Platform Dynamic Agent Environments",
+  "template": "template_dashboard",
+  "png_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_162237_MEMTRACK_Evaluating_Long-Term__d6e0c2160afb/pptx/iter_1.png",
+  "run_dir": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/poster_agent_backend/outputs/runs/20260525_162237_MEMTRACK_Evaluating_Long-Term__d6e0c2160afb",
+  "old_issues_initial": [
+    "empty_space",
+    "low_contrast",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "empty_space",
+    "figure_too_small"
+  ],
+  "proxies": {
+    "n_panels": 7.0,
+    "total_bullets": 19.0,
+    "mean_bullets_per_panel": 2.714,
+    "max_bullets_per_panel": 3.0,
+    "mean_chars_per_panel": 177.3,
+    "max_chars_per_panel": 230.0,
+    "n_figures_available": 1.0,
+    "n_panels_with_figure": 1.0,
+    "figure_usage_ratio": 0.143,
+    "text_only_panel_ratio": 0.857
+  },
+  "labels": [
+    {
+      "run_id": "d6e0c2160afb",
+      "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+      "primary_issue": "visual_hierarchy_weak",
+      "secondary_issues": [
+        "text_overload",
+        "space_imbalance"
+      ],
+      "guard_violations": [],
+      "evidence": {
+        "primary": "The main contribution and key results are not visually emphasized; the 'Results' section lacks a figure and the 'Contributions' section is text-heavy without visual distinction, making it hard to identify the core message.",
+        "secondary_issues": [
+          "text_overload: All sections use dense bullet points with small font, creating high reading burden without visual relief.",
+          "space_imbalance: The 'Results' section has a large empty placeholder for a figure, while other sections are text-dense, creating uneven visual weight."
+        ]
+      },
+      "confidence": 0.9,
+      "source": "vlm",
+      "notes": "",
+      "raw_content": "{\n  \"primary_issue\": \"visual_hierarchy_weak\",\n  \"secondary_issues\": [\"text_overload\", \"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The main contribution and key results are not visually emphasized; the 'Results' section lacks a figure and the 'Contributions' section is text-heavy without visual distinction, making it hard to identify the core message.\",\n    \"secondary_issues\": [\n      \"text_overload: All sections use dense bullet points with small font, creating high reading burden without visual relief.\",\n      \"space_imbalance: The 'Results' section has a large empty placeholder for a figure, while other sections are text-dense, creating uneven visual weight.\"\n    ]\n  },\n  \"confidence\": 0.9\n}"
+    }
+  ]
+}
