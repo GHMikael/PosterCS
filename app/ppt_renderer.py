@@ -702,15 +702,30 @@ def add_panel_content(slide, x, y, w, h, panel: Panel, task: PosterTask, palette
     hint = panel.layout_hint or "text_only"
     kind = classify_panel(panel.section)
 
+    # (A) Geometry owns the figure arrangement: derive top-bottom vs left-right
+    # from the figure's TRUE aspect ratio — the Dify planner guesses direction
+    # without seeing pixel dimensions, so its direction hint is superseded here.
+    # SVFP-set hints (image_focus/image_compact/image_only) are deliberate
+    # feedback-loop overrides and are left untouched.
+    if figure_source and hint not in ("image_focus", "image_compact", "image_only"):
+        _asp = _image_aspect(figure_source) or 1.4
+        hint = "text_left_image_right" if _asp < 0.85 else "text_top_image_bottom"
+
     if kind in ["benchmark", "results"] and not figure_source:
         if add_data_cards(slide, cx, cy, cw, Inches(0.58), panel, palette, task=task):
             add_bullets(slide, cx, cy + Inches(0.68), cw, ch - Inches(0.68), panel, palette, accent, task=task, max_items=4)
             return
 
     if figure_source and hint == "text_left_image_right":
-        text_w = cw * 0.47
-        add_bullets(slide, cx, cy, text_w, ch, panel, palette, accent, task=task, max_items=4)
-        add_figure(slide, cx + text_w + Inches(0.12), cy + Inches(0.03), cw - text_w - Inches(0.12), ch - Inches(0.04), figure_source, figure_caption, palette)
+        # Tall figure → right column sized so the figure fills the panel height
+        # at its aspect (column width ≈ ch * aspect), clamped to a band. Fewer
+        # bullets when the figure column is wide (variable "enlarge").
+        _asp = _image_aspect(figure_source) or 0.7
+        fig_col = min(max(int(ch * _asp) + Inches(0.16), int(cw * 0.34)), int(cw * 0.60))
+        text_w = cw - fig_col - Inches(0.12)
+        n_bul = 2 if fig_col >= cw * 0.5 else 3
+        add_bullets(slide, cx, cy, text_w, ch, panel, palette, accent, task=task, max_items=n_bul)
+        add_figure(slide, cx + text_w + Inches(0.12), cy, fig_col, ch, figure_source, figure_caption, palette)
     elif figure_source and hint == "image_focus":
         # Figure-dominant vertical: image takes ~75% of the panel and only the
         # single most-critical bullet sits below it. Applier sets this hint
@@ -729,23 +744,21 @@ def add_panel_content(slide, x, y, w, h, panel: Panel, task: PosterTask, palette
         add_bullets(slide, cx, cy, cw, text_h, panel, palette, accent, task=task, max_items=4)
         add_figure(slide, cx, cy + text_h + Inches(0.08), cw, fig_h, figure_source, figure_caption, palette)
     elif figure_source and hint in ["text_top_image_bottom", "image_top_text_bottom"]:
-        # Wide panel → side-by-side: the figure gets a tall right column and
-        # fills it, instead of a wide-short box that letterboxes the image into
-        # a small centered thumbnail (the "图太小" problem). Narrow panel → keep
-        # vertical but hand the figure most of the height.
-        if cw >= Inches(3.0):
-            text_w = cw * 0.44
-            add_bullets(slide, cx, cy, text_w, ch, panel, palette, accent, task=task, max_items=3)
-            add_figure(slide, cx + text_w + Inches(0.12), cy, cw - text_w - Inches(0.12), ch, figure_source, figure_caption, palette)
+        # Wide/square figure → vertical: size the figure box to the height it
+        # needs to fill the full panel width at its aspect (so it doesn't
+        # letterbox into a small thumbnail), banded to 42–68% of the panel.
+        # Bigger figure → show fewer bullets (variable "enlarge").
+        _asp = _image_aspect(figure_source) or 1.5
+        fig_h = int(cw / max(_asp, 0.3))
+        fig_h = max(min(fig_h, int(ch * 0.68)), int(ch * 0.42))
+        text_h = ch - fig_h - Inches(0.10)
+        n_bul = 2 if fig_h >= ch * 0.58 else 3
+        if hint == "image_top_text_bottom":
+            add_figure(slide, cx, cy, cw, fig_h, figure_source, figure_caption, palette)
+            add_bullets(slide, cx, cy + fig_h + Inches(0.10), cw, text_h, panel, palette, accent, task=task, max_items=n_bul)
         else:
-            fig_h = ch * 0.66
-            if hint == "image_top_text_bottom":
-                add_figure(slide, cx, cy, cw, fig_h, figure_source, figure_caption, palette)
-                add_bullets(slide, cx, cy + fig_h + Inches(0.10), cw, ch - fig_h - Inches(0.10), panel, palette, accent, task=task, max_items=2)
-            else:
-                text_h = ch - fig_h - Inches(0.10)
-                add_bullets(slide, cx, cy, cw, text_h, panel, palette, accent, task=task, max_items=2)
-                add_figure(slide, cx, cy + text_h + Inches(0.08), cw, fig_h, figure_source, figure_caption, palette)
+            add_bullets(slide, cx, cy, cw, text_h, panel, palette, accent, task=task, max_items=n_bul)
+            add_figure(slide, cx, cy + text_h + Inches(0.08), cw, fig_h, figure_source, figure_caption, palette)
     elif figure_source and hint == "image_only":
         add_figure(slide, cx, cy, cw, ch, figure_source, figure_caption, palette)
     elif kind == "method":

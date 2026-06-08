@@ -109,22 +109,11 @@ color_theme 字段必须从以下枚举值中选择：
 
 # 核心注意：为了提高海报质量，如果你为某个 panel 选择了图片，那么这个 panel 的 content 只保留 2 条最关键的 bullet point（最多不超过 2 条），把版面尽量留给图片，避免文字与图片争夺空间。
 
-8. 规划布局方式
-layout_hint 必须从以下枚举值中选择：
-- "text_only"
-- "text_left_image_right"
-- "text_top_image_bottom"
-- "image_top_text_bottom"
-- "image_only"
-
-布局规则：
-- 没有图片时使用 "text_only"。
-- 方法框架或 pipeline 优先使用 "text_top_image_bottom"。
-- 实验结果图优先使用 "text_top_image_bottom"。
-- 图片非常重要且信息量大时使用 "image_top_text_bottom"。
-- 除非 panel 几乎只展示图片，否则不要使用 "image_only"。
-- 当 template 为 "template_storyflow" 时，方法相关 panel 建议优先使用 "text_top_image_bottom" 或 "image_top_text_bottom"。
-- 当 template 为 "template_minimal" 时，建议大多数 panel 使用 "text_only"，仅保留 1 张关键图片。
+8. 规划布局方式（v2 简化:方向交给渲染器,planner 只区分有无图）
+layout_hint 只需从以下两个值里选——**图是上下还是左右、多大,由后端渲染器按图的真实长宽比自动决定,你不要操心方向**:
+- "text_only" —— 该 panel 没有配图(figure_id 为空)。
+- "with_figure" —— 该 panel 有配图(figure_id 非空)。
+规则:有图就填 "with_figure",无图就 "text_only"。**不要再输出 text_left_image_right / text_top_image_bottom / image_top_text_bottom / image_only 等方向值(已废弃——渲染器会忽略方向并按图形状自动排版,横图上下、竖图左右、图小则少留 bullet)。**
 
 9. 生成 figures 轻量资产池
 - 输出 JSON 中必须包含 figures 字段。
@@ -198,7 +187,7 @@ layout_hint 必须从以下枚举值中选择：
       "figure": null,
       "figure_id": "Fig1",
       "figure_caption": "Brief caption of selected figure",
-      "layout_hint": "text_left_image_right"
+      "layout_hint": "with_figure"
     }
   ],
   "figures": {
