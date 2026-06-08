@@ -33,6 +33,9 @@ class Panel(BaseModel):
     # the panel is too sparse (>1.0) or too crowded (<1.0). Clamped to
     # [0.7, 1.3] by the renderer.
     body_font_scale: float = 1.0
+    # Optional one-line key claim / headline number, rendered as the panel's
+    # visual focus (from planneragent_v2). Empty = no headline (backward compat).
+    headline: str = ""
 
 
 class PosterLayout(BaseModel):

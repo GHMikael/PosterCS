@@ -103,8 +103,22 @@ PALETTES: Dict[str, Palette] = {
 }
 
 
-KEYWORD_RE = re.compile(r"(\d+(?:\.\d+)?%|\d+(?:\.\d+)?\s?[xX×倍]|\d+(?:\.\d+)?|SOTA|state-of-the-art|GPT-\d(?:\.\d)?|Qwen|Gemini|Claude)", re.I)
-METRIC_RE = re.compile(r"\d+(?:\.\d+)?%|\d+(?:\.\d+)?\s?[xX×倍]|\d+(?:,\d{3})+|\d+(?:\.\d+)?")
+# Inline-highlight only *genuine* metrics and named entities, never digits that
+# are glued inside an identifier. The lookbehind ``(?<![A-Za-z0-9])`` is what
+# stops the "2" in "G2ConS" (or version strings like "v2") from being coloured;
+# bare integers are intentionally dropped (they were mostly noise: "3 datasets",
+# "Section 2"). Percentages, multipliers, standalone decimals and model names
+# remain, since those are the tokens a reader actually scans for.
+KEYWORD_RE = re.compile(
+    r"(?<![A-Za-z0-9])\d+(?:\.\d+)?%"
+    r"|(?<![A-Za-z0-9])\d+(?:\.\d+)?\s?(?:[×倍]|x\b)"
+    r"|(?<![A-Za-z0-9])\d+\.\d+(?![A-Za-z0-9])"
+    r"|\bSOTA\b|state[- ]of[- ]the[- ]art|GPT-\d(?:\.\d)?|Qwen|Gemini|Claude",
+    re.I,
+)
+# Same identifier-boundary guard for metric extraction (pills / data cards), so a
+# "2" pulled from "G2ConS" never becomes a "key metric" card.
+METRIC_RE = re.compile(r"(?<![A-Za-z0-9])(?:\d+(?:\.\d+)?%|\d+(?:\.\d+)?\s?[xX×倍]|\d+(?:,\d{3})+|\d+(?:\.\d+)?)(?![A-Za-z])")
 
 
 class Grid:
@@ -126,6 +140,73 @@ class Grid:
             "w": self.col_w * cspan + self.gap * (cspan - 1),
             "h": self.row_h * rspan + self.gap * (rspan - 1),
         }
+
+
+def _panel_weight(panel: "Panel") -> float:
+    """Content-proportional weight for layout sizing (#7). Figure panels and
+    content-rich panels get more area; a headline adds a small bump. Pure +
+    deterministic so the same plan always renders identically."""
+    n = len(getattr(panel, "content", []) or [])
+    w = 1.0 + 0.12 * min(n, 6)
+    has_fig = bool(getattr(panel, "figure_id", "")) or (getattr(panel, "layout_hint", "text_only") != "text_only")
+    if has_fig:
+        w += 1.0
+    if getattr(panel, "headline", ""):
+        w += 0.3
+    return w
+
+
+def _alloc_units(total: int, weights: List[float], min_each: int) -> List[int]:
+    """Allocate `total` integer grid units across len(weights) slots, each
+    >= min_each, summing exactly to `total`, proportional to weights
+    (largest-remainder). Robust to too-many-slots and rounding drift."""
+    k = len(weights)
+    if k == 0:
+        return []
+    if min_each * k > total:
+        min_each = max(1, total // k)
+    rem = total - min_each * k
+    sw = sum(weights) or float(k)
+    raw = [rem * (wt / sw) for wt in weights]
+    floor = [int(r) for r in raw]
+    leftover = rem - sum(floor)
+    for i in sorted(range(k), key=lambda j: raw[j] - floor[j], reverse=True)[:max(0, leftover)]:
+        floor[i] += 1
+    out = [min_each + floor[i] for i in range(k)]
+    out[max(range(k), key=lambda j: out[j])] += total - sum(out)  # absorb any drift
+    return out
+
+
+def content_spans(grid: "Grid", panels: List["Panel"]) -> List[Dict[str, int]]:
+    """Content-proportional panel boxes over `grid`, replacing the old fixed
+    per-count maps (#7). Column widths (and the two row heights) scale with each
+    panel's content weight, so different papers get visibly different geometry
+    while reading order (top row L->R, then bottom row) is preserved."""
+    n = len(panels)
+    if n == 0:
+        return []
+    weights = [_panel_weight(p) for p in panels]
+    cols, rows = grid.cols, grid.rows
+    if n <= 2:
+        boxes, c = [], 0
+        for cs in _alloc_units(cols, weights, min_each=max(2, cols // (2 * n))):
+            boxes.append(grid.box(c, 0, cs, rows))
+            c += cs
+        return boxes
+    top_n = (n + 1) // 2
+    tw, bw = weights[:top_n], weights[top_n:]
+    total = sum(weights) or 1.0
+    top_rows = max(2, min(rows - 2, round(rows * sum(tw) / total)))
+    bot_rows = rows - top_rows
+    boxes, c = [], 0
+    for cs in _alloc_units(cols, tw, min_each=2):
+        boxes.append(grid.box(c, 0, cs, top_rows))
+        c += cs
+    c = 0
+    for cs in _alloc_units(cols, bw, min_each=2):
+        boxes.append(grid.box(c, top_rows, cs, bot_rows))
+        c += cs
+    return boxes
 
 
 def clean_text(text: str, max_len: int = 120) -> str:
@@ -248,7 +329,7 @@ def add_rich_textbox(slide, x, y, w, h, text, palette: Palette, font_size=9.2, b
         run = p.add_run()
         run.text = match.group(0)
         run.font.size = Pt(font_size)
-        run.font.color.rgb = palette.accent
+        run.font.color.rgb = palette.primary
         run.font.bold = True
         pos = match.end()
     if pos < len(text):
@@ -430,18 +511,23 @@ def _panel_font_size(base: float, panel: Optional[Panel] = None, task: Optional[
 
 def add_figure(slide, x, y, w, h, image_source: str, caption: str, palette: Palette):
     add_rect(slide, x, y, w, h, RGBColor(249, 251, 253), palette.border, radius=True, line_width=0.6)
+    # Reserve a caption strip at the bottom so the picture is fitted into the
+    # area *above* the caption instead of being overlaid by it. Previously the
+    # picture filled the whole box and a tall image's bottom edge sat under the
+    # centred caption text -> the overlap the user reported.
+    cap_h = Inches(0.17) if caption else Inches(0.0)
     try:
         img_stream = load_image_from_source(image_source)
         if not img_stream:
             add_textbox(slide, x, y + h / 2 - Inches(0.12), w, Inches(0.24), "No figure image", 8.5, palette.muted, False, PP_ALIGN.CENTER)
             return
         size = image_size(img_stream)
-        px, py, pw, ph = x + Inches(0.05), y + Inches(0.05), w - Inches(0.10), h - Inches(0.10)
+        px, py, pw, ph = x + Inches(0.05), y + Inches(0.05), w - Inches(0.10), h - Inches(0.10) - cap_h
         if size:
             px, py, pw, ph = fit_picture_box(size[0], size[1], px, py, pw, ph)
         slide.shapes.add_picture(img_stream, px, py, width=pw, height=ph)
         if caption:
-            add_textbox(slide, x, y + h - Inches(0.20), w, Inches(0.17), clean_text(caption, 80), 7.2, palette.muted, False, PP_ALIGN.CENTER)
+            add_textbox(slide, x, y + h - cap_h - Inches(0.02), w, cap_h, clean_text(caption, 80), 7.2, palette.muted, False, PP_ALIGN.CENTER)
     except Exception as exc:
         print(f"add_figure failed: {exc}")
         add_textbox(slide, x, y + h / 2 - Inches(0.12), w, Inches(0.24), "Figure load failed", 8.5, palette.muted, False, PP_ALIGN.CENTER)
@@ -461,10 +547,17 @@ def add_panel_header(slide, x, y, w, title: str, idx: int, palette: Palette, acc
 
 def add_bullets(slide, x, y, w, h, panel: Panel, palette: Palette, accent: RGBColor, task: Optional[PosterTask] = None, max_items=5):
     items = panel.content[:max_items] or ["Key information will be filled by PlannerAgent."]
-    row_h = h / max(len(items), 1)
+    n = max(len(items), 1)
     colors = [palette.primary, palette.success, palette.warning, palette.purple, palette.accent]
     body_size = _panel_font_size(8.8, panel, task)
     badge_size = _panel_font_size(7.2, panel, task)
+    # Tighten inter-bullet spacing: cap the per-row height so a few bullets in a
+    # tall panel sit close together instead of stretching edge-to-edge. The cap
+    # tracks the (feedback-scaled) body font, so the SVFP loop can still spread
+    # bullets out by raising the font; any leftover space stays as honest
+    # whitespace for the space-balance critique to act on, not pre-filled here.
+    max_row_h = Inches(0.56) * (body_size / 8.8)
+    row_h = min(h / n, max_row_h)
     for idx, item in enumerate(items):
         item_y = y + row_h * idx
         c = colors[idx % len(colors)]
@@ -497,7 +590,7 @@ def add_goal_callout(slide, x, y, w, h, text: str, palette: Palette, task: Optio
 def add_data_cards(slide, x, y, w, h, panel: Panel, palette: Palette, task: Optional[PosterTask] = None):
     numbers = []
     for item in panel.content:
-        numbers.extend(re.findall(r"\d+(?:\.\d+)?%?|\d+\s?[xX×倍]", item))
+        numbers.extend(re.findall(r"(?<![A-Za-z0-9])(?:\d+(?:\.\d+)?%?|\d+\s?[xX×倍])(?![A-Za-z])", item))
     numbers = numbers[:3]
     if not numbers:
         return False
@@ -572,6 +665,23 @@ def add_mini_pipeline(slide, x, y, w, h, panel: Panel, palette: Palette, accent:
             add_textbox(slide, sx + box_w - Inches(0.02), y + h / 2 - Inches(0.11), Inches(0.14), Inches(0.18), ">", 13, palette.text, True, PP_ALIGN.CENTER)
 
 
+def _add_headline(slide, x, y, w, h, text: str, palette: Palette, accent: RGBColor):
+    """Render a panel's key-claim headline as an emphasized focal line.
+
+    Bold + accent-coloured + larger than body text → the visual focus that the
+    ``visual_hierarchy_weak`` issue / SVFP target. No-op when text is empty, so
+    panels without a headline (older plans) render unchanged.
+    """
+    text = clean_text(text, 90)
+    if not text:
+        return
+    add_textbox(
+        slide, x, y + Inches(0.02), w, h - Inches(0.04), text,
+        font_size=11.5, color=accent, bold=True, align=PP_ALIGN.LEFT,
+        fit=True, min_font_size=8.5,
+    )
+
+
 def add_panel_content(slide, x, y, w, h, panel: Panel, task: PosterTask, palette: Palette, idx: int):
     accent = panel_accent(panel.section, palette)
     add_rect(slide, x, y, w, h, palette.panel_bg, palette.border, radius=True, line_width=0.8)
@@ -581,6 +691,13 @@ def add_panel_content(slide, x, y, w, h, panel: Panel, task: PosterTask, palette
     cy = y + Inches(0.42)
     cw = w - Inches(0.26)
     ch = h - Inches(0.52)
+    # Headline (planneragent_v2): emphasized focal line under the header; push
+    # the content area down so every downstream layout branch makes room.
+    if getattr(panel, "headline", ""):
+        hl_h = Inches(0.30)
+        _add_headline(slide, cx, cy, cw, hl_h, panel.headline, palette, accent)
+        cy = cy + hl_h
+        ch = ch - hl_h
     figure_source, figure_caption = get_panel_figure(panel, task)
     hint = panel.layout_hint or "text_only"
     kind = classify_panel(panel.section)
@@ -676,16 +793,18 @@ class DashboardTemplate(BasePosterTemplate):
         body_w = prs.slide_width - Inches(0.20)
         body_h = prs.slide_height - Inches(1.34)
         grid = Grid(prs, body_x, body_y, body_w, body_h)
-        spans = [
-            grid.box(0, 0, 3, 4),
-            grid.box(3, 0, 5, 4),
-            grid.box(8, 0, 4, 4),
-            grid.box(0, 4, 3, 4),
-            grid.box(3, 4, 6, 4),
-            grid.box(9, 4, 3, 4),
-        ]
+        # Panel count adapts to the plan (4-7) instead of always forcing 6, and
+        # each count uses an intentionally asymmetric grid so different posters
+        # differ in both panel count and cell-size hierarchy rather than looking
+        # identical. Storyflow stays the fully-variable template; this just stops
+        # dashboard/classic/minimal from being locked to a single 6-cell shape.
+        panels = sort_panels_for_dashboard(task.panels)
+        key = min(max(len(panels), 4), 7)
+        # Content-proportional layout (#7): panel sizes scale with content weight
+        # so different papers get different geometry instead of a fixed per-count map.
+        spans = content_spans(grid, panels[:key])
 
-        for idx, panel in enumerate(sort_panels_for_dashboard(task.panels)[:6], start=1):
+        for idx, panel in enumerate(panels[:key], start=1):
             pos = spans[idx - 1]
             add_panel_content(slide, pos["x"], pos["y"], pos["w"], pos["h"], panel, task, p, idx)
 
@@ -743,18 +862,11 @@ class ClassicTemplate(DashboardTemplate):
         body_w = prs.slide_width - Inches(0.24)
         body_h = prs.slide_height - Inches(1.54)
         grid = Grid(prs, body_x, body_y, body_w, body_h, cols=12, rows=7, gap=Inches(0.10))
-        spans = [
-            grid.box(0, 0, 4, 4),
-            grid.box(4, 0, 4, 4),
-            grid.box(8, 0, 4, 4),
-            grid.box(0, 4, 4, 3),
-            grid.box(4, 4, 4, 3),
-            grid.box(8, 4, 4, 3),
-        ]
+        panels = sort_panels_for_dashboard(task.panels)
+        key = min(max(len(panels), 4), 7)
+        spans = content_spans(grid, panels[:key])  # #7 内容自适应(替代写死表)
 
-        add_textbox(slide, Inches(0.18), Inches(0.84), prs.slide_width - Inches(0.36), Inches(0.13), "Classic academic poster layout: balanced columns for scanning, comparison and discussion", 7.2, p.muted, False, PP_ALIGN.CENTER)
-
-        for idx, panel in enumerate(sort_panels_for_dashboard(task.panels)[:6], start=1):
+        for idx, panel in enumerate(panels[:key], start=1):
             pos = spans[idx - 1]
             add_panel_content(slide, pos["x"], pos["y"], pos["w"], pos["h"], panel, task, p, idx)
 
@@ -917,16 +1029,11 @@ class MinimalTemplate(DashboardTemplate):
         body_w = prs.slide_width - Inches(0.84)
         body_h = prs.slide_height - Inches(1.82)
         grid = Grid(prs, body_x, body_y, body_w, body_h, cols=12, rows=6, gap=Inches(0.18))
-        spans = [
-            grid.box(0, 0, 4, 3),
-            grid.box(4, 0, 4, 3),
-            grid.box(8, 0, 4, 3),
-            grid.box(0, 3, 4, 3),
-            grid.box(4, 3, 4, 3),
-            grid.box(8, 3, 4, 3),
-        ]
+        panels = sort_panels_for_dashboard(task.panels)
+        key = min(max(len(panels), 4), 7)
+        spans = content_spans(grid, panels[:key])  # #7 内容自适应(替代写死表)
 
-        for idx, panel in enumerate(sort_panels_for_dashboard(task.panels)[:6], start=1):
+        for idx, panel in enumerate(panels[:key], start=1):
             pos = spans[idx - 1]
             self.add_minimal_card(slide, pos["x"], pos["y"], pos["w"], pos["h"], panel, task, idx)
 
