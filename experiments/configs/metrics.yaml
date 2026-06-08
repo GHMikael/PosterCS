@@ -76,6 +76,9 @@ mean_iters_to_converge:
 per_iter_visual_gain:
   enabled: true
   report_scope: headline_protocol
+c3_issue_resolution_rate:
+  enabled: true
+  report_scope: headline_protocol   # #10:最值钱的协议指标;注意"消失=解决"由同一 VLM 判,带可靠性 caveat
 
 # D — efficiency
 d1_latency:

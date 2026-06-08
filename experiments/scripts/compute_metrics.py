@@ -39,8 +39,9 @@ def _import_all_metrics() -> None:
         "experiments.metrics.b2_readability",
         "experiments.metrics.b3_figure_reuse_rate",
         "experiments.metrics.b4_figure_text_align",
-        # C — protocol (Wave2 重做 c1 诚实/新建 c3,见 #10;暂留旧 protocol_metrics)
+        # C — protocol (c3 新建见 #10;暂留旧 protocol_metrics 提供 c1/c2/c4)
         "experiments.metrics.protocol_metrics",
+        "experiments.metrics.c3_issue_resolution_rate",
         # D — efficiency
         "experiments.metrics.d1_latency",
         "experiments.metrics.d2_cost",

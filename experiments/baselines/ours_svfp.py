@@ -62,6 +62,29 @@ class OursSVFPRunner(BaselineRunner):
             n_feedback_items = sum(issue_counts)
             scores = [float(r.get("score", 0.0)) for r in history]
             positive_deltas = [b - a for a, b in zip(scores, scores[1:]) if b > a]
+            # Per-iteration issue trace for c3_issue_resolution_rate — reshaped
+            # from the loop's existing history (NO change to the frozen SVFP
+            # loop). Each entry: detected (panel:issue) keys + actions applied.
+            def _issue_keys(fb: Dict[str, Any]) -> list:
+                keys = [f"GLOBAL:{i}" for i in (fb.get("global_issues") or [])]
+                for pf in (fb.get("panel_feedback") or []):
+                    sec = pf.get("section", "?")
+                    for iss in (pf.get("issues") or []):
+                        keys.append(f"{sec}:{iss}")
+                return sorted(set(keys))
+
+            svfp_trace = [
+                {
+                    "iteration": r.get("iteration"),
+                    "issues": _issue_keys(r.get("feedback") or {}),
+                    "actions": [
+                        pf.get("suggested_action", "")
+                        for pf in ((r.get("feedback") or {}).get("panel_feedback") or [])
+                        if pf.get("suggested_action")
+                    ],
+                }
+                for r in history
+            ]
             meta.config.update({
                 "feedback_mode": "svfp_closed_set",
                 "action_executability": 1.0 if n_feedback_items > 0 else None,
@@ -73,6 +96,7 @@ class OursSVFPRunner(BaselineRunner):
                 "per_iter_visual_gain": (
                     sum(positive_deltas) / len(positive_deltas) if positive_deltas else 0.0
                 ),
+                "svfp_trace": svfp_trace,
             })
 
             # Copy the run's final pptx into the cell dir so all baselines
