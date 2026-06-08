@@ -471,7 +471,7 @@ def _image_aspect(image_source: str) -> Optional[float]:
     return size[0] / max(size[1], 1)
 
 
-def figure_squashed_in_vertical(image_source: str, box_w, box_h, min_height_ratio: float = 0.6) -> bool:
+def figure_squashed_in_vertical(image_source: str, box_w, box_h, min_height_ratio: float = 0.72) -> bool:
     """Whether a wide image would letterbox to < min_height_ratio of its
     allocated vertical-layout figure box. Used to decide whether to swap
     a text-top/image-bottom panel to a horizontal arrangement (or trim
@@ -729,33 +729,23 @@ def add_panel_content(slide, x, y, w, h, panel: Panel, task: PosterTask, palette
         add_bullets(slide, cx, cy, cw, text_h, panel, palette, accent, task=task, max_items=4)
         add_figure(slide, cx, cy + text_h + Inches(0.08), cw, fig_h, figure_source, figure_caption, palette)
     elif figure_source and hint in ["text_top_image_bottom", "image_top_text_bottom"]:
-        # Probe whether vertical layout would crush the image into a thin
-        # letterboxed strip. If so, prefer text_left_image_right when the
-        # panel is wide enough; otherwise keep vertical but hand the figure
-        # most of the height and reduce text to the single critical bullet.
-        est_fig_h = ch * 0.56
-        squashed = figure_squashed_in_vertical(figure_source, cw, est_fig_h)
-        if squashed and cw >= Inches(3.4):
-            text_w = cw * 0.47
+        # Wide panel → side-by-side: the figure gets a tall right column and
+        # fills it, instead of a wide-short box that letterboxes the image into
+        # a small centered thumbnail (the "图太小" problem). Narrow panel → keep
+        # vertical but hand the figure most of the height.
+        if cw >= Inches(3.0):
+            text_w = cw * 0.44
             add_bullets(slide, cx, cy, text_w, ch, panel, palette, accent, task=task, max_items=3)
-            add_figure(slide, cx + text_w + Inches(0.12), cy + Inches(0.03), cw - text_w - Inches(0.12), ch - Inches(0.04), figure_source, figure_caption, palette)
-        elif squashed:
-            fig_h = ch * 0.78
+            add_figure(slide, cx + text_w + Inches(0.12), cy, cw - text_w - Inches(0.12), ch, figure_source, figure_caption, palette)
+        else:
+            fig_h = ch * 0.66
             if hint == "image_top_text_bottom":
                 add_figure(slide, cx, cy, cw, fig_h, figure_source, figure_caption, palette)
-                add_bullets(slide, cx, cy + fig_h + Inches(0.10), cw, ch - fig_h - Inches(0.10), panel, palette, accent, task=task, max_items=1)
+                add_bullets(slide, cx, cy + fig_h + Inches(0.10), cw, ch - fig_h - Inches(0.10), panel, palette, accent, task=task, max_items=2)
             else:
                 text_h = ch - fig_h - Inches(0.10)
-                add_bullets(slide, cx, cy, cw, text_h, panel, palette, accent, task=task, max_items=1)
+                add_bullets(slide, cx, cy, cw, text_h, panel, palette, accent, task=task, max_items=2)
                 add_figure(slide, cx, cy + text_h + Inches(0.08), cw, fig_h, figure_source, figure_caption, palette)
-        elif hint == "image_top_text_bottom":
-            fig_h = ch * 0.56
-            add_figure(slide, cx, cy, cw, fig_h, figure_source, figure_caption, palette)
-            add_bullets(slide, cx, cy + fig_h + Inches(0.15), cw, ch - fig_h - Inches(0.15), panel, palette, accent, task=task, max_items=3)
-        else:
-            text_h = ch * 0.40
-            add_bullets(slide, cx, cy, cw, text_h, panel, palette, accent, task=task, max_items=3)
-            add_figure(slide, cx, cy + text_h + Inches(0.08), cw, ch - text_h - Inches(0.10), figure_source, figure_caption, palette)
     elif figure_source and hint == "image_only":
         add_figure(slide, cx, cy, cw, ch, figure_source, figure_caption, palette)
     elif kind == "method":

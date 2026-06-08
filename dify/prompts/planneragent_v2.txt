@@ -82,6 +82,7 @@ color_theme 字段必须从以下枚举值中选择：
 
 6. 生成 panel 要点
 - 每个 panel 的 content 字段必须包含 5 条或者6条 的 bullet points。
+- 【v2 强约束·bullet 数(planner 之前常违反,务必遵守)】无图的纯文本 panel(包括 Conclusion / Takeaways)**必须给满 5-6 条**,不要只给 2-3 条导致版面空;有图的 panel 见第 7 节,**只给 1-2 条**最关键的(把空间留给图)。
 - 每条 bullet point 应简洁、准确、信息密度高。
 - 英文论文每条 bullet point 不超过 25 个英文词。
 - 中文论文每条 bullet point 不超过 35 个中文字符。
@@ -89,7 +90,7 @@ color_theme 字段必须从以下枚举值中选择：
 - 不要使用空泛词汇，例如“本文”“我们”“非常好”。
 - 优先保留关键数字、数据集名称、模型名称、指标数值。
 - 【v2 新增·CS 结构化抽取】对计算机领域论文,显式保留以下结构化要素(有则填、无则略),不要埋进散文 bullet:数据集名、对比 baseline、评测指标及其数值、相对提升百分比、方法的关键步骤。
-- 【v2 新增·headline】为每个 panel 额外给出一个 headline 字段:一句话或一个关键数字,作为该 panel 最该被放大强调的视觉焦点(用于解决"视觉层级弱")。headline 必须来自论文事实,不得编造;无合适焦点时填空字符串。
+- 【v2 新增·headline】为每个 panel 额外给出一个 headline 字段:一句话或一个关键数字,作为该 panel 最该被放大强调的视觉焦点(用于解决"视觉层级弱")。headline 必须来自论文事实,不得编造;无合适焦点时填空字符串。**headline 必须是完整一句话,或"数字+含义"(如 "准确率 87.8%,超过最强 baseline"),禁止只给裸数字(如 "230" / "230 12")。**
 
 7. 进行图文匹配
 - 根据 visual_assets 中每张图片的 caption、description、best_matched_section 和 importance，为 panel 选择合适图片。
