@@ -1,0 +1,482 @@
+[
+  {
+    "run_folder": "20260609_022821_A_Comprehensive_Survey_of_Rewa_028f962461b9",
+    "title": "A Comprehensive Survey of Reward Models: Taxonomy, Applications, Challenges, and Future Directions",
+    "title_norm": "A COMPREHENSIVE SURVEY OF REWARD MODELS: TAXONOMY, APPLICATIONS, CHALLENGES, AND FUTURE DIRECTIONS",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_022821_A_Comprehensive_Survey_of_Rewa_028f962461b9/pptx/iter_1.png",
+    "iter1_sha256": "a31c7eace9707583"
+  },
+  {
+    "run_folder": "20260609_023433_Test-Time_Preference_Optimizat_6b985b677181",
+    "title": "Test-Time Preference Optimization: On-the-Fly Alignment via Iterative Textual Feedback",
+    "title_norm": "TEST-TIME PREFERENCE OPTIMIZATION: ON-THE-FLY ALIGNMENT VIA ITERATIVE TEXTUAL FEEDBACK",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_023433_Test-Time_Preference_Optimizat_6b985b677181/pptx/iter_1.png",
+    "iter1_sha256": "fce7379a65f503c7"
+  },
+  {
+    "run_folder": "20260609_023510_Seeing,_Listening,_Remembering_5b5ef16d0aec",
+    "title": "Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory",
+    "title_norm": "SEEING, LISTENING, REMEMBERING, AND REASONING: A MULTIMODAL AGENT WITH LONG-TERM MEMORY",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_023510_Seeing,_Listening,_Remembering_5b5ef16d0aec/pptx/iter_1.png",
+    "iter1_sha256": "825496a4a20a086a"
+  },
+  {
+    "run_folder": "20260609_023950_MLP_Memory_A_Retriever-Pretrai_ae89635e3e92",
+    "title": "MLP Memory: A Retriever-Pretrained Memory for Large Language Models",
+    "title_norm": "MLP MEMORY: A RETRIEVER-PRETRAINED MEMORY FOR LARGE LANGUAGE MODELS",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_023950_MLP_Memory_A_Retriever-Pretrai_ae89635e3e92/pptx/iter_1.png",
+    "iter1_sha256": "901b92e51022e2be"
+  },
+  {
+    "run_folder": "20260609_024001_Generalist_Reward_Models_Found_657081bc5ee8",
+    "title": "Generalist Reward Models: Found Inside Large Language Models",
+    "title_norm": "GENERALIST REWARD MODELS: FOUND INSIDE LARGE LANGUAGE MODELS",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_024001_Generalist_Reward_Models_Found_657081bc5ee8/pptx/iter_1.png",
+    "iter1_sha256": "de049c4ee711e66b"
+  },
+  {
+    "run_folder": "20260609_024412_LLMS'_INTERNAL_STATES_RETAIN_T_a64e1943af91",
+    "title": "LLMS' INTERNAL STATES RETAIN THE POWER OF HALLUCINATION DETECTION",
+    "title_norm": "LLMS' INTERNAL STATES RETAIN THE POWER OF HALLUCINATION DETECTION",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_024412_LLMS'_INTERNAL_STATES_RETAIN_T_a64e1943af91/pptx/iter_1.png",
+    "iter1_sha256": "6af381c50d2e97e1"
+  },
+  {
+    "run_folder": "20260609_024809_One_SPACE_to_Rule_Them_All_Joi_b087d09deca9",
+    "title": "One SPACE to Rule Them All: Jointly Mitigating Factuality and Faithfulness Hallucinations in LLMs",
+    "title_norm": "ONE SPACE TO RULE THEM ALL: JOINTLY MITIGATING FACTUALITY AND FAITHFULNESS HALLUCINATIONS IN LLMS",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_024809_One_SPACE_to_Rule_Them_All_Joi_b087d09deca9/pptx/iter_1.png",
+    "iter1_sha256": "61fe5f59b2f777ff"
+  },
+  {
+    "run_folder": "20260609_024834_Revisiting_Hallucination_Detec_ca5d974cf3fd",
+    "title": "Revisiting Hallucination Detection with Effective Rank-based Uncertainty",
+    "title_norm": "REVISITING HALLUCINATION DETECTION WITH EFFECTIVE RANK-BASED UNCERTAINTY",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_024834_Revisiting_Hallucination_Detec_ca5d974cf3fd/pptx/iter_1.png",
+    "iter1_sha256": "1bd54c9156d7f46d"
+  },
+  {
+    "run_folder": "20260609_024836_Know_Your_Limits_A_Survey_of_A_345fd4c78f2e",
+    "title": "Know Your Limits: A Survey of Abstention in Large Language Models",
+    "title_norm": "KNOW YOUR LIMITS: A SURVEY OF ABSTENTION IN LARGE LANGUAGE MODELS",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_024836_Know_Your_Limits_A_Survey_of_A_345fd4c78f2e/pptx/iter_1.png",
+    "iter1_sha256": "0700f262d495152b"
+  },
+  {
+    "run_folder": "20260609_025032_From_Efficiency_to_Adaptivity__3483ab1db1f8",
+    "title": "From Efficiency to Adaptivity: A Deeper Look at Adaptive Reasoning in Large Language Models",
+    "title_norm": "FROM EFFICIENCY TO ADAPTIVITY: A DEEPER LOOK AT ADAPTIVE REASONING IN LARGE LANGUAGE MODELS",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_025032_From_Efficiency_to_Adaptivity__3483ab1db1f8/pptx/iter_1.png",
+    "iter1_sha256": "3120947ec757238e"
+  },
+  {
+    "run_folder": "20260609_025105_Crossing_the_Reward_Bridge_Exp_3931671c5534",
+    "title": "Crossing the Reward Bridge: Expanding RL with Verifiable Rewards Across Diverse Domains",
+    "title_norm": "CROSSING THE REWARD BRIDGE: EXPANDING RL WITH VERIFIABLE REWARDS ACROSS DIVERSE DOMAINS",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_025105_Crossing_the_Reward_Bridge_Exp_3931671c5534/pptx/iter_1.png",
+    "iter1_sha256": "9660f508623036dd"
+  },
+  {
+    "run_folder": "20260609_025220_Is_Chain-of-Thought_Reasoning__0a77c3c5f24d",
+    "title": "Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens",
+    "title_norm": "IS CHAIN-OF-THOUGHT REASONING OF LLMS A MIRAGE? A DATA DISTRIBUTION LENS",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_025220_Is_Chain-of-Thought_Reasoning__0a77c3c5f24d/pptx/iter_1.png",
+    "iter1_sha256": "c3b64e24eaa694cd"
+  },
+  {
+    "run_folder": "20260609_025510_TAKE_A_STEP_BACK_EVOKING_REASO_efd7e7bea9bb",
+    "title": "TAKE A STEP BACK: EVOKING REASONING VIA ABSTRACTION IN LARGE LANGUAGE MODELS",
+    "title_norm": "TAKE A STEP BACK: EVOKING REASONING VIA ABSTRACTION IN LARGE LANGUAGE MODELS",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_025510_TAKE_A_STEP_BACK_EVOKING_REASO_efd7e7bea9bb/pptx/iter_1.png",
+    "iter1_sha256": "8445b164599be73b"
+  },
+  {
+    "run_folder": "20260609_025515_MEMTRACK_Evaluating_Long-Term__b8f5d698d757",
+    "title": "MEMTRACK: Evaluating Long-Term Memory and State Tracking in Multi-Platform Dynamic Agent Environments",
+    "title_norm": "MEMTRACK: EVALUATING LONG-TERM MEMORY AND STATE TRACKING IN MULTI-PLATFORM DYNAMIC AGENT ENVIRONMENTS",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_025515_MEMTRACK_Evaluating_Long-Term__b8f5d698d757/pptx/iter_1.png",
+    "iter1_sha256": "3b6659ead96ae62b"
+  },
+  {
+    "run_folder": "20260609_025546_Constitutional_AI_Harmlessness_ffa46538873c",
+    "title": "Constitutional AI: Harmlessness from AI Feedback",
+    "title_norm": "CONSTITUTIONAL AI: HARMLESSNESS FROM AI FEEDBACK",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_025546_Constitutional_AI_Harmlessness_ffa46538873c/pptx/iter_1.png",
+    "iter1_sha256": "cffa1ce6e603fde3"
+  },
+  {
+    "run_folder": "20260609_025852_ESSAYBENCH_Evaluating_Large_La_16f4e934923a",
+    "title": "ESSAYBENCH: Evaluating Large Language Models in Multi-Genre Chinese Essay Writing",
+    "title_norm": "ESSAYBENCH: EVALUATING LARGE LANGUAGE MODELS IN MULTI-GENRE CHINESE ESSAY WRITING",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_025852_ESSAYBENCH_Evaluating_Large_La_16f4e934923a/pptx/iter_1.png",
+    "iter1_sha256": "e5dd9635ec0653e8"
+  },
+  {
+    "run_folder": "20260609_025904_Multi-Agent-as-Judge_Aligning__9ece80d6b03f",
+    "title": "Multi-Agent-as-Judge: Aligning LLM-Agent-Based Automated Evaluation with Multi-Dimensional Human Evaluation",
+    "title_norm": "MULTI-AGENT-AS-JUDGE: ALIGNING LLM-AGENT-BASED AUTOMATED EVALUATION WITH MULTI-DIMENSIONAL HUMAN EVALUATION",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_025904_Multi-Agent-as-Judge_Aligning__9ece80d6b03f/pptx/iter_1.png",
+    "iter1_sha256": "fde46be033d0fdea"
+  },
+  {
+    "run_folder": "20260609_030028_Automated_Evaluation_of_Person_b3a1b1bcaa11",
+    "title": "Automated Evaluation of Personalized Text Generation using Large Language Models",
+    "title_norm": "AUTOMATED EVALUATION OF PERSONALIZED TEXT GENERATION USING LARGE LANGUAGE MODELS",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_030028_Automated_Evaluation_of_Person_b3a1b1bcaa11/pptx/iter_1.png",
+    "iter1_sha256": "288f95011b67aa21"
+  },
+  {
+    "run_folder": "20260609_030306_Agent-as-a-Judge_Evaluate_Agen_1dee0b26a38b",
+    "title": "Agent-as-a-Judge: Evaluate Agents with Agents",
+    "title_norm": "AGENT-AS-A-JUDGE: EVALUATE AGENTS WITH AGENTS",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_030306_Agent-as-a-Judge_Evaluate_Agen_1dee0b26a38b/pptx/iter_1.png",
+    "iter1_sha256": "82829d178f317518"
+  },
+  {
+    "run_folder": "20260609_030815_HELLOBENCH_EVALUATING_LONG_TEX_078a8e42438f",
+    "title": "HELLOBENCH: EVALUATING LONG TEXT GENERATION CAPABILITIES OF LARGE LANGUAGE MODELS",
+    "title_norm": "HELLOBENCH: EVALUATING LONG TEXT GENERATION CAPABILITIES OF LARGE LANGUAGE MODELS",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_030815_HELLOBENCH_EVALUATING_LONG_TEX_078a8e42438f/pptx/iter_1.png",
+    "iter1_sha256": "8f3b42d15a6de10b"
+  },
+  {
+    "run_folder": "20260609_031113_DataGovBench_Benchmarking_LLM__0848906204dd",
+    "title": "DataGovBench : Benchmarking LLM Agents for Real-World Data Governance Workflows",
+    "title_norm": "DATAGOVBENCH : BENCHMARKING LLM AGENTS FOR REAL-WORLD DATA GOVERNANCE WORKFLOWS",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_031113_DataGovBench_Benchmarking_LLM__0848906204dd/pptx/iter_1.png",
+    "iter1_sha256": "233026e2a77a2f45"
+  },
+  {
+    "run_folder": "20260609_031231_Teaching_Language_Models_to_Cr_1bb5aaf1ca62",
+    "title": "Teaching Language Models to Critique via Reinforcement Learning",
+    "title_norm": "TEACHING LANGUAGE MODELS TO CRITIQUE VIA REINFORCEMENT LEARNING",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_031231_Teaching_Language_Models_to_Cr_1bb5aaf1ca62/pptx/iter_1.png",
+    "iter1_sha256": "4d936b3fae67bd09"
+  },
+  {
+    "run_folder": "20260609_031542_LeanRAG_Knowledge-Graph-Based__24e848eba9fe",
+    "title": "LeanRAG: Knowledge-Graph-Based Generation with Semantic Aggregation and Hierarchical Retrieval",
+    "title_norm": "LEANRAG: KNOWLEDGE-GRAPH-BASED GENERATION WITH SEMANTIC AGGREGATION AND HIERARCHICAL RETRIEVAL",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_031542_LeanRAG_Knowledge-Graph-Based__24e848eba9fe/pptx/iter_1.png",
+    "iter1_sha256": "39cd72c645569973"
+  },
+  {
+    "run_folder": "20260609_031655_Query-Based_Router_by_Dual_Con_ca7853cdbd31",
+    "title": "Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models",
+    "title_norm": "QUERY-BASED ROUTER BY DUAL CONTRASTIVE LEARNING FOR ASSEMBLING LARGE LANGUAGE MODELS",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_031655_Query-Based_Router_by_Dual_Con_ca7853cdbd31/pptx/iter_1.png",
+    "iter1_sha256": "be87caf3b22335fd"
+  },
+  {
+    "run_folder": "20260609_031955_Multimodal_Retrieval-Reflectio_90b3ba39356e",
+    "title": "Multimodal Retrieval-Reflection-Augmented Generation for Knowledge-Based VQA",
+    "title_norm": "MULTIMODAL RETRIEVAL-REFLECTION-AUGMENTED GENERATION FOR KNOWLEDGE-BASED VQA",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_031955_Multimodal_Retrieval-Reflectio_90b3ba39356e/pptx/iter_1.png",
+    "iter1_sha256": "80b5d87cbeffd8bf"
+  },
+  {
+    "run_folder": "20260609_032530_Agentic_Search-Enhanced_Large__2fa60d8ceb94",
+    "title": "Agentic Search-Enhanced Large Reasoning Models",
+    "title_norm": "AGENTIC SEARCH-ENHANCED LARGE REASONING MODELS",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_032530_Agentic_Search-Enhanced_Large__2fa60d8ceb94/pptx/iter_1.png",
+    "iter1_sha256": "cb9e769818415431"
+  },
+  {
+    "run_folder": "20260609_033143_Reachability_of_Independent_Se_5e8f4e632965",
+    "title": "Reachability of Independent Sets and Vertex Covers Under Extended Reconfiguration Rules",
+    "title_norm": "REACHABILITY OF INDEPENDENT SETS AND VERTEX COVERS UNDER EXTENDED RECONFIGURATION RULES",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_033143_Reachability_of_Independent_Se_5e8f4e632965/pptx/iter_1.png",
+    "iter1_sha256": "7fddac28aa2ec3a8"
+  },
+  {
+    "run_folder": "20260609_033459_LongRAG_Enhancing_Retrieval-Au_20eda233c56a",
+    "title": "LongRAG: Enhancing Retrieval-Augmented Generation with Long-context LLMs",
+    "title_norm": "LONGRAG: ENHANCING RETRIEVAL-AUGMENTED GENERATION WITH LONG-CONTEXT LLMS",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_033459_LongRAG_Enhancing_Retrieval-Au_20eda233c56a/pptx/iter_1.png",
+    "iter1_sha256": "b43d0959f5da4c76"
+  },
+  {
+    "run_folder": "20260609_033644_AQA_Adaptive_Question_Answerin_7686221c4c02",
+    "title": "AQA: Adaptive Question Answering in a Society of LLMs via Contextual Multi-Armed Bandit",
+    "title_norm": "AQA: ADAPTIVE QUESTION ANSWERING IN A SOCIETY OF LLMS VIA CONTEXTUAL MULTI-ARMED BANDIT",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_033644_AQA_Adaptive_Question_Answerin_7686221c4c02/pptx/iter_1.png",
+    "iter1_sha256": "fdd86ba9e1042ef4"
+  },
+  {
+    "run_folder": "20260609_033812_Linear_Graph_Retrieval_Augment_26e5b004d601",
+    "title": "Linear Graph Retrieval Augmented Generation on Large-Scale Corpora",
+    "title_norm": "LINEAR GRAPH RETRIEVAL AUGMENTED GENERATION ON LARGE-SCALE CORPORA",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_033812_Linear_Graph_Retrieval_Augment_26e5b004d601/pptx/iter_1.png",
+    "iter1_sha256": "7e8b41457f11e1db"
+  },
+  {
+    "run_folder": "20260609_033929_Graph-Guided_Concept_Selection_ec885703e8c7",
+    "title": "Graph-Guided Concept Selection for Efficient Retrieval-Augmented Generation",
+    "title_norm": "GRAPH-GUIDED CONCEPT SELECTION FOR EFFICIENT RETRIEVAL-AUGMENTED GENERATION",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_033929_Graph-Guided_Concept_Selection_ec885703e8c7/pptx/iter_1.png",
+    "iter1_sha256": "0af9346194deff92"
+  },
+  {
+    "run_folder": "20260609_034053_Youtu-GraphRAG_Vertically_Unif_ab33db82d52d",
+    "title": "Youtu-GraphRAG: Vertically Unified Agents for Graph Retrieval-Augmented Complex Reasoning",
+    "title_norm": "YOUTU-GRAPHRAG: VERTICALLY UNIFIED AGENTS FOR GRAPH RETRIEVAL-AUGMENTED COMPLEX REASONING",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_034053_Youtu-GraphRAG_Vertically_Unif_ab33db82d52d/pptx/iter_1.png",
+    "iter1_sha256": "8eeb0f3fe4b5794b"
+  },
+  {
+    "run_folder": "20260609_034235_Ask_in_Any_Modality_A_Comprehe_7cf7a1708c41",
+    "title": "Ask in Any Modality: A Comprehensive Survey on Multimodal Retrieval-Augmented Generation",
+    "title_norm": "ASK IN ANY MODALITY: A COMPREHENSIVE SURVEY ON MULTIMODAL RETRIEVAL-AUGMENTED GENERATION",
+    "template": "template_minimal",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_034235_Ask_in_Any_Modality_A_Comprehe_7cf7a1708c41/pptx/iter_1.png",
+    "iter1_sha256": "6d531ce9839f93cc"
+  },
+  {
+    "run_folder": "20260609_034408_Agentic_Context_Engineering_Ev_2ff43486cc66",
+    "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models",
+    "title_norm": "AGENTIC CONTEXT ENGINEERING: EVOLVING CONTEXTS FOR SELF-IMPROVING LANGUAGE MODELS",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_034408_Agentic_Context_Engineering_Ev_2ff43486cc66/pptx/iter_1.png",
+    "iter1_sha256": "c9a846384c8c3555"
+  },
+  {
+    "run_folder": "20260609_034502_Human-in-the-loop_or_AI-in-the_a187d2011cf3",
+    "title": "Human-in-the-loop or AI-in-the-loop? Automate or Collaborate?",
+    "title_norm": "HUMAN-IN-THE-LOOP OR AI-IN-THE-LOOP? AUTOMATE OR COLLABORATE?",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_034502_Human-in-the-loop_or_AI-in-the_a187d2011cf3/pptx/iter_1.png",
+    "iter1_sha256": "04eec1bc1705e571"
+  },
+  {
+    "run_folder": "20260609_034637_Building_Production-Ready_AI_A_fcec57454c05",
+    "title": "Building Production-Ready AI Agents with Scalable Long-Term Memory",
+    "title_norm": "BUILDING PRODUCTION-READY AI AGENTS WITH SCALABLE LONG-TERM MEMORY",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_034637_Building_Production-Ready_AI_A_fcec57454c05/pptx/iter_1.png",
+    "iter1_sha256": "1aecb02035e78421"
+  },
+  {
+    "run_folder": "20260609_034844_EvoAgentX_An_Automated_Framewo_3113cc1e4e25",
+    "title": "EvoAgentX: An Automated Framework for Evolving Agentic Workflows",
+    "title_norm": "EVOAGENTX: AN AUTOMATED FRAMEWORK FOR EVOLVING AGENTIC WORKFLOWS",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_034844_EvoAgentX_An_Automated_Framewo_3113cc1e4e25/pptx/iter_1.png",
+    "iter1_sha256": "186f6d2b78041f5f"
+  },
+  {
+    "run_folder": "20260609_034941_Latent_Collaboration_in_Multi-_425eabae1cf5",
+    "title": "Latent Collaboration in Multi-Agent Systems",
+    "title_norm": "LATENT COLLABORATION IN MULTI-AGENT SYSTEMS",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_034941_Latent_Collaboration_in_Multi-_425eabae1cf5/pptx/iter_1.png",
+    "iter1_sha256": "978af25d397dd484"
+  },
+  {
+    "run_folder": "20260609_035207_Tree_Search_for_LLM_Agent_Rein_01c4c43c1418",
+    "title": "Tree Search for LLM Agent Reinforcement Learning",
+    "title_norm": "TREE SEARCH FOR LLM AGENT REINFORCEMENT LEARNING",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_035207_Tree_Search_for_LLM_Agent_Rein_01c4c43c1418/pptx/iter_1.png",
+    "iter1_sha256": "f9edd53ed58f12cd"
+  },
+  {
+    "run_folder": "20260609_035303_INFORMATION_GAIN-BASED_POLICY__91fc4ebf7312",
+    "title": "INFORMATION GAIN-BASED POLICY OPTIMIZATION: A SIMPLE AND EFFECTIVE APPROACH FOR MULTITURN LLM AGENTS",
+    "title_norm": "INFORMATION GAIN-BASED POLICY OPTIMIZATION: A SIMPLE AND EFFECTIVE APPROACH FOR MULTITURN LLM AGENTS",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_035303_INFORMATION_GAIN-BASED_POLICY__91fc4ebf7312/pptx/iter_1.png",
+    "iter1_sha256": "d56b8b33473ea0df"
+  },
+  {
+    "run_folder": "20260609_035514_Adaptive_Multi-Agent_Reasoning_a5e187809673",
+    "title": "Adaptive Multi-Agent Reasoning via Automated Workflow Generation",
+    "title_norm": "ADAPTIVE MULTI-AGENT REASONING VIA AUTOMATED WORKFLOW GENERATION",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_035514_Adaptive_Multi-Agent_Reasoning_a5e187809673/pptx/iter_1.png",
+    "iter1_sha256": "b1b2dc28e55a3c8f"
+  },
+  {
+    "run_folder": "20260609_035626_BELLE_A_Bi-Level_Multi-Agent_R_48c95073681f",
+    "title": "BELLE: A Bi-Level Multi-Agent Reasoning Framework for Multi-Hop Question Answering",
+    "title_norm": "BELLE: A BI-LEVEL MULTI-AGENT REASONING FRAMEWORK FOR MULTI-HOP QUESTION ANSWERING",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_035626_BELLE_A_Bi-Level_Multi-Agent_R_48c95073681f/pptx/iter_1.png",
+    "iter1_sha256": "1e7b2c78b509cf5f"
+  },
+  {
+    "run_folder": "20260609_035850_Tongyi_DeepResearch_An_Agentic_2cba933bebbd",
+    "title": "Tongyi DeepResearch: An Agentic Large Language Model for Deep Information-Seeking Research Tasks",
+    "title_norm": "TONGYI DEEPRESEARCH: AN AGENTIC LARGE LANGUAGE MODEL FOR DEEP INFORMATION-SEEKING RESEARCH TASKS",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_035850_Tongyi_DeepResearch_An_Agentic_2cba933bebbd/pptx/iter_1.png",
+    "iter1_sha256": "d8e2b557b8c95327"
+  },
+  {
+    "run_folder": "20260609_040432_Difficulty-Aware_Agentic_Orche_a37cd9381ae1",
+    "title": "Difficulty-Aware Agentic Orchestration for Query-Specific Multi-Agent Workflows",
+    "title_norm": "DIFFICULTY-AWARE AGENTIC ORCHESTRATION FOR QUERY-SPECIFIC MULTI-AGENT WORKFLOWS",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_040432_Difficulty-Aware_Agentic_Orche_a37cd9381ae1/pptx/iter_1.png",
+    "iter1_sha256": "46a78323336a0e49"
+  },
+  {
+    "run_folder": "20260609_040805_Search_Self-play_Pushing_the_F_73c40da4d2fd",
+    "title": "Search Self-play: Pushing the Frontier of Agent Capability without Supervision",
+    "title_norm": "SEARCH SELF-PLAY: PUSHING THE FRONTIER OF AGENT CAPABILITY WITHOUT SUPERVISION",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_040805_Search_Self-play_Pushing_the_F_73c40da4d2fd/pptx/iter_1.png",
+    "iter1_sha256": "bfb8deeab9ff8d77"
+  },
+  {
+    "run_folder": "20260609_041103_InfiFusion_A_Unified_Framework_91741a511b2b",
+    "title": "InfiFusion: A Unified Framework for Enhanced Cross-Model Reasoning via LLM Fusion",
+    "title_norm": "INFIFUSION: A UNIFIED FRAMEWORK FOR ENHANCED CROSS-MODEL REASONING VIA LLM FUSION",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_041103_InfiFusion_A_Unified_Framework_91741a511b2b/pptx/iter_1.png",
+    "iter1_sha256": "24d440b56e78fbdc"
+  },
+  {
+    "run_folder": "20260609_042727_CODE2VIDEO_A_CODE-CENTRIC_PARA_32b909330b0a",
+    "title": "CODE2VIDEO: A CODE-CENTRIC PARADIGM FOR EDUCATIONAL VIDEO GENERATION",
+    "title_norm": "CODE2VIDEO: A CODE-CENTRIC PARADIGM FOR EDUCATIONAL VIDEO GENERATION",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_042727_CODE2VIDEO_A_CODE-CENTRIC_PARA_32b909330b0a/pptx/iter_1.png",
+    "iter1_sha256": "60098d94d7ad9092"
+  },
+  {
+    "run_folder": "20260609_042935_A_Survey_of_Large_Language_Mod_5736843ad823",
+    "title": "A Survey of Large Language Model Empowered Agents for Recommendation and Search",
+    "title_norm": "A SURVEY OF LARGE LANGUAGE MODEL EMPOWERED AGENTS FOR RECOMMENDATION AND SEARCH",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_042935_A_Survey_of_Large_Language_Mod_5736843ad823/pptx/iter_1.png",
+    "iter1_sha256": "7611dd94bc627c42"
+  },
+  {
+    "run_folder": "20260609_043024_BLIP_Bootstrapping_Language-Im_3771d1c601a0",
+    "title": "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation",
+    "title_norm": "BLIP: BOOTSTRAPPING LANGUAGE-IMAGE PRE-TRAINING FOR UNIFIED VISION-LANGUAGE UNDERSTANDING AND GENERATION",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_043024_BLIP_Bootstrapping_Language-Im_3771d1c601a0/pptx/iter_1.png",
+    "iter1_sha256": "2fa9fbc9ebf359f0"
+  },
+  {
+    "run_folder": "20260609_043303_Rethinking_Progression_of_Memo_21045ec2feae",
+    "title": "Rethinking Progression of Memory State in Robotic Manipulation: An Object-Centric Perspective",
+    "title_norm": "RETHINKING PROGRESSION OF MEMORY STATE IN ROBOTIC MANIPULATION: AN OBJECT-CENTRIC PERSPECTIVE",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_043303_Rethinking_Progression_of_Memo_21045ec2feae/pptx/iter_1.png",
+    "iter1_sha256": "625b0ec02994eb42"
+  },
+  {
+    "run_folder": "20260609_044437_Evaluating_LLM_Agent_Personali_91d748283c90",
+    "title": "Evaluating LLM Agent Personality and Response Appropriateness",
+    "title_norm": "EVALUATING LLM AGENT PERSONALITY AND RESPONSE APPROPRIATENESS",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_044437_Evaluating_LLM_Agent_Personali_91d748283c90/pptx/iter_1.png",
+    "iter1_sha256": "b8d6e677d3a68928"
+  },
+  {
+    "run_folder": "20260609_050055_Evaluating_LLM_Agents_as_Lifel_3015deb5f266",
+    "title": "Evaluating LLM Agents as Lifelong Learners",
+    "title_norm": "EVALUATING LLM AGENTS AS LIFELONG LEARNERS",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_050055_Evaluating_LLM_Agents_as_Lifel_3015deb5f266/pptx/iter_1.png",
+    "iter1_sha256": "170b127e675f26bc"
+  },
+  {
+    "run_folder": "20260609_050619_AGENTIC_RETRIEVAL-AUGMENTED_GE_c550595ca0d9",
+    "title": "AGENTIC RETRIEVAL-AUGMENTED GENERATION: A SURVEY ON AGENTIC RAG",
+    "title_norm": "AGENTIC RETRIEVAL-AUGMENTED GENERATION: A SURVEY ON AGENTIC RAG",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_050619_AGENTIC_RETRIEVAL-AUGMENTED_GE_c550595ca0d9/pptx/iter_1.png",
+    "iter1_sha256": "89f86a55eb5c4fcc"
+  },
+  {
+    "run_folder": "20260609_053045_RAG-ANYTHING_ALL-IN-ONE_RAG_FR_bd5861c75187",
+    "title": "RAG-ANYTHING: ALL-IN-ONE RAG FRAMEWORK",
+    "title_norm": "RAG-ANYTHING: ALL-IN-ONE RAG FRAMEWORK",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_053045_RAG-ANYTHING_ALL-IN-ONE_RAG_FR_bd5861c75187/pptx/iter_1.png",
+    "iter1_sha256": "1dd78ca9cac3a045"
+  },
+  {
+    "run_folder": "20260609_054045_Retrieval-Augmented_Generation_935b29f80d65",
+    "title": "Retrieval-Augmented Generation with Graphs (GraphRAG)",
+    "title_norm": "RETRIEVAL-AUGMENTED GENERATION WITH GRAPHS (GRAPHRAG)",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_054045_Retrieval-Augmented_Generation_935b29f80d65/pptx/iter_1.png",
+    "iter1_sha256": "345716a44fa5436e"
+  },
+  {
+    "run_folder": "20260609_054836_Reimagining_Research_Papers_As_2a16bc35f9ac",
+    "title": "Reimagining Research Papers As Interactive and Reliable AI Agents",
+    "title_norm": "REIMAGINING RESEARCH PAPERS AS INTERACTIVE AND RELIABLE AI AGENTS",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_054836_Reimagining_Research_Papers_As_2a16bc35f9ac/pptx/iter_1.png",
+    "iter1_sha256": "990b32f99636e179"
+  },
+  {
+    "run_folder": "20260609_061840_Virtuous_Machines_Towards_Arti_59e544c90c8c",
+    "title": "Virtuous Machines: Towards Artificial General Science",
+    "title_norm": "VIRTUOUS MACHINES: TOWARDS ARTIFICIAL GENERAL SCIENCE",
+    "template": "template_storyflow",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_061840_Virtuous_Machines_Towards_Arti_59e544c90c8c/pptx/iter_1.png",
+    "iter1_sha256": "237ac4424da6acea"
+  },
+  {
+    "run_folder": "20260609_064924_Align_before_Fuse_Vision_and_L_71aaa19baf2b",
+    "title": "Align before Fuse: Vision and Language Representation Learning with Momentum Distillation",
+    "title_norm": "ALIGN BEFORE FUSE: VISION AND LANGUAGE REPRESENTATION LEARNING WITH MOMENTUM DISTILLATION",
+    "template": "template_classic",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_064924_Align_before_Fuse_Vision_and_L_71aaa19baf2b/pptx/iter_1.png",
+    "iter1_sha256": "d236dd0f4923eebb"
+  },
+  {
+    "run_folder": "20260609_065706_GME_Improving_Universal_Multim_cae3c40103dc",
+    "title": "GME: Improving Universal Multimodal Retrieval by Multimodal LLMs",
+    "title_norm": "GME: IMPROVING UNIVERSAL MULTIMODAL RETRIEVAL BY MULTIMODAL LLMS",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_065706_GME_Improving_Universal_Multim_cae3c40103dc/pptx/iter_1.png",
+    "iter1_sha256": "0ce9154088aa4558"
+  },
+  {
+    "run_folder": "20260609_212513_EduIllustrate_Towards_Scalable_91ebd47f4903",
+    "title": "EduIllustrate: Towards Scalable Automated Generation Of Multimodal Educational Content",
+    "title_norm": "EDUILLUSTRATE: TOWARDS SCALABLE AUTOMATED GENERATION OF MULTIMODAL EDUCATIONAL CONTENT",
+    "template": "template_dashboard",
+    "iter1_png": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_212513_EduIllustrate_Towards_Scalable_91ebd47f4903/pptx/iter_1.png",
+    "iter1_sha256": "0c4e9ec26d87d7bd"
+  }
+]
