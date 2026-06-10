@@ -1,0 +1,131 @@
+{
+  "asset_token": "7018261273504b8e",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models",
+  "authors": "Qizheng Zhang, Changran Hu, Shubhangi Upasani, Boyuan Ma, Fenglu Hong, Vamsidhar Kamanuru, Jay Rainton, Chen Wu, Mengmeng Ji, Hanchen Li, Urmish Thakker, James Zou, Kunle Olukotun",
+  "paper_info": "Accepted at International Conference on Learning Representations (ICLR 2026)",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Context adaptation for LLMs without altering weights",
+      "content": [
+        "Context adaptation modifies inputs to large language models (LLMs) to improve model behavior.",
+        "Current methods leverage natural language feedback for iterative context adaptation.",
+        "Monolithic rewriting by LLMs can lead to context collapse and brevity bias.",
+        "ACE framework aims to prevent these issues through structured, incremental updates.",
+        "Proposed solution for scalable, efficient, and self-improving LLM systems."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "headline": "Context collapse and brevity bias",
+      "content": [
+        "Monolithic rewriting by LLMs results in shorter, less informative summaries.",
+        "Performance declines due to loss of domain-specific insights and tools.",
+        "ACE addresses these challenges by evolving comprehensive contexts."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Figure 2: Context Collapse. Monolithic rewriting of context by an LLM can collapse it into shorter, less informative summaries, leading to sharp performance drops.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Method",
+      "headline": "ACE framework with three roles: Generator, Reflector, and Curator",
+      "content": [
+        "ACE treats contexts as evolving playbooks that accumulate, refine, and organize strategies over time.",
+        "Modular workflow of generation, reflection, and curation guided by a grow-and-refine principle.",
+        "Framework includes three roles: Generator, Reflector, and Curator, mirroring human learning processes.",
+        "ACE-generated contexts contain detailed, domain-specific insights along with tools and code."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Figure 4: The ACE Framework. Inspired by Dynamic Cheatsheet, ACE adopts an agentic architecture with three specialized components: a Generator, a Reflector, and a Curator.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluated on agent tasks and domain-specific benchmarks",
+      "content": [
+        "ACE framework evaluated on agent tasks and domain-specific benchmarks, particularly financial analysis.",
+        "Compared with strong baselines in both offline and online adaptation settings.",
+        "Achieved significant improvements in performance and efficiency."
+      ],
+      "figure": null,
+      "figure_id": "Fig5",
+      "figure_caption": "Table 1: Results on the AppWorld Agent Benchmark. \"GT labels\" indicates whether ground-truth labels are available to the Reflector during adaptation. We evaluate the ACE framework against multiple baselines on top of the official ReAct implementation, both for offline and online context adaptation.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "ACE outperformed strong baselines by 10.6% on agents and 8.6% on domain-specific benchmarks",
+      "content": [
+        "ACE outperformed strong baselines by 10.6% on agents and 8.6% on domain-specific benchmarks.",
+        "Achieved 86.9% lower adaptation latency and significantly reduced rollout costs.",
+        "Matched the top-ranked production-level agent IBMCUGA on average and surpassed it on the harder test-challenge split using a smaller open-source model (DeepSeek-V3.1)."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Figure 1: Overall Performance Results. Our proposed framework, ACE, consistently outperforms strong baselines across agent and domain-specific reasoning tasks.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Comprehensive, evolving contexts enable scalable, efficient, and self-improving LLM systems",
+      "content": [
+        "Comprehensive, evolving contexts enable scalable, efficient, and self-improving LLM systems with low overhead.",
+        "ACE provides a robust solution to the limitations of existing context adaptation methods, improving performance in knowledge-intensive applications.",
+        "ACE framework prevents context collapse and brevity bias through structured, incremental updates.",
+        "Demonstrated effectiveness in both offline and online settings, achieving high accuracy and low overhead.",
+        "ACE may still face challenges in extremely resource-constrained environments."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Figure 1: Overall Performance Results. Our proposed framework, ACE, consistently outperforms strong baselines across agent and domain-specific reasoning tasks.",
+      "type": "result_chart",
+      "description": "显示了 ACE 框架在不同任务上的总体性能结果，表明其在代理和领域特定推理任务中优于多个基线模型。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Figure 2: Context Collapse. Monolithic rewriting of context by an LLM can collapse it into shorter, less informative summaries, leading to sharp performance drops.",
+      "type": "qualitative_example",
+      "description": "展示了 LLM 在单一片段重写上下文时可能导致上下文信息损失，从而影响性能。",
+      "best_matched_section": "Problem",
+      "importance": "medium"
+    },
+    "Fig4": {
+      "caption": "Figure 4: The ACE Framework. Inspired by Dynamic Cheatsheet, ACE adopts an agentic architecture with three specialized components: a Generator, a Reflector, and a Curator.",
+      "type": "architecture",
+      "description": "展示了 ACE 框架的架构图，该框架受到 Dynamic Cheatsheet 的启发，包含三个专门的组件：生成器、反思器和策展人。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig5": {
+      "caption": "Table 1: Results on the AppWorld Agent Benchmark. \"GT labels\" indicates whether ground-truth labels are available to the Reflector during adaptation. We evaluate the ACE framework against multiple baselines on top of the official ReAct implementation, both for offline and online context adaptation.",
+      "type": "comparison_table",
+      "description": "展示了 ACE 框架在 AppWorld 代理基准上的结果，包括在线和离线上下文适应的多个基线模型的对比。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

@@ -1,0 +1,125 @@
+{
+  "asset_token": "ad2636263580479f",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Teaching Language Models to Critique via Reinforcement Learning",
+  "authors": "Zhihui Xie, Jie Chen, Liyu Chen, Weichao Mao, Jingjing Xu, Lingpeng Kong",
+  "paper_info": "Proceedings of the 42nd International Conference on Machine Learning, Vancouver, Canada, 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Recent advances in LLMs show potential for self-improvement through feedback mechanisms, but without proper guidance, these loops can degrade performance.",
+      "content": [
+        "LLMs can critique and refine their outputs.",
+        "Current feedback mechanisms lack actionable guidance.",
+        "Reward models and verification tools are insufficient.",
+        "CTRL aims to provide targeted and actionable feedback.",
+        "Decoupling critic and task-performing models allows for generalization."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Two-stage pipeline: (1) supervised finetuning with high-quality critiques, (2) Group Relative Policy Optimization (GRPO).",
+      "content": [
+        "Decouples critic from task-performing model.",
+        "Uses execution feedback for supervised finetuning.",
+        "Optimizes critic through GRPO."
+      ],
+      "figure": null,
+      "figure_id": "Fig13",
+      "figure_caption": "Overview of our two-stage training pipeline CTRL.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluated on CodeContests, LiveCodeBench, MBPP+, and JudgeBench.",
+      "content": [
+        "Conducted extensive evaluations on diverse benchmarks.",
+        "Simulated different levels of critiquing and discrimination abilities.",
+        "Compared performance across various benchmarks and models."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Performance scaling of our CTRL critic compared to other critics across different generators on CodeContests.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Achieved up to 106.1% relative improvement on CodeContests with base model and up to 23.5% with stronger model.",
+      "content": [
+        "CTRL significantly enhances pass rates and mitigates compounding errors.",
+        "Reduced revision iterations, leading to lower token consumption.",
+        "Demonstrated strong critiquing capabilities across different generators."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Simulation results showing success probability as a function of the number of attempts, comparing different levels of critiquing and discrimination ability.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "Relatively weaker critic models can effectively guide stronger task-performing models, showcasing a weak-to-strong generalization phenomenon.",
+      "content": [
+        "CTRL outperforms self-critique methods and approaches using stronger critics.",
+        "Enabled efficient test-time scaling through iterative critique-revisions.",
+        "Showed significant improvements in performance and efficiency.",
+        "Reduced the number of revision iterations needed.",
+        "Lower token consumption and higher success rates."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "CTRL is a promising framework for training critic LLMs to provide actionable feedback for code generation, leading to significant improvements in performance and efficiency.",
+      "content": [
+        "CTRL provides actionable feedback for code generation.",
+        "Significantly improves performance and efficiency.",
+        "Decoupling critic and task-performing models allows for generalization.",
+        "Future work includes exploring more complex refinement processes.",
+        "Potential applications in other domains beyond code generation."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Performance scaling of our CTRL critic (finetuned on Qwen2.5-Coder-32B-Ins, henceforth Qwen2.5-Coder) compared to other critics across different generators on CodeContests.",
+      "type": "result_chart",
+      "description": "展示 CTRL 批评模型在不同生成器上的性能扩展，与其它批评模型进行比较。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Simulation results showing success probability ( p correct) as a function of the number of attempts, comparing different levels of critiquing and discrimination ability.",
+      "type": "result_chart",
+      "description": "展示模拟结果，比较不同批评和区分能力水平下的成功概率随尝试次数的变化。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig13": {
+      "caption": "Overview of our two-stage training pipeline CTRL.",
+      "type": "pipeline",
+      "description": "展示 CTRL 的两阶段训练流程。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

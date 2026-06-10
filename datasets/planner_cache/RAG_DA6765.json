@@ -1,0 +1,129 @@
+{
+  "asset_token": "c902ac619ee3424e",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "GRAPH-GUIDED CONCEPT SELECTION FOR EFFICIENT RETRIEVAL-AUGMENTED GENERATION",
+  "authors": "Ziyu Liu, Yijing Liu, Jianfei Yuan, Minzhi Yan, Le Yue, Honghuai Xiong, Yi Yang",
+  "paper_info": "Huawei Cloud Computing Technology Co., Ltd, China; 2023",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "High construction costs limit practical deployment of graph-based RAG methods.",
+      "content": [
+        "Graph-based RAG methods enhance retrieval in LLM-based QA systems, especially in specialized domains.",
+        "High construction costs of these graphs limit their practical deployment in large-scale applications.",
+        "Current cost-reduction methods are limited in generalizability and can be costly to implement.",
+        "Restrictions on graph structure often lead to reduced accuracy in multi-hop question answering.",
+        "There is a need for an efficient and effective GraphRAG scheme that balances cost and performance."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "G2ConS combines a knowledge graph and an LLM-independent concept graph.",
+      "content": [
+        "G2ConS proposes a hybrid retrieval strategy to reduce construction costs without significant accuracy loss.",
+        "Core Chunk Selection reduces input chunks by removing low-ranked concepts."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Overview of the Proposed G2ConS. (1) We extract concepts from text chunks and construct a concept graph based on semantic and co-occurrence relations. (2) We perform core chunk selection and build a low-cost core knowledge graph (core-KG). (3) G2ConS leverages dual-path retrieval to effect",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Concept deletion experiment shows the importance of different concepts.",
+      "content": [
+        "The method was evaluated on multiple real-world datasets, including MuSiQue.",
+        "An ablation study was conducted to investigate the importance of different concepts in graph construction."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "The design and results of the concept deletion experiment. (a) We divide text chunks into different groups based on their associated words, referred to as concepts. (b) By deleting concepts in different orders, we find that some concepts have greater importance.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "G2ConS achieved an average improvement of 31.44% on MuSiQue.",
+      "content": [
+        "G2ConS outperformed all baselines in construction cost, retrieval effectiveness, and answering quality.",
+        "On the MuSiQue dataset, G2ConS achieved an average improvement of 31.44% across multiple metrics."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Main Results on MuSiQue, HotpotQA, and 2WIKImultihopQA.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "G2ConS reduces costs by 80% while maintaining or enhancing QA performance.",
+      "content": [
+        "The ablation study on graph construction and retrieval further validates the effectiveness of G2ConS.",
+        "G2ConS can be integrated into existing GraphRAG systems without major redesigns.",
+        "The method is compatible with mainstream GraphRAG approaches.",
+        "G2ConS-Concept significantly improves performance in GraphRAG frameworks.",
+        "Adjusting κ and λ parameters can fine-tune answer quality."
+      ],
+      "figure": null,
+      "figure_id": "Fig7",
+      "figure_caption": "Ablation Study on Graph Construction and Retrieval.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "G2ConS effectively balances cost and performance in GraphRAG systems.",
+      "content": [
+        "G2ConS effectively reduces the construction cost of GraphRAG while maintaining or even enhancing QA performance.",
+        "The method is compatible with mainstream GraphRAG approaches and can be integrated into existing systems without major redesigns.",
+        "Further testing is needed to validate the generalizability of G2ConS in different domains and datasets.",
+        "G2ConS has the potential to be widely adopted in large-scale applications.",
+        "The proposed Core Chunk Selection and Concept Graph Retrieval are valuable contributions to the field of efficient RAG."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "The design and results of the concept deletion experiment. (a) We divide text chunks into different groups based on their associated words, referred to as concepts. (b) By deleting concepts in different orders, we find that some concepts have greater importance.",
+      "type": "ablation_study",
+      "description": "展示了概念删除实验的设计和结果，通过删除不同顺序的概念来评估其重要性。",
+      "best_matched_section": "Experiments",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Overview of the Proposed G2ConS. (1) We extract concepts from text chunks and construct a concept graph based on semantic and co-occurrence relations. (2) We perform core chunk selection and build a low-cost core knowledge graph (core-KG). (3) G2ConS leverages dual-path retrieval to effect",
+      "type": "architecture",
+      "description": "概述了 G2ConS 系统的总体架构，包括概念提取、概念图构建、核心知识图构建和双路径检索。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Main Results on MuSiQue, HotpotQA, and 2WIKImultihopQA.",
+      "type": "result_chart",
+      "description": "展示了 G2ConS 系统在 MuSiQue、HotpotQA 和 2WIKImultihopQA 数据集上的主要实验结果。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig7": {
+      "caption": "Ablation Study on Graph Construction and Retrieval.",
+      "type": "ablation_study",
+      "description": "展示了图构建和检索过程中的消融实验结果。",
+      "best_matched_section": "Experiments",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

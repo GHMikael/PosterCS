@@ -1,0 +1,139 @@
+{
+  "asset_token": "24a8d4644436431f",
+  "template": "template_dashboard",
+  "color_theme": "academic_blue",
+  "poster_title": "HELLOBENCH: EVALUATING LONG TEXT GENERATION CAPABILITIES OF LARGE LANGUAGE MODELS",
+  "authors": "Haoran Que, Feiyu Duan, Liqun He, Yutao Mou, Wangchunshu Zhou, Jiaheng Liu, Wenge Rong, Zekun Moore Wang, Jian Yang, Ge Zhang, Junran Peng, Zhaoxiang Zhang, Songyang Zhang, Kai Chen",
+  "paper_info": "2024, Beihang University, Shanghai AI Laboratory, Peking University, M-A-P, Nanjing University, University of Chinese Academy of Sciences",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Addressing the gap in long text generation evaluation",
+      "content": [
+        "LLMs excel in various NLP tasks but struggle with long text generation.",
+        "Current benchmarks focus on long input text understanding, not generation.",
+        "HelloBench aims to fill this gap with a comprehensive evaluation framework.",
+        "HelloEval reduces the time and effort for human evaluation.",
+        "HelloBench and HelloEval provide insights into LLM capabilities."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "HelloBench based on Bloom's Taxonomy",
+      "content": [
+        "HelloBench categorizes tasks into six levels: remember, understand, apply, analyze, evaluate, and create.",
+        "Tasks are collected from the internet and publicly available datasets."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "The overview of HelloBench, showing the six levels of Bloom's Taxonomy and their corresponding tasks.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "HelloEval",
+      "headline": "Two-stage pipeline for human-aligned evaluation",
+      "content": [
+        "HelloEval has a preparation stage and an evaluation stage.",
+        "Annotators assign checklist results and overall scores to instruction-response pairs."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "The pipeline of HelloEval, describing the two stages: preparation and evaluation, with details on the annotation process.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluated 30+ LLMs on HelloBench",
+      "content": [
+        "Conducted extensive experiments on mainstream LLMs.",
+        "Evaluated long text generation capabilities using HelloBench and HelloEval."
+      ],
+      "figure": null,
+      "figure_id": "Fig6",
+      "figure_caption": "Main Experiments: The evaluation results of open-source LLMs, proprietary LLMs, and long text generation capabilities enhanced LLMs on HelloBench.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Most LLMs struggle with text over 4000 words",
+      "content": [
+        "LLMs struggle to generate text longer than 4000 words.",
+        "Some open-source LLMs exhibit severe repetition and quality degradation."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "HelloBench Categories and Subcategories Distribution: The inner ring shows the categories and their proportions within the HelloBench. The outer ring details the subcategories and their respective proportions relative to the HelloBench.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Limitations",
+      "headline": "Negative correlation between long-context understanding and long-text generation",
+      "content": [
+        "Current well-performed LLMs struggle to generate text longer than 4000 words.",
+        "Some open-source LLMs exhibit severe repetition and quality degradation.",
+        "Negative correlation between long-context understanding and long-text generation capabilities observed."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "HelloBench and HelloEval provide valuable tools",
+      "content": [
+        "HelloBench and HelloEval offer comprehensive tools for evaluating long text generation capabilities.",
+        "Future research should focus on improving long text generation and addressing identified limitations.",
+        "The benchmark highlights the need for more advanced LLMs in long text generation.",
+        "HelloEval significantly reduces the time and effort required for human evaluation.",
+        "The results provide a foundation for further development in the field."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Figure 1: The overview of HelloBench. (In the Middle) : The six levels of Bloom's Taxonomy, from bottom to top, are remember, understand, apply, analyze, evaluate, and create. These correspond to the five tasks in HelloBench and HelloEval. Detailed examples are provided in Appendix A.",
+      "type": "method_diagram",
+      "description": "Overview of the HelloBench framework, including the six levels of Bloom's Taxonomy and their corresponding tasks.",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Figure 3: The pipeline of HelloEval has two stages. ( top ): In the preparation stage, we aim to determine the weighted score for each checklist. First, we have human annotators assign checklist results to each instruction-response pair. Then, the annotators give an overall score. By using linear re",
+      "type": "pipeline",
+      "description": "Pipeline of the HelloEval system, describing the two stages: preparation and evaluation, with details on the annotation process.",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig6": {
+      "caption": "Table 2: Main Experiments: The evaluation results of open-source LLMs, proprietary LLMs, and long text generation capabilities enhanced LLMs on HelloBench. 'OEQA' represents open-ended QA, 'Summ' represents summarization, 'TC' represents text completion, 'HTG' represents heuristic text generation, '",
+      "type": "comparison_table",
+      "description": "Comparison table of evaluation results for different types of LLMs on HelloBench tasks.",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Figure 2: HelloBench Categories and Subcategories Distribution: The inner ring shows the categories and their proportions within the HelloBench. The outer ring details the subcategories and their respective proportions relative to the HelloBench.",
+      "type": "result_chart",
+      "description": "Distribution of categories and subcategories in HelloBench, visualized using a pie chart with two rings.",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

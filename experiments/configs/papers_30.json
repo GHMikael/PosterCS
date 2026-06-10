@@ -96,22 +96,6 @@
     "from_paper2poster_bench": false
   },
   {
-    "arxiv_id": "LLM幻觉检测_189DF0",
-    "title": "",
-    "authors": [],
-    "category": "cs.AI",
-    "year": 2026,
-    "page_count": null,
-    "source_pdf": "datasets/papers/LLM幻觉检测_189DF0.pdf",
-    "source_url": "",
-    "license": "arXiv non-exclusive",
-    "gold_figure_count": 0,
-    "gold_figures": [],
-    "gold_sections": [],
-    "gold_claims_path": "",
-    "from_paper2poster_bench": false
-  },
-  {
     "arxiv_id": "LLM幻觉检测_919748",
     "title": "",
     "authors": [],

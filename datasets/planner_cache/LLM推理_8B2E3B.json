@@ -1,22 +1,23 @@
 {
-  "asset_token": "a94605fdf26e422e",
-  "template": "template_minimal",
+  "asset_token": "104ad7bcdd9a47ff",
+  "template": "template_classic",
   "color_theme": "academic_blue",
   "poster_title": "From Efficiency to Adaptivity: A Deeper Look at Adaptive Reasoning in Large Language Models",
-  "authors": "Chao Wu, Baoheng Li, Mingchen Gao, Zhenyi Wang",
-  "paper_info": "arXiv:2511.10788v1 [cs.AI] 13 Nov 2025",
+  "authors": "Chao Wu, Mingchen Gao, Baoheng Li, Zhenyi Wang",
+  "paper_info": "University at Buffalo, University of Central Florida, 2023",
   "layout": {
     "page_size": "A3",
-    "layout_type": "minimal_layout",
+    "layout_type": "classic_grid",
     "reading_order": "top_to_bottom_left_to_right"
   },
   "panels": [
     {
       "section": "Motivation",
+      "headline": "Reasoning is essential for complex tasks",
       "content": [
-        "Reasoning is crucial for systematic decision-making.",
-        "LLMs are key benchmarks for reasoning capabilities.",
-        "Most surveys focus on efficiency, not adaptivity."
+        "Reasoning is a key aspect of intelligence, essential for solving complex tasks and demonstrating abilities beyond pattern recognition.",
+        "Existing surveys on large language models (LLMs) focus on efficiency, such as shortening reasoning chains and reducing computational cost.",
+        "LLMs often use a uniform reasoning strategy, leading to overthinking on simple problems and underthinking on difficult ones."
       ],
       "figure": null,
       "figure_id": "",
@@ -25,10 +26,11 @@
     },
     {
       "section": "Problem",
+      "headline": "Lack of adaptivity in LLMs",
       "content": [
-        "Uniform reasoning strategies lead to inefficiency.",
-        "LLMs struggle with complex tasks.",
-        "Adaptivity is needed to adjust reasoning effort."
+        "Current LLMs lack adaptivity, the ability to adjust reasoning strategies based on task difficulty and uncertainty.",
+        "Efficiency-centric approaches do not fully address the challenge of input-dependent resource allocation.",
+        "There is a need for a framework that can systematically compare different adaptive reasoning methods."
       ],
       "figure": null,
       "figure_id": "",
@@ -37,10 +39,22 @@
     },
     {
       "section": "Method",
+      "headline": "Taxonomy of adaptive reasoning methods",
       "content": [
-        "Formalize reasoning types in LLMs.",
-        "Adaptive reasoning as control-augmented policy optimization.",
-        "Develop taxonomy for existing methods."
+        "Reframing LLM reasoning research through the lens of adaptivity.",
+        "Formalizing deductive, inductive, and abductive reasoning within the LLM context."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Taxonomy of adaptive reasoning methods in LLMs.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Empirical studies on reasoning models",
+      "content": [
+        "Empirical studies confirm that fixed-length reasoning models waste computation on easy inputs and fail on complex ones.",
+        "The proposed taxonomy enables a systematic comparison of diverse adaptive reasoning strategies."
       ],
       "figure": null,
       "figure_id": "",
@@ -49,9 +63,11 @@
     },
     {
       "section": "Results",
+      "headline": "Systematic taxonomy for adaptive reasoning",
       "content": [
-        "Taxonomy clarifies adaptive reasoning mechanisms.",
-        "Framework enables comparison of reasoning strategies."
+        "The survey provides clear definitions of deductive, inductive, and abductive reasoning in LLMs.",
+        "A systematic taxonomy is proposed to distinguish between training-based and training-free adaptive reasoning methods.",
+        "The framework highlights the importance of input-dependent resource allocation in reasoning."
       ],
       "figure": null,
       "figure_id": "",
@@ -60,9 +76,10 @@
     },
     {
       "section": "Conclusion",
+      "headline": "Adaptive reasoning is crucial for LLMs",
       "content": [
-        "Adaptive reasoning is essential for LLMs.",
-        "Future research should focus on self-evaluation and human-aligned control."
+        "Adaptive reasoning is crucial for LLMs to efficiently and effectively handle a wide range of tasks.",
+        "Future research should address open challenges in self-evaluation, meta-reasoning, and human-aligned reasoning control."
       ],
       "figure": null,
       "figure_id": "",
@@ -70,7 +87,15 @@
       "layout_hint": "text_only"
     }
   ],
-  "figures": {},
+  "figures": {
+    "Fig1": {
+      "caption": "Taxonomy of adaptive reasoning methods in LLMs.",
+      "type": "method_diagram",
+      "description": "展示大语言模型中自适应推理方法的分类和结构。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    }
+  },
   "use_commenter": "true",
   "max_iterations": 4,
   "save_debug_images": "true"

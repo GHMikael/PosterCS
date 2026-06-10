@@ -1,0 +1,151 @@
+{
+  "asset_token": "9b480d8d2bc74600",
+  "template": "template_dashboard",
+  "layout_variant": "auto",
+  "color_theme": "academic_blue",
+  "emphasis_level": "normal",
+  "poster_title": "GME: Improving Universal Multimodal Retrieval by Multimodal LLMs",
+  "authors": "Xin Zhang, Yanzhao Zhang, Wen Xie, Mingxin Li, Ziqi Dai, Dingkun Long, Pengjun Xie, Meishan Zhang, Wenjie Li, Min Zhang",
+  "paper_info": "The Hong Kong Polytechnic University, Tongyi Lab, Alibaba Group, Soochow University",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "Multimedia applications require retrieval models that handle various modalities.",
+        "Previous UMR models focus on feature fusion or visual plugins for text embedding.",
+        "GME aims to improve UMR by leveraging MLLMs and optimized training data.",
+        "The model supports text, image, and visual document retrieval.",
+        "UMRB benchmark evaluates a broader range of retrieval tasks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "GME addresses the gap in UMR for visual documents"
+    },
+    {
+      "section": "Problem",
+      "content": [
+        "Modality-limited training hinders the full potential of MLLMs in UMR.",
+        "Current UMR models primarily target natural images, neglecting visual documents.",
+        "Scarcity of fused-modal training data limits the development of robust UMR models.",
+        "GME proposes a solution by optimizing training data composition.",
+        "The model is evaluated on a comprehensive benchmark, UMRB."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Comparison of UMR studies, including different retrieval settings such as single-modal & cross-modal, fused-modal, and retrieving visual documents.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "UMR models lack support for visual documents"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Propose GME, an instruction-based embedding framework using MLLMs.",
+        "Strategically optimize training data composition for UMR.",
+        "Develop an efficient fused-modal data synthesis pipeline.",
+        "The pipeline generates 1.1M fused-modal pairs.",
+        "GME-Qwen2-VL series models are trained on the constructed dataset."
+      ],
+      "figure": null,
+      "figure_id": "Fig5",
+      "figure_caption": "The GME model architecture, focusing on the embedding of input content.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "GME uses MLLMs and optimized training data"
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Construct UMRB, a benchmark for text, multimodal, and visual document retrieval.",
+        "Train GME models using the Qwen2-VL series MLLMs.",
+        "Perform in-depth analyses on model scaling, training strategies, and ablation studies.",
+        "Evaluate GME on UMRB-Partial and M-BEIR benchmarks.",
+        "Results show significant improvements over baselines."
+      ],
+      "figure": null,
+      "figure_id": "Fig12",
+      "figure_caption": "Results of the ablation study on Qwen2-VL-2B, trained with 100,000 instances.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "GME outperforms baselines on UMRB"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "GME demonstrates strong performance in both visual and text-to-text retrieval tasks.",
+        "The model outperforms baselines on UMRB and M-BEIR benchmarks.",
+        "Ablation studies show the effectiveness of the fused-modal data synthesis pipeline.",
+        "Impact of training data on multimodal retrieval tasks is analyzed.",
+        "Visualization of embeddings using T-SNE shows clear semantic groupings."
+      ],
+      "figure": null,
+      "figure_id": "Fig6",
+      "figure_caption": "Impact of training data on multimodal retrieval tasks.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "GME achieves state-of-the-art performance"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "GME is a powerful embedding model for universal multimodal retrieval.",
+        "The proposed data synthesis pipeline and UMRB provide valuable tools for future research.",
+        "The model's performance on UMRB and M-BEIR benchmarks is state-of-the-art.",
+        "Further improvements can be made by enhancing the quality and diversity of synthetic fused-modal data.",
+        "GME opens new avenues for research in UMR and multimodal learning."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "GME is a promising approach for UMR"
+    }
+  ],
+  "figures": {
+    "Fig2": {
+      "caption": "Comparison of UMR studies. Feat. and Enc. are abbreviations for 'Feature' and 'Encoder'. S&C, Fused, and VD denote the retrieval setting of single-modal & cross-modal, fused-modal, and retrieving visual documents (e.g. PDF screenshots), respectively. The setting explaination is in Figure",
+      "type": "comparison_table",
+      "description": "A table comparing various UMR studies, including different retrieval settings such as single-modal & cross-modal, fused-modal, and retrieving visual documents.",
+      "best_matched_section": "Problem",
+      "importance": "medium",
+      "audit_status": ""
+    },
+    "Fig5": {
+      "caption": "The GME model architecture. Emb denotes the embedding of the input content.",
+      "type": "architecture",
+      "description": "A diagram showing the architecture of the GME model, with a focus on the embedding of input content.",
+      "best_matched_section": "Method",
+      "importance": "high",
+      "audit_status": ""
+    },
+    "Fig12": {
+      "caption": "Results of the ablation study on Qwen2-VL-2B. All models are trained using 100,000 instances, consistent with the experimental setup described in Section 4.1.",
+      "type": "ablation_study",
+      "description": "A table showing the results of an ablation study on the Qwen2-VL-2B model, trained with 100,000 instances.",
+      "best_matched_section": "Experiments",
+      "importance": "medium",
+      "audit_status": ""
+    },
+    "Fig6": {
+      "caption": "Impact of training data on multimodal retrieval tasks.",
+      "type": "result_chart",
+      "description": "A chart showing the impact of different training data on the performance of multimodal retrieval tasks.",
+      "best_matched_section": "Results",
+      "importance": "high",
+      "audit_status": ""
+    }
+  },
+  "use_commenter": true,
+  "max_iterations": 4,
+  "save_debug_images": true,
+  "global_font_scale": 1.0
+}

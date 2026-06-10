@@ -1,0 +1,119 @@
+{
+  "asset_token": "7f35fbce29104b94",
+  "template": "template_dashboard",
+  "color_theme": "academic_blue",
+  "poster_title": "Agent-as-a-Judge: Evaluate Agents with Agents",
+  "authors": "Mingchen Zhuge, Changsheng Zhao, Dylan R. Ashley, Wenyi Wang, Dmitrii Khizbullin, Yunyang Xiong, Zechun Liu, Ernie Chang, Raghuraman Krishnamoorthi, Yuandong Tian, Yangyang Shi, Vikas Chandra, Jürgen Schmidhuber",
+  "paper_info": "Meta AI, KAUST; October 18, 2024",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Multimodal agentic systems tackle real-world challenges, but current evaluation methods are inadequate.",
+      "content": [
+        "Multimodal agentic systems have evolved to solve real-world problems.",
+        "Current evaluation methods focus only on final outcomes or require extensive manual labor.",
+        "Code generation benchmarks do not reflect practical challenges faced by developers."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "headline": "Lack of intermediate feedback and high cost of human evaluation.",
+      "content": [
+        "Current methods lack feedback during intermediate task-solving stages.",
+        "Existing benchmarks do not accurately represent real-world AI development tasks.",
+        "Human evaluation is expensive and time-consuming."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Agent-as-a-Judge framework evaluates agentic systems with rich intermediate feedback.",
+      "content": [
+        "Introduce the Agent-as-a-Judge framework for evaluating agentic systems.",
+        "Extend the LLM-as-a-Judge framework to incorporate agentic features."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Comparison of Agent-as-a-Judge, LLM-as-a-Judge, and Human-as-a-Judge frameworks.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluate three leading open-source code-generating agentic frameworks on DevAI tasks.",
+      "content": [
+        "Apply MetaGPT, GPT-Pilot, and OpenHands to the DevAI tasks.",
+        "Compare their performance using human judges, LLM-as-a-Judge, and Agent-as-a-Judge frameworks."
+      ],
+      "figure": null,
+      "figure_id": "Fig12",
+      "figure_caption": "Component ablation studies for Agent-as-a-Judge.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Agent-as-a-Judge aligns 90% with human judges, saving 97.72% time and 97.64% cost.",
+      "content": [
+        "Agent-as-a-Judge aligns more closely with human judges (90%) compared to LLM-as-a-Judge (70%).",
+        "Agent-as-a-Judge saves 97.72% of the time and 97.64% of the cost compared to involving three human experts."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Distribution of DevAI tasks and common terms in queries.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Agent-as-a-Judge provides rich and reliable reward signals, making it a cost-effective and efficient evaluation method.",
+      "content": [
+        "Agent-as-a-Judge marks a significant step forward in evaluating agentic systems.",
+        "It provides rich and reliable reward signals, making it a viable replacement for human evaluators in many scenarios.",
+        "The framework is cost-effective and efficient.",
+        "Further refinement may be needed for broader applications.",
+        "The DevAI dataset is a valuable resource for AI development tasks.",
+        "The study provides a comprehensive analysis of top open-source code generation agentic frameworks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Figure 1 We introduce the Agent-as-a-Judge framework wherein agentic systems are used to evaluate agentic systems. We compare this to LLM-as-a-Judge, which uses LLMs to evaluate LLMs and for which Agent-as-a-Judge is a natural evolution, and Human-as-a-Judge, where skilled human labourers manually e",
+      "type": "method_diagram",
+      "description": "介绍 Agent-as-a-Judge 框架，与 LLM-as-a-Judge 和 Human-as-a-Judge 框架进行对比。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Figure 2 Distribution of DevAI Tasks (1) DevAI focuses on AI development tasks and so terms such as 'dataset,' 'model,' and 'results' are particularly common in the queries. (2) The first 53 tasks in DevAI all have a one-paragraph query but of varying lengths (note that task 54 and 55 are excluded h",
+      "type": "result_chart",
+      "description": "展示 DevAI 任务的分布，特别是 'dataset,' 'model,' 和 'results' 等术语在查询中的频率。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig12": {
+      "caption": "Table 4 Component Ablation Studies for Agent-as-a-Judge. We analyze the impact of adding various components ( ask , graph , read , locate , and retrieve ) on the performance of Agent-as-aJudge for judging OpenHands.",
+      "type": "ablation_study",
+      "description": "展示 Agent-as-a-Judge 在不同组件（ask, graph, read, locate, retrieve）添加情况下的性能影响。",
+      "best_matched_section": "Experiments",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

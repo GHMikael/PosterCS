@@ -1,0 +1,113 @@
+{
+  "asset_token": "30243ae29eb6418e",
+  "template": "template_storyflow",
+  "color_theme": "academic_blue",
+  "poster_title": "Human-in-the-loop or AI-in-the-loop? Automate or Collaborate?",
+  "authors": "Sriraam Natarajan, Saurabh Mathur, Sahil Sidheekh, Wolfgang Stammer, Kristian Kersting",
+  "paper_info": "2025, Association for the Advancement of Artificial Intelligence (www.aaai.org)",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Clarify the distinction between HIL and AI2L systems",
+      "content": [
+        "HIL systems combine data-driven machine learning with human expertise.",
+        "Many HIL systems treat humans as data-labeling oracles or sources of domain knowledge.",
+        "Traditional HIL systems often overemphasize the machine component's performance and neglect human roles."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "A comparison of human in the loop (left) and AI in the loop (right) systems. In human-in-the-loop systems, AI systems drive the inference and decision-making process, but humans intervene to provide corrections and supervision. In AI-in-the-loop systems, humans make the ultimate decisions.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Problem",
+      "headline": "The term 'HIL' is often misused",
+      "content": [
+        "The term 'HIL' is often misused, as many systems are actually AI2L systems.",
+        "Evaluation methods for HIL systems do not adequately account for the human expert's influence.",
+        "AI2L systems require a different approach to evaluation and deployment compared to HIL systems."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Examples of subtasks across various domains and their classification as Automate (HIL) or Collaborate (AI2L).",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Method",
+      "headline": "Propose an AI2L perspective",
+      "content": [
+        "Propose an AI2L perspective that recognizes the human expert as an active participant.",
+        "Develop evaluation methods that incorporate human-centered metrics such as calibration, fairness, and explainability.",
+        "Analyze the conditions under which HIL or AI2L systems are appropriate for different tasks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Compare HIL and AI2L systems",
+      "content": [
+        "Compare HIL and AI2L systems through detailed examples and case studies.",
+        "Evaluate the performance and usability of AI2L systems in real-world scenarios."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Results",
+      "headline": "AI2L systems are more comprehensive",
+      "content": [
+        "AI2L systems are more comprehensive and faithful in modeling the human-machine interplay.",
+        "AI2L systems can lead to more effective and robust AI systems.",
+        "Evaluation methods for AI2L systems need to consider human factors beyond traditional metrics."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Designers must understand the conditions",
+      "content": [
+        "Designers must understand the conditions under which HIL or AI2L systems are appropriate.",
+        "There is no one-size-fits-all solution for AI system design; the human role is crucial.",
+        "AI2L systems offer a promising direction for more effective and robust AI applications.",
+        "The paper does not provide specific technical details on how to implement AI2L systems.",
+        "The case studies and examples are limited and may not cover all scenarios."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "A comparison of human in the loop (left) and AI in the loop (right) systems. In human-in-the-loop systems, AI systems drive the inference and decision-making process, but humans intervene to provide corrections and supervision. In AI-in-the-loop systems, humans make the ultimate decisions.",
+      "type": "comparison_table",
+      "description": "比较了人类在环和AI在环系统的工作方式。左边是人类在环系统，AI负责推理和决策，但需要人类干预进行纠正和监督；右边是AI在环系统，最终决策由人类做出。",
+      "best_matched_section": "Motivation",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Examples of subtasks across various domains and their classification as Automate (HIL) or Collaborate (AI2L).",
+      "type": "comparison_table",
+      "description": "展示了不同领域的子任务及其分类为自动化（人类在环）或协作（AI在环）的示例。",
+      "best_matched_section": "Problem",
+      "importance": "medium"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

@@ -1,0 +1,166 @@
+{
+  "direct": {
+    "space_imbalance": {
+      "space_imbalance": 0,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 1,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 1,
+      "none": 0,
+      "other": 0
+    },
+    "text_overload": {
+      "space_imbalance": 0,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 0,
+      "none": 0,
+      "other": 0
+    },
+    "hierarchy_emphasis_error": {
+      "space_imbalance": 0,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 0,
+      "none": 0,
+      "other": 0
+    },
+    "asset_mismatch": {
+      "space_imbalance": 0,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 0,
+      "none": 0,
+      "other": 0
+    },
+    "asset_too_small": {
+      "space_imbalance": 10,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 4,
+      "none": 0,
+      "other": 0
+    },
+    "structure_alignment_error": {
+      "space_imbalance": 9,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 5,
+      "none": 0,
+      "other": 0
+    },
+    "none": {
+      "space_imbalance": 25,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 2,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 1,
+      "none": 0,
+      "other": 0
+    },
+    "other": {
+      "space_imbalance": 2,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 0,
+      "none": 0,
+      "other": 0
+    }
+  },
+  "narrowed": {
+    "space_imbalance": {
+      "space_imbalance": 1,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 1,
+      "none": 0,
+      "other": 0
+    },
+    "text_overload": {
+      "space_imbalance": 0,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 0,
+      "none": 0,
+      "other": 0
+    },
+    "hierarchy_emphasis_error": {
+      "space_imbalance": 0,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 0,
+      "none": 0,
+      "other": 0
+    },
+    "asset_mismatch": {
+      "space_imbalance": 0,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 0,
+      "none": 0,
+      "other": 0
+    },
+    "asset_too_small": {
+      "space_imbalance": 8,
+      "text_overload": 1,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 5,
+      "none": 0,
+      "other": 0
+    },
+    "structure_alignment_error": {
+      "space_imbalance": 5,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 9,
+      "none": 0,
+      "other": 0
+    },
+    "none": {
+      "space_imbalance": 27,
+      "text_overload": 0,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 1,
+      "none": 0,
+      "other": 0
+    },
+    "other": {
+      "space_imbalance": 1,
+      "text_overload": 1,
+      "hierarchy_emphasis_error": 0,
+      "asset_mismatch": 0,
+      "asset_too_small": 0,
+      "structure_alignment_error": 0,
+      "none": 0,
+      "other": 0
+    }
+  }
+}

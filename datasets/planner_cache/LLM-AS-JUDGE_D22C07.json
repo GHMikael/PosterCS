@@ -1,23 +1,23 @@
 {
-  "asset_token": "5e55372232b8454c",
+  "asset_token": "c97dab373601451e",
   "template": "template_storyflow",
-  "color_theme": "warm_orange",
+  "color_theme": "academic_blue",
   "poster_title": "Evaluating LLM Agent Personality and Response Appropriateness",
-  "authors": "Eswari Jayakumar; Niladri Sekhar Dash; Debasmita Mukherjee",
-  "paper_info": "arXiv:2510.23875v1 [cs.HC] 27 Oct 2025",
+  "authors": "Eswari Jayakumar, Debasmita Mukherjee, Niladri Sekhar Dash",
+  "paper_info": "Faculty of Computer Science, University of New Brunswick, 2023",
   "layout": {
     "page_size": "A3",
-    "layout_type": "storyflow_grid",
+    "layout_type": "dashboard_grid",
     "reading_order": "top_to_bottom_left_to_right"
   },
   "panels": [
     {
       "section": "Motivation",
+      "headline": "LLM-based agents require human-like behavior for better user interactions",
       "content": [
-        "LLM-based agents enhance user engagement in interactive applications.",
-        "Personality traits humanize agents, improving response consistency and appropriateness.",
-        "Current evaluation methods are insufficient for real-time conversational tasks.",
-        "Interdisciplinary approaches are needed to assess agent personality effectively."
+        "LLM-based agents are used in various interactive applications.",
+        "Personality traits can humanize agents and improve user interactions.",
+        "Current evaluation methods are limited and often use fixed psychometric tests."
       ],
       "figure": null,
       "figure_id": "",
@@ -26,23 +26,25 @@
     },
     {
       "section": "Problem",
+      "headline": "Evaluating agent responses in real conversational scenarios is challenging",
       "content": [
-        "Comprehensive evaluation of agent personality in conversational tasks is lacking.",
-        "Standard psychometric tests are inadequate for real-time interactions.",
-        "LLM black-box nature can introduce biases and errors."
+        "Standard psychometric tests do not capture the dynamic nature of conversations.",
+        "Interdisciplinary evaluation methods are needed.",
+        "A flexible question bank is required for open-ended questions."
       ],
       "figure": null,
       "figure_id": "Fig1",
-      "figure_caption": "Sample questions from the novel question bank based on Bloom’s taxonomy and complexity levels.",
-      "layout_hint": "text_top_image_bottom"
+      "figure_caption": "Sample questions from the novel question bank crafted in this work based categorised by complexity and Bloom's taxonomy of levels of learning",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Method",
+      "headline": "Developed and tested two poetry expert agents with distinct personality traits",
       "content": [
-        "Developed a flexible question bank using Bloom’s taxonomy and linguistic criteria.",
-        "Created two poetry expert agents with distinct personality traits (introverted and extroverted).",
-        "Used Langchain framework and RAG technique to provide external context.",
-        "Evaluated responses using NLP models, Judge LLM, and human experts."
+        "Poetry expert task using 'Dover Beach' by Matthew Arnold.",
+        "Agents: Introvert Agent (IA) and Extrovert Agent (EA) using Langchain framework and GPT-4 mini model.",
+        "Flexible question bank designed using Bloom's taxonomy for open-ended questions.",
+        "Agent responses evaluated using NLP models, Judge LLM, and human linguistic experts."
       ],
       "figure": null,
       "figure_id": "",
@@ -51,10 +53,10 @@
     },
     {
       "section": "Experiments",
+      "headline": "Agents were trained on 'Dover Beach' and tested with questions of increasing complexity",
       "content": [
-        "Agents trained on “Dover Beach” by Matthew Arnold.",
-        "Questions designed to test linguistic and cognitive abilities.",
-        "Responses evaluated for consistency with personality traits and context appropriateness."
+        "Training and testing on 'Dover Beach'.",
+        "Evaluation focused on consistency and appropriateness of personality traits."
       ],
       "figure": null,
       "figure_id": "",
@@ -63,41 +65,49 @@
     },
     {
       "section": "Results",
+      "headline": "IA and EA showed distinct and consistent personality traits",
       "content": [
-        "Flexible question bank provided comprehensive evaluation of agent responses.",
-        "Human experts, NLP models, and Judge LLMs highlighted limitations of deep learning solutions.",
-        "Extroverted agent (EA) more talkative and friendly; introverted agent (IA) more precise and concise."
+        "Distinct personality traits in IA and EA responses."
       ],
       "figure": null,
       "figure_id": "Fig2",
-      "figure_caption": "Evaluation results of chat with introverted and extroverted agents, including word clouds and personality frequency distributions.",
-      "layout_hint": "text_top_image_bottom"
+      "figure_caption": "Evaluation Results of Chat with Introvert Agent (IA) and Extrovert Agent (EA): (a) word cloud of Judge LLM reasoning for IA response evaluations, (b) word cloud of Judge LLM reasoning for EA response evaluations, (c) Frequency distribution of Personality assessed in IA and EA responses by Judge LLM",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Conclusion",
+      "headline": "Interdisciplinary approach effectively evaluates agent responses",
       "content": [
-        "Interdisciplinary approach combining linguistic analysis and AI is crucial for evaluating agent personality.",
-        "Flexible question bank and comprehensive evaluation framework can be applied to other conversational tasks.",
-        "Further research needed to generalize findings to broader texts and personality traits."
+        "Interdisciplinary approach combining NLP models, Judge LLMs, and human experts.",
+        "Flexible question bank design applicable to various learning tasks and conversational scenarios.",
+        "Study limited to two specific personality traits (introvert and extrovert).",
+        "Approach may need further validation with a larger set of poems and user interactions."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig3",
+      "figure_caption": "Sample User and Agent Responses along with assessment by Human Expert",
+      "layout_hint": "with_figure"
     }
   ],
   "figures": {
     "Fig1": {
-      "caption": "Figure 1: Sample questions from the novel question bank crafted in this work based categorised by complexity and Bloom’s taxonomy of levels of learning",
+      "caption": "Figure 1: Sample questions from the novel question bank crafted in this work based categorised by complexity and Bloom's taxonomy of levels of learning",
       "type": "dataset_example",
-      "description": "展示了一组根据复杂度和布鲁姆学习层次分类的新颖问题库中的样本问题。",
+      "description": "展示了一组根据复杂性和布卢姆学习层次分类的新问题库样本问题",
       "best_matched_section": "Problem",
       "importance": "medium"
     },
     "Fig2": {
-      "caption": "Figure 2: Evaluation Results of Chat with Introvert Agent (IA) and Extrovert Agent (EA): (a) word cloud of Judge LLM reasoning for IA response evaluations, (b)word cloud of Judge LLM reasoning for EA response evaluations, (c) Frequency distribution of Personality assessed in IA and EA responses by J",
+      "caption": "Figure 2: Evaluation Results of Chat with Introvert Agent (IA) and Extrovert Agent (EA): (a) word cloud of Judge LLM reasoning for IA response evaluations, (b) word cloud of Judge LLM reasoning for EA response evaluations, (c) Frequency distribution of Personality assessed in IA and EA responses by Judge LLM",
       "type": "result_chart",
-      "description": "展示了内向代理（IA）和外向代理（EA）的聊天评估结果，包括判断LLM对响应的评估词云图和个性评估的频率分布图。",
+      "description": "展示了内向代理（IA）和外向代理（EA）聊天评估结果，包括词云图和个性评估频率分布图",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Table 1: Sample User and Agent Responses along with assessment by Human Expert",
+      "type": "comparison_table",
+      "description": "展示了用户和代理的样本回应及其由人类专家的评估",
       "best_matched_section": "Results",
       "importance": "high"
     }

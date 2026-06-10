@@ -1,22 +1,24 @@
 {
-  "asset_token": "0fa7ac0df8cf46ac",
+  "asset_token": "842ebadfa35c447e",
   "template": "template_classic",
   "color_theme": "academic_blue",
   "poster_title": "Revisiting Hallucination Detection with Effective Rank-based Uncertainty",
-  "authors": "Rui Wang, Zeming Wei, Guanzhang Yue, Meng Sun (Peking University)",
-  "paper_info": "arXiv:2510.08389v1 [cs.AI] 9 Oct 2025",
+  "authors": "Rui Wang, Zeming Wei, Guanzhang Yue, Meng Sun",
+  "paper_info": "Peking University, 2023",
   "layout": {
     "page_size": "A3",
-    "layout_type": "classic_grid",
+    "layout_type": "dashboard_grid",
     "reading_order": "top_to_bottom_left_to_right"
   },
   "panels": [
     {
       "section": "Motivation",
+      "headline": "Hallucinations are dangerous in high-stakes domains like healthcare and scientific discovery.",
       "content": [
-        "LLMs have transformed generative and reasoning tasks.",
-        "Hallucinations pose a significant challenge for trustworthy deployment.",
-        "Current detection methods are impractical for real-time applications."
+        "LLMs have remarkable capabilities in generative and reasoning tasks.",
+        "Hallucinations arise from the probabilistic nature of next-token prediction.",
+        "Current methods for uncertainty quantification are computationally impractical or add system complexity.",
+        "A need for lightweight, self-contained, and scalable UQ techniques."
       ],
       "figure": null,
       "figure_id": "",
@@ -25,10 +27,11 @@
     },
     {
       "section": "Problem",
+      "headline": "Need for lightweight, self-contained, and scalable UQ techniques.",
       "content": [
-        "Existing UQ methods are computationally impractical.",
-        "Need for lightweight, self-contained, and scalable UQ techniques.",
-        "Current methods often rely on external tools or costly annotations."
+        "Existing methods are computationally impractical for billion-parameter models.",
+        "Retrieval-based and self-verification methods add system complexity and latency.",
+        "A new approach is required to balance efficiency and effectiveness in UQ for LLMs."
       ],
       "figure": null,
       "figure_id": "",
@@ -37,9 +40,11 @@
     },
     {
       "section": "Method",
+      "headline": "Effective Rank (ER) measures the divergence among vectors within a matrix.",
       "content": [
-        "Propose using effective rank of hidden states as a measure of uncertainty.",
-        "Effective rank captures semantic variations without additional knowledge."
+        "Propose using ER of embedding vectors as a measure of uncertainty.",
+        "ER captures semantic variations and indicates the model's internal state.",
+        "A low ER suggests a confident, deterministic state; a high ER signals uncertainty."
       ],
       "figure": null,
       "figure_id": "",
@@ -48,31 +53,34 @@
     },
     {
       "section": "Experiments",
+      "headline": "Conducted extensive experiments on multiple datasets and models.",
       "content": [
-        "Validated on multiple benchmark datasets and model architectures.",
-        "Compared with established strong baselines."
+        "Evaluated ER-based uncertainty on detecting hallucinations.",
+        "Compared with established baselines: ES, PF, DSE, LNE, SE."
       ],
       "figure": null,
-      "figure_id": "Fig3",
-      "figure_caption": "Visualization of Effective Ranks",
-      "layout_hint": "text_top_image_bottom"
+      "figure_id": "Fig2",
+      "figure_caption": "Overall comparison of ER with baselines, showing AUROC scores.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Results",
+      "headline": "Effective Rank outperforms or matches strong baselines while being efficient.",
       "content": [
-        "Effective rank outperforms or matches strong baselines.",
-        "Method is efficient and scalable for real-time applications."
+        "ER is a highly predictive signal for hallucination detection.",
+        "Achieves significant efficiency and scalability."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig1",
+      "figure_caption": "Examples of detecting hallucinations using ER-based uncertainty.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Conclusion",
+      "headline": "ER-based UQ provides a new paradigm for hallucination detection in LLMs.",
       "content": [
-        "Method effectively detects hallucinations and generalizes robustly.",
-        "Further research needed to explore internal-external semantic relationship."
+        "The method is efficient, robust, and does not require additional tools or fine-tuning.",
+        "Further exploration is needed to understand the relationship between internal representations and external semantic information."
       ],
       "figure": null,
       "figure_id": "",
@@ -81,10 +89,17 @@
     }
   ],
   "figures": {
-    "Fig3": {
-      "caption": "Figure 2: Visualization of Effective Ranks",
-      "type": "result_chart",
-      "description": "Visualization of Effective Ranks results.",
+    "Fig1": {
+      "caption": "(a) The correct answers with low uncertainty (b) The hallucinated answers with high uncertainty Figure 1: Examples of detecting hallucinations using Effective Rank-based Uncertainty.",
+      "type": "qualitative_example",
+      "description": "图1展示了使用Effective Rank-based Uncertainty检测幻觉的示例，包括正确答案和幻觉答案的对比。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Table 1: Overall comparison of ER with baselines, where ER denotes Effective Rank, ES denotes Eigenscore, PF denotes P_False, DSE denotes Discrete Semantic Entropy, LNE denotes LengthNormalized Entropy, and SE denotes Semantic Entropy. All numbers in the table are AUROC scores; values closer to 1 in",
+      "type": "comparison_table",
+      "description": "表1展示了Effective Rank与基线方法的整体对比，包括AUROC分数。",
       "best_matched_section": "Results",
       "importance": "high"
     }

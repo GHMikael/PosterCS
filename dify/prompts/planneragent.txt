@@ -46,11 +46,11 @@ color_theme 字段必须从以下枚举值中选择：
 调色板选择规则：
 - 人工智能、机器学习、计算机视觉、自然语言处理、AI Agent 等方向，优先使用 "academic_blue"。
 - 系统、工程、机器人、嵌入式、自动驾驶、软件工程方向，优先使用 "engineering_green"。
-- 教育、HCI、社会计算、可视化、设计、心理认知、医疗等偏人文应用方向,优先使用 "warm_orange"。
-- 综述、理论、benchmark、纯实证研究等强调严谨与中性视觉风格的论文,优先使用 "minimal_gray"。
+- 教育、HCI、社会计算、可视化、设计、心理认知、医疗等偏人文应用方向，优先使用 "warm_orange"。
+- 综述、理论、benchmark、纯实证研究等强调严谨与中性视觉风格的论文，优先使用 "minimal_gray"。
 - 如果难以判断，默认使用 "academic_blue"。
 
-4. template 与 color_theme 合理搭配建议
+4. template 与 color_theme 搭配
 - "template_dashboard" 推荐搭配 "academic_blue" 或 "minimal_gray"。
 - "template_classic" 推荐搭配 "academic_blue" 或 "warm_orange"。
 - "template_storyflow" 推荐搭配 "engineering_green" 或 "academic_blue"。
@@ -59,30 +59,31 @@ color_theme 字段必须从以下枚举值中选择：
 
 5. 规划海报 panel
 - 根据论文内容的丰富程度，为一张 A3 学术海报规划 4 到 7 个 panel。
-- panel 数量必须由论文内容决定，不要每次都机械地输出 6 个：
-  贡献集中、结构精简的论文用 4 到 5 个 panel；
-  方法与实验都很丰富的论文用 6 到 7 个 panel。
+- panel 数量必须由论文内容决定，不要机械地固定输出 6 个。
+- 贡献集中、结构精简的论文用 4 到 5 个 panel。
+- 方法与实验都很丰富的论文用 6 到 7 个 panel。
 - panel 数量不要过多，避免版面拥挤；也不要为了凑数而拆分或重复同样的内容。
-- 下面是常见 panel 类型菜单，请按论文实际情况「挑选 / 合并 / 省略」，不要不加取舍地全部照搬：
-  Motivation / Background
-  Problem / Challenge
-  Method / Framework
-  Experiments / Results
-  Key Findings
-  Conclusion / Takeaways
-- 例如：没有独立挑战的论文可把 Problem 并入 Motivation；分析型论文可把 Key Findings 与 Conclusion 合并；方法复杂的论文可把 Method 拆成两个 panel。
+- 常见 panel 类型包括 Motivation / Background、Problem / Challenge、Method / Framework、Experiments / Results、Key Findings、Conclusion / Takeaways。
+- 请按论文实际情况挑选、合并或省略 panel 类型，不要不加取舍地全部照搬。
 - 如果论文结构特殊，可以根据论文实际内容调整 panel 标题。
-- panel 顺序应符合阅读逻辑，一般为：
-  Title / Overview → Motivation → Method → Experiments / Results → Conclusion / Takeaways。
+- panel 顺序应符合阅读逻辑，一般为：Title / Overview → Motivation → Method → Experiments / Results → Conclusion / Takeaways。
 
 6. 生成 panel 要点
-- 每个 panel 的 content 字段必须包含 5 条或者6条 的 bullet points。
+- 每个无图的纯文本 panel 必须包含 5 到 6 条 bullet points。
+- 每个有图的 panel 只保留 1 到 2 条最关键的 bullet points，把空间留给图片。
 - 每条 bullet point 应简洁、准确、信息密度高。
 - 英文论文每条 bullet point 不超过 25 个英文词。
 - 中文论文每条 bullet point 不超过 35 个中文字符。
 - 不要输出长段落。
 - 不要使用空泛词汇，例如“本文”“我们”“非常好”。
 - 优先保留关键数字、数据集名称、模型名称、指标数值。
+- 对计算机领域论文，应显式保留结构化要素，包括数据集名、对比 baseline、评测指标及其数值、相对提升百分比、方法关键步骤；有则填，无则略。
+- 每个 panel 必须额外给出 headline 字段。
+- headline 是一句话或一个关键数字说明，用作该 panel 最应该被放大强调的视觉焦点。
+- headline 必须来自论文事实，不得编造。
+- 如果没有合适焦点，headline 填空字符串。
+- headline 必须是完整一句话，或“数字 + 含义”，例如“准确率 87.8%，超过最强 baseline”。
+- 禁止只给裸数字，例如“230”或“230 12”。
 
 7. 进行图文匹配
 - 根据 visual_assets 中每张图片的 caption、description、best_matched_section 和 importance，为 panel 选择合适图片。
@@ -97,26 +98,18 @@ color_theme 字段必须从以下枚举值中选择：
   figure 设置为 null
   figure_id 必须填写对应编号，例如 "Fig1"
   figure_caption 填写该图简短说明
+  layout_hint 设置为 "with_figure"
 - 同一张关键图片最多可使用一次，除非没有其他可用图片。
 
-# 核心注意：为了提高海报质量，如果你为某个 panel 选择了图片，那么这个 panel 的 content 只保留 1 条最关键的 bullet point（最多不超过 2 条），把版面尽量留给图片，避免文字与图片争夺空间。
-
 8. 规划布局方式
-layout_hint 必须从以下枚举值中选择：
-- "text_only"
-- "text_left_image_right"
-- "text_top_image_bottom"
-- "image_top_text_bottom"
-- "image_only"
+layout_hint 只允许使用以下两个值：
+- "text_only"：该 panel 没有配图，figure_id 为空。
+- "with_figure"：该 panel 有配图，figure_id 非空。
 
-布局规则：
-- 没有图片时使用 "text_only"。
-- 方法框架或 pipeline 优先使用 "text_top_image_bottom"。
-- 实验结果图优先使用 "text_top_image_bottom"。
-- 图片非常重要且信息量大时使用 "image_top_text_bottom"。
-- 除非 panel 几乎只展示图片，否则不要使用 "image_only"。
-- 当 template 为 "template_storyflow" 时，方法相关 panel 建议优先使用 "text_top_image_bottom" 或 "image_top_text_bottom"。
-- 当 template 为 "template_minimal" 时，建议大多数 panel 使用 "text_only"，仅保留 1 张关键图片。
+规则：
+- 有图就填 "with_figure"。
+- 无图就填 "text_only"。
+- 不要输出 text_left_image_right、text_top_image_bottom、image_top_text_bottom、image_only 等其他 layout_hint 值。
 
 9. 生成 figures 轻量资产池
 - 输出 JSON 中必须包含 figures 字段。
@@ -168,6 +161,7 @@ layout_hint 必须从以下枚举值中选择：
   "panels": [
     {
       "section": "Motivation",
+      "headline": "一句话或一个关键数字：该 panel 最该被放大的视觉焦点；无则空字符串",
       "content": [
         "bullet point 1",
         "bullet point 2",
@@ -182,13 +176,14 @@ layout_hint 必须从以下枚举值中选择：
     },
     {
       "section": "Method",
+      "headline": "例如：主结果数字或一句话核心方法",
       "content": [
         "bullet point 1"
       ],
       "figure": null,
       "figure_id": "Fig1",
       "figure_caption": "Brief caption of selected figure",
-      "layout_hint": "text_left_image_right"
+      "layout_hint": "with_figure"
     }
   ],
   "figures": {

@@ -1,0 +1,123 @@
+{
+  "asset_token": "f3c00e90d6c54fc6",
+  "template": "template_storyflow",
+  "color_theme": "academic_blue",
+  "poster_title": "EvoAgentX: An Automated Framework for Evolving Agentic Workflows",
+  "authors": "Yingxu Wang, Siwei Liu, Jinyuan Fang, Zaiqiao Meng",
+  "paper_info": "Published in 2023; available at https://github.com/EvoAgentX/EvoAgentX",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Reduce manual efforts and improve scalability of multi-agent systems",
+      "content": [
+        "Multi-agent systems (MAS) are powerful for orchestrating large language models (LLMs) and specialized tools.",
+        "Existing MAS frameworks often require manual workflow configuration.",
+        "Lack of dynamic evolution and performance optimization mechanisms.",
+        "Fragmented toolchains and manual setup hinder consistent application of optimization techniques.",
+        "EvoAgentX addresses these limitations through automation and evolution."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "headline": "Manual workflow configuration limits scalability and adaptability",
+      "content": [
+        "Manual efforts in defining roles, task decomposition, and agent interactions.",
+        "Lack of mechanisms for dynamic workflow evolution and optimization.",
+        "Inconsistent application of optimization techniques across diverse tasks.",
+        "Need for a unified framework to support dynamic and efficient multi-agent workflows."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Modular architecture with five core layers",
+      "content": [
+        "EvoAgentX employs a modular architecture with five core layers: basic components, agent, workflow, evolving, and evaluation.",
+        "The evolving layer integrates three optimization algorithms (TextGrad, AFlow, and MIPRO) for iterative refinement."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "The framework of EvoAgentX. It illustrates the modular architecture including the basic components, agent, workflow, evolving, and evaluation layers.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluated on diverse benchmarks",
+      "content": [
+        "Evaluated on HotPotQA for multi-hop reasoning, MBPP for code generation, MATH for mathematical problem solving, and GAIA for real-world multi-agent tasks.",
+        "Used built-in benchmarks and standardized evaluation metrics for systematic performance assessment."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Statistics of different benchmarks. We denote Question Answering and Natural Questions as QA and NQ, respectively.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Achieved significant performance improvements",
+      "content": [
+        "Achieved a 7.44% increase in HotPotQA F1 score.",
+        "Improved MBPP pass@1 by 10.00%.",
+        "Gained a 10.00% improvement in MATH solve accuracy.",
+        "Overall accuracy on GAIA improved by up to 20.00%."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Performance comparison across different benchmarks. Bold indicates the best performance.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "EvoAgentX significantly improves multi-agent system performance",
+      "content": [
+        "EvoAgentX significantly improves the performance of multi-agent systems through dynamic workflow evolution and optimization.",
+        "The platform reduces manual efforts and facilitates the rapid development of agent-based applications.",
+        "Provides a unified framework for integrating optimization algorithms and benchmarks.",
+        "Has the potential to enhance the scalability and adaptability of multi-agent systems in various domains.",
+        "Future work may explore generalizability to other tasks and domains."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "The framework of EvoAgentX. It illustrates the modular architecture including the basic components, agent, workflow, evolving, and evaluation layers.",
+      "type": "architecture",
+      "description": "图1展示了EvoAgentX的框架，包括基本组件、代理、工作流、演化和评估层的模块化架构。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Statistics of different benchmarks. We denote Question Answering and Natural Questions as QA and NQ, respectively.",
+      "type": "comparison_table",
+      "description": "表1显示了不同基准测试的统计信息，其中将问答和自然问题分别标记为QA和NQ。",
+      "best_matched_section": "Experiments",
+      "importance": "medium"
+    },
+    "Fig3": {
+      "caption": "Performance comparison across different benchmarks. Bold indicates the best performance.",
+      "type": "comparison_table",
+      "description": "表2显示了不同基准测试的性能对比，其中粗体表示最佳性能。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

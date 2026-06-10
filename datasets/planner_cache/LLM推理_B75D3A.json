@@ -1,10 +1,10 @@
 {
-  "asset_token": "c55731a172b14e8b",
-  "template": "template_classic",
+  "asset_token": "9f226deab8084223",
+  "template": "template_storyflow",
   "color_theme": "academic_blue",
   "poster_title": "TAKE A STEP BACK: EVOKING REASONING VIA ABSTRACTION IN LARGE LANGUAGE MODELS",
   "authors": "Huaixiu Steven Zheng, Swaroop Mishra, Xinyun Chen, Heng-Tze Cheng, Ed H. Chi, Quoc V Le, Denny Zhou",
-  "paper_info": "arXiv:2310.06117v2 [cs.LG] 12 Mar 2024",
+  "paper_info": "Google DeepMind, 2023",
   "layout": {
     "page_size": "A3",
     "layout_type": "dashboard_grid",
@@ -12,12 +12,12 @@
   },
   "panels": [
     {
-      "section": "Motivation",
+      "section": "Motivation / Background",
+      "headline": "Transformers revolutionize NLP, but complex reasoning remains a challenge.",
       "content": [
-        "Transformers and large language models (LLMs) have advanced NLP capabilities.",
-        "Scaling model size and data improves performance and efficiency.",
-        "LLMs show emergent abilities like multi-step reasoning and instruction following.",
-        "However, complex reasoning remains challenging with frequent intermediate errors."
+        "LLMs have improved model capabilities and sample efficiency.",
+        "Emergent abilities such as multi-step reasoning and instruction following are observed.",
+        "Complex multi-step reasoning tasks still pose significant challenges."
       ],
       "figure": null,
       "figure_id": "",
@@ -25,11 +25,12 @@
       "layout_hint": "text_only"
     },
     {
-      "section": "Method",
+      "section": "Problem / Challenge",
+      "headline": "LLMs struggle with reasoning tasks involving many low-level details.",
       "content": [
-        "STEP-BACK PROMPTING: a two-step process of Abstraction and Reasoning.",
-        "Abstraction: derive high-level concepts from the original question.",
-        "Reasoning: use high-level concepts to guide the reasoning process."
+        "LLMs face difficulties in complex reasoning tasks with detailed information.",
+        "Existing techniques like Chain-of-Thought prompting have limited effectiveness.",
+        "New methods are needed to improve reasoning accuracy."
       ],
       "figure": null,
       "figure_id": "",
@@ -37,46 +38,52 @@
       "layout_hint": "text_only"
     },
     {
-      "section": "Experiments",
+      "section": "Method / Framework",
+      "headline": "STEP-BACK PROMPTING: abstraction and reasoning in two steps.",
       "content": [
-        "Evaluated on PaLM-2L, GPT-4, and Llama2-70B models.",
-        "Tasks: MMLU Physics and Chemistry, GSM8K, TimeQA, MuSiQue."
-      ],
-      "figure": null,
-      "figure_id": "Fig1",
-      "figure_caption": "Performance of STEP-BACK PROMPTING across various reasoning tasks.",
-      "layout_hint": "text_top_image_bottom"
-    },
-    {
-      "section": "Results",
-      "content": [
-        "Improved PaLM-2L on MMLU Physics by 7% and Chemistry by 11%.",
-        "Gains on TimeQA (27%) and MuSiQue (7%).",
-        "Significant improvements on complex reasoning tasks."
-      ],
-      "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
-    },
-    {
-      "section": "Error Analysis",
-      "content": [
-        "Reasoning errors dominate in MMLU high-school Physics.",
-        "STEP-BACK + RAG fixes 39.9% of baseline errors on TimeQA.",
-        "STEP-BACK + RAG introduces 5.6% new errors on TimeQA."
+        "Involves a two-step process: abstraction and reasoning.",
+        "Derives high-level concepts from specific instances to guide reasoning."
       ],
       "figure": null,
       "figure_id": "Fig2",
-      "figure_caption": "Error analysis of STEP-BACK PROMPTING on MMLU high-school Physics.",
-      "layout_hint": "text_top_image_bottom"
+      "figure_caption": "Illustration of STEP-BACK PROMPTING with two steps of Abstraction and Reasoning guided by concepts and principles.",
+      "layout_hint": "with_figure"
     },
     {
-      "section": "Conclusion",
+      "section": "Experiments / Results",
+      "headline": "Significant performance improvements on MMLU, TimeQA, and MuSiQue.",
       "content": [
-        "STEP-BACK PROMPTING reduces reasoning errors by grounding on high-level abstractions.",
-        "Promising for improving LLM performance on complex reasoning tasks.",
-        "Future work: enhance reasoning capabilities while maintaining abstraction skills."
+        "Experiments conducted with PaLM-2L, GPT-4, and Llama2-70B models.",
+        "Tasks included MMLU (Physics and Chemistry), TimeQA, and MuSiQue."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Strong Performance of STEP-BACK PROMPTING: substantial improvement in STEM, Knowledge QA, and Multi-Hop Reasoning tasks.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "STEP-BACK PROMPTING outperforms CoT and TDB in various tasks.",
+      "content": [
+        "Improved PaLM-2L performance on MMLU Physics by 7% and Chemistry by 11%.",
+        "TimeQA performance increased by 27%, and MuSiQue by 7%.",
+        "Robust performance with respect to varying numbers of few-shot exemplars.",
+        "Error analysis shows reasoning errors are the dominant class."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Strong performance of STEP-BACK PROMPTING on MMLU tasks across three model families.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion / Takeaways",
+      "headline": "STEP-BACK PROMPTING enhances reasoning in LLMs using high-level abstractions.",
+      "content": [
+        "STEP-BACK PROMPTING effectively reduces reasoning errors in complex tasks.",
+        "Future work should focus on enhancing reasoning capabilities while maintaining abstraction skills.",
+        "Qualitative and quantitative analyses demonstrate the method's effectiveness and limitations.",
+        "The majority of errors are attributed to intrinsic limitations of LLMs' reasoning capabilities.",
+        "STEP-BACK PROMPTING may introduce new errors, but to a smaller extent."
       ],
       "figure": null,
       "figure_id": "",
@@ -86,18 +93,25 @@
   ],
   "figures": {
     "Fig1": {
-      "caption": "Figure 1: Strong Performance of STEP-BACK PROMPTING: our proposed Abstraction-and-Reasoning scheme leads to a substantial improvement in a wide range of challenging tasks in STEM, Knowledge QA and Multi-Hop Reasoning requiring complex (often multi-hop) reasoning.",
+      "caption": "Strong Performance of STEP-BACK PROMPTING: our proposed Abstraction-and-Reasoning scheme leads to a substantial improvement in a wide range of challenging tasks in STEM, Knowledge QA and Multi-Hop Reasoning requiring complex (often multi-hop) reasoning.",
       "type": "result_chart",
-      "description": "展示 STEP-BACK PROMPTING 在多个复杂任务中的显著性能提升，包括 STEM、知识问答和多步推理任务。",
+      "description": "展示 STEP-BACK PROMPTING 在 STEM、知识问答和多步推理任务中的显著性能提升。",
       "best_matched_section": "Results",
       "importance": "high"
     },
     "Fig2": {
-      "caption": "Figure 4: Error Analysis of STEP-BACK PROMPTING on MMLU high-school Physics: five classes of errors Step-Back makes with Reasoning being the dominating class.",
-      "type": "error_analysis",
-      "description": "分析 STEP-BACK PROMPTING 在 MMLU 高中物理任务中的错误类型，推理错误是主要类别。",
-      "best_matched_section": "Experiments",
-      "importance": "medium"
+      "caption": "Illustration of STEP-BACK PROMPTING with two steps of Abstraction and Reasoning guided by concepts and principles. Top : an example of MMLU high-school physics (Hendrycks et al., 2020) where the first principle of Ideal Gas Law is retrieved via abstraction. Bottom : an example from TimeQA",
+      "type": "method_diagram",
+      "description": "说明 STEP-BACK PROMPTING 的两个步骤：抽象和推理，以及这些步骤如何由概念和原理引导。包括 MMLU 高中物理和 TimeQA 的示例。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Strong performance of STEP-BACK PROMPTING on MMLU tasks across three model families. CoT: zero-shot Chain of Thought prompting (Kojima et al., 2022), TDB: Take a Deep Breath prompting (Yang et al., 2023).",
+      "type": "comparison_table",
+      "description": "展示 STEP-BACK PROMPTING 在 MMLU 任务中跨三个模型家族的显著性能。",
+      "best_matched_section": "Results",
+      "importance": "high"
     }
   },
   "use_commenter": "true",

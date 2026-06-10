@@ -1,0 +1,130 @@
+{
+  "asset_token": "57b093777d5f4a65",
+  "template": "template_storyflow",
+  "color_theme": "academic_blue",
+  "poster_title": "Youtu-GraphRAG: Vertically Unified Agents for Graph Retrieval-Augmented Complex Reasoning",
+  "authors": "Junnan Dong, Siyu An, Yifei Yu, Qian-Wen Zhang, Linhao Luo, Xiao Huang, Yunsheng Wu, Di Yin, Xing Sun",
+  "paper_info": "Tencent Youtu Lab, Monash University, The Hong Kong Polytechnic University, 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "GraphRAG enhances LLMs in complex reasoning by organizing fragmented knowledge into structured graphs.",
+      "content": [
+        "GraphRAG integrates graph construction and retrieval to improve complex reasoning.",
+        "Current methods focus on either graph construction or retrieval, leading to suboptimal performance.",
+        "Domain shifts pose challenges for existing GraphRAG frameworks.",
+        "Proposed framework aims to address these limitations.",
+        "Introduces a unified paradigm for superior complex reasoning."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Proposed a vertically unified Agentic GraphRAG framework.",
+      "content": [
+        "Seed graph schema ensures targeted entity, relation, and attribute types.",
+        "Dually-perceived community detection algorithm creates hierarchical knowledge tree.",
+        "Agentic retriever transforms complex queries into parallel sub-queries.",
+        "Tailored anonymous dataset prevents LLM knowledge leaking.",
+        "Anonymity Reversion task ensures fair evaluation."
+      ],
+      "figure": null,
+      "figure_id": "Fig6",
+      "figure_caption": "Toy overview of Youtu-GraphRAG that unifies graph construction and retrieval through a schema-guided agentic paradigm.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Conducted across six challenging benchmarks.",
+      "content": [
+        "Evaluated robustness and performance of Youtu-GraphRAG.",
+        "Benchmarks include tasks requiring complex multi-hop reasoning and domain transfer.",
+        "Compared with state-of-the-art baselines.",
+        "Demonstrated significant improvements in token costs and accuracy.",
+        "Showed adaptability in unseen domains."
+      ],
+      "figure": null,
+      "figure_id": "Fig12",
+      "figure_caption": "Contrasts three query-resolution strategies for a multi-hop question: embedding matching, traditional agents, and agentic decomposer.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Achieved 90.71% saving in token costs and 16.62% higher accuracy.",
+      "content": [
+        "Youtu-GraphRAG outperformed state-of-the-art baselines.",
+        "Demonstrated remarkable adaptability in domain transfer.",
+        "Lowered token costs while maintaining high performance.",
+        "Effective in moving the Pareto frontier.",
+        "Provided detailed performance comparisons over benchmark datasets."
+      ],
+      "figure": null,
+      "figure_id": "Fig21",
+      "figure_caption": "Youtu-GraphRAG effectively moves the Pareto frontier with lower token costs and higher performance.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Contributions",
+      "headline": "Introduced a unified Agentic GraphRAG framework.",
+      "content": [
+        "Unified graph construction and retrieval for robust reasoning.",
+        "Developed a theoretically-grounded community detection algorithm.",
+        "Proposed a tailored anonymous dataset and Anonymity Reversion task.",
+        "Conducted extensive empirical experiments across diverse tasks and domains.",
+        "Showed state-of-the-art performance in complex reasoning."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Youtu-GraphRAG enhances complex reasoning capabilities.",
+      "content": [
+        "Effectively unifies graph construction and retrieval.",
+        "Improves adaptability and efficiency in unseen domains.",
+        "Suitable for real-world applications requiring robust reasoning.",
+        "Future work includes further optimization and exploration of new domains."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig6": {
+      "caption": "Figure 2. A toy overview of Youtu-GraphRAG that unifies graph construction and retrieval through a schema-guided agentic paradigm. (i) An extraction agent automatically processes documents into structured knowledge via targeted entity/relation extraction; (ii) A four-level knowledge tree is constr",
+      "type": "architecture",
+      "description": "展示了 Youtu-GraphRAG 的架构，通过模式引导的代理范式统一图构建和检索。包括自动处理文档和构建多层次知识树",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig12": {
+      "caption": "Figure 4. The figure contrasts three query-resolution strategies for a multi-hop question. While embedding matching retrieves disjointed facts (left) and traditional agents use repetitive templates (right), our agentic decomposer (center) leverages domain schema to plan efficient sub-queries: (1) co",
+      "type": "comparison_table",
+      "description": "对比了三种多跳问题的查询解析策略，包括嵌入匹配、传统代理和代理分解器",
+      "best_matched_section": "Experiments",
+      "importance": "high"
+    },
+    "Fig21": {
+      "caption": "Figure 6. Youtu-GraphRAG effectively moves the Pareto frontier with lower token costs and higher performance.",
+      "type": "result_chart",
+      "description": "展示了 Youtu-GraphRAG 在较低的令牌成本下提高了性能，有效移动了 Pareto 前沿",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

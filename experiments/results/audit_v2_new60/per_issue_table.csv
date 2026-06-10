@@ -1,0 +1,17 @@
+variant,class,precision,recall,f1,gold_support
+direct,space_imbalance,0.0,0.0,0.0,2
+direct,text_overload,0.0,0.0,0.0,0
+direct,hierarchy_emphasis_error,0.0,0.0,0.0,0
+direct,asset_mismatch,0.0,0.0,0.0,0
+direct,asset_too_small,0.0,0.0,0.0,14
+direct,structure_alignment_error,0.455,0.357,0.4,14
+direct,none,0.0,0.0,0.0,28
+direct,other,0.0,0.0,0.0,2
+narrowed,space_imbalance,0.024,0.5,0.045,2
+narrowed,text_overload,0.0,0.0,0.0,0
+narrowed,hierarchy_emphasis_error,0.0,0.0,0.0,0
+narrowed,asset_mismatch,0.0,0.0,0.0,0
+narrowed,asset_too_small,0.0,0.0,0.0,14
+narrowed,structure_alignment_error,0.562,0.643,0.6,14
+narrowed,none,0.0,0.0,0.0,28
+narrowed,other,0.0,0.0,0.0,2

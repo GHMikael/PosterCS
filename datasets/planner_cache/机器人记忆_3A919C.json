@@ -1,0 +1,151 @@
+{
+  "asset_token": "f8e2f105945f4789",
+  "template": "template_storyflow",
+  "layout_variant": "auto",
+  "color_theme": "engineering_green",
+  "emphasis_level": "normal",
+  "poster_title": "Rethinking Progression of Memory State in Robotic Manipulation: An Object-Centric Perspective",
+  "authors": "Nhat Chung, Taisei Hanyu, Toan Nguyen, Huy Le, Frederick Bumgarner, Duy Minh Ho Nguyen, Khoa Vo, Kashu Yamazaki, Chase Rainwater, Tung Kieu, Anh Nguyen, Ngan Le",
+  "paper_info": "2026, AAAI",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "Current policies rely on recent sensory inputs, lacking long-term memory.",
+        "Short-horizon tasks dominate benchmarks, neglecting long-term dependencies.",
+        "Need for object-centric memory to handle repetitive steps and visually similar items.",
+        "Vision-language-action (VLA) models face scalability issues in non-Markovian settings.",
+        "Proposed work aims to evaluate and improve memory-augmented models."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "Addressing the limitations of current visuomotor policies in non-Markovian environments"
+    },
+    {
+      "section": "Problem",
+      "content": [
+        "Current policies struggle with extended temporal dependencies.",
+        "Vision-language-action (VLA) models are intractable for tasks spanning hundreds of frames.",
+        "Repetitive steps and visually similar items pose significant challenges.",
+        "Need for a benchmark to evaluate memory-augmented models.",
+        "Token scaling issues in VLA models."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Design factors in robot manipulation benchmarks",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Challenges in non-Markovian robotic manipulation tasks"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Introduction of LIBERO-Mem benchmark for non-Markovian tasks.",
+        "Proposal of Embodied-SlotSSM framework for object-centric memory.",
+        "Maintains spatio-temporally consistent slot identities.",
+        "Uses slot-state-space modeling and relational encoder.",
+        "Combines Slot Attention, Slot Fusion, and LLM Action Decoder."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Embodied-SlotSSM framework combining slot-based dynamics with LLM Action Decoder",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Embodied-SlotSSM: Combining slot-based dynamics with LLM Action Decoder"
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Conducted in both Markovian and non-Markovian settings.",
+        "Assessed long-term dependencies and action prediction.",
+        "Compared with state-of-the-art VLA models.",
+        "Used LIBERO-Goal and LIBERO-Mem benchmarks.",
+        "Demonstrated practicality and scalability."
+      ],
+      "figure": null,
+      "figure_id": "Fig5",
+      "figure_caption": "Slot visualization in task T1: gripper and bowl slots (bbox, attention) as robot lifts and places the bowl down",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Evaluation on LIBERO-Goal and LIBERO-Mem benchmarks"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "Embodied-SlotSSM shows improved performance on manipulation tasks.",
+        "Practical and scalable slot-based memory representations.",
+        "Task success rates on LIBERO-Goal and LIBERO-Mem benchmarks.",
+        "Subgoal completion percentages on LIBERO-Mem.",
+        "Token scaling challenges under different temporal window sizes."
+      ],
+      "figure": null,
+      "figure_id": "Fig6",
+      "figure_caption": "Task success rates on LIBERO-Goal",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Enhanced stateful reasoning and long-horizon action prediction"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "Provides insights into non-Markovian reasoning in robotic manipulation.",
+        "LIBERO-Mem and Embodied-SlotSSM enhance stateful reasoning and efficiency.",
+        "Future work includes real-world validation.",
+        "Contributes to the development of memory-augmented models.",
+        "Highlights the importance of object-centric memory."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "Bridging the gap between VLA designs and memory-centric capabilities"
+    }
+  ],
+  "figures": {
+    "Fig2": {
+      "caption": "Table 1: Design factors in robot manipulation benchmarks.",
+      "type": "comparison_table",
+      "description": "列出了机器人操作基准中的设计因素",
+      "best_matched_section": "Problem",
+      "importance": "medium",
+      "audit_status": ""
+    },
+    "Fig4": {
+      "caption": "Figure 2: Embodied-SlotSSM : Our framework combining slot-based dynamics (Slot Attention, Slot Fusion, Slot-based SSM) with an LLM Action Decoder for object memory-aware action prediction based on textual prompts.",
+      "type": "architecture",
+      "description": "展示了 Embodied-SlotSSM 框架，结合了基于槽的动力学和 LLM 动作解码器，用于基于文本提示的对象记忆感知动作预测",
+      "best_matched_section": "Method",
+      "importance": "high",
+      "audit_status": ""
+    },
+    "Fig5": {
+      "caption": "Figure 3: Slot visualization in task T1 : gripper and bowl slots (bbox, attention) as robot lifts and places the bowl down.",
+      "type": "qualitative_example",
+      "description": "在任务 T1 中展示了槽的可视化，包括夹具和碗的槽（边界框和注意力）在机器人提起和放下碗时的变化",
+      "best_matched_section": "Experiments",
+      "importance": "medium",
+      "audit_status": ""
+    },
+    "Fig6": {
+      "caption": "Table 3: Task success rates on LIBERO-Goal.",
+      "type": "comparison_table",
+      "description": "列出了在 LIBERO-Goal 任务上的成功率",
+      "best_matched_section": "Results",
+      "importance": "high",
+      "audit_status": ""
+    }
+  },
+  "use_commenter": true,
+  "max_iterations": 4,
+  "save_debug_images": true,
+  "global_font_scale": 1.0
+}

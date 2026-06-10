@@ -1,0 +1,118 @@
+{
+  "asset_token": "3dba0d022b184f52",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Multimodal Retrieval-Reflection-Augmented Generation for Knowledge-Based VQA",
+  "authors": "Tao Zhang, Ziqi Zhang, Zongyang Ma, Yuxin Chen, Zhongang Qi, Chunfeng Yuan, Bing Li, Junfu Pu, Yuxuan Zhao, Zehua Xie, Jin Ma, Ying Shan, Weiming Hu",
+  "paper_info": "2023, Knowledge-Based VQA",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation / Background",
+      "headline": "MLLMs excel in Visual-dependent VQA but struggle with Knowledge-based VQA.",
+      "content": [
+        "MLLMs perform well in tasks requiring visual information but are limited by their static knowledge scope in Knowledge-based VQA.",
+        "Current mRAG methods often introduce unnecessary retrieval, lack of evidence localization, and increased model complexity.",
+        "There is a need for a more efficient and effective framework to enhance Knowledge-based VQA capabilities without compromising the strengths of MLLMs.",
+        "The proposed mR 2 AG framework aims to address these limitations.",
+        "The framework introduces two reflection operations to improve the accuracy and relevance of answers."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem / Challenge",
+      "headline": "MLLMs provide ambiguous and inaccurate responses to Knowledge-based VQA tasks.",
+      "content": [
+        "MLLMs struggle with providing precise answers to Knowledge-based VQA tasks due to their limited and static knowledge scope.",
+        "Existing mRAG methods indiscriminately use retrieval, leading to inefficiency and increased model complexity.",
+        "There is a lack of explicit evidence localization in current mRAG methods, affecting the quality of generated answers.",
+        "The proposed mR 2 AG framework aims to overcome these challenges.",
+        "It introduces adaptive retrieval and explicit evidence localization to improve answer accuracy and relevance."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method / Framework",
+      "headline": "mR 2 AG uses two reflection operations: Retrieval-Reflection and Relevance-Reflection.",
+      "content": [
+        "Retrieval-Reflection determines the necessity of retrieval for a given query, avoiding redundant retrieval calls.",
+        "Relevance-Reflection guides the MLLM to locate and utilize relevant evidence from the retrieved content, ensuring accurate answer generation."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Overview of the mR 2 AG framework, including both retrieval and non-retrieval processes.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments / Results",
+      "headline": "Achieved performance gains of 10.6% and 15.5% over previous SOTAs on INFOSEEK test sets.",
+      "content": [
+        "Evaluated on Knowledge-based VQA datasets: INFOSEEK and Encyclopedic-VQA.",
+        "Compared with state-of-the-art MLLMs (e.g., GPT-4v/o) and RAG-based MLLMs."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Main results of models with external knowledge on the INFOSEEK dataset.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "mR 2 AG significantly improves performance on Knowledge-based VQA tasks.",
+      "content": [
+        "mR 2 AG outperformed SOTAs on the Enc-VQA test set by 2.5% on single-hop questions and 18.2% on multi-answer questions.",
+        "The framework demonstrated significant performance improvements while maintaining the base MLLM's capabilities on Visual-dependent tasks.",
+        "The effectiveness of mR 2 AG depends on the quality of the retrieved content and the base MLLM's ability to understand and utilize the evidence.",
+        "The mR 2 AG-IT dataset was specifically constructed for Knowledge-based VQA tasks, providing a valuable resource for future research.",
+        "The proposed framework offers a balanced approach to enhancing Knowledge-based VQA without increasing model complexity."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion / Takeaways",
+      "headline": "mR 2 AG effectively addresses the limitations of current mRAG methods.",
+      "content": [
+        "mR 2 AG introduces adaptive retrieval and explicit evidence localization, significantly improving performance on Knowledge-based VQA tasks.",
+        "The framework retains the strengths of base MLLMs on Visual-dependent tasks.",
+        "The mR 2 AG-IT dataset provides a valuable resource for future research in Knowledge-based VQA.",
+        "The proposed method offers a more efficient and effective approach to enhancing Knowledge-based VQA capabilities.",
+        "The framework can be applied to other multimodal tasks requiring external knowledge."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig2": {
+      "caption": "Figure 2. Overview of the mR 2 AG framework. (a1) mR 2 AG w/ Retrieval: This process includes: a) Retrieval-Reflection for determining the necessity of retrieval; b) Relevance-Reflection for identifying evidence passages; c) Post-processing multiple potential answers. (a2) mR 2 AG w/o Retrieval: The",
+      "type": "method_diagram",
+      "description": "mR 2 AG框架的概览，包括有检索和无检索的两个版本。有检索版本包括确定检索必要性的Retrieval-Reflection、识别证据段落的Relevance-Reflection和多个潜在答案的后处理。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Table 1. Main results of models with external knowledge on the INFOSEEK. † denotes our method and its variants with alternative designs.",
+      "type": "result_chart",
+      "description": "展示了在INFOSEEK数据集上使用外部知识的模型的主要结果，其中†表示作者的方法及其变体。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

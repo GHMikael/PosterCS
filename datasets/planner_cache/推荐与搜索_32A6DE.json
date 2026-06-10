@@ -1,0 +1,168 @@
+{
+  "asset_token": "b5a70f86b77d4e4c",
+  "template": "template_dashboard",
+  "color_theme": "academic_blue",
+  "poster_title": "A Survey of Large Language Model Empowered Agents for Recommendation and Search",
+  "authors": "Yu Zhang, Shutong Qiao, Jiaqi Zhang, Tzu-Heng Lin, Chen Gao, Yong Li",
+  "paper_info": "ACM Trans. Inf. Syst. 1, 1 (April 2025), 30 pages. https://doi.org/10.1145/nnnnnnn.nnnnnnn",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Overview",
+      "headline": "First systematic review of LLM agents in recommendation and search systems",
+      "content": [
+        "Addresses the challenges of traditional systems in handling complex tasks.",
+        "Focuses on the roles and applications of LLM agents in information retrieval.",
+        "Provides a structured taxonomy for understanding diverse applications.",
+        "Highlights the transformative potential of LLM agents.",
+        "Discusses unresolved challenges and future research directions."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Research Background",
+      "headline": "The vast amount of online content has made it difficult to access relevant information",
+      "content": [
+        "Online content complexity and scale pose significant challenges.",
+        "Recommender and search systems have evolved to address these issues.",
+        "LLMs have shown capabilities surpassing human performance in language tasks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Research Problem",
+      "headline": "Traditional systems struggle with the complexity and scale of online content",
+      "content": [
+        "Complexity and scale of online content challenge traditional systems.",
+        "Need for more precise and satisfying results in user interactions.",
+        "Lack of general understanding, reasoning, and decision-making abilities."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Fig. 1. Schematic diagram of the three core modules of agent",
+      "content": [
+        "Establishes a taxonomy for categorizing recent advances.",
+        "Analyzes how LLM agents enhance recommendation and search systems."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Schematic diagram of the three core modules of agent",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Applications",
+      "headline": "Fig. 2. Illustration of existing work of LLM agents for recommendation and search",
+      "content": [
+        "Reviews existing research and applications of LLM agents.",
+        "Provides a structured framework for understanding diverse applications."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Illustration of existing work of LLM agents for recommendation and search",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Roles in Recommendation",
+      "headline": "Fig. 3. Four domains of LLM agent's role in recommendation tasks",
+      "content": [
+        "LLM agents play four key roles in recommendation tasks.",
+        "These roles enhance the performance of recommendation systems."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Four domains of LLM agent's role in recommendation tasks",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Roles in Search",
+      "headline": "Fig. 4. Five domains of LLM agent's role in search tasks",
+      "content": [
+        "LLM agents have five key roles in search tasks.",
+        "These roles improve the effectiveness of search systems."
+      ],
+      "figure": null,
+      "figure_id": "Fig5",
+      "figure_caption": "Five domains of LLM agent's role in search tasks",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Representative Works",
+      "headline": "Table 1. A list of representative works of LLM agents for Recommendation",
+      "content": [
+        "Lists representative works of LLM agents in recommendation tasks.",
+        "Highlights key contributions and findings."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "A list of representative works of LLM agents for Recommendation",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "LLM agents have transformative potential in recommendation and search systems",
+      "content": [
+        "LLM agents lead to the next generation of information retrieval.",
+        "Further research is needed to address identified limitations and challenges."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Fig. 1. Schematic diagram of the three core modules of agent",
+      "type": "method_diagram",
+      "description": "图示展示了代理的三个核心模块的架构图",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Fig. 2. Illustration of existing work of LLM agents for recommendation and search",
+      "type": "pipeline",
+      "description": "图示展示了现有的 LLM 代理在推荐和搜索任务中的工作流程",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Fig. 3. Four domains of LLM agent's role in recommendation tasks",
+      "type": "method_diagram",
+      "description": "图示展示了 LLM 代理在推荐任务中的四个角色领域",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Table 1. A list of representative works of LLM agents for Recommendation",
+      "type": "comparison_table",
+      "description": "表格列出了 LLM 代理在推荐任务中的代表性工作",
+      "best_matched_section": "Experiments",
+      "importance": "medium"
+    },
+    "Fig5": {
+      "caption": "Fig. 4. Five domains of LLM agent's role in search tasks",
+      "type": "method_diagram",
+      "description": "图示展示了 LLM 代理在搜索任务中的五个角色领域",
+      "best_matched_section": "Method",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

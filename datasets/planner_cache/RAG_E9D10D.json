@@ -1,0 +1,135 @@
+{
+  "asset_token": "6505682ff2384341",
+  "template": "template_dashboard",
+  "color_theme": "academic_blue",
+  "poster_title": "Linear Graph Retrieval Augmented Generation on Large-Scale Corpora",
+  "authors": "Luyao Zhuang, Shengyuan Chen, Yilin Xiao, Huachi Zhou, Yujing Zhang, Hao Chen, Qinggang Zhang, Xiao Huang",
+  "paper_info": "The Department of Computing, Hong Kong Polytechnic University, Hong Kong SAR, 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Mitigating hallucinations in LLMs with external knowledge",
+      "content": [
+        "RAG systems leverage external knowledge to reduce hallucinations in LLMs.",
+        "Traditional RAG systems struggle with unstructured, large-scale corpora.",
+        "Incorporating knowledge graphs captures relational structures for complex reasoning tasks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "headline": "Unstable and costly relation extraction in GraphRAG",
+      "content": [
+        "GraphRAG methods rely on unstable relation extraction, leading to noisy graphs.",
+        "Noisy graphs degrade retrieval quality and impair generation accuracy.",
+        "GraphRAG models often underperform naive RAG approaches on real-world tasks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "LinearRAG constructs a Tri-Graph for efficient retrieval",
+      "content": [
+        "LinearRAG uses lightweight entity extraction and semantic linking to build a Tri-Graph.",
+        "The Tri-Graph avoids the instability of traditional relation modeling and reduces indexing time by 77%."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "The overall pipeline of the proposed LinearRAG framework.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluated on four benchmark datasets",
+      "content": [
+        "Conducted extensive experiments on four benchmark datasets.",
+        "Evaluated retrieval and generation performance on the Medical dataset."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Retrieval and Generation Performance (%) of vanilla RAG v.s. typical GraphRAG baselines.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "LinearRAG outperforms baselines in retrieval and generation",
+      "content": [
+        "LinearRAG consistently outperformed state-of-the-art baselines in retrieval quality, generation accuracy, and scalability.",
+        "Significant improvements were observed in context relevance and noise resilience."
+      ],
+      "figure": null,
+      "figure_id": "Fig5",
+      "figure_caption": "Result (%) of baselines and LinearRAG on four benchmark datasets.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "LinearRAG captures implicit relationships for multi-hop reasoning",
+      "content": [
+        "LinearRAG successfully captures implicit relationships without explicit relation extraction.",
+        "Enables correct multi-hop reasoning and improves retrieval and generation performance."
+      ],
+      "figure": null,
+      "figure_id": "Fig13",
+      "figure_caption": "Case study of LinearRAG.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "A stable and efficient framework for retrieval-augmented generation",
+      "content": [
+        "LinearRAG addresses the limitations of existing GraphRAG systems.",
+        "The proposed method significantly improves retrieval and generation performance on complex, multi-hop reasoning tasks.",
+        "Further work is needed to evaluate the framework's performance on a wider range of datasets and tasks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig4": {
+      "caption": "The overall pipeline of the proposed LinearRAG framework. I. Offline Construction. Initially, we construct a Tri-graph containing entity, sentence, and passage nodes, with edges connecting entities to sentences and entities to passages. II. Online Retrieval. We first activate relevant entities and then retrieve passages based on their importance.",
+      "type": "pipeline",
+      "description": "描述了提出的 LinearRAG 框架的整体流程，包括离线构建和在线检索两个阶段。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "(a) Retrieval and Generation Performance (%) of vanilla RAG v.s. typical GraphRAG baselines.",
+      "type": "result_chart",
+      "description": "比较了 vanilla RAG 和典型的 GraphRAG 基线模型在检索和生成性能上的表现。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig5": {
+      "caption": "Table 1: Result (%) of baselines and LinearRAG on four benchmark datasets in terms of both Contain-Match and GPT-Evaluation Accuracy. The best result for each dataset is highlighted in bold, while the second result is indicated with an underline.",
+      "type": "comparison_table",
+      "description": "展示了基线模型和 LinearRAG 在四个基准数据集上的性能对比结果。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig13": {
+      "caption": "Table 7: Case study of LinearRAG. LinearRAG successfully captures implicit relationships without requiring explicit relation extraction, enabling correct multi-hop reasoning.",
+      "type": "case_study",
+      "description": "展示了 LinearRAG 在案例研究中的表现，成功捕捉隐含关系，实现多跳推理。",
+      "best_matched_section": "Key Findings",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

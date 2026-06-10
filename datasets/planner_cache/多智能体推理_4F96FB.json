@@ -1,0 +1,107 @@
+{
+  "asset_token": "b0d798327b174c22",
+  "template": "template_storyflow",
+  "color_theme": "academic_blue",
+  "poster_title": "Adaptive Multi-Agent Reasoning via Automated Workflow Generation",
+  "authors": "Humza Sami, Mubashir ul Islam, Pierre-Emmanuel Gaillardon, Valerio Tenace",
+  "paper_info": "PrimisAI, Los Gatos, CA, USA; University of Utah, Salt Lake City, UT, USA",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "LRMs show promise but lack generalization",
+      "content": [
+        "LRMs excel in sophisticated tasks with high efficiency and accuracy.",
+        "However, they often fail to generalize to novel problems, relying on memorized solutions.",
+        "This limits their effectiveness in dynamic and complex environments."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "headline": "Poor generalization and adaptability",
+      "content": [
+        "LRMs exhibit poor generalization in problem-solving capabilities.",
+        "Existing systems rely on rule-based or heuristic protocols, limiting adaptability and scalability."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Nexus Architect with IPR feedback loop",
+      "content": [
+        "Nexus Architect: Enhanced multi-agent system framework with automated workflow synthesis.",
+        "IPR feedback loop: Dynamically tunes system prompts for improved generalization."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Block diagram of the proposed Nexus Architect. Starting from a user prompt, the system decomposes the task, designs and instantiates a multi-agent workflow, and validates it against provided examples. If performance criteria are not met, failure cases are analyzed and used in the IPR feedback.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluated on challenging logical questions",
+      "content": [
+        "Empirical evaluation using GPT-4.1 as the baseline LLM.",
+        "Compared against Gemini 2.5 Flash Preview, Claude Sonnet 4, DeepSeek-R1, and Llama 4 Scout."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Results",
+      "headline": "Pass rate 66% higher than Gemini 2.5",
+      "content": [
+        "Nexus Architect achieved up to 66% increase in pass rate over Gemini 2.5 Flash Preview.",
+        "Nearly 2.5 × higher pass rate compared to DeepSeek-R1 and Claude Sonnet 4, and over 3 × higher pass rate compared to Llama 4 Scout."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Performance comparison between our five Architect-generated workflows and recently released state-of-the-art LLMs and LRMs.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Significant improvement in reasoning tasks",
+      "content": [
+        "Nexus Architect significantly improves the generalization and adaptability of reasoning tasks using standard LLMs.",
+        "The proposed approach offers a promising direction for enhancing genuine reasoning capabilities in multi-agent systems."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Block diagram of the proposed Nexus Architect. Starting from a user prompt, the system decomposes the task, designs and instantiates a multi-agent workflow, and validates it against provided examples. If performance criteria are not met, failure cases are analyzed and used in the IPR feedback.",
+      "type": "architecture",
+      "description": "展示了 Nexus Architect 的系统架构图，包括从用户提示到任务分解、多代理工作流设计、实例化和验证的整个流程。如果性能标准未达到，将分析失败案例并用于 IPR 反馈。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Performance comparison between our five Architect-generated workflows and recently released state-of-the-art LLMs and LRMs.",
+      "type": "result_chart",
+      "description": "展示了五个由 Architect 生成的工作流与最近发布的最先进语言模型（LLMs 和 LRMs）之间的性能比较。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

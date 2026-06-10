@@ -1,0 +1,722 @@
+[
+  {
+    "run_folder": "20260609_022821_A_Comprehensive_Survey_of_Rewa_028f962461b9",
+    "template": "template_dashboard",
+    "color_theme": "minimal_gray",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "minimal_gray",
+      "body_ratio": 16.17,
+      "header_ratio": 7.35,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_023433_Test-Time_Preference_Optimizat_6b985b677181",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_023510_Seeing,_Listening,_Remembering_5b5ef16d0aec",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_023950_MLP_Memory_A_Retriever-Pretrai_ae89635e3e92",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_024001_Generalist_Reward_Models_Found_657081bc5ee8",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_024412_LLMS'_INTERNAL_STATES_RETAIN_T_a64e1943af91",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_024809_One_SPACE_to_Rule_Them_All_Joi_b087d09deca9",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_024834_Revisiting_Hallucination_Detec_ca5d974cf3fd",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_024836_Know_Your_Limits_A_Survey_of_A_345fd4c78f2e",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_025032_From_Efficiency_to_Adaptivity__3483ab1db1f8",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_025105_Crossing_the_Reward_Bridge_Exp_3931671c5534",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_025220_Is_Chain-of-Thought_Reasoning__0a77c3c5f24d",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_025510_TAKE_A_STEP_BACK_EVOKING_REASO_efd7e7bea9bb",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_025515_MEMTRACK_Evaluating_Long-Term__b8f5d698d757",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_025546_Constitutional_AI_Harmlessness_ffa46538873c",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_025852_ESSAYBENCH_Evaluating_Large_La_16f4e934923a",
+    "template": "template_dashboard",
+    "color_theme": "warm_orange",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "warm_orange",
+      "body_ratio": 13.55,
+      "header_ratio": 5.03,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_025904_Multi-Agent-as-Judge_Aligning__9ece80d6b03f",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_030028_Automated_Evaluation_of_Person_b3a1b1bcaa11",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_030306_Agent-as-a-Judge_Evaluate_Agen_1dee0b26a38b",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_030815_HELLOBENCH_EVALUATING_LONG_TEX_078a8e42438f",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_031113_DataGovBench_Benchmarking_LLM__0848906204dd",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_031231_Teaching_Language_Models_to_Cr_1bb5aaf1ca62",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_031542_LeanRAG_Knowledge-Graph-Based__24e848eba9fe",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_031655_Query-Based_Router_by_Dual_Con_ca7853cdbd31",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_031955_Multimodal_Retrieval-Reflectio_90b3ba39356e",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_032530_Agentic_Search-Enhanced_Large__2fa60d8ceb94",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_033143_Reachability_of_Independent_Se_5e8f4e632965",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_033459_LongRAG_Enhancing_Retrieval-Au_20eda233c56a",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_033644_AQA_Adaptive_Question_Answerin_7686221c4c02",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_033812_Linear_Graph_Retrieval_Augment_26e5b004d601",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_033929_Graph-Guided_Concept_Selection_ec885703e8c7",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_034053_Youtu-GraphRAG_Vertically_Unif_ab33db82d52d",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_034235_Ask_in_Any_Modality_A_Comprehe_7cf7a1708c41",
+    "template": "template_minimal",
+    "color_theme": "minimal_gray",
+    "overlap_count": 11,
+    "contrast": {
+      "theme": "minimal_gray",
+      "body_ratio": 16.17,
+      "header_ratio": 7.35,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_034408_Agentic_Context_Engineering_Ev_2ff43486cc66",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_034502_Human-in-the-loop_or_AI-in-the_a187d2011cf3",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_034637_Building_Production-Ready_AI_A_fcec57454c05",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_034844_EvoAgentX_An_Automated_Framewo_3113cc1e4e25",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_034941_Latent_Collaboration_in_Multi-_425eabae1cf5",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_035207_Tree_Search_for_LLM_Agent_Rein_01c4c43c1418",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_035303_INFORMATION_GAIN-BASED_POLICY__91fc4ebf7312",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_035514_Adaptive_Multi-Agent_Reasoning_a5e187809673",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_035626_BELLE_A_Bi-Level_Multi-Agent_R_48c95073681f",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_035850_Tongyi_DeepResearch_An_Agentic_2cba933bebbd",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_040432_Difficulty-Aware_Agentic_Orche_a37cd9381ae1",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_040805_Search_Self-play_Pushing_the_F_73c40da4d2fd",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_041103_InfiFusion_A_Unified_Framework_91741a511b2b",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_042727_CODE2VIDEO_A_CODE-CENTRIC_PARA_32b909330b0a",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_042935_A_Survey_of_Large_Language_Mod_5736843ad823",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_043024_BLIP_Bootstrapping_Language-Im_3771d1c601a0",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_043303_Rethinking_Progression_of_Memo_21045ec2feae",
+    "template": "template_storyflow",
+    "color_theme": "engineering_green",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "engineering_green",
+      "body_ratio": 14.96,
+      "header_ratio": 5.08,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_044437_Evaluating_LLM_Agent_Personali_91d748283c90",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_050055_Evaluating_LLM_Agents_as_Lifel_3015deb5f266",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_050619_AGENTIC_RETRIEVAL-AUGMENTED_GE_c550595ca0d9",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_053045_RAG-ANYTHING_ALL-IN-ONE_RAG_FR_bd5861c75187",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_054045_Retrieval-Augmented_Generation_935b29f80d65",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_054836_Reimagining_Research_Papers_As_2a16bc35f9ac",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_061840_Virtuous_Machines_Towards_Arti_59e544c90c8c",
+    "template": "template_storyflow",
+    "color_theme": "academic_blue",
+    "overlap_count": 1,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_064924_Align_before_Fuse_Vision_and_L_71aaa19baf2b",
+    "template": "template_classic",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_065706_GME_Improving_Universal_Multim_cae3c40103dc",
+    "template": "template_dashboard",
+    "color_theme": "academic_blue",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "academic_blue",
+      "body_ratio": 16.28,
+      "header_ratio": 7.45,
+      "ok": true
+    }
+  },
+  {
+    "run_folder": "20260609_212513_EduIllustrate_Towards_Scalable_91ebd47f4903",
+    "template": "template_dashboard",
+    "color_theme": "warm_orange",
+    "overlap_count": 0,
+    "contrast": {
+      "theme": "warm_orange",
+      "body_ratio": 13.55,
+      "header_ratio": 5.03,
+      "ok": true
+    }
+  }
+]

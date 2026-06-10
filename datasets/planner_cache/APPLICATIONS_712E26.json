@@ -1,97 +1,134 @@
 {
-  "asset_token": "3c733378d6824722",
-  "template": "template_minimal",
-  "layout_variant": "auto",
+  "asset_token": "7520be50030b4a32",
+  "template": "template_dashboard",
   "color_theme": "minimal_gray",
-  "emphasis_level": "normal",
-  "poster_title": "A Comprehensive Survey of Reward Models: Taxonomy, Applications, Challenges, and Future",
+  "poster_title": "A Comprehensive Survey of Reward Models: Taxonomy, Applications, Challenges, and Future Directions",
   "authors": "Jialun Zhong, Wei Shen, Yanzeng Li, Songyang Gao, Hua Lu, Yicheng Chen, Yang Zhang, Wei Zhou, Jinjie Gu, Lei Zou",
-  "paper_info": "arXiv:2504.12328v1 [cs.CL] 12 Apr 2025",
+  "paper_info": "2023, Comprehensive introduction to Reward Models in the LLM era",
   "layout": {
     "page_size": "A3",
-    "layout_type": "minimal_grid",
+    "layout_type": "dashboard_grid",
     "reading_order": "top_to_bottom_left_to_right"
   },
   "panels": [
     {
       "section": "Overview",
+      "headline": "First comprehensive survey focused on RMs in the LLM era",
       "content": [
-        "First comprehensive survey on Reward Models (RMs) in the Large Language Models (LLMs) era.",
-        "Covers taxonomy, applications, challenges, and future directions.",
-        "Aims to assist beginners and guide future research."
+        "Large Language Models (LLMs) have seen rapid development, enhancing AI capabilities and driving advances in various downstream tasks.",
+        "Alignment techniques are crucial for ensuring LLMs adhere to human values, and Reward Models (RMs) trained on human preference data can serve as proxies for human preferences.",
+        "RMs are essential for aligning LLMs with human values and have shown significant potential in various applications.",
+        "Future research should focus on improving the efficiency and quality of preference collection, enhancing reward modeling techniques, and exploring AI preferences.",
+        "High costs associated with human annotators for preference collection."
       ],
       "figure": null,
       "figure_id": "",
       "figure_caption": "",
-      "layout_hint": "text_only",
-      "body_font_scale": 1.0
+      "layout_hint": "text_only"
     },
     {
-      "section": "Research Background",
+      "section": "Motivation",
+      "headline": "RMs trained on human preference data can serve as proxies for human preferences",
       "content": [
-        "LLMs have driven advancements in various tasks.",
-        "Alignment techniques reduce human involvement in the alignment process.",
-        "RMs trained on human preferences provide reward signals for reinforcement learning."
+        "LLMs have enhanced AI capabilities and driven advances in various downstream tasks.",
+        "Alignment techniques are crucial for ensuring LLMs adhere to human values.",
+        "Human preferences are essential but costly and challenging to collect.",
+        "RMs can provide reward signals for reinforcement learning, guiding LLMs' behavior.",
+        "Combining AI and human preferences can enhance the quality and efficiency of RM training."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only",
-      "body_font_scale": 1.0
-    },
-    {
-      "section": "Research Problem",
-      "content": [
-        "Previous surveys lack systematic organization of RMs.",
-        "Need for a comprehensive introduction to RMs for beginners and future research."
-      ],
-      "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only",
-      "body_font_scale": 1.0
+      "figure_id": "Fig1",
+      "figure_caption": "An example of RM.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Method",
+      "headline": "Taxonomy of Reward Models, including Preference Collections, Reward Modeling, and Usage",
       "content": [
-        "Presents a taxonomy of RMs: preference collection, reward modeling, and usage.",
-        "Reviews related works and introduces an elaborate taxonomy."
+        "RMs can be trained on human preference data to provide reward signals for reinforcement learning.",
+        "Active learning techniques improve the efficiency of preference collection."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only",
-      "body_font_scale": 1.0
+      "figure_id": "Fig2",
+      "figure_caption": "Taxonomy of Reward Models, including Preference Collections, Reward Modeling, and Usage.",
+      "layout_hint": "with_figure"
     },
     {
-      "section": "Key Findings",
+      "section": "Experiments",
+      "headline": "Various methods for human preference collection, including active learning, data augmentation, and sequential pairwise comparison",
       "content": [
-        "Identifies key areas of research and provides a structured taxonomy for RMs.",
-        "Highlights the importance of improving preference collection efficiency and quality.",
-        "Discusses integration of AI and human preferences in reward modeling."
+        "Various methods for human preference collection are explored, including active learning, data augmentation, and sequential pairwise comparison.",
+        "Different types of RMs, such as discriminative, generative, and implicit reward models, are compared."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Comparison of advantages and disadvantages of the different granularity of RMs.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Generative RMs show promise in providing more nuanced and context-aware reward signals",
+      "content": [
+        "RMs trained on human preference data can effectively guide LLMs' behavior in alignment tasks.",
+        "Generative RMs provide more nuanced and context-aware reward signals."
       ],
       "figure": null,
       "figure_id": "",
       "figure_caption": "",
-      "layout_hint": "text_only",
-      "body_font_scale": 1.0
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Challenges",
+      "headline": "Potential distribution shift between initial policy and training dataset for RMs",
+      "content": [
+        "High costs associated with human annotators for preference collection.",
+        "Potential distribution shift between initial policy and training dataset for RMs.",
+        "Quality of AI preferences depends on the capabilities of the LLMs used.",
+        "Evaluating complex behaviors of superhuman models is challenging for humans.",
+        "Scaling up model parameters or training data does not guarantee improved alignment with human preferences."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
     },
     {
       "section": "Conclusion",
+      "headline": "RMs are essential for aligning LLMs with human values",
       "content": [
-        "Provides a comprehensive overview of RMs, including taxonomy, applications, and challenges.",
-        "Aims to assist beginners in understanding RMs and guide future research."
+        "RMs are essential for aligning LLMs with human values and have shown significant potential in various applications.",
+        "Future research should focus on improving the efficiency and quality of preference collection, enhancing reward modeling techniques, and exploring AI preferences."
       ],
       "figure": null,
       "figure_id": "",
       "figure_caption": "",
-      "layout_hint": "text_only",
-      "body_font_scale": 1.0
+      "layout_hint": "text_only"
     }
   ],
-  "figures": {},
-  "use_commenter": true,
+  "figures": {
+    "Fig1": {
+      "caption": "Figure 1: An example of RM.",
+      "type": "dataset_example",
+      "description": "示例图，展示了 RM 的一个例子。",
+      "best_matched_section": "Motivation",
+      "importance": "medium"
+    },
+    "Fig2": {
+      "caption": "Figure 2: Taxonomy of Reward Models, including Preference Collections, Reward Modeling, and Usage. See Figure 4 in Appendix for full version.",
+      "type": "method_diagram",
+      "description": "方法框架图，展示了奖励模型的分类，包括偏好收集、奖励建模和使用。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Table 1: Comparison of advantages and disadvantages of the different granularity of RMs",
+      "type": "comparison_table",
+      "description": "表格，比较了不同粒度奖励模型的优势和劣势。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
   "max_iterations": 4,
-  "save_debug_images": true,
-  "global_font_scale": 1.0
+  "save_debug_images": "true"
 }

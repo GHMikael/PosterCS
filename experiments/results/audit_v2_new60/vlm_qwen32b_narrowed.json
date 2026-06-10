@@ -1,0 +1,1076 @@
+[
+  {
+    "run_id": "20260609_022821_A_Comprehensive_Survey_of_Rewa_028f962461b9",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The bottom row of panels (Conclusion, Overview, Challenges) is misaligned with the top row, creating a broken grid structure with uneven column widths and unbalanced spacing.",
+      "secondary": "The 'Overview' panel in the bottom row is significantly wider than the 'Conclusion' and 'Challenges' panels, and its content is cramped, while the 'Results' panel in the top row has excessive white space, indicating uneven space use within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"text_overflow\", \"clipped_text\"],\n  \"evidence\": {\n    \"primary\": \"The bottom row of panels (Conclusion, Overview, Challenges) is misaligned with the top row, creating a broken grid structure with uneven column widths and unbalanced spacing.\",\n    \"secondary\": \"The 'Overview' panel in the bottom row is significantly wider than the 'Conclusion' and 'Challenges' panels, and its content is cramped, while the 'Results' panel in the top row has excessive white space, indicating uneven space use within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_023433_Test-Time_Preference_Optimizat_6b985b677181",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_023510_Seeing,_Listening,_Remembering_5b5ef16d0aec",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation / Background' panel has very loose bullet spacing and large empty space below the last bullet, while the 'Problem / Challenge' panel is tightly packed with text, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel has very loose bullet spacing and large empty space below the last bullet, while the 'Problem / Challenge' panel is tightly packed with text, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_023950_MLP_Memory_A_Retriever-Pretrai_ae89635e3e92",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation / Background' panel has large empty space below its bullet points, while the 'Problem / Challenge' panel is densely packed, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel has large empty space below its bullet points, while the 'Problem / Challenge' panel is densely packed, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024001_Generalist_Reward_Models_Found_657081bc5ee8",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Method' panel (panel 3) contains a large blank area below the text and figure, while the 'Motivation' and 'Problem' panels are densely packed with text, creating a lopsided visual weight within the top row."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel (panel 3) contains a large blank area below the text and figure, while the 'Motivation' and 'Problem' panels are densely packed with text, creating a lopsided visual weight within the top row.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024412_LLMS'_INTERNAL_STATES_RETAIN_T_a64e1943af91",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation / Background' panel has four bullet points with large spacing and empty space below, while the 'Problem / Challenge' panel is tightly packed with two bullets and minimal white space, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel has four bullet points with large spacing and empty space below, while the 'Problem / Challenge' panel is tightly packed with two bullets and minimal white space, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024809_One_SPACE_to_Rule_Them_All_Joi_b087d09deca9",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Experiments' panel is densely packed with text and a large table, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Experiments' panel is densely packed with text and a large table, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024834_Revisiting_Hallucination_Detec_ca5d974cf3fd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has four bullet points with large spacing and empty space below, while the 'Problem' and 'Method' panels are densely packed with text and diagrams, creating a lopsided visual weight within the top row."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has four bullet points with large spacing and empty space below, while the 'Problem' and 'Method' panels are densely packed with text and diagrams, creating a lopsided visual weight within the top row.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024836_Know_Your_Limits_A_Survey_of_A_345fd4c78f2e",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Overview' panel (7) is misaligned with the grid; its top edge is lower than the other panels in the bottom row, and its content is not vertically aligned with the 'Conclusion' (6) and 'Key Findings' (5) panels, creating a broken grid structure.",
+      "secondary": "In the 'Experiments' panel, the table is rendered too small to read its content clearly, and the 'Key Findings' panel has a large empty space below the text, indicating uneven space use within the panel."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Overview' panel (7) is misaligned with the grid; its top edge is lower than the other panels in the bottom row, and its content is not vertically aligned with the 'Conclusion' (6) and 'Key Findings' (5) panels, creating a broken grid structure.\",\n    \"secondary\": \"In the 'Experiments' panel, the table is rendered too small to read its content clearly, and the 'Key Findings' panel has a large empty space below the text, indicating uneven space use within the panel.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_025032_From_Efficiency_to_Adaptivity__3483ab1db1f8",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Method' panel contains a large figure that occupies most of its space, leaving minimal room for text, while the 'Problem' panel has sparse text with excessive white space, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel contains a large figure that occupies most of its space, leaving minimal room for text, while the 'Problem' panel has sparse text with excessive white space, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_025105_Crossing_the_Reward_Bridge_Exp_3931671c5534",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Method' and 'Experiments' panels are densely packed with text and figures, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Method' and 'Experiments' panels are densely packed with text and figures, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_025220_Is_Chain-of-Thought_Reasoning__0a77c3c5f24d",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel (1) has sparse content with large white space between bullets, while the 'Conclusion' panel (6) is densely packed with four bullet points, creating a lopsided visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel (1) has sparse content with large white space between bullets, while the 'Conclusion' panel (6) is densely packed with four bullet points, creating a lopsided visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_025510_TAKE_A_STEP_BACK_EVOKING_REASO_efd7e7bea9bb",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Panel 3 (Method / Framework) has a large empty space below the figure and above the bullet points, while Panel 4 (Experiments / Results) is densely packed with text and a chart, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Panel 3 (Method / Framework) has a large empty space below the figure and above the bullet points, while Panel 4 (Experiments / Results) is densely packed with text and a chart, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_025515_MEMTRACK_Evaluating_Long-Term__b8f5d698d757",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' and 'Problem' panels have very sparse bullet points with large gaps between them, while the 'Experiments' panel is densely packed with text and a small figure, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' and 'Problem' panels have very sparse bullet points with large gaps between them, while the 'Experiments' panel is densely packed with text and a small figure, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_025546_Constitutional_AI_Harmlessness_ffa46538873c",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Conclusion' panel has five dense bullet points with minimal spacing, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Conclusion' panel has five dense bullet points with minimal spacing, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_025852_ESSAYBENCH_Evaluating_Large_La_16f4e934923a",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The left column of panels (Motivation, Experiments) is significantly narrower than the right two columns (Problem, Method, Results, Conclusion), creating a misaligned grid structure with uneven column widths.",
+      "secondary": "The 'Motivation' panel has four bullet points with large spacing, while the 'Problem' panel's table is tightly packed, showing uneven space use within panels; additionally, the section headers are all the same size and color, making it hard to distinguish the main flow of the poster."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The left column of panels (Motivation, Experiments) is significantly narrower than the right two columns (Problem, Method, Results, Conclusion), creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"The 'Motivation' panel has four bullet points with large spacing, while the 'Problem' panel's table is tightly packed, showing uneven space use within panels; additionally, the section headers are all the same size and color, making it hard to distinguish the main flow of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_025904_Multi-Agent-as-Judge_Aligning__9ece80d6b03f",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation / Background' panel (left column, top) has three bullet points with large spacing and empty space below, while the 'Method / Framework' panel (middle column, top) has two bullet points and a figure, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel (left column, top) has three bullet points with large spacing and empty space below, while the 'Method / Framework' panel (middle column, top) has two bullet points and a figure, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_030028_Automated_Evaluation_of_Person_b3a1b1bcaa11",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has five bullet points with large spacing between them, while the 'Research Problem' panel has five points with tighter spacing, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing between them, while the 'Research Problem' panel has five points with tighter spacing, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_030306_Agent-as-a-Judge_Evaluate_Agen_1dee0b26a38b",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' and 'Problem' panels have large empty white spaces below their bullet points, while the 'Method' panel is densely packed with text and a figure, creating a lopsided visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' and 'Problem' panels have large empty white spaces below their bullet points, while the 'Method' panel is densely packed with text and a figure, creating a lopsided visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_030815_HELLOBENCH_EVALUATING_LONG_TEX_078a8e42438f",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has five bullet points with large spacing between them, while the 'Experiments' panel is densely packed with text and a large table, creating uneven visual weight within panels.",
+      "secondary": "The 'Conclusion' panel is significantly smaller than the 'HelloEval' and 'Limitations' panels below it, breaking the grid alignment; additionally, the section headers in the bottom row are not aligned to the same baseline as those in the top row."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing between them, while the 'Experiments' panel is densely packed with text and a large table, creating uneven visual weight within panels.\",\n    \"secondary\": \"The 'Conclusion' panel is significantly smaller than the 'HelloEval' and 'Limitations' panels below it, breaking the grid alignment; additionally, the section headers in the bottom row are not aligned to the same baseline as those in the top row.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_031113_DataGovBench_Benchmarking_LLM__0848906204dd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation / Background' panel has five bullet points with large spacing and empty space below, while the 'Problem / Challenge' panel has four points with tighter spacing and less empty space, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel has five bullet points with large spacing and empty space below, while the 'Problem / Challenge' panel has four points with tighter spacing and less empty space, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_031231_Teaching_Language_Models_to_Cr_1bb5aaf1ca62",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Method' panel is densely packed with text and a large figure, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Method' panel is densely packed with text and a large figure, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_031542_LeanRAG_Knowledge-Graph-Based__24e848eba9fe",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Results' panel (bottom-left) is misaligned with the grid; its top edge is not aligned with the 'Conclusion' panel (bottom-right), and the left margin is inconsistent with the top row panels, creating a broken grid structure.",
+      "secondary": "The 'Motivation' panel has overly loose spacing between bullet points, while the 'Method' panel's text is tightly packed, creating internal space imbalance; additionally, the section headers are visually similar, lacking a clear focal point for the reader."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Results' panel (bottom-left) is misaligned with the grid; its top edge is not aligned with the 'Conclusion' panel (bottom-right), and the left margin is inconsistent with the top row panels, creating a broken grid structure.\",\n    \"secondary\": \"The 'Motivation' panel has overly loose spacing between bullet points, while the 'Method' panel's text is tightly packed, creating internal space imbalance; additionally, the section headers are visually similar, lacking a clear focal point for the reader.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_031655_Query-Based_Router_by_Dual_Con_ca7853cdbd31",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_031955_Multimodal_Retrieval-Reflectio_90b3ba39356e",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation / Background' panel has very loose bullet spacing and large empty space below the last bullet, while the 'Method / Framework' panel is densely packed with text and a figure, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel has very loose bullet spacing and large empty space below the last bullet, while the 'Method / Framework' panel is densely packed with text and a figure, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_032530_Agentic_Search-Enhanced_Large__2fa60d8ceb94",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation / Background' panel has very loose spacing between bullet points and large empty space at the bottom, while the 'Problem / Challenge' panel is densely packed with text, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel has very loose spacing between bullet points and large empty space at the bottom, while the 'Problem / Challenge' panel is densely packed with text, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033143_Reachability_of_Independent_Se_5e8f4e632965",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Problem' and 'Method' panels are densely packed with text and figures, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Problem' and 'Method' panels are densely packed with text and figures, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033459_LongRAG_Enhancing_Retrieval-Au_20eda233c56a",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation / Background' panel has very loose bullet spacing with large empty space below, while the 'Key Findings' panel is densely packed with text and a table, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel has very loose bullet spacing with large empty space below, while the 'Key Findings' panel is densely packed with text and a table, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033644_AQA_Adaptive_Question_Answerin_7686221c4c02",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel contains 5 densely packed bullet points while the 'Problem' panel has only 3, and the 'Method' panel has a large figure with minimal text, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel contains 5 densely packed bullet points while the 'Problem' panel has only 3, and the 'Method' panel has a large figure with minimal text, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033812_Linear_Graph_Retrieval_Augment_26e5b004d601",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has three bullet points with large spacing and empty space below, while the 'Problem' panel is densely packed with text and minimal white space, creating uneven visual weight within panels."
+    },
+    "confidence": 0.85,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has three bullet points with large spacing and empty space below, while the 'Problem' panel is densely packed with text and minimal white space, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.85\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_033929_Graph-Guided_Concept_Selection_ec885703e8c7",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Method / Framework' panel has a large figure occupying most of its space, leaving the text bullets sparse and visually unbalanced, while the 'Problem / Challenge' panel has tightly packed text with minimal white space, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method / Framework' panel has a large figure occupying most of its space, leaving the text bullets sparse and visually unbalanced, while the 'Problem / Challenge' panel has tightly packed text with minimal white space, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_034053_Youtu-GraphRAG_Vertically_Unif_ab33db82d52d",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column of panels (Experiments, Conclusion) is significantly narrower than the left and center columns, creating a misaligned grid structure with unbalanced column widths.",
+      "secondary": "The 'Motivation' panel has sparse bullet points with large gaps, while the 'Contributions' panel is densely packed, creating internal space imbalance; the large numbered circles (e.g., 1, 2, 3, 4, 5, 6) are oversized and visually dominate over the content, distracting from the main text."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Experiments, Conclusion) is significantly narrower than the left and center columns, creating a misaligned grid structure with unbalanced column widths.\",\n    \"secondary\": \"The 'Motivation' panel has sparse bullet points with large gaps, while the 'Contributions' panel is densely packed, creating internal space imbalance; the large numbered circles (e.g., 1, 2, 3, 4, 5, 6) are oversized and visually dominate over the content, distracting from the main text.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_034235_Ask_in_Any_Modality_A_Comprehe_7cf7a1708c41",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "text_overload",
+    "secondary_issues": [
+      "space_imbalance",
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Multiple text blocks across panels (e.g., 'Conclusion', 'Overview', 'Taxonomy') are truncated with ellipses, indicating overflow and unreadable content due to excessive text density."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"space_imbalance\", \"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Multiple text blocks across panels (e.g., 'Conclusion', 'Overview', 'Taxonomy') are truncated with ellipses, indicating overflow and unreadable content due to excessive text density.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_minimal"
+  },
+  {
+    "run_id": "20260609_034408_Agentic_Context_Engineering_Ev_2ff43486cc66",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Problem' panel's chart occupies most of its space, creating uneven visual weight within panels."
+    },
+    "confidence": 0.85,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Problem' panel's chart occupies most of its space, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.85\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_034502_Human-in-the-loop_or_AI-in-the_a187d2011cf3",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Method' panel (center top) has three small, tightly packed sub-bullets with excessive white space above and below, while the 'Experiments' panel (right top) has two long lines of text with minimal spacing, creating a lopsided visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel (center top) has three small, tightly packed sub-bullets with excessive white space above and below, while the 'Experiments' panel (right top) has two long lines of text with minimal spacing, creating a lopsided visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_034637_Building_Production-Ready_AI_A_fcec57454c05",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' and 'Problem' panels have sparse content with large white space between bullet points, while the 'Experiments' panel is densely packed with text and a large table, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' and 'Problem' panels have sparse content with large white space between bullet points, while the 'Experiments' panel is densely packed with text and a large table, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_034844_EvoAgentX_An_Automated_Framewo_3113cc1e4e25",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column (Conclusion panel) is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths.",
+      "secondary": "The 'Method' panel has excessive white space above the figure and below the text, while the 'Experiments' panel is densely packed, indicating uneven space distribution within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column (Conclusion panel) is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"The 'Method' panel has excessive white space above the figure and below the text, while the 'Experiments' panel is densely packed, indicating uneven space distribution within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_034941_Latent_Collaboration_in_Multi-_425eabae1cf5",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column of panels (Experiments, Conclusion) is significantly narrower than the left and middle columns, creating a misaligned grid structure with uneven column widths.",
+      "secondary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Results' panel is densely packed with text and a small figure, indicating uneven space use within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Experiments, Conclusion) is significantly narrower than the left and middle columns, creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Results' panel is densely packed with text and a small figure, indicating uneven space use within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035207_Tree_Search_for_LLM_Agent_Rein_01c4c43c1418",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Method' panel (3) has a large empty space below the figure and bullet point, while the 'Motivation' (1) and 'Problem' (2) panels are densely packed with text, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel (3) has a large empty space below the figure and bullet point, while the 'Motivation' (1) and 'Problem' (2) panels are densely packed with text, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035303_INFORMATION_GAIN-BASED_POLICY__91fc4ebf7312",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column of panels (Results, Conclusion) is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths.",
+      "secondary": "Panel 3 (Experiments) has a large empty space above its content, while Panel 4 (Results) is densely packed with text and a small figure, showing uneven internal space distribution."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Results, Conclusion) is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"Panel 3 (Experiments) has a large empty space above its content, while Panel 4 (Results) is densely packed with text and a small figure, showing uneven internal space distribution.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035514_Adaptive_Multi-Agent_Reasoning_a5e187809673",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column of panels (Experiments, Conclusion) is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight across the canvas.",
+      "secondary": "The 'Method' panel contains a large empty space below the diagram placeholder, while the 'Results' panel has a small, low-resolution chart that is too small to read details, indicating both space imbalance and asset size issues."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Experiments, Conclusion) is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight across the canvas.\",\n    \"secondary\": \"The 'Method' panel contains a large empty space below the diagram placeholder, while the 'Results' panel has a small, low-resolution chart that is too small to read details, indicating both space imbalance and asset size issues.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035626_BELLE_A_Bi-Level_Multi-Agent_R_48c95073681f",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column (Overview) is significantly narrower than the other columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight.",
+      "secondary": "Panel 7 (Overview) is nearly empty with only three bullet points, while other panels like 3 (Experiments) and 4 (Results) are densely packed with text and figures, indicating uneven space usage within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column (Overview) is significantly narrower than the other columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight.\",\n    \"secondary\": \"Panel 7 (Overview) is nearly empty with only three bullet points, while other panels like 3 (Experiments) and 4 (Results) are densely packed with text and figures, indicating uneven space usage within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035850_Tongyi_DeepResearch_An_Agentic_2cba933bebbd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Results' panel has only two bullet points and a large chart, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Results' panel has only two bullet points and a large chart, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_040432_Difficulty-Aware_Agentic_Orche_a37cd9381ae1",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column (panel 7) is significantly narrower than the other panels, creating a misaligned grid structure with uneven column widths.",
+      "secondary": "Panel 7 (Overview) is nearly empty with large white space, while panels like 'Motivation' and 'Experimental Setup' are densely packed with text, indicating uneven space use within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column (panel 7) is significantly narrower than the other panels, creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"Panel 7 (Overview) is nearly empty with large white space, while panels like 'Motivation' and 'Experimental Setup' are densely packed with text, indicating uneven space use within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_040805_Search_Self-play_Pushing_the_F_73c40da4d2fd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column is significantly underutilized, with large blank white space below the 'Results' panel, indicating a broken grid structure where panels do not fill the canvas evenly.",
+      "secondary": "The 'Motivation' panel has tightly packed bullet points while the 'Experiments' panel has sparse content with large empty space above the table, showing uneven space use within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column is significantly underutilized, with large blank white space below the 'Results' panel, indicating a broken grid structure where panels do not fill the canvas evenly.\",\n    \"secondary\": \"The 'Motivation' panel has tightly packed bullet points while the 'Experiments' panel has sparse content with large empty space above the table, showing uneven space use within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_041103_InfiFusion_A_Unified_Framework_91741a511b2b",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation / Background' panel has five bullet points with large spacing and empty space below, while the 'Problem / Challenge' panel is densely packed with three points, creating uneven visual weight within panels."
+    },
+    "confidence": 0.85,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel has five bullet points with large spacing and empty space below, while the 'Problem / Challenge' panel is densely packed with three points, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.85\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_042727_CODE2VIDEO_A_CODE-CENTRIC_PARA_32b909330b0a",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is tightly packed, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is tightly packed, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_042935_A_Survey_of_Large_Language_Mod_5736843ad823",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Research Background' and 'Research Problem' panels have very sparse content with large empty white space, while the 'Method' and 'Applications' panels are densely packed with text and figures, creating a lopsided visual weight across the top row."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Research Background' and 'Research Problem' panels have very sparse content with large empty white space, while the 'Method' and 'Applications' panels are densely packed with text and figures, creating a lopsided visual weight across the top row.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_043024_BLIP_Bootstrapping_Language-Im_3771d1c601a0",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a large figure, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a large figure, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_043303_Rethinking_Progression_of_Memo_21045ec2feae",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column of panels (Experiments, Conclusion) is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight across the canvas.",
+      "secondary": [
+        "In the 'Method' panel, the figure and text are tightly packed, while the 'Motivation' panel has large empty space above the bullet points, indicating uneven space usage within panels.",
+        "The table in the 'Results' panel is too small to read its content clearly, especially the column headers and row labels."
+      ]
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Experiments, Conclusion) is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight across the canvas.\",\n    \"secondary\": [\n      \"In the 'Method' panel, the figure and text are tightly packed, while the 'Motivation' panel has large empty space above the bullet points, indicating uneven space usage within panels.\",\n      \"The table in the 'Results' panel is too small to read its content clearly, especially the column headers and row labels.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_044437_Evaluating_LLM_Agent_Personali_91d748283c90",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column (Experiments and Conclusion) is significantly narrower than the left and middle columns, creating a misaligned grid structure with uneven column widths."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column (Experiments and Conclusion) is significantly narrower than the left and middle columns, creating a misaligned grid structure with uneven column widths.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_050055_Evaluating_LLM_Agents_as_Lifel_3015deb5f266",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is densely packed with text and a table, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is densely packed with text and a table, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_050619_AGENTIC_RETRIEVAL-AUGMENTED_GE_c550595ca0d9",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column (panel 7) is significantly narrower than the other three columns, creating a misaligned grid structure with uneven column widths.",
+      "secondary": "Panel 3 (Results) has a large empty space above the figure and below the title, while Panel 6 (Core Components) is densely packed with text and a figure, showing uneven space distribution within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column (panel 7) is significantly narrower than the other three columns, creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"Panel 3 (Results) has a large empty space above the figure and below the title, while Panel 6 (Core Components) is densely packed with text and a figure, showing uneven space distribution within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_053045_RAG-ANYTHING_ALL-IN-ONE_RAG_FR_bd5861c75187",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Problem' panel has large empty space below its three bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Problem' panel has large empty space below its three bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_054045_Retrieval-Augmented_Generation_935b29f80d65",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "text_overload",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Results' panel contains a dense, unreadable table with tiny text that overflows its container, making it impossible to read without zooming in."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"text_overload\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Results' panel contains a dense, unreadable table with tiny text that overflows its container, making it impossible to read without zooming in.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_054836_Reimagining_Research_Papers_As_2a16bc35f9ac",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The rightmost column of panels (Results and Case Studies) is significantly narrower than the left and center columns, creating a misaligned grid structure with uneven column widths.",
+      "secondary": "The 'Method' panel has a large empty space below its figure, while the 'Conclusion' panel has excessive white space, indicating uneven internal space distribution; additionally, the large numbered circles (e.g., 1, 2, 3, 4, 5, 6) are overly emphasized, drawing attention away from the content."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Results and Case Studies) is significantly narrower than the left and center columns, creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"The 'Method' panel has a large empty space below its figure, while the 'Conclusion' panel has excessive white space, indicating uneven internal space distribution; additionally, the large numbered circles (e.g., 1, 2, 3, 4, 5, 6) are overly emphasized, drawing attention away from the content.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_061840_Virtuous_Machines_Towards_Arti_59e544c90c8c",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation / Background' panel (left column, top) has sparse content with large gaps between bullet points, while the 'Experiments' and 'Results' panels are densely packed with text and figures, creating a lopsided visual weight within the top row."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel (left column, top) has sparse content with large gaps between bullet points, while the 'Experiments' and 'Results' panels are densely packed with text and figures, creating a lopsided visual weight within the top row.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_064924_Align_before_Fuse_Vision_and_L_71aaa19baf2b",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_065706_GME_Improving_Universal_Multim_cae3c40103dc",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Problem' panel's table is tightly packed and visually crowded, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Problem' panel's table is tightly packed and visually crowded, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_212513_EduIllustrate_Towards_Scalable_91ebd47f4903",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  }
+]

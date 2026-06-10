@@ -1,10 +1,10 @@
 {
-  "asset_token": "075424903a2c4eaa",
+  "asset_token": "ce842f6e066c4a92",
   "template": "template_classic",
   "color_theme": "academic_blue",
   "poster_title": "Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory",
   "authors": "Lin Long, Yichen He, Wentao Ye, Yiyuan Pan, Yuan Lin, Hang Li, Junbo Zhao, Wei Li",
-  "paper_info": "Date: October 10, 2025; arXiv:2508.09736v4 [cs.CV]",
+  "paper_info": "Date: October 10, 2025; Correspondence: linyuan.0@bytedance.com; Project Page: https://m3-agent.github.io",
   "layout": {
     "page_size": "A3",
     "layout_type": "classic_grid",
@@ -13,10 +13,13 @@
   "panels": [
     {
       "section": "Motivation / Background",
+      "headline": "Continuous perception and long-term memory are essential for intelligent agents to perform complex tasks.",
       "content": [
-        "Multimodal agents require real-time processing of visual and auditory inputs.",
-        "Traditional methods focus on low-level details, lacking long-term context.",
-        "LVQA benchmarks need to evaluate higher-level cognitive abilities."
+        "Existing multimodal agents often focus on low-level visual details.",
+        "This leads to ambiguity and inconsistency in long-term contexts.",
+        "M3-Agent aims to address these issues with a novel framework.",
+        "It integrates real-time visual and auditory processing with long-term memory.",
+        "The goal is to enhance the agent's ability to construct and maintain coherent world knowledge."
       ],
       "figure": null,
       "figure_id": "",
@@ -25,9 +28,13 @@
     },
     {
       "section": "Problem / Challenge",
+      "headline": "Handling infinite information processing in real-time multimodal streams.",
       "content": [
-        "Handle infinite multimodal input streams in real-time.",
-        "Incrementally build and maintain consistent world knowledge."
+        "Real-time processing of multimodal data is challenging.",
+        "Agents must construct coherent and consistent world knowledge.",
+        "This is particularly difficult in highly dynamic environments.",
+        "The paper proposes solutions to these challenges.",
+        "It introduces a new benchmark for evaluating these capabilities."
       ],
       "figure": null,
       "figure_id": "",
@@ -36,45 +43,58 @@
     },
     {
       "section": "Method / Framework",
+      "headline": "M3-Agent continuously processes real-time visual and auditory inputs to construct and update episodic and semantic memories.",
       "content": [
-        "M3-Agent processes real-time inputs to construct episodic and semantic memories.",
-        "Episodic memory captures concrete events; semantic memory stores general knowledge.",
-        "Entity-centric memory structure enables coherent reasoning over time.",
-        "Reinforcement learning for multi-turn reasoning and iterative memory retrieval."
+        "Episodic memory captures concrete events.",
+        "Semantic memory extracts general knowledge from the environment.",
+        "Memory is organized in an entity-centric structure.",
+        "This enables consistent and coherent long-term knowledge.",
+        "The system consists of two parallel processes: memorization and control."
       ],
       "figure": null,
-      "figure_id": "Fig7",
-      "figure_caption": "DAPO training process: average scores (training set) and accuracy (dev set) curves",
-      "layout_hint": "text_top_image_bottom"
+      "figure_id": "Fig2",
+      "figure_caption": "Architecture of M3-Agent, comprising a multimodal large language model (MLLM) and a multimodal long-term memory.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Experiments / Results",
+      "headline": "M3-Agent outperforms the strongest baseline, Gemini-GPT4o-Hybrid, by 6.7%, 7.7%, and 5.3% on M3-Bench-robot, M3-Bench-web, and VideoMME-long, respectively.",
       "content": [
-        "Evaluated on M3-Bench: 100 robot-perspective videos, 920 web-sourced videos.",
-        "M3-Bench includes five question types for memory-based reasoning.",
-        "M3-Agent outperforms Gemini-GPT4o-Hybrid by 6.7%, 7.7%, and 5.3% on M3-Bench-robot, M3-Bench-web, and VideoMME-long."
+        "Two benchmarks: M3-Bench-robot (100 videos) and M3-Bench-web (920 videos).",
+        "M3-Bench-robot features long videos from realistic robotic work scenarios.",
+        "M3-Bench-web expands video diversity for broader evaluation.",
+        "Ablation study shows significant performance drops when removing semantic memory.",
+        "Results demonstrate superior performance across multiple benchmarks."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig9",
+      "figure_caption": "Results on M3-Bench-robot, M3-Bench-web, and VideoMME-long, comparing M3-Agent with other methods.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Key Findings",
+      "headline": "Removing semantic memory reduces accuracy by 17.1%, 19.2%, and 13.1% on M3-Bench-robot, M3-Bench-web, and VideoMME-long, respectively.",
       "content": [
-        "Ablation studies highlight the importance of semantic memory and reinforcement learning.",
-        "M3-Agent demonstrates superior performance in long-term memory and reasoning tasks."
+        "Semantic memory is crucial for performance.",
+        "Ablation studies highlight the importance of each component.",
+        "DAPO training algorithm outperforms GRPO.",
+        "Performance gains from DAPO scale with model size.",
+        "Removing inter-turn instruction and reasoning negatively impacts performance."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig10",
+      "figure_caption": "Impact of different memorization models on final performance.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Conclusion / Takeaways",
+      "headline": "M3-Agent advances multimodal agents toward more human-like long-term memory and reasoning capabilities.",
       "content": [
-        "M3-Agent advances multimodal agents toward human-like long-term memory and reasoning.",
-        "Provides insights for designing practical multimodal agents with long-term memory."
+        "M3-Agent introduces a novel multimodal agent framework with long-term memory.",
+        "It develops M3-Bench, a new LVQA benchmark for evaluating memory and reasoning.",
+        "The framework demonstrates superior performance across multiple benchmarks.",
+        "It provides valuable insights for the practical design of intelligent agents.",
+        "Future work will focus on improving long-term consistency in dynamic environments."
       ],
       "figure": null,
       "figure_id": "",
@@ -83,12 +103,26 @@
     }
   ],
   "figures": {
-    "Fig7": {
-      "caption": "Figure 4 Average scores (on training set) and accuracy (on dev set) curves during the DAPO training process. The smoothing method of the curve in the left figure is the exponential moving average(EMA) formula that aligns with the one used in WandB, and the smoothing weight is set to 0.9",
+    "Fig2": {
+      "caption": "Figure 1 Architecture of M3-Agent, comprising a multimodal large language model (MLLM) and a multimodal long-term memory. The system consists of two parallel processes: memorization and control.",
+      "type": "architecture",
+      "description": "M3-Agent 的架构图，包括多模态大语言模型 (MLLM) 和多模态长期记忆。系统由两个并行过程组成：记忆和控制。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig9": {
+      "caption": "Table 5 Results on M3-Bench-robot, M3-Bench-web, and VideoMME-long. We also present a comparison of all methods across different question types in M3-Bench: multi-evidence reasoning (ME), multi-hop reasoning (MH), cross-modal reasoning (CM), person understanding (PU), and general knowledge extraction (GK).",
       "type": "result_chart",
-      "description": "显示 DAPO 训练过程中训练集的平均得分和开发集的准确率曲线，左图使用指数移动平均（EMA）平滑方法，平滑权重为 0.9",
+      "description": "M3-Bench-robot、M3-Bench-web 和 VideoMME-long 的结果表，并展示了在不同问题类型上的方法比较，包括多证据推理、多跳推理、跨模态推理、人物理解以及一般知识提取。",
       "best_matched_section": "Results",
       "importance": "high"
+    },
+    "Fig10": {
+      "caption": "Table 6 Impact of different memorization models on final performance. The control model is fixed as control-32b-rl.",
+      "type": "ablation_study",
+      "description": "不同记忆模型对最终性能影响的表格，控制模型固定为 control-32b-rl。",
+      "best_matched_section": "Results",
+      "importance": "medium"
     }
   },
   "use_commenter": "true",

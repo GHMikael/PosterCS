@@ -1,0 +1,157 @@
+{
+  "asset_token": "ec5668bf22f14775",
+  "template": "template_minimal",
+  "color_theme": "minimal_gray",
+  "poster_title": "Ask in Any Modality: A Comprehensive Survey on Multimodal Retrieval-Augmented Generation",
+  "authors": "Mohammad Mahdi Abootorabi, Amirhoseiri, Mahdi Dehghani, Mohammadali Mohammadkhani, Bardia Mohammadi, Omid Ghahroodi, Mahdieh Soleymani Baghshah, Ehsaneddin Asgari",
+  "paper_info": "2023; Survey of Multimodal RAG systems",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Overview",
+      "headline": "Comprehensive review of multimodal RAG systems",
+      "content": [
+        "Covers task formulation, datasets, benchmarks, applications, and key innovations.",
+        "Provides a structured taxonomy of state-of-the-art models.",
+        "Includes open-access resources and identifies research gaps."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Motivation",
+      "headline": "Enhancing LLMs with dynamic external knowledge",
+      "content": [
+        "LLMs have revolutionized NLP but suffer from hallucinations and outdated knowledge.",
+        "RAG mitigates these issues by integrating external dynamic information.",
+        "Multimodal learning enables systems to integrate and reason over heterogeneous data sources.",
+        "Recent advancements in transformers and large-scale datasets have accelerated RAG development.",
+        "Cross-modal alignment and reasoning present unique challenges and opportunities."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Pipeline for multimodal RAG",
+      "content": [
+        "Documents are encoded using modality-specific encoders.",
+        "A shared semantic space is created for cross-modal alignment."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Overview of the multimodal RAG pipeline, illustrating key techniques and recent advancements.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Taxonomy",
+      "headline": "Classification of recent advances",
+      "content": [
+        "Taxonomy of recent advances in multimodal RAG.",
+        "Detailed information in Appendix A."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Taxonomy of recent advances in Multimodal RAG. Refer to Appendix (§A) for further details.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Applications",
+      "headline": "Application domains for multimodal RAG",
+      "content": [
+        "Taxonomy of application domains for multimodal RAG systems.",
+        "Diverse applications in fields such as visual QA, video understanding, and more."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Taxonomy of application domains for Multimodal Retrieval-Augmented Generation systems.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Datasets",
+      "headline": "Popular datasets in multimodal RAG",
+      "content": [
+        "Overview of popular datasets used in multimodal RAG research.",
+        "Diverse datasets support tasks like multimodal summarization and visual QA."
+      ],
+      "figure": null,
+      "figure_id": "Fig5",
+      "figure_caption": "Overview of Popular Datasets in Multimodal RAG Research.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Benchmarks",
+      "headline": "Popular benchmarks in multimodal RAG",
+      "content": [
+        "Overview of popular benchmarks used in multimodal RAG research.",
+        "Benchmarks evaluate system performance across various tasks and domains."
+      ],
+      "figure": null,
+      "figure_id": "Fig6",
+      "figure_caption": "Overview of Popular Benchmarks in Multimodal RAG Research.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Enhancing LLMs with multimodal RAG",
+      "content": [
+        "Multimodal RAG enhances LLM capabilities by integrating dynamic external knowledge across multiple modalities.",
+        "The survey provides a foundation for developing more capable and reliable AI systems in this evolving field.",
+        "Computational costs and recall degradation remain significant challenges.",
+        "Future research should focus on more sophisticated quantization techniques and efficient retrieval methods."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig2": {
+      "caption": "Figure 1: Overview of the multimodal RAG pipeline, illustrating key techniques and recent advancements.",
+      "type": "pipeline",
+      "description": "多模态 RAG 管道的概述，展示了关键技术和最新进展。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Figure 2: Taxonomy of recent advances in Multimodal RAG. Refer to Appendix (§A) for further details.",
+      "type": "architecture",
+      "description": "多模态 RAG 最新进展的分类，详细信息参见附录 A。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Figure 3: Taxonomy of application domains for Multimodal Retrieval-Augmented Generation systems.",
+      "type": "architecture",
+      "description": "多模态检索增强生成系统应用领域的分类。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig5": {
+      "caption": "Table 1: Overview of Popular Datasets in Multimodal RAG Research.",
+      "type": "comparison_table",
+      "description": "多模态 RAG 研究中常用数据集的概述。",
+      "best_matched_section": "Experiments",
+      "importance": "medium"
+    },
+    "Fig6": {
+      "caption": "Table 2: Overview of Popular Benchmarks in Multimodal RAG Research.",
+      "type": "comparison_table",
+      "description": "多模态 RAG 研究中常用基准的概述。",
+      "best_matched_section": "Experiments",
+      "importance": "medium"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

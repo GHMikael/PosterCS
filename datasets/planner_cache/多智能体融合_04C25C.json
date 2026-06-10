@@ -1,0 +1,123 @@
+{
+  "asset_token": "954526266ae74568",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "InfiFusion: A Unified Framework for Enhanced Cross-Model Reasoning via LLM Fusion",
+  "authors": "Zhaoyi Yan, Yiming Zhang, Baoyi He, Yuhao Fu, Qi Zhou, Zhijie Sang, Chunlin Ji, Shengyu Zhang, Fei Wu, Hongxia Yang",
+  "paper_info": "2024, Reallm Labs, The Hong Kong Polytechnic University, Zhejiang University, Harbin Institute of Technology",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation / Background",
+      "headline": "LLMs excel in various tasks but no single model excels in all domains.",
+      "content": [
+        "LLMs have shown success in various tasks but no single model excels in all domains.",
+        "Training a comprehensive model from scratch requires significant computational resources.",
+        "Traditional fusion methods rely on direct integration of model parameters, which assumes uniform architectures and often fails to capture diverse strengths.",
+        "Knowledge distillation methods are limited by vocabulary and token alignment issues.",
+        "Current LLM fusion methods are limited by rigid assumptions and inefficiencies."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem / Challenge",
+      "headline": "Traditional methods fail to effectively integrate the strengths of diverse domain-specialized models.",
+      "content": [
+        "Current LLM fusion methods are limited by rigid assumptions and inefficiencies.",
+        "Traditional methods fail to effectively integrate the strengths of diverse domain-specialized models.",
+        "Knowledge distillation methods are sensitive to vocabulary and token alignment, reducing their applicability."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method / Framework",
+      "headline": "InfiFusion enhances ULD with Top-K selection and Logits Standardization.",
+      "content": [
+        "InfiFusion enhances Universal Logit Distillation (ULD) with Top-K selection and Logits Standardization.",
+        "Top-K selection filters out irrelevant logits, reducing noise and computational cost.",
+        "Logits Standardization ensures better alignment between models by normalizing logits across diverse models.",
+        "Two fusion strategies are proposed: Pairwise Fusion (InfiFusion p) and Unified Fusion (InfiFusion u)."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Illustration of the InfiFusion framework, incorporating Top-K selection and logits standardization. Two fusion strategies are proposed: Pairwise Fusion and Unified Fusion.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments / Results",
+      "headline": "InfiFusion outperformed state-of-the-art models across all 11 benchmarks.",
+      "content": [
+        "Experiments were conducted on 11 widely applied benchmarks covering reasoning, coding, mathematics, and instruction-following tasks.",
+        "The pivot models used were Phi-4 and Qwen-2.5-14B-Instruct.",
+        "InfiFusion achieved superior performance while significantly reducing computational costs to only 160 H800 GPU hours."
+      ],
+      "figure": null,
+      "figure_id": "Fig5",
+      "figure_caption": "Performance of models on state-of-the-art benchmarks, with GPU hours estimated on the GPU H800. InfiFusion u achieves nearly identical performance (79.92 vs. 79.96) compared to InfiFusion p &TA, while utilizing only approximately 35% of the GPU hours.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "Logits Standardization and Top-K Selection significantly impact InfiFusion u performance.",
+      "content": [
+        "Logits Standardization and Top-K Selection significantly impact InfiFusion u performance.",
+        "InfiFusion demonstrates significant performance improvements and computational efficiency across multiple benchmarks."
+      ],
+      "figure": null,
+      "figure_id": "Fig6",
+      "figure_caption": "Impact of Logits Standardization and Top-K Selection on InfiFusion u",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion / Takeaways",
+      "headline": "InfiFusion is an efficient and effective framework for fusing domain-specialized LLMs.",
+      "content": [
+        "InfiFusion is an efficient and effective framework for fusing domain-specialized LLMs into a single pivot model.",
+        "The proposed methods significantly enhance performance and reduce computational costs compared to traditional approaches.",
+        "InfiFusion improves knowledge transfer between domain-specialized models by enhancing ULD with Top-K selection and Logits Standardization.",
+        "Two fusion strategies (Pairwise Fusion and Unified Fusion) are proposed, each with distinct advantages.",
+        "InfiFusion demonstrates significant performance improvements and computational efficiency across multiple benchmarks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig3": {
+      "caption": "Illustration of the InfiFusion framework, incorporating Top-K selection and logits standardization. Two fusion strategies are proposed: Pairwise Fusion and Unified Fusion.",
+      "type": "method_diagram",
+      "description": "展示了 InfiFusion 框架，包括 Top-K 选择和 logits 标准化。提出了两种融合策略：Pairwise Fusion 和 Unified Fusion。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig5": {
+      "caption": "Performance of models on state-of-the-art benchmarks, with GPU hours estimated on the GPU H800. InfiFusion u achieves nearly identical performance (79.92 vs. 79.96) compared to InfiFusion p &TA, while utilizing only approximately 35% of the GPU hours.",
+      "type": "comparison_table",
+      "description": "展示了不同模型在最先进基准上的性能，并估计了 GPU 小时。InfiFusion u 的性能接近 InfiFusion p &TA，但仅使用了约 35% 的 GPU 小时。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig6": {
+      "caption": "Impact of Logits Standardization and Top-K Selection on InfiFusion u",
+      "type": "ablation_study",
+      "description": "研究了 logits 标准化和 Top-K 选择对 InfiFusion u 的影响。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

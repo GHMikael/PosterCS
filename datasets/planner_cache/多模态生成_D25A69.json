@@ -1,0 +1,130 @@
+{
+  "asset_token": "6e062decac88434e",
+  "template": "template_dashboard",
+  "layout_variant": "auto",
+  "color_theme": "academic_blue",
+  "emphasis_level": "normal",
+  "poster_title": "CODE2VIDEO: A CODE-CENTRIC PARADIGM FOR EDUCATIONAL VIDEO GENERATION",
+  "authors": "Yanzhe Chen, Kevin Qinghong Lin, Mike Zheng Shou",
+  "paper_info": "Show Lab, National University of Singapore, 2023",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "Recent generative models struggle with professional educational video synthesis.",
+        "Educational videos require deep domain expertise and step-by-step reasoning.",
+        "Multi-agent pipelines show promise in complex video generation tasks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "Executable Python code as the unifying medium for generating educational videos."
+    },
+    {
+      "section": "Problem",
+      "content": [
+        "Challenges in creating high-quality educational videos that are both coherent and clear.",
+        "Evaluating educational videos beyond appearance to ensure effectiveness and alignment."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "Maintaining temporal coherence and spatial clarity in educational videos."
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Code2Video uses executable Python code for generating educational videos.",
+        "Planner structures content into coherent flows and prepares visual assets.",
+        "Coder translates instructions into Manim code for precise visualizations.",
+        "Critic refines spatial layout and clarity using visual anchor prompts."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Overview of Code2Video: A code-centric paradigm for educational video generation, where Planner ensures temporal flow, Coder bridges instructions to executable animations, and Critic refines spatial layout.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Code2Video framework with Planner, Coder, and Critic agents."
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "MMMC benchmark consists of 13 subject categories with exemplar learning topics.",
+        "Evaluation metrics include VLM-as-a-Judge aesthetic scores, code efficiency, and TeachQuiz for knowledge transfer."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Comprehensive overview of the MMMC dataset, including subject category distribution, a word cloud of learning topics, and average topic length per category.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "MMMC benchmark with 13 subject categories and multi-dimensional metrics."
+    },
+    {
+      "section": "Results",
+      "content": [
+        "Code2Video outperforms human-crafted tutorials in TeachQuiz scores.",
+        "Generated videos are comparable to professional tutorials in human studies."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Score gap between Learning-from-Video and Unlearning stages in the TeachQuiz evaluation.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "40% improvement in TeachQuiz scores over direct code generation."
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "Code2Video offers a new paradigm for educational video generation.",
+        "The MMMC benchmark provides a comprehensive evaluation framework.",
+        "The approach relies on Manim, which may not be suitable for all content.",
+        "Effectiveness may vary across subject domains and learning styles."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "Scalable, interpretable, and controllable approach to generating educational videos."
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Overview of Code2Video: A code-centric paradigm for educational video generation, where Planner ensures temporal flow, Coder bridges instructions to executable animations, and Critic refines spatial layout.",
+      "type": "method_diagram",
+      "description": "An overview diagram of the Code2Video system, highlighting the roles of Planner, Coder, and Critic in generating educational videos.",
+      "best_matched_section": "Method",
+      "importance": "high",
+      "audit_status": ""
+    },
+    "Fig2": {
+      "caption": "Comprehensive overview of the MMMC dataset, including subject category distribution, a word cloud of learning topics, and average topic length per category.",
+      "type": "architecture",
+      "description": "A comprehensive overview of the MMMC dataset, including subject category distribution, a word cloud of learning topics, and average topic length per category.",
+      "best_matched_section": "Method",
+      "importance": "high",
+      "audit_status": ""
+    },
+    "Fig3": {
+      "caption": "Score gap between Learning-from-Video and Unlearning stages in the TeachQuiz evaluation.",
+      "type": "result_chart",
+      "description": "A chart showing the score gap between the Learning-from-Video and Unlearning stages in the TeachQuiz evaluation.",
+      "best_matched_section": "Results",
+      "importance": "high",
+      "audit_status": ""
+    }
+  },
+  "use_commenter": true,
+  "max_iterations": 4,
+  "save_debug_images": true,
+  "global_font_scale": 1.0
+}

@@ -1,0 +1,130 @@
+{
+  "asset_token": "0254ef5bd3614736",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation",
+  "authors": "Junnan Li, Dongxu Li, Caiming Xiong, Steven Hoi",
+  "paper_info": "Salesforce Research, 2022",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Unified VLP for both understanding and generation tasks",
+      "content": [
+        "Most VLP models excel in either understanding or generation, but not both.",
+        "Performance improvements often come from scaling up with noisy web data.",
+        "Proposes a new framework to address these limitations.",
+        "Aims to transfer to both understanding and generation tasks effectively.",
+        "Introduces a method to generate and filter synthetic captions."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Multimodal mixture of encoder-decoder (MED) model",
+      "content": [
+        "Proposes a new VLP framework called BLIP.",
+        "Introduces a MED model that can operate as a unimodal encoder, image-grounded text encoder, or image-grounded text decoder."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Pre-training model architecture and objectives of BLIP (same parameters have the same color).",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Dataset Bootstrapping",
+      "headline": "CapFilt for generating and filtering synthetic captions",
+      "content": [
+        "Develops a dataset bootstrapping method called CapFilt.",
+        "Uses a Captioner to generate synthetic captions for web images.",
+        "Uses a Filter to remove noisy captions.",
+        "Captioner and Filter are initialized from the same pre-trained model and finetuned individually."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Learning framework of BLIP. Captioner and Filter are initialized from the same pre-trained model and finetuned individually.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "State-of-the-art results on image-text retrieval (+2.7% in average recall@1)",
+      "content": [
+        "Conducted extensive experiments on a wide range of vision-language tasks.",
+        "Evaluated on image-text retrieval, image captioning, and visual question answering.",
+        "Demonstrated strong zero-shot performance on video-language tasks."
+      ],
+      "figure": null,
+      "figure_id": "Fig12",
+      "figure_caption": "Zero-shot image-text retrieval results on Flickr30K.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Achieved state-of-the-art results on VQA (+1.6% in VQA score)",
+      "content": [
+        "Achieved state-of-the-art results on image-text retrieval (+2.7% in average recall@1).",
+        "Achieved state-of-the-art results on image captioning (+2.8% in CIDEr).",
+        "Achieved state-of-the-art results on VQA (+1.6% in VQA score).",
+        "Demonstrated strong zero-shot performance on video-language tasks."
+      ],
+      "figure": null,
+      "figure_id": "Fig15",
+      "figure_caption": "Comparison with state-of-the-art methods on VQA and NLVR 2.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "BLIP offers a flexible and effective approach to VLP",
+      "content": [
+        "BLIP provides a flexible and effective approach to vision-language pre-training.",
+        "The proposed methods significantly improve performance on a wide range of tasks.",
+        "Demonstrates strong zero-shot capabilities.",
+        "The effectiveness of CapFilt may depend on the quality of the pre-trained MED model."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig2": {
+      "caption": "Pre-training model architecture and objectives of BLIP (same parameters have the same color). We propose multimodal mixture of encoder-decoder, a unified vision-language model which can operate in one of the three functionalities: (1) Unimodal encoder is trained with an image-text contrast",
+      "type": "architecture",
+      "description": "展示了 BLIP 预训练模型的架构和目标，包括多模态编码器-解码器混合模型。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Learning framework of BLIP. We introduce a captioner to produce synthetic captions for web images, and a filter to remove noisy image-text pairs. The captioner and filter are initialized from the same pre-trained model and finetuned individually on a small-scale human-annotated dataset. Th",
+      "type": "method_diagram",
+      "description": "展示了 BLIP 的学习框架，包括生成合成图注的 Captioner 和去除噪声对的 Filter 的初始化和微调过程。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig12": {
+      "caption": "Table 6. Zero-shot image-text retrieval results on Flickr30K.",
+      "type": "result_chart",
+      "description": "展示了在 Flickr30K 数据集上的零样本图像-文本检索结果。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig15": {
+      "caption": "Table 8. Comparison with state-of-the-art methods on VQA and NLVR 2 . ALBEF performs an extra pre-training step for NLVR 2 . SimVLM† uses 13 × more training data and a larger vision backbone (ResNet+ViT) than BLIP.",
+      "type": "comparison_table",
+      "description": "比较了 BLIP 与其他最新的 VQA 和 NLVR 2 方法的性能。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

@@ -69,3 +69,10 @@ zcache/
 # Ad-hoc hydrate test cells (regenerable; audit_v1_old48 + ablation JSON evidence are kept)
 experiments/results/hydrate_test/
 experiments/results/hydrate_test_rag/
+
+unattended-runs/
+
+# Python caches + ad-hoc annotation backups (scratch)
+__pycache__/
+*.bak
+*.bak-*

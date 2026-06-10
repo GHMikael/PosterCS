@@ -1,10 +1,10 @@
 {
-  "asset_token": "89807c3c18e64436",
+  "asset_token": "334821a207bc4d2c",
   "template": "template_dashboard",
   "color_theme": "academic_blue",
   "poster_title": "MEMTRACK: Evaluating Long-Term Memory and State Tracking in Multi-Platform Dynamic Agent Environments",
-  "authors": "Darshan Deshpande, Varun Gangal, Hersh Mehta, Anand Kannappan, Rebecca Qian, Peng Wang",
-  "paper_info": "39th Conference on Neural Information Processing Systems (NeurIPS 2025) Workshop: Scaling Environments for Agents (SEA). arXiv:2510.01353v1 [cs.AI] 1 Oct 2025",
+  "authors": "Darshan Deshpande, Varun Gangal, Hersh Mehta, Rebecca Qian, Peng Wang, Anand Kannappan; Patronus AI",
+  "paper_info": "39th Conference on Neural Information Processing Systems (NeurIPS 2025) Workshop: Scaling Environments for Agents (SEA)",
   "layout": {
     "page_size": "A3",
     "layout_type": "dashboard_grid",
@@ -13,10 +13,13 @@
   "panels": [
     {
       "section": "Motivation",
+      "headline": "Current benchmarks focus on conversational instances, lacking realistic scenarios for dynamic enterprise environments.",
       "content": [
-        "Context and memory benchmarking focused on conversational instances.",
-        "Need for evaluating memory in dynamic enterprise environments.",
-        "Memory essential for managing and evolving enterprise components."
+        "Current benchmarks primarily focus on conversational instances.",
+        "Evaluation of memory in dynamic enterprise environments is crucial.",
+        "MEMTRACK addresses the gap by providing realistic, ecologically valid scenarios.",
+        "Challenges in long-term memory and cross-platform dependencies.",
+        "MEMTRACK highlights the need for advanced memory benchmarking."
       ],
       "figure": null,
       "figure_id": "",
@@ -25,10 +28,13 @@
     },
     {
       "section": "Problem",
+      "headline": "Lack of benchmarks for evaluating memory in multi-agent, multi-platform settings.",
       "content": [
-        "Existing benchmarks lack ecological validity for real-world tasks.",
-        "Need to evaluate memory over long horizons and across platforms.",
-        "Quantitative evaluation of memory retrieval and maintenance is understudied."
+        "Lack of benchmarks for multi-agent, multi-platform memory tasks.",
+        "Realistic, ecologically valid scenarios are needed.",
+        "Challenges in long-term memory and cross-platform dependencies.",
+        "Modern LLMs struggle with complex memory tasks.",
+        "MEMTRACK identifies key issues in memory benchmarking."
       ],
       "figure": null,
       "figure_id": "",
@@ -37,46 +43,52 @@
     },
     {
       "section": "Method",
+      "headline": "MEMTRACK's Data Generation and Evaluation procedure",
       "content": [
-        "MEMTRACK benchmark for long-term memory and state tracking.",
-        "Models realistic workflows with asynchronous events across platforms.",
-        "Supports brief phrase outputs for evaluation using LLM-as-judge.",
-        "Three data curation methodologies: top-down, bottom-up, and hybrid."
+        "Introduction of MEMTRACK benchmark.",
+        "Realistic organizational workflows modeled."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig1",
+      "figure_caption": "MEMTRACK's Data Generation and Evaluation procedure is divided into four parts: task generation, injection of events into containerized environment, agent execution monitoring and sequential question injection, and performance evaluation",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Experiments",
+      "headline": "Testing modern LLMs and memory backends on MEMTRACK",
       "content": [
-        "Conducted on state-of-the-art LLMs and memory backends.",
-        "Dataset contains 47 curated long context datapoints.",
-        "Benchmark environment includes asynchronous tools and live servers."
+        "Testing modern LLMs and memory backends.",
+        "Evaluating memory capabilities such as acquisition, selection, and conflict resolution.",
+        "Using metrics for Correctness, Efficiency, and Redundancy.",
+        "MEMTRACK dataset used for evaluation.",
+        "LLMs often need to repeatedly read tickets, conversations, and code files."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig3",
+      "figure_caption": "An example of instance, including timeline events and question-answer pairs. Note that the Git events are set up in the filesystem in the Git server and are not shown here.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Results",
+      "headline": "Best performing GPT-5 model only achieves a 60% Correctness score",
       "content": [
-        "Best GPT-5 model achieves 60% Correctness on MEMTRACK.",
-        "LLMs struggle with context retention and repeated information reading.",
-        "Memory tools increase redundancy in planning and tool use."
+        "Best performing GPT-5 model: 60% Correctness score.",
+        "State-of-the-art LLMs struggle with multi-platform context reasoning."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig4",
+      "figure_caption": "Results on MEMTRACK across methods recording the Correctness (averaged per-example over questions), Efficiency, Redundancy as well as extent and cross-platform entropy of tool calling. All results are averaged across 5 runs and statistical significance is reported in Table 6.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Conclusion",
+      "headline": "MEMTRACK highlights the need for more advanced memory benchmarking",
       "content": [
-        "MEMTRACK advances evaluation research for memory-augmented agents.",
-        "State-of-the-art models face significant challenges in context reasoning and memory management."
+        "MEMTRACK highlights the need for advanced memory benchmarking.",
+        "Current state-of-the-art LLMs and memory backends are insufficient.",
+        "Future research should focus on improving memory mechanisms.",
+        "MEMTRACK provides an extensible framework for evaluation research.",
+        "Surfaces key error patterns in modern LLMs."
       ],
       "figure": null,
       "figure_id": "",
@@ -84,7 +96,29 @@
       "layout_hint": "text_only"
     }
   ],
-  "figures": {},
+  "figures": {
+    "Fig1": {
+      "caption": "MEMTRACK's Data Generation and Evaluation procedure is divided into four parts: task generation, injection of events into containerized environment, agent execution monitoring and sequential question injection, and performance evaluation",
+      "type": "pipeline",
+      "description": "MEMTRACK的数据生成和评估流程，分为四个部分：任务生成、事件注入到容器化环境、代理执行监控和顺序问题注入、性能评估",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "An example of instance, including timeline events and question-answer pairs. Note that the Git events are set up in the filesystem in the Git server and are not shown here.",
+      "type": "dataset_example",
+      "description": "实例示例，包括时间线事件和问题-答案对，Git事件在Git服务器的文件系统中设置但未显示",
+      "best_matched_section": "Experiments",
+      "importance": "medium"
+    },
+    "Fig4": {
+      "caption": "Results on MEMTRACK across methods recording the Correctness (averaged per-example over questions), Efficiency, Redundancy as well as extent and cross-platform entropy of tool calling. All results are averaged across 5 runs and statistical significance is reported in Table 6.",
+      "type": "result_chart",
+      "description": "MEMTRACK在不同方法上的结果，记录了正确性（每个示例平均问题正确性）、效率、冗余度以及工具调用的范围和跨平台熵，所有结果均取自5次运行的平均值，并在表6中报告了统计显著性",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
   "use_commenter": "true",
   "max_iterations": 4,
   "save_debug_images": "true"

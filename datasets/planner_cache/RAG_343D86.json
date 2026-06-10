@@ -1,0 +1,155 @@
+{
+  "asset_token": "e95114c187044bf8",
+  "template": "template_storyflow",
+  "layout_variant": "auto",
+  "color_theme": "academic_blue",
+  "emphasis_level": "normal",
+  "poster_title": "AGENTIC RETRIEVAL-AUGMENTED GENERATION: A SURVEY ON AGENTIC RAG",
+  "authors": "Aditi Singh, Abul Ehtesham, Tala Talaei Khoei, Saket Kumar",
+  "paper_info": "Cleveland State University, The Davey Tree Expert Company, Roux Institute at Northeastern University, The MathWorks Inc; 2023",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "storyflow_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Overview",
+      "content": [
+        "Surveys foundational principles and evolution of RAG paradigms.",
+        "Presents taxonomy of Agentic RAG architectures and frameworks.",
+        "Highlights applications in healthcare, finance, and education.",
+        "Examines practical implementation strategies, benchmarks, and ethical considerations.",
+        "Acknowledges challenges in scaling and optimizing performance."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "Comprehensive exploration of Agentic RAG"
+    },
+    {
+      "section": "Motivation",
+      "content": [
+        "LLMs revolutionized AI with human-like text generation and understanding.",
+        "Reliance on static data causes outdated or inaccurate outputs in dynamic scenarios.",
+        "RAG integrates real-time data retrieval, improving contextual relevance and accuracy.",
+        "Traditional RAG systems lack adaptability for multi-step reasoning and complex tasks.",
+        "Agentic RAG addresses these limitations through autonomous AI agents."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "Static pre-training data leads to outdated outputs"
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Uses agentic design patterns: reflection, planning, tool use, and multi-agent collaboration.",
+        "Dynamically manages retrieval strategies and iteratively refines contextual understanding."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "An Overview of Agentic RAG",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Agentic RAG embeds autonomous AI agents"
+    },
+    {
+      "section": "Core Components",
+      "content": [
+        "Retrieval module fetches relevant documents.",
+        "Generation module produces text based on retrieved information.",
+        "Agentic module enhances flexibility and adaptability."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Core Components of RAG",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Core components of RAG"
+    },
+    {
+      "section": "Advanced Architectures",
+      "content": [
+        "Modular RAG for flexible design.",
+        "Graph RAG for structured data.",
+        "Multi-Agent Agentic RAG for complex task management."
+      ],
+      "figure": null,
+      "figure_id": "Fig5",
+      "figure_caption": "Overview of Modular RAG",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Advanced RAG frameworks"
+    },
+    {
+      "section": "Results",
+      "content": [
+        "Excels in scenarios requiring precision and adaptability.",
+        "Applications in healthcare, finance, and education show significant improvements."
+      ],
+      "figure": null,
+      "figure_id": "Fig7",
+      "figure_caption": "Comparative Analysis of RAG Paradigms",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Agentic RAG demonstrates unparalleled flexibility"
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "Provides a comprehensive overview of Agentic RAG principles, taxonomy, and applications.",
+        "Highlights potential and challenges of integrating real-time data retrieval with generative AI.",
+        "Future work focuses on scaling, ethical decision-making, and performance optimization."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "Agentic RAG represents a significant advancement"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Figure 1: An Overview of Agentic RAG",
+      "type": "architecture",
+      "description": "提供 Agentic RAG 框架的概览图，展示其主要组成部分和工作流程。",
+      "best_matched_section": "Method",
+      "importance": "high",
+      "audit_status": ""
+    },
+    "Fig2": {
+      "caption": "Figure 2: Core Components of RAG",
+      "type": "method_diagram",
+      "description": "展示 RAG 核心组件的图示，帮助理解其主要构成部分。",
+      "best_matched_section": "Method",
+      "importance": "high",
+      "audit_status": ""
+    },
+    "Fig5": {
+      "caption": "Figure 5: Overview of Modular RAG",
+      "type": "architecture",
+      "description": "提供 Modular RAG 框架的概览图，展示其模块化设计和工作流程。",
+      "best_matched_section": "Method",
+      "importance": "high",
+      "audit_status": ""
+    },
+    "Fig7": {
+      "caption": "Table 1: Comparative Analysis of RAG Paradigms",
+      "type": "comparison_table",
+      "description": "比较不同 RAG 范式的表格，帮助理解它们之间的差异。",
+      "best_matched_section": "Results",
+      "importance": "high",
+      "audit_status": ""
+    }
+  },
+  "use_commenter": true,
+  "max_iterations": 4,
+  "save_debug_images": true,
+  "global_font_scale": 1.0
+}

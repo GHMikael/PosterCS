@@ -1,23 +1,25 @@
 {
-  "asset_token": "81cd1e77992c4bfd",
-  "template": "template_classic",
+  "asset_token": "9641caa177d14f62",
+  "template": "template_storyflow",
   "color_theme": "academic_blue",
-  "poster_title": "Expanding RL with Verifiable Rewards Across Diverse Domains",
-  "authors": "Yi Su, Dian Yu, Linfeng Song, Juntao Li, Haitao Mi, Zhaopeng Tu, Min Zhang, Dong Yu",
-  "paper_info": "arXiv:2503.23829v2 [cs.CL] 1 Apr 2025",
+  "poster_title": "Crossing the Reward Bridge: Expanding RL with Verifiable Rewards Across Diverse Domains",
+  "authors": "Yi Su, Dian Yu, Linfeng Song, Juntao Li, Haitao Mi, Zhaopeng Tu, Min Zhang, and Dong Yu",
+  "paper_info": "Tencent AI Lab, Soochow University, 2024",
   "layout": {
     "page_size": "A3",
-    "layout_type": "classic_grid",
+    "layout_type": "dashboard_grid",
     "reading_order": "top_to_bottom_left_to_right"
   },
   "panels": [
     {
       "section": "Motivation",
+      "headline": "Expanding RLVR to diverse, less structured domains",
       "content": [
-        "RLVR enhances reasoning capabilities of LLMs in structured tasks.",
-        "Challenges in verifying complex, unstructured reference answers.",
-        "Binary verification signals limit application in unstructured tasks.",
-        "Resource-intensive domain-specific annotation for reward models."
+        "RLVR has shown success in enhancing LLMs' performance in structured tasks.",
+        "Binary verification signals are used in structured answer scenarios.",
+        "Challenges in verifying unstructured answers in diverse domains.",
+        "Lack of ground-truth labels complicates the verification process.",
+        "Need for a more flexible and robust RLVR framework."
       ],
       "figure": null,
       "figure_id": "",
@@ -26,10 +28,13 @@
     },
     {
       "section": "Problem",
+      "headline": "Verifying complex, unstructured answers",
       "content": [
-        "60.3% of mathematical problems have single-term numerical answers.",
-        "45.4% of multi-domain queries have verifiable answers by rule-based methods.",
-        "Need for scalable and robust reward signals in diverse domains."
+        "Traditional RLVR methods are limited to structured tasks.",
+        "Unstructured domains lack clear reference answers.",
+        "Need for a new approach to handle diverse and complex tasks.",
+        "Cross-domain verification requires robust and flexible models.",
+        "Soft rewards can provide more nuanced feedback."
       ],
       "figure": null,
       "figure_id": "",
@@ -38,44 +43,54 @@
     },
     {
       "section": "Method",
+      "headline": "Generative model-based soft rewards",
       "content": [
-        "Generative scoring for soft, model-based reward signals.",
-        "Training 7B LLMs as cross-domain generative reward models.",
-        "Using data from RL exploration supervised by a larger teacher model."
+        "Propose a framework incorporating generative model-based soft rewards.",
+        "Compute soft rewards from a single indicative token's probability.",
+        "Train compact cross-domain generative reward models using noisy datasets.",
+        "Integrate the framework into RLVR for enhanced performance."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig1",
+      "figure_caption": "Overview paradigm of RLVR with our cross-domain verifier.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Experiments",
+      "headline": "Comprehensive experiments across diverse domains",
       "content": [
-        "Conducted experiments in medicine, chemistry, psychology, economics, and education.",
-        "Used free-form, unstructured answers by domain experts for verification."
+        "Evaluate the framework in medicine, chemistry, psychology, economics, and education.",
+        "Use free-form, unstructured answer scenarios for testing.",
+        "Collect noisy datasets during RL exploration for training.",
+        "Demonstrate the feasibility of training compact models."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig11",
+      "figure_caption": "Example question and reference answer pairs in ExamQA.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Results",
+      "headline": "Performance boosts of up to 8.0% accuracy",
       "content": [
-        "Outperformed Qwen2.5-72B and DeepSeek-R1-Distill-Qwen-32B in free-form settings.",
-        "Achieved up to 8.0% accuracy boost in diverse reasoning tasks.",
-        "Model-based soft rewards produced more robust policies."
+        "Significantly outperform state-of-the-art open-source aligned models.",
+        "Achieve up to 8.0% accuracy improvement in diverse reasoning tasks.",
+        "Show robust performance across different domains and tasks.",
+        "Empirically validate the effectiveness of the framework."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig3",
+      "figure_caption": "Performance Comparison of Different Methods. Base model: Qwen2.5-7B. E: elementary. M: middle. H: high.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Conclusion",
+      "headline": "Enhanced robustness, flexibility, and scalability",
       "content": [
-        "Enhanced robustness, flexibility, and scalability of RLVR in complex scenarios.",
-        "Step towards practical RL applications in diverse, real-world domains."
+        "Extended RLVR framework improves performance in complex, noisy-label scenarios.",
+        "Generative, model-based soft rewards show promise for broader applications.",
+        "Released a dataset and trained reward model to facilitate future research.",
+        "Potential for further improvements and applications in unstructured domains."
       ],
       "figure": null,
       "figure_id": "",
@@ -83,7 +98,29 @@
       "layout_hint": "text_only"
     }
   ],
-  "figures": {},
+  "figures": {
+    "Fig1": {
+      "caption": "Overview paradigm of RLVR with our cross-domain verifier.",
+      "type": "method_diagram",
+      "description": "展示了 RLVR（强化学习验证和推理）系统的总体框架，包括跨域验证器的集成。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Performance Comparison of Different Methods. Base model: Qwen2.5-7B. E: elementary. M: middle. H: high.",
+      "type": "comparison_table",
+      "description": "比较了不同方法在不同教育水平的数学问题上的性能。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig11": {
+      "caption": "Example question and reference answer pairs in ExamQA.",
+      "type": "dataset_example",
+      "description": "展示了 ExamQA 数据集中的一些示例问题和参考答案对。",
+      "best_matched_section": "Experiments",
+      "importance": "medium"
+    }
+  },
   "use_commenter": "true",
   "max_iterations": 4,
   "save_debug_images": "true"

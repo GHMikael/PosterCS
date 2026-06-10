@@ -1,0 +1,131 @@
+{
+  "asset_token": "0156791af60945d6",
+  "template": "template_dashboard",
+  "color_theme": "academic_blue",
+  "poster_title": "Evaluating LLM Agents as Lifelong Learners",
+  "authors": "Junhao Zheng, Xidi Cai, Qiuke Li, Duzhen Zhang, Zhong-Zhi Li, Yingying Zhang, Le Song, Qianli Ma",
+  "paper_info": "2023, South China University of Technology, MBZUAI, Chinese Academy of Sciences, East China Normal University",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Rapid development of LLMs and shift to LLM-based agents.",
+      "content": [
+        "Rapid development of large language models (LLMs) has revolutionized language-based AI.",
+        "Research has shifted to LLM-based agents that interact with dynamic environments and perform complex decision-making.",
+        "Existing benchmarks fail to evaluate lifelong learning capabilities in LLM agents.",
+        "Lifelong learning is crucial for LLM agents to adapt and improve over time.",
+        "This work introduces a new benchmark for lifelong learning in LLM agents."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "headline": "No standardized benchmark for lifelong learning in LLM agents.",
+      "content": [
+        "LLM-based agents lack memory and the ability to incrementally accumulate knowledge over time.",
+        "No standardized benchmark for evaluating lifelong learning in LLM agents.",
+        "Label inaccuracies, lack of verifiability, and poor reproducibility in prior benchmarks."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Comparison between LifelongAgentBench and existing benchmarks. † : [19] highlights label error issues in WebArena.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Method",
+      "headline": "Introduction of LifelongAgentBench with four key properties.",
+      "content": [
+        "Introduction of LifelongAgentBench, a unified benchmark for evaluating lifelong learning in LLM agents.",
+        "Tasks are skill-grounded and explicitly designed to measure inter-task relatedness.",
+        "Automatic label verification and a fully containerized infrastructure for reproducibility.",
+        "Modular design with extensible callback functions and a pluggable LLM agent interface."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Overview of LifelongAgentBench : a unified dataset and evaluation framework with skillgrounded tasks, modular components, and four key properties: task dependency, label verifiability, reproducibility, and modularity.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluation of experience replay effectiveness.",
+      "content": [
+        "Tasks across three interactive environments: Database (DB), Operating System (OS), and Knowledge Graph (KG).",
+        "Evaluation of experience replay effectiveness in different model sizes, architectures, and task complexities.",
+        "Introduction of a group self-consistency mechanism to improve decision quality."
+      ],
+      "figure": null,
+      "figure_id": "Fig19",
+      "figure_caption": "Example of Using our RPC Toolkit",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Group self-consistency significantly enhances experience replay.",
+      "content": [
+        "Conventional experience replay has limited effectiveness due to irrelevant information and context length constraints.",
+        "Group self-consistency mechanism significantly enhances the effectiveness of experience replay across multiple LLM backbones."
+      ],
+      "figure": null,
+      "figure_id": "Fig6",
+      "figure_caption": "Skill distributions across tasks. Diverse and balanced skill coverage is maintained.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "LifelongAgentBench advances the development of adaptive, memory-capable LLM agents.",
+      "content": [
+        "LifelongAgentBench advances the development of adaptive, memory-capable LLM agents.",
+        "Group self-consistency mechanism is a promising approach to enhance lifelong learning.",
+        "The benchmark provides a systematic analysis of lifelong learning limitations in LLM agents.",
+        "The effectiveness of experience replay varies significantly across different models and tasks.",
+        "Future work can explore more sophisticated lifelong learning strategies.",
+        "The modular design of LifelongAgentBench allows for easy extension and customization."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig2": {
+      "caption": "Table 1: Comparison between LifelongAgentBench and existing benchmarks. † : [19] highlights label error issues in WebArena.",
+      "type": "comparison_table",
+      "description": "比较 LifelongAgentBench 与其他现有基准的表格，突出了 WebArena 中的标签错误问题。",
+      "best_matched_section": "Problem",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Figure 1: Overview of LifelongAgentBench : a unified dataset and evaluation framework with skillgrounded tasks, modular components, and four key properties: task dependency, label verifiability, reproducibility, and modularity.",
+      "type": "architecture",
+      "description": "LifelongAgentBench 的概述图，展示了统一的数据集和评估框架，包含技能导向任务、模块化组件和四个关键属性：任务依赖性、标签可验证性、可重复性和模块化。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig6": {
+      "caption": "Figure 3: Skill distributions across tasks. Diverse and balanced skill coverage is maintained.",
+      "type": "result_chart",
+      "description": "任务中技能分布的图表，展示了多样且平衡的技能覆盖。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig19": {
+      "caption": "Figure 9: Example of Using our RPC Toolkit",
+      "type": "dataset_example",
+      "description": "使用我们的 RPC 工具包的示例图。",
+      "best_matched_section": "Experiments",
+      "importance": "medium"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

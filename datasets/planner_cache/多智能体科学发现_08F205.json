@@ -1,0 +1,144 @@
+{
+  "asset_token": "d6032cdb7b6c40fd",
+  "template": "template_storyflow",
+  "layout_variant": "auto",
+  "color_theme": "academic_blue",
+  "emphasis_level": "normal",
+  "poster_title": "Virtuous Machines: Towards Artificial General Science",
+  "authors": "Gabrielle Wehr, Reuben Rideaux, Amaya J. Fox, David R. Lightfoot, Jason Tangen, Jason B. Mattingley, Shane E. Ehrhardt",
+  "paper_info": "Explore Science, Brisbane, Australia. 2023. This work was funded by Explore Science.",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation / Background",
+      "content": [
+        "AI systems are accelerating specific research tasks but remain confined to narrow domains.",
+        "Exponential growth of scientific literature and increasing domain specialization constrain researchers' ability to synthesize knowledge and develop unifying theories.",
+        "Computational approaches can augment human research capabilities and alleviate some limitations in the traditional scientific process.",
+        "Human cognitive and resource constraints limit the ability to explore all regions of scientific space.",
+        "Current agentic systems primarily operate in simulated environments, lacking direct mechanistic insight."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "AI systems are accelerating specific research tasks but remain confined to narrow domains."
+    },
+    {
+      "section": "Method / Framework",
+      "content": [
+        "Developed an agentic AI system capable of navigating the entire scientific workflow from hypothesis generation to manuscript preparation.",
+        "Integrated LLMs within an autonomous architecture for goal-directed planning, tool use, and environmental feedback."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Simplified network architecture of the autonomous scientific discovery system. Directed graph illustrating the information flow and functional relationships between agents. The master agent (purple) coordinates the core scientific workflow agents (green) including method, data analysis.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Developed an agentic AI system capable of navigating the entire scientific workflow."
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Conducted three psychological studies on visual working memory, mental rotation, and imagery vividness.",
+        "Executed a new online data collection with 288 participants.",
+        "Developed analysis pipelines through 8-hour+ continuous coding sessions.",
+        "Visual working memory and mental rotation tasks demonstrate characteristic performance patterns reflecting cognitive load effects.",
+        "Mental rotation performance exhibits non-linear relationships with rotation angle that are better captured by quadratic models."
+      ],
+      "figure": null,
+      "figure_id": "Fig7",
+      "figure_caption": "Visual working memory task trial structure and stimulus presentation parameters. The task employed a 2 × 2 within-subjects factorial design manipulating set size (2 or 4 oriented white bars) and retention interval duration (1000 or 4000 ms). Participants (n = 288).",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Conducted three psychological studies on visual working memory, mental rotation, and imagery vividness."
+    },
+    {
+      "section": "Results",
+      "content": [
+        "No correlation found between VWM precision and mental rotation performance despite expected difficulty effects.",
+        "Imagery vividness did not influence carryover effects between trials, challenging theories of common processing mechanisms."
+      ],
+      "figure": null,
+      "figure_id": "Fig9",
+      "figure_caption": "Visual working memory and mental rotation tasks demonstrate characteristic performance patterns reflecting cognitive load effects. Both tasks show expected capacity limitations under increasing demands, confirming task validity for examining shared representational constraints.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "No correlation found between VWM precision and mental rotation performance."
+    },
+    {
+      "section": "Key Findings",
+      "content": [
+        "Visual working memory and mental rotation performance show no systematic correlations across individuals.",
+        "Cross-task analysis reveals absence of shared representational constraints between memory precision and spatial transformation abilities.",
+        "Sequential facilitation effects in mental rotation reveal individual differences in temporal integration mechanisms.",
+        "Individual differences in visual imagery vividness show no significant relationships with temporal integration across visual working memory and mental rotation tasks."
+      ],
+      "figure": null,
+      "figure_id": "Fig11",
+      "figure_caption": "Visual working memory and mental rotation performance show no systematic correlations across individuals. Cross-task analysis reveals absence of shared representational constraints between memory precision and spatial transformation abilities. Individual differences in sensitivity to cognitive load are evident.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Visual working memory and mental rotation performance show no systematic correlations across individuals."
+    },
+    {
+      "section": "Conclusion / Takeaways",
+      "content": [
+        "This work represents a significant step toward autonomous scientific discovery with real-world experimentation.",
+        "Raises important questions about the nature of scientific understanding and the attribution of scientific credit.",
+        "Future research should explore the application of this framework in other scientific domains.",
+        "Limited conceptual nuance and theoretical interpretation compared to experienced researchers.",
+        "Completed full scientific studies with an average processing time of 17 hours and a marginal cost of $114 USD per project."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "This work represents a significant step toward autonomous scientific discovery with real-world experimentation."
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Simplified network architecture of the autonomous scientific discovery system. Directed graph illustrating the information flow and functional relationships between agents. The master agent (purple) coordinates the core scientific workflow agents (green) including method, data analysis.",
+      "type": "architecture",
+      "description": "Simplified network architecture of the autonomous scientific discovery system, showing the information flow and functional relationships between agents.",
+      "best_matched_section": "Method",
+      "importance": "high",
+      "audit_status": ""
+    },
+    "Fig7": {
+      "caption": "Visual working memory task trial structure and stimulus presentation parameters. The task employed a 2 × 2 within-subjects factorial design manipulating set size (2 or 4 oriented white bars) and retention interval duration (1000 or 4000 ms). Participants (n = 288).",
+      "type": "dataset_example",
+      "description": "Trial structure and stimulus presentation parameters for the visual working memory task, showing a 2 × 2 factorial design.",
+      "best_matched_section": "Experiments",
+      "importance": "medium",
+      "audit_status": ""
+    },
+    "Fig9": {
+      "caption": "Visual working memory and mental rotation tasks demonstrate characteristic performance patterns reflecting cognitive load effects. Both tasks show expected capacity limitations under increasing demands, confirming task validity for examining shared representational constraints.",
+      "type": "result_chart",
+      "description": "Performance patterns of visual working memory and mental rotation tasks, showing cognitive load effects and confirming task validity.",
+      "best_matched_section": "Results",
+      "importance": "high",
+      "audit_status": ""
+    },
+    "Fig11": {
+      "caption": "Visual working memory and mental rotation performance show no systematic correlations across individuals. Cross-task analysis reveals absence of shared representational constraints between memory precision and spatial transformation abilities. Individual differences in sensitivity to cognitive load are evident.",
+      "type": "result_chart",
+      "description": "Cross-task analysis showing no systematic correlations between visual working memory and mental rotation performance.",
+      "best_matched_section": "Results",
+      "importance": "high",
+      "audit_status": ""
+    }
+  },
+  "use_commenter": true,
+  "max_iterations": 4,
+  "save_debug_images": true,
+  "global_font_scale": 1.0
+}

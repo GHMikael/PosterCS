@@ -1,10 +1,10 @@
 {
-  "asset_token": "54c1d7de19a54f24",
+  "asset_token": "4b196973fa11499f",
   "template": "template_classic",
   "color_theme": "academic_blue",
-  "poster_title": "INSIDE: LLMS’ INTERNAL STATES RETAIN THE POWER OF HALLUCINATION DETECTION",
+  "poster_title": "LLMS' INTERNAL STATES RETAIN THE POWER OF HALLUCINATION DETECTION",
   "authors": "Chao Chen, Kai Liu, Ze Chen, Yi Gu, Yue Wu, Mingyuan Tao, Zhihang Fu, Jieping Ye",
-  "paper_info": "Published as a conference paper at ICLR 2024",
+  "paper_info": "Alibaba Cloud, Zhejiang University, 2023",
   "layout": {
     "page_size": "A3",
     "layout_type": "classic_grid",
@@ -12,11 +12,13 @@
   },
   "panels": [
     {
-      "section": "Motivation",
+      "section": "Motivation / Background",
+      "headline": "LLMs often produce factually incorrect or nonsense generations, known as knowledge hallucination.",
       "content": [
-        "LLMs often produce factually incorrect or nonsensical outputs, known as knowledge hallucination.",
-        "Previous methods focused on logit-level uncertainty or language-level self-consistency, losing semantic information.",
-        "INSIDE framework addresses these limitations by leveraging internal states for hallucination detection."
+        "LLMs show impressive abilities in various applications.",
+        "Knowledge hallucination is a significant issue in LLMs.",
+        "Traditional methods lose semantic information during token-decoding.",
+        "Proposed method aims to capture logical consistency in the embedding space."
       ],
       "figure": null,
       "figure_id": "",
@@ -24,41 +26,63 @@
       "layout_hint": "text_only"
     },
     {
-      "section": "Method",
+      "section": "Problem / Challenge",
+      "headline": "Token-level uncertainty measures are not effective for entire sequences in modern auto-regressive LLMs.",
       "content": [
-        "Proposed a generalized INSIDE framework for hallucination detection using LLMs' internal states."
+        "Token-level measures fail to capture sequence-level uncertainty.",
+        "Post-hoc semantic measurements are less precise than embedding space modeling."
       ],
       "figure": null,
-      "figure_id": "Fig6",
-      "figure_caption": "Method pipeline including data preprocessing, model training, and result output.",
-      "layout_hint": "text_top_image_bottom"
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
     },
     {
-      "section": "Experiments",
+      "section": "Method / Framework",
+      "headline": "Propose a generalized INSIDE framework using internal states of LLMs for hallucination detection.",
       "content": [
-        "Conducted experiments on popular LLMs and QA benchmarks.",
-        "Performed ablation studies to validate the effectiveness of the proposed methods."
+        "Leverage internal states for hallucination detection.",
+        "Introduce EigenScore to measure semantic consistency.",
+        "Develop test-time feature clipping to reduce overconfident generations."
       ],
       "figure": null,
-      "figure_id": "Fig4",
-      "figure_caption": "Ablation study results showing the impact of each module on model performance.",
-      "layout_hint": "text_top_image_bottom"
+      "figure_id": "Fig1",
+      "figure_caption": "Illustration of our proposed hallucination detection pipeline. During inference time, for a given question, the extreme features in the penultimate layer are truncated and the EigenScore is computed based on the sentence embeddings across multiple responses.",
+      "layout_hint": "with_figure"
     },
     {
-      "section": "Results",
+      "section": "Experiments / Results",
+      "headline": "Achieved state-of-the-art hallucination detection performance on several QA benchmarks.",
       "content": [
-        "INSIDE framework achieved state-of-the-art performance in hallucination detection on multiple QA benchmarks."
+        "Conducted extensive experiments on QA benchmarks.",
+        "Performed ablation studies to verify EigenScore and feature clipping."
       ],
       "figure": null,
-      "figure_id": "Fig2",
-      "figure_caption": "Comparison of different methods in experimental performance, highlighting the advantages of INSIDE.",
-      "layout_hint": "text_top_image_bottom"
+      "figure_id": "Fig3",
+      "figure_caption": "Hallucination detection performance evaluation of different methods on four QA tasks. AUROC(AUC) and Pearson Correlation Coefficient (PCC) are utilized to measure the performance.",
+      "layout_hint": "with_figure"
     },
     {
-      "section": "Conclusion",
+      "section": "Key Findings",
+      "headline": "EigenScore represents differential entropy in the sentence embedding space.",
       "content": [
-        "INSIDE framework and EigenScore metric provide a novel and effective way to detect hallucinations in LLMs.",
-        "Feature clipping approach helps reduce overconfident hallucinations, improving LLM reliability."
+        "EigenScore effectively measures semantic consistency.",
+        "Feature clipping significantly improves detection of overconfident hallucinations.",
+        "Performance is sensitive to temperature and top-k parameters."
+      ],
+      "figure": null,
+      "figure_id": "Fig7",
+      "figure_caption": "Performance sensitivity to temperature and top-k. The performance is measured by AUROC s.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion / Takeaways",
+      "headline": "The INSIDE framework provides a more precise and reliable method for hallucination detection.",
+      "content": [
+        "INSIDE framework leverages internal states for hallucination detection.",
+        "EigenScore and feature clipping show significant improvements.",
+        "Method is effective but may vary across different LLM architectures and datasets.",
+        "Future work includes extending to other LLMs and applications."
       ],
       "figure": null,
       "figure_id": "",
@@ -67,24 +91,24 @@
     }
   ],
   "figures": {
-    "Fig6": {
-      "caption": "Method pipeline including data preprocessing, model training, and result output.",
+    "Fig1": {
+      "caption": "Illustration of our proposed hallucination detection pipeline. During inference time, for a given question, the extreme features in the penultimate layer are truncated and the EigenScore is computed based on the sentence embeddings across multiple responses.",
       "type": "pipeline",
-      "description": "展示了方法的整个流程，包括数据预处理、模型训练和结果输出等步骤。",
+      "description": "图注描述了提出的幻觉检测管道，展示了在推理时如何截断极端特征并计算EigenScore。",
       "best_matched_section": "Method",
       "importance": "high"
     },
-    "Fig4": {
-      "caption": "Ablation study results showing the impact of each module on model performance.",
-      "type": "ablation_study",
-      "description": "展示了消融实验的结果，帮助读者理解各个模块对模型性能的影响。",
-      "best_matched_section": "Experiments",
+    "Fig3": {
+      "caption": "Hallucination detection performance evaluation of different methods on four QA tasks. AUROC(AUC) and Pearson Correlation Coefficient (PCC) are utilized to measure the performance. AUC s represents AUROC score with sentence similarity as correctness measure, and AUC r represents AUROC score",
+      "type": "comparison_table",
+      "description": "表1评估了不同方法在四个问答任务中的幻觉检测性能，使用AUROC和PCC作为评估指标。",
+      "best_matched_section": "Results",
       "importance": "high"
     },
-    "Fig2": {
-      "caption": "Comparison of different methods in experimental performance, highlighting the advantages of INSIDE.",
+    "Fig7": {
+      "caption": "Performance sensitivity to temperature and top-k. The performance is measured by AUROC s.",
       "type": "result_chart",
-      "description": "比较了不同方法在实验中的性能表现，展示了模型在不同指标上的优势。",
+      "description": "图4展示了性能对温度和top-k参数的敏感性，性能以AUROC s 为指标。",
       "best_matched_section": "Results",
       "importance": "high"
     }

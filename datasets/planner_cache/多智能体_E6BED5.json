@@ -1,0 +1,117 @@
+{
+  "asset_token": "0b9920957b714fd1",
+  "template": "template_dashboard",
+  "color_theme": "academic_blue",
+  "poster_title": "Building Production-Ready AI Agents with Scalable Long-Term Memory",
+  "authors": "Prateek Chhikara, Dev Khant, Saket Aryan, Taranjeet Singh, and Deshraj Yadav",
+  "paper_info": "research@mem0.ai, 2024",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Large Language Models (LLMs) excel in generating contextually coherent responses, but fixed context windows limit their ability to maintain coherence over prolonged multi-session dialogues.",
+      "content": [
+        "LLMs generate contextually coherent responses.",
+        "Fixed context windows limit long-term coherence.",
+        "Memory mechanisms are essential for coherent, long-term human-AI interactions.",
+        "Proposed Mem0 and Mem0 g address these limitations.",
+        "Aims to improve practical deployment of LLM-driven AI agents."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "headline": "LLMs lack persistent memory mechanisms, leading to inconsistent user interactions.",
+      "content": [
+        "LLMs lack persistent memory mechanisms.",
+        "Extended context windows do not solve fundamental limitations.",
+        "Attention mechanisms degrade over distant tokens.",
+        "Effective retrieval of past information is challenging.",
+        "Proposed solutions must balance performance and efficiency."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Mem0 dynamically extracts, consolidates, and retrieves salient information from ongoing conversations.",
+      "content": [
+        "Mem0: scalable memory-centric architecture.",
+        "Mem0 g: graph-based memory representations for advanced reasoning."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluations on the LOCOMO benchmark.",
+      "content": [
+        "LOCOMO benchmark used for evaluation.",
+        "Comparison against six baseline categories: memory-augmented systems, RAG with varying chunk sizes and k-values, full-context approaches, open-source solutions, proprietary models, and dedicated memory management platforms."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Performance comparison of memory-enabled systems across different question types in the LOCOMO dataset.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Mem0 achieves 26% relative improvements in the LLM-as-a-Judge metric over OpenAI.",
+      "content": [
+        "Mem0 outperforms all existing memory systems.",
+        "26% relative improvements in LLM-as-a-Judge metric over OpenAI.",
+        "Mem0 g achieves 2% higher overall score than base Mem0.",
+        "91% lower p95 latency and 90% token cost savings compared to full-context approaches."
+      ],
+      "figure": null,
+      "figure_id": "Fig7",
+      "figure_caption": "Comparison of total response latency at p50 and p95 across different memory methods.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Structured, persistent memory mechanisms are critical for long-term conversational coherence.",
+      "content": [
+        "Structured, persistent memory mechanisms are critical for long-term coherence.",
+        "Mem0 and Mem0 g balance advanced reasoning and practical deployment.",
+        "These approaches pave the way for more reliable and efficient LLM-driven AI agents.",
+        "Future work: improve conversation summary and recent message context quality.",
+        "Potential for broader applications in AI-driven systems."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig4": {
+      "caption": "Table 1: Performance comparison of memory-enabled systems across different question types in the LOCOMO dataset. Evaluation metrics include F1 score (F 1 ), BLEU-1 (B 1 ), and LLM-as-a-Judge score (J), with higher values indicating better performance. A-Mem ∗ represents results from our re-run of A-",
+      "type": "comparison_table",
+      "description": "展示不同记忆增强系统在 LOCOMO 数据集上的性能比较，包括 F1 分数、BLEU-1 和 LLM-as-a-Judge 评分",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig7": {
+      "caption": "(b) Comparison of total response latency at p50 and p95 across different memory methods ( Mem0 , Mem0 g , best RAG variant, Zep, LangMem, OpenAI, full-context, and A-Mem). The bar heights represent J scores (left axis), and the line plots capture end-to-end latency in seconds (right axis scaled in l",
+      "type": "result_chart",
+      "description": "比较不同记忆方法的总响应延迟，包括 p50 和 p95 值，条形图表示 J 评分，折线图表示端到端延迟",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

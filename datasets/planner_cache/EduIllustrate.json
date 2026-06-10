@@ -1,0 +1,144 @@
+{
+  "asset_token": "ca56f3020b8149bf",
+  "template": "template_dashboard",
+  "layout_variant": "auto",
+  "color_theme": "warm_orange",
+  "emphasis_level": "normal",
+  "poster_title": "EduIllustrate: Towards Scalable Automated Generation Of Multimodal Educational Content",
+  "authors": "Shuzhen Bi, Mingzi Zhang, Zhuoxuan Li, Xiaolong Wang, Keqian Li, Aimin Zhou",
+  "paper_info": "2025, A benchmark for evaluating LLMs on interleaved text-diagram explanation generation for K-12 STEM problems",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "content": [
+        "Evaluation of LLMs in education has primarily focused on question-answering and tutoring tasks.",
+        "Coordinating visual diagrams with textual reasoning reduces cognitive burden and deepens conceptual understanding in K-12 education.",
+        "Producing such materials at scale is a significant challenge due to the time-consuming nature of lesson planning and the specialized skills required for accurate diagrams.",
+        "Lack of benchmarks to measure LLMs' ability to generate coherent, diagram-rich explanations for K-12 STEM problems.",
+        "Existing benchmarks do not jointly assess textual and visual quality of educational content."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "Evaluation of LLMs in education has primarily focused on question-answering and tutoring tasks."
+    },
+    {
+      "section": "Method",
+      "content": [
+        "Curated a problem set of 230 K-12 STEM problems spanning five subjects and three grade levels.",
+        "Standardized generation protocol with sequential anchoring to ensure cross-diagram visual consistency.",
+        "8-dimension evaluation rubric grounded in multimedia learning theory to assess both text and visual quality."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Overview of EduIllustrate. Given a K-12 STEM problem, the generation protocol produces a structured explanation document through four stages. The resulting output is evaluated using an 8-dimension rubric validated against human expert raters.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Curated a problem set of 230 K-12 STEM problems spanning five subjects and three grade levels."
+    },
+    {
+      "section": "Experiments",
+      "content": [
+        "Evaluated ten LLMs using the EduIllustrate benchmark.",
+        "Conducted ablation studies to validate the effectiveness of sequential anchoring.",
+        "Performed human evaluation with 20 expert raters to validate LLM-as-judge reliability."
+      ],
+      "figure": null,
+      "figure_id": "Fig20",
+      "figure_caption": "Screenshot of the problem review interface used during human annotation. Annotators evaluated each candidate problem against the three curation criteria and recorded their decisions with justifications.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Evaluated ten LLMs using the EduIllustrate benchmark."
+    },
+    {
+      "section": "Results",
+      "content": [
+        "Gemini 3.0 Pro Preview led the performance at 87.8%.",
+        "Sequential anchoring improved Visual Consistency by 13% at 94% lower cost."
+      ],
+      "figure": null,
+      "figure_id": "Fig11",
+      "figure_caption": "Radar charts of all 10 models. (a) By dimension: 8 evaluation dimensions. (b) By subject: overall scores on each of the five subjects. (c) By grade level: overall scores at each grade level.",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Gemini 3.0 Pro Preview led the performance at 87.8%."
+    },
+    {
+      "section": "Key Findings",
+      "content": [
+        "Human evaluation confirmed high reliability for objective dimensions (ρ ≥ 0.83).",
+        "Limitations in subjective visual assessment were revealed.",
+        "Sequential anchoring significantly improves visual consistency while reducing costs.",
+        "Cost vs. quality trade-off analysis shows Kimi-K2.5 offers the best cost-efficiency among high-quality models, achieving 80.8% at $0.12/problem.",
+        "Per-stage cost breakdown across ten models indicates Scene Rendering is the most costly stage."
+      ],
+      "figure": null,
+      "figure_id": "Fig13",
+      "figure_caption": "Visual consistency comparison between our sequential anchoring workflow (top) and the all-parallel baseline (bottom) on the same problem (four-pyramid P -ABCD ). In our workflow, Scene 1 and Scene 2 render the identical pyramid structure-Scene 2 simply highlights the PAC face on top of the",
+      "layout_hint": "with_figure",
+      "body_font_scale": 1.0,
+      "headline": "Human evaluation confirmed high reliability for objective dimensions (ρ ≥ 0.83) but revealed limitations in subjective visual assessment."
+    },
+    {
+      "section": "Conclusion",
+      "content": [
+        "EduIllustrate provides a robust benchmark for evaluating LLMs in generating multimodal educational content for K-12 STEM problems.",
+        "Sequential anchoring significantly improves visual consistency while reducing costs.",
+        "Subjective visual assessment by LLMs still has limitations.",
+        "The benchmark focuses on static diagrams, not dynamic or interactive content.",
+        "Future work will explore dynamic and interactive content generation."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only",
+      "body_font_scale": 1.0,
+      "headline": "EduIllustrate provides a robust benchmark for evaluating LLMs in generating multimodal educational content for K-12 STEM problems."
+    }
+  ],
+  "figures": {
+    "Fig2": {
+      "caption": "Figure 2: Overview of EduIllustrate. Given a K-12 STEM problem, the generation protocol produces a structured explanation document through four stages. The resulting output is evaluated using an 8-dimension rubric validated against human expert raters.",
+      "type": "pipeline",
+      "description": "Overview of the EduIllustrate system, which generates structured explanations through four stages and is evaluated using an 8-dimension rubric.",
+      "best_matched_section": "Method",
+      "importance": "high",
+      "audit_status": ""
+    },
+    "Fig20": {
+      "caption": "Figure 10: Screenshot of the problem review interface used during human annotation. Annotators evaluated each candidate problem against the three curation criteria and recorded their decisions with justifications.",
+      "type": "qualitative_example",
+      "description": "Screenshot of the problem review interface used for human annotation, showing the evaluation criteria and decision recording process.",
+      "best_matched_section": "Experiments",
+      "importance": "medium",
+      "audit_status": ""
+    },
+    "Fig11": {
+      "caption": "Figure 5: Radar charts of all 10 models. (a) By dimension: 8 evaluation dimensions. (b) By subject: overall scores on each of the five subjects. (c) By grade level: overall scores at each grade level.",
+      "type": "result_chart",
+      "description": "Radar charts comparing the performance of 10 models across 8 evaluation dimensions, 5 subjects, and different grade levels.",
+      "best_matched_section": "Results",
+      "importance": "high",
+      "audit_status": ""
+    },
+    "Fig13": {
+      "caption": "Figure 6: Visual consistency comparison between our sequential anchoring workflow (top) and the all-parallel baseline (bottom) on the same problem (four-pyramid P -ABCD ). In our workflow, Scene 1 and Scene 2 render the identical pyramid structure-Scene 2 simply highlights the PAC face on top of the",
+      "type": "ablation_study",
+      "description": "Comparison of visual consistency between sequential anchoring and all-parallel workflows on a problem involving a four-pyramid structure.",
+      "best_matched_section": "Results",
+      "importance": "high",
+      "audit_status": ""
+    }
+  },
+  "use_commenter": true,
+  "max_iterations": 4,
+  "save_debug_images": true,
+  "global_font_scale": 1.0
+}

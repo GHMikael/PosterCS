@@ -1,0 +1,129 @@
+{
+  "asset_token": "60da54ed4b574f73",
+  "template": "template_storyflow",
+  "color_theme": "academic_blue",
+  "poster_title": "INFORMATION GAIN-BASED POLICY OPTIMIZATION: A SIMPLE AND EFFECTIVE APPROACH FOR MULTITURN LLM AGENTS",
+  "authors": "Guoqing Wang, Sunhao Dai, Guangze Ye, Zeyu Gan, Wei Yao, Yong Deng, Xiaofeng Wu, Zhenzhe Ying",
+  "paper_info": "Ant Group, Renmin University of China; 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Addressing sparse rewards and credit assignment in multi-turn settings",
+      "content": [
+        "LLM-based agents are increasingly trained with RL to enhance interaction with external environments.",
+        "Web search enables agents to access large-scale, up-to-date knowledge, improving their capacity to solve complex tasks.",
+        "Early approaches relied on prompt-based workflows, which often suffered from poor generalization.",
+        "Sparse outcome-based rewards lead to advantage collapse and lack of fine-grained credit assignment in multi-turn settings.",
+        "These issues are particularly problematic in long-horizon tasks, where dependencies between turns are obscured."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Turn-level rewards defined as marginal increase in policy's probability of correct answer",
+      "content": [
+        "IGPO models each interaction turn as an incremental process of acquiring information about the ground truth.",
+        "Turn-level rewards are defined as the marginal increase in the policy's probability of producing the correct answer.",
+        "IGPO combines turn-level rewards with outcome-level supervision to form dense reward trajectories.",
+        "Rewards are normalized within groups and propagated with discounted accumulation to stabilize training."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "The training pipeline of IGPO. (Upper) Turn-level information gain rewards are computed by measuring changes in ground-truth probability and combined with the outcome reward to derive discounted advantages. (Lower) Each rollout contains at most T -1 interaction turns, where each turn inclu",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Conducted on in-domain and out-of-domain benchmarks",
+      "content": [
+        "Experiments were conducted on both in-domain and out-of-domain benchmarks with search-based agents.",
+        "Evaluated the effectiveness of IGPO against strong baselines on Qwen2.5-7B/3B-Instruct.",
+        "IGPO consistently outperformed strong baselines in multi-turn scenarios, achieving higher accuracy and improved sample efficiency.",
+        "Significant gains were observed, especially for smaller models."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Main results of IGPO compared with different agentic RL baselines across seven datasets.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "IGPO outperformed strong baselines across multiple benchmarks",
+      "content": [
+        "IGPO achieved higher accuracy and improved sample efficiency compared to strong baselines.",
+        "Significant gains were observed, especially for smaller models."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Proportion of zero-advantage groups during training-IGPO vs. GRPO on Qwen2.5-7B/3B-Instruct.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "Case studies demonstrate IGPO's ability to improve token utilization",
+      "content": [
+        "IGPO provides a process reward for correct retrieval turns, even when the final answer is incorrect.",
+        "IGPO imposes a penalty on erroneous retrieval in early rounds, improving overall performance."
+      ],
+      "figure": null,
+      "figure_id": "Fig11",
+      "figure_caption": "Case study showing a scenario where the final answer is incorrect but contains a single correct retrieval turn. IGPO provides a process reward for this turn, improving token utilization.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Combination of turn-level information gain and outcome-level supervision improves performance and sample efficiency",
+      "content": [
+        "IGPO provides a stable and intrinsic way to supervise multi-turn agent training.",
+        "The combination of turn-level information gain and outcome-level supervision significantly improves performance and sample efficiency.",
+        "The effectiveness of IGPO may vary across different types of tasks and environments.",
+        "IGPO is a promising framework for enhancing LLM-based agents in multi-turn settings."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Proportion of zero-advantage groups during training-IGPO vs. GRPO on Qwen2.5-7B/3B-Instruct.",
+      "type": "result_chart",
+      "description": "显示了在 Qwen2.5-7B/3B-Instruct 模型上训练期间 IGPO 与 GRPO 的零优势组比例。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "The training pipeline of IGPO. (Upper) Turn-level information gain rewards are computed by measuring changes in ground-truth probability and combined with the outcome reward to derive discounted advantages. (Lower) Each rollout contains at most T -1 interaction turns, where each turn inclu",
+      "type": "pipeline",
+      "description": "描述了 IGPO 的训练管道，包括计算每个回合的信息增益奖励和结果奖励，以及交互回合的最大数量。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Main results of IGPO compared with different agentic RL baselines across seven datasets.",
+      "type": "comparison_table",
+      "description": "展示了 IGPO 与不同代理强化学习基线在七个数据集上的主要结果比较。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig11": {
+      "caption": "Case study showing a scenario where the final answer is incorrect but contains a single correct retrieval turn. IGPO provides a process reward for this turn, improving token utilization.",
+      "type": "case_study",
+      "description": "展示了最终答案错误但包含一个正确检索回合的案例研究，IGPO 为该回合提供过程奖励，提高令牌利用率。",
+      "best_matched_section": "Key Findings",
+      "importance": "medium"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

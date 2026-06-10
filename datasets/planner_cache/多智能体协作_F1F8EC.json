@@ -1,0 +1,118 @@
+{
+  "asset_token": "11dfcf04ffde4b9e",
+  "template": "template_storyflow",
+  "color_theme": "academic_blue",
+  "poster_title": "Latent Collaboration in Multi-Agent Systems",
+  "authors": "Jiaru Zou, Xiyuan Yang, Ruizhong Qiu, Gaotang Li, Katherine Tieu, Pan Lu, Ke Shen, Hanghang Tong, Yejin Choi, Jingrui He, James Zou, Mengdi Wang, Ling Yang",
+  "paper_info": "Princeton University, University of Illinois Urbana-Champaign, Stanford University; 2023",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Shift from solitary reasoning to collaborative endeavors in multi-agent systems",
+      "content": [
+        "Multi-agent systems (MAS) extend LLMs from independent reasoning to system-level intelligence.",
+        "Recent advances in MAS have shifted the paradigm to collaborative efforts among multiple models.",
+        "LLM-based MAS has been adopted in various applications, including math and science reasoning, open-domain QA, and robotics.",
+        "Text-based mediation is commonly used for reasoning and communication, but latent space collaboration is underexplored."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "headline": "Achieve pure latent collaboration without text-based mediation",
+      "content": [
+        "Can MAS achieve pure latent collaboration without relying on text-based mediation?",
+        "How can latent collaboration enhance system-level reasoning quality and efficiency in MAS?"
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "LatentMAS: Training-free framework for pure latent collaboration",
+      "content": [
+        "LatentMAS is an end-to-end training-free framework enabling pure latent collaboration among LLM agents.",
+        "Each agent generates auto-regressive latent thoughts through last-layer hidden embeddings.",
+        "A shared latent working memory, stored in layer-wise KV caches, ensures lossless information exchange."
+      ],
+      "figure": null,
+      "figure_id": "Fig6",
+      "figure_caption": "Overview of LatentMAS. Each LLM agent generates latent thoughts through last-layer hidden states, then transfers information layer-wise via shared latent working memory.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluated on 9 benchmarks with 3 LLM model scales",
+      "content": [
+        "Empirical evaluations were conducted on nine benchmarks spanning math, science reasoning, commonsense understanding, and code generation.",
+        "Experiments were performed under both sequential and hierarchical MAS settings with three backbone scales (4B, 8B, and 14B)."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Evaluation of LatentMAS across accuracy performance, inference speed, and token usage over 9 benchmarks and 3 LLM model scales under the Hierarchical MAS setting.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Accuracy 87.8%, 4×-4.3× faster, 70.8%-83.7% token reduction",
+      "content": [
+        "LatentMAS consistently outperformed strong single-model and text-based MAS baselines, achieving up to 14.6% higher accuracy.",
+        "Inference was 4 × -4.3 × faster and token usage was reduced by 70.8%-83.7%.",
+        "Latent thought expressiveness, working-memory transfer, and input-output alignment were confirmed to be semantically meaningful, lossless, and stable."
+      ],
+      "figure": null,
+      "figure_id": "Fig7",
+      "figure_caption": "Main results of LatentMAS on 6 general tasks under the Sequential MAS setting. We report accuracy, token usage, and end-to-end speed, and highlight the performance gains.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Latent collaboration enhances reasoning quality and efficiency",
+      "content": [
+        "Latent collaboration in multi-agent systems enhances system-level reasoning quality while offering substantial efficiency gains without additional training.",
+        "LatentMAS is a promising approach for future research in collaborative AI systems.",
+        "The framework is currently limited to LLMs and may not be directly applicable to other types of models."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig6": {
+      "caption": "Figure 3 | Overview of LatentMAS. Each LLM agent in the system first generates latent thoughts through last-layer hidden states, then transfers information layer-wise via shared latent working memory stored in KV-caches, enabling completely system-wide latent collaboration.",
+      "type": "architecture",
+      "description": "概述了 LatentMAS 的架构，每个 LLM 代理首先通过最后一层隐藏状态生成潜在思维，然后通过共享的潜在工作记忆进行信息传递，实现系统范围内的潜在协作。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Figure 1 | Evaluation of LatentMAS across (i) accuracy performance (%), (ii) inference speed (times(s)/run), and (ii) token usage (per token) over 9 benchmarks and 3 LLM model scales under the Hierarchical MAS setting. LatentMAS consistently improves system-level reasoning accuracy while substantial",
+      "type": "result_chart",
+      "description": "评估 LatentMAS 在不同基准和模型规模下的准确率、推理速度和 token 使用情况，显示其在系统级推理准确率上的显著提升。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig7": {
+      "caption": "Table 1 | Main results of LatentMAS on 6 general tasks under the Sequential MAS setting. We report 3 metrics in total, including task accuracy (%, 'Acc.\" ), total output token usage ( 'Token\" ), and end-to-end inference speed (time(s) / run, 'Speed\" ). We compare LatentMAS with both TextMAS and sing",
+      "type": "comparison_table",
+      "description": "LatentMAS 在顺序 MAS 设置下对 6 个一般任务的主要结果，包括任务准确率、总输出 token 使用量和端到端推理速度。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

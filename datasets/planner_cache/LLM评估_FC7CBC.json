@@ -1,0 +1,124 @@
+{
+  "asset_token": "2f656d9d3b4944a2",
+  "template": "template_dashboard",
+  "color_theme": "academic_blue",
+  "poster_title": "DataGovBench : Benchmarking LLM Agents for Real-World Data Governance Workflows",
+  "authors": "Zhou Liu, Zhaoyang Han, Guochen Yan, Hao Liang, Wentao Zhang, Bohan Zeng, Xing Chen, Yuanfeng Song",
+  "paper_info": "Peking University, China and ByteDance, China; 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation / Background",
+      "headline": "Data governance is crucial for modern AI development, yet current tasks are manual and error-prone.",
+      "content": [
+        "Data governance ensures data quality, security, and compliance.",
+        "Modern AI development relies heavily on robust data governance.",
+        "Manual data governance tasks are time-consuming and error-prone.",
+        "Existing benchmarks do not capture the unique challenges of data governance.",
+        "Automated data science benchmarks focus on snippet-level coding or high-level analytics."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem / Challenge",
+      "headline": "Current LLMs and general-purpose agent frameworks struggle with complex, multi-step workflows.",
+      "content": [
+        "Complex, multi-step workflows are challenging for current LLMs.",
+        "General-purpose agent frameworks lack robust error-correction mechanisms.",
+        "Real-world data governance tasks require specialized benchmarks.",
+        "DataGovbench aims to fill this gap with 150 realistic tasks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method / Framework",
+      "headline": "DataGovAgent framework with Planner-Executor-Evaluator architecture.",
+      "content": [
+        "DataGovbench: 150 real-world data governance tasks covering six scenarios.",
+        "Reversed-objective methodology for realistic noise synthesis and evaluation.",
+        "DataGovAgent: Constraint-based planning, retrieval-augmented code generation, and feedback-driven debugging."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Illustration of the semi-automated pipeline designed for building DataGovbench.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments / Results",
+      "headline": "DataGovAgent significantly improved Average Task Score (ATS) from 39.7 to 54.9.",
+      "content": [
+        "Evaluated DataGovAgent on DataGovbench-150.",
+        "Compared with SOTA LLMs and general-purpose agent frameworks.",
+        "Reduced Average Debug Iterations (ADI) by over 77.9% compared to ChatDev."
+      ],
+      "figure": null,
+      "figure_id": "Fig21",
+      "figure_caption": "Comparison of Task Success Rate (TSR) across agents, base models, and task levels.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "DataGovAgent demonstrates significant improvements in task success and efficiency.",
+      "content": [
+        "DataGovAgent outperformed SOTA LLMs in complex tasks.",
+        "The framework's specialized design is crucial for data governance workflows.",
+        "Error-correction mechanisms significantly reduce debugging iterations.",
+        "DataGovbench provides a comprehensive and realistic benchmark."
+      ],
+      "figure": null,
+      "figure_id": "Fig22",
+      "figure_caption": "Comparison of Average Task Score (ATS) across agents, base models, and task levels.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion / Takeaways",
+      "headline": "DataGovbench and DataGovAgent highlight the potential of specialized frameworks in data governance.",
+      "content": [
+        "DataGovbench offers a realistic benchmark for evaluating LLM-based data governance agents.",
+        "DataGovAgent shows significant improvements in task success and efficiency.",
+        "Specialized frameworks are essential for addressing complex data governance challenges.",
+        "Future work will focus on improving instruction decomposition and multi-step pipeline generation."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig2": {
+      "caption": "Figure 2: Illustration of the semi-automated pipeline designed for building DataGovbench, including real-world source data curation, hierarchical task objective design, noisy data synthesis, task-specific evaluation and DAG-level task construction.",
+      "type": "pipeline",
+      "description": "展示了构建 DataGovbench 的半自动化管道，包括真实世界数据管理、分层任务目标设计、噪声数据合成、任务特定评估和 DAG 级任务构建。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig21": {
+      "caption": "Figure 6: Comparison of Task Success Rate (TSR) across agents, base models, and task levels. TSR measures the percentage of tasks completed successfully.",
+      "type": "result_chart",
+      "description": "展示了不同代理、基线模型和任务级别之间的任务成功率（TSR）比较。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig22": {
+      "caption": "Figure 7: Comparison of Average Task Score (ATS). ATS provides a more nuanced measure of solution quality beyond simple success or failure.",
+      "type": "result_chart",
+      "description": "展示了不同代理、基线模型和任务级别之间的平均任务得分（ATS）比较。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

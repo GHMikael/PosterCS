@@ -1,10 +1,10 @@
 {
-  "asset_token": "87ec9734b9dd4e44",
+  "asset_token": "f18649cbef1645e3",
   "template": "template_classic",
   "color_theme": "academic_blue",
   "poster_title": "Generalist Reward Models: Found Inside Large Language Models",
   "authors": "Yi-Chen Li, Tian Xu, Yang Yu, Xuqin Zhang, Xiong-Hui Chen, Zhongxiang Ling, Ningjing Chao, Lei Yuan, Zhi-Hua Zhou",
-  "paper_info": "arXiv:2506.23235v1 [cs.CL] 29 Jun 2025",
+  "paper_info": "A PREPRINT, 2023",
   "layout": {
     "page_size": "A3",
     "layout_type": "classic_grid",
@@ -13,10 +13,11 @@
   "panels": [
     {
       "section": "Motivation",
+      "headline": "Costly human-labeled data for reward models",
       "content": [
-        "RLHF is the main paradigm for aligning LLMs with human values.",
-        "Training RMs on human preferences is costly and difficult to scale.",
-        "Heuristic methods for internal reward extraction lack theoretical guarantees."
+        "Alignment of LLMs with human values is a central challenge.",
+        "Current methods like RLHF require expensive human preference datasets.",
+        "Alternative methods like RLAIF lack theoretical foundation and can inherit biases."
       ],
       "figure": null,
       "figure_id": "",
@@ -25,10 +26,10 @@
     },
     {
       "section": "Problem",
+      "headline": "High-quality, expensive human-labeled data",
       "content": [
-        "High-quality reward signals are essential for LLM alignment.",
-        "External RMs are expensive and not scalable.",
-        "Internal reward extraction methods lack rigorous theoretical foundations."
+        "Need for high-quality, expensive human-labeled data to train reward models.",
+        "Lack of principled method to extract reward signals from LLMs without further training."
       ],
       "figure": null,
       "figure_id": "",
@@ -37,45 +38,47 @@
     },
     {
       "section": "Method",
+      "headline": "Logits as soft Q-function",
       "content": [
-        "Discover endogenous reward within LLMs trained via next-token prediction.",
-        "Prove theoretical equivalence to offline IRL reward functions.",
-        "Extract reward function from LLM logits using inverse soft Bellman operator."
+        "Discovery of a generalist reward model within any LLM trained via standard next-token prediction.",
+        "Theoretical proof that the reward function from offline IRL can be recovered from the next-token prediction objective.",
+        "Proof that fine-tuning a model with its own endogenous reward leads to a policy with a provably superior error bound."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig5",
+      "figure_caption": "Prompt template of GenRM-Pointwise",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Experiments",
+      "headline": "RM-Bench and Multifacted-Bench",
       "content": [
-        "Validate theoretical findings on various LLMs.",
-        "Compare performance with LLM-as-a-judge and explicit RM training."
+        "Extensive experiments validating the theoretical findings.",
+        "Comparison with existing LLM-as-a-judge methods and explicitly trained reward models."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig1",
+      "figure_caption": "Response classification accuracy by reward models on the RM-Bench",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Results",
+      "headline": "Outperforms existing LLM-as-a-judge approaches",
       "content": [
-        "Endogenous reward outperforms LLM-as-a-judge methods.",
-        "Surpasses explicitly trained RMs on expensive human-labeled data.",
-        "Fine-tuning with endogenous reward improves policy error bound."
+        "The method outperforms existing LLM-as-a-judge approaches.",
+        "The method can surpass the performance of reward models trained on expensive human-labeled data."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig2",
+      "figure_caption": "Response classification accuracy on the Multifacted-Bench",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Conclusion",
+      "headline": "More efficient and theoretically grounded paradigm",
       "content": [
-        "Endogenous reward can replace reward modeling stage in LLM alignment.",
-        "Proposes a more efficient and theoretically grounded paradigm.",
-        "Suggests viable alternative to costly human preference datasets."
+        "The reward modeling stage can be replaced by eliciting the knowledge already captured during pre-training.",
+        "This approach heralds a more efficient, powerful, and theoretically grounded paradigm for LLM alignment and multi-modal models."
       ],
       "figure": null,
       "figure_id": "",
@@ -83,7 +86,29 @@
       "layout_hint": "text_only"
     }
   ],
-  "figures": {},
+  "figures": {
+    "Fig1": {
+      "caption": "Table 1: Response classification accuracy by reward models on the RM-Bench. We bold highest score in each column.",
+      "type": "comparison_table",
+      "description": "表格展示了在 RM-Bench 数据集上不同奖励模型的响应分类准确率，并标出了每列的最高分。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Figure 1: Response classification accuracy on the Multifacted-Bench.",
+      "type": "result_chart",
+      "description": "图表展示了在 Multifacted-Bench 数据集上的响应分类准确率。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig5": {
+      "caption": "Figure 5: Prompt template of GenRM-Pointwise.",
+      "type": "method_diagram",
+      "description": "图表展示了 GenRM-Pointwise 的提示模板。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    }
+  },
   "use_commenter": "true",
   "max_iterations": 4,
   "save_debug_images": "true"

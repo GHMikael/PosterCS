@@ -1,0 +1,114 @@
+{
+  "asset_token": "ff514c41bd5547a2",
+  "template": "template_storyflow",
+  "color_theme": "academic_blue",
+  "poster_title": "Reimagining Research Papers As Interactive and Reliable AI Agents",
+  "authors": "Jiacheng Miao, Joe R. Davis, Yaohui Zhang, Jonathan K. Pritchard, and James Zou",
+  "paper_info": "Stanford University, 2023",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Research papers are traditionally passive objects.",
+      "content": [
+        "Papers require substantial effort to understand and adapt.",
+        "Technical barriers limit the accessibility and usability of new methods.",
+        "Advances in AI agents and LLMs promise more interactive and accessible research."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "headline": "Technical barriers prevent easy use of new methods.",
+      "content": [
+        "Executable papers improve reproducibility but still require technical expertise.",
+        "Current solutions do not fully address the need for interactive research tools."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Paper2Agent turns research papers into interactive AI agents.",
+      "content": [
+        "Analyzes paper and associated codebase to construct MCP server.",
+        "Links MCP server to LLM-based chat agents for natural-language interaction."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Overview of the Paper2Agent framework and workflow.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Case Studies",
+      "headline": "AlphaGenome agent achieved 100% accuracy on novel queries.",
+      "content": [
+        "Agents created for AlphaGenome, ScanPy, and TISSUE.",
+        "Agents validated to reproduce original results and handle new queries."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Overview of the AlphaGenome agent and its benchmarking results.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Agents could reproduce results and handle complex scientific queries.",
+      "content": [
+        "Paper2Agent created reliable paper agents for genomic and transcriptomics analyses.",
+        "An AI co-scientist identified a new splicing variant associated with ADHD risk."
+      ],
+      "figure": null,
+      "figure_id": "Fig5",
+      "figure_caption": "Overview of the TISSUE agent and its Q&A support for spatial transcriptomics analysis.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Paper2Agent introduces a new paradigm for knowledge dissemination.",
+      "content": [
+        "Framework lowers barriers to adoption and accelerates research translation.",
+        "Paper2Agent is a foundation for the collaborative ecosystem of AI co-scientists."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig2": {
+      "caption": "Figure 1: Overview of the Paper2Agent. (A) Paper2Agent turns research papers into interactive AI agents by building remote MCP servers with tools, resources, and prompts. Connecting an AI agent to the server creates a paper-specific agent for diverse tasks. (B) Workflow of Paper2Agent. It starts wit",
+      "type": "method_diagram",
+      "description": "Paper2Agent 的概述图，包括构建远程 MCP 服务器的过程和工作流程。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Figure 2: Overview of the Paper2Agent-generated AlphaGenome agent. (A) Construction of the AlphaGenome MCP server and agent. (B) Benchmarking the AlphaGenome agent on tutorialbased and novel queries shows 100% accuracy, above that achieved by the general agents Claude with the AlphaGenome codebase (",
+      "type": "method_diagram",
+      "description": "AlphaGenome 代理的概述图，包括构建 MCP 服务器的过程和基准测试结果。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig5": {
+      "caption": "Figure 3: Overview of the Paper2Agent-generated TISSUE agent. (A) Construction of the TISSUE MCP server and agent. (B) Q&A support for uncertainty-aware spatial transcriptomics analysis. (C) Reproducibility confirmed by matching human researcher results. (D) Structured MCP resources enable standardi",
+      "type": "method_diagram",
+      "description": "TISSUE 代理的概述图，包括构建 MCP 服务器的过程、Q&A 支持、可重复性验证和结构化 MCP 资源。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

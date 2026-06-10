@@ -1,0 +1,114 @@
+{
+  "asset_token": "fee6bc43be054a27",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Align before Fuse: Vision and Language Representation Learning with Momentum Distillation",
+  "authors": "Junnan Li, Ramprasaath R. Selvaraju, Akhilesh D. Gotmare, Shafiq Joty, Caiming Xiong, Steven C.H. Hoi",
+  "paper_info": "Salesforce Research",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Addressing unaligned visual and textual tokens in multimodal learning",
+      "content": [
+        "Unaligned tokens hinder effective image-text interaction learning.",
+        "Existing methods require expensive annotations and high-resolution images.",
+        "Web-collected datasets are noisy, leading to overfitting and performance degradation.",
+        "Proposes aligning unimodal representations before fusion to improve learning efficiency.",
+        "Aims to enhance performance on vision-language tasks without costly resources."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Introduces ALBEF with ITC loss and Momentum Distillation",
+      "content": [
+        "Introduces an intermediate image-text contrastive (ITC) loss to align unimodal representations.",
+        "Employs a detector-free image encoder and a text encoder for independent encoding.",
+        "Fuses aligned features using a multimodal encoder with cross-modal attention.",
+        "Proposes Momentum Distillation to generate pseudo-targets for learning from noisy data."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Illustration of ALBEF. It consists of an image encoder, a text encoder, and a multimodal encoder. We propose an image-text contrastive loss to align the unimodal representations of an image-text pair before fusion.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluates on multiple vision-language tasks",
+      "content": [
+        "Pre-trained on large web-collected datasets and fine-tuned on smaller, cleaner datasets.",
+        "Evaluates on image-text retrieval, visual question answering, and visual reasoning tasks.",
+        "Uses Flickr30K for zero-shot image-text retrieval evaluation.",
+        "Conducts ablation studies on fine-tuned image-text retrieval and NLVR 2 tasks."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Evaluation of the proposed methods on four downstream V+L tasks. For text-retrieval (TR) and image-retrieval (IR), we report the average of R@1, R@5 and R@10. ITC: image-text contrastive learning. MLM: masked language modeling. ITMhard: image-text matching with contrastive hard negative mining.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Achieves state-of-the-art performance on multiple tasks",
+      "content": [
+        "Outperforms methods pre-trained on significantly larger datasets in image-text retrieval.",
+        "Improves VQA and NLVR 2 performance by 2.37% and 3.84% respectively, while maintaining faster inference speed.",
+        "Demonstrates superior performance on both retrieval and reasoning tasks without requiring expensive object detectors.",
+        "Shows significant improvements in grounding accuracy on RefCOCO+ validation set.",
+        "Achieves better qualitative results compared to human attention in VQA tasks."
+      ],
+      "figure": null,
+      "figure_id": "Fig7",
+      "figure_caption": "Comparison with state-of-the-art methods on downstream vision-language tasks.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Unifies strengths of transformer-based multimodal encoders and contrastive learning",
+      "content": [
+        "ALBEF effectively aligns image and text representations before fusion, leading to strong unimodal and multimodal representations.",
+        "Momentum Distillation significantly enhances the model's ability to learn from noisy data, improving performance on various vision-language tasks.",
+        "The proposed framework achieves state-of-the-art results on multiple vision-language benchmarks.",
+        "Future work could explore more complex multimodal tasks and different types of noisy data.",
+        "The method's reliance on the momentum model for pseudo-targets may introduce limitations in certain scenarios."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Illustration of ALBEF. It consists of an image encoder, a text encoder, and a multimodal encoder. We propose an image-text contrastive loss to align the unimodal representations of an image-text pair before fusion.",
+      "type": "architecture",
+      "description": "ALBEF模型的架构图，展示了图像编码器、文本编码器和多模态编码器的组成部分，以及提出的图像-文本对比损失和匹配损失。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Evaluation of the proposed methods on four downstream V+L tasks. For text-retrieval (TR) and image-retrieval (IR), we report the average of R@1, R@5 and R@10. ITC: image-text contrastive learning. MLM: masked language modeling. ITMhard: image-text matching with contrastive hard negative mining.",
+      "type": "comparison_table",
+      "description": "评估所提出方法在四个下游视觉-语言任务上的性能，报告了文本检索和图像检索的平均召回率以及对比学习和硬负样本匹配的性能。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig7": {
+      "caption": "Comparison with state-of-the-art methods on downstream vision-language tasks.",
+      "type": "comparison_table",
+      "description": "与现有最先进方法在下游视觉-语言任务上的性能对比表格。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

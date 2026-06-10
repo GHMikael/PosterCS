@@ -1,10 +1,10 @@
 {
-  "asset_token": "9378d5622e1c4117",
+  "asset_token": "cbccea99945a4b31",
   "template": "template_classic",
   "color_theme": "academic_blue",
   "poster_title": "Test-Time Preference Optimization: On-the-Fly Alignment via Iterative Textual Feedback",
   "authors": "Yafu Li, Xuyang Hu, Xiaoye Qu, Linjie Li, Yu Cheng",
-  "paper_info": "arXiv:2501.12895v1 [cs.CL] 22 Jan 2025",
+  "paper_info": "2024, A framework for aligning large language models with human preferences during inference without retraining",
   "layout": {
     "page_size": "A3",
     "layout_type": "classic_grid",
@@ -13,21 +13,12 @@
   "panels": [
     {
       "section": "Motivation",
+      "headline": "Addressing unexpected or unsafe responses in LLMs without retraining",
       "content": [
-        "Large language models (LLMs) may produce unsafe responses if not aligned.",
-        "Traditional alignment methods are not swift enough for real-time adaptation.",
-        "Need for a method to align LLMs during inference with textual feedback."
-      ],
-      "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
-    },
-    {
-      "section": "Problem",
-      "content": [
-        "Aligning LLMs during inference to match human preferences.",
-        "Using interpretable textual feedback for preference optimization."
+        "LLMs show impressive capabilities but may produce unexpected or unsafe responses.",
+        "Traditional alignment methods are time-consuming and hinder swift adaptation.",
+        "TPO aims to align LLMs with human preferences during inference without retraining.",
+        "Textual feedback is used instead of purely numerical rewards for preference optimization."
       ],
       "figure": null,
       "figure_id": "",
@@ -36,33 +27,49 @@
     },
     {
       "section": "Method",
+      "headline": "TPO performs gradient descent in textual form",
       "content": [
-        "TPO transforms numerical rewards into textual critiques.",
-        "Policy model refines outputs iteratively based on textual critiques.",
-        "TPO operates as an online, on-policy learning paradigm."
+        "TPO leverages the ability of LLMs to interpret and act upon reward signals during inference.",
+        "The policy model translates numerical reward signals into textual critiques and suggestions.",
+        "TPO updates responses based on textual feedback without altering model parameters."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig2",
+      "figure_caption": "Framework of test-time preference optimization (TPO), shown here on a real example from AlpacaEval 2.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Experiments",
+      "headline": "Experiments on a wide range of benchmarks",
       "content": [
-        "Evaluated on benchmark datasets: instruction following, preference alignment, safety, mathematics.",
-        "Compared unaligned and aligned models, with aligned models optimized at training time."
+        "Experiments conducted on instruction following, preference alignment, safety, and mathematics.",
+        "Key models: Llama-3.1-70B-SFT (unaligned) and Llama-3.1-70B-Instruct (aligned)."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig3",
+      "figure_caption": "Test-time training curve for the (unaligned) SFT model and (aligned) instruct models.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Results",
+      "headline": "TPO outperforms aligned models on nearly all benchmarks",
       "content": [
-        "TPO aligns the policy model with human preferences, improving reward model scores.",
-        "Unaligned Llama-3.1-70B-SFT surpasses Llama-3.1-70B-Instruct on most benchmarks.",
-        "TPO scales efficiently with search width and depth."
+        "TPO progressively improves alignment with human preferences.",
+        "The unaligned Llama-3.1-70B-SFT model outperformed its aligned counterpart after several TPO steps.",
+        "TPO scales efficiently with both search width and depth."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Benchmark performance of the unaligned model (Llama-3.1-70B-SFT) with TPO, compared against training-time aligned baselines.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Contributions",
+      "headline": "Introduction of TPO as a lightweight and practical alternative",
+      "content": [
+        "TPO is a lightweight and practical alternative to training-time methods.",
+        "Demonstrated that TPO can achieve better alignment with human preferences without retraining.",
+        "Empirically validated TPO's effectiveness across various benchmarks and model sizes."
       ],
       "figure": null,
       "figure_id": "",
@@ -71,9 +78,10 @@
     },
     {
       "section": "Conclusion",
+      "headline": "TPO offers a flexible and efficient alternative to training-time methods",
       "content": [
-        "TPO is a practical and lightweight method for test-time preference optimization.",
-        "Empirical findings show significant improvement in alignment with human preferences."
+        "TPO establishes a new paradigm for aligning LLMs with human preferences during inference.",
+        "Continuous refinement of model outputs based on textual feedback opens new possibilities for real-time alignment."
       ],
       "figure": null,
       "figure_id": "",
@@ -81,8 +89,30 @@
       "layout_hint": "text_only"
     }
   ],
-  "figures": {},
-  "use_commenter": true,
+  "figures": {
+    "Fig2": {
+      "caption": "Figure 2. Framework of test-time preference optimization (TPO), shown here on a real example from AlpacaEval 2. Concretely, the model samples responses and scores them with a reward model ( Left ), interprets reward model feedback of chosen response v 3 and rejected response v 1 ( Middle ), and prov",
+      "type": "method_diagram",
+      "description": "测试时偏好优化（TPO）框架的示意图，展示了一个来自AlpacaEval 2的实际例子，包括模型采样响应、奖励模型评分和解释奖励模型反馈的过程。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Figure 3. Test-time training curve for the (unaligned) SFT model and (aligned) instruct models. The colored lines represent the test-time training performance (reward model score) w.r.t. training steps (i.e., number of TPO iterations), while the dashed horizontal lines indicate scores for models wit",
+      "type": "result_chart",
+      "description": "展示了测试时训练曲线，比较了未对齐的SFT模型和对齐的指令模型在不同TPO迭代次数下的奖励模型得分。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Table 1. Benchmark performance of the unaligned model (Llama-3.1-70B-SFT) with TPO, compared against training-time aligned baselines (Llama-3.1-70B-DPO and Llama-3.1-70B-Instruct). The bold and underlined numbers indicate the best and second-best performances, respectively. By default, the maximum n",
+      "type": "comparison_table",
+      "description": "比较了未对齐模型（Llama-3.1-70B-SFT）与训练时对齐基线模型（Llama-3.1-70B-DPO和Llama-3.1-70B-Instruct）在TPO下的基准性能。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
   "max_iterations": 4,
-  "save_debug_images": true
+  "save_debug_images": "true"
 }

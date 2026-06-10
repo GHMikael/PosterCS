@@ -1,0 +1,120 @@
+{
+  "asset_token": "b68591ddfd7f4c4e",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Reachability of Independent Sets and Vertex Covers Under Extended Reconfiguration Rules",
+  "authors": "Shuichi Hirahara, Naoto Ohsaka, Tatsuhiro Suga, Akira Suzuki, Yuma Tamura, and Xiao Zhou",
+  "paper_info": "National Institute of Informatics, Tokyo, Japan; CyberAgent, Inc., Tokyo, Japan; Graduate School of Information Sciences, Tohoku University, Sendai, Japan; Center for Data-Driven Science and Artificial Intelligence, Tohoku University, Sendai, Japan",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Reconfiguration problems involve transforming one feasible solution into another via a sequence of feasible intermediate solutions.",
+      "content": [
+        "Three standard reconfiguration models: token jumping (TJ), token sliding (TS), and token addition/removal (TAR).",
+        "These problems have been extensively studied in theoretical computer science, particularly for graph problems.",
+        "The study aims to extend the understanding of reconfiguration rules in practical scenarios.",
+        "The focus is on the computational complexity of Independent Set Reconfiguration (ISR) and Vertex Cover Reconfiguration (VCR).",
+        "The research introduces more flexible reconfiguration rules: k-Token Jumping (k-TJ) and k-Token Sliding (k-TS)."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "headline": "Conventional reconfiguration rules may be too restrictive for practical scenarios.",
+      "content": [
+        "The computational complexity of reconfiguration problems under more flexible rules is not well understood.",
+        "The study investigates the complexity of ISR and VCR under k-TJ and k-TS models.",
+        "The parameter µ = |I| - k is introduced to analyze the complexity of ISR, where |I| is the size of the initial independent set."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Analyze the computational complexity of ISR and VCR under k-TJ and k-TS models.",
+      "content": [
+        "k-TJ allows up to k vertices to be replaced simultaneously, while k-TS requires a perfect matching between removed and added vertices.",
+        "The impact of the parameter µ on the complexity of ISR is investigated."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Illustration of the construction of G from a boolean formula ϕ′ used in the proof of Theorem 2.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Examine the complexity of ISR and VCR on various graph classes, including planar graphs, graphs of maximum degree 3, and perfect graphs.",
+      "content": [
+        "Parameterize the complexity of the problems by µ, the guaranteed value, and analyze the results for different values of µ.",
+        "The results are summarized in comparison tables for different graph classes and values of k."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Table 1: The complexity of ISR under k-TJ for various graph classes and values of k.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "ISR under k-TJ with k = |I| - µ remains NP-hard for any fixed positive integer µ and for graphs of maximum degree 3 or planar graphs of maximum degree 4.",
+      "content": [
+        "VCR under k-TJ is in XP when parameterized by µ = |S| - k, where |S| is the size of the initial vertex cover.",
+        "ISR and VCR under both k-TJ and k-TS are PSPACE-complete on several graph classes, for fixed k as well as superconstant k relative to the size of feasible solutions."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Table 2: Comparison between the complexity of ISR and VCR under k-TJ on general graphs and graphs of maximum degree 3.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "The computational complexity of ISR and VCR under extended reconfiguration rules varies significantly depending on the graph class and the value of k relative to the size of feasible solutions.",
+      "content": [
+        "The results highlight the importance of considering more flexible reconfiguration rules in practical scenarios.",
+        "The study primarily focuses on theoretical analysis and does not provide practical algorithms for solving the reconfiguration problems.",
+        "The findings contribute to a deeper understanding of the computational complexity of reconfiguration problems.",
+        "The research establishes new hardness results for ISR under k-TJ on sparse graphs.",
+        "The complexity of VCR under k-TJ and both ISR and VCR under k-TS on various graph classes is classified."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Table 1: The complexity of ISR under k-TJ for various graph classes and values of k. Here, I denotes an initial independent set, and ∆, bw, and cw denote the maximum degree, bandwidth, and clique-width, respectively, of a given n-vertex graph. Let ε0 ∈ (0, 1) be a fixed constant.",
+      "type": "comparison_table",
+      "description": "展示了不同图类和 k 值下 ISR 的复杂性，包括初始独立集 I 和图的最大度数、带宽、团宽度等参数。",
+      "best_matched_section": "Experiments",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Table 2: Comparison between the complexity of ISR and VCR under k-TJ on general graphs and graphs of maximum degree 3. The vertex subset A of the input graph represents the initial solution for both ISR and VCR. Specifically, A is the input independent set for ISR, and the input vertex cover for",
+      "type": "comparison_table",
+      "description": "比较了一般图和最大度数为 3 的图在 k-TJ 下 ISR 和 VCR 的复杂性，其中 A 代表输入图的初始解集。",
+      "best_matched_section": "Experiments",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Figure 1: Illustration of the construction of G from a boolean formula ϕ′ used in the proof of Theorem 2, where ϕ′ = (x1 ∨ x2 ∨ x4) ∧ (x1 ∨ x3 ∨ x4) ∧ (x2 ∨ x3 ∨ x4). The blue marked tokens are on I, and the red marked tokens are on J.",
+      "type": "method_diagram",
+      "description": "图 G 从布尔公式 ϕ′ 构建的示意图，用于证明定理 2。蓝色标记的令牌在 I 上，红色标记的令牌在 J 上。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

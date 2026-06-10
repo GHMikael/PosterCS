@@ -1,10 +1,10 @@
 {
-  "asset_token": "7b05b87c8236432d",
+  "asset_token": "bbfc53848a984c15",
   "template": "template_dashboard",
   "color_theme": "academic_blue",
   "poster_title": "Automated Evaluation of Personalized Text Generation using Large Language Models",
   "authors": "Yaqing Wang, Jiepu Jiang, Mingyang Zhang, Cheng Li, Yi Liang, Qiaozhu Mei, Michael Bendersky",
-  "paper_info": "Proceedings of ACM Conference, 2023, 15 pages",
+  "paper_info": "Proceedings of ACM Conference, 2023",
   "layout": {
     "page_size": "A3",
     "layout_type": "dashboard_grid",
@@ -12,11 +12,14 @@
   },
   "panels": [
     {
-      "section": "Motivation / Background",
+      "section": "Motivation",
+      "headline": "Personalized text generation aims to tailor output to individual user contexts and preferences, providing enhanced relevance and user experience.",
       "content": [
-        "Traditional metrics like BLEU and ROUGE inadequate for personalized text generation.",
-        "Human judgments costly and difficult to obtain.",
-        "Advancements in LLMs challenge the gold standard assumption of human references."
+        "Traditional metrics like BLEU and ROUGE are inadequate for evaluating personalized text generation.",
+        "Human judgments are costly and impractical in personalized settings.",
+        "AuPEL framework leverages the comprehension ability of large language models (LLMs) to evaluate personalized text generation.",
+        "AuPEL measures personalization, quality, and relevance through pairwise comparisons.",
+        "LLMs are instructed using carefully curated prompts to perform these evaluations."
       ],
       "figure": null,
       "figure_id": "",
@@ -24,11 +27,14 @@
       "layout_hint": "text_only"
     },
     {
-      "section": "Problem",
+      "section": "Research Problem",
+      "headline": "Lack of robust and automated evaluation methods for personalized text generation.",
       "content": [
-        "Lack of robust automated evaluation methods for personalized text generation.",
-        "Existing metrics fail to capture personalization, quality, and relevance.",
-        "Relying on human-generated references impractical in personalized settings."
+        "Infeasibility of producing personalized references for every user.",
+        "Need to capture nuances between personalization, quality, and relevance without relying on human-generated ground truths.",
+        "AuPEL addresses these challenges by using LLMs for evaluation.",
+        "AuPEL can handle various text generators, user profiles, and generation contexts.",
+        "AuPEL shows higher agreement with user-generated ground truths than human raters and traditional metrics."
       ],
       "figure": null,
       "figure_id": "",
@@ -36,55 +42,51 @@
       "layout_hint": "text_only"
     },
     {
-      "section": "Method / Framework",
+      "section": "Method",
+      "headline": "Proposed AuPEL framework leverages the comprehension ability of large language models (LLMs) to evaluate personalized text generation.",
       "content": [
-        "AuPEL framework leverages LLMs for evaluating personalization, quality, and relevance.",
-        "Uses curated prompts for pairwise comparisons between text generation systems.",
-        "LLM evaluators trained to discern personalized features."
+        "AuPEL measures personalization, quality, and relevance through pairwise comparisons.",
+        "LLMs are instructed using carefully curated prompts to perform these evaluations."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig8",
+      "figure_caption": "Prompts used in Generation. 𝑄 and 𝑈 𝑡 indicate corresponding immediate context and user profile.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Experiments",
+      "headline": "Controlled experiments comparing the accuracy, consistency, and sensitivity of AuPEL with human annotators and traditional metrics.",
       "content": [
-        "Controlled experiments on accuracy of LLM evaluators vs. human raters and traditional metrics.",
-        "Evaluation of consistency and sensitivity across different test cases.",
-        "Verification of AuPEL's ability to distinguish text generators with varying sizes, user profiles, and contexts."
+        "Experiments involving different text generators, varying in model size, user profiles, and generation context.",
+        "AuPEL achieves near-perfect consistency and sensitivity even with a small number of test cases.",
+        "LLM evaluators outperform human annotators in distinguishing personalized user-generated text from AI-generated text."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig2",
+      "figure_caption": "Agreement between evaluators and assumed truth (GOLD > XXL > XL) at test case level; error bars represent 95% confidence intervals. AuPEL is more accurate than human raters and traditional NLG metrics.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Results",
+      "headline": "AuPEL shows higher agreement with user-generated ground truths than human raters and traditional metrics.",
       "content": [
-        "AuPEL achieves higher agreement with ground-truth than human raters and traditional metrics."
+        "AuPEL achieves near-perfect consistency and sensitivity even with a small number of test cases.",
+        "LLM evaluators outperform human annotators in distinguishing personalized user-generated text from AI-generated text."
       ],
       "figure": null,
       "figure_id": "Fig4",
-      "figure_caption": "Agreement between evaluators and assumed truth at test case level; AuPEL more accurate.",
-      "layout_hint": "text_top_image_bottom"
+      "figure_caption": "Overall evaluation results of multiple T5 generators with AuPEL Elo Ratings and average scores of traditional NLG Metrics over all datasets. P, Q, and R stand for Personalization, Quality and Relevance respectively.",
+      "layout_hint": "with_figure"
     },
     {
-      "section": "Key Findings",
+      "section": "Conclusion",
+      "headline": "AuPEL is a significant step forward in the automated evaluation of personalized text generation.",
       "content": [
-        "Near-perfect consistency and sensitivity of AuPEL with a small number of test cases.",
-        "LLM evaluators show improved personalization evaluation as LLM size grows."
-      ],
-      "figure": null,
-      "figure_id": "Fig7",
-      "figure_caption": "Estimated consistency of AuPEL, human raters, and NLG metrics for comparing T5 XL vs. T5 XXL generators.",
-      "layout_hint": "text_top_image_bottom"
-    },
-    {
-      "section": "Conclusion / Takeaways",
-      "content": [
-        "AuPEL provides a principled and robust method for evaluating personalized text generation.",
-        "Use of LLMs in evaluation opens new possibilities but also introduces challenges."
+        "AuPEL can accurately and consistently evaluate personalization, quality, and relevance without human annotations.",
+        "The datasets used in the studies will be released for research purposes.",
+        "AuPEL outperforms human raters and traditional metrics in evaluating personalized text generation.",
+        "Further validation with diverse user groups is needed.",
+        "AuPEL opens new avenues for the development and evaluation of personalized text generation systems."
       ],
       "figure": null,
       "figure_id": "",
@@ -93,19 +95,26 @@
     }
   ],
   "figures": {
-    "Fig4": {
+    "Fig2": {
       "caption": "Agreement between evaluators and assumed truth (GOLD > XXL > XL) at test case level; error bars represent 95% confidence intervals. AuPEL is more accurate than human raters and traditional NLG metrics.",
       "type": "result_chart",
-      "description": "展示了不同评估者在测试案例层面的一致性，GOLD 评估者的准确性最高。AuPEL 比人类评估者和传统 NLG 指标更准确。",
+      "description": "图表展示了不同评估者在测试用例级别的共识，误差棒表示95%的置信区间。AuPEL比人类评估者和传统NLG指标更准确。",
       "best_matched_section": "Results",
       "importance": "high"
     },
-    "Fig7": {
-      "caption": "Estimated consistency of AuPEL, human raters, and NLG metrics for comparing T5 XL vs. T5 XXL generators.",
-      "type": "result_chart",
-      "description": "展示了 AuPEL、人类评估者和 NLG 指标在比较 T5 XL 和 T5 XXL 生成器时的一致性估计。",
+    "Fig4": {
+      "caption": "Overall evaluation results of multiple T5 generators with AuPEL Elo Ratings and average scores of traditional NLG Metrics over all datasets. P, Q, and R stand for Personalization, Quality and Relevance respectively.",
+      "type": "comparison_table",
+      "description": "表格展示了多个T5生成器在所有数据集上的总体评估结果，包括AuPEL Elo评分和传统NLG指标的平均分数。P、Q和R分别代表个性化、质量和相关性。",
       "best_matched_section": "Results",
       "importance": "high"
+    },
+    "Fig8": {
+      "caption": "Prompts used in Generation. 𝑄 and 𝑈 𝑡 indicate corresponding immediate context and user profile.",
+      "type": "comparison_table",
+      "description": "表格展示了生成过程中使用的提示，包括即时上下文和用户配置文件。",
+      "best_matched_section": "Method",
+      "importance": "medium"
     }
   },
   "use_commenter": "true",

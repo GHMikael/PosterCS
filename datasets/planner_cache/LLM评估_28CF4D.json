@@ -1,10 +1,10 @@
 {
-  "asset_token": "573485a9c5494545",
+  "asset_token": "6b5b717e2ff146db",
   "template": "template_dashboard",
   "color_theme": "warm_orange",
   "poster_title": "ESSAYBENCH: Evaluating Large Language Models in Multi-Genre Chinese Essay Writing",
   "authors": "Fan Gao, Dongyuan Li, Ding Xia, Fei Mi, Yasheng Wang, Lifeng Shang, Baojun Wang",
-  "paper_info": "arXiv:2506.02596v1 [cs.CL], 3 Jun 2025",
+  "paper_info": "The University of Tokyo, Huawei Noah's Ark Lab, 2023",
   "layout": {
     "page_size": "A3",
     "layout_type": "dashboard_grid",
@@ -13,12 +13,12 @@
   "panels": [
     {
       "section": "Motivation",
+      "headline": "Addressing the gap in LLM capabilities for Chinese essay writing",
       "content": [
         "Chinese essay writing is crucial in educational contexts.",
-        "LLMs' capabilities in this domain are underexplored.",
-        "Existing benchmarks lack fine-grained metrics.",
-        "Need for a more comprehensive evaluation framework.",
-        "Aims to capture structural and rhetorical complexities."
+        "LLM capabilities in this domain are underexplored.",
+        "Existing benchmarks lack fine-grained and genre-specific metrics.",
+        "Chinese essays have unique characteristics across genres."
       ],
       "figure": null,
       "figure_id": "",
@@ -27,76 +27,59 @@
     },
     {
       "section": "Problem",
+      "headline": "Current evaluation methods are too coarse-grained",
       "content": [
-        "Current evaluation methods are too coarse-grained.",
-        "Neglect unique characteristics of Chinese essays.",
-        "Difficulty in revealing specific weaknesses.",
-        "Need for genre-specific criteria."
-      ],
-      "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
-    },
-    {
-      "section": "Method",
-      "content": [
-        "Propose ESSAYBENCH with 728 real-world prompts."
+        "Current methods fail to capture genre-specific criteria.",
+        "They limit the ability to reflect nuanced demands of Chinese essay writing."
       ],
       "figure": null,
       "figure_id": "Fig2",
-      "figure_caption": "Overview of the ESSAYBENCH dataset curation, representative prompts, and the evaluation framework.",
-      "layout_hint": "text_top_image_bottom"
+      "figure_caption": "Comparison of ESSAYBENCH with other benchmarks in terms of size, composition, and evaluations.",
+      "layout_hint": "with_figure"
     },
     {
-      "section": "Evaluation Protocol",
+      "section": "Method",
+      "headline": "ESSAYBENCH covers four major genres and real-world scenarios",
       "content": [
-        "Develop a fine-grained, genre-specific scoring framework.",
-        "Introduce a dependency-weighted score aggregation strategy.",
-        "Human agreement study and quality sensitivity analysis.",
-        "Framework aligns closely with human judgments."
-      ],
-      "figure": null,
-      "figure_id": "Fig1",
-      "figure_caption": "Comparison between coarse-grained evaluation methods and our fine-grained and genre-oriented framework for ESSAYBENCH.",
-      "layout_hint": "text_top_image_bottom"
-    },
-    {
-      "section": "Experiments",
-      "content": [
-        "Benchmark 15 large-scale LLMs on Chinese essay writing."
+        "728 real-world prompts are curated and categorized.",
+        "A fine-grained, genre-specific scoring framework is developed."
       ],
       "figure": null,
       "figure_id": "Fig3",
-      "figure_caption": "Dataset Statistics. Note that Open denotes Open-Ended sets, Cons. refers to Constrained sets.",
-      "layout_hint": "text_top_image_bottom"
+      "figure_caption": "Overview of the ESSAYBENCH dataset curation, representative prompts, and the evaluation framework.",
+      "layout_hint": "with_figure"
     },
     {
-      "section": "Results",
+      "section": "Experiments",
+      "headline": "Human agreement study and quality sensitivity analysis",
       "content": [
-        "Framework significantly improves the ability to distinguish essay quality."
-      ],
-      "figure": null,
-      "figure_id": "Fig4",
-      "figure_caption": "Comparison of Performance by Sets.",
-      "layout_hint": "text_top_image_bottom"
-    },
-    {
-      "section": "LLMs Performance",
-      "content": [
-        "Detailed comparisons of LLMs' capabilities across different genres."
+        "A human agreement study is conducted to validate the protocol.",
+        "Quality sensitivity analysis is performed to test robustness."
       ],
       "figure": null,
       "figure_id": "Fig5",
-      "figure_caption": "Comparison of LLMs Performance across different genres.",
-      "layout_hint": "text_top_image_bottom"
+      "figure_caption": "Comparison of human agreement evaluation across different scoring methods on sampled data.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "ESSAYBENCH aligns closely with human judgments",
+      "content": [
+        "The framework significantly improves the ability to distinguish essay quality.",
+        "Benchmarking results for 15 large-scale LLMs are provided."
+      ],
+      "figure": null,
+      "figure_id": "Fig8",
+      "figure_caption": "Benchmarking Results on Chinese Essay Writing. In each column, the highest and the second highest performance is highlighted in bold and is underlined.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Conclusion",
+      "headline": "ESSAYBENCH advances the evaluation of LLM-generated Chinese essays",
       "content": [
-        "ESSAYBENCH addresses the gap in fine-grained and genre-specific evaluation.",
-        "Benchmark and evaluation protocol can advance LLM use in educational settings.",
-        "Inspires future research on essay generation."
+        "The benchmark addresses genre-specific criteria and real-world scenarios.",
+        "The framework provides a more reliable and nuanced assessment of essay quality.",
+        "It inspires future research in Chinese essay writing and LLM evaluation."
       ],
       "figure": null,
       "figure_id": "",
@@ -105,38 +88,31 @@
     }
   ],
   "figures": {
-    "Fig1": {
-      "caption": "Figure 1: Comparison between coarse-grained evaluation methods (a) and our fine-grained and genre-oriented framework for ESSAYBENCH (b).",
-      "type": "pipeline",
-      "description": "展示了粗粒度评估方法与ESSAYBENCH细粒度和面向类型的评估框架的对比。",
-      "best_matched_section": "Method",
-      "importance": "high"
-    },
     "Fig2": {
-      "caption": "Figure 2: Overview of the ESSAYBENCH dataset curation, representative prompts, and the evaluation framework.",
-      "type": "architecture",
-      "description": "概述了ESSAYBENCH数据集的创建过程、代表性提示和评估框架。",
-      "best_matched_section": "Method",
+      "caption": "Table 1: Comparison of ESSAYBENCH with other benchmarks in terms of size, composition, and evaluations.",
+      "type": "comparison_table",
+      "description": "比较了ESSAYBENCH与其他基准在规模、组成和评估方面的差异。",
+      "best_matched_section": "Problem",
       "importance": "high"
     },
     "Fig3": {
-      "caption": "Figure 3: Dataset Statistics. Note that Open denotes Open-Ended sets, Cons. refers to Constrained sets.",
-      "type": "dataset_example",
-      "description": "展示了数据集的统计信息，包括开放性集合和约束性集合。",
-      "best_matched_section": "Experiments",
-      "importance": "medium"
-    },
-    "Fig4": {
-      "caption": "Figure 4: Comparison of Performance by Sets.",
-      "type": "result_chart",
-      "description": "比较了不同集合的性能。",
-      "best_matched_section": "Results",
+      "caption": "Figure 2: Overview of the ESSAYBENCH dataset curation, representative prompts, and the evaluation framework.",
+      "type": "architecture",
+      "description": "概述了ESSAYBENCH数据集的创建、代表性提示和评估框架。",
+      "best_matched_section": "Method",
       "importance": "high"
     },
     "Fig5": {
-      "caption": "Figure 5: Comparison of LLMs Performance across different genres.",
-      "type": "result_chart",
-      "description": "比较了不同类型的大型语言模型在不同类型的文本上的性能。",
+      "caption": "Table 2: Comparison of human agreement evaluation across different scoring methods on sampled data. ρ refers to Spearman's ρ, τ denotes the Kendall's τ, while WT. represents the dependency-based weights.",
+      "type": "comparison_table",
+      "description": "比较了不同评分方法在样本数据上的人类一致性评估。",
+      "best_matched_section": "Experiments",
+      "importance": "high"
+    },
+    "Fig8": {
+      "caption": "Table 5: Benchmarking Results on Chinese Essay Writing. In each column, the highest and the second highest performance is highlighted in bold and is underlined. Open denotes Open-Ended and Cons. denotes Constrained.",
+      "type": "comparison_table",
+      "description": "展示了中文写作基准测试的结果，每列中的最高和次高性能用粗体和下划线突出显示。",
       "best_matched_section": "Results",
       "importance": "high"
     }

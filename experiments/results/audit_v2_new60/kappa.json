@@ -1,0 +1,62 @@
+{
+  "annotatorA_vs_B": 0.723,
+  "n_common": 60,
+  "n_disagreements": 11,
+  "disagreements": [
+    {
+      "run": "20260609_023510_Seeing,_Listening,_Remembering_5b5ef16d0aec",
+      "A": "asset_too_small",
+      "B": "none"
+    },
+    {
+      "run": "20260609_024001_Generalist_Reward_Models_Found_657081bc5ee8",
+      "A": "asset_too_small",
+      "B": "space_imbalance"
+    },
+    {
+      "run": "20260609_024834_Revisiting_Hallucination_Detec_ca5d974cf3fd",
+      "A": "none",
+      "B": "space_imbalance"
+    },
+    {
+      "run": "20260609_024836_Know_Your_Limits_A_Survey_of_A_345fd4c78f2e",
+      "A": "asset_too_small",
+      "B": "space_imbalance"
+    },
+    {
+      "run": "20260609_025220_Is_Chain-of-Thought_Reasoning__0a77c3c5f24d",
+      "A": "asset_too_small",
+      "B": "structure_alignment_error"
+    },
+    {
+      "run": "20260609_031542_LeanRAG_Knowledge-Graph-Based__24e848eba9fe",
+      "A": "asset_too_small",
+      "B": "none"
+    },
+    {
+      "run": "20260609_031955_Multimodal_Retrieval-Reflectio_90b3ba39356e",
+      "A": "asset_too_small",
+      "B": "none"
+    },
+    {
+      "run": "20260609_033644_AQA_Adaptive_Question_Answerin_7686221c4c02",
+      "A": "asset_too_small",
+      "B": "none"
+    },
+    {
+      "run": "20260609_034637_Building_Production-Ready_AI_A_fcec57454c05",
+      "A": "other",
+      "B": "none"
+    },
+    {
+      "run": "20260609_041103_InfiFusion_A_Unified_Framework_91741a511b2b",
+      "A": "none",
+      "B": "asset_too_small"
+    },
+    {
+      "run": "20260609_042935_A_Survey_of_Large_Language_Mod_5736843ad823",
+      "A": "asset_too_small",
+      "B": "none"
+    }
+  ]
+}

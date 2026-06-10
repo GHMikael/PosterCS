@@ -1,0 +1,119 @@
+{
+  "asset_token": "18e6b30ede28400e",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "Agentic Search-Enhanced Large Reasoning Models",
+  "authors": "Xiaoxi Li, Guanting Dong, Jiajie Jin, Yuyao Zhang, Yujia Zhou, Yutao Zhu, Peitian Zhang, Zhicheng Dou",
+  "paper_info": "Renmin University of China, Tsinghua University, 2023",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation / Background",
+      "headline": "Addressing knowledge insufficiency in extended reasoning chains",
+      "content": [
+        "LRMs excel in long stepwise reasoning through large-scale reinforcement learning.",
+        "Extended reasoning processes face knowledge gaps, leading to uncertainties and errors.",
+        "Automating knowledge supplementation is crucial for enhancing reasoning reliability.",
+        "Search-o1 aims to integrate agentic search into LRM reasoning to improve performance.",
+        "This work targets complex reasoning tasks in science, mathematics, and coding."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem / Challenge",
+      "headline": "Overthinking and knowledge gaps in extended reasoning chains",
+      "content": [
+        "Extended reasoning chains in LRMs can cause overthinking and increased risks of knowledge gaps.",
+        "These issues can propagate errors and disrupt the reasoning process.",
+        "Manual verification of complex reasoning problems is costly and time-consuming.",
+        "Automating the supplementation of knowledge is a significant challenge.",
+        "Search-o1 addresses these challenges by integrating agentic search into the reasoning process."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method / Framework",
+      "headline": "Integrating agentic RAG and Reason-in-Documents",
+      "content": [
+        "Search-o1 combines an agentic RAG mechanism with a Reason-in-Documents module.",
+        "The agentic RAG mechanism dynamically retrieves external knowledge for uncertain points.",
+        "The Reason-in-Documents module analyzes and refines retrieved documents to maintain coherent reasoning."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Comparison of reasoning approaches: (a) Direct reasoning without retrieval often results in inaccuracies due to missing knowledge. (b) Our agentic retrieval-augmented reasoning approach improves knowledge access but usually returns lengthy, redundant documents, disrupting coherent reasoning.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments / Results",
+      "headline": "Pass@1 metric on PhD-level science QA, math, and code benchmarks",
+      "content": [
+        "Search-o1 was tested on complex reasoning tasks in science, mathematics, and coding.",
+        "It achieved significant improvements in reasoning performance and general knowledge.",
+        "Quantitative analysis confirmed its efficiency and scalability."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Main results on challenging reasoning tasks, including PhD-level science QA, math, and code benchmarks. We report Pass@1 metric for all tasks. For models with 32B parameters, the best results are in bold and the second-best are underlined. Results from larger or non-proprietary models are in gray color for reference.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "Search-o1 outperforms direct reasoning in complex tasks",
+      "content": [
+        "Search-o1 significantly reduces reasoning uncertainties and errors.",
+        "It demonstrates substantial improvements in reasoning performance and general knowledge.",
+        "The framework is efficient and scalable, suitable for various reasoning domains.",
+        "Performance is validated across five complex reasoning domains and six open-domain QA benchmarks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion / Takeaways",
+      "headline": "Enhancing LRMs with agentic search for reliable reasoning",
+      "content": [
+        "Search-o1 enhances the trustworthiness and applicability of LRMs in complex reasoning tasks.",
+        "It paves the way for more reliable and versatile intelligent systems.",
+        "The framework addresses key challenges in extended reasoning chains, such as overthinking and knowledge gaps.",
+        "Future work will focus on further optimizing the agentic RAG mechanism and Reason-in-Documents module.",
+        "Search-o1 has the potential to revolutionize reasoning in LRMs by integrating external knowledge effectively."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig2": {
+      "caption": "Figure 2: Comparison of reasoning approaches: (a) Direct reasoning without retrieval often results in inaccuracies due to missing knowledge. (b) Our agentic retrieval-augmented reasoning approach improves knowledge access but usually returns lengthy, redundant documents, disrupting coherent reasoning.",
+      "type": "method_diagram",
+      "description": "比较了直接推理和代理增强检索推理两种方法，展示了直接推理的不准确性以及代理增强检索推理的优缺点。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Table 1: Main results on challenging reasoning tasks, including PhD-level science QA, math, and code benchmarks. We report Pass@1 metric for all tasks. For models with 32B parameters, the best results are in bold and the second-best are underlined. Results from larger or non-proprietary models are in gray color for reference.",
+      "type": "comparison_table",
+      "description": "展示了在 PhD 级科学 QA、数学和代码基准任务中的主要推理结果，包括不同模型的 Pass@1 指标。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

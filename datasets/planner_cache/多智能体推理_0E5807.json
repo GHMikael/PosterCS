@@ -1,0 +1,137 @@
+{
+  "asset_token": "c49c0b8597aa4483",
+  "template": "template_storyflow",
+  "color_theme": "academic_blue",
+  "poster_title": "BELLE: A Bi-Level Multi-Agent Reasoning Framework for Multi-Hop Question Answering",
+  "authors": "Taolin Zhang, Dongyang Li, Qizhou Chen, Chengyu Wang, Xiaofeng He",
+  "paper_info": "2024",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Overview",
+      "headline": "A novel bi-level multi-agent system (BELLE) for multi-hop QA",
+      "content": [
+        "Addresses the challenges of multi-hop QA by dynamically combining appropriate operators.",
+        "Proposes a framework that includes a Question Type Classification module, a Bi-Level Multi-agent Debate module, and a Multi-hop QA Executor module.",
+        "Evaluates BELLE on four multi-hop QA datasets: MultiHop-RAG, 2WikiMultiHopQA, HotPotQA, and MuSiQue.",
+        "Uses GPT-3.5-turbo and Qwen2.5-7B as the underlying LLMs.",
+        "Demonstrates significant performance improvements and cost-effectiveness in complex multi-hop QA tasks."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Motivation",
+      "headline": "Multi-hop QA involves step-by-step reasoning to answer complex questions",
+      "content": [
+        "LLMs often struggle with complex multi-hop questions, leading to factual errors or hallucinations.",
+        "Existing approaches have limitations: closed-book reasoning lacks external knowledge, while retrieval-augmented reasoning incurs additional computational overhead.",
+        "BELLE aims to dynamically combine appropriate operators based on question types to improve performance and efficiency.",
+        "Evaluates BELLE on four multi-hop QA datasets to demonstrate its effectiveness.",
+        "Provides an in-depth analysis of the sensitivity of different question types to various methods."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "Bi-Level Multi-Agent Debate module involves slow and fast debaters",
+      "content": [
+        "Proposes a BELLE framework with a Question Type Classification module, a Bi-Level Multi-agent Debate module, and a Multi-hop QA Executor module.",
+        "The Bi-Level Multi-agent Debate module monitors viewpoint changes and determines the appropriate operators."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Model overview of BELLE. The left part is the existing MAD system containing three basic roles (i.e., an affirmative side, a negative side and a judge). The right part is the details of our bi-level MAD system including first-level and second-level debaters.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Evaluates BELLE on four multi-hop QA datasets",
+      "content": [
+        "Evaluates BELLE on MultiHop-RAG, 2WikiMultiHopQA, HotPotQA, and MuSiQue.",
+        "Uses GPT-3.5-turbo and Qwen2.5-7B as the underlying LLMs."
+      ],
+      "figure": null,
+      "figure_id": "Fig6",
+      "figure_caption": "Ablation study of BELLE in terms of F1 (%). Due to space limitation, we use the abbreviations 'D1', 'D2', 'D3', and 'D4' to represent Multi-hop RAG, HotpotQA, 2WikiQA, and MuSiQue, respectively.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "BELLE outperformed strong baselines with an average performance improvement of 3%",
+      "content": [
+        "BELLE significantly outperformed strong baselines in various datasets.",
+        "The computational cost of BELLE was more cost-effective than that of single models in more complex multi-hop QA scenarios."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Comparison of single and combined operators in different multi-hop question types. The red and purple bars represent the combined operators of sub-step + single-step and sub-step + iterative-step, respectively.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "Combined operators outperformed single operators across all four question types",
+      "content": [
+        "The system relies on accurate question type classification, which may introduce errors.",
+        "The multi-agent debate process can be computationally intensive, although it is more cost-effective overall.",
+        "The performance of BELLE is sensitive to the number of retrieval tokens used.",
+        "Different LLMs show varying performance in multi-hop QA tasks.",
+        "More debaters in the first and second layers generally improve performance."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "BELLE effectively addresses the challenges of multi-hop QA",
+      "content": [
+        "BELLE shows significant performance improvements and cost-effectiveness in complex multi-hop QA tasks.",
+        "Future work can explore more fine-grained question type classification and further optimization of the multi-agent debate process.",
+        "The framework can be extended to other NLP tasks requiring multi-step reasoning.",
+        "The bi-level MAD system can be adapted to different types of multi-hop questions.",
+        "The results highlight the importance of dynamic operator combination in multi-hop QA."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig3": {
+      "caption": "Model overview of BELLE. The left part is the existing MAD system containing three basic roles (i.e., an affirmative side, a negative side and a judge). The right part is the details of our bi-level MAD system including first-level and second-level debaters.",
+      "type": "architecture",
+      "description": "Overview of the BELLE model, showing the existing MAD system and the detailed structure of the bi-level MAD system.",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig6": {
+      "caption": "Ablation study of BELLE in terms of F1 (%). Due to space limitation, we use the abbreviations 'D1', 'D2', 'D3', and 'D4' to represent Multi-hop RAG, HotpotQA, 2WikiQA, and MuSiQue, respectively.",
+      "type": "ablation_study",
+      "description": "Ablation study results of BELLE, showing F1 scores for different datasets.",
+      "best_matched_section": "Experiments",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Comparison of single and combined operators in different multi-hop question types. The red and purple bars represent the combined operators of sub-step + single-step and sub-step + iterative-step, respectively.",
+      "type": "result_chart",
+      "description": "Comparison of performance between single and combined operators in various multi-hop question types, using bar charts for visualization.",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

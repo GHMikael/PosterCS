@@ -1,0 +1,125 @@
+{
+  "asset_token": "aedc258afbaf4ab8",
+  "template": "template_classic",
+  "color_theme": "academic_blue",
+  "poster_title": "LongRAG: Enhancing Retrieval-Augmented Generation with Long-context LLMs",
+  "authors": "Ziyan Jiang, Xueguang Ma, Wenhu Chen; University of Waterloo",
+  "paper_info": "2023; Combining RAG with long-context LLMs for open-domain question answering",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "classic_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation / Background",
+      "headline": "Traditional RAG frameworks struggle with short retrieval units, leading to semantic incompleteness and hard negatives.",
+      "content": [
+        "Short retrieval units (100-word Wikipedia paragraphs) put heavy pressure on the retriever.",
+        "This can result in the loss of contextual information and increased likelihood of hard negatives.",
+        "Recent advances in long-context LLMs allow handling up to 128K tokens, suggesting a redesign of RAG.",
+        "LongRAG aims to balance the workload between retriever and reader, improving overall performance.",
+        "The framework leverages long retrieval units and long-context LLMs to enhance open-domain question answering."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem / Challenge",
+      "headline": "Imbalanced 'heavy' retriever and 'light' reader design in traditional RAG leads to sub-optimal performance.",
+      "content": [
+        "Traditional RAG design is imbalanced, with a 'heavy' retriever and a 'light' reader.",
+        "Short retrieval units lead to the loss of contextual information and increased likelihood of hard negatives.",
+        "Existing RAG models require hundreds of short units and additional re-rankers to achieve high performance.",
+        "This inefficiency limits the scalability and effectiveness of RAG in real-world applications."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method / Framework",
+      "headline": "LongRAG framework uses long retrieval units (4K tokens) by grouping related documents or using entire documents.",
+      "content": [
+        "The long retriever identifies coarse relevant information and retrieves only a few top units (1 to 8) without re-ranking.",
+        "The long reader extracts answers from the concatenated retrieval units (≈ 30K tokens) using existing long-context LLMs in a zero-shot fashion.",
+        "This design significantly reduces the burden on the retriever and improves overall performance."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Traditional RAG vs. LongRAG. LongRAG operates on long retrieval units (30x longer) to reduce the retriever's workload.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments / Results",
+      "headline": "Achieved EM of 62.7% on NQ and 64.3% on HotpotQA, comparable to fully trained SOTA models.",
+      "content": [
+        "Evaluated on Wikipedia-based datasets (NQ and HotpotQA) and non-Wikipedia-based datasets (Qasper and MultiFieldQA-en).",
+        "NQ and HotpotQA documents were grouped to form 4K-token units, reducing the corpus size from 22M to 600K and from 5M to 500K, respectively.",
+        "Qasper and MultiFieldQA-en documents were processed as single units due to their average length being more than 4K tokens.",
+        "Improved F1 score to 25.9% on Qasper and 57.5% on MultiFieldQA-en, surpassing previous results."
+      ],
+      "figure": null,
+      "figure_id": "Fig10",
+      "figure_caption": "Comparison of different settings of LongRAG, using 200 test cases from the test set to evaluate various retrieval unit selections.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "LongRAG significantly alleviates the burden on the retriever component, improving retrieval performance.",
+      "content": [
+        "LongRAG reduces the likelihood of hard negatives and improves retrieval performance by using longer retrieval units.",
+        "The framework demonstrates effectiveness on both Wikipedia-based and non-Wikipedia-based datasets.",
+        "The use of long-context LLMs in a zero-shot setting shows promise but may benefit from fine-tuning."
+      ],
+      "figure": null,
+      "figure_id": "Fig5",
+      "figure_caption": "Retrieval performance on HotpotQA. Long-context retrieval significantly reduces the retriever's workload.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion / Takeaways",
+      "headline": "LongRAG provides a more balanced and effective approach to RAG by leveraging long retrieval units and long-context LLMs.",
+      "content": [
+        "The framework significantly reduces the burden on the retriever and improves overall performance in open-domain question answering.",
+        "Future RAG systems should consider the granularity of retrieval units to better exploit the capabilities of long-context LLMs.",
+        "The performance improvement may be dataset-specific and requires further testing on a wider range of datasets.",
+        "The zero-shot setting of LongRAG may not always be optimal and could benefit from fine-tuning.",
+        "LongRAG opens new possibilities for more efficient and effective RAG systems in various domains."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Traditional RAG vs. LongRAG. (Up) Traditional RAG operates on short retrieval units, where the retriever needs to scan over a massive amount of units to find the relevant piece. In contrast, LongRAG operates on long retrieval units (30x longer). The retriever of LongRAG has a significantly",
+      "type": "pipeline",
+      "description": "比较了传统 RAG 和 LongRAG 的操作方式，展示了 LongRAG 在处理长检索单元方面的优势。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig10": {
+      "caption": "Figure 3: This figure compares different settings of LongRAG, using 200 test cases from the test set to evaluate various retrieval unit selections, demonstrating the effectiveness of our LongRAG design. The upper part of the figure shows the NQ dataset, while the lower part displays the HotpotQA dat",
+      "type": "result_chart",
+      "description": "比较了 LongRAG 在不同设置下的性能，使用 200 个测试案例评估了各种检索单元选择，证明了 LongRAG 设计的有效性。上部分展示了 NQ 数据集的结果，下部分展示了 HotpotQA 数据集的结果。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig5": {
+      "caption": "Table 3: The table illustrates the retrieval performance on HotpotQA. Similar to the findings on NQ, a long-context retrieval could significantly alleviate the burden on the retriever component.",
+      "type": "comparison_table",
+      "description": "展示了 LongRAG 在 HotpotQA 数据集上的检索性能，与 NQ 数据集上的结果类似，长上下文检索显著减轻了检索器的负担。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

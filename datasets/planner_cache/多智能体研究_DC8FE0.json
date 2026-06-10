@@ -1,0 +1,126 @@
+{
+  "asset_token": "5d858887828f4710",
+  "template": "template_dashboard",
+  "color_theme": "academic_blue",
+  "poster_title": "Tongyi DeepResearch: An Agentic Large Language Model for Deep Information-Seeking Research Tasks",
+  "authors": "Tongyi DeepResearch Team; Tongyi Lab, Alibaba Group",
+  "paper_info": "Technical Report, 2025",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "Autonomous multi-step reasoning and information seeking for deep research tasks",
+      "content": [
+        "Advancement towards AGI drives the development of deep research agents.",
+        "Existing systems are often closed-source, limiting community access.",
+        "Lack of systematic methodology and publicly available models for deep research tasks.",
+        "General foundation models require costly human annotation for post-training.",
+        "Proposes an open-source solution to address these challenges."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "End-to-end agentic training combining mid-training and post-training",
+      "content": [
+        "End-to-end agentic training framework.",
+        "Automated data synthesis pipeline for scalable agentic data generation."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Training pipeline of Tongyi DeepResearch.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Data Synthesis",
+      "headline": "High-quality data synthesis for agentic continual pre-training",
+      "content": [
+        "Stage-specific environments for stable and consistent interactions.",
+        "Customized data synthesis pipeline for diverse, high-quality agent trajectories."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "Large-scale agent behavior data synthesis for agentic continual pre-training.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "Performance on deep research benchmarks",
+      "content": [
+        "Evaluated on benchmarks like Humanity's Last Exam, BrowseComp, WebWalkerQA, GAIA, xbench-DeepSearch, FRAMES, and xbench-DeepSearch-2510.",
+        "Compared with strong baselines such as OpenAI-o3 and Deepseek-V3.1."
+      ],
+      "figure": null,
+      "figure_id": "Fig6",
+      "figure_caption": "Performance comparison on various benchmarks.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "Achieved state-of-the-art performance with fewer parameters",
+      "content": [
+        "Outperformed strong baselines in multiple deep research tasks.",
+        "Detailed evaluation results using Avg @3, Pass @1, and Pass @3 metrics."
+      ],
+      "figure": null,
+      "figure_id": "Fig1",
+      "figure_caption": "Benchmark performance of Tongyi DeepResearch.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "Sets a new standard for deep research agents",
+      "content": [
+        "Tongyi DeepResearch offers a systematic and scalable approach.",
+        "Open-sourcing the model and framework accelerates community research.",
+        "Relying on synthetic data may introduce biases.",
+        "Complexity in designing and maintaining customized environments.",
+        "Future work includes addressing limitations and expanding applications."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Figure 1: Benchmark performance of Tongyi DeepResearch.",
+      "type": "result_chart",
+      "description": "展示了 Tongyi DeepResearch 在多个基准测试中的性能表现。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Figure 2: Training pipeline of Tongyi DeepResearch.",
+      "type": "pipeline",
+      "description": "描述了 Tongyi DeepResearch 的训练流程。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Figure 3: Large-scale agent behavior data synthesis for agentic continual pre-training.",
+      "type": "pipeline",
+      "description": "展示了大规模代理行为数据合成的过程，用于持续预训练。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig6": {
+      "caption": "Table 1: Performance comparison on various benchmarks.",
+      "type": "comparison_table",
+      "description": "比较了不同基准测试上的性能。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}

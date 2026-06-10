@@ -1,34 +1,25 @@
 {
-  "asset_token": "a58554c20d8c4f4e",
-  "template": "template_classic",
+  "asset_token": "941b3f9118544e49",
+  "template": "template_storyflow",
   "color_theme": "academic_blue",
   "poster_title": "Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens",
   "authors": "Chengshuai Zhao, Zhen Tan, Pingchuan Ma, Dawei Li, Bohan Jiang, Yancheng Wang, Yingzhen Yang, Huan Liu",
-  "paper_info": "arXiv:2508.01191v3 [cs.AI] 13 Aug 2025",
+  "paper_info": "Arizona State University, USA; 2025",
   "layout": {
     "page_size": "A3",
-    "layout_type": "classic_grid",
+    "layout_type": "dashboard_grid",
     "reading_order": "top_to_bottom_left_to_right"
   },
   "panels": [
     {
       "section": "Motivation",
+      "headline": "CoT prompting improves LLM performance but may be superficial.",
       "content": [
-        "CoT prompting improves LLMs' performance on various tasks.",
-        "Empirical successes suggest LLMs engage in deliberate inferential processes.",
-        "However, initial findings indicate CoT reasoning may be superficial."
-      ],
-      "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
-    },
-    {
-      "section": "Research Problem",
-      "content": [
-        "LLMs can produce logically inconsistent conclusions with CoT reasoning.",
-        "Models rely on surface-level semantics and token associations rather than logical procedures.",
-        "Performance degrades sharply on tasks deviating from familiar templates or commonsense heuristics."
+        "CoT reasoning appears to be more effective with in-distribution data.",
+        "Performance degrades under distribution shifts.",
+        "LLMs show inconsistencies and logical errors in reasoning tasks.",
+        "The study aims to dissect CoT reasoning through a data distribution lens.",
+        "Empirical validation of CoT reasoning's fragility is needed."
       ],
       "figure": null,
       "figure_id": "",
@@ -37,47 +28,65 @@
     },
     {
       "section": "Method",
+      "headline": "Propose DataAlchemy for controlled experiments.",
       "content": [
-        "Propose a data distribution lens to study CoT reasoning.",
-        "Hypothesize that CoT reasoning reflects inductive biases learned from in-distribution data.",
-        "Dissect CoT reasoning via task, length, and format dimensions.",
-        "Introduce DataAlchemy for controlled LLM training and probing under distribution shifts."
+        "Introduce DataAlchemy to train LLMs from scratch.",
+        "Dissect CoT reasoning via task, length, and format dimensions."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig2",
+      "figure_caption": "Figure 1 | The data perspective lens. CoT reasoning's effectiveness is fundamentally bounded by the degree of distribution discrepancy between the training data and the test queries. Guided by this lens, we dissect CoT reasoning via three dimensions: task, length, and format.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Experiments",
+      "headline": "Train LLMs from scratch using DataAlchemy.",
       "content": [
-        "Design experiments to evaluate CoT reasoning across different tasks, lengths, and formats.",
-        "Train LLMs from scratch using DataAlchemy and test reasoning under in-distribution and out-of-distribution conditions.",
-        "Analyze the effects of distribution shifts on CoT reasoning performance and consistency."
+        "Systematically probe LLMs under different distribution conditions.",
+        "Evaluate CoT reasoning on tasks, reasoning chain lengths, and query formats."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig3",
+      "figure_caption": "Figure 2 | Framework of DataAlchemy. It creates an isolated and controlled environment to train LLMs from scratch and probe the task, length, and format generalization.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Results",
+      "headline": "CoT reasoning degrades with distribution shifts.",
       "content": [
-        "CoT reasoning is effective on in-distribution or near in-distribution data.",
-        "Performance degrades sharply under moderate distribution shifts, revealing reasoning fragility.",
-        "Models often generate fluent but logically incorrect reasoning steps on complex tasks."
+        "CoT reasoning is effective with in-distribution data.",
+        "Performance drops sharply under moderate distribution shifts.",
+        "LLMs can generate fluent yet logically inconsistent reasoning steps."
       ],
       "figure": null,
-      "figure_id": "",
-      "figure_caption": "",
-      "layout_hint": "text_only"
+      "figure_id": "Fig4",
+      "figure_caption": "Figure 3 | Performance of CoT reasoning on transformation generalization. Efficacy of CoT reasoning declines as the degree of distributional discrepancy increases.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Key Findings",
+      "headline": "CoT reasoning is pattern matching, not logical inference.",
+      "content": [
+        "CoT reasoning is brittle and vanishes when pushed beyond training distributions.",
+        "The true nature of CoT reasoning is pattern matching over training data.",
+        "Introducing a small amount of unseen data helps CoT reasoning to generalize.",
+        "Group strategies contribute to length generalization.",
+        "Format generalization performance varies with perturbation methods and areas."
+      ],
+      "figure": null,
+      "figure_id": "Fig7",
+      "figure_caption": "Figure 4 | Performance on unseen transformation using SFT in various levels of distribution shift. Introducing a small amount of unseen data helps CoT reasoning to generalize across different scenarios.",
+      "layout_hint": "with_figure"
     },
     {
       "section": "Conclusion",
+      "headline": "Further research needed for authentic reasoning capabilities.",
       "content": [
-        "CoT reasoning is a brittle mirage that vanishes beyond training distributions.",
-        "Effectiveness is fundamentally limited by distribution discrepancy between training and test data.",
-        "Developing LLMs with genuine and generalizable reasoning capabilities is an ongoing challenge."
+        "CoT reasoning is a brittle mirage that vanishes when pushed beyond training distributions.",
+        "The true nature of CoT reasoning is pattern matching over training data, not genuine logical inference.",
+        "Real-world implications for practitioners and researchers regarding the reliance on CoT reasoning.",
+        "The study is limited to a controlled experimental environment and may not fully capture real-world complexities.",
+        "Further research is needed to develop models with authentic and generalizable reasoning capabilities."
       ],
       "figure": null,
       "figure_id": "",
@@ -85,7 +94,36 @@
       "layout_hint": "text_only"
     }
   ],
-  "figures": {},
+  "figures": {
+    "Fig2": {
+      "caption": "Figure 1 | The data perspective lens. CoT reasoning's effectiveness is fundamentally bounded by the degree of distribution discrepancy between the training data and the test queries. Guided by this lens, we dissect CoT reasoning via three dimensions: task, length, and format.",
+      "type": "method_diagram",
+      "description": "展示了 CoT 推理在训练数据和测试查询分布差异下的有效性，从任务、长度和格式三个维度进行剖析",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig3": {
+      "caption": "Figure 2 | Framework of DataAlchemy. It creates an isolated and controlled environment to train LLMs from scratch and probe the task, length, and format generalization.",
+      "type": "architecture",
+      "description": "展示了 DataAlchemy 框架，该框架创建了一个隔离和受控的环境，用于从头开始训练 LLM，并探索单任务、长度和格式的泛化能力",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Figure 3 | Performance of CoT reasoning on transformation generalization. Efficacy of CoT reasoning declines as the degree of distributional discrepancy increases.",
+      "type": "result_chart",
+      "description": "展示了 CoT 推理在变换泛化中的性能，随着分布差异的增加，CoT 推理的有效性下降",
+      "best_matched_section": "Results",
+      "importance": "high"
+    },
+    "Fig7": {
+      "caption": "Figure 4 | Performance on unseen transformation using SFT in various levels of distribution shift. Introducing a small amount of unseen data helps CoT reasoning to generalize across different scenarios.",
+      "type": "result_chart",
+      "description": "展示了在不同分布偏移水平下使用 SFT 对未见过的变换的性能，引入少量未见过的数据有助于 CoT 推理在不同场景下的泛化",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
   "use_commenter": "true",
   "max_iterations": 4,
   "save_debug_images": "true"

@@ -1,0 +1,122 @@
+{
+  "asset_token": "044de63549dc4efc",
+  "template": "template_dashboard",
+  "color_theme": "academic_blue",
+  "poster_title": "Retrieval-Augmented Generation with Graphs (GraphRAG)",
+  "authors": "Haoyu Han, Yu Wang, Harry Shomer, Kai Guo, Jiayuan Ding, Yongjia Lei, Mahantesh Halappanavar, Ryan A. Rossi, Subhabrata Mukherjee, Xianfeng Tang, Qi He, Zhigang Hua, Bo Long, Tong Zhao, Neil Shah, Amin Javari, Yinglong Xia, Jiliang Tang",
+  "paper_info": "Michigan State University, University of Oregon, Pacific Northwest National Laboratory, Adobe Research, Hippocratic AI, Amazon, Meta, Snap Inc., The Home Depot, 2023",
+  "layout": {
+    "page_size": "A3",
+    "layout_type": "dashboard_grid",
+    "reading_order": "top_to_bottom_left_to_right"
+  },
+  "panels": [
+    {
+      "section": "Motivation",
+      "headline": "GraphRAG enhances LLMs' social responsibility and performance.",
+      "content": [
+        "RAG improves downstream tasks by integrating external information.",
+        "Graphs provide valuable relational data for RAG applications.",
+        "LLMs benefit from GraphRAG in social responsibility and performance."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Problem",
+      "headline": "GraphRAG requires specialized retrievers and generators.",
+      "content": [
+        "Graph data formats vary across domains.",
+        "Relational patterns are domain-specific.",
+        "GraphRAG needs multi-hop reasoning and long-form planning."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    },
+    {
+      "section": "Method",
+      "headline": "GraphRAG framework includes query processor, retriever, organizer, generator, and data source.",
+      "content": [
+        "Utilizes graph-based ML and network analysis techniques.",
+        "Designs specialized retrievers for complex graph structures."
+      ],
+      "figure": null,
+      "figure_id": "Fig3",
+      "figure_caption": "A holistic framework of GraphRAG and representative techniques for its key components.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Experiments",
+      "headline": "GraphRAG applications span social networks, molecular graphs, and hierarchical trees.",
+      "content": [
+        "Drug design, road construction, and academic paper topic prediction.",
+        "GraphRAG outperforms conventional RAG in relational knowledge capture."
+      ],
+      "figure": null,
+      "figure_id": "Fig2",
+      "figure_caption": "Publications of GraphRAGs in different domains based on surveyed papers.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Results",
+      "headline": "GraphRAG shows significant advantages in relational knowledge capture.",
+      "content": [
+        "Specialized retrievers and generators improve multi-hop reasoning and long-form planning.",
+        "GraphRAG methods outperform conventional RAG in various tasks."
+      ],
+      "figure": null,
+      "figure_id": "Fig4",
+      "figure_caption": "Summary of Task Applications and Exemplary Queries for GraphRAG in each domain.",
+      "layout_hint": "with_figure"
+    },
+    {
+      "section": "Conclusion",
+      "headline": "GraphRAG is a promising direction for LLMs and RAG.",
+      "content": [
+        "Further research needed for domain-specific GraphRAG techniques.",
+        "GraphRAG inspires cross-disciplinary opportunities."
+      ],
+      "figure": null,
+      "figure_id": "",
+      "figure_caption": "",
+      "layout_hint": "text_only"
+    }
+  ],
+  "figures": {
+    "Fig1": {
+      "caption": "Figure 1: RAG works on text and images, which can be uniformly formatted as 1D sequences or 2D grids with no relational information. In contrast, GraphRAG works on graph-structured data, which encompasses diverse formats and includes domain-specific relational information.",
+      "type": "method_diagram",
+      "description": "对比 RAG 和 GraphRAG 的数据处理方式，强调 GraphRAG 处理图结构数据的能力。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig2": {
+      "caption": "Figure 2: Publications of GraphRAGs in different domains based on surveyed papers",
+      "type": "result_chart",
+      "description": "展示 GraphRAG 在不同领域的出版物数量。",
+      "best_matched_section": "Results",
+      "importance": "medium"
+    },
+    "Fig3": {
+      "caption": "Figure 3: A holistic framework of GraphRAG and representative techniques for its key components.",
+      "type": "method_diagram",
+      "description": "展示 GraphRAG 的整体框架及其关键组件的代表性技术。",
+      "best_matched_section": "Method",
+      "importance": "high"
+    },
+    "Fig4": {
+      "caption": "Table 1: Summary of Task Applications and Exemplary Queries for GraphRAG in each domain.",
+      "type": "comparison_table",
+      "description": "总结 GraphRAG 在不同领域的任务应用和示例查询。",
+      "best_matched_section": "Results",
+      "importance": "high"
+    }
+  },
+  "use_commenter": "true",
+  "max_iterations": 4,
+  "save_debug_images": "true"
+}
