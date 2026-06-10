@@ -71,3 +71,58 @@ def overlap_violations(pptx_path, thresh: float = 0.15) -> List[Dict]:
             if _is_collision(boxes[i], boxes[j], thresh=thresh):
                 out.append({"i": i, "j": j, "ratio": round(_overlap_ratio(boxes[i], boxes[j]), 3)})
     return out
+
+
+# ---------------------------------------------------------------------------
+# contrast rule — theme-level WCAG check (deterministic negative control).
+# Posters use a fixed palette per ``color_theme``; the rendered text/background
+# colors are a property of the theme, so contrast is decided by the theme, not
+# by per-pixel analysis. If every shipped theme is WCAG-compliant, then any VLM
+# ``low_contrast`` report is a false positive (hallucination probe).
+# ---------------------------------------------------------------------------
+
+AA_NORMAL = 4.5   # WCAG 2.1 AA for normal text
+AA_LARGE = 3.0    # WCAG 2.1 AA for large text (headers)
+
+
+def _rel_luminance(rgb) -> float:
+    """WCAG relative luminance for an (r, g, b) triple in 0..255."""
+    def lin(v: float) -> float:
+        v = v / 255.0
+        return v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4
+    r, g, b = rgb[0], rgb[1], rgb[2]
+    return 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b)
+
+
+def wcag_ratio(rgb1, rgb2) -> float:
+    """WCAG contrast ratio between two colors (1.0 .. 21.0)."""
+    l1, l2 = _rel_luminance(rgb1), _rel_luminance(rgb2)
+    hi, lo = max(l1, l2), min(l1, l2)
+    return (hi + 0.05) / (lo + 0.05)
+
+
+def theme_contrast(theme_name: str):
+    """Contrast facts for a color theme, or ``None`` if the theme is unknown.
+
+    Body = palette ``text`` on ``panel_bg`` (the main reading surface).
+    Header = palette ``white`` on ``primary`` (panel header bars, large text).
+    """
+    from app.ppt_renderer import PALETTES
+
+    pal = PALETTES.get(theme_name)
+    if pal is None:
+        return None
+    body = wcag_ratio(tuple(pal.text), tuple(pal.panel_bg))
+    header = wcag_ratio(tuple(pal.white), tuple(pal.primary))
+    return {
+        "theme": theme_name,
+        "body_ratio": round(body, 2),
+        "header_ratio": round(header, 2),
+        "ok": body >= AA_NORMAL and header >= AA_LARGE,
+    }
+
+
+def contrast_ok(theme_name: str):
+    """True if the theme passes WCAG AA, ``None`` if the theme is unknown."""
+    tc = theme_contrast(theme_name)
+    return None if tc is None else tc["ok"]

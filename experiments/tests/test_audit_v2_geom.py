@@ -1,6 +1,6 @@
 """Tests for experiments.audit.geom_rules (objective geometric detectors)."""
 
-from experiments.audit.geom_rules import _overlap_ratio, _is_collision
+from experiments.audit.geom_rules import _overlap_ratio, _is_collision, wcag_ratio, contrast_ok, theme_contrast
 
 
 def test_overlap_ratio_intersecting():
@@ -43,3 +43,22 @@ def test_is_collision_excludes_disjoint():
 def test_is_collision_excludes_tiny_overlap_below_thresh():
     # overlap = 10x100 / min(100x100) = 0.10 < 0.15 thresh → not flagged
     assert _is_collision((0, 0, 100, 100), (90, 0, 100, 100)) is False
+
+
+def test_wcag_ratio_black_on_white_is_21():
+    assert round(wcag_ratio((255, 255, 255), (0, 0, 0)), 1) == 21.0
+
+
+def test_wcag_ratio_symmetric():
+    assert wcag_ratio((10, 20, 30), (200, 210, 220)) == wcag_ratio((200, 210, 220), (10, 20, 30))
+
+
+def test_known_theme_passes_wcag():
+    tc = theme_contrast("academic_blue")
+    assert tc is not None
+    assert tc["body_ratio"] >= 4.5      # dark text on white panels
+    assert contrast_ok("academic_blue") is True
+
+
+def test_unknown_theme_returns_none():
+    assert contrast_ok("no_such_theme_xyz") is None
