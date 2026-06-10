@@ -63,9 +63,9 @@ Experiments **replay frozen planner snapshots** (`datasets/planner_cache/*.json`
 
 **Where the code is vs. where the paper is going:**
 - **Production SVFP loop today = the old 4-class, holistic-VLM baseline** (`overlapping_elements / empty_space / low_contrast / figure_too_small` × 9 actions). This is what `c3=0.0` was measured on — i.e., the **baseline / counter-example**.
-- **The 5-class MECE taxonomy + routed detection + severity-gating** (the paper's improvement) is **designed** in [`SVFP_ISSUE_TAXONOMY_v5.md`](SVFP_ISSUE_TAXONOMY_v5.md) but **not yet migrated into the production loop**. That migration is the top post-v6 task.
+- **The 5-class MECE taxonomy + routed detection + severity-gating** (the paper's improvement) is **designed** in [`SVFP_ISSUE_TAXONOMY_v5.md`](docs/design/SVFP_ISSUE_TAXONOMY_v5.md) but **not yet migrated into the production loop**. That migration is the top post-v6 task.
 
-See [`项目现状与最终方向_v6.md`](项目现状与最终方向_v6.md) for the full status + roadmap.
+See [`项目现状与最终方向_v6.md`](docs/design/项目现状与最终方向_v6.md) for the full status + roadmap.
 
 ---
 
@@ -152,10 +152,10 @@ See [`.env.example`](.env.example) for the full list.
 | Doc | Content |
 |---|---|
 | **README** (this file) | Overview, pipeline, honest framing, quick start |
-| [`项目现状与最终方向_v6.md`](项目现状与最终方向_v6.md) | **Current status, done/not-done, usable-v1 checklist, roadmap** |
-| [`SVFP_ISSUE_TAXONOMY_v5.md`](SVFP_ISSUE_TAXONOMY_v5.md) | 5-class taxonomy + routed-detection design (next iteration) |
-| [`LAYOUT_DESIGN_v2.md`](LAYOUT_DESIGN_v2.md) | content-adaptive layout design |
-| [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md) | original direction + P0–P7 roadmap |
+| [`项目现状与最终方向_v6.md`](docs/design/项目现状与最终方向_v6.md) | **Current status, done/not-done, usable-v1 checklist, roadmap** |
+| [`SVFP_ISSUE_TAXONOMY_v5.md`](docs/design/SVFP_ISSUE_TAXONOMY_v5.md) | 5-class taxonomy + routed-detection design (next iteration) |
+| [`LAYOUT_DESIGN_v2.md`](docs/design/LAYOUT_DESIGN_v2.md) | content-adaptive layout design |
+| [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](docs/design/PROJECT_OPTIMIZATION_DIRECTION_v4.md) | original direction + P0–P7 roadmap |
 | `experiments/scripts/METRIC_REFACTOR_PLAN.md` | 16-metric refactor record |
 
 ---

@@ -63,9 +63,9 @@ PDF ──/extract_pdf_assets──►  文本 + 图(docling;fitz 兜底)
 
 **代码现状 vs 论文方向:**
 - **生产 SVFP 闭环目前 = 旧 4 类、整图 VLM 的 baseline**(`overlapping_elements / empty_space / low_contrast / figure_too_small` × 9 动作)。`c3=0.0` 就是在它上面测的,即**基线 / 反例**。
-- **5 类 MECE taxonomy + 路由检测 + 严重性门控**(论文的改进)已在 [`SVFP_ISSUE_TAXONOMY_v5.md`](SVFP_ISSUE_TAXONOMY_v5.md) 里**设计好,但还没迁进生产闭环**。这是 v6 之后的首要任务。
+- **5 类 MECE taxonomy + 路由检测 + 严重性门控**(论文的改进)已在 [`SVFP_ISSUE_TAXONOMY_v5.md`](docs/design/SVFP_ISSUE_TAXONOMY_v5.md) 里**设计好,但还没迁进生产闭环**。这是 v6 之后的首要任务。
 
-完整状态 + 路线见 [`项目现状与最终方向_v6.md`](项目现状与最终方向_v6.md)。
+完整状态 + 路线见 [`项目现状与最终方向_v6.md`](docs/design/项目现状与最终方向_v6.md)。
 
 ---
 
@@ -152,10 +152,10 @@ python -m experiments.scripts.print_paper_table
 | 文档 | 内容 |
 |---|---|
 | **README**(本文) | 概览、流程、诚实定位、快速开始 |
-| [`项目现状与最终方向_v6.md`](项目现状与最终方向_v6.md) | **当前状态、做到哪/没做、可用 v1 验收清单、路线** |
-| [`SVFP_ISSUE_TAXONOMY_v5.md`](SVFP_ISSUE_TAXONOMY_v5.md) | 5 类 taxonomy + 路由检测设计(下一迭代) |
-| [`LAYOUT_DESIGN_v2.md`](LAYOUT_DESIGN_v2.md) | 内容自适应布局设计 |
-| [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](PROJECT_OPTIMIZATION_DIRECTION_v4.md) | 原始方向 + P0–P7 路线 |
+| [`项目现状与最终方向_v6.md`](docs/design/项目现状与最终方向_v6.md) | **当前状态、做到哪/没做、可用 v1 验收清单、路线** |
+| [`SVFP_ISSUE_TAXONOMY_v5.md`](docs/design/SVFP_ISSUE_TAXONOMY_v5.md) | 5 类 taxonomy + 路由检测设计(下一迭代) |
+| [`LAYOUT_DESIGN_v2.md`](docs/design/LAYOUT_DESIGN_v2.md) | 内容自适应布局设计 |
+| [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](docs/design/PROJECT_OPTIMIZATION_DIRECTION_v4.md) | 原始方向 + P0–P7 路线 |
 | `experiments/scripts/METRIC_REFACTOR_PLAN.md` | 16 指标重构记录 |
 
 ---

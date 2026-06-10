@@ -178,7 +178,7 @@ def _write_findings(gold, by_tmpl, kappa_out, dv, nv, geom):
         L("\n## A/B disagreements (for adjudication)\n")
         for d in kappa_out["disagreements"]:
             L(f"- `{d['run'][:46]}` A={d['A']} B={d['B']}")
-    (OUT.parent.parent.parent / "AUDIT_V2_FINDINGS.md").write_text("\n".join(lines), encoding="utf-8")
+    (OUT.parent.parent.parent / "docs" / "audit" / "AUDIT_V2_FINDINGS.md").write_text("\n".join(lines), encoding="utf-8")
 
 
 if __name__ == "__main__":
