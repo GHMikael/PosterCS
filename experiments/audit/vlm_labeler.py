@@ -47,13 +47,49 @@ __all__ = ["is_enabled", "build_prompt", "label_poster", "_normalize_vlm_label"]
 # ---------------------------------------------------------------------------
 
 
-def build_prompt() -> str:
-    """Construct the audit critique prompt from the taxonomy definitions."""
+def build_prompt(variant: str = "direct") -> str:
+    """Construct the audit critique prompt from the taxonomy definitions.
+
+    ``variant="direct"``: pick the single dominant failure from the N classes.
+    ``variant="narrowed"``: evaluate every class as an explicit cue first, then
+    aggregate to a primary — tests whether per-class cueing reduces the VLM's
+    prior-domination (its tendency to default to one or two labels).
+    """
 
     n_issues = len(REAL_ISSUES)
     n_guards = len(GUARD_VALUES)
     issue_lines = "\n".join(f"- {k} —— {ISSUE_GLOSS[k]}" for k in REAL_ISSUES)
     guard_lines = "\n".join(f"- {k} —— {GUARD_GLOSS[k]}" for k in GUARD_VALUES)
+    if variant == "narrowed":
+        cue_lines = "\n".join(
+            f"- {k}：是否出现「{ISSUE_GLOSS[k]}」？(true/false + 一句图像证据)"
+            for k in REAL_ISSUES
+        )
+        return f"""
+你是一个严格的学术海报"版面设计失败"审查助手。下面这张是初始海报。
+请**逐项**判断下面 {n_issues} 个线索是否成立，每项给 true/false 和一句图像证据；再综合选出最主要的一项作为 primary_issue。
+
+逐项线索（每条对应一类 issue）：
+{cue_lines}
+
+判定规则：
+1. primary_issue：上面 {n_issues} 类中最成立、最主要的一类。
+   - 若 {n_issues} 类都不成立，填 "none"。
+   - 若出现体系没覆盖的新失败类型，填 "other"。
+2. secondary_issues：其余成立但非最主要的（取值同 {n_issues} 类，可含 "other"，不要 "none"）。
+3. guard_violations：检测到的 guard（仅从 {n_guards} 个 guard 取值）。
+4. evidence：对 primary（及主要 secondary）给一句具体图像证据。
+5. confidence：0 到 1。
+
+只输出合法 JSON，不要 Markdown，不要解释：
+{{
+  "primary_issue": "{n_issues}类之一 / other / none",
+  "secondary_issues": ["..."],
+  "guard_violations": ["..."],
+  "evidence": {{"primary": "一句话证据"}},
+  "confidence": 0.0到1.0
+}}
+""".strip()
     return f"""
 你是一个严格的学术海报"版面设计失败"审查助手。下面这张是 SVFP 修复*之前*的初始海报。
 请判断它最主要的版面设计失败属于哪一类，用于验证一套新的失败分类体系。
@@ -237,6 +273,7 @@ def label_poster(
     temperature: float = 0.1,
     run_id: str = "",
     pass_idx: int = 0,
+    variant: str = "direct",
     experiment_logger: Optional[Any] = None,
 ) -> Dict[str, Any]:
     """Label one initial-poster PNG with the new audit taxonomy.
@@ -270,7 +307,7 @@ def label_poster(
                 {
                     "role": "user",
                     "content": [
-                        {"type": "text", "text": build_prompt()},
+                        {"type": "text", "text": build_prompt(variant)},
                         {
                             "type": "image_url",
                             "image_url": {"url": f"data:image/png;base64,{image_to_base64(image)}"},

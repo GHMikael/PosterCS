@@ -56,3 +56,15 @@ def test_old_to_new_crosswalk_remaps_asset_and_hierarchy():
     # guards unchanged
     assert map_old_issue("low_contrast")["maps_to"] == "contrast_guard"
     assert map_old_issue("overlapping_elements")["maps_to"] == "overlap_guard"
+
+
+def test_build_prompt_variants():
+    from experiments.audit.vlm_labeler import build_prompt
+
+    direct = build_prompt()
+    narrowed = build_prompt("narrowed")
+    for c in SIX:                       # both list all 6 classes
+        assert c in direct and c in narrowed
+    assert "6 类" in direct and "6 类" in narrowed   # dynamic class count
+    assert "逐项" in narrowed and "true/false" in narrowed  # per-cue framing
+    assert "逐项" not in direct          # direct = dominant-pick, not a checklist
