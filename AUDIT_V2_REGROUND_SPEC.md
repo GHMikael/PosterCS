@@ -48,11 +48,11 @@
 - `text_overload`(内容**超出**框、被裁/重叠)vs `space_imbalance`(内容**不满**框、留白):一超一欠,**互斥**,同一 panel 不可能两者都是。
 - ⚠️ **`text_overload` 与 `space_imbalance` 都已被生成设计基本消除**(规则:有图 panel → 1–2 bullet、无图 → 5 bullet,既不溢出也不空)。两者**预期低频**;`text_overload` 维持负控制,`space_imbalance` 保留但预期少。
 
-**guards 取消作为人工标注类别**(6 类已覆盖),改为 **3 条客观几何规则检测器(rule-based,非标注标签)**——双重身份:既当**负控制/幻觉探针**(自家干净海报上应 ≈0,VLM 若报即假阳=幻觉),又当**可迁移检测器**(接到外部 SOTA 的乱版海报上会真触发):
-- **contrast 规则**:从 PPTX 已知文字/底色算 WCAG 对比度。自家全达标而 VLM 狂报 `low_contrast` → low_contrast 假阳 = 幻觉。
-- **overflow 规则**:几何判文本框超容器/被裁。自家无溢出而 VLM 报 `text_overload` → text_overload 假阳 = 幻觉。
-- **overlap 规则**:元素 bbox 相交判重叠。**自家新海报 ≈0(负控制);但 Paper2Poster(qwen3vl)海报已确认大量重叠+出血裁切 → 同一几何规则在外部 SOTA 上真触发**,正面演示「几何检测器可迁移、整图 VLM critic 才是失效环节」(支撑 Direction C 可迁移性)。
-- 三者直接量化「整图 VLM 非判别/幻觉」。
+**guards 取消作为人工标注类别**(6 类已覆盖),改为 **2 条客观几何规则检测器(rule-based,非标注标签)**——双重身份:既当**负控制/幻觉探针**(自家干净海报上应 ≈0,VLM 若报即假阳=幻觉),又当**可迁移检测器**(接到外部 SOTA 的乱版海报上会真触发):
+- **contrast 规则**:从 PPTX 主题配色算 WCAG 对比度。新60 用到的 4 主题全 AA 达标(正文 13.5–16.3:1)→ VLM 报 `low_contrast` 即假阳=幻觉。
+- **overlap 规则**:元素 bbox **部分相交**判碰撞(排除正常嵌套)。新60 上 **40/60 ≈0**(负控制),残留为 footer 细条 / minimal 模板装饰序号;接到 Paper2Poster 乱版海报会真触发,演示「几何检测器可迁移、整图 VLM critic 才是失效环节」(支撑 Direction C)。
+- **overflow 规则:本轮不做(用户决定 c)**。`text_overload` 仍是负控制,但其假阳率直接用**人工 gold(预注册 gold≈0)**衡量(见 §5),不再单设几何 overflow 规则。
+- 二者直接量化「整图 VLM 非判别/幻觉」。
 
 **预注册分布假设(用户域知识,observed vs predicted 将作为论文一张表):**
 - `text_overload` ≈ 0、`space_imbalance` 低频(均已被设计压掉);`structure_alignment` / `asset_too_small` 会有;`hierarchy_emphasis_error` 偶发(含 story 序号过大这类**过度强调**);`asset_mismatch` 取决于 planner 选图准确率;**外加 open-coding 捕捉的模板特有缺陷(预期非空)**。

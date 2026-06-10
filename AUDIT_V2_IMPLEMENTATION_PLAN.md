@@ -3,9 +3,9 @@
 > **For agentic workers:** REQUIRED SUB-SKILL: 用 `superpowers:subagent-driven-development`(推荐)或 `superpowers:executing-plans` 按任务逐条实现。步骤用 `- [ ]` 复选框跟踪。
 > 配套 spec:`AUDIT_V2_REGROUND_SPEC.md`。**人工标注(Phase 0 产物给两位标注者)与代码(Phase 1-4)并行;代码侧不依赖标注完成。**
 
-**Goal:** 在 60 张新海报上,用代码量化「整图 VLM 能否检出 6 类 issue」+ 3 条客观几何规则(负控制/幻觉探针),产出 S1/S2/S3 判定所需的全部指标。
+**Goal:** 在 60 张新海报上,用代码量化「整图 VLM 能否检出 6 类 issue」+ 2 条客观几何规则(contrast/overlap;负控制/幻觉探针),产出 S1/S2/S3 判定所需的全部指标。
 
-**Architecture:** 复用现有 `experiments/audit/`(taxonomy + vlm_labeler + corpus)。把 taxonomy 从 5 类升 6 类;新增 `geom_rules.py`(contrast/overflow/overlap 三规则)、`manifest_v2.py`(冻结样本+标注 kit)、`metrics_v2.py`(手写 κ/混淆/熵/P-R-F1/先验基线/分模板/假阳率);两个 driver 脚本跑 VLM 批量与分析。无新依赖(κ 手写,不引 sklearn)。
+**Architecture:** 复用现有 `experiments/audit/`(taxonomy + vlm_labeler + corpus)。把 taxonomy 从 5 类升 6 类;新增 `geom_rules.py`(contrast/overlap 两规则)、`manifest_v2.py`(冻结样本+标注 kit)、`metrics_v2.py`(手写 κ/混淆/熵/P-R-F1/先验基线/分模板/假阳率);两个 driver 脚本跑 VLM 批量与分析。无新依赖(κ 手写,不引 sklearn)。
 
 **Tech Stack:** Python 3.12 · pytest · python-pptx 0.6.23(读 `pptx/iter_1.pptx` 几何+颜色)· Pillow · openai→SiliconFlow(复用 `vlm_labeler.label_poster`)。
 
@@ -19,7 +19,7 @@
 | `experiments/audit/vlm_labeler.py` | VLM 打标(direct/narrowed 两 prompt) | **改**(加 variant) |
 | `experiments/audit/corpus.py` | 找 run / iter_1.png(复用 `find_run_dirs`/`_first_png`) | 复用 |
 | `experiments/audit/manifest_v2.py` | 冻结 60 张 manifest + 标注 CSV/guide | **新建** |
-| `experiments/audit/geom_rules.py` | contrast / overflow / overlap 三客观规则 | **新建** |
+| `experiments/audit/geom_rules.py` | contrast / overlap 两客观规则(overflow 已取消) | **新建** |
 | `experiments/audit/metrics_v2.py` | κ、混淆矩阵、P/R/F1、熵、先验基线、假阳率 | **新建** |
 | `experiments/scripts/run_audit_v2.py` | 遍历 manifest 跑 VLM(direct+narrowed)+ 几何规则 | **新建** |
 | `experiments/scripts/analyze_audit_v2.py` | 合 gold+VLM+rules → 表 + `AUDIT_V2_FINDINGS.md` | **新建** |
@@ -141,7 +141,7 @@ def test_six_classes_with_asset_split_and_emphasis_rename():
 
 ---
 
-## Phase 2 — 3 条客观几何规则(geom_rules.py)
+## Phase 2 — 2 条客观几何规则(geom_rules.py;overflow 已取消)
 
 ### Task 2.1：overlap 规则(最干净,先做)
 
@@ -197,14 +197,9 @@ def test_theme_contrast_pass():
 - [ ] **Step 3 实现** `wcag_ratio(rgb1,rgb2)`(标准相对亮度公式)+ `contrast_ok(color_theme)`:从 ppt_renderer 主题表查 (text,fill),算比值,`>=4.5` 为 True。主题表用 `from app.ppt_renderer import <THEMES symbol>`(Step1 确认的名)。
 - [ ] **Step 4-6** 测试通过 → 对全部主题打印比值(确认都 ≥4.5,坐实「low_contrast 全是 VLM 幻觉」)→ 提交。
 
-### Task 2.3：overflow 规则(复用 feedback_loop 几何)
+### Task 2.3：overflow 规则 —— ❌ 已取消(用户 2026-06-11 选 c)
 
-**Files:** Modify `experiments/audit/geom_rules.py`
-
-- [ ] **Step 1 先读源**:`app/feedback_loop.py` line ~155-200 的 overflow 计算(`cy + bullet_height > body_bottom` + `_wrap_text`/`_text_width`/`_boxes`)。
-- [ ] **Step 2 写失败测试**:构造一个 `PosterTask`(6 panel、其中一个塞超长 content),`overflow_violations(task)` 返回该 panel。
-- [ ] **Step 3 实现** `overflow_violations(task)`:把 feedback_loop 的 box/wrap/overflow 判定抽成纯函数(同字体度量),对每 panel 返回是否溢出。**注:这是「计划文本能否装进框」的几何判定**(与真实 soffice autofit 可能略异,作负控制足够;在 limitation 注明)。
-- [ ] **Step 4-6** 测试通过 → 提交。
+**Files:** ~~Modify `experiments/audit/geom_rules.py`~~ —— 不做。真实 pptx 经 soffice autofit 缩字,字面溢出基本不显现;contrast 已是干净幻觉探针。`text_overload` 假阳率改用**人工 gold(预注册 gold≈0)**衡量(Phase 4)。下面步骤作废,仅作记录。
 
 ---
 
@@ -223,7 +218,7 @@ def test_theme_contrast_pass():
 **Files:** Create `experiments/scripts/run_audit_v2.py`
 
 - [ ] **Step 1 写失败测试**(`--dry-run` 只打印将处理的 60 张、不调 VLM)。
-- [ ] **Step 2 失败** → **Step 3 实现**:读 manifest → 对每张 `iter1_png` 调 `label_poster(png, model=QWEN_VL_MODEL, variant=v)` for v in (direct,narrowed) → 同时跑 `geom_rules` 三规则(overlap/contrast/overflow)→ 落
+- [ ] **Step 2 失败** → **Step 3 实现**:读 manifest → 对每张 `iter1_png` 调 `label_poster(png, model=QWEN_VL_MODEL, variant=v)` for v in (direct,narrowed) → 同时跑 `geom_rules` 两规则(overlap/contrast)→ 落
   `experiments/results/audit_v2_new60/vlm_qwen32b_{direct,narrowed}.json` 和 `geom_rules.json`。`--models` 可选 8B/30B;`--limit` 调试。每张 crash 不中断(label_poster 本就返回 stub)。
 - [ ] **Step 4 dry-run 通过** → **Step 5 真跑** `python -m experiments.scripts.run_audit_v2`(60 张 × 2 prompt,留意限流;失败条目 source 字段标记)→ **Step 6 提交脚本**(结果 JSON 视体积决定是否 gitignore)。
 
@@ -252,7 +247,7 @@ def test_entropy_single_label_zero(): assert label_entropy(["a","a","a"])==0.0
 - [ ] **Step 1 写失败测试**(喂合成 gold+VLM,断言输出含 `verdict ∈ {S1,S2,S3}` 且 per-class 表行数=6)。
 - [ ] **Step 2 失败** → **Step 3 实现**:
   - 载 `audit_v2_labels_gold.json`(裁决后的 gold;若标注未完成,支持 `--gold` 可缺省,先只出 VLM 自身分布+假阳+熵)、两个 VLM JSON、`geom_rules.json`。
-  - 算:人-人 κ(A vs B)、VLM-gold κ(direct & narrowed)、混淆矩阵、6 类 P/R/F1、VLM 标签熵 + top1 占比、先验基线、`text_overload`/`low_contrast`/`overlap` 假阳率(VLM vs 对应几何规则)、**按 template 拆分分布**、`other` 清单。
+  - 算:人-人 κ(A vs B)、VLM-gold κ(direct & narrowed)、混淆矩阵、6 类 P/R/F1、VLM 标签熵 + top1 占比、先验基线、`text_overload` 假阳率(VLM vs 人工 gold,gold≈0)、`low_contrast`/`overlap` 假阳率(VLM vs 几何规则)、**按 template 拆分分布**、`other` 清单。
   - 套 spec §6 阈值出 **verdict S1/S2/S3**(含小样本警告:某类 gold<8 不下判定)。
   - 写 `experiments/results/audit_v2_new60/{confusion_matrix.json,per_issue_table.csv,kappa.json}` + 顶层 `AUDIT_V2_FINDINGS.md`(verdict + 三表 + 下一步方向)。
 - [ ] **Step 4 通过** → **Step 5 真跑**(标注好后)`python -m experiments.scripts.analyze_audit_v2` → **Step 6 提交**。
@@ -263,7 +258,7 @@ def test_entropy_single_label_zero(): assert label_entropy(["a","a","a"])==0.0
 
 - **样本/iter_1/禁 preview**:Task 0.1 用 `pptx/iter_1.png`(real),manifest 记 sha ✓
 - **6 类 + asset 拆 + hierarchy 改名 + text_overload 负控制**:Task 1.1 ✓
-- **3 客观规则(contrast/overflow/overlap)双重身份**:Phase 2 ✓(overlap 在 P2P 上演示可迁移)
+- **2 客观规则(contrast/overlap)双重身份**:Phase 2 ✓(overflow 按用户决定取消;overlap 在 P2P 上演示可迁移)
 - **双标注 + κ + open-coding + 校准**:Task 0.2 kit + Guide,Task 4.2 算人-人 κ ✓
 - **VLM:32B × direct/narrowed,8B/30B 可选**:Phase 3 ✓
 - **指标:per-class R/P/F1、VLM-gold κ、混淆、熵、先验、假阳、分模板**:Phase 4 ✓
