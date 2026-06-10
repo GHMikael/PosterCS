@@ -50,23 +50,25 @@ __all__ = ["is_enabled", "build_prompt", "label_poster", "_normalize_vlm_label"]
 def build_prompt() -> str:
     """Construct the audit critique prompt from the taxonomy definitions."""
 
+    n_issues = len(REAL_ISSUES)
+    n_guards = len(GUARD_VALUES)
     issue_lines = "\n".join(f"- {k} —— {ISSUE_GLOSS[k]}" for k in REAL_ISSUES)
     guard_lines = "\n".join(f"- {k} —— {GUARD_GLOSS[k]}" for k in GUARD_VALUES)
     return f"""
 你是一个严格的学术海报"版面设计失败"审查助手。下面这张是 SVFP 修复*之前*的初始海报。
 请判断它最主要的版面设计失败属于哪一类，用于验证一套新的失败分类体系。
 
-【5 类主问题 issue】（primary_issue 必须从这 5 类里选最主要的一类）：
+【{n_issues} 类主问题 issue】（primary_issue 必须从这 {n_issues} 类里选最主要的一类）：
 {issue_lines}
 
-【4 个 guard】（低频硬约束违规，单独报告，不算主问题）：
+【{n_guards} 个 guard】（低频硬约束违规，单独报告，不算主问题）：
 {guard_lines}
 
 判定规则：
-1. primary_issue：这张海报*最主要*的设计失败，从上面 5 类中选一个。
-   - 若 5 类都明显不适用（出现了体系没覆盖的新失败类型），填 "other"。
+1. primary_issue：这张海报*最主要*的设计失败，从上面 {n_issues} 类中选一个。
+   - 若 {n_issues} 类都明显不适用（出现了体系没覆盖的新失败类型），填 "other"。
    - 若海报版面确实没有明显问题，填 "none"。
-2. secondary_issues：其余存在但非最主要的问题，0 个或多个，取值同样来自 5 类（可含 "other"，但不要含 "none"）。
+2. secondary_issues：其余存在但非最主要的问题，0 个或多个，取值同样来自 {n_issues} 类（可含 "other"，但不要含 "none"）。
 3. guard_violations：检测到的 guard 违规（0 个或多个），仅从 4 个 guard 取值。
 4. evidence：对 primary（以及主要 secondary）给一句具体的图像观察证据。
 5. confidence：你对 primary_issue 判断的置信度，0 到 1 的小数。

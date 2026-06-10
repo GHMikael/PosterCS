@@ -35,7 +35,7 @@ from experiments.scripts.analysis_issue_mece_audit import audit, cohen_kappa
 
 
 def test_taxonomy_shapes():
-    assert len(REAL_ISSUES) == 5
+    assert len(REAL_ISSUES) == 6
     assert set(PRIMARY_ISSUE_VALUES) == set(REAL_ISSUES) | {"other", "none"}
     assert len(GUARD_VALUES) == 4
     assert 9 <= len(ACTION_VALUES) <= 12
@@ -43,9 +43,10 @@ def test_taxonomy_shapes():
 
 
 def test_old_to_new_crosswalk_total_and_valid():
-    # All four legacy classes are mapped.
+    # All legacy classes are mapped (4 old-4-class + 2 old-5-class strings).
     assert set(OLD_TO_NEW.keys()) == {
         "empty_space", "overlapping_elements", "low_contrast", "figure_too_small",
+        "asset_utilization_error", "visual_hierarchy_weak",
     }
     for old, rec in OLD_TO_NEW.items():
         assert rec["kind"] in {"issue", "guard"}

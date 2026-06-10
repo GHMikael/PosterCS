@@ -26,19 +26,20 @@ from typing import Any, Dict, List
 
 
 class AuditIssueType(str, Enum):
-    """The five primary issue classes, plus two labeling sentinels.
+    """The six primary issue classes, plus two labeling sentinels.
 
-    The five real classes map to the five core dimensions of poster visual
-    design (space / text / hierarchy / assets / structure). ``OTHER`` and
-    ``NONE`` are sentinels used only during *labeling* so we can measure the
-    audit's ``other_rate`` and ``coverage`` honestly — they are never proposed
-    as taxonomy members.
+    The six real classes cover the core dimensions of poster visual design
+    (space / text / hierarchy-emphasis / asset-mismatch / asset-size /
+    structure). ``OTHER`` and ``NONE`` are sentinels used only during
+    *labeling* so we can measure the audit's ``other_rate`` and ``coverage``
+    honestly — they are never proposed as taxonomy members.
     """
 
     SPACE_IMBALANCE = "space_imbalance"
     TEXT_OVERLOAD = "text_overload"
-    VISUAL_HIERARCHY_WEAK = "visual_hierarchy_weak"
-    ASSET_UTILIZATION_ERROR = "asset_utilization_error"
+    HIERARCHY_EMPHASIS_ERROR = "hierarchy_emphasis_error"
+    ASSET_MISMATCH = "asset_mismatch"
+    ASSET_TOO_SMALL = "asset_too_small"
     STRUCTURE_ALIGNMENT_ERROR = "structure_alignment_error"
 
     # labeling sentinels (NOT taxonomy members)
@@ -50,8 +51,9 @@ class AuditIssueType(str, Enum):
 REAL_ISSUES: List[str] = [
     AuditIssueType.SPACE_IMBALANCE.value,
     AuditIssueType.TEXT_OVERLOAD.value,
-    AuditIssueType.VISUAL_HIERARCHY_WEAK.value,
-    AuditIssueType.ASSET_UTILIZATION_ERROR.value,
+    AuditIssueType.HIERARCHY_EMPHASIS_ERROR.value,
+    AuditIssueType.ASSET_MISMATCH.value,
+    AuditIssueType.ASSET_TOO_SMALL.value,
     AuditIssueType.STRUCTURE_ALIGNMENT_ERROR.value,
 ]
 
@@ -68,24 +70,33 @@ SECONDARY_ISSUE_VALUES: List[str] = REAL_ISSUES + [AuditIssueType.OTHER.value]
 #: Human-readable gloss for each class (used in prompts / charts / reports).
 ISSUE_GLOSS: Dict[str, str] = {
     AuditIssueType.SPACE_IMBALANCE.value: (
-        "Uneven use of space: some panels are nearly empty while others are "
-        "cramped, or the visual weight is lopsided left/right or top/bottom."
+        "Uneven use of space WITHIN panels: some panels nearly empty or bullets "
+        "too loosely spaced while others are cramped; lopsided visual weight. "
+        "(Panel-internal — contrast structure_alignment_error which is grid-level.)"
     ),
     AuditIssueType.TEXT_OVERLOAD.value: (
-        "Too much text load even without physical overlap: too many bullets, "
-        "font too small, high text density, heavy reading burden."
+        "Too much text / text overflowing or clipped / font too small. NEGATIVE "
+        "CONTROL: generation has largely eliminated this, so a VLM reporting it "
+        "is most likely a false positive (hallucination probe)."
     ),
-    AuditIssueType.VISUAL_HIERARCHY_WEAK.value: (
-        "No clear focal point: the main contribution / method / key result is "
-        "not visually salient; the reader cannot tell what to read first."
+    AuditIssueType.HIERARCHY_EMPHASIS_ERROR.value: (
+        "Wrong visual emphasis: EITHER no clear focal point (panels look "
+        "identical, reader cannot tell what to read first) OR an element is "
+        "OVER-emphasized (e.g. oversized decorative section numbers grabbing "
+        "attention away from content)."
     ),
-    AuditIssueType.ASSET_UTILIZATION_ERROR.value: (
-        "Poor use of figures: key paper figure not reused, figure too small, "
-        "figure far from related text, weak/missing caption, wrong source."
+    AuditIssueType.ASSET_MISMATCH.value: (
+        "Figure does not match its text / a wrong or irrelevant figure was "
+        "placed (depends on the planner's figure-selection accuracy)."
+    ),
+    AuditIssueType.ASSET_TOO_SMALL.value: (
+        "A relevant figure is rendered too small to read its content."
     ),
     AuditIssueType.STRUCTURE_ALIGNMENT_ERROR.value: (
-        "Broken structure/grid: misaligned panels, inconsistent margins, "
-        "unclear module boundaries, section headers off-baseline."
+        "Broken structure at the GRID level: a whole rectangular region left "
+        "blank on one side, misaligned panels, unbalanced column widths, panels "
+        "not filling the canvas, section headers off-baseline. (Grid-level — "
+        "contrast space_imbalance which is panel-internal.)"
     ),
 }
 
@@ -157,12 +168,14 @@ ISSUE_TO_ACTIONS: Dict[str, List[str]] = {
         AuditAction.REDUCE_BULLET_COUNT.value,
         AuditAction.INCREASE_ABSTRACTION.value,
     ],
-    AuditIssueType.VISUAL_HIERARCHY_WEAK.value: [
+    AuditIssueType.HIERARCHY_EMPHASIS_ERROR.value: [
         AuditAction.PROMOTE_KEY_CLAIM.value,
         AuditAction.ADD_CALLOUT.value,
     ],
-    AuditIssueType.ASSET_UTILIZATION_ERROR.value: [
+    AuditIssueType.ASSET_MISMATCH.value: [
         AuditAction.SELECT_KEY_FIGURE.value,
+    ],
+    AuditIssueType.ASSET_TOO_SMALL.value: [
         AuditAction.ENLARGE_FIGURE.value,
         AuditAction.SWITCH_TO_IMAGE_FOCUS.value,
     ],
@@ -195,12 +208,23 @@ OLD_TO_NEW: Dict[str, Dict[str, str]] = {
     "low_contrast": {
         "maps_to": AuditGuard.CONTRAST_GUARD.value,
         "kind": "guard",
-        "note": "WCAG-checkable; demoted to a guard. Primary slot ceded to visual_hierarchy_weak.",
+        "note": "WCAG-checkable; demoted to a guard. Primary slot ceded to hierarchy_emphasis_error.",
     },
     "figure_too_small": {
-        "maps_to": AuditIssueType.ASSET_UTILIZATION_ERROR.value,
+        "maps_to": AuditIssueType.ASSET_TOO_SMALL.value,
         "kind": "issue",
-        "note": "'Figure too small' is one sub-case of broader asset-utilization errors.",
+        "note": "v6: split out as its own class (geometry-detectable figure-size error).",
+    },
+    # v6 legacy: previous 5-class strings a model may still emit.
+    "asset_utilization_error": {
+        "maps_to": AuditIssueType.ASSET_MISMATCH.value,
+        "kind": "issue",
+        "note": "v6: the broad asset class split into asset_mismatch + asset_too_small; semantic mismatch is the default.",
+    },
+    "visual_hierarchy_weak": {
+        "maps_to": AuditIssueType.HIERARCHY_EMPHASIS_ERROR.value,
+        "kind": "issue",
+        "note": "v6: renamed + widened to cover over-emphasis as well as no-focus.",
     },
 }
 
