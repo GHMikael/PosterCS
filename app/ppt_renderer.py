@@ -636,35 +636,6 @@ def add_section_glyph(slide, x, y, section: str, palette: Palette, accent: RGBCo
     add_textbox(slide, x, y + Inches(0.01), Inches(0.24), Inches(0.16), glyph, 8, palette.white, True, PP_ALIGN.CENTER)
 
 
-def add_mini_pipeline(slide, x, y, w, h, panel: Panel, palette: Palette, accent: RGBColor, task: Optional[PosterTask] = None):
-    steps = panel.content[:4] or ["Parse paper", "Plan panels", "Render poster", "Refine layout"]
-    gap = Inches(0.10)
-    box_w = (w - gap * (len(steps) - 1)) / len(steps)
-    badge_size = _panel_font_size(8, panel, task)
-    step_size = _panel_font_size(7.4, panel, task)
-    for idx, step in enumerate(steps):
-        sx = x + idx * (box_w + gap)
-        add_rect(slide, sx, y, box_w, h, RGBColor(250, 252, 255), palette.border, radius=True, line_width=0.8)
-        badge = add_shape(slide, MSO_SHAPE.OVAL, sx + box_w / 2 - Inches(0.11), y + Inches(0.08), Inches(0.22), Inches(0.22), accent)
-        badge.line.fill.background()
-        add_textbox(slide, sx + box_w / 2 - Inches(0.11), y + Inches(0.08), Inches(0.22), Inches(0.22), str(idx + 1), badge_size, palette.white, True, PP_ALIGN.CENTER, fit=True, min_font_size=5.8)
-        add_rich_textbox(
-            slide,
-            sx + Inches(0.05),
-            y + Inches(0.33),
-            box_w - Inches(0.10),
-            h - Inches(0.36),
-            step,
-            palette,
-            font_size=step_size,
-            bold=True,
-            max_len=0,
-            min_font_size=5.9,
-        )
-        if idx < len(steps) - 1:
-            add_textbox(slide, sx + box_w - Inches(0.02), y + h / 2 - Inches(0.11), Inches(0.14), Inches(0.18), ">", 13, palette.text, True, PP_ALIGN.CENTER)
-
-
 def _add_headline(slide, x, y, w, h, text: str, palette: Palette, accent: RGBColor):
     """Render a panel's key-claim headline as an emphasized focal line.
 
@@ -761,9 +732,6 @@ def add_panel_content(slide, x, y, w, h, panel: Panel, task: PosterTask, palette
             add_figure(slide, cx, cy + text_h + Inches(0.08), cw, fig_h, figure_source, figure_caption, palette)
     elif figure_source and hint == "image_only":
         add_figure(slide, cx, cy, cw, ch, figure_source, figure_caption, palette)
-    elif kind == "method":
-        add_mini_pipeline(slide, cx, cy + Inches(0.02), cw, ch * 0.48, panel, palette, accent, task=task)
-        add_bullets(slide, cx, cy + ch * 0.56, cw, ch * 0.42, panel, palette, accent, task=task, max_items=2)
     else:
         add_bullets(slide, cx, cy + Inches(0.02), cw, ch - Inches(0.02), panel, palette, accent, task=task, max_items=5)
 
@@ -1008,9 +976,6 @@ class StoryflowTemplate(DashboardTemplate):
             bullet_y = content_y + content_h * (fig_ratio + 0.06)
             bullets_squashed_cap = 1 if fig_ratio >= 0.6 else (3 if compact else 4)
             add_bullets(slide, x + Inches(0.10), bullet_y, w - Inches(0.20), content_h * (1 - fig_ratio - 0.08), panel, p, accent, task=task, max_items=bullets_squashed_cap)
-        elif classify_panel(panel.section) == "method":
-            add_mini_pipeline(slide, x + Inches(0.10), content_y + Inches(0.02), w - Inches(0.20), content_h * 0.40, panel, p, accent, task=task)
-            add_bullets(slide, x + Inches(0.10), content_y + content_h * 0.48, w - Inches(0.20), content_h * 0.48, panel, p, accent, task=task, max_items=2 if compact else 3)
         else:
             add_bullets(slide, x + Inches(0.10), content_y, w - Inches(0.20), content_h, panel, p, accent, task=task, max_items=3 if compact else 4)
 
