@@ -1,22 +1,42 @@
 **English** | [简体中文](README.zh-CN.md)
 
-# PosterCS — Paper-to-Poster Backend + SVFP
+# PosterCS — Paper-to-Poster Backend + SVFP Audit Protocol
 
-> **Status: v6 — first usable release.** FastAPI backend + Dify Chatflow planner + a deterministic, content-adaptive renderer + the **SVFP** (Structured Visual Feedback Protocol) closed loop + a reproducible **CS-Poster-30** evaluation harness (16 metrics, baseline matrix).
+> **Status: v7 — S1 diagnosis complete, P1 layout fixes landed.** A controllable CS-poster generation substrate + the **SVFP Audit Protocol** for systematically evaluating VLM visual critic reliability.
 
-Given a CS paper PDF, the system produces an editable A3 conference poster PPTX:
-**docling asset extraction → Dify Chatflow planning (`PosterTask` JSON) → content-adaptive PPTX renderer → optional SVFP loop (VLM critique → deterministic repair → convergence trace).**
+The system turns a CS paper PDF into an editable conference poster PPTX:
+**docling asset extraction → Dify Chatflow planning → content-adaptive PPTX renderer with deterministic geometry rules.**
 
 ---
 
-## Design principle (the spine)
+## Design principle
 
-> **Geometry-decidable things go to deterministic code; semantic/content things go to the LLM/VLM.**
+> **Geometry-decidable → deterministic code. Semantic/content → LLM/VLM.**
 
-This runs through the whole system and the paper:
-- **Figure extraction** uses docling (a layout model) instead of raw raster grabbing, so vector figures + tables aren't lost.
-- **Figure layout** (top-bottom vs left-right, box size) is derived from the figure's **true aspect ratio** in the renderer — the planner doesn't guess it.
-- **The SVFP diagnosis** (below): a holistic VLM critic is unreliable for layout, so reliable repair must route each issue to the detector that actually has the signal.
+This principle runs through the whole system and is backed by empirical evidence:
+- **audit v2 (new60)** on 60 posters with dual-human gold (κ=0.864) found: VLM holistic critic accuracy = **0.083** (prior baseline = 0.583), recall on the dominant real defect = **0.0**.
+- **All residual defects are geometry/code-fixable**: `structure_alignment_error`, `asset_too_small`, `space_imbalance`. Semantic defects (`text_overload`, `asset_mismatch`, `hierarchy_emphasis_error`) are **zero** — eliminated by generation improvements.
+- **P1 fixes** (dynamic spotlight grid, aspect-aware `fig_ratio`, sparse-panel font scaling) reduced asymmetry 2.19"→0.00", increased figure sizes +70–500%, and brought gold `none` toward 58/60.
+- **Conclusion**: deterministic geometry rules baked into the renderer **outperform VLM post-hoc critic loops** — more reliable, auditable, and zero API cost.
+
+---
+
+## Research framing
+
+**The paper's core contribution is the SVFP Audit Protocol** — a standardized methodology for evaluating whether VLM visual critics are reliable. We applied it to Qwen3-VL-32B and found it isn't. The protocol itself is transferable to any VLM critic (GPT-4o, Gemini, Paper2Poster's commenter).
+
+**Key evidence:**
+| Metric | Value |
+|---|---|
+| Gold: dual-human κ (A/B) | **0.864** |
+| VLM accuracy (direct) | 0.083 |
+| VLM accuracy (narrowed) | 0.167 |
+| Prior baseline accuracy | 0.583 |
+| recall(asset_too_small) | 0.0 |
+| recall(none) — VLM never says "good" | 0.0 |
+| Verdict | **S1 — VLM critic unreliable** |
+
+**Where to read the full diagnosis:** [`docs/audit/AUDIT_V2_FINDINGS.md`](docs/audit/AUDIT_V2_FINDINGS.md)
 
 ---
 
@@ -28,58 +48,26 @@ PDF ──/extract_pdf_assets──►  text + figures (docling; fitz fallback)
         Dify Chatflow (planneragent_v2) ──► PosterTask JSON (panels, figures, headline)
                                    │
         content-adaptive renderer ──► editable PPTX
-          · content_spans: panel sizes scale with content (no fixed 6-grid)
-          · figure layout from aspect ratio; headline = per-panel visual focus
+          · content_spans, aspect-aware figure layout, headline focal line
+          · 4 templates × 4 themes, compact storyflow header (v7)
                                    │
-        optional SVFP loop ──► VLM critique → deterministic FeedbackApplier → convergence
-                                   │
-                          final.pptx + run_report.json (+ svfp_trace for c3)
+                        final.pptx + run_report.json
 ```
 
-Experiments **replay frozen planner snapshots** (`datasets/planner_cache/*.json`) so baselines are compared on identical plans.
+Experiments replay **frozen planner snapshots** (`datasets/planner_cache/*.json`) for reproducibility.
 
 ---
 
-## What works in v6 (usable)
+## What works
 
 | Area | Capability |
 |---|---|
-| **Extraction** | docling semantic extraction (figures **and tables**, incl. vector); fitz fallback; `POSTER_USE_DOCLING=0` to disable |
-| **Planning** | Dify Chatflow → `PosterTask`; `planneragent_v2.txt` adds per-panel `headline` + CS-structured extraction; layout direction left to the renderer |
-| **Renderer** | content-adaptive `content_spans` (dashboard/classic/minimal); figure layout by aspect; `headline` focal line; 4 templates × 4 themes |
-| **SVFP loop** | closed `{4 issues × 9 actions}` + deterministic applier + convergence detector (production = the 4-class baseline; see framing) |
-| **Evaluation** | **16 metrics** (A content / B visual / C protocol / D efficiency / E external) + baseline matrix + `compute_metrics`/`aggregate_stats`/`print_paper_table` |
-| **Async** | async jobs + long-polling for Dify; run archive under `outputs/runs/` |
-
----
-
-## Research framing (honest)
-
-**Primary finding — the VLM layout critic is systematically unreliable (not a small-model artifact):**
-- Scale ablation (Qwen3-VL 8B/30B/32B, same 16 posters): every size is **prior-dominated** (8B → 100% one label; 32B → text_overload 11/16), and **none recovers the figure/asset problems a human flags** (≤1/12 at every scale). Narrowing the prompt only lifts asset recall to 4/12.
-- **`c3_issue_resolution_rate = 0.0`** on a real run: SVFP detected 8 issues, applied actions, and resolved **0** across two iterations — quantifying "the VLM can see problems but shallow closed-set actions can't fix them."
-
-**Therefore:** reliable repair must **route detection by issue type** — geometry for space/overflow/structure, a script + figure-caption + text-LLM check for figure–text mismatch, and the VLM only where it's reliable (saliency/hierarchy).
-
-**Where the code is vs. where the paper is going:**
-- **Production SVFP loop today = the old 4-class, holistic-VLM baseline** (`overlapping_elements / empty_space / low_contrast / figure_too_small` × 9 actions). This is what `c3=0.0` was measured on — i.e., the **baseline / counter-example**.
-- **The 5-class MECE taxonomy + routed detection + severity-gating** (the paper's improvement) is **designed** in [`SVFP_ISSUE_TAXONOMY_v5.md`](docs/design/SVFP_ISSUE_TAXONOMY_v5.md) but **not yet migrated into the production loop**. That migration is the top post-v6 task.
-
-See [`项目现状与最终方向_v6.md`](docs/design/项目现状与最终方向_v6.md) for the full status + roadmap.
-
----
-
-## The 16 metrics
-
-| Tier | Metrics |
-|---|---|
-| **A — content fidelity** | `a1_key_info_recall` · `a2_hallucination_rate` · `a3_semantic_fidelity` (BERTScore) |
-| **B — visual quality** | `b1_layout_quality` · `b2_readability` · `b3_figure_reuse_rate` · `b4_figure_text_align` |
-| **C — protocol** | `action_executability` (c1, **honestly measured**) · `convergence_rate` (c2) · `c3_issue_resolution_rate` · `per_iter_visual_gain` (c4) |
-| **D — efficiency** | `d1_latency` · `d2_cost` |
-| **E — external** | `e1_paperquiz` · `e2_human_preference` (harness) · `e3_llm_judge` (gated) |
-
-C-class only applies to feedback arms (`ours_svfp`, `ours_freeform`, `gpt4o_zeroshot_svfp`); N/A elsewhere. `c1` is now `executed/attempted` measured by the applier (no longer hardcoded), `c3` reads the per-iteration `svfp_trace`.
+| **Extraction** | docling semantic extraction (figures + tables, incl. vector); fitz fallback |
+| **Planning** | Dify Chatflow → `PosterTask` with per-panel `headline` |
+| **Renderer** | content-adaptive `content_spans`; figure layout by aspect ratio; storyflow compact header; 4 templates × 4 themes |
+| **Evaluation** | 16 metrics (A/B/C/D/E) + baseline matrix |
+| **Audit** | SVFP Audit Protocol: 6-class taxonomy, dual-human gold, geometric rules, VLM labeling, full metric suite, S1/S2/S3 verdict |
+| **Tests** | 81 tests passing |
 
 ---
 
@@ -89,8 +77,9 @@ C-class only applies to feedback arms (`ours_svfp`, `ours_freeform`, `gpt4o_zero
 cd PosterCS
 python3.12 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env          # DASHSCOPE_API_KEY (+ DIFY_* for batch runs)
-python -m app.main
+cp .env.example .env          # DASHSCOPE_API_KEY
+unset VIRTUAL_ENV             # required on macOS
+.venv/bin/python -m app.main
 curl http://127.0.0.1:8000/health
 ```
 
@@ -106,7 +95,6 @@ curl http://127.0.0.1:8000/health
 | `GET` | `/jobs/{job_id}?wait=20` | Long-poll job status |
 | `POST` | `/generate_ppt_file` | Sync generation (debug) |
 | `GET` | `/download/run/{run_folder}` | Download `final.pptx` |
-| `GET` | `/assets/{asset_token}/{filename}` | Extracted figures |
 
 ---
 
@@ -116,34 +104,16 @@ curl http://127.0.0.1:8000/health
 |---|---|
 | `ours_svfp` | full SVFP closed loop |
 | `ours_no_svfp` | same renderer, no feedback |
-| `ours_freeform` | free-text VLM critique + LLM apply (c1 comparison arm) |
-| `gpt4o_zeroshot` | LLM planner only |
-| `gpt4o_zeroshot_svfp` | zero-shot planner + SVFP (planner-agnostic test) |
-| `paper2poster` / `posteragent` | external SOTA reference (repro pending) |
+| `paper2poster` / `posteragent` | external SOTA reference |
 
 ```bash
 python -m experiments.scripts.run_matrix --papers experiments/configs/papers_30.json \
-  --baselines ours_no_svfp,ours_freeform,ours_svfp,gpt4o_zeroshot_svfp
-python -m experiments.scripts.compute_metrics --all
-python -m experiments.scripts.aggregate_stats --out experiments/results/aggregate/
-python -m experiments.scripts.print_paper_table
+  --baselines ours_no_svfp,ours_svfp
 ```
 
-The failure-taxonomy audit + diagnosis analyses live in `experiments/audit/` and `experiments/scripts/analysis_*.py` / `ablation_*.py`.
+The audit pipeline: `experiments/scripts/run_audit_v2.py` → `experiments/scripts/analyze_audit_v2.py` → `docs/audit/AUDIT_V2_FINDINGS.md`.
 
----
-
-## Key environment variables
-
-| Variable | Purpose |
-|---|---|
-| `DASHSCOPE_API_KEY` | Qwen-VL critic + judges (SiliconFlow) |
-| `QWEN_VL_MODEL` | VLM model id (default `Qwen/Qwen3-VL-32B-Instruct`) |
-| `POSTER_USE_DOCLING` | `0` to fall back to fitz extraction |
-| `POSTER_LLM_TIMEOUT_S` | request timeout for text/VLM calls |
-| `DIFY_API_KEY` / `DIFY_BASE_URL` | batch Chatflow trigger |
-
-See [`.env.example`](.env.example) for the full list.
+P1-fixed batch re-render: `experiments/scripts/render_fixed_batch.py` → `outputs/runs_fixed/`.
 
 ---
 
@@ -151,21 +121,32 @@ See [`.env.example`](.env.example) for the full list.
 
 | Doc | Content |
 |---|---|
-| **README** (this file) | Overview, pipeline, honest framing, quick start |
-| [`项目现状与最终方向_v6.md`](docs/design/项目现状与最终方向_v6.md) | **Current status, done/not-done, usable-v1 checklist, roadmap** |
-| [`SVFP_ISSUE_TAXONOMY_v5.md`](docs/design/SVFP_ISSUE_TAXONOMY_v5.md) | 5-class taxonomy + routed-detection design (next iteration) |
-| [`LAYOUT_DESIGN_v2.md`](docs/design/LAYOUT_DESIGN_v2.md) | content-adaptive layout design |
-| [`PROJECT_OPTIMIZATION_DIRECTION_v4.md`](docs/design/PROJECT_OPTIMIZATION_DIRECTION_v4.md) | original direction + P0–P7 roadmap |
-| `experiments/scripts/METRIC_REFACTOR_PLAN.md` | 16-metric refactor record |
+| **README** (this file) | Overview, design principle, quick start |
+| [`docs/design/项目现状与最终方向_v7.md`](docs/design/项目现状与最终方向_v7.md) | **Current status (v7) — authoritative** |
+| [`docs/audit/AUDIT_V2_FINDINGS.md`](docs/audit/AUDIT_V2_FINDINGS.md) | **Audit v2 results: S1 verdict + full metrics** |
+| [`docs/audit/AUDIT_V2_REGROUND_SPEC.md`](docs/audit/AUDIT_V2_REGROUND_SPEC.md) | Audit design spec (taxonomy, thresholds) |
+| [`docs/design/SVFP_ISSUE_TAXONOMY_v5.md`](docs/design/SVFP_ISSUE_TAXONOMY_v5.md) | Taxonomy design + routing (⚠️ code differs — see notes) |
+| [`docs/design/PROJECT_OPTIMIZATION_DIRECTION_v4.md`](docs/design/PROJECT_OPTIMIZATION_DIRECTION_v4.md) | Historical roadmap (pre-new60) |
+| [`docs/progress/含金量分析评估.md`](docs/progress/含金量分析评估.md) | Strategic value analysis |
+
+---
+
+## Key env vars
+
+| Variable | Purpose |
+|---|---|
+| `DASHSCOPE_API_KEY` | Qwen-VL via SiliconFlow |
+| `QWEN_VL_MODEL` | VLM model (default `Qwen/Qwen3-VL-32B-Instruct`) |
+| `POSTER_USE_DOCLING` | `0` to fall back to fitz |
 
 ---
 
 ## Tests
 
 ```bash
-python -m pytest experiments/tests/ -q
+unset VIRTUAL_ENV && PYTHONPATH=. .venv/bin/python -m pytest experiments/tests/ -q
 ```
 
 ## Notes
 
-`.env`, `outputs/`, `*.pptx`, `zcache/`, heavy `experiments/results/` artifacts are gitignored. `datasets/planner_cache/*.json` (frozen snapshots) and the audit/diagnosis JSON evidence are committed for reproducibility.
+`.env`, `outputs/`, `*.pptx`, `zcache/`, `experiments/results/` artifacts are gitignored. `datasets/planner_cache/*.json` (frozen snapshots) and audit gold/JSON evidence are committed for reproducibility.
