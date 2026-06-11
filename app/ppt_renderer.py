@@ -551,12 +551,21 @@ def add_bullets(slide, x, y, w, h, panel: Panel, palette: Palette, accent: RGBCo
     colors = [palette.primary, palette.success, palette.warning, palette.purple, palette.accent]
     body_size = _panel_font_size(8.8, panel, task)
     badge_size = _panel_font_size(7.2, panel, task)
-    # Tighten inter-bullet spacing: cap the per-row height so a few bullets in a
-    # tall panel sit close together instead of stretching edge-to-edge. The cap
-    # tracks the (feedback-scaled) body font, so the SVFP loop can still spread
-    # bullets out by raising the font; any leftover space stays as honest
-    # whitespace for the space-balance critique to act on, not pre-filled here.
+    # When a no-figure panel has only 1-2 bullets in a tall area, bump the font
+    # size so each bullet carries more visual weight and the panel doesn't read
+    # as empty (space_imbalance). Also relax the row-height cap so bullets
+    # spread a bit more vertically.
+    if n <= 2 and h > Inches(1.5):
+        body_size = body_size * 1.18
+        badge_size = badge_size * 1.18
+    # Cap the per-row height so a few bullets in a tall panel sit close together
+    # instead of stretching edge-to-edge. The cap tracks the (feedback-scaled)
+    # body font, so the SVFP loop can still spread bullets out by raising the
+    # font; any leftover space stays as honest whitespace for the space-balance
+    # critique to act on, not pre-filled here.
     max_row_h = Inches(0.56) * (body_size / 8.8)
+    if n <= 2 and h > Inches(1.5):
+        max_row_h = max_row_h * 1.25
     row_h = min(h / n, max_row_h)
     for idx, item in enumerate(items):
         item_y = y + row_h * idx
@@ -629,13 +638,6 @@ def add_metric_pills(slide, x, y, w, metrics: List[str], palette: Palette, accen
         add_textbox(slide, px + Inches(0.02), y + Inches(0.03), pill_w - Inches(0.04), Inches(0.16), metric, 7.5, accent, True, PP_ALIGN.CENTER)
 
 
-def add_section_glyph(slide, x, y, section: str, palette: Palette, accent: RGBColor):
-    kind = classify_panel(section)
-    glyph = {"motivation": "Q", "method": "M", "benchmark": "D", "results": "R", "takeaway": "T"}.get(kind, "S")
-    add_shape(slide, MSO_SHAPE.OVAL, x, y, Inches(0.24), Inches(0.24), accent)
-    add_textbox(slide, x, y + Inches(0.01), Inches(0.24), Inches(0.16), glyph, 8, palette.white, True, PP_ALIGN.CENTER)
-
-
 def _add_headline(slide, x, y, w, h, text: str, palette: Palette, accent: RGBColor):
     """Render a panel's key-claim headline as an emphasized focal line.
 
@@ -692,7 +694,7 @@ def add_panel_content(slide, x, y, w, h, panel: Panel, task: PosterTask, palette
         # at its aspect (column width ≈ ch * aspect), clamped to a band. Fewer
         # bullets when the figure column is wide (variable "enlarge").
         _asp = _image_aspect(figure_source) or 0.7
-        fig_col = min(max(int(ch * _asp) + Inches(0.16), int(cw * 0.34)), int(cw * 0.60))
+        fig_col = min(max(int(ch * _asp) + Inches(0.16), int(cw * 0.34)), int(cw * 0.72))
         text_w = cw - fig_col - Inches(0.12)
         n_bul = 2 if fig_col >= cw * 0.5 else 3
         add_bullets(slide, cx, cy, text_w, ch, panel, palette, accent, task=task, max_items=n_bul)
@@ -721,7 +723,7 @@ def add_panel_content(slide, x, y, w, h, panel: Panel, task: PosterTask, palette
         # Bigger figure → show fewer bullets (variable "enlarge").
         _asp = _image_aspect(figure_source) or 1.5
         fig_h = int(cw / max(_asp, 0.3))
-        fig_h = max(min(fig_h, int(ch * 0.68)), int(ch * 0.42))
+        fig_h = max(min(fig_h, int(ch * 0.78)), int(ch * 0.42))
         text_h = ch - fig_h - Inches(0.10)
         n_bul = 2 if fig_h >= ch * 0.58 else 3
         if hint == "image_top_text_bottom":
@@ -914,13 +916,21 @@ class StoryflowTemplate(DashboardTemplate):
         cols = min(4, max(3, (len(panels) + 1) // 2))
         card_w = (body_w - gap_x * (cols - 1)) / cols
         card_h = (body_h - gap_y) / 2
-        for idx, panel in enumerate(panels[: cols * 2], start=1):
+        total = min(len(panels), cols * 2)
+        first_row_n = min(total, cols)
+        second_row_n = max(0, total - cols)
+        for idx, panel in enumerate(panels[:total], start=1):
             r = 0 if idx <= cols else 1
-            c = idx - 1 if r == 0 else cols * 2 - idx
-            x = body_x + c * (card_w + gap_x)
+            # Left-to-right in both rows (was right-to-left snake in row 1);
+            # the old zig-zag left unbalanced blank space on the right.
+            c = idx - 1 if r == 0 else idx - cols - 1
+            # Center the row when it doesn't fill all columns
+            n_in_row = first_row_n if r == 0 else second_row_n
+            row_offset = (cols - n_in_row) * (card_w + gap_x) / 2
+            x = body_x + row_offset + c * (card_w + gap_x)
             y = body_y + r * (card_h + gap_y)
             self.add_story_card(slide, x, y, card_w, card_h, panel, task, idx, compact=True)
-            if idx < min(len(panels), cols * 2):
+            if idx < total:
                 add_textbox(slide, x + card_w - Inches(0.02), y + card_h / 2 - Inches(0.10), Inches(0.16), Inches(0.18), ">", 12, p.primary, True, PP_ALIGN.CENTER)
 
     def render_spotlight(self, slide, prs, panels: List[Panel], task: PosterTask):
@@ -929,16 +939,49 @@ class StoryflowTemplate(DashboardTemplate):
         body_w = prs.slide_width - Inches(0.32)
         body_h = prs.slide_height - Inches(1.94)
         grid = Grid(prs, body_x, body_y, body_w, body_h, cols=12, rows=6, gap=Inches(0.11))
-        spans = [
-            grid.box(0, 0, 2, 3),
-            grid.box(0, 3, 2, 3),
-            grid.box(2, 0, 4, 3),
-            grid.box(6, 0, 4, 3),
-            grid.box(2, 3, 4, 3),
-            grid.box(6, 3, 4, 3),
-            grid.box(10, 0, 2, 6),
-        ]
-        for idx, panel in enumerate(panels[:7], start=1):
+        n = min(len(panels), 7)
+        # Dynamic spans: the original hardcoded 7‑panel grid left cols 10‑11
+        # empty when there were only 5–6 panels, causing the right‑side
+        # whitespace (structure_alignment_error on every storyflow poster).
+        if n == 7:
+            spans = [
+                grid.box(0, 0, 2, 3),
+                grid.box(0, 3, 2, 3),
+                grid.box(2, 0, 4, 3),
+                grid.box(6, 0, 4, 3),
+                grid.box(2, 3, 4, 3),
+                grid.box(6, 3, 4, 3),
+                grid.box(10, 0, 2, 6),
+            ]
+        elif n == 6:
+            # Same asymmetric shape but distributed across all 12 columns:
+            # 2 narrow left + 5 centre‑left + 5 centre‑right = 12.
+            spans = [
+                grid.box(0, 0, 2, 3),
+                grid.box(0, 3, 2, 3),
+                grid.box(2, 0, 5, 3),
+                grid.box(7, 0, 5, 3),
+                grid.box(2, 3, 5, 3),
+                grid.box(7, 3, 5, 3),
+            ]
+        elif n == 5:
+            # 2 narrow left + 3 wider columns split across the remaining 10 cols.
+            spans = [
+                grid.box(0, 0, 2, 3),
+                grid.box(0, 3, 2, 3),
+                grid.box(2, 0, 5, 3),
+                grid.box(7, 0, 5, 3),
+                grid.box(2, 3, 10, 3),
+            ]
+        else:
+            spans = [
+                grid.box(0, 0, 3, 3),
+                grid.box(0, 3, 3, 3),
+                grid.box(3, 0, 9, 3),
+                grid.box(3, 3, 5, 3),
+                grid.box(8, 3, 4, 3),
+            ][:n]
+        for idx, panel in enumerate(panels[:n], start=1):
             pos = spans[idx - 1]
             self.add_story_card(slide, pos["x"], pos["y"], pos["w"], pos["h"], panel, task, idx, compact=pos["w"] < Inches(2.4))
 
@@ -954,20 +997,31 @@ class StoryflowTemplate(DashboardTemplate):
         accent = panel_accent(panel.section, p)
         add_rect(slide, x, y, w, h, p.panel_bg, p.border, radius=True, line_width=0.7)
         add_rect(slide, x, y, w, Inches(0.08), accent, radius=False)
-        add_section_glyph(slide, x + Inches(0.10), y + Inches(0.16), panel.section, p, accent)
 
-        marker = add_shape(slide, MSO_SHAPE.OVAL, x + w / 2 - Inches(0.18), y + Inches(0.18), Inches(0.36), Inches(0.36), accent)
-        marker.line.fill.background()
-        add_textbox(slide, x + w / 2 - Inches(0.18), y + Inches(0.18), Inches(0.36), Inches(0.36), str(idx), 14, p.white, True, PP_ALIGN.CENTER)
-        add_textbox(slide, x + Inches(0.08), y + Inches(0.62), w - Inches(0.16), Inches(0.44), clean_text(panel.section, 34), 10.3, p.primary, True, PP_ALIGN.CENTER)
-        if getattr(task, "emphasis_level", "normal") in {"high", "strong"}:
-            add_metric_pills(slide, x + Inches(0.12), y + Inches(0.98), w - Inches(0.24), extract_metrics(panel, 3), p, accent)
+        # Compact header: section tag (top-left, small+bold, replaces old glyph
+        # + big circle number + centered title) → saves ~0.6" vertical space
+        # that goes straight to the figure area.
+        section_tag = clean_text(panel.section, 28)
+        add_textbox(slide, x + Inches(0.12), y + Inches(0.14), w - Inches(0.24), Inches(0.28),
+                    section_tag, 9.5, accent, True, PP_ALIGN.LEFT)
+
+        headline_text = getattr(panel, "headline", "")
+        if headline_text:
+            _add_headline(slide, x + Inches(0.12), y + Inches(0.42), w - Inches(0.24),
+                          Inches(0.30), headline_text, p, accent)
 
         figure_source, figure_caption = get_panel_figure(panel, task)
-        content_y = y + (Inches(1.26) if getattr(task, "emphasis_level", "normal") in {"high", "strong"} else Inches(1.12))
+        content_y = y + (Inches(0.82) if headline_text else Inches(0.52))
         content_h = h - (content_y - y) - Inches(0.10)
         if figure_source:
             fig_ratio = 0.32 if compact or panel.layout_hint == "image_compact" else 0.42
+            _asp = _image_aspect(figure_source)
+            if _asp and _asp > 0:
+                # Size the figure box so its proportions match the image's
+                # natural aspect ratio — avoids letterboxing when a fixed
+                # fig_ratio doesn't match the image (asset_too_small root cause).
+                natural = (w - Inches(0.20)) / (_asp * max(content_h, 1))
+                fig_ratio = max(0.22, min(0.65, natural))
             est_fig_w = w - Inches(0.20)
             est_fig_h = content_h * fig_ratio
             if figure_squashed_in_vertical(figure_source, est_fig_w, est_fig_h):

@@ -3,9 +3,16 @@
 > 状态:草案,2026-06-08。相对 `PROJECT_OPTIMIZATION_DIRECTION_v4.md` §3 的修订。
 > 由 Claude 在与用户多轮讨论后整理,固化本次达成的两个关键转变 + 三处动作修正。
 >
-> ⚠️ **两个未决项(写进论文前必须解决)**
-> 1. 路由表里「VLM」那几行待 **#4 窄提示词消融**实测最终确认(尤其 VLM 在 asset 上是否仍盲、在 hierarchy 上是否可靠)。
-> 2. taxonomy 必须在 **base 改造后**(docling 抽取 #6 / 弹性布局 #7 / 富 JSON #8)的新系统上**重新审计接地**,不能引用旧 48 张语料 —— 其上 `text_overload` 是 VLM 幻觉、`visual_hierarchy_weak` 是模板常量(见记忆 `vlm-critic-prior-scale-ablation`)。
+> ### ⚠️ 实际落地差异（2026-06-11 标注）
+>
+> **代码 canonical 定义在 `experiments/audit/taxonomy.py`。** 本文档是设计稿，与代码有以下差异：
+> - 设计 5 类 → **代码 6 类**（`hierarchy_emphasis_error` 和 `asset_mismatch` 拆为独立类；`asset_too_small` 作为几何问题保留）
+> - `visual_hierarchy_weak` → **`hierarchy_emphasis_error`**（强调"过度强调"而不只是"弱"）
+> - `asset_utilization_error` → **`asset_mismatch`**（强调图文语义不匹配；图尺寸问题走 `asset_too_small`）
+> - `text_overload` → **降级为负控制/hallucination probe**（new60 gold=0, VLM 标它就是 FP）
+> - 本文 §6 两个未决项 **已闭合**：① 窄提示词消融 done（new60 narrowed acc=0.167 仍不可靠）；② 新系统重审计 done（audit v2 new60, 60 张, 双人标注 S1）
+>
+> **以 `experiments/audit/taxonomy.py` + `docs/audit/AUDIT_V2_FINDINGS.md` 为当前权威来源。**
 
 ---
 

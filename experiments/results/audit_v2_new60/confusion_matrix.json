@@ -41,12 +41,12 @@
       "other": 0
     },
     "asset_too_small": {
-      "space_imbalance": 10,
+      "space_imbalance": 5,
       "text_overload": 0,
       "hierarchy_emphasis_error": 0,
       "asset_mismatch": 0,
       "asset_too_small": 0,
-      "structure_alignment_error": 4,
+      "structure_alignment_error": 3,
       "none": 0,
       "other": 0
     },
@@ -61,17 +61,17 @@
       "other": 0
     },
     "none": {
-      "space_imbalance": 25,
+      "space_imbalance": 31,
       "text_overload": 0,
       "hierarchy_emphasis_error": 2,
       "asset_mismatch": 0,
       "asset_too_small": 0,
-      "structure_alignment_error": 1,
+      "structure_alignment_error": 2,
       "none": 0,
       "other": 0
     },
     "other": {
-      "space_imbalance": 2,
+      "space_imbalance": 1,
       "text_overload": 0,
       "hierarchy_emphasis_error": 0,
       "asset_mismatch": 0,
@@ -123,12 +123,12 @@
       "other": 0
     },
     "asset_too_small": {
-      "space_imbalance": 8,
+      "space_imbalance": 4,
       "text_overload": 1,
       "hierarchy_emphasis_error": 0,
       "asset_mismatch": 0,
       "asset_too_small": 0,
-      "structure_alignment_error": 5,
+      "structure_alignment_error": 3,
       "none": 0,
       "other": 0
     },
@@ -143,17 +143,17 @@
       "other": 0
     },
     "none": {
-      "space_imbalance": 27,
+      "space_imbalance": 32,
       "text_overload": 0,
       "hierarchy_emphasis_error": 0,
       "asset_mismatch": 0,
       "asset_too_small": 0,
-      "structure_alignment_error": 1,
+      "structure_alignment_error": 3,
       "none": 0,
       "other": 0
     },
     "other": {
-      "space_imbalance": 1,
+      "space_imbalance": 0,
       "text_overload": 1,
       "hierarchy_emphasis_error": 0,
       "asset_mismatch": 0,
