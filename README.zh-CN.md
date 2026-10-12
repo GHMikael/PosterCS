@@ -1,5 +1,8 @@
 [English](README.md) | **简体中文**
 
+> [!IMPORTANT]
+> 论文研究的当前唯一入口已迁移到 [`research/`](research/README.md)。本文件下方保留的是 PosterCS 原始生成系统说明；旧审计过程已冻结到本地 `archive/research-history-2026-10-10/`，不再用于后续开发。
+
 # PosterCS — 论文转海报后端 + SVFP 审计协议
 
 > **状态: v7 — S1 诊断完成，P1 布局修复落地。** 可控的 CS 海报生成基座 + 系统性评估 VLM 视觉批评可靠性的 **SVFP 审计协议**。

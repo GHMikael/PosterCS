@@ -1,0 +1,1094 @@
+[
+  {
+    "run_id": "20260609_022821_A_Comprehensive_Survey_of_Rewa_028f962461b9",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Overview 面板标题与左侧 Conclusion 面板标题基线错位约 0.3cm，且面板左边缘未对齐，破坏整体网格结构"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"底部\",\n        \"measurable\": \"底部 ~5cm 空白矩形区域，仅含两行文本，占面板高度约 60%\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Overview\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板内5个编号点文本密集堆叠，无视觉分隔，与标题字号相同，无层级区分\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Overview\",\n        \"region\": \"顶部\",\n        \"measurable\": \"面板标题“Overview”与左侧“Conclusion”面板标题基线错位约 0.3cm，且面板左边缘与左侧面板未对齐\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Overview 面板标题与左侧 Conclusion 面板标题基线错位约 0.3cm，且面板左边缘未对齐，破坏整体网格结构\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_023433_Test-Time_Preference_Optimizat_6b985b677181",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Experiments 面板底部三张训练曲线图因尺寸过小（每张约 4cm 宽），导致坐标轴标签和数据点文字无法清晰阅读，违反了学术海报可读性原则。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'TPO performs gradient descent in textual form' 字体大小约 24pt，比其他面板标题（约 20pt）大 20%，且颜色为亮蓝色，视觉突出度远超内容\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"底部\",\n        \"measurable\": \"三张训练曲线图总宽度约 12cm，每张图宽约 4cm，图内坐标轴标签和数据点文字高度约 2mm，肉眼难以清晰辨认\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Experiments 面板底部三张训练曲线图因尺寸过小（每张约 4cm 宽），导致坐标轴标签和数据点文字无法清晰阅读，违反了学术海报可读性原则。\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_023510_Seeing,_Listening,_Remembering_5b5ef16d0aec",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Method / Framework 面板中的架构图高度仅约4cm，图内文字过小，无法清晰阅读关键组件标签。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation / Background\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板内5个要点间距均匀，但文本内容仅占面板高度约40%，顶部和底部各留有~2cm空白区域\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion / Takeaways\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题文字‘M3-Agent advances multimodal agents toward more human-like long-term memory and reasoni...’使用紫色字体，字号与正文相同，未加粗，与下方要点列表无视觉层级区分\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"中部\",\n        \"measurable\": \"架构图宽度约12cm，高度约4cm，图内文字（如‘Memory’, ‘MLLM’）字号约6pt，无法清晰辨认\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Method / Framework 面板中的架构图高度仅约4cm，图内文字过小，无法清晰阅读关键组件标签。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_023950_MLP_Memory_A_Retriever-Pretrai_ae89635e3e92",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Key Findings 面板底部的 MLP Memory 输出框内文本过小（约 8pt），无法清晰阅读，违反了学术海报可读性原则。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments / Results\",\n        \"region\": \"底部\",\n        \"measurable\": \"图表区域占面板高度约 50%，上方文本区域仅占 30%，下方留白约 20%\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"顶部\",\n        \"measurable\": \"蓝色标题文字 'MLP Memory learns to internalize retrieval patterns during training.' 字号约 14pt，比下方正文（约 12pt）大 1.2 倍，且加粗，视觉上过度强调\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Key Findings\",\n        \"region\": \"底部\",\n        \"measurable\": \"MLP Memory 输出框内文本字号约 8pt，无法清晰阅读，且行距过密，内容被压缩\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Key Findings 面板底部的 MLP Memory 输出框内文本过小（约 8pt），无法清晰阅读，违反了学术海报可读性原则。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024001_Generalist_Reward_Models_Found_657081bc5ee8",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Method 面板右侧的 Prompt template of GenRM-Pointwise 图像高度约 2.5cm，宽度约 4cm，文字密集且字号约 6pt，无法清晰阅读"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，仅包含一个小型文本框，占面板高度约 30%\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'Logits as soft Q-function' 使用蓝色粗体，字号约 18pt，比其他面板标题（16pt）大 12%，且无编号，视觉上突出但非内容核心\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method\",\n        \"region\": \"右侧\",\n        \"measurable\": \"Prompt template of GenRM-Pointwise 图像高度约 2.5cm，宽度约 4cm，文字密集且字号约 6pt，无法清晰阅读\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Method 面板右侧的 Prompt template of GenRM-Pointwise 图像高度约 2.5cm，宽度约 4cm，文字密集且字号约 6pt，无法清晰阅读\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024412_LLMS'_INTERNAL_STATES_RETAIN_T_a64e1943af91",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Key Findings 面板底部的两个图表（a）和（b）中，坐标轴标签和图例文字过小（约8pt），在标准观看距离下无法清晰阅读，严重影响信息传达。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation / Background\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，仅含4个带编号的要点，文本行间距过大，占面板高度约60%但内容稀疏\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"顶部\",\n        \"measurable\": \"面板标题下方的蓝色描述文字（'Propose a generalized INSIDE framework...'）字号约14pt，比下方要点文字（约12pt）大，但无加粗或颜色对比，视觉层级不清晰\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Key Findings\",\n        \"region\": \"底部\",\n        \"measurable\": \"两个图表（a）和（b）总高度约4.5cm，图中坐标轴标签和图例文字字号约8pt，无法清晰辨认，尤其在远距离观看时\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion / Takeaways\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板左侧与相邻的 Key Findings 面板顶部对齐，但右侧边缘与右边界有 ~1.5cm 空白，且面板高度比左侧两个面板低约1cm，导致网格结构错位\"\n      }\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Key Findings 面板底部的两个图表（a）和（b）中，坐标轴标签和图例文字过小（约8pt），在标准观看距离下无法清晰阅读，严重影响信息传达。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024809_One_SPACE_to_Rule_Them_All_Joi_b087d09deca9",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results面板底部的6个柱状图每个宽度约2cm、高度约3cm，字体约6pt，x轴标签如'Fact.'、'Faith.'无法清晰辨认，内容不可读"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"图占面板高度约 40%，上方文本区域高度约 60%，但文本仅占上方区域约 30%，下方留白约 30%\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion 面板\",\n        \"region\": \"整块\",\n        \"measurable\": \"5个要点使用不同颜色圆圈（橙、紫、红），视觉上分散注意力，且与Method/Experiments等面板的统一蓝色圆圈不一致，导致视觉层级混乱\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"6个柱状图中每个图宽约2cm，高度约3cm，字体大小约6pt，无法清晰辨认x轴标签（如'Fact.'、'Faith.'）\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Results面板底部的6个柱状图每个宽度约2cm、高度约3cm，字体约6pt，x轴标签如'Fact.'、'Faith.'无法清晰辨认，内容不可读\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024834_Revisiting_Hallucination_Detec_ca5d974cf3fd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "hierarchy_emphasis_error",
+    "secondary_issues": [
+      "space_imbalance"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Method 面板中，标题与下方三个步骤框的字体大小完全一致，缺乏视觉层级，导致读者无法区分主次信息。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"图占面板高度约 45%，上方文本区域仅占 30%，下方留白约 25% 高度\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method 面板\",\n        \"region\": \"整块\",\n        \"measurable\": \"顶部蓝色标题文字与下方三个圆角矩形框的字号相同，且三个框内文字与标题字号一致，无视觉层级区分\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"hierarchy_emphasis_error\",\n  \"secondary_issues\": [\"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Method 面板中，标题与下方三个步骤框的字体大小完全一致，缺乏视觉层级，导致读者无法区分主次信息。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024836_Know_Your_Limits_A_Survey_of_A_345fd4c78f2e",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Key Findings面板底部的表格内容因字体过小（约6pt）而无法清晰阅读，违反了学术海报可读性基本要求。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Problem\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Overview\",\n        \"region\": \"整块\",\n        \"measurable\": \"5个彩色圆点编号（1-5）尺寸约1.2cm直径，显著大于其他文本元素，视觉上抢夺焦点\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Key Findings\",\n        \"region\": \"底部\",\n        \"measurable\": \"嵌入表格宽度约8cm，高度约3cm，字体大小约6pt，内容无法清晰辨认\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧表格区域与左侧文本区域在垂直方向上未对齐，存在约0.8cm的基线错位\"\n      }\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"structure_alignment_error\"],\n  \"guard_violations\": [\"text_overload\"],\n  \"evidence\": {\n    \"primary\": \"Key Findings面板底部的表格内容因字体过小（约6pt）而无法清晰阅读，违反了学术海报可读性基本要求。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_025032_From_Efficiency_to_Adaptivity__3483ab1db1f8",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Method 面板右侧的分类图中，文字过小（约 2mm 高），无法清晰阅读，导致关键信息不可读。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method\",\n        \"region\": \"右侧\",\n        \"measurable\": \"图占面板高约 60%，左侧文本区域仅占面板高约 40%，且文本仅两行，导致右侧视觉重量远大于左侧\"\n      }\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method\",\n        \"region\": \"右侧\",\n        \"measurable\": \"图中文字字号过小，无法清晰辨认，如 'RL Methods' 下方的文献列表，字体高度约 2mm，远低于可读阈值\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整块\",\n        \"region\": \"底部\",\n        \"measurable\": \"底部横幅高度约 1.5cm，但未对齐所有面板底部边缘，导致面板 4、5、6 底部与横幅之间存在不等距空白，最大间隙约 0.8cm\"\n      }\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Method 面板右侧的分类图中，文字过小（约 2mm 高），无法清晰阅读，导致关键信息不可读。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_025105_Crossing_the_Reward_Bridge_Exp_3931671c5534",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧三列面板（Experiments, Results, Conclusion）与左侧两列面板（Motivation, Problem）在水平方向上未对齐，右侧面板整体右移约 2cm，导致网格结构断裂"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"整块\",\n        \"measurable\": \"紫色圆形数字 6 直径约 1.5cm，显著大于其他面板的数字（如 Motivation 中红色数字 1 直径约 1.0cm），视觉上过度强调\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"中部\",\n        \"measurable\": \"表格内容字体大小约 6pt，无法清晰辨认列标题和数值，需放大才能阅读\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧三列面板（Experiments, Results, Conclusion）与左侧两列面板（Motivation, Problem）在水平方向上未对齐，右侧面板整体右移约 2cm，导致网格结构断裂\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧三列面板（Experiments, Results, Conclusion）与左侧两列面板（Motivation, Problem）在水平方向上未对齐，右侧面板整体右移约 2cm，导致网格结构断裂\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_025220_Is_Chain-of-Thought_Reasoning__0a77c3c5f24d",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧两列面板（Results 和 Conclusion）与左侧列（Motivation 和 Method）在水平方向上存在 ~1.5cm 的对齐偏移，破坏了整体网格结构。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"顶部\",\n        \"measurable\": \"紫色圆形编号 6 直径约 1.2cm，显著大于其他面板编号（如 Motivation 中红色编号 1 直径约 0.8cm），视觉上过度突出\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整块海报\",\n        \"region\": \"右侧列\",\n        \"measurable\": \"右侧两列面板（Results 和 Conclusion）的右边缘与中间列（Experiments 和 Key Findings）右边缘对齐，但与左侧列（Motivation 和 Method）右边缘存在 ~1.5cm 水平偏移，导致网格结构错位\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧两列面板（Results 和 Conclusion）与左侧列（Motivation 和 Method）在水平方向上存在 ~1.5cm 的对齐偏移，破坏了整体网格结构。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_025510_TAKE_A_STEP_BACK_EVOKING_REASO_efd7e7bea9bb",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧两列面板（Experiments / Results 和 Conclusion / Takeaways）的右边缘与中间列面板（Method / Framework 和 Key Findings）的右边缘未对齐，存在 ~0.5cm 水平偏移，破坏了整体网格结构。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation / Background\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion / Takeaways\",\n        \"region\": \"顶部\",\n        \"measurable\": \"紫色圆形编号 6 直径约 1.2cm，显著大于其他面板编号（如 1、2、3、4、5 的直径约 0.8cm），视觉上过度突出\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"中部\",\n        \"measurable\": \"插图宽度约 3cm，高度约 1.5cm，内容为模糊的多行文本与框图，无法辨识细节\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整块\",\n        \"region\": \"右侧列\",\n        \"measurable\": \"右侧两列面板（Experiments / Results 和 Conclusion / Takeaways）的右边缘与中间列面板（Method / Framework 和 Key Findings）的右边缘未对齐，存在 ~0.5cm 水平偏移\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧两列面板（Experiments / Results 和 Conclusion / Takeaways）的右边缘与中间列面板（Method / Framework 和 Key Findings）的右边缘未对齐，存在 ~0.5cm 水平偏移，破坏了整体网格结构。\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_025515_MEMTRACK_Evaluating_Long-Term__b8f5d698d757",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Experiments 面板右侧的示例表格（宽约 3cm，高约 4cm）字体过小（约 6pt），无法清晰阅读其内容，构成 asset_too_small 失败。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 宽的空白区域，仅包含一个小型示例表格，占面板高度约 30%，左侧文本区域占面板高度约 70%\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"整块\",\n        \"measurable\": \"标题 'Conclusion' 使用与其余面板相同大小的字体，且无视觉突出；列表项颜色与 Motivation/Problem 面板的列表项颜色一致，无层级区分\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"右侧\",\n        \"measurable\": \"示例表格（包含事件和问题-答案对）宽度约 3cm，高度约 4cm，字体大小约 6pt，无法清晰阅读内容\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Experiments 面板右侧的示例表格（宽约 3cm，高约 4cm）字体过小（约 6pt），无法清晰阅读其内容，构成 asset_too_small 失败。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_025546_Constitutional_AI_Harmlessness_ffa46538873c",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Key Findings 面板底部的图表因尺寸过小（宽10cm高5cm）导致图中曲线和标签字号仅约6pt，内容无法清晰辨认"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"两个图表并排，每个图表宽约 12cm，占据面板底部约 40% 高度，上方文本区域仅占面板高约 30%，导致底部视觉重量过重\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion 面板\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'Constitutional AI is a promising approach...' 使用紫色粗体，字号约 18pt，而下方 5 个要点使用标准黑色字体 12pt，标题视觉权重远超内容，导致焦点错位\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Key Findings 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"图表 'Combined HHH Evals...' 宽约 10cm，高约 5cm，图中曲线和标签字号约 6pt，无法清晰辨认，内容不可读\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Key Findings 面板底部的图表因尺寸过小（宽10cm高5cm）导致图中曲线和标签字号仅约6pt，内容无法清晰辨认\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_025852_ESSAYBENCH_Evaluating_Large_La_16f4e934923a",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Method 面板中的流程图文字标签（如 'Data Curation'）字号过小（约 8pt），在 12cm 宽度下无法清晰阅读，构成 asset_too_small"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'ESSAYBENCH advances the evaluation...' 使用紫色粗体，字号约 24pt，远大于正文 14pt，且与内容形成视觉焦点冲突\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method\",\n        \"region\": \"中部\",\n        \"measurable\": \"流程图宽度约 12cm，高度约 5cm，其中文字标签（如 'Data Curation', 'Prompt Example'）字号约 8pt，无法清晰辨认\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板底部表格与上方文本块基线错位约 0.8cm，且表格右边缘与面板右边界间距不均（左 0.5cm，右 1.2cm）\"\n      }\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"structure_alignment_error\"],\n  \"guard_violations\": [\"text_overload\", \"asset_mismatch\"],\n  \"evidence\": {\n    \"primary\": \"Method 面板中的流程图文字标签（如 'Data Curation'）字号过小（约 8pt），在 12cm 宽度下无法清晰阅读，构成 asset_too_small\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_025904_Multi-Agent-as-Judge_Aligning__9ece80d6b03f",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Conclusion / Takeaways 面板右边缘与右侧空白区域间距约 8cm，未填满网格，破坏整体网格对齐"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation / Background\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"中部\",\n        \"measurable\": \"图占面板高约 15%，内容像素模糊，无法辨识细节\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion / Takeaways\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板左边缘与相邻面板对齐，但右边缘与右侧空白区域间距约 8cm，未填满网格\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Conclusion / Takeaways 面板右边缘与右侧空白区域间距约 8cm，未填满网格，破坏整体网格对齐\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_030028_Automated_Evaluation_of_Person_b3a1b1bcaa11",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results 面板底部的表格占面板高度约 45%，但上方文本区域仅使用了约 30% 的空间，导致下方留白过多，造成面板内空间分配不均。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"表格占面板高度约 45%，上方文本区域高度约 55%，但文本仅占上方区域约 30%，下方留白约 25%\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Results 面板底部的表格占面板高度约 45%，但上方文本区域仅使用了约 30% 的空间，导致下方留白过多，造成面板内空间分配不均。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_030306_Agent-as-a-Judge_Evaluate_Agen_1dee0b26a38b",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results面板底部的图表中，子图(1)和(2)的标签文字因字号过小（约2mm高）而无法清晰阅读，影响信息传达。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，仅含3个编号列表项，文本密度远低于左侧\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题文字 'Agent-as-a-Judge provides rich and reliable reward signals...' 使用紫色粗体，字号约18pt，而正文列表项字号约14pt，视觉层级混乱，焦点被标题文字而非内容吸引\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"底部\",\n        \"measurable\": \"图中包含4个子图，其中子图(1)和(2)的字体高度约2mm，无法清晰辨认标签文字，如'Number of Words in User Queries'等\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false,\n      \"grounding\": null\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Results面板底部的图表中，子图(1)和(2)的标签文字因字号过小（约2mm高）而无法清晰阅读，影响信息传达。\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_030815_HELLOBENCH_EVALUATING_LONG_TEX_078a8e42438f",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "HelloEval面板底部的流程图宽度约8cm，高度约4cm，图内文字字号约8pt，无法清晰辨认节点标签，导致关键信息不可读"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板内5个要点间距均匀，但每个要点下方留白约1.5cm，导致整体空间利用率不足，右侧与底部有~2cm空白区域\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"标题区域\",\n        \"measurable\": \"标题文字颜色为紫色（#8B008B），与其余面板蓝色标题（#003399）形成强烈视觉对比，且字号与其余标题一致，但颜色突兀，吸引注意力偏离内容\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"HelloEval\",\n        \"region\": \"底部\",\n        \"measurable\": \"流程图宽度约8cm，高度约4cm，图内文字字号约8pt，无法清晰辨认节点标签（如'Preparation Stage'、'Linear Regression'等）\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"右侧\",\n        \"measurable\": \"面板右侧的环形图与左侧文字块未对齐，图的左边缘与文字块右边缘间距约1.2cm，而其他面板图文对齐间距约0.5cm，形成网格级错位\"\n      }\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"text_overload\"],\n  \"evidence\": {\n    \"primary\": \"HelloEval面板底部的流程图宽度约8cm，高度约4cm，图内文字字号约8pt，无法清晰辨认节点标签，导致关键信息不可读\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_031113_DataGovBench_Benchmarking_LLM__0848906204dd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Motivation / Background 面板右侧存在 ~4cm 宽的空白矩形区域，未填充任何内容，导致面板内部空间分配不均。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation / Background\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Motivation / Background 面板右侧存在 ~4cm 宽的空白矩形区域，未填充任何内容，导致面板内部空间分配不均。\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_031231_Teaching_Language_Models_to_Cr_1bb5aaf1ca62",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results面板底部的图表高度仅约4cm，图中曲线标签和坐标轴文字字号过小，无法清晰阅读，属于资产过小问题"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"整块\",\n        \"measurable\": \"5个带编号的要点，每个要点间垂直间距约1.2cm，导致面板下半部分有~4cm空白区域\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Key Findings\",\n        \"region\": \"顶部\",\n        \"measurable\": \"紫色标题文字字号约24pt，而正文要点字号约18pt，但标题与正文基线对齐，无视觉层级错位；然而，面板1-6的标题颜色和编号颜色一致，无视觉区分，导致所有面板视觉权重相同，无明确焦点\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"底部\",\n        \"measurable\": \"图表宽度约10cm，高度约4cm，图中曲线和标签字号约8pt，无法清晰辨认\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Results面板底部的图表高度仅约4cm，图中曲线标签和坐标轴文字字号过小，无法清晰阅读，属于资产过小问题\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_031542_LeanRAG_Knowledge-Graph-Based__24e848eba9fe",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "顶部三个面板高度不一致，Method 面板比左右两侧低约 1.5cm，破坏了整体网格对齐"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"表格占面板高度约 50%，上方文本区域仅占 30%，下方留白约 20% 高度\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion 面板\",\n        \"region\": \"整块\",\n        \"measurable\": \"五个要点使用相同大小的彩色圆圈编号，无视觉层级区分，与标题 'State-of-the-Art Performance' 的强调程度不匹配\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"表格中字体大小约 8pt，无法清晰辨认数值（如 8.90±0.01），需放大才能阅读\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"顶部\",\n        \"measurable\": \"三个顶部面板（Motivation, Method, Experiments）高度不一致，Method 面板比左右两侧低约 1.5cm，导致网格结构错位\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"顶部三个面板高度不一致，Method 面板比左右两侧低约 1.5cm，破坏了整体网格对齐\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_031655_Query-Based_Router_by_Dual_Con_ca7853cdbd31",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results面板底部的雷达图直径约4cm，其图例和数值标签字号过小，无法清晰辨认，导致关键可视化资产无法有效传达信息。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板内4个要点间距均匀，但右侧约5cm空白区域未利用，与Method面板内容密度形成对比\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"顶部\",\n        \"measurable\": \"紫色标题'Efficient and effective router'字号约24pt，与其余面板标题一致，但其下方要点列表无视觉层级区分，且面板5的紫色编号圆圈（直径约0.8cm）比其他面板编号圆圈（直径约0.6cm）更大，造成视觉干扰\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"底部\",\n        \"measurable\": \"雷达图直径约4cm，图例文字高度约0.2cm，无法清晰辨认，且图中数值标签（如35, 40）字号过小，无法阅读\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Results面板底部的雷达图直径约4cm，其图例和数值标签字号过小，无法清晰辨认，导致关键可视化资产无法有效传达信息。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_031955_Multimodal_Retrieval-Reflectio_90b3ba39356e",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Method / Framework 面板中部的框架图高度约 4cm，图内文字和箭头极小，无法清晰辨认，最小字体约 6pt，远低于可读标准"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments / Results\",\n        \"region\": \"底部\",\n        \"measurable\": \"表格占面板高度约 50%，上方文本区域仅占 30%，下方留白约 20% 高度\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'Method / Framework' 字体大小与其余面板一致，但其下方的两个带编号的要点（1, 2）使用了比正文大 20% 的字体，且颜色为深蓝，与正文形成强烈对比，视觉上过度强调\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"中部\",\n        \"measurable\": \"框架图宽度约 12cm，高度约 4cm，图内文字和箭头极小，无法清晰辨认，最小字体约 6pt，远低于可读标准\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Method / Framework 面板中部的框架图高度约 4cm，图内文字和箭头极小，无法清晰辨认，最小字体约 6pt，远低于可读标准\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_032530_Agentic_Search-Enhanced_Large__2fa60d8ceb94",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Method / Framework 面板中的三图对比图（a, b, c）因尺寸过小（每个子图高约 2.5cm），导致内部文字标签（如 'Start thinking', 'Search for helpful info'）无法清晰阅读。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments / Results\",\n        \"region\": \"底部\",\n        \"measurable\": \"表格占面板高度约 50%，上方文本区域仅占 20%，下方留白约 30%\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'Integrating agentic RAG and Reason-in-Documents' 使用蓝色粗体，字号约 24pt，而下方编号点文字仅 14pt，视觉层级不匹配\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"中部\",\n        \"measurable\": \"三图对比图整体高度约 8cm，其中每个子图（a, b, c）高度仅约 2.5cm，文字标签字号约 8pt，无法清晰阅读\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Method / Framework 面板中的三图对比图（a, b, c）因尺寸过小（每个子图高约 2.5cm），导致内部文字标签（如 'Start thinking', 'Search for helpful info'）无法清晰阅读。\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033143_Reachability_of_Independent_Se_5e8f4e632965",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Experiments 面板底部的 Table 1 字体过小（约 6pt），无法清晰阅读表格内引用编号如 [24]、[37]，导致内容不可读。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题文字颜色为紫色，与其余面板标题蓝色不一致，且字号与正文无明显区分，导致视觉焦点不明确\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"底部\",\n        \"measurable\": \"Table 1 占面板高度约 35%，字体大小约 6pt，无法清晰阅读表格内引用编号如 [24]、[37]\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板左侧与右侧内容区域宽度不一致，左侧文本区宽约 12cm，右侧表格区宽约 8cm，导致面板内部结构不对称\"\n      }\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Experiments 面板底部的 Table 1 字体过小（约 6pt），无法清晰阅读表格内引用编号如 [24]、[37]，导致内容不可读。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033459_LongRAG_Enhancing_Retrieval-Au_20eda233c56a",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Experiments / Results 面板底部的图表由四个子图组成，每个子图高度仅约 2cm，导致柱状图和折线图的坐标轴标签与数据点模糊不清，无法有效传达信息。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation / Background\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'LongRAG framework uses long retrieval units (4K tokens) by grouping related documents o...' 使用蓝色粗体字，字号约 18pt，远大于正文 12pt，且位于面板顶部，视觉上过度强调\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments / Results\",\n        \"region\": \"底部\",\n        \"measurable\": \"包含四个子图的图表，整体高度约 8cm，但每个子图高度仅 ~2cm，导致柱状图和折线图的标签与刻度模糊，无法清晰辨认\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false,\n      \"grounding\": null\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Experiments / Results 面板底部的图表由四个子图组成，每个子图高度仅约 2cm，导致柱状图和折线图的坐标轴标签与数据点模糊不清，无法有效传达信息。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033644_AQA_Adaptive_Question_Answerin_7686221c4c02",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results 面板中部的6个子图网格，每个子图尺寸过小（约2.5cm×2cm），导致坐标轴标签和图例文字模糊，无法清晰阅读内容。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'AQA framed as a contextual multi-armed bandit (CMAB) problem' 使用蓝色粗体，字号约 18pt，比正文大 20%，且位于面板顶部中央，视觉上过度突出\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"中部\",\n        \"measurable\": \"6个子图组成的网格图，每个子图宽约 2.5cm，高约 2cm，图中坐标轴标签和图例文字模糊，无法清晰辨认\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false,\n      \"grounding\": null\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Results 面板中部的6个子图网格，每个子图尺寸过小（约2.5cm×2cm），导致坐标轴标签和图例文字模糊，无法清晰阅读内容。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033812_Linear_Graph_Retrieval_Augment_26e5b004d601",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Key Findings 面板底部的案例研究表格字体过小（约 6pt），高度仅 4cm，内容无法清晰阅读，违反了学术海报可读性原则。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"表格占面板高度约 60%，上方文本区域仅占 40%，且文本与表格间有 ~1.5cm 空白，导致上下空间分配不均\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Key Findings 面板\",\n        \"region\": \"整块\",\n        \"measurable\": \"标题 'Key Findings' 使用紫色字体，字号与正文相似（约 14pt），而其他面板标题为白色 18pt，导致视觉层级模糊，无法突出重点\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Key Findings 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"案例研究表格高度约 4cm，字体大小约 6pt，无法清晰阅读内容，尤其在远距离展示时\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Key Findings 面板底部的案例研究表格字体过小（约 6pt），高度仅 4cm，内容无法清晰阅读，违反了学术海报可读性原则。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_033929_Graph-Guided_Concept_Selection_ec885703e8c7",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Experiments / Results 面板底部的表格字体过小（约6pt），列宽不足0.8cm，导致数值模糊无法清晰阅读，违反了学术海报可读性基本要求。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments / Results\",\n        \"region\": \"底部\",\n        \"measurable\": \"表格占面板高度约 45%，上方文本区域高度约 55%，但文本仅含3个要点，下方表格上方留白约 2cm，导致上下空间分配不均\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板内蓝色标题文字与下方图示的字号相近（约14pt），且图示下方文字描述被压缩至单行，导致图示与文字无视觉层级区分，读者无法优先关注核心框架图\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments / Results\",\n        \"region\": \"底部\",\n        \"measurable\": \"表格中字体大小约 6pt，列宽极窄，如 'USD' 列宽度约 0.8cm，导致内容无法清晰阅读，尤其在 '2wikimultihopqa' 列中数值模糊\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Experiments / Results 面板底部的表格字体过小（约6pt），列宽不足0.8cm，导致数值模糊无法清晰阅读，违反了学术海报可读性基本要求。\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_034053_Youtu-GraphRAG_Vertically_Unif_ab33db82d52d",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Experiments 面板右侧存在 ~5cm 宽的空白区域，未与相邻面板对齐，破坏了整体网格结构"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板右侧 ~5cm 空白区域，未与相邻面板对齐，导致网格结构断裂\"\n      }\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"顶部\",\n        \"measurable\": \"紫色圆形编号 6 直径 ~1.5cm，比其他面板编号大 30%，视觉上过度突出\"\n      }\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"中部\",\n        \"measurable\": \"嵌入的查询分辨率策略图宽 ~2cm，高度 ~1cm，无法辨识内部节点和标签\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"space_imbalance\", \"structure_alignment_error\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"evidence\": {\n    \"primary\": \"Experiments 面板右侧存在 ~5cm 宽的空白区域，未与相邻面板对齐，破坏了整体网格结构\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_034235_Ask_in_Any_Modality_A_Comprehe_7cf7a1708c41",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Datasets 面板中的表格字体过小（约 6pt），无法清晰阅读内容，违反了可读性原则。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Datasets\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~5cm 空白矩形区域，图占面板高约 30%，下方文本块仅占面板高约 20%\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"整块\",\n        \"measurable\": \"标题 'Enhancing LLMs with multimodal RAG' 使用紫色粗体，字号约 18pt，而正文列表项字号约 12pt，标题与正文基线错位 0.3cm\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Datasets\",\n        \"region\": \"中部\",\n        \"measurable\": \"表格内容字体约 6pt，无法清晰阅读，表格高度占面板高约 30%\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Taxonomy\",\n        \"region\": \"顶部\",\n        \"measurable\": \"面板标题 'Taxonomy' 与左侧 'Overview' 面板标题基线错位 0.4cm，且面板左边缘与左侧面板未对齐，存在 ~0.5cm 水平偏移\"\n      }\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Datasets 面板中的表格字体过小（约 6pt），无法清晰阅读内容，违反了可读性原则。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_minimal"
+  },
+  {
+    "run_id": "20260609_034408_Agentic_Context_Engineering_Ev_2ff43486cc66",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Experiments面板底部的Table 1字体过小（约8pt），导致表格内数值（如64.3±1.7）难以辨认，影响信息可读性"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"底部\",\n        \"measurable\": \"底部 ~4cm 空白区域，仅含5个编号列表项，无图表或密集内容，与相邻面板内容密度形成对比\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题文字 'Comprehensive, evolving contexts enable scalable, efficient, and self-improving LLM sys...' 使用紫色粗体，字号约18pt，与正文12pt形成对比，但与Method面板中蓝色标题字号一致，未形成视觉层级差异\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"底部\",\n        \"measurable\": \"Table 1 占面板高度约35%，字体大小约8pt，无法清晰辨认表格内小数点后数字（如64.3±1.7）\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Experiments面板底部的Table 1字体过小（约8pt），导致表格内数值（如64.3±1.7）难以辨认，影响信息可读性\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_034502_Human-in-the-loop_or_AI-in-the_a187d2011cf3",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧三列面板（Experiments, Results, Conclusion）右侧留有 ~5cm 空白，未填满海报宽度，导致网格结构不完整"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~3cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"整块\",\n        \"measurable\": \"紫色圆形编号 6 直径约 1.2cm，显著大于其他面板的编号（直径约 0.8cm），视觉上过度强调\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧三列面板（Experiments, Results, Conclusion）右侧留有 ~5cm 空白，未填满海报宽度，导致网格结构不完整\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧三列面板（Experiments, Results, Conclusion）右侧留有 ~5cm 空白，未填满海报宽度，导致网格结构不完整\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_034637_Building_Production-Ready_AI_A_fcec57454c05",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results 面板底部的柱状图 x轴标签字体过小（约 8pt），无法清晰阅读，如 'RAG (k=2, 0.192)'"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"底部\",\n        \"measurable\": \"表格占面板高度约 45%，上方文本区域仅占 30%，导致底部拥挤、顶部空旷\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"顶部\",\n        \"measurable\": \"绿色加粗文本 'Mem0 achieves 26% relative improvements...' 占据面板顶部 20% 高度，字体大小约 24pt，远大于下方列表项（16pt），形成过度强调\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"底部\",\n        \"measurable\": \"柱状图高度约 5cm，x轴标签字体约 8pt，无法清晰辨认，如 'RAG (k=2, 0.192)'\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Results 面板底部的柱状图 x轴标签字体过小（约 8pt），无法清晰阅读，如 'RAG (k=2, 0.192)'\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_034844_EvoAgentX_An_Automated_Framewo_3113cc1e4e25",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧两列面板（Experiments 和 Conclusion）与左侧列在垂直方向上未对齐，右侧列整体下移约 1.5cm，破坏了海报的网格结构"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion 面板\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板内文本列表项间距均匀，但右侧 ~10cm 空白区域未被利用，导致视觉重量明显偏左\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation 面板\",\n        \"region\": \"顶部\",\n        \"measurable\": \"红色圆形数字 '1' 直径约 1.2cm，比标题 'Motivation' 字体大 50%，且与内容文本形成视觉干扰，抢夺焦点\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method 面板\",\n        \"region\": \"中部\",\n        \"measurable\": \"框架图宽度约 4cm，高度约 1.5cm，图内文字和模块标签无法辨认，无法读取其内容\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"右侧列\",\n        \"measurable\": \"右侧两列面板（Experiments 和 Conclusion）与左侧两列面板在垂直方向上未对齐，右侧列整体下移约 1.5cm，导致网格结构断裂\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧两列面板（Experiments 和 Conclusion）与左侧列在垂直方向上未对齐，右侧列整体下移约 1.5cm，破坏了海报的网格结构\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_034941_Latent_Collaboration_in_Multi-_425eabae1cf5",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Motivation 面板右侧存在 ~4cm 宽的空白矩形区域，内容未填满，导致面板内部空间分配不均"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板顶部绿色横条与相邻面板（Experiments）的绿色横条在垂直方向错位约 0.3cm\"\n      }\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"顶部\",\n        \"measurable\": \"紫色圆形编号 6 直径约 1.2cm，显著大于其他面板编号（直径约 0.8cm），视觉上过度突出\"\n      }\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"中部\",\n        \"measurable\": \"表格内容字体大小约 6pt，无法清晰辨认列标题和数值\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"space_imbalance\", \"structure_alignment_error\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"evidence\": {\n    \"primary\": \"Motivation 面板右侧存在 ~4cm 宽的空白矩形区域，内容未填满，导致面板内部空间分配不均\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035207_Tree_Search_for_LLM_Agent_Rein_01c4c43c1418",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧三列面板与左侧两列在水平方向未对齐，右侧面板整体右移约1.5cm，破坏了网格结构的对齐性"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"图占面板高约 30%，下方留有 ~4cm 空白区域\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion 面板\",\n        \"region\": \"顶部\",\n        \"measurable\": \"紫色圆形数字 6 直径 ~1.5cm，比其他面板标题数字大 50%，视觉上过度突出\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method 面板\",\n        \"region\": \"中部\",\n        \"measurable\": \"训练流程图宽 ~8cm，高度 ~2cm，图内文字和节点太小，无法辨认细节\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧三列面板（Experiments, Results, Conclusion）与左侧两列（Motivation, Problem）在水平方向未对齐，右侧面板整体右移 ~1.5cm，形成网格错位\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧三列面板与左侧两列在水平方向未对齐，右侧面板整体右移约1.5cm，破坏了网格结构的对齐性\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035303_INFORMATION_GAIN-BASED_POLICY__91fc4ebf7312",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧两列面板（Results, Conclusion）与左侧列在垂直方向上未对齐，右侧列整体右移约 2cm，破坏了网格结构"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板内四个要点使用不同颜色圆点（蓝、绿、橙、紫），视觉层级混乱，无主次之分\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Key Findings\",\n        \"region\": \"中部\",\n        \"measurable\": \"案例研究图宽约 3cm，高度不足 1.5cm，无法辨识对话内容细节\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"右侧列\",\n        \"measurable\": \"右侧两列面板（Results, Conclusion）与左侧列（Motivation, Method, Key Findings）在垂直方向上未对齐，右侧列整体右移约 2cm\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧两列面板（Results, Conclusion）与左侧列在垂直方向上未对齐，右侧列整体右移约 2cm，破坏了网格结构\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035514_Adaptive_Multi-Agent_Reasoning_a5e187809673",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧三列面板与左侧两列面板在网格对齐上不一致，右侧留白约15cm，左侧无对应空白，破坏整体网格结构"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method\",\n        \"region\": \"右侧\",\n        \"measurable\": \"图占面板高约 20%，下方文本块高度仅占面板高约 30%，右侧 ~4cm 空白区域\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"整块\",\n        \"measurable\": \"紫色圆形编号 6 直径约 1.2cm，远大于其他面板编号（直径约 0.8cm），视觉上过度突出\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"中部\",\n        \"measurable\": \"条形图宽度约 3cm，高度约 1.5cm，图内标签文字无法辨认，字体小于 6pt\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧三列面板（Experiments, Results, Conclusion）右侧边缘与左侧两列面板（Motivation, Problem）对齐，但右侧留白宽度约 15cm，而左侧无此空白，导致网格结构不对称\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧三列面板与左侧两列面板在网格对齐上不一致，右侧留白约15cm，左侧无对应空白，破坏整体网格结构\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035626_BELLE_A_Bi-Level_Multi-Agent_R_48c95073681f",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error",
+      "structure_alignment_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Overview面板内仅3个文本条目，占面板高度约30%，其余70%为空白区域，造成面板内部空间严重不均"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Overview\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板内仅包含3个文本条目，占面板高度约30%，其余70%为空白区域\"\n      }\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Overview\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题'Overview'使用与正文相同字号（约14pt），且无加粗或颜色区分，与Motivation等面板标题视觉权重一致\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"顶部\",\n        \"measurable\": \"面板标题'Motivation'与相邻'Experiments'面板标题基线错位约0.3cm，导致网格对齐断裂\"\n      }\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"中部\",\n        \"measurable\": \"表格图宽约4cm，高约1.5cm，内容文字小于8pt，无法清晰辨认列标题\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"structure_alignment_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"structure_alignment_error\", \"asset_too_small\"],\n  \"evidence\": {\n    \"primary\": \"Overview面板内仅3个文本条目，占面板高度约30%，其余70%为空白区域，造成面板内部空间严重不均\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035850_Tongyi_DeepResearch_An_Agentic_2cba933bebbd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Motivation 面板右侧存在 ~4cm 宽的空白矩形区域，未被内容填充，导致面板内部空间分配不均。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false,\n      \"grounding\": null\n    }\n  ],\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Motivation 面板右侧存在 ~4cm 宽的空白矩形区域，未被内容填充，导致面板内部空间分配不均。\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_040432_Difficulty-Aware_Agentic_Orche_a37cd9381ae1",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧列的 Overview 面板与左侧三列面板宽度不一致，右侧留白约 4cm，破坏了整体网格对齐"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"图占面板高约 30%，下方留有 ~2cm 空白区域\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Overview 面板\",\n        \"region\": \"顶部\",\n        \"measurable\": \"圆形数字 7 直径 ~1.5cm，比其他面板标题数字大 50%，且颜色深蓝突出\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"中部\",\n        \"measurable\": \"表格图宽 ~4cm，高度 ~1.2cm，内容像素化无法辨认列名\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"右侧列\",\n        \"measurable\": \"Overview 面板右侧留白 ~4cm，而左侧三列面板宽度均 ~18cm，形成明显网格错位\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧列的 Overview 面板与左侧三列面板宽度不一致，右侧留白约 4cm，破坏了整体网格对齐\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_040805_Search_Self-play_Pushing_the_F_73c40da4d2fd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧两列面板宽度不一致，右列面板宽度比左列窄约 2cm，导致网格结构错位"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~10cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"右侧列\",\n        \"measurable\": \"右侧两列面板（Results 和 Conclusion）宽度不一致，右列面板宽度比左列窄约 2cm，导致网格结构错位\"\n      }\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'Search Self-play: Pushing the Frontier...' 字体大小约 48pt，而面板标题如 'Motivation' 仅 24pt，但顶部标题与面板标题之间无视觉层级过渡，且面板标题颜色与正文颜色相近（均为深蓝），导致视觉焦点分散\"\n      }\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"中部\",\n        \"measurable\": \"Results 面板内嵌的 4 个小图（训练动态图）每个约 2cm x 1cm，图内坐标轴标签和曲线细节无法辨认，字体小于 8pt\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"space_imbalance\", \"structure_alignment_error\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"evidence\": {\n    \"primary\": \"右侧两列面板宽度不一致，右列面板宽度比左列窄约 2cm，导致网格结构错位\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_041103_InfiFusion_A_Unified_Framework_91741a511b2b",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Conclusion / Takeaways 面板与 Key Findings 面板顶部基线错位约 0.3cm，且宽度不一致，破坏整体网格对齐"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation / Background\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题文字 'InfFusion enhances ULD with Top-K selection and Logits Standardization.' 使用蓝色粗体，字号约 18pt，而下方正文为 12pt，形成视觉层级错位\"\n      }\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method / Framework\",\n        \"region\": \"中部\",\n        \"measurable\": \"框架图宽约 8cm，高约 4cm，图中组件标签文字（如 'Top-K Selection'）字号约 6pt，无法清晰辨认\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion / Takeaways\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板左侧与相邻 'Key Findings' 面板顶部基线错位约 0.3cm，且面板宽度比左侧窄 1.2cm，导致网格结构不齐\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"text_overload\", \"asset_mismatch\"],\n  \"evidence\": {\n    \"primary\": \"Conclusion / Takeaways 面板与 Key Findings 面板顶部基线错位约 0.3cm，且宽度不一致，破坏整体网格对齐\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_042727_CODE2VIDEO_A_CODE-CENTRIC_PARA_32b909330b0a",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results 面板底部的图中包含多个小图标和文字，最小字体约 8pt，无法清晰辨认内容"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"图占面板高约 30%，上方文本区域高度约 70%，但文本仅占可用空间的 30%，下方留白 ~4cm\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion 面板\",\n        \"region\": \"整块\",\n        \"measurable\": \"标题字体大小与正文一致（约 14pt），无加粗或颜色区分，导致无视觉焦点\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"图中包含多个小图标和文字，最小字体约 8pt，无法清晰辨认内容\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Results 面板底部的图中包含多个小图标和文字，最小字体约 8pt，无法清晰辨认内容\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_042935_A_Survey_of_Large_Language_Mod_5736843ad823",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Research Background 面板右侧存在 ~4cm 空白矩形区域，无内容填充，导致面板内部空间分配不均"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Research Background\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"底部\",\n        \"measurable\": \"底部 ~5cm 空白矩形区域，仅含两行文本，其余为空白\"\n      }\n    },\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Applications\",\n        \"region\": \"底部\",\n        \"measurable\": \"底部 ~4cm 空白矩形区域，图下方仅含一行小字说明，上方图占面板高约 50%\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Applications\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板宽度明显小于左右相邻面板，与网格列宽不一致，左侧与 Overview 面板间距 ~0.5cm，右侧与 Roles in Recommendation 面板间距 ~1.5cm\"\n      }\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Applications\",\n        \"region\": \"底部\",\n        \"measurable\": \"图中文字标签字号约 6pt，无法清晰辨认，图占面板高约 50%，但内容密集且模糊\"\n      }\n    }\n  ],\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Research Background 面板右侧存在 ~4cm 空白矩形区域，无内容填充，导致面板内部空间分配不均\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_043024_BLIP_Bootstrapping_Language-Im_3771d1c601a0",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results 面板中表格与左侧文本在垂直方向未对齐，表格高度占面板60%而文本仅占20%，造成网格结构错位"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，仅含5个带编号的文本点，无其他视觉元素\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'BLIP offers a flexible and effective approach to VLP' 使用紫色粗体，字号约18pt，而正文列表项字号约14pt，形成视觉焦点偏移\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板内表格高度占面板总高约60%，但左侧文字区域仅占20%，导致右侧表格与左侧文本在垂直方向未对齐，形成视觉错位\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Results 面板中表格与左侧文本在垂直方向未对齐，表格高度占面板60%而文本仅占20%，造成网格结构错位\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_043303_Rethinking_Progression_of_Memo_21045ec2feae",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧三列面板与左侧两列面板之间存在约6cm宽的空白区域，导致整体网格结构不对称，破坏了版面的平衡性"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"顶部\",\n        \"measurable\": \"紫色圆形数字 6 直径约 1.2cm，显著大于其他面板的圆形编号（直径约 0.8cm），视觉上过度强调\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false,\n      \"grounding\": null\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"中部\",\n        \"measurable\": \"任务成功率表格宽度约 5cm，高度约 1.5cm，字体大小约 8pt，无法清晰辨认列标题和数值\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整块海报\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧三列面板（Experiments, Results, Conclusion）与左侧两列面板（Motivation, Problem）之间存在 ~6cm 宽的空白区域，导致网格结构不对称\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧三列面板与左侧两列面板之间存在约6cm宽的空白区域，导致整体网格结构不对称，破坏了版面的平衡性\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_044437_Evaluating_LLM_Agent_Personali_91d748283c90",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧三列面板（Experiments, Results, Conclusion）与左侧两列面板（Motivation, Problem）在水平方向上未对齐，右侧面板整体右移 ~1.5cm，导致网格结构断裂"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"图占面板高约 25%，下方 ~4cm 空白区域\"\n      }\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"中部\",\n        \"measurable\": \"嵌入图宽 ~8cm，高 ~2cm，内含多个小图表，无法辨识具体数据点\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧三列面板（Experiments, Results, Conclusion）与左侧两列面板（Motivation, Problem）在水平方向上未对齐，右侧面板整体右移 ~1.5cm，导致网格结构断裂\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧三列面板（Experiments, Results, Conclusion）与左侧两列面板（Motivation, Problem）在水平方向上未对齐，右侧面板整体右移 ~1.5cm，导致网格结构断裂\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_050055_Evaluating_LLM_Agents_as_Lifel_3015deb5f266",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Experiments面板底部的RPC Toolkit流程图高度约4cm，图内文字字号约8pt，无法清晰辨认，属于资产过小问题。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~5cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"整块\",\n        \"measurable\": \"标题与正文使用相同字号（~14pt），无视觉层级区分，且5个要点编号颜色与正文一致，无强调\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"底部\",\n        \"measurable\": \"RPC Toolkit 流程图高度约 4cm，图内文字字号 ~8pt，无法清晰辨认\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Experiments面板底部的RPC Toolkit流程图高度约4cm，图内文字字号约8pt，无法清晰辨认，属于资产过小问题。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_050619_AGENTIC_RETRIEVAL-AUGMENTED_GE_c550595ca0d9",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error",
+      "asset_too_small",
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results 面板右侧存在约 4cm 宽的空白矩形区域，与左侧内容形成明显空间失衡"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion 面板\",\n        \"region\": \"顶部\",\n        \"measurable\": \"紫色圆形编号 4 直径约 1.2cm，显著大于其他面板编号（直径约 0.8cm），视觉上过度突出\"\n      }\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"中部\",\n        \"measurable\": \"Comparative Analysis of RAG Paradigms 图像高度约 1.5cm，宽度约 3cm，内容文字无法辨认\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method 面板\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板顶部蓝色横条高度约 0.3cm，而其他面板顶部横条高度约 0.5cm，基线错位\"\n      }\n    }\n  ],\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\", \"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Results 面板右侧存在约 4cm 宽的空白矩形区域，与左侧内容形成明显空间失衡\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_053045_RAG-ANYTHING_ALL-IN-ONE_RAG_FR_bd5861c75187",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Key Findings 面板底部的多面板图示高度仅约 4cm，图内文字和标签字号过小（约 6pt），无法清晰阅读其内容。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"表格占面板高度约 45%，上方文本区域高度约 55%，但文本仅含两行要点，下方表格上方留白约 2cm\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Key Findings 面板\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'Effective localization and disambiguation in complex layouts' 使用紫色粗体，字号约 18pt，而下方要点文字为 14pt，但标题与要点间无视觉分隔，导致标题视觉权重被削弱\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Key Findings 面板\",\n        \"region\": \"底部\",\n        \"measurable\": \"多面板图示（Multi-panel figure interpretation case）宽度约 12cm，高度约 4cm，图内文字和标签字号约 6pt，无法清晰辨认内容\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Key Findings 面板底部的多面板图示高度仅约 4cm，图内文字和标签字号过小（约 6pt），无法清晰阅读其内容。\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_054045_Retrieval-Augmented_Generation_935b29f80d65",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "text_overload",
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results 面板右侧表格区域文字高度仅约 2mm，无法辨识具体内容，构成资产过小"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~6cm 宽的表格区域，其内容文字过小且密集，与左侧 ~10cm 宽的文本区域形成空间失衡\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧表格区域文字高度约 2mm，行距极小，导致内容无法清晰阅读，构成文本过载\"\n      }\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion 面板\",\n        \"region\": \"整块\",\n        \"measurable\": \"标题 'GraphRAG is a promising direction for LLMs and RAG.' 使用紫色粗体，字号约 24pt，远大于正文 14pt，视觉强调过度，分散对核心结论的注意力\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results 面板\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧表格区域高度约 8cm，但其内文字高度仅约 2mm，无法辨识具体内容，构成资产过小\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"text_overload\", \"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Results 面板右侧表格区域文字高度仅约 2mm，无法辨识具体内容，构成资产过小\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_054836_Reimagining_Research_Papers_As_2a16bc35f9ac",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧三列面板（Results, Case Studies, Conclusion）与左侧两列面板（Motivation, Problem）在水平方向上未对齐，右侧列整体右移约 2cm，导致网格结构断裂"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Method\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"右侧列\",\n        \"measurable\": \"右侧三列面板（Results, Case Studies, Conclusion）与左侧两列面板（Motivation, Problem）在水平方向上未对齐，右侧列整体右移约 2cm，导致网格结构断裂\"\n      }\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整张海报\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题 'Reimagining Research Papers As Interactive and Reliable AI Agents' 字体大小约 48pt，而面板标题（如 'Motivation'）仅 24pt，但面板内编号圆圈（如红色1、蓝色3）直径约 1.5cm，视觉上与标题竞争，分散注意力\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧三列面板（Results, Case Studies, Conclusion）与左侧两列面板（Motivation, Problem）在水平方向上未对齐，右侧列整体右移约 2cm，导致网格结构断裂\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_061840_Virtuous_Machines_Towards_Arti_59e544c90c8c",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧两列面板与左侧列在水平方向上存在 ~1.5cm 的对齐偏移，导致整体网格结构断裂，破坏了版面的结构性对齐。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation / Background\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion / Takeaways\",\n        \"region\": \"顶部\",\n        \"measurable\": \"紫色圆形编号 6 直径约 1.2cm，显著大于其他面板编号（如 1~5 直径约 0.8cm），视觉上过度突出\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"中部\",\n        \"measurable\": \"图示区域宽约 8cm，包含6个子图，每个子图宽约 1.2cm，无法辨识内部细节（如文字标签、线条样式）\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"整块\",\n        \"region\": \"右侧列\",\n        \"measurable\": \"右侧两列面板（Results 和 Conclusion / Takeaways）与左侧两列面板（Motivation / Background 和 Method / Framework）在水平方向上存在 ~1.5cm 的对齐偏移，导致网格结构断裂\"\n      }\n    }\n  ],\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧两列面板与左侧列在水平方向上存在 ~1.5cm 的对齐偏移，导致整体网格结构断裂，破坏了版面的结构性对齐。\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_064924_Align_before_Fuse_Vision_and_L_71aaa19baf2b",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Motivation 面板右侧存在 ~4cm 宽的空白矩形区域，与左侧密集文本形成明显空间失衡"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"整块\",\n        \"measurable\": \"Results 面板左侧与右侧内容高度不一致，左侧文本区高约 12cm，右侧表格区高约 8cm，导致面板内结构错位\"\n      }\n    }\n  ],\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Motivation 面板右侧存在 ~4cm 宽的空白矩形区域，与左侧密集文本形成明显空间失衡\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_065706_GME_Improving_Universal_Multim_cae3c40103dc",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "hierarchy_emphasis_error",
+    "secondary_issues": [
+      "space_imbalance"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Conclusion面板顶部标题使用紫色粗体大字，字号约24pt，远大于正文18pt，视觉上过度强调标题，导致内容要点被弱化，破坏了信息层级"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板内5个带编号的要点之间垂直间距约1.2cm，而底部要点与面板底部边距约2.5cm，导致底部区域明显空旷\"\n      }\n    },\n    {\n      \"issue\": \"text_overload\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"顶部\",\n        \"measurable\": \"标题文字'GME is a promising approach for UMR'使用紫色粗体，字号约24pt，而正文要点字号约18pt，标题视觉权重过强，抢夺内容焦点\"\n      }\n    },\n    {\n      \"issue\": \"asset_mismatch\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": false\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": false\n    }\n  ],\n  \"primary_issue\": \"hierarchy_emphasis_error\",\n  \"secondary_issues\": [\"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Conclusion面板顶部标题使用紫色粗体大字，字号约24pt，远大于正文18pt，视觉上过度强调标题，导致内容要点被弱化，破坏了信息层级\"\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_212513_EduIllustrate_Towards_Scalable_91ebd47f4903",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "asset_too_small",
+    "secondary_issues": [
+      "space_imbalance",
+      "hierarchy_emphasis_error",
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Experiments 面板底部的截图图因缩放过小，其内部文字和界面元素无法辨认，影响信息传达。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"cues\": [\n    {\n      \"issue\": \"space_imbalance\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Motivation\",\n        \"region\": \"右侧\",\n        \"measurable\": \"右侧 ~4cm 空白矩形区域，无内容填充\"\n      }\n    },\n    {\n      \"issue\": \"hierarchy_emphasis_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Results\",\n        \"region\": \"整块\",\n        \"measurable\": \"标题 'Gemini 3.0 Pro Preview led the performance at 87.8%' 使用绿色粗体大字，字号约 24pt，远大于下方正文（约 14pt），且与下方雷达图形成视觉竞争，破坏了内容焦点\"\n      }\n    },\n    {\n      \"issue\": \"asset_too_small\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Experiments\",\n        \"region\": \"底部\",\n        \"measurable\": \"截图图占面板高度约 30%，图内文字和界面元素因缩放过小无法辨认，如左侧列表项和右侧代码区域\"\n      }\n    },\n    {\n      \"issue\": \"structure_alignment_error\",\n      \"present\": true,\n      \"grounding\": {\n        \"panel_id\": \"Conclusion\",\n        \"region\": \"整块\",\n        \"measurable\": \"面板内 5 个要点的编号圆圈（1-5）垂直基线错位，第 3 点与第 4 点的圆圈中心垂直间距约 0.8cm，而第 1-2 点间距约 0.5cm，导致列表对齐不一致\"\n      }\n    }\n  ],\n  \"primary_issue\": \"asset_too_small\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\", \"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Experiments 面板底部的截图图因缩放过小，其内部文字和界面元素无法辨认，影响信息传达。\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_dashboard"
+  }
+]

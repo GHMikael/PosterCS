@@ -1,5 +1,8 @@
 **English** | [简体中文](README.zh-CN.md)
 
+> [!IMPORTANT]
+> The canonical paper workspace is now [`research/`](research/README.md). The remainder of this file documents the original PosterCS generation system. Historical audit iterations are frozen locally under `archive/research-history-2026-10-10/` and are no longer active development inputs.
+
 # PosterCS — Paper-to-Poster Backend + SVFP Audit Protocol
 
 > **Status: v7 — S1 diagnosis complete, P1 layout fixes landed.** A controllable CS-poster generation substrate + the **SVFP Audit Protocol** for systematically evaluating VLM visual critic reliability.

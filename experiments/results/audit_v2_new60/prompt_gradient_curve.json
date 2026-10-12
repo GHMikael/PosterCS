@@ -1,0 +1,46 @@
+[
+  {
+    "variant": "direct",
+    "accuracy": 0.133,
+    "kappa_vlm_gold": 0.06,
+    "vlm_top1_share": 0.7,
+    "vlm_label_entropy": 0.701,
+    "none_recall": 0.0,
+    "fp_rate_text_overload": 0.0,
+    "fp_rate_space_imbalance": 0.724,
+    "verdict": "S1"
+  },
+  {
+    "variant": "narrowed",
+    "accuracy": 0.167,
+    "kappa_vlm_gold": 0.082,
+    "vlm_top1_share": 0.667,
+    "vlm_label_entropy": 0.678,
+    "none_recall": 0.0,
+    "fp_rate_text_overload": 0.033,
+    "fp_rate_space_imbalance": 0.672,
+    "verdict": "S1"
+  },
+  {
+    "variant": "grounded",
+    "accuracy": 0.267,
+    "kappa_vlm_gold": 0.138,
+    "vlm_top1_share": 0.5,
+    "vlm_label_entropy": 0.79,
+    "none_recall": 0.0,
+    "fp_rate_text_overload": 0.0,
+    "fp_rate_space_imbalance": 0.138,
+    "verdict": "S1"
+  },
+  {
+    "variant": "describe_classify",
+    "accuracy": 0.133,
+    "kappa_vlm_gold": 0.078,
+    "vlm_top1_share": 0.867,
+    "vlm_label_entropy": 0.567,
+    "none_recall": 0.0,
+    "fp_rate_text_overload": 0.0,
+    "fp_rate_space_imbalance": 0.862,
+    "verdict": "S1"
+  }
+]

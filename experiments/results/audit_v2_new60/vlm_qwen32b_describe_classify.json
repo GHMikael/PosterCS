@@ -1,0 +1,1095 @@
+[
+  {
+    "run_id": "20260609_022821_A_Comprehensive_Survey_of_Rewa_028f962461b9",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Results面板下半部分为空白区域，约占面板高度的50%，宽度100%，与其它面板内容密集形成强烈对比，导致面板内部空间使用极不均衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\"primary\": \"Results面板下半部分为空白区域，约占面板高度的50%，宽度100%，与其它面板内容密集形成强烈对比，导致面板内部空间使用极不均衡。\"},\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 7, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约40%\", \"notes\": \"图位于面板下半部分，包含对话框、奖励模型流程图和文字说明\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约50%\", \"notes\": \"图位于面板下半部分，为奖励模型分类的层级结构图\"}, {\"id\": \"Experiments\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约40%\", \"notes\": \"图位于面板下半部分，为三列表格，比较不同粒度RM的优缺点\"}, {\"id\": \"Results\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"面板下半部分为空白区域\"}, {\"id\": \"Conclusion\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"无图，文字内容居中\"}, {\"id\": \"Overview\", \"position\": \"中下\", \"density\": \"密\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"文字密集，包含多行缩进的bullet点\"}, {\"id\": \"Challenges\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"无图，文字内容居中\"}], \"blank_regions\": [{\"panel_id\": \"Results\", \"where\": \"面板下半部分\", \"approx_size\": \"约占面板高度的50%，宽度100%\"}], \"grid_alignment\": \"三列上排面板宽度基本一致，下排三个面板宽度一致，上下两排面板之间有水平对齐，右侧整块留白\", \"overall\": \"海报包含7个面板，分为上下两排，上排四个面板，下排三个面板，内容以文字和图表为主，右侧Results面板下半部分有较大空白区域。\"}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_023433_Test-Time_Preference_Optimizat_6b985b677181",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Method、Contributions、Experiments、Results、Conclusion）底部存在显著空白区域，约占面板高度的20%-25%，导致内容分布不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\"primary\": \"多个面板（如Motivation、Method、Contributions、Experiments、Results、Conclusion）底部存在显著空白区域，约占面板高度的20%-25%，导致内容分布不均，视觉重量失衡。\"},\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和四个带编号的要点\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约40%\", \"notes\": \"包含一个流程图，图下方有说明文字\"}, {\"id\": \"Contributions\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含三个带编号的要点\"}, {\"id\": \"Experiments\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约30%\", \"notes\": \"包含三张折线图，图下方有说明文字\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约30%\", \"notes\": \"包含一个表格，表格下方有说明文字\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含两个带编号的要点\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Method\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的25%\"}, {\"panel_id\": \"Contributions\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的25%\"}, {\"panel_id\": \"Experiments\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Results\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的25%\"}], \"grid_alignment\": \"对齐良好，三列布局，每列高度一致，面板宽度均匀，无明显错位或留白不均\", \"overall\": \"海报包含六个面板，呈两行三列布局，每个面板有标题、编号和内容，部分面板含图或表格，整体结构对称，底部有总结横幅。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_023510_Seeing,_Listening,_Remembering_5b5ef16d0aec",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "text_overload",
+      "asset_too_small"
+    ],
+    "guard_violations": [
+      "overflow_guard"
+    ],
+    "evidence": {
+      "primary": "Method / Framework 面板中图下方有大量空白区域（约占面板高度的30%），而 Experiments / Results 面板内容密集，表格和文字被截断，导致面板内部空间使用严重不均。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"text_overload\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"Method / Framework 面板中图下方有大量空白区域（约占面板高度的30%），而 Experiments / Results 面板内容密集，表格和文字被截断，导致面板内部空间使用严重不均。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation / Background\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色强调文本，5个带编号的bullet点，文字内容完整\"}, {\"id\": \"Problem / Challenge\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色强调文本，5个带编号的bullet点，文字内容完整\"}, {\"id\": \"Method / Framework\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%高约40%\", \"notes\": \"包含一个架构图，图下方有说明文字，文字内容部分被截断\"}, {\"id\": \"Experiments / Results\", \"position\": \"左下\", \"density\": \"密\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约90%高约60%\", \"notes\": \"包含一个大型表格，表格上方有绿色强调文本，文字内容部分被截断\"}, {\"id\": \"Key Findings\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约40%\", \"notes\": \"包含一个小型表格，表格上方有紫色强调文本，文字内容完整\"}, {\"id\": \"Conclusion / Takeaways\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含5个带编号的bullet点，文字内容完整\"}], \"blank_regions\": [{\"panel_id\": \"Method / Framework\", \"where\": \"图下方\", \"approx_size\": \"约占面板高度的30%\"}, {\"panel_id\": \"Conclusion / Takeaways\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的20%\"}], \"grid_alignment\": \"对齐良好\", \"overall\": \"海报包含6个面板，呈2行3列网格布局，各面板标题清晰，内容以bullet点和表格为主，部分面板含图，整体排版结构化。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_023950_MLP_Memory_A_Retriever-Pretrai_ae89635e3e92",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "所有六个面板的底部右侧均存在约占面板宽度30%、高度20%的空白区域，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"所有六个面板的底部右侧均存在约占面板宽度30%、高度20%的空白区域，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation / Background\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题文字和四个带编号的要点，文字排布紧凑但有清晰间距。\"\n    },\n    {\n      \"id\": \"Problem / Challenge\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题文字和四个带编号的要点，文字排布与左上面板相似。\"\n    },\n    {\n      \"id\": \"Method / Framework\",\n      \"position\": \"右上\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%、高约50%\",\n      \"notes\": \"包含两个带编号的要点和一个四象限示意图，图下方有简短说明文字。\"\n    },\n    {\n      \"id\": \"Experiments / Results\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约90%、高约60%\",\n      \"notes\": \"包含两个带编号的要点和一个包含三个柱状图的复合图表，图表下方有图注。\"\n    },\n    {\n      \"id\": \"Key Findings\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约90%、高约55%\",\n      \"notes\": \"包含两个带编号的要点和一个包含三个对话框的对比示意图，图下方有简短说明文字。\"\n    },\n    {\n      \"id\": \"Conclusion / Takeaways\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含五个带编号的要点，文字排布与上部面板一致。\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation / Background\",\n      \"where\": \"面板底部右侧\",\n      \"approx_size\": \"约占面板宽度的30%、高度的20%\"\n    },\n    {\n      \"panel_id\": \"Problem / Challenge\",\n      \"where\": \"面板底部右侧\",\n      \"approx_size\": \"约占面板宽度的30%、高度的20%\"\n    },\n    {\n      \"panel_id\": \"Method / Framework\",\n      \"where\": \"面板底部右侧\",\n      \"approx_size\": \"约占面板宽度的30%、高度的20%\"\n    },\n    {\n      \"panel_id\": \"Experiments / Results\",\n      \"where\": \"面板底部右侧\",\n      \"approx_size\": \"约占面板宽度的30%、高度的20%\"\n    },\n    {\n      \"panel_id\": \"Key Findings\",\n      \"where\": \"面板底部右侧\",\n      \"approx_size\": \"约占面板宽度的30%、高度的20%\"",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024001_Generalist_Reward_Models_Found_657081bc5ee8",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Method面板右下角有占面板宽约70%高约40%的空白区域，而Experiments和Results面板的图表几乎填满其内容区，导致面板内部空间使用严重不均。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\"primary\": \"Method面板右下角有占面板宽约70%高约40%的空白区域，而Experiments和Results面板的图表几乎填满其内容区，导致面板内部空间使用严重不均。\"},\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和三个带编号的要点\"}, {\"id\": \"Problem\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和两个带编号的要点\"}, {\"id\": \"Method\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约30%高约30%\", \"notes\": \"包含蓝色标题文字、两个带编号的要点和一个位于右下角的文本框，标注为'Prompt template of GenRM-Pointwise'\"}, {\"id\": \"Experiments\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约40%\", \"notes\": \"包含绿色标题文字、两个带编号的要点和一个位于底部的表格，标注为'Response classification accuracy by reward models on the RM-Bench'\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约90%高约50%\", \"notes\": \"包含绿色标题文字、两个带编号的要点和一个位于底部的柱状图，标注为'Response classification accuracy on the Multifaceted-Bench'\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色标题文字和两个带编号的要点\"}], \"blank_regions\": [{\"panel_id\": \"Method\", \"where\": \"右下角\", \"approx_size\": \"占面板宽约70%高约40%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"底部\", \"approx_size\": \"占面板宽约100%高约40%\"}], \"grid_alignment\": \"对齐良好，三列布局，每列面板高度一致，顶部和底部有统一蓝色横幅\", \"overall\": \"海报包含六个面板，分为上下两行三列，每个面板有标题、编号和内容，部分面板包含图表或表格，整体布局对称，底部有总结性横幅。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024412_LLMS'_INTERNAL_STATES_RETAIN_T_a64e1943af91",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation / Background、Problem / Challenge、Conclusion / Takeaways）存在显著空白区域，而Experiments / Results和Key Findings面板内容密集，导致面板内部空间使用严重不均。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation / Background、Problem / Challenge、Conclusion / Takeaways）存在显著空白区域，而Experiments / Results和Key Findings面板内容密集，导致面板内部空间使用严重不均。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation / Background\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色引言文字和四个带编号的要点\"}, {\"id\": \"Problem / Challenge\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色引言文字和两个带编号的要点\"}, {\"id\": \"Method / Framework\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%、高约50%\", \"notes\": \"包含一个流程图，图下方有说明文字\"}, {\"id\": \"Experiments / Results\", \"position\": \"左下\", \"density\": \"密\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%、高约60%\", \"notes\": \"包含一个大型表格，表格下方有说明文字\"}, {\"id\": \"Key Findings\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约85%、高约55%\", \"notes\": \"包含两个并列的折线图，图下方有说明文字\"}, {\"id\": \"Conclusion / Takeaways\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含四个带编号的要点\"}], \"blank_regions\": [{\"panel_id\": \"Motivation / Background\", \"where\": \"右下角\", \"approx_size\": \"约10cm x 5cm\"}, {\"panel_id\": \"Problem / Challenge\", \"where\": \"右下角\", \"approx_size\": \"约10cm x 5cm\"}, {\"panel_id\": \"Method / Framework\", \"where\": \"左下角\", \"approx_size\": \"约10cm x 5cm\"}, {\"panel_id\": \"Experiments / Results\", \"where\": \"右下角\", \"approx_size\": \"约10cm x 5cm\"}, {\"panel_id\": \"Key Findings\", \"where\": \"右下角\", \"approx_size\": \"约10cm x 5cm\"}, {\"panel_id\": \"Conclusion / Takeaways\", \"where\": \"左下角\", \"approx_size\": \"约10cm x 5cm\"}], \"grid_alignment\": \"对齐良好\", \"overall\": \"海报包含六个面板，分为上下两行三列，每个面板有标题、内容和编号，部分面板包含图表或表格，整体布局对称，底部有一条横幅。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024809_One_SPACE_to_Rule_Them_All_Joi_b087d09deca9",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板右下角均有明显空白区域（约占面板面积的10%-15%），而内容（如要点和图）集中在左上部，导致面板内部空间利用不均，视觉重量失衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板右下角均有明显空白区域（约占面板面积的10%-15%），而内容（如要点和图）集中在左上部，导致面板内部空间利用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题文字和5个带编号的要点，每个要点为一行文本。\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%、高约50%\",\n      \"notes\": \"包含蓝色标题文字、2个带编号的要点，以及下方一个包含三个子图的复合图（折线图+散点图），图下方有说明文字。\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约85%、高约55%\",\n      \"notes\": \"包含绿色标题文字、2个带编号的要点，以及下方一个大型表格，表格下方有说明文字。\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%、高约50%\",\n      \"notes\": \"包含绿色标题文字、2个带编号的要点，以及下方一个包含多个柱状图的复合图，图下方有说明文字。\"\n    },\n    {\n      \"id\": \"Key Findings\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%、高约40%\",\n      \"notes\": \"包含紫色标题文字、2个带编号的要点，以及下方一个小型表格，表格下方有说明文字。\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题文字和5个带编号的要点，每个要点为一行文本。\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约占面板面积的10%\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约占面板面积的10%\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Key Findings\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"面板右下角\",\n      \"approx_size\"",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024834_Revisiting_Hallucination_Detec_ca5d974cf3fd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板右下角均存在约占面板宽30%高20%的空白区域，导致内容分布不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板右下角均存在约占面板宽30%高20%的空白区域，导致内容分布不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色强调文本和编号圆点\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色强调文本和编号圆点\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%高约40%\",\n      \"notes\": \"包含三个带编号的圆角矩形框，由箭头连接，形成流程图\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"左下\",\n      \"density\": \"密\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%高约50%\",\n      \"notes\": \"包含一个表格，列标题为Model, Dataset, ER (Ours), ES, PF, DSE, LNE, SE，表格下方有说明文字\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约85%高约55%\",\n      \"notes\": \"包含两个并列的示意图，分别标注'Low effective rank'和'High effective rank'，下方有说明文字\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色强调文本和编号圆点\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    }\n  ],\n  \"grid_alignment\": \"对齐良好，三列两行布局，各",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_024836_Know_Your_Limits_A_Survey_of_A_345fd4c78f2e",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Problem、Method、Experiments、Key Findings）存在显著空白区域，例如Problem面板下半部分占高度40%，Method面板上半部分占高度30%，导致面板内部空间使用极不均衡，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Problem、Method、Experiments、Key Findings）存在显著空白区域，例如Problem面板下半部分占高度40%，Method面板上半部分占高度30%，导致面板内部空间使用极不均衡，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 7,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题'LLMs are unreliable and prone to issues'，下方两个带编号的要点\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题'Need for abstention in LLMs'，下方三个带编号的要点\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%高约50%\",\n      \"notes\": \"包含蓝色标题'Framework for abstention in LLMs'，下方两个带编号的要点，以及一个流程图\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%高约60%\",\n      \"notes\": \"包含绿色标题'Survey of evaluation benchmarks'，下方两个带编号的要点，以及一个表格\"\n    },\n    {\n      \"id\": \"Key Findings\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约40%\",\n      \"notes\": \"包含紫色标题'Example queries for abstention'，下方两个带编号的要点，以及一个小型表格或截图\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题'Enhance robustness and trustworthiness'，下方两个带编号的要点\"\n    },\n    {\n      \"id\": \"Overview\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含蓝色标题'Comprehensive survey on abstention in LLMs'，下方五个带编号的要点\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"面板下半部分\",\n      \"approx_size\": \"约占面板高度的40%，宽度100%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"面板上半部分，图上方\",\n      \"approx_size\": \"约占面板高度的30%，宽度100%\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n     ",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_025032_From_Efficiency_to_Adaptivity__3483ab1db1f8",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Experiments, Results, Conclusion）下方存在大量空白区域，约占面板高度的50%，而Method面板中图下方也留有约30%高度的空白，导致面板内部空间使用极不均衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Experiments, Results, Conclusion）下方存在大量空白区域，约占面板高度的50%，而Method面板中图下方也留有约30%高度的空白，导致面板内部空间使用极不均衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"标题为红色，正文为黑色，包含三个带编号的要点。\"}, {\"id\": \"Problem\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"标题为红色，正文为黑色，包含三个带编号的要点。\"}, {\"id\": \"Method\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%高约50%\", \"notes\": \"包含一个分类图，图下方有小字说明“Taxonomy of adaptive reasoning methods in LLMs.”\"}, {\"id\": \"Experiments\", \"position\": \"左下\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"标题为绿色，正文为黑色，包含两个带编号的要点。\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"松\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"标题为绿色，正文为黑色，包含三个带编号的要点。\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"标题为紫色，正文为黑色，包含两个带编号的要点。\"}], \"blank_regions\": [{\"panel_id\": \"Method\", \"where\": \"图下方\", \"approx_size\": \"约占面板高度的30%，宽度约70%\"}, {\"panel_id\": \"Experiments\", \"where\": \"要点下方\", \"approx_size\": \"约占面板高度的50%，宽度100%\"}, {\"panel_id\": \"Results\", \"where\": \"要点下方\", \"approx_size\": \"约占面板高度的50%，宽度100%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"要点下方\", \"approx_size\": \"约占面板高度的50%，宽度100%\"}], \"grid_alignment\": \"对齐良好，三列两行布局，各面板宽度一致，上下对齐，无明显错位或留白不均。\", \"overall\": \"海报采用三列两行共六个面板布局，各面板标题颜色不同，内容以带编号的要点形式呈现，右上角面板包含一个分类图，其余面板下方有较大空白区域。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_025105_Crossing_the_Reward_Bridge_Exp_3931671c5534",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板的右下角均有显著空白区域（约占面板面积20%-30%），而内容集中在左上部分，导致面板内部空间使用严重不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板的右下角均有显著空白区域（约占面板面积20%-30%），而内容集中在左上部分，导致面板内部空间使用严重不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含三个带编号的要点，每个要点为一行文本，无图表。\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": true, \"figure_size\": \"图占面板宽约50%、高约25%\", \"notes\": \"包含一个流程图，下方有四点方法描述。\"}, {\"id\": \"Experiments\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": true, \"figure_size\": \"图占面板宽约40%、高约20%\", \"notes\": \"包含一个表格样式的示例数据，下方有四点实验描述。\"}, {\"id\": \"Problem\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含三个带编号的要点，每个要点为一行文本，无图表。\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": true, \"figure_size\": \"图占面板宽约50%、高约25%\", \"notes\": \"包含一个表格，下方有四点结果描述。\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含四个带编号的要点，每个要点为一行文本，无图表。\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的20%\"}, {\"panel_id\": \"Method\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的25%\"}, {\"panel_id\": \"Experiments\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的30%\"}, {\"panel_id\": \"Problem\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的20%\"}, {\"panel_id\": \"Results\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的25%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的30%\"}], \"grid_alignment\": \"对齐良好，三列布局，每列上下两个面板，宽度一致，顶部和底部有横条对齐。\", \"overall\": \"海报包含六个面板，分为三列两行，每个面板有标题、编号和要点列表，部分面板含图，整体布局对齐，右侧有较大空白区域。\"}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_025220_Is_Chain-of-Thought_Reasoning__0a77c3c5f24d",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Results、Key Findings、Conclusion）的右下角存在显著空白区域，约占面板宽度30%、高度40%，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Results、Key Findings、Conclusion）的右下角存在显著空白区域，约占面板宽度30%、高度40%，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色圆形编号1、2、3，每个编号对应一个文本条目。\"}, {\"id\": \"Experiments\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%、高约30%\", \"notes\": \"图下方有文字说明“Figure 2 | Framework of DataAlchemy...”，图由多个小图块组成，包含流程图和表格元素。\"}, {\"id\": \"Results\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约50%、高约30%\", \"notes\": \"图下方有文字说明“Figure 3 | Performance of CoT reasoning...”，图是一个散点图，带有坐标轴和图例。\"}, {\"id\": \"Method\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%、高约25%\", \"notes\": \"图下方有文字说明“Figure 1 | The data perspective lens...”，图包含多个图标和连接线。\"}, {\"id\": \"Key Findings\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%、高约30%\", \"notes\": \"图下方有文字说明“Figure 4 | Performance on unseen transformation...”，图是一个折线图，包含多条曲线和坐标轴。\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色圆形编号1、2、3、4，每个编号对应一个文本条目。\"}], \"blank_regions\": [{\"panel_id\": \"Results\", \"where\": \"面板右下角\", \"approx_size\": \"约占面板宽度的30%、高度的40%\"}, {\"panel_id\": \"Key Findings\", \"where\": \"面板右下角\", \"approx_size\": \"约占面板宽度的30%、高度的40%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"面板右下角\", \"approx_size\": \"约占面板宽度的30%、高度的40%\"}], \"grid_alignment\": \"对齐良好，三列面板宽度一致，上下两行面板高度一致，顶部和底部有统一的蓝色横幅，整体呈网格布局。\", \"overall\": \"海报包含六个面板，排列为两行三列，每个面板有标题、编号和内容，其中四个面板包含图表，整体布局对称，右侧存在矩形空白区域。\"}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_025510_TAKE_A_STEP_BACK_EVOKING_REASO_efd7e7bea9bb",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "所有六个面板的右下角均存在约占面板宽度30%、高度40%的空白区域，导致面板内部空间使用极不均衡，视觉重量严重偏移。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"所有六个面板的右下角均存在约占面板宽度30%、高度40%的空白区域，导致面板内部空间使用极不均衡，视觉重量严重偏移。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation / Background\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色圆形编号1、2、3，每个编号后跟一段文字。\"\n    },\n    {\n      \"id\": \"Problem / Challenge\",\n      \"position\": \"左中\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色圆形编号1、2、3，每个编号后跟一段文字。\"\n    },\n    {\n      \"id\": \"Method / Framework\",\n      \"position\": \"中上\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约25%\",\n      \"notes\": \"包含蓝色圆形编号1、2，每个编号后跟一段文字。图位于面板上部，为多框示意图。\"\n    },\n    {\n      \"id\": \"Experiments / Results\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约50%高约25%\",\n      \"notes\": \"包含绿色圆形编号1、2，每个编号后跟一段文字。图位于面板上部，为彩色柱状图。\"\n    },\n    {\n      \"id\": \"Key Findings\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约25%\",\n      \"notes\": \"包含紫色圆形编号1、2、3、4，每个编号后跟一段文字。图位于面板上部，为表格或数据列表。\"\n    },\n    {\n      \"id\": \"Conclusion / Takeaways\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色圆形编号1、2、3、4，每个编号后跟一段文字。\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Conclusion / Takeaways\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的30%，高度的40%\"\n    },\n    {\n      \"panel_id\": \"Experiments / Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的30%，高度的40%\"\n    },\n    {\n      \"panel_id\": \"Method / Framework\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的30%，高度的40%\"\n    },\n    {\n      \"panel_id\": \"Motivation / Background\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的30%，高度的40%\"\n    },\n    {\n      \"panel_id\": \"Problem / Challenge\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的30%，高度的40",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_025515_MEMTRACK_Evaluating_Long-Term__b8f5d698d757",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Method panel has a large figure occupying 80% width and 60% height, leaving a significant blank region (20% height) below it, while other panels like Experiments and Results have smaller figures and more text, creating uneven visual weight and space distribution within panels."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Method panel has a large figure occupying 80% width and 60% height, leaving a significant blank region (20% height) below it, while other panels like Experiments and Results have smaller figures and more text, creating uneven visual weight and space distribution within panels.\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和5个带编号的bullet点，文字为黑色，背景为白色圆角矩形\"}, {\"id\": \"Problem\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和5个带编号的bullet点，文字为黑色，背景为白色圆角矩形\"}, {\"id\": \"Method\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约60%\", \"notes\": \"包含一个流程图，图下方有文字说明，图中包含多个模块和箭头连接\"}, {\"id\": \"Experiments\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约40%高约50%\", \"notes\": \"包含一个表格样式的实例，展示事件和问题-答案对，表格位于bullet点右侧\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约40%\", \"notes\": \"包含一个表格，展示不同方法在Correctness、Eff.、Red.、TC等指标上的数值\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含5个带编号的bullet点，文字为黑色，背景为白色圆角矩形\"}], \"blank_regions\": [{\"panel_id\": \"Method\", \"where\": \"图下方\", \"approx_size\": \"占面板高度约20%，宽度约80%\"}, {\"panel_id\": \"Experiments\", \"where\": \"bullet点左侧\", \"approx_size\": \"占面板宽度约40%，高度约50%\"}, {\"panel_id\": \"Results\", \"where\": \"bullet点下方\", \"approx_size\": \"占面板高度约30%，宽度约80%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"bullet点下方\", \"approx_size\": \"占面板高度约30%，宽度约80%\"}], \"grid_alignment\": \"对齐良好，三列布局，每列高度一致，面板宽度大致相等，顶部和底部有蓝色横幅\", \"overall\": \"海报包含6个面板，分为上下两行三列，每个面板有标题、编号和内容，部分面板包含图表或表格，整体布局对称，留白区域主要位于图下方或内容下方\"}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_025546_Constitutional_AI_Harmlessness_ffa46538873c",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板的右下角均存在约10cm x 5cm的空白区域（占面板约15%），导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板的右下角均存在约10cm x 5cm的空白区域（占面板约15%），导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题句和5个带编号的要点，文字排布紧凑但留有行距\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%、高约40%\",\n      \"notes\": \"包含流程图，图下方有说明文字\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%、高约40%\",\n      \"notes\": \"包含折线图，图下方有说明文字\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%、高约35%\",\n      \"notes\": \"包含两个并列的折线图，图下方有说明文字\"\n    },\n    {\n      \"id\": \"Key Findings\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%、高约40%\",\n      \"notes\": \"包含折线图，图下方有说明文字\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含5个带编号的要点，文字排布紧凑\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm（占面板约15%）\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm（占面板约15%）\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm（占面板约15%）\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm（占面板约15%）\"\n    },\n    {\n      \"panel_id\": \"Key Findings\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm（占面板约15%）\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm（占面板约15%）\"\n    }\n  ],\n  \"grid_alignment\": \"对齐良好，三列两行布局，各面板宽度一致，上下间距均匀，无明显错",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_025852_ESSAYBENCH_Evaluating_Large_La_16f4e934923a",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Problem、Method）右下角存在约10cm x 5cm的空白区域，而Experiments和Results面板内容密集，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\"primary\": \"多个面板（如Motivation、Problem、Method）右下角存在约10cm x 5cm的空白区域，而Experiments和Results面板内容密集，导致面板内部空间使用不均，视觉重量失衡。\"},\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题和四个带编号的要点，文字为黑色，背景为白色，边框为圆角棕色\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约40%\",\n      \"notes\": \"包含红色标题、两个带编号的要点，以及一个位于下方的表格，表格包含6行数据和7列，表头为Benchmark、Num.、Dataset Composition、Evaluation Method等\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%高约50%\",\n      \"notes\": \"包含橙色标题、两个带编号的要点，以及一个位于下方的流程图，流程图分为Data Curation、Prompt Example、Evaluation三个部分，包含图标和文字说明\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"左下\",\n      \"density\": \"密\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%高约50%\",\n      \"notes\": \"包含绿色标题、两个带编号的要点，以及一个位于下方的表格，表格包含3组方法（Align-Score、Ours w/o WT、Ours）和多个子列，如Overall、Argumentative、Narrative等，数据为数值\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中下\",\n      \"density\": \"密\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%高约50%\",\n      \"notes\": \"包含绿色标题、两个带编号的要点，以及一个位于下方的表格，表格包含15个模型（如Claude-3.7-sonnet、Grok-2等）和多个子列，如Overall、Argumentative、Narrative等，数据为数值\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题、三个带编号的要点，文字为黑色，背景为白色，边框为圆角棕色\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_025904_Multi-Agent-as-Judge_Aligning__9ece80d6b03f",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧整列约占海报总宽度的30%从顶部延伸至底部，形成大面积空白，导致网格结构严重失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧整列约占海报总宽度的30%从顶部延伸至底部，形成大面积空白，导致网格结构严重失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation / Background\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含三个带编号的要点，每个要点为一行文本。\"\n    },\n    {\n      \"id\": \"Problem / Challenge\",\n      \"position\": \"左中\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含两个带编号的要点，每个要点为一行文本。\"\n    },\n    {\n      \"id\": \"Method / Framework\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约25%\",\n      \"notes\": \"包含一个流程图，位于面板上半部分，下方为两个要点。\"\n    },\n    {\n      \"id\": \"Experiments / Results\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约30%高约20%\",\n      \"notes\": \"包含两个热力图，位于面板上半部分，下方为两个要点。\"\n    },\n    {\n      \"id\": \"Key Findings\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约30%高约20%\",\n      \"notes\": \"包含一个柱状图，位于面板上半部分，下方为两个要点。\"\n    },\n    {\n      \"id\": \"Conclusion / Takeaways\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含三个带编号的要点，每个要点为一行文本。\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation / Background\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Problem / Challenge\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约占面板面积的20%\"\n    },\n    {\n      \"panel_id\": \"Method / Framework\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约占面板面积的10%\"\n    },\n    {\n      \"panel_id\": \"Experiments / Results\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Key Findings\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Conclusion / Takeaways\",\n      \"where\": \"面板右下角\",\n      \"app",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_030028_Automated_Evaluation_of_Person_b3a1b1bcaa11",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板的右下角均存在约10cm x 5cm的空白区域，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板的右下角均存在约10cm x 5cm的空白区域，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"标题为红色，正文为黑色，包含5个带编号的要点，编号颜色依次为蓝、绿、橙、紫、红。\"\n    },\n    {\n      \"id\": \"Research Problem\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"标题为红色，正文为黑色，包含5个带编号的要点，编号颜色依次为蓝、绿、橙、紫、红。\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约40%\",\n      \"notes\": \"包含一个三行三列的表格，表格下方有说明文字。\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"左下\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%高约50%\",\n      \"notes\": \"包含六个小型柱状图，排列为两行三列，下方有说明文字。\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约90%高约40%\",\n      \"notes\": \"包含一个表格，列标题为Generator Model, Model Size, AuPEL Elo Metrics, Traditional NLG Metrics，表格下方有说明文字。\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"标题为紫色，正文为黑色，包含5个带编号的要点，编号颜色依次为蓝、绿、橙、紫、红。\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Research Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"右下角\",\n    ",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_030306_Agent-as-a-Judge_Evaluate_Agen_1dee0b26a38b",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Problem、Conclusion）存在显著空白区域，约占面板面积的15%-20%，而其他面板（如Results、Experiments）内容密集，导致面板内部空间使用严重不均。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation、Problem、Conclusion）存在显著空白区域，约占面板面积的15%-20%，而其他面板（如Results、Experiments）内容密集，导致面板内部空间使用严重不均。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和三个带编号的要点\"}, {\"id\": \"Problem\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和三个带编号的要点\"}, {\"id\": \"Method\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%高约50%\", \"notes\": \"包含一个横向三图对比示意图，下方有说明文字\"}, {\"id\": \"Experiments\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约30%\", \"notes\": \"包含一个表格，标题为'Agent-as-a-Judge Performance'，下方有小字说明\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约85%高约40%\", \"notes\": \"包含一个复合图，包含词云、柱状图和热力图，下方有说明文字\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含五个带编号的要点，编号颜色与前面面板一致\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的20%\"}, {\"panel_id\": \"Problem\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的20%\"}, {\"panel_id\": \"Method\", \"where\": \"左下角\", \"approx_size\": \"约占面板面积的15%\"}, {\"panel_id\": \"Experiments\", \"where\": \"右上角\", \"approx_size\": \"约占面板面积的15%\"}, {\"panel_id\": \"Results\", \"where\": \"右上角\", \"approx_size\": \"约占面板面积的15%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的20%\"}], \"grid_alignment\": \"对齐良好，三列两行布局，各面板宽度一致，上下对齐，顶部和底部有统一蓝色横幅\", \"overall\": \"海报采用三列两行共六个面板的网格布局，每个面板包含标题、编号和内容，部分面板含图表，整体布局对齐，存在多个矩形空白区域。\"}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_030815_HELLOBENCH_EVALUATING_LONG_TEX_078a8e42438f",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error",
+      "structure_alignment_error"
+    ],
+    "guard_violations": [
+      "overflow_guard"
+    ],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Method、Experiments）右下角存在明显空白区域，而Experiments面板内容密集，导致面板内部空间使用极不均衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"structure_alignment_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation、Method、Experiments）右下角存在明显空白区域，而Experiments面板内容密集，导致面板内部空间使用极不均衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\n  \"n_panels\": 7,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题文字和5个带编号的要点，每个要点为一行或两行文本。\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%、高约40%\",\n      \"notes\": \"包含两个文本要点和一个流程图，流程图位于面板下半部分，展示六个认知层次的评估流程。\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"右上\",\n      \"density\": \"密\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约90%、高约60%\",\n      \"notes\": \"包含两个文本要点和一个大型表格，表格包含多个模型和评估指标，分为三个部分（Proprietary, Open-Source, Capability-Enhanced）。\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约85%、高约55%\",\n      \"notes\": \"包含两个文本要点和一个环形图，图例位于右侧，展示HelloBench类别和子类别的分布。\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题文字和5个带编号的要点，每个要点为一行或两行文本。\"\n    },\n    {\n      \"id\": \"HelloEval\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%、高约45%\",\n      \"notes\": \"包含两个文本要点和一个流程图，流程图展示HelloEval的两阶段评估管道。\"\n    },\n    {\n      \"id\": \"Limitations\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含三个带编号的要点，每个要点为一行或两行文本。\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约10cm x 5cm（占面板约15%）\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约8cm x 4cm（占面板约10%）\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"面板右下角\",\n      \"approx_size\": \"约5cm x 3cm（占面板约5%）\"\n    },\n    {\n      \"panel_id",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_031113_DataGovBench_Benchmarking_LLM__0848906204dd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation / Background、Problem / Challenge、Experiments / Results、Key Findings）的右下角存在显著空白区域，约占面板宽度的20%-30%和高度的15%-25%，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation / Background、Problem / Challenge、Experiments / Results、Key Findings）的右下角存在显著空白区域，约占面板宽度的20%-30%和高度的15%-25%，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation / Background\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题文字和5个带编号的要点，编号颜色依次为蓝、绿、橙、紫、红。\"\n    },\n    {\n      \"id\": \"Problem / Challenge\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题文字和4个带编号的要点，编号颜色依次为蓝、绿、橙、紫。\"\n    },\n    {\n      \"id\": \"Method / Framework\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约50%\",\n      \"notes\": \"包含蓝色标题文字、2个带编号的要点（编号颜色为蓝、绿）和一个流程图，图下方有说明文字。\"\n    },\n    {\n      \"id\": \"Experiments / Results\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约40%\",\n      \"notes\": \"包含绿色标题文字、2个带编号的要点（编号颜色为蓝、绿）和一个包含四个小柱状图的图表，图下方有说明文字。\"\n    },\n    {\n      \"id\": \"Key Findings\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约40%\",\n      \"notes\": \"包含紫色标题文字、2个带编号的要点（编号颜色为蓝、绿）和一个包含四个小柱状图的图表，图下方有说明文字。\"\n    },\n    {\n      \"id\": \"Conclusion / Takeaways\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题文字和4个带编号的要点，编号颜色依次为蓝、绿、橙、紫。\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation / Background\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的20%，高度的15%\"\n    },\n    {\n      \"panel_id\": \"Problem / Challenge\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的25%，高度的20%\"\n    },\n    {\n      \"panel_id\": \"Method / Framework\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的30%，高度的25%\"\n    },\n    {\n      \"panel_id\": \"Experiments / Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的30%，高度的25%\"\n    },\n    {\n      \"panel_id\": \"Key Findings\",\n      \"where\": \"右下角\",",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_031231_Teaching_Language_Models_to_Cr_1bb5aaf1ca62",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Method、Experiments、Results、Key Findings、Conclusion）存在显著的矩形空白区域，占各自面板面积10%-20%，导致内容分布不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation、Method、Experiments、Results、Key Findings、Conclusion）存在显著的矩形空白区域，占各自面板面积10%-20%，导致内容分布不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和5个带编号的要点，每个要点前有彩色圆圈标记。\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%、高约50%\", \"notes\": \"包含一个流程图，展示两阶段训练管道，图下方有说明文字。\"}, {\"id\": \"Experiments\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%、高约40%\", \"notes\": \"包含两个并列的折线图，图下方有说明文字。\"}, {\"id\": \"Results\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约40%、高约30%\", \"notes\": \"包含一个折线图，图下方有说明文字。\"}, {\"id\": \"Key Findings\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含5个带编号的要点，每个要点前有彩色圆圈标记。\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含5个带编号的要点，每个要点前有彩色圆圈标记。\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的15%\"}, {\"panel_id\": \"Method\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的10%\"}, {\"panel_id\": \"Experiments\", \"where\": \"左下角\", \"approx_size\": \"约占面板面积的15%\"}, {\"panel_id\": \"Results\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的20%\"}, {\"panel_id\": \"Key Findings\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的15%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的15%\"}], \"grid_alignment\": \"对齐良好，三列布局，每列上下两个面板，列宽基本一致，面板之间水平和垂直对齐。\", \"overall\": \"海报包含六个面板，分为三列两行，每个面板有标题、编号和内容，部分面板包含图表，整体布局为网格结构，存在多个矩形空白区域。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_031542_LeanRAG_Knowledge-Graph-Based__24e848eba9fe",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Motivation面板底部有约占面板高度20%的空白区域，而Results面板内容密集，底部同样有20%空白，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Motivation面板底部有约占面板高度20%的空白区域，而Results面板内容密集，底部同样有20%空白，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 5, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和5个带编号的要点，文字排布紧凑但留有行距。\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%、高约50%\", \"notes\": \"包含一个三部分流程图，图下方有文字说明“Overview of the LeanRAG framework.”\"}, {\"id\": \"Experiments\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约90%、高约40%\", \"notes\": \"包含一个表格，标题为“Statistics of task datasets.”，表格有4列（Mix, CS, Legal, Agriculture）和3行（Dataset, # of Documents, # of Tokens）\"}, {\"id\": \"Results\", \"position\": \"左下\", \"density\": \"密\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约90%、高约50%\", \"notes\": \"包含一个大型表格，标题为“Evaluation scores (1-10 scale) of LeanRAG compared to baseline methods...”，表格包含多个数据列和行，内容密集。\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含5个带编号的要点，文字排布清晰，末尾有“Future work”内容。\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Method\", \"where\": \"面板底部，图下方\", \"approx_size\": \"约占面板高度的25%\"}, {\"panel_id\": \"Experiments\", \"where\": \"面板底部，表格下方\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Results\", \"where\": \"面板底部，表格下方\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的20%\"}], \"grid_alignment\": \"对齐良好，三列上排面板宽度一致，下排两个面板宽度一致，整体呈2x3网格布局，列间间距均匀。\", \"overall\": \"海报包含五个主要面板，按2x3网格布局排列，每个面板有标题、编号和内容，包含文字、列表和图表，底部有一条总结性横幅。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_031655_Query-Based_Router_by_Dual_Con_ca7853cdbd31",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（Motivation, Method, Experiments, Results, Conclusion）的右下角存在显著空白区域，约占各自面板面积的15%-30%，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（Motivation, Method, Experiments, Results, Conclusion）的右下角存在显著空白区域，约占各自面板面积的15%-30%，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 5, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题'Complementary strengths of LLMs'，下方有4个带编号的要点，编号颜色分别为蓝、绿、橙、紫。\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%，高约50%\", \"notes\": \"包含蓝色标题'RouterDC with dual contrastive losses'，下方有2个带编号的要点，编号颜色为蓝、绿。下方有一张流程图，图下方有文字说明。\"}, {\"id\": \"Experiments\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约50%，高约40%\", \"notes\": \"包含绿色标题'Challenging reasoning tasks'，下方有2个带编号的要点，编号颜色为蓝、绿。下方有一张彩色散点图，图下方有文字说明。\"}, {\"id\": \"Results\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%，高约30%\", \"notes\": \"包含绿色标题'Accuracy improvement +2.76%'，下方有2个带编号的要点，编号颜色为蓝、绿。下方有一张雷达图，图下方有文字说明。\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色标题'Efficient and effective router'，下方有4个带编号的要点，编号颜色为蓝、绿、橙、紫。\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的20%\"}, {\"panel_id\": \"Method\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的15%\"}, {\"panel_id\": \"Experiments\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的25%\"}, {\"panel_id\": \"Results\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的30%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的20%\"}], \"grid_alignment\": \"对齐良好，三列上排面板宽度一致，下排两个面板宽度大致相等，整体网格结构清晰。\", \"overall\": \"海报包含五个主要面板，布局为三列上排、两列下排，各面板内含文字要点和/或图表，整体采用蓝色标题栏和白色内容区，底部有一条蓝色总结横幅。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_031955_Multimodal_Retrieval-Reflectio_90b3ba39356e",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "面板 'Method / Framework' 底部有约占面板高度20%的空白区域，而 'Experiments / Results' 面板顶部也有类似空白，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"面板 'Method / Framework' 底部有约占面板高度20%的空白区域，而 'Experiments / Results' 面板顶部也有类似空白，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation / Background\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和5个带编号的bullet点，文字为黑色，编号圆圈为彩色。\"}, {\"id\": \"Problem / Challenge\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和5个带编号的bullet点，文字为黑色，编号圆圈为彩色。\"}, {\"id\": \"Method / Framework\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%、高约40%\", \"notes\": \"包含蓝色标题文字、2个带编号的bullet点和一个流程图，流程图下方有灰色小字说明。\"}, {\"id\": \"Experiments / Results\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%、高约50%\", \"notes\": \"包含绿色标题文字、2个带编号的bullet点和一个表格，表格下方有灰色小字说明。\"}, {\"id\": \"Key Findings\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色标题文字和5个带编号的bullet点，文字为黑色，编号圆圈为彩色。\"}, {\"id\": \"Conclusion / Takeaways\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色标题文字和5个带编号的bullet点，文字为黑色，编号圆圈为彩色。\"}], \"blank_regions\": [{\"panel_id\": \"Method / Framework\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的20%，宽度100%\"}, {\"panel_id\": \"Experiments / Results\", \"where\": \"面板顶部\", \"approx_size\": \"约占面板高度的20%，宽度100%\"}, {\"panel_id\": \"Key Findings\", \"where\": \"面板顶部\", \"approx_size\": \"约占面板高度的20%，宽度100%\"}, {\"panel_id\": \"Conclusion / Takeaways\", \"where\": \"面板顶部\", \"approx_size\": \"约占面板高度的20%，宽度100%\"}], \"grid_alignment\": \"对齐良好，三列面板宽度一致，上下两行面板高度一致，整体呈网格布局。\", \"overall\": \"海报包含六个面板，呈2行3列网格布局，每个面板有标题、编号bullet点，部分面板含图或表格，整体结构清晰，留白区域主要位于各面板顶部和底部。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_032530_Agentic_Search-Enhanced_Large__2fa60d8ceb94",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation / Background、Problem / Challenge、Experiments / Results等）底部右侧存在明显空白区域，约占面板宽度30%、高度20%，而内容区域文字稀疏，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation / Background、Problem / Challenge、Experiments / Results等）底部右侧存在明显空白区域，约占面板宽度30%、高度20%，而内容区域文字稀疏，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation / Background\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题和5个带编号的要点，文字为黑色，编号圆圈颜色依次为蓝、绿、橙、紫、红\"\n    },\n    {\n      \"id\": \"Problem / Challenge\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题和5个带编号的要点，文字为黑色，编号圆圈颜色依次为蓝、绿、橙、紫、红\"\n    },\n    {\n      \"id\": \"Method / Framework\",\n      \"position\": \"右上\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约85%、高约55%\",\n      \"notes\": \"包含蓝色标题和2个带编号的要点，下方有一个横向三图对比的流程图，图下方有灰色小字说明\"\n    },\n    {\n      \"id\": \"Experiments / Results\",\n      \"position\": \"左下\",\n      \"density\": \"密\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%、高约40%\",\n      \"notes\": \"包含绿色标题和2个带编号的要点，下方是一个表格，表格下方有灰色小字说明\"\n    },\n    {\n      \"id\": \"Key Findings\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题和4个带编号的要点，文字为黑色，编号圆圈颜色依次为蓝、绿、橙、紫\"\n    },\n    {\n      \"id\": \"Conclusion / Takeaways\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题和5个带编号的要点，文字为黑色，编号圆圈颜色依次为蓝、绿、橙、紫、红\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation / Background\",\n      \"where\": \"面板底部右侧\",\n      \"approx_size\": \"约占面板宽度的30%、高度的20%\"\n    },\n    {\n      \"panel_id\": \"Problem / Challenge\",\n      \"where\": \"面板底部右侧\",\n      \"approx_size\": \"约占面板宽度的30%、高度的20%\"\n    },\n    {\n      \"panel_id\": \"Method / Framework\",\n      \"where\": \"面板底部右侧\",\n      \"approx_size\": \"约占面板宽度的30%、高度的20%\"\n    },\n    {\n      \"panel_id\": \"Experiments / Results\",\n      \"where\": \"面板底部右侧\",\n      \"approx_size\": \"约占面板宽度的30%、高度的20%\"\n    },\n    {\n      \"panel_id\": \"Key Findings\",\n      \"where\": \"面板底部右侧\",\n    ",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033143_Reachability_of_Independent_Se_5e8f4e632965",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Problem、Conclusion）存在右下角约10%面积的空白区域，而Method、Experiments、Results面板内容密集，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation、Problem、Conclusion）存在右下角约10%面积的空白区域，而Method、Experiments、Results面板内容密集，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题文字和五个带编号的要点，文字为黑色，编号圆圈为彩色\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题文字和三个带编号的要点，文字为黑色，编号圆圈为彩色\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"右上\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%高约50%\",\n      \"notes\": \"包含蓝色标题文字、两个带编号的要点和一个图，图下方有灰色小字说明\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%高约60%\",\n      \"notes\": \"包含绿色标题文字、两个带编号的要点和一个表格（Table 1），表格内容为复杂性分类\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%高约60%\",\n      \"notes\": \"包含绿色标题文字、两个带编号的要点和一个表格（Table 2），表格内容为ISR和VCR的复杂性比较\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题文字和五个带编号的要点，文字为黑色，编号圆圈为彩色\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10%面板面积\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10%面板面积\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"左下角\",\n      \"approx_size\": \"约15%面板面积\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10%面板面积\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10%面板面积\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10%面板面积\"\n    }\n  ],\n  \"grid_alignment\": \"对齐良好，三列两行布局，各面板宽度",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033459_LongRAG_Enhancing_Retrieval-Au_20eda233c56a",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Method / Framework面板中，图占面板宽约60%、高约40%，下方右侧留有约占面板宽度40%、高度30%的空白区域，而Experiments / Results和Key Findings面板的图上方或左侧也存在明显空白，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Method / Framework面板中，图占面板宽约60%、高约40%，下方右侧留有约占面板宽度40%、高度30%的空白区域，而Experiments / Results和Key Findings面板的图上方或左侧也存在明显空白，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation / Background\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"标题下方有红色强调文字，正文为5个带编号的bullet点，文字排版紧凑但可读。\"}, {\"id\": \"Problem / Challenge\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"标题下方有红色强调文字，正文为4个带编号的bullet点，文字排版与左上面板相似。\"}, {\"id\": \"Method / Framework\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%、高约40%\", \"notes\": \"包含一个流程图和一个柱状图，图下方有小字说明。文字部分仅2个bullet点，内容简洁。\"}, {\"id\": \"Experiments / Results\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%、高约50%\", \"notes\": \"包含四个小图（两个柱状图、两个折线图），图下方有说明文字。文字部分为2个bullet点。\"}, {\"id\": \"Key Findings\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%、高约40%\", \"notes\": \"包含一个表格，表格上方有3个bullet点。表格内容为多列数据，包含Retrieval Unit、Corpus Size、Recall等。\"}, {\"id\": \"Conclusion / Takeaways\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含5个带编号的bullet点，文字排版与左上、中上面板相似。\"}], \"blank_regions\": [{\"panel_id\": \"Method / Framework\", \"where\": \"图下方右侧\", \"approx_size\": \"约占面板宽度的40%、高度的30%\"}, {\"panel_id\": \"Experiments / Results\", \"where\": \"图上方左侧\", \"approx_size\": \"约占面板宽度的20%、高度的20%\"}, {\"panel_id\": \"Key Findings\", \"where\": \"表格上方左侧\", \"approx_size\": \"约占面板宽度的20%、高度的20%\"}], \"grid_alignment\": \"对齐良好，三列面板宽度一致，上下两行面板高度一致，无明显错位或留白不均。\", \"overall\": \"海报包含6个面板，呈2行3列网格布局，各面板标题清晰，内容以bullet点为主，部分面板含图或表格，整体排版结构化。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033644_AQA_Adaptive_Question_Answerin_7686221c4c02",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板的右下角（或左下角）均存在约占面板20%宽高、未被内容填充的空白区域，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板的右下角（或左下角）均存在约占面板20%宽高、未被内容填充的空白区域，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题行和5个带编号的要点，文字为黑色，编号圆圈颜色各异。\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题行和3个带编号的要点，文字为黑色，编号圆圈颜色各异。\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约40%\",\n      \"notes\": \"包含蓝色标题行和2个带编号的要点，下方有6个小图组成的网格图，图下方有灰色小字说明。\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%高约30%\",\n      \"notes\": \"包含绿色标题行和3个带编号的要点，下方有一个表格，表格包含3列（NoR, OneR, IRCot）和4行数据（Context A, B, C, Overall），表格下方有灰色小字说明。\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%高约40%\",\n      \"notes\": \"包含绿色标题行和2个带编号的要点，下方有6个小图组成的网格图，图下方有灰色小字说明。\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题行和5个带编号的要点，文字为黑色，编号圆圈颜色各异。\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽20%高20%\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽20%高20%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"左下角\",\n      \"approx_size\": \"约占面板宽20%高20%\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽20%高20%\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽20%高20%\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"右下角\",\n     ",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_033812_Linear_Graph_Retrieval_Augment_26e5b004d601",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Problem、Method、Experiments）右下角存在约10cm x 5cm的空白区域，而Results和Key Findings面板内容密集，导致面板内部空间使用极不均衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation、Problem、Method、Experiments）右下角存在约10cm x 5cm的空白区域，而Results和Key Findings面板内容密集，导致面板内部空间使用极不均衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 7,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题和三个带编号的要点，文字为黑色，背景为白色，边框为圆角蓝色。\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题和三个带编号的要点，文字为黑色，背景为白色，边框为圆角蓝色。\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%、高约50%\",\n      \"notes\": \"包含蓝色标题和两个带编号的要点，下方有一张流程图，图下方有文字说明。\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约85%、高约55%\",\n      \"notes\": \"包含绿色标题和两个带编号的要点，下方有一张柱状图，图下方有文字说明。\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"左下\",\n      \"density\": \"密\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约90%、高约60%\",\n      \"notes\": \"包含绿色标题和两个带编号的要点，下方有一张表格，表格下方有文字说明。\"\n    },\n    {\n      \"id\": \"Key Findings\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约90%、高约60%\",\n      \"notes\": \"包含紫色标题和两个带编号的要点，下方有一张表格，表格下方有文字说明。\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题和三个带编号的要点，文字为黑色，背景为白色，边框为圆角蓝色。\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n  ",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_033929_Graph-Guided_Concept_Selection_ec885703e8c7",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "面板 'Method / Framework' 右下角有占面板宽约30%高约30%的空白区域，而 'Experiments / Results' 面板内容密集，表格占据大部分空间，导致面板内部空间使用极不均衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"面板 'Method / Framework' 右下角有占面板宽约30%高约30%的空白区域，而 'Experiments / Results' 面板内容密集，表格占据大部分空间，导致面板内部空间使用极不均衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation / Background\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和5个带编号的要点，文字为黑色，编号为彩色圆圈\"}, {\"id\": \"Problem / Challenge\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和3个带编号的要点，文字为黑色，编号为彩色圆圈\"}, {\"id\": \"Method / Framework\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约50%高约40%\", \"notes\": \"包含蓝色标题文字、2个带编号的要点和一个流程图，流程图下方有小字说明\"}, {\"id\": \"Experiments / Results\", \"position\": \"左下\", \"density\": \"密\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约30%\", \"notes\": \"包含绿色标题文字、3个带编号的要点和一个表格，表格包含多列数据\"}, {\"id\": \"Key Findings\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色标题文字和5个带编号的要点，文字为黑色，编号为彩色圆圈\"}, {\"id\": \"Conclusion / Takeaways\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色标题文字和5个带编号的要点，文字为黑色，编号为彩色圆圈\"}], \"blank_regions\": [{\"panel_id\": \"Method / Framework\", \"where\": \"面板右下角\", \"approx_size\": \"占面板宽约30%高约30%\"}, {\"panel_id\": \"Key Findings\", \"where\": \"面板右下角\", \"approx_size\": \"占面板宽约30%高约30%\"}, {\"panel_id\": \"Conclusion / Takeaways\", \"where\": \"面板右下角\", \"approx_size\": \"占面板宽约30%高约30%\"}], \"grid_alignment\": \"对齐良好，三列面板宽度一致，上下两行面板高度一致，顶部标题栏和底部总结栏横跨全宽\", \"overall\": \"海报包含6个面板，分为上下两行三列，每个面板有标题、编号和内容，部分面板含图或表格，整体布局对称，底部有总结横幅。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_034053_Youtu-GraphRAG_Vertically_Unif_ab33db82d52d",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧整体留白明显，三列布局中右侧列面板未填满，存在显著空白区域，导致网格结构失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧整体留白明显，三列布局中右侧列面板未填满，存在显著空白区域，导致网格结构失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色圆形编号1、2、3，左侧有红色Q图标\"}, {\"id\": \"Contributions\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含蓝色圆形编号3，左侧有蓝色5图标\"}, {\"id\": \"Experiments\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": true, \"figure_size\": \"图占面板宽约40%高约20%\", \"notes\": \"包含绿色圆形编号4，左侧有绿色R图标，图下方有文字说明\"}, {\"id\": \"Method\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 1, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约40%\", \"notes\": \"包含蓝色圆形编号2，左侧有蓝色M图标，图下方有文字说明\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约25%\", \"notes\": \"包含绿色圆形编号5，左侧有绿色R图标，图下方有文字说明\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色圆形编号6，左侧有紫色T图标\"}], \"blank_regions\": [{\"panel_id\": \"Experiments\", \"where\": \"面板右下角\", \"approx_size\": \"占面板约30%宽、20%高\"}, {\"panel_id\": \"Conclusion\", \"where\": \"面板右下角\", \"approx_size\": \"占面板约35%宽、25%高\"}, {\"panel_id\": \"Results\", \"where\": \"面板右下角\", \"approx_size\": \"占面板约30%宽、20%高\"}], \"grid_alignment\": \"三列布局，每列面板上下对齐，列宽大致相等，右侧整体留白明显\", \"overall\": \"海报包含六个面板，按三列两行排列，各面板有标题、编号和内容，部分含图，右侧存在显著空白区域。\"}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_034235_Ask_in_Any_Modality_A_Comprehe_7cf7a1708c41",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [
+      "overflow_guard"
+    ],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Conclusion、Overview）底部存在约占面板高度30%的空白区域，而Method、Datasets、Benchmarks面板内容集中于上半部分，导致面板内部空间使用严重不均。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation、Conclusion、Overview）底部存在约占面板高度30%的空白区域，而Method、Datasets、Benchmarks面板内容集中于上半部分，导致面板内部空间使用严重不均。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\n  \"n_panels\": 7,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色副标题和四个带编号的要点，文字为黑色，背景为白色圆角矩形\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"中上\",\n      \"density\": \"松\",\n      \"n_bullets\": 1,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%、高约60%\",\n      \"notes\": \"包含一个流程图，下方有文字说明，图中包含多个模块和箭头连接\"\n    },\n    {\n      \"id\": \"Datasets\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%、高约50%\",\n      \"notes\": \"包含一个表格，表格内容为多行多列，下方有文字说明\"\n    },\n    {\n      \"id\": \"Benchmarks\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%、高约50%\",\n      \"notes\": \"包含一个表格，表格内容为多行多列，下方有文字说明\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色副标题和四个带编号的要点，文字为黑色，背景为白色圆角矩形\"\n    },\n    {\n      \"id\": \"Overview\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含蓝色副标题和三个带编号的要点，文字为黑色，背景为白色圆角矩形\"\n    },\n    {\n      \"id\": \"Taxonomy\",\n      \"position\": \"右下\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含一个灰色文本框，内含文字，下方有两个带编号的要点\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"底部\",\n      \"approx_size\": \"约占面板高度的30%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"底部\",\n      \"approx_size\": \"约占面板高度的25%\"\n    },\n    {\n      \"panel_id\": \"Datasets\",\n      \"where\": \"底部\",\n      \"approx_size\": \"约占面板高度的25%\"\n    },\n    {\n      \"panel_id\": \"Benchmarks\",\n      \"where\": \"底部\",\n      \"approx_size\": \"约占面板高度的25%\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"底部\",\n      \"appr",
+    "template": "template_minimal"
+  },
+  {
+    "run_id": "20260609_034408_Agentic_Context_Engineering_Ev_2ff43486cc66",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板底部均有约15%-20%的空白区域，导致内容在面板内分布不均，视觉重量不均衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板底部均有约15%-20%的空白区域，导致内容在面板内分布不均，视觉重量不均衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题和五个带编号的要点，文字排布均匀\"}, {\"id\": \"Problem\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约85%高约55%\", \"notes\": \"包含一个折线图，图下方有图注\"}, {\"id\": \"Method\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约50%\", \"notes\": \"包含一个流程图，图下方有图注\"}, {\"id\": \"Experiments\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%高约40%\", \"notes\": \"包含一个表格，表格下方有表注\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约85%高约50%\", \"notes\": \"包含一个柱状图，图下方有图注\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含五个带编号的要点，文字排布均匀\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Problem\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的15%\"}, {\"panel_id\": \"Method\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的15%\"}, {\"panel_id\": \"Experiments\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Results\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的20%\"}], \"grid_alignment\": \"对齐良好，三列布局，每列宽度大致相等，面板顶部和底部对齐，无明显错位或留白不均\", \"overall\": \"海报包含六个面板，分为上下两行三列，每个面板有标题、编号和内容，部分面板含图表，整体布局规整，文字密度中等，底部有统一的结论性标语。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_034502_Human-in-the-loop_or_AI-in-the_a187d2011cf3",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "海报采用三列两行布局，但右侧整块区域存在显著空白，且各面板顶部对齐、底部对齐，右侧留白形成一个完整的矩形空白区，违反了网格结构的平衡性。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"海报采用三列两行布局，但右侧整块区域存在显著空白，且各面板顶部对齐、底部对齐，右侧留白形成一个完整的矩形空白区，违反了网格结构的平衡性。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约20%\", \"notes\": \"包含一个小型对比图，位于面板上部，下方为三行bullet点\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约30%\", \"notes\": \"包含三个带编号的流程框，呈水平排列，下方为三行bullet点\"}, {\"id\": \"Experiments\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含两个bullet点，无图\"}, {\"id\": \"Problem\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约20%\", \"notes\": \"包含一个小型示意图，位于面板上部，下方为三行bullet点\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"松\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含三个bullet点，无图\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含四个bullet点，无图\"}], \"blank_regions\": [{\"panel_id\": \"Experiments\", \"where\": \"面板右下角\", \"approx_size\": \"约占面板面积的30%\"}, {\"panel_id\": \"Results\", \"where\": \"面板右下角\", \"approx_size\": \"约占面板面积的35%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"面板右下角\", \"approx_size\": \"约占面板面积的40%\"}], \"grid_alignment\": \"三列布局，每列上下两个面板，列宽大致相等，面板顶部对齐，底部对齐，右侧整块留白\", \"overall\": \"海报采用三列两行共六个面板布局，各面板标题明确，内容以bullet点为主，部分面板含小型图示，右侧区域存在显著空白。\"}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_034637_Building_Production-Ready_AI_A_fcec57454c05",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板存在显著空白区域，如Motivation和Problem面板右下角各约10%面积空白，Method面板左下角约15%空白，Experiments和Results面板右上角各约20%空白，Conclusion面板左上角约15%空白，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板存在显著空白区域，如Motivation和Problem面板右下角各约10%面积空白，Method面板左下角约15%空白，Experiments和Results面板右上角各约20%空白，Conclusion面板左上角约15%空白，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色引言文字和5个带彩色圆点编号的要点\"}, {\"id\": \"Problem\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色引言文字和5个带彩色圆点编号的要点\"}, {\"id\": \"Method\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约40%\", \"notes\": \"包含两个带编号的圆角矩形框，由箭头连接，下方有2个带编号的要点\"}, {\"id\": \"Experiments\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约50%\", \"notes\": \"包含2个要点和一个位于底部的表格，表格包含多列数据和方法名称\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约50%\", \"notes\": \"包含3个要点和一个位于底部的组合图表（柱状图+折线图），图表有双Y轴\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含5个带彩色圆点编号的要点\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"右下角\", \"approx_size\": \"约10%面板面积\"}, {\"panel_id\": \"Problem\", \"where\": \"右下角\", \"approx_size\": \"约10%面板面积\"}, {\"panel_id\": \"Method\", \"where\": \"左下角\", \"approx_size\": \"约15%面板面积\"}, {\"panel_id\": \"Experiments\", \"where\": \"右上角\", \"approx_size\": \"约20%面板面积\"}, {\"panel_id\": \"Results\", \"where\": \"右上角\", \"approx_size\": \"约20%面板面积\"}, {\"panel_id\": \"Conclusion\", \"where\": \"左上角\", \"approx_size\": \"约15%面板面积\"}], \"grid_alignment\": \"对齐良好，三列布局，每列包含上下两个面板，列宽基本一致，面板顶部和底部对齐\", \"overall\": \"海报包含六个面板，分为三列两行，每个面板有标题、内容要点和部分包含图表，整体布局为网格结构，存在多个矩形空白区域。\"}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_034844_EvoAgentX_An_Automated_Framewo_3113cc1e4e25",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧整列约占海报总宽度的30%为空白区域，且所有面板右下角均有显著空白，导致网格结构严重失衡，面板未填满画布。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧整列约占海报总宽度的30%为空白区域，且所有面板右下角均有显著空白，导致网格结构严重失衡，面板未填满画布。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含三个带编号的要点，文字为黑色，标题为蓝色，顶部有红色横条和红色圆形图标\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含三个带编号的要点，文字为黑色，标题为蓝色，顶部有红色横条和红色圆形图标\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约20%\",\n      \"notes\": \"包含两个带编号的要点，文字为黑色，标题为蓝色，顶部有蓝色横条和蓝色圆形图标，图下方有描述性文字\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约20%\",\n      \"notes\": \"包含两个带编号的要点，文字为黑色，标题为蓝色，顶部有绿色横条和绿色圆形图标，图下方有描述性文字\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约20%\",\n      \"notes\": \"包含四个带编号的要点，文字为黑色，标题为蓝色，顶部有绿色横条和绿色圆形图标，图下方有描述性文字\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含四个带编号的要点，文字为黑色，标题为蓝色，顶部有紫色横条和紫色圆形图标\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的20%\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的20%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的25%\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的25%\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的25%\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的25%\"\n  ",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_034941_Latent_Collaboration_in_Multi-_425eabae1cf5",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板的右下角均存在约占面板宽30%高20%的空白区域，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板的右下角均存在约占面板宽30%高20%的空白区域，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色圆形编号1、2、3，每个编号后有文本段落\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约20%\",\n      \"notes\": \"包含蓝色圆形编号1、2、3，每个编号后有文本段落，上方有小图及说明文字\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约20%\",\n      \"notes\": \"包含绿色圆形编号1、2，每个编号后有文本段落，上方有小图及说明文字\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色圆形编号1、2，每个编号后有文本段落\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约20%\",\n      \"notes\": \"包含绿色圆形编号1、2、3，每个编号后有文本段落，上方有小图及说明文字\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色圆形编号1、2、3，每个编号后有文本段落\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽30%高20%\"\n    }\n  ],\n  \"grid_alignment\": \"对齐良好，三列布局，每列上下两个面板，宽度一致，顶部和底部有横幅，整体网格",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035207_Tree_Search_for_LLM_Agent_Rein_01c4c43c1418",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧整列约占海报总宽度的30%留白，且所有六个面板的右下角均有约10cm x 5cm的空白区域，导致整体网格结构严重失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧整列约占海报总宽度的30%留白，且所有六个面板的右下角均有约10cm x 5cm的空白区域，导致整体网格结构严重失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"面板顶部有红色横条，左侧有红色圆形图标Q，标题下方有编号1的蓝色圆圈\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"面板顶部有红色横条，左侧有红色圆形图标Q，标题下方有编号2的红色圆圈\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"中上\",\n      \"density\": \"松\",\n      \"n_bullets\": 1,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约30%\",\n      \"notes\": \"面板顶部有蓝色横条，左侧有蓝色圆形图标M，标题下方有编号3的蓝色圆圈，图下方有文字说明\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"右上\",\n      \"density\": \"松\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"面板顶部有绿色横条，左侧有绿色圆形图标R，标题下方有编号4的绿色圆圈\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中下\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%高约30%\",\n      \"notes\": \"面板顶部有绿色横条，左侧有绿色圆形图标R，标题下方有编号5的绿色圆圈，图下方有文字说明\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"松\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"面板顶部有紫色横条，左侧有紫色圆形图标T，标题下方有编号6的紫色圆圈\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"整体\",\n",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035303_INFORMATION_GAIN-BASED_POLICY__91fc4ebf7312",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Results、Key Findings、Conclusion）的右下角存在显著空白区域，约占面板面积的15%-30%，而其他面板内容相对紧凑，导致面板内部空间使用不均衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation、Results、Key Findings、Conclusion）的右下角存在显著空白区域，约占面板面积的15%-30%，而其他面板内容相对紧凑，导致面板内部空间使用不均衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含三个带编号的文本点，每个点前有彩色圆圈标记\"}, {\"id\": \"Method\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约25%\", \"notes\": \"包含一个流程图，位于面板上半部分，下方有三个带编号的文本点\"}, {\"id\": \"Experiments\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": true, \"figure_size\": \"图占面板宽约50%高约20%\", \"notes\": \"包含一个表格，位于面板上半部分，下方有四个带编号的文本点\"}, {\"id\": \"Results\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约30%高约20%\", \"notes\": \"包含一个折线图，位于面板上半部分，下方有两个带编号的文本点\"}, {\"id\": \"Key Findings\", \"position\": \"中下\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约50%高约25%\", \"notes\": \"包含一个对话框截图，位于面板上半部分，下方有两个带编号的文本点\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含四个带编号的文本点，每个点前有彩色圆圈标记\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的15%\"}, {\"panel_id\": \"Method\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的20%\"}, {\"panel_id\": \"Experiments\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的25%\"}, {\"panel_id\": \"Results\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的30%\"}, {\"panel_id\": \"Key Findings\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的30%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积的25%\"}], \"grid_alignment\": \"对齐良好，三列布局，每列上下两个面板，列宽基本一致，面板顶部和底部对齐\", \"overall\": \"海报包含六个面板，呈三列两行布局，每个面板有标题、编号和内容，部分面板包含图表，整体布局对齐，右侧有较大空白区域\"}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035514_Adaptive_Multi-Agent_Reasoning_a5e187809673",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "所有六个面板的右下角均存在约占面板宽度40%、高度30%的空白区域，导致面板内部空间使用极不均衡，视觉重量严重失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"所有六个面板的右下角均存在约占面板宽度40%、高度30%的空白区域，导致面板内部空间使用极不均衡，视觉重量严重失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含三个带编号的要点，文字为黑色，标题为蓝色，顶部有红色横条和红色圆形编号1\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约20%\",\n      \"notes\": \"包含两个带编号的要点，上方有一个小的流程图，图下方有描述文字，顶部有蓝色横条和蓝色圆形编号3\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"右上\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含两个带编号的要点，文字为黑色，标题为蓝色，顶部有绿色横条和绿色圆形编号4\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含两个带编号的要点，文字为黑色，标题为蓝色，顶部有红色横条和红色圆形编号2\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约20%\",\n      \"notes\": \"包含两个带编号的要点，上方有一个小的柱状图，图下方有描述文字，顶部有绿色横条和绿色圆形编号5\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含两个带编号的要点，文字为黑色，标题为蓝色，顶部有紫色横条和紫色圆形编号6\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的40%，高度的30%\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的40%，高度的30%\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的40%，高度的30%\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的40%，高度的30%\"\n    },\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽度的40%，高度的30%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\":",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035626_BELLE_A_Bi-Level_Multi-Agent_R_48c95073681f",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右列面板与中列面板顶部对齐但底部留白，且右列明显更窄，导致网格结构不平衡，存在未填充的矩形空白区域。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右列面板与中列面板顶部对齐但底部留白，且右列明显更窄，导致网格结构不平衡，存在未填充的矩形空白区域。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 7, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含三个带编号的bullet点，文字为黑色，标题为蓝色，顶部有红色圆圈编号1和Q标记\"}, {\"id\": \"Method\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约40%高约20%\", \"notes\": \"包含一个小型模型示意图，位于bullet点上方，图下方有文字说明\"}, {\"id\": \"Experiments\", \"position\": \"中上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约40%高约20%\", \"notes\": \"包含一个表格图，位于bullet点上方，图下方有文字说明\"}, {\"id\": \"Results\", \"position\": \"中上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约50%高约25%\", \"notes\": \"包含一个柱状图，位于bullet点上方，图下方有文字说明\"}, {\"id\": \"Key Findings\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含四个带编号的bullet点，文字为黑色，标题为蓝色，顶部有紫色圆圈编号5和T标记\"}, {\"id\": \"Conclusion\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含四个带编号的bullet点，文字为黑色，标题为蓝色，顶部有紫色圆圈编号6和T标记\"}, {\"id\": \"Overview\", \"position\": \"右列\", \"density\": \"松\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含三个带编号的bullet点，文字为黑色，标题为蓝色，顶部有蓝色圆圈编号7和S标记\"}], \"blank_regions\": [{\"panel_id\": \"Overview\", \"where\": \"面板下半部分\", \"approx_size\": \"约占面板高度的60%，宽度100%\"}], \"grid_alignment\": \"三列布局，左列和中列面板上下对齐，右列面板与中列面板顶部对齐但底部留白；各列宽度不一，右列明显更窄；顶部有横跨三列的Storyflow条带，底部有横跨三列的蓝色总结条带\", \"overall\": \"海报包含7个面板，分布在三列中，内容以bullet点为主，部分面板含图，右列面板下半部分有较大空白区域，整体布局为三列网格，列宽不均，顶部和底部有横跨的条带。\"}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035850_Tongyi_DeepResearch_An_Agentic_2cba933bebbd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "所有六个面板的底部均存在约占面板高度20%-25%的空白区域，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\"primary\": \"所有六个面板的底部均存在约占面板高度20%-25%的空白区域，导致面板内部空间使用不均，视觉重量失衡。\"},\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题文字和5个带编号的要点，每个要点前有彩色圆圈标记。\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"中上\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%、高约40%\",\n      \"notes\": \"包含一个训练流程图，图下方有文字说明“Training pipeline of Tongyi DeepResearch.”\"\n    },\n    {\n      \"id\": \"Data Synthesis\",\n      \"position\": \"右上\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约85%、高约40%\",\n      \"notes\": \"包含一个流程图，图下方有文字说明“Large-scale agent behavior data synthesis for agentic continual pre-training.”\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约90%、高约50%\",\n      \"notes\": \"包含一个表格，表格下方有文字说明“Performance comparison on various benchmarks.”\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中下\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约90%、高约50%\",\n      \"notes\": \"包含一个柱状图，图下方有文字说明“Benchmark performance of Tongyi DeepResearch.”\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含5个带编号的要点，每个要点前有彩色圆圈标记。\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"面板底部\",\n      \"approx_size\": \"约占面板高度的20%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"面板底部\",\n      \"approx_size\": \"约占面板高度的25%\"\n    },\n    {\n      \"panel_id\": \"Data Synthesis\",\n      \"where\": \"面板底部\",\n      \"approx_size\": \"约占面板高度的25%\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"面板底部\",\n      \"approx_size\": \"约占面板高度的20%\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"面板底部\",\n      \"approx_size",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_040432_Difficulty-Aware_Agentic_Orche_a37cd9381ae1",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧独立列（Overview 和 Conclusion）与主网格未对齐，且面板高度与左中列不一致，导致整体网格结构断裂。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧独立列（Overview 和 Conclusion）与主网格未对齐，且面板高度与左中列不一致，导致整体网格结构断裂。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 7, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色圆形编号1，左侧有红色Q图标\"}, {\"id\": \"Pipeline Visualization\", \"position\": \"中上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约40%高约25%\", \"notes\": \"包含蓝色圆形编号3，左侧有蓝色M图标，图下方有文字说明\"}, {\"id\": \"Experimental Setup\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含绿色圆形编号4，左侧有绿色R图标\"}, {\"id\": \"Overview\", \"position\": \"右列顶部\", \"density\": \"松\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含蓝色圆形编号7，左侧有蓝色S图标，位于右侧独立列\"}, {\"id\": \"Method\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约50%高约20%\", \"notes\": \"包含蓝色圆形编号2，左侧有蓝色M图标，图下方有文字说明\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约25%\", \"notes\": \"包含绿色圆形编号5，左侧有绿色R图标，图下方有文字说明\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"松\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色圆形编号6，左侧有紫色T图标\"}], \"blank_regions\": [{\"panel_id\": \"Overview\", \"where\": \"面板下半部分\", \"approx_size\": \"约占面板高度的60%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"面板右下角\", \"approx_size\": \"约占面板宽度的30%高度的20%\"}], \"grid_alignment\": \"三列布局，左列和中列面板高度一致，右列面板高度与左中列不一致，右侧独立列与主网格未对齐\", \"overall\": \"海报包含7个面板，分为三列布局，其中右侧列独立，各面板包含文字和部分图表，存在多个空白区域，整体网格对齐不完全一致。\"}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_040805_Search_Self-play_Pushing_the_F_73c40da4d2fd",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "右侧整块留白，列间对齐基本一致但右侧存在大面积空白区域，导致网格结构失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"右侧整块留白，列间对齐基本一致但右侧存在大面积空白区域，导致网格结构失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 5, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色圆形编号1、2、3，左侧有红色Q图标\"}, {\"id\": \"Experiments\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%、高约30%\", \"notes\": \"包含一个表格，标题为'Ablation on training schemes...'，上方有绿色圆形编号3，左侧有绿色R图标\"}, {\"id\": \"Results\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约40%、高约25%\", \"notes\": \"包含四个小图，标题为'Training dynamics of SSP with Qwen2.5-7B-Base...'，上方有绿色圆形编号4，左侧有绿色R图标\"}, {\"id\": \"Method\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%、高约20%\", \"notes\": \"包含一个示意图，标题为'Examples of Search Self-play with a given ground-truth 'Dr. Will Boyd''.，上方有蓝色圆形编号2，左侧有蓝色M图标\"}, {\"id\": \"Conclusion\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"上方有紫色圆形编号5，左侧有紫色T图标\"}], \"blank_regions\": [{\"panel_id\": \"Results\", \"where\": \"右下角\", \"approx_size\": \"占面板约30%宽度、40%高度\"}, {\"panel_id\": \"Conclusion\", \"where\": \"右侧\", \"approx_size\": \"占面板约50%宽度、100%高度\"}], \"grid_alignment\": \"三列布局，上排三个面板宽度大致相等，下排两个面板宽度大致相等，右侧整块留白，列间对齐基本一致\", \"overall\": \"海报包含五个主要面板，呈三列两行布局，内容以文字和少量图表为主，右侧及底部存在较大空白区域。\"}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_041103_InfiFusion_A_Unified_Framework_91741a511b2b",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "面板 'Motivation / Background' 和 'Experiments / Results' 文字密集且紧凑排列，而 'Method / Framework' 面板图下方有约占面板高度30%、宽度50%的空白区域，导致面板内部空间使用严重不均。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"面板 'Motivation / Background' 和 'Experiments / Results' 文字密集且紧凑排列，而 'Method / Framework' 面板图下方有约占面板高度30%、宽度50%的空白区域，导致面板内部空间使用严重不均。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation / Background\", \"position\": \"左上\", \"density\": \"密\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色强调句和5个带编号的bullet点，文字紧凑排列\"}, {\"id\": \"Problem / Challenge\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色强调句和3个带编号的bullet点，文字密度适中\"}, {\"id\": \"Method / Framework\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约50%高约40%\", \"notes\": \"包含一个流程图，图下方有说明文字，文字部分较少\"}, {\"id\": \"Experiments / Results\", \"position\": \"左下\", \"density\": \"密\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约50%\", \"notes\": \"包含一个大型表格，表格占据面板下半部分，文字部分在上半部分\"}, {\"id\": \"Key Findings\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%高约40%\", \"notes\": \"包含一个小型表格，表格位于面板下半部分，文字部分在上半部分\"}, {\"id\": \"Conclusion / Takeaways\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含5个带编号的bullet点，文字密度适中\"}], \"blank_regions\": [{\"panel_id\": \"Method / Framework\", \"where\": \"图下方\", \"approx_size\": \"约占面板高度的30%，宽度约50%\"}, {\"panel_id\": \"Experiments / Results\", \"where\": \"表格上方\", \"approx_size\": \"约占面板高度的30%，宽度约80%\"}, {\"panel_id\": \"Key Findings\", \"where\": \"表格上方\", \"approx_size\": \"约占面板高度的30%，宽度约70%\"}], \"grid_alignment\": \"对齐良好，三列布局，每列宽度大致相等，上下两行面板高度一致，无明显错位或留白不均\", \"overall\": \"海报包含6个面板，采用三列两行网格布局，各面板内容密度不一，部分面板含图或表格，整体对齐良好，存在多个矩形空白区域主要位于图或表格上方。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_042727_CODE2VIDEO_A_CODE-CENTRIC_PARA_32b909330b0a",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Problem、Method、Conclusion）底部存在显著空白区域，约占面板高度的15%-25%，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation、Problem、Method、Conclusion）底部存在显著空白区域，约占面板高度的15%-25%，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和三个带编号的要点\"}, {\"id\": \"Problem\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字和两个带编号的要点\"}, {\"id\": \"Method\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约50%\", \"notes\": \"包含一个流程图，图下方有文字说明\"}, {\"id\": \"Experiments\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约90%高约40%\", \"notes\": \"包含三个子图：环形图、词云图、条形图，下方有文字说明\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约90%高约40%\", \"notes\": \"包含一个流程图，图下方有文字说明\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色标题文字和四个带编号的要点\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Problem\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的25%\"}, {\"panel_id\": \"Method\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Experiments\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的15%\"}, {\"panel_id\": \"Results\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的15%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的20%\"}], \"grid_alignment\": \"对齐良好，三列布局，每列面板高度一致，顶部和底部有统一蓝色横幅\", \"overall\": \"海报包含六个面板，分为上下两行三列，每个面板有标题、编号和内容，部分面板包含图表，整体布局对称，底部有统一横幅。\"}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_042935_A_Survey_of_Large_Language_Mod_5736843ad823",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Conclusion、Overview、Applications、Roles in Recommendation）的下半部分存在大面积空白区域，约占面板高度的40%-50%，而其他面板内容密集，导致面板内部空间使用严重不均。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Conclusion、Overview、Applications、Roles in Recommendation）的下半部分存在大面积空白区域，约占面板高度的40%-50%，而其他面板内容密集，导致面板内部空间使用严重不均。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 7, \"panels\": [{\"id\": \"Research Background\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题句和三个带编号的要点\"}, {\"id\": \"Research Problem\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题句和三个带编号的要点\"}, {\"id\": \"Method\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%高约50%\", \"notes\": \"包含一个标为Fig. 1的示意图，图下方有文字说明\"}, {\"id\": \"Conclusion\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色标题句和两个带编号的要点\"}, {\"id\": \"Overview\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含蓝色标题句和五个带编号的要点\"}, {\"id\": \"Applications\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约50%\", \"notes\": \"包含一个标为Fig. 2的流程图，图下方有文字说明\"}, {\"id\": \"Roles in Recommendation\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约50%\", \"notes\": \"包含一个标为Fig. 3的示意图，图下方有文字说明\"}], \"blank_regions\": [{\"panel_id\": \"Conclusion\", \"where\": \"面板下半部分\", \"approx_size\": \"约占面板高度的50%，宽度100%\"}, {\"panel_id\": \"Overview\", \"where\": \"面板下半部分\", \"approx_size\": \"约占面板高度的40%，宽度100%\"}, {\"panel_id\": \"Applications\", \"where\": \"面板下半部分\", \"approx_size\": \"约占面板高度的40%，宽度100%\"}, {\"panel_id\": \"Roles in Recommendation\", \"where\": \"面板下半部分\", \"approx_size\": \"约占面板高度的40%，宽度100%\"}], \"grid_alignment\": \"对齐良好，三列布局，上下两行面板宽度一致，顶部标题栏和底部横幅横跨全宽\", \"overall\": \"海报包含七个面板，分为上下两行，每行三个或四个面板，内容以文字要点和示意图为主，各面板有明确标题和编号，整体布局为网格结构。\"}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_043024_BLIP_Bootstrapping_Language-Im_3771d1c601a0",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "各面板右下角均存在约占面板面积10%-15%的空白区域，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"各面板右下角均存在约占面板面积10%-15%的空白区域，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题文字，五条带编号的要点，文字排布均匀\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%、高约50%\", \"notes\": \"包含一个模型架构图，图下方有简短说明文字\"}, {\"id\": \"Dataset Bootstrapping\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约85%、高约55%\", \"notes\": \"包含一个流程图，图下方有简短说明文字\"}, {\"id\": \"Experiments\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%、高约40%\", \"notes\": \"包含一个表格，表格下方有说明文字\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%、高约40%\", \"notes\": \"包含一个表格，表格下方有说明文字\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含四条带编号的要点，文字排布均匀\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积15%\"}, {\"panel_id\": \"Method\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积10%\"}, {\"panel_id\": \"Dataset Bootstrapping\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积10%\"}, {\"panel_id\": \"Experiments\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积15%\"}, {\"panel_id\": \"Results\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积15%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"右下角\", \"approx_size\": \"约占面板面积15%\"}], \"grid_alignment\": \"对齐良好，三列布局，每列面板高度一致，顶部和底部横幅对齐\", \"overall\": \"海报包含六个面板，分为上下两行三列，每个面板有标题、编号和内容，部分面板含图或表格，整体布局对称，留白区域主要分布在各面板右下角。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_043303_Rethinking_Progression_of_Memo_21045ec2feae",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "面板 'Experiments' 和 'Conclusion' 的右下角存在明显空白区域（分别占面板约20%和25%面积），而其他面板内容紧凑，导致视觉重量不均。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"面板 'Experiments' 和 'Conclusion' 的右下角存在明显空白区域（分别占面板约20%和25%面积），而其他面板内容紧凑，导致视觉重量不均。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含三个带编号的要点，文字排布紧凑但无图像\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约25%\", \"notes\": \"包含一个框架图，下方有四点说明\"}, {\"id\": \"Experiments\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": true, \"figure_size\": \"图占面板宽约40%高约20%\", \"notes\": \"包含四张小图并排，下方有四点说明\"}, {\"id\": \"Problem\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约20%\", \"notes\": \"包含一个表格，下方有三点说明\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约20%\", \"notes\": \"包含一个表格，下方有四点说明\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含四点说明，无图像\"}], \"blank_regions\": [{\"panel_id\": \"Experiments\", \"where\": \"右下角\", \"approx_size\": \"占面板约20%面积\"}, {\"panel_id\": \"Conclusion\", \"where\": \"右下角\", \"approx_size\": \"占面板约25%面积\"}], \"grid_alignment\": \"对齐良好，三列布局，每列上下两个面板，宽度一致，顶部和底部有横条对齐\", \"overall\": \"海报包含六个面板，分为三列两行，每个面板有标题、编号和要点，部分面板含图或表格，整体布局对称，右侧存在空白区域。\"}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_044437_Evaluating_LLM_Agent_Personali_91d748283c90",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error",
+      "asset_too_small"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Experiments and Conclusion panels have large blank regions (约占面板宽40%高30%) while Motivation and Problem panels are densely filled, creating significant visual weight imbalance across the grid."
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Experiments and Conclusion panels have large blank regions (约占面板宽40%高30%) while Motivation and Problem panels are densely filled, creating significant visual weight imbalance across the grid.\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色圆形编号1，左侧有红色Q图标\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%高约30%\", \"notes\": \"包含蓝色圆形编号3，左侧有蓝色M图标，图中含4个带编号的流程框\"}, {\"id\": \"Experiments\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含绿色圆形编号4，左侧有绿色R图标\"}, {\"id\": \"Problem\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约20%\", \"notes\": \"包含红色圆形编号2，左侧有红色Q图标，图中为表格截图\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"松\", \"n_bullets\": 1, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%高约25%\", \"notes\": \"包含绿色圆形编号5，左侧有绿色R图标，图中含多个小图表\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 4, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%高约20%\", \"notes\": \"包含紫色圆形编号6，左侧有紫色T图标，图中为表格截图\"}], \"blank_regions\": [{\"panel_id\": \"Experiments\", \"where\": \"右下角\", \"approx_size\": \"约占面板宽40%高30%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"右下角\", \"approx_size\": \"约占面板宽40%高30%\"}], \"grid_alignment\": \"对齐良好，三列布局，每列上下两个面板，列宽基本一致，顶部有水平分隔条\", \"overall\": \"海报包含6个面板，分为三列两行，各面板有标题、编号和内容，部分含图，右侧有空白区域，整体布局基于网格对齐。\"}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_050055_Evaluating_LLM_Agents_as_Lifel_3015deb5f266",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板的右下角均存在约10cm x 5cm的矩形空白区域，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板的右下角均存在约10cm x 5cm的矩形空白区域，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题和五个带编号的要点，文字排布均匀\"}, {\"id\": \"Problem\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%、高约40%\", \"notes\": \"包含一个表格，表格下方有文字说明\"}, {\"id\": \"Method\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约85%、高约50%\", \"notes\": \"包含一个复杂的系统架构图，图下方有简短说明文字\"}, {\"id\": \"Experiments\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%、高约40%\", \"notes\": \"包含一个流程图，图下方有标题文字\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约90%、高约40%\", \"notes\": \"包含两个并列的柱状图，图下方有图注\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含五个带编号的要点，文字排布均匀\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"右下角\", \"approx_size\": \"约10cm x 5cm\"}, {\"panel_id\": \"Problem\", \"where\": \"右下角\", \"approx_size\": \"约10cm x 5cm\"}, {\"panel_id\": \"Method\", \"where\": \"右下角\", \"approx_size\": \"约10cm x 5cm\"}, {\"panel_id\": \"Experiments\", \"where\": \"右下角\", \"approx_size\": \"约10cm x 5cm\"}, {\"panel_id\": \"Results\", \"where\": \"右下角\", \"approx_size\": \"约10cm x 5cm\"}, {\"panel_id\": \"Conclusion\", \"where\": \"右下角\", \"approx_size\": \"约10cm x 5cm\"}], \"grid_alignment\": \"对齐良好\", \"overall\": \"海报包含六个面板，呈两行三列布局，每个面板有标题、编号和内容，部分面板含图，整体网格对齐，各面板右下角存在矩形空白区域。\"}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_050619_AGENTIC_RETRIEVAL-AUGMENTED_GE_c550595ca0d9",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Method、Results、Overview、Conclusion、Core Components）底部存在显著空白区域，约占面板高度的20%-35%，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation、Method、Results、Overview、Conclusion、Core Components）底部存在显著空白区域，约占面板高度的20%-35%，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\n  \"n_panels\": 7,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含三个带编号的要点，文字为黑色，背景为白色圆角矩形\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约25%\",\n      \"notes\": \"包含一个小型流程图，标题为'An Overview of Agentic RAG'\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中上\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约50%高约30%\",\n      \"notes\": \"包含一个表格，标题为'Comparative Analysis of RAG Paradigms'\"\n    },\n    {\n      \"id\": \"Overview\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含四个带编号的要点，文字为黑色，背景为白色圆角矩形\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含三个带编号的要点，文字为黑色，背景为白色圆角矩形\"\n    },\n    {\n      \"id\": \"Core Components\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约25%\",\n      \"notes\": \"包含一个流程图，标题为'Core Components of RAG'\"\n    },\n    {\n      \"id\": \"Advanced Architectures\",\n      \"position\": \"最右列\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约40%\",\n      \"notes\": \"包含一个模块化架构图，标题为'Overview of Modular RAG'\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"底部\",\n      \"approx_size\": \"约占面板高度的20%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"底部\",\n      \"approx_size\": \"约占面板高度的25%\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"底部\",\n      \"approx_size\": \"约占面板高度的30%\"\n    },\n    {\n      \"panel_id\": \"Overview\",\n      \"where\": \"底部\",\n      \"approx_size\": \"约占面板高度的35%\"\n    },\n   ",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_053045_RAG-ANYTHING_ALL-IN-ONE_RAG_FR_bd5861c75187",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Problem、Method、Experiments、Results、Key Findings）的右下角存在约10cm x 5cm的空白区域，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation、Problem、Method、Experiments、Results、Key Findings）的右下角存在约10cm x 5cm的空白区域，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 7,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题和三个带编号的要点，文字为黑色，背景为白色圆角矩形\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题和三个带编号的要点，文字为黑色，背景为白色圆角矩形\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%高约50%\",\n      \"notes\": \"包含蓝色标题和两个带编号的要点，下方有一张流程图，图下方有文字说明\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%高约40%\",\n      \"notes\": \"包含绿色标题和两个带编号的要点，下方有一张表格，表格下方有文字说明\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约90%高约40%\",\n      \"notes\": \"包含绿色标题和两个带编号的要点，下方有一张表格，表格下方有文字说明\"\n    },\n    {\n      \"id\": \"Key Findings\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约90%高约40%\",\n      \"notes\": \"包含紫色标题和两个带编号的要点，下方有一张多面板图，图下方有文字说明\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题和三个带编号的要点，文字为黑色，背景为白色圆角矩形\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约10cm x 5cm\"\n    },\n    {\n      \"panel_id\": ",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_054045_Retrieval-Augmented_Generation_935b29f80d65",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "asset_too_small",
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（如Motivation、Problem、Conclusion）底部存在大量空白区域，约占面板高度的30%-40%，而Results面板左侧和Experiments面板右侧也有显著空白，导致面板内部空间使用极不均衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"asset_too_small\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（如Motivation、Problem、Conclusion）底部存在大量空白区域，约占面板高度的30%-40%，而Results面板左侧和Experiments面板右侧也有显著空白，导致面板内部空间使用极不均衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题句和三个带编号的要点\"}, {\"id\": \"Problem\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题句和三个带编号的要点\"}, {\"id\": \"Method\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约50%\", \"notes\": \"包含一个流程图，图下方有说明文字\"}, {\"id\": \"Experiments\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约50%高约40%\", \"notes\": \"包含一个横向条形图，图下方有说明文字\"}, {\"id\": \"Results\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约40%高约60%\", \"notes\": \"包含一个密集的文本表格，标题为“Summary of Task Applications and Exemplary Queries for GraphRAG in each domain.”\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含紫色标题句和两个带编号的要点\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的40%\"}, {\"panel_id\": \"Problem\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的40%\"}, {\"panel_id\": \"Method\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的30%\"}, {\"panel_id\": \"Experiments\", \"where\": \"右侧\", \"approx_size\": \"约占面板宽度的40%\"}, {\"panel_id\": \"Results\", \"where\": \"左侧\", \"approx_size\": \"约占面板宽度的50%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"底部\", \"approx_size\": \"约占面板高度的40%\"}], \"grid_alignment\": \"对齐良好，三列两行布局，各面板宽度一致，上下行高度一致，无明显错位或留白不均\", \"overall\": \"海报包含六个面板，呈三列两行网格布局，每个面板有标题、编号和内容，部分面板含图，各面板底部或侧边存在空白区域。\"}",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_054836_Reimagining_Research_Papers_As_2a16bc35f9ac",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板的右下角均有大面积空白区域（占面板面积15%-40%），导致内容分布不均，视觉重量严重失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板的右下角均有大面积空白区域（占面板面积15%-40%），导致内容分布不均，视觉重量严重失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色圆形编号1和三个带颜色圆点的bullet点\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色圆形编号2和两个带颜色圆点的bullet点\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"中上\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约20%\",\n      \"notes\": \"包含蓝色圆形编号3和一个小型流程图，图下方有文字说明\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约50%高约20%\",\n      \"notes\": \"包含绿色圆形编号4和一个包含代码与示意图的复合图，图下方有文字说明\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"中下\",\n      \"density\": \"松\",\n      \"n_bullets\": 2,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色圆形编号5和两个带颜色圆点的bullet点\"\n    },\n    {\n      \"id\": \"Case Studies\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约40%高约20%\",\n      \"notes\": \"包含蓝色圆形编号6和一个小型图表，图下方有文字说明\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的20%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的30%\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的35%\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的40%\"\n    },\n    {\n      \"panel_id\": \"Case Studies\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的35%\"\n    },\n    {\n      \"panel_id\": \"整体\",\n      \"where\": \"右侧整列\",\n      \"approx_size\": \"约占海报总宽度的30%",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_061840_Virtuous_Machines_Towards_Arti_59e544c90c8c",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "structure_alignment_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板的右下角均存在约占面板面积15%的空白区域，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板的右下角均存在约占面板面积15%的空白区域，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation / Background\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 3,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含三个带编号的文本段落，每个段落前有彩色圆圈标记\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约30%\",\n      \"notes\": \"包含一个横向排列的六张小图，下方有文字说明\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约30%\",\n      \"notes\": \"包含两个并列的图表（柱状图和折线图），下方有文字说明\"\n    },\n    {\n      \"id\": \"Method / Framework\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约20%\",\n      \"notes\": \"包含一个网络结构示意图，下方有文字说明\"\n    },\n    {\n      \"id\": \"Key Findings\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%高约20%\",\n      \"notes\": \"包含两个小图表（散点图和折线图），下方有文字说明\"\n    },\n    {\n      \"id\": \"Conclusion / Takeaways\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 4,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含四个带编号的文本段落，每个段落前有彩色圆圈标记\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation / Background\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Method / Framework\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Key Findings\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      \"panel_id\": \"Conclusion / Takeaways\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板面积的15%\"\n    },\n    {\n      ",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_064924_Align_before_Fuse_Vision_and_L_71aaa19baf2b",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "多个面板（Motivation, Method, Experiments, Results, Conclusion）底部均存在约占面板高度15%-20%的空白区域，导致内容分布不均，视觉重量不均衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"多个面板（Motivation, Method, Experiments, Results, Conclusion）底部均存在约占面板高度15%-20%的空白区域，导致内容分布不均，视觉重量不均衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 5, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含红色标题行和5个带编号的要点\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约70%高约50%\", \"notes\": \"包含一个架构图，图下方有简短说明文字\"}, {\"id\": \"Experiments\", \"position\": \"右上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约30%\", \"notes\": \"包含一个表格，表格下方有说明文字\"}, {\"id\": \"Results\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%高约30%\", \"notes\": \"包含一个表格，表格下方有说明文字\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含5个带编号的要点，每个要点前有彩色圆点\"}], \"blank_regions\": [{\"panel_id\": \"Motivation\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的20%\"}, {\"panel_id\": \"Method\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的15%\"}, {\"panel_id\": \"Experiments\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的15%\"}, {\"panel_id\": \"Results\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的15%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"面板底部\", \"approx_size\": \"约占面板高度的15%\"}], \"grid_alignment\": \"对齐良好，三列上排面板宽度一致，下排两个面板宽度大致相等，整体呈2x3网格布局\", \"overall\": \"海报包含五个主要面板，分为上下两行，上行三列，下行两列，每个面板有标题、内容要点和部分包含图表，整体布局对齐，底部有总结性标语。\"}",
+    "template": "template_classic"
+  },
+  {
+    "run_id": "20260609_065706_GME_Improving_Universal_Multim_cae3c40103dc",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "每个面板的右下角均存在约占面板宽20%、高15%的空白区域，导致面板内部空间使用不均，视觉重量失衡。"
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"每个面板的右下角均存在约占面板宽20%、高15%的空白区域，导致面板内部空间使用不均，视觉重量失衡。\"\n  },\n  \"confidence\": 0.95\n}",
+    "stage1_description": "{\n  \"n_panels\": 6,\n  \"panels\": [\n    {\n      \"id\": \"Motivation\",\n      \"position\": \"左上\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含红色标题和五个带编号的要点，文字为黑色，编号圆圈颜色不同。\"\n    },\n    {\n      \"id\": \"Problem\",\n      \"position\": \"中上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%，高约40%\",\n      \"notes\": \"包含红色标题、两个带编号的要点，以及一个表格，表格下方有说明文字。\"\n    },\n    {\n      \"id\": \"Method\",\n      \"position\": \"右上\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约60%，高约40%\",\n      \"notes\": \"包含蓝色标题、两个带编号的要点，以及一个模型架构图，图下方有说明文字。\"\n    },\n    {\n      \"id\": \"Experiments\",\n      \"position\": \"左下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约70%，高约40%\",\n      \"notes\": \"包含绿色标题、两个带编号的要点，以及一个表格，表格下方有说明文字。\"\n    },\n    {\n      \"id\": \"Results\",\n      \"position\": \"中下\",\n      \"density\": \"中\",\n      \"n_bullets\": 2,\n      \"has_figure\": true,\n      \"figure_size\": \"图占面板宽约80%，高约40%\",\n      \"notes\": \"包含绿色标题、两个带编号的要点，以及一个彩色表格，表格下方有说明文字。\"\n    },\n    {\n      \"id\": \"Conclusion\",\n      \"position\": \"右下\",\n      \"density\": \"中\",\n      \"n_bullets\": 5,\n      \"has_figure\": false,\n      \"figure_size\": null,\n      \"notes\": \"包含紫色标题和五个带编号的要点，文字为黑色，编号圆圈颜色不同。\"\n    }\n  ],\n  \"blank_regions\": [\n    {\n      \"panel_id\": \"Motivation\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽20%，高15%\"\n    },\n    {\n      \"panel_id\": \"Problem\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽20%，高15%\"\n    },\n    {\n      \"panel_id\": \"Method\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽20%，高15%\"\n    },\n    {\n      \"panel_id\": \"Experiments\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽20%，高15%\"\n    },\n    {\n      \"panel_id\": \"Results\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽20%，高15%\"\n    },\n    {\n      \"panel_id\": \"Conclusion\",\n      \"where\": \"右下角\",\n      \"approx_size\": \"约占面板宽20%，高15%\"\n    }\n  ],\n  \"grid_alig",
+    "template": "template_dashboard"
+  },
+  {
+    "run_id": "20260609_212513_EduIllustrate_Towards_Scalable_91ebd47f4903",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [],
+    "evidence": {
+      "primary": "Experiments面板下半部分有约占面板高度40%、宽度80%的空白区域，而Results面板的图表几乎占满整个面板，导致面板内部空间使用极不均衡。"
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"Experiments面板下半部分有约占面板高度40%、宽度80%的空白区域，而Results面板的图表几乎占满整个面板，导致面板内部空间使用极不均衡。\"\n  },\n  \"confidence\": 0.9\n}",
+    "stage1_description": "{\"n_panels\": 6, \"panels\": [{\"id\": \"Motivation\", \"position\": \"左上\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"标题下方有红色高亮文本，内容为'Evaluation of LLMs in education has primarily focused on question-answering and tutorin...'，后接5个带编号的bullet点。\"}, {\"id\": \"Method\", \"position\": \"中上\", \"density\": \"中\", \"n_bullets\": 3, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%，高约40%\", \"notes\": \"包含一个流程图，展示Edullustrate的生成协议，图下方有文字说明'Overview of Edullustrate. Given a K-12 STEM problem, the generation protocol...'\"}, {\"id\": \"Experiments\", \"position\": \"右上\", \"density\": \"松\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约60%，高约30%\", \"notes\": \"包含一个软件界面截图，下方有文字说明'Screenshot of the problem review interface used during human annotation. Anno...'\"}, {\"id\": \"Results\", \"position\": \"左下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约90%，高约50%\", \"notes\": \"包含三个雷达图，下方有文字说明'Radar charts of all 10 models. (a) By dimension: 8 evaluation dimensions. (b)...'\"}, {\"id\": \"Key Findings\", \"position\": \"中下\", \"density\": \"中\", \"n_bullets\": 2, \"has_figure\": true, \"figure_size\": \"图占面板宽约80%，高约40%\", \"notes\": \"包含一个对比图，展示sequential anchoring与baseline在视觉一致性上的差异，图下方有文字说明'Visual consistency comparison between our sequential anchoring workflow (top)...'\"}, {\"id\": \"Conclusion\", \"position\": \"右下\", \"density\": \"中\", \"n_bullets\": 5, \"has_figure\": false, \"figure_size\": null, \"notes\": \"包含5个带编号的bullet点，内容为结论和未来工作方向。\"}], \"blank_regions\": [{\"panel_id\": \"Experiments\", \"where\": \"面板下半部分\", \"approx_size\": \"约占面板高度的40%，宽度约80%\"}, {\"panel_id\": \"Conclusion\", \"where\": \"面板下半部分\", \"approx_size\": \"约占面板高度的30%，宽度约80%\"}], \"grid_alignment\": \"对齐良好，三列面板宽度基本一致，上下两行面板高度基本一致，无明显错位或留白不均。\", \"overall\": \"海报包含六个面板，分为上下两行三列，每个面板有标题、编号和内容，部分面板包含图表，整体布局规整，内容分布均匀。\"}",
+    "template": "template_dashboard"
+  }
+]

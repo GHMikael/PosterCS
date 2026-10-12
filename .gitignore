@@ -72,6 +72,23 @@ experiments/results/hydrate_test_rag/
 
 unattended-runs/
 
+# Frozen local history; recoverable from the dated archive snapshot.
+archive/
+
+# Research runtime and large reproducible binary artifacts.
+research/runs/
+research/tmp/
+research/.cache/
+research/data/formal/images/
+research/data/formal/natural/
+research/data/formal/controlled/
+research/data/rule-development/pairs/
+research/data/controlled/pairs/
+research/data/external/originals/
+research/data/external/images/
+research/results/predictions/
+research/results/stability/predictions/
+
 # Python caches + ad-hoc annotation backups (scratch)
 __pycache__/
 *.bak

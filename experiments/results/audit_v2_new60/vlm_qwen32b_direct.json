@@ -11,16 +11,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The bottom row of panels (Conclusion, Overview, Challenges) is misaligned with the top row, creating an uneven grid structure where the 'Overview' panel is noticeably narrower and offset, breaking the overall grid alignment.",
-      "secondary_issues": [
-        "In the 'Motivation' and 'Results' panels, bullet points are spaced too loosely while the 'Experiments' panel is densely packed, indicating internal space imbalance.",
-        "Multiple text boxes across panels (e.g., in 'Method', 'Experiments', 'Overview') contain truncated text with ellipses, indicating text overload."
-      ]
+      "primary": "The bottom row of panels (Conclusion, Overview, Challenges) is misaligned with the top row, creating a broken grid structure where the bottom panels do not align vertically with the top ones, and the 'Overview' panel is noticeably narrower than the others.",
+      "secondary": "The 'Method' panel contains a large, dense taxonomy figure that dominates the space, while the 'Results' panel is mostly empty, indicating internal space imbalance; additionally, many text boxes in the 'Overview' and 'Challenges' sections are truncated with ellipses, indicating text overload."
     },
-    "confidence": 0.9,
+    "confidence": 0.95,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"text_overload\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The bottom row of panels (Conclusion, Overview, Challenges) is misaligned with the top row, creating an uneven grid structure where the 'Overview' panel is noticeably narrower and offset, breaking the overall grid alignment.\",\n    \"secondary_issues\": [\n      \"In the 'Motivation' and 'Results' panels, bullet points are spaced too loosely while the 'Experiments' panel is densely packed, indicating internal space imbalance.\",\n      \"Multiple text boxes across panels (e.g., in 'Method', 'Experiments', 'Overview') contain truncated text with ellipses, indicating text overload.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"text_overload\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The bottom row of panels (Conclusion, Overview, Challenges) is misaligned with the top row, creating a broken grid structure where the bottom panels do not align vertically with the top ones, and the 'Overview' panel is noticeably narrower than the others.\",\n    \"secondary\": \"The 'Method' panel contains a large, dense taxonomy figure that dominates the space, while the 'Results' panel is mostly empty, indicating internal space imbalance; additionally, many text boxes in the 'Overview' and 'Challenges' sections are truncated with ellipses, indicating text overload.\"\n  },\n  \"confidence\": 0.95\n}",
     "template": "template_dashboard"
   },
   {
@@ -29,20 +26,20 @@
     "primary_issue": "hierarchy_emphasis_error",
     "secondary_issues": [
       "space_imbalance",
-      "structure_alignment_error"
+      "asset_too_small"
     ],
     "guard_violations": [],
     "evidence": {
-      "primary": "The section headers use inconsistent colors and font weights, and the main title is not visually distinct from other headings, making it hard to identify the focal point; the conclusion section's text is also emphasized with purple, distracting from the core content.",
+      "primary": "The section headers (e.g., 'Motivation', 'Method') are visually identical in size and style, creating no clear visual hierarchy or focal point, making it difficult for the reader to prioritize content.",
       "secondary_issues": [
-        "The 'Motivation' panel has sparse content with large white space, while the 'Results' panel is densely packed with text and a table, creating internal space imbalance.",
-        "The grid structure is misaligned: the 'Experiments' and 'Results' panels have different widths and are not aligned with the top row, and the bottom footer is not centered with the main content grid."
+        "The 'Motivation' panel has sparse content with large gaps between bullet points, while the 'Results' panel is densely packed with text and a table, indicating uneven space usage within panels.",
+        "The figure in the 'Method' panel is too small to clearly read its content, especially the text within the diagram boxes."
       ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"hierarchy_emphasis_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The section headers use inconsistent colors and font weights, and the main title is not visually distinct from other headings, making it hard to identify the focal point; the conclusion section's text is also emphasized with purple, distracting from the core content.\",\n    \"secondary_issues\": [\n      \"The 'Motivation' panel has sparse content with large white space, while the 'Results' panel is densely packed with text and a table, creating internal space imbalance.\",\n      \"The grid structure is misaligned: the 'Experiments' and 'Results' panels have different widths and are not aligned with the top row, and the bottom footer is not centered with the main content grid.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"hierarchy_emphasis_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The section headers (e.g., 'Motivation', 'Method') are visually identical in size and style, creating no clear visual hierarchy or focal point, making it difficult for the reader to prioritize content.\",\n    \"secondary_issues\": [\n      \"The 'Motivation' panel has sparse content with large gaps between bullet points, while the 'Results' panel is densely packed with text and a table, indicating uneven space usage within panels.\",\n      \"The figure in the 'Method' panel is too small to clearly read its content, especially the text within the diagram boxes.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -57,16 +54,16 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation / Background' and 'Problem / Challenge' panels have very sparse content with large empty spaces, while the 'Experiments / Results' panel is densely packed with tables and text, creating a severe imbalance in visual weight within panels.",
+      "primary": "The 'Experiments / Results' panel is visually dominated by a large table that occupies most of its space, while the 'Key Findings' panel has a small table and much empty space, creating an uneven distribution of content within panels.",
       "secondary_issues": [
-        "Text in the 'Method / Framework' and 'Conclusion / Takeaways' panels is truncated (e.g., '...'), indicating text_overload.",
-        "The large, bold title at the top and the numbered circular icons in each panel draw equal attention, making it hard to identify a clear focal point, indicating hierarchy_emphasis_error."
+        "Text in the 'Motivation / Background' and 'Problem / Challenge' panels is truncated (e.g., 'perf...' and 'u...'), indicating text_overload.",
+        "The section headers and numbered bullet points are visually similar across all panels, making it difficult to distinguish the main content from supporting points, indicating hierarchy_emphasis_error."
       ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"text_overload\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' and 'Problem / Challenge' panels have very sparse content with large empty spaces, while the 'Experiments / Results' panel is densely packed with tables and text, creating a severe imbalance in visual weight within panels.\",\n    \"secondary_issues\": [\n      \"Text in the 'Method / Framework' and 'Conclusion / Takeaways' panels is truncated (e.g., '...'), indicating text_overload.\",\n      \"The large, bold title at the top and the numbered circular icons in each panel draw equal attention, making it hard to identify a clear focal point, indicating hierarchy_emphasis_error.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"text_overload\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Experiments / Results' panel is visually dominated by a large table that occupies most of its space, while the 'Key Findings' panel has a small table and much empty space, creating an uneven distribution of content within panels.\",\n    \"secondary_issues\": [\n      \"Text in the 'Motivation / Background' and 'Problem / Challenge' panels is truncated (e.g., 'perf...' and 'u...'), indicating text_overload.\",\n      \"The section headers and numbered bullet points are visually similar across all panels, making it difficult to distinguish the main content from supporting points, indicating hierarchy_emphasis_error.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -80,13 +77,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Method / Framework' panel (3) contains a large figure that dominates its space, leaving minimal room for text, while the 'Motivation / Background' (1) and 'Problem / Challenge' (2) panels have sparse content with excessive white space between bullet points, creating uneven visual weight within panels.",
-      "secondary": "The section headers are visually similar in size and style, making it difficult to distinguish the main flow; the 'Conclusion / Takeaways' panel (6) has a longer list of points that visually overemphasizes its content compared to other sections."
+      "primary": "The 'Method / Framework' panel (3) contains a large figure that dominates its space, leaving minimal room for text, while the 'Motivation / Background' panel (1) has sparse content with large gaps between bullet points, creating uneven visual weight within panels.",
+      "secondary": "The section headers are all identical in size and color, making it difficult to distinguish the main flow; the large figure in panel 3 draws disproportionate attention away from the textual method description."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method / Framework' panel (3) contains a large figure that dominates its space, leaving minimal room for text, while the 'Motivation / Background' (1) and 'Problem / Challenge' (2) panels have sparse content with excessive white space between bullet points, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers are visually similar in size and style, making it difficult to distinguish the main flow; the 'Conclusion / Takeaways' panel (6) has a longer list of points that visually overemphasizes its content compared to other sections.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method / Framework' panel (3) contains a large figure that dominates its space, leaving minimal room for text, while the 'Motivation / Background' panel (1) has sparse content with large gaps between bullet points, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers are all identical in size and color, making it difficult to distinguish the main flow; the large figure in panel 3 draws disproportionate attention away from the textual method description.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -94,17 +91,21 @@
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
     "primary_issue": "space_imbalance",
     "secondary_issues": [
-      "asset_too_small"
+      "asset_too_small",
+      "hierarchy_emphasis_error"
     ],
     "guard_violations": [],
     "evidence": {
-      "primary": "The 'Method' panel (panel 3) has a large empty space below the text and figure, while the 'Motivation' and 'Problem' panels are densely packed with text, creating a severe visual imbalance within the top row.",
-      "asset_too_small": "The prompt template figure in the 'Method' panel is too small to read its content clearly."
+      "primary": "The 'Method' panel (3) has a large empty space below the text and figure, while the 'Motivation' (1) and 'Problem' (2) panels are densely packed with text, creating a severe visual imbalance within the top row.",
+      "secondary_issues": [
+        "The prompt template figure in the 'Method' panel is too small to read its content clearly.",
+        "The section headers (e.g., 'Motivation', 'Problem') use the same size and style, making it hard to distinguish the main flow or focal point, indicating a hierarchy emphasis error."
+      ]
     },
-    "confidence": 0.95,
+    "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"asset_too_small\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel (panel 3) has a large empty space below the text and figure, while the 'Motivation' and 'Problem' panels are densely packed with text, creating a severe visual imbalance within the top row.\",\n    \"asset_too_small\": \"The prompt template figure in the 'Method' panel is too small to read its content clearly.\"\n  },\n  \"confidence\": 0.95\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"asset_too_small\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel (3) has a large empty space below the text and figure, while the 'Motivation' (1) and 'Problem' (2) panels are densely packed with text, creating a severe visual imbalance within the top row.\",\n    \"secondary_issues\": [\n      \"The prompt template figure in the 'Method' panel is too small to read its content clearly.\",\n      \"The section headers (e.g., 'Motivation', 'Problem') use the same size and style, making it hard to distinguish the main flow or focal point, indicating a hierarchy emphasis error.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -119,19 +120,19 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation / Background' panel has very loose spacing between bullet points and large empty space below, while the 'Experiments / Results' panel is densely packed with a large table, creating a severe imbalance in visual weight within panels.",
+      "primary": "The 'Motivation / Background' panel has large empty space below its bullet points, while the 'Experiments / Results' panel is densely packed with a large table, creating significant internal space imbalance within panels.",
       "secondary_issues": [
-        "The section headers (e.g., 'Key Findings') are visually emphasized with large, bold text, but the content below lacks corresponding visual hierarchy, making the header appear disproportionately dominant.",
-        "The figure in the 'Method / Framework' panel is too small to clearly read its labels and components, especially the text within the diagram boxes."
+        "The section headers (e.g., 'Key Findings') use the same size and style as the main title, creating a hierarchy emphasis error by failing to establish a clear visual hierarchy.",
+        "The figure in the 'Method / Framework' panel is too small to clearly read its labels and components, indicating asset_too_small."
       ],
       "guard_violations": [
-        "Text in the 'Motivation / Background' panel is clipped at the bottom, showing an ellipsis ('...') for the first bullet point."
+        "Text in the 'Motivation / Background' panel is clipped (e.g., 'knowledge hall...'), indicating overflow_guard."
       ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel has very loose spacing between bullet points and large empty space below, while the 'Experiments / Results' panel is densely packed with a large table, creating a severe imbalance in visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Key Findings') are visually emphasized with large, bold text, but the content below lacks corresponding visual hierarchy, making the header appear disproportionately dominant.\",\n      \"The figure in the 'Method / Framework' panel is too small to clearly read its labels and components, especially the text within the diagram boxes.\"\n    ],\n    \"guard_violations\": [\n      \"Text in the 'Motivation / Background' panel is clipped at the bottom, showing an ellipsis ('...') for the first bullet point.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel has large empty space below its bullet points, while the 'Experiments / Results' panel is densely packed with a large table, creating significant internal space imbalance within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Key Findings') use the same size and style as the main title, creating a hierarchy emphasis error by failing to establish a clear visual hierarchy.\",\n      \"The figure in the 'Method / Framework' panel is too small to clearly read its labels and components, indicating asset_too_small.\"\n    ],\n    \"guard_violations\": [\n      \"Text in the 'Motivation / Background' panel is clipped (e.g., 'knowledge hall...'), indicating overflow_guard.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -145,15 +146,15 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Experiments' panel is densely packed with text and a large table, creating a significant visual imbalance within panels.",
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Experiments' panel is densely packed with text and a large table, creating a severe visual imbalance within panels.",
       "secondary_issues": [
-        "The section headers (e.g., 'Method', 'Experiments') are visually similar in size and color, making it hard to distinguish the main flow of the poster, indicating a hierarchy emphasis error."
+        "The section headers (e.g., 'Method', 'Experiments') are visually similar in size and color, making it hard to distinguish the main flow; the large red '1' in Motivation also draws undue attention away from the content."
       ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Experiments' panel is densely packed with text and a large table, creating a significant visual imbalance within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Method', 'Experiments') are visually similar in size and color, making it hard to distinguish the main flow of the poster, indicating a hierarchy emphasis error.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Experiments' panel is densely packed with text and a large table, creating a severe visual imbalance within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Method', 'Experiments') are visually similar in size and color, making it hard to distinguish the main flow; the large red '1' in Motivation also draws undue attention away from the content.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -165,13 +166,13 @@
     ],
     "guard_violations": [],
     "evidence": {
-      "primary": "The 'Motivation' and 'Problem' panels have significantly more empty space and loosely spaced bullet points compared to the 'Experiments' and 'Results' panels, which are densely packed with text and figures, creating a lopsided visual weight within the grid.",
-      "secondary": "The 'Conclusion' section header is emphasized with a purple accent, drawing attention away from the main content, and the section numbers (e.g., 1, 2, 3) are visually prominent, potentially distracting from the core message."
+      "primary": "The 'Motivation' and 'Problem' panels have significantly more empty space and loosely spaced bullet points compared to the 'Method' and 'Results' panels, which are densely packed, creating a lopsided visual weight across the top row.",
+      "secondary": "The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' and 'Problem' panels have significantly more empty space and loosely spaced bullet points compared to the 'Experiments' and 'Results' panels, which are densely packed with text and figures, creating a lopsided visual weight within the grid.\",\n    \"secondary\": \"The 'Conclusion' section header is emphasized with a purple accent, drawing attention away from the main content, and the section numbers (e.g., 1, 2, 3) are visually prominent, potentially distracting from the core message.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' and 'Problem' panels have significantly more empty space and loosely spaced bullet points compared to the 'Method' and 'Results' panels, which are densely packed, creating a lopsided visual weight across the top row.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -186,13 +187,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Experiments' panel (panel 4) is significantly narrower than the other panels, creating a misaligned grid structure and leaving a large blank space on the right side of the top row.",
-      "secondary": "The 'Motivation' and 'Problem' panels have uneven internal spacing with some bullet points too close together while others are spaced out; the table in 'Experiments' is too small to read clearly."
+      "primary": "The bottom row of panels (Key Findings, Conclusion, Overview) is misaligned with the top row, with the 'Overview' panel extending too far to the right and not aligning with the grid structure of the top row.",
+      "secondary": "The 'Experiments' panel has a large table that is too small to read, and the 'Key Findings' panel has uneven spacing between its bullet points and the figure below, creating internal space imbalance."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Experiments' panel (panel 4) is significantly narrower than the other panels, creating a misaligned grid structure and leaving a large blank space on the right side of the top row.\",\n    \"secondary\": \"The 'Motivation' and 'Problem' panels have uneven internal spacing with some bullet points too close together while others are spaced out; the table in 'Experiments' is too small to read clearly.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The bottom row of panels (Key Findings, Conclusion, Overview) is misaligned with the top row, with the 'Overview' panel extending too far to the right and not aligning with the grid structure of the top row.\",\n    \"secondary\": \"The 'Experiments' panel has a large table that is too small to read, and the 'Key Findings' panel has uneven spacing between its bullet points and the figure below, creating internal space imbalance.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -204,55 +205,55 @@
     ],
     "guard_violations": [],
     "evidence": {
-      "primary": "The 'Method' panel contains a large, dense figure that occupies most of its space, while the 'Motivation' and 'Problem' panels have significant empty space below their bullet points, creating uneven visual weight within panels.",
-      "secondary": "The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and color, making it difficult to distinguish the main flow or focal point of the poster."
+      "primary": "The 'Method' panel contains a large figure that occupies most of its space, leaving minimal room for text, while the 'Motivation' and 'Problem' panels have sparse content with excessive white space, creating uneven visual weight within panels.",
+      "secondary": "The section headers use different colored circles (red, green, purple) which draw attention away from the content, and the 'Conclusion' section's title is emphasized with a purple font that competes with the main title for visual focus."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel contains a large, dense figure that occupies most of its space, while the 'Motivation' and 'Problem' panels have significant empty space below their bullet points, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and color, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel contains a large figure that occupies most of its space, leaving minimal room for text, while the 'Motivation' and 'Problem' panels have sparse content with excessive white space, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers use different colored circles (red, green, purple) which draw attention away from the content, and the 'Conclusion' section's title is emphasized with a purple font that competes with the main title for visual focus.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
     "run_id": "20260609_025105_Crossing_the_Reward_Bridge_Exp_3931671c5534",
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
-    "primary_issue": "space_imbalance",
+    "primary_issue": "structure_alignment_error",
     "secondary_issues": [
-      "hierarchy_emphasis_error"
+      "space_imbalance",
+      "asset_too_small"
     ],
     "guard_violations": [
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Method' and 'Experiments' panels contain large empty white space around their figures and text, while the 'Motivation' and 'Problem' panels are densely packed with bullet points, creating a lopsided visual weight across the grid.",
-      "secondary_issues": [
-        "The large, colorful numbered circles (e.g., 1, 2, 3, 4, 5, 6) are overly emphasized, drawing attention away from the content and disrupting the visual hierarchy."
-      ]
+      "primary": "The poster's grid structure is broken: the rightmost column is significantly wider than the left two, and the bottom row panels are misaligned with the top row, creating an unbalanced and visually disjointed layout.",
+      "secondary": "The 'Method' and 'Experiments' panels have uneven spacing between bullet points and figures, and the figures in 'Method' and 'Results' are too small to discern details."
     },
-    "confidence": 0.9,
+    "confidence": 0.95,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' and 'Experiments' panels contain large empty white space around their figures and text, while the 'Motivation' and 'Problem' panels are densely packed with bullet points, creating a lopsided visual weight across the grid.\",\n    \"secondary_issues\": [\n      \"The large, colorful numbered circles (e.g., 1, 2, 3, 4, 5, 6) are overly emphasized, drawing attention away from the content and disrupting the visual hierarchy.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The poster's grid structure is broken: the rightmost column is significantly wider than the left two, and the bottom row panels are misaligned with the top row, creating an unbalanced and visually disjointed layout.\",\n    \"secondary\": \"The 'Method' and 'Experiments' panels have uneven spacing between bullet points and figures, and the figures in 'Method' and 'Results' are too small to discern details.\"\n  },\n  \"confidence\": 0.95\n}",
     "template": "template_storyflow"
   },
   {
     "run_id": "20260609_025220_Is_Chain-of-Thought_Reasoning__0a77c3c5f24d",
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
-    "primary_issue": "space_imbalance",
+    "primary_issue": "structure_alignment_error",
     "secondary_issues": [
+      "space_imbalance",
       "hierarchy_emphasis_error"
     ],
     "guard_violations": [
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation' panel (1) is densely packed with text and bullet points, while the 'Experiments' (3) and 'Results' (4) panels have large empty spaces above their figures and text, creating a severe visual imbalance within panels.",
-      "secondary": "The large, colorful numbered circles (e.g., 1, 2, 3, 4, 5, 6) are visually dominant and draw attention away from the content, especially in the 'Conclusion' panel where the number 6 is oversized relative to the text."
+      "primary": "The rightmost column of panels (Results, Conclusion) is visually misaligned with the left and center columns, creating a broken grid structure with uneven spacing and unbalanced column widths.",
+      "secondary": "The 'Motivation' panel has overly loose bullet spacing while the 'Key Findings' panel is densely packed; section headers (e.g., 'Results', 'Conclusion') are visually similar in size and style, reducing visual hierarchy and focal point clarity."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel (1) is densely packed with text and bullet points, while the 'Experiments' (3) and 'Results' (4) panels have large empty spaces above their figures and text, creating a severe visual imbalance within panels.\",\n    \"secondary\": \"The large, colorful numbered circles (e.g., 1, 2, 3, 4, 5, 6) are visually dominant and draw attention away from the content, especially in the 'Conclusion' panel where the number 6 is oversized relative to the text.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Results, Conclusion) is visually misaligned with the left and center columns, creating a broken grid structure with uneven spacing and unbalanced column widths.\",\n    \"secondary\": \"The 'Motivation' panel has overly loose bullet spacing while the 'Key Findings' panel is densely packed; section headers (e.g., 'Results', 'Conclusion') are visually similar in size and style, reducing visual hierarchy and focal point clarity.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_storyflow"
   },
   {
@@ -266,13 +267,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Method / Framework' panel (3) has a large empty space below its figure and bullet points, while the 'Conclusion / Takeaways' panel (6) is densely packed with text, creating a significant imbalance in visual weight within panels.",
-      "secondary": "The section headers (e.g., 'Motivation / Background') are visually similar in size and style to the main title, reducing the visual hierarchy and making it hard to distinguish the main title as the focal point."
+      "primary": "The 'Method / Framework' panel (3) has a large empty space below its figure and bullet points, while the 'Conclusion / Takeaways' panel (6) is densely packed with text, creating a severe imbalance in visual weight within panels.",
+      "secondary": "The large, colorful numbered circles (e.g., 1, 2, 3, 4, 5, 6) are overly emphasized, drawing attention away from the content and disrupting the visual hierarchy."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method / Framework' panel (3) has a large empty space below its figure and bullet points, while the 'Conclusion / Takeaways' panel (6) is densely packed with text, creating a significant imbalance in visual weight within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation / Background') are visually similar in size and style to the main title, reducing the visual hierarchy and making it hard to distinguish the main title as the focal point.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method / Framework' panel (3) has a large empty space below its figure and bullet points, while the 'Conclusion / Takeaways' panel (6) is densely packed with text, creating a severe imbalance in visual weight within panels.\",\n    \"secondary\": \"The large, colorful numbered circles (e.g., 1, 2, 3, 4, 5, 6) are overly emphasized, drawing attention away from the content and disrupting the visual hierarchy.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_storyflow"
   },
   {
@@ -280,21 +281,26 @@
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
     "primary_issue": "space_imbalance",
     "secondary_issues": [
-      "hierarchy_emphasis_error",
+      "text_overload",
       "asset_too_small"
     ],
     "guard_violations": [
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation' and 'Problem' panels have very sparse content with large empty spaces between bullet points, while the 'Experiments' panel is densely packed with text and a small figure, creating a severe imbalance in visual weight within panels.",
-      "hierarchy_emphasis_error": "The section headers are all identical in size and color, making it difficult to distinguish the main flow or focal point of the poster.",
-      "asset_too_small": "The figure in the 'Experiments' panel is too small to read its content clearly, especially the text within the example instance."
+      "primary": "The 'Motivation' and 'Problem' panels have very sparse content with large empty spaces between bullet points, while the 'Experiments' panel is densely packed with text and a small, hard-to-read figure, creating severe internal space imbalance within panels.",
+      "secondary_issues": [
+        "Text in the 'Motivation' and 'Problem' panels is truncated (e.g., 'for d...'), indicating text_overload or overflow.",
+        "The figure in the 'Experiments' panel is rendered too small to read its content clearly, indicating asset_too_small."
+      ],
+      "guard_violations": [
+        "Text in the 'Motivation' panel is clipped (e.g., 'for d...'), violating overflow_guard."
+      ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' and 'Problem' panels have very sparse content with large empty spaces between bullet points, while the 'Experiments' panel is densely packed with text and a small figure, creating a severe imbalance in visual weight within panels.\",\n    \"hierarchy_emphasis_error\": \"The section headers are all identical in size and color, making it difficult to distinguish the main flow or focal point of the poster.\",\n    \"asset_too_small\": \"The figure in the 'Experiments' panel is too small to read its content clearly, especially the text within the example instance.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"text_overload\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' and 'Problem' panels have very sparse content with large empty spaces between bullet points, while the 'Experiments' panel is densely packed with text and a small, hard-to-read figure, creating severe internal space imbalance within panels.\",\n    \"secondary_issues\": [\n      \"Text in the 'Motivation' and 'Problem' panels is truncated (e.g., 'for d...'), indicating text_overload or overflow.\",\n      \"The figure in the 'Experiments' panel is rendered too small to read its content clearly, indicating asset_too_small.\"\n    ],\n    \"guard_violations\": [\n      \"Text in the 'Motivation' panel is clipped (e.g., 'for d...'), violating overflow_guard.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -309,16 +315,16 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The large, bold, purple title in the Conclusion section ('Constitutional AI is a promising approach...') is visually dominant and抢夺s attention from the main content, creating a misaligned visual hierarchy where decorative text overshadows key findings.",
+      "primary": "The large, colorful section headers and numbered bullet points create visual noise, while the bottom banner's bold text competes with the main content for attention, obscuring the natural reading flow and focal point.",
       "secondary_issues": [
-        "In the Motivation section, bullet points are spaced too loosely, while the Method section's diagram and text are tightly packed, creating internal space imbalance.",
-        "The grid structure is misaligned: the 'Results' and 'Key Findings' panels are not vertically aligned with their headers, and the bottom footer is not centered or proportionally balanced with the main content grid."
+        "space_imbalance: The 'Motivation' panel has sparse content with large gaps between bullet points, while the 'Conclusion' panel is densely packed, creating uneven visual weight within panels.",
+        "structure_alignment_error: The three columns are not perfectly aligned at the top and bottom; the 'Results' and 'Key Findings' panels have inconsistent vertical spacing relative to their headers, and the bottom banner is misaligned with the grid."
       ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"hierarchy_emphasis_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"structure_alignment_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The large, bold, purple title in the Conclusion section ('Constitutional AI is a promising approach...') is visually dominant and抢夺s attention from the main content, creating a misaligned visual hierarchy where decorative text overshadows key findings.\",\n    \"secondary_issues\": [\n      \"In the Motivation section, bullet points are spaced too loosely, while the Method section's diagram and text are tightly packed, creating internal space imbalance.\",\n      \"The grid structure is misaligned: the 'Results' and 'Key Findings' panels are not vertically aligned with their headers, and the bottom footer is not centered or proportionally balanced with the main content grid.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"hierarchy_emphasis_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"structure_alignment_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The large, colorful section headers and numbered bullet points create visual noise, while the bottom banner's bold text competes with the main content for attention, obscuring the natural reading flow and focal point.\",\n    \"secondary_issues\": [\n      \"space_imbalance: The 'Motivation' panel has sparse content with large gaps between bullet points, while the 'Conclusion' panel is densely packed, creating uneven visual weight within panels.\",\n      \"structure_alignment_error: The three columns are not perfectly aligned at the top and bottom; the 'Results' and 'Key Findings' panels have inconsistent vertical spacing relative to their headers, and the bottom banner is misaligned with the grid.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -332,15 +338,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is densely packed with text and a table, creating a lopsided visual weight across the top row.",
-      "secondary_issues": [
-        "The section headers (e.g., 'Motivation', 'Problem') use the same size and color, making it hard to distinguish the main flow or focal point of the poster."
-      ]
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is densely packed with text and a table, creating uneven visual weight within panels.",
+      "secondary": "The section headers (e.g., 'Motivation', 'Problem') use the same size and color, making it hard to distinguish the main flow; the 'Conclusion' section's bullet points are visually less prominent than others."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is densely packed with text and a table, creating a lopsided visual weight across the top row.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Problem') use the same size and color, making it hard to distinguish the main flow or focal point of the poster.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is densely packed with text and a table, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Problem') use the same size and color, making it hard to distinguish the main flow; the 'Conclusion' section's bullet points are visually less prominent than others.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -352,13 +356,13 @@
     ],
     "guard_violations": [],
     "evidence": {
-      "primary": "The 'Method / Framework' panel has a large empty space below its figure and bullet points, while the 'Motivation / Background' panel is densely packed, creating uneven visual weight within panels.",
-      "secondary": "The section headers (e.g., 'Motivation / Background') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster."
+      "primary": "The 'Method / Framework' panel has a large empty space below the figure and bullet points, while the 'Motivation / Background' panel is densely packed, creating uneven visual weight within panels.",
+      "secondary": "The section headers (e.g., 'Method / Framework') are visually emphasized with large numbers and colored circles, drawing attention away from the core content and creating a distracting hierarchy."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method / Framework' panel has a large empty space below its figure and bullet points, while the 'Motivation / Background' panel is densely packed, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation / Background') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method / Framework' panel has a large empty space below the figure and bullet points, while the 'Motivation / Background' panel is densely packed, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Method / Framework') are visually emphasized with large numbers and colored circles, drawing attention away from the core content and creating a distracting hierarchy.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_storyflow"
   },
   {
@@ -372,33 +376,35 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation' panel has significantly more content and tighter spacing than the 'Research Problem' and 'Method' panels, which appear visually lighter and more spaced out, creating an uneven visual weight across the top row.",
-      "secondary_issues": [
-        "The section headers (e.g., 'Motivation', 'Research Problem') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster."
-      ]
+      "primary": "The 'Motivation' panel has significantly more content and visual weight than the 'Research Problem' and 'Method' panels, which appear sparse and underutilized, creating an uneven distribution of space within the top row.",
+      "secondary": "The section headers (e.g., 'Motivation', 'Research Problem') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has significantly more content and tighter spacing than the 'Research Problem' and 'Method' panels, which appear visually lighter and more spaced out, creating an uneven visual weight across the top row.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Research Problem') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has significantly more content and visual weight than the 'Research Problem' and 'Method' panels, which appear sparse and underutilized, creating an uneven distribution of space within the top row.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Research Problem') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
     "run_id": "20260609_030306_Agent-as-a-Judge_Evaluate_Agen_1dee0b26a38b",
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
-    "primary_issue": "space_imbalance",
+    "primary_issue": "hierarchy_emphasis_error",
     "secondary_issues": [
-      "hierarchy_emphasis_error"
+      "space_imbalance",
+      "structure_alignment_error"
     ],
     "guard_violations": [],
     "evidence": {
-      "primary": "The 'Motivation' and 'Problem' panels have significantly more white space and loosely spaced bullet points compared to the 'Method' and 'Conclusion' panels, which are densely packed, creating a lopsided visual weight across the top row.",
-      "secondary": "The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster."
+      "primary": "The 'Conclusion' section uses a purple font for its main text, which visually competes with the title and draws attention away from the central content, creating a confusing visual hierarchy.",
+      "secondary_issues": [
+        "space_imbalance: The 'Motivation' and 'Problem' panels have significantly more white space and loosely spaced bullet points compared to the densely packed 'Results' and 'Conclusion' panels.",
+        "structure_alignment_error: The bottom row of panels is not aligned; the 'Experiments' and 'Results' panels are shorter than the 'Conclusion' panel, creating an uneven grid structure."
+      ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' and 'Problem' panels have significantly more white space and loosely spaced bullet points compared to the 'Method' and 'Conclusion' panels, which are densely packed, creating a lopsided visual weight across the top row.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"hierarchy_emphasis_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"structure_alignment_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Conclusion' section uses a purple font for its main text, which visually competes with the title and draws attention away from the central content, creating a confusing visual hierarchy.\",\n    \"secondary_issues\": [\n      \"space_imbalance: The 'Motivation' and 'Problem' panels have significantly more white space and loosely spaced bullet points compared to the densely packed 'Results' and 'Conclusion' panels.\",\n      \"structure_alignment_error: The bottom row of panels is not aligned; the 'Experiments' and 'Results' panels are shorter than the 'Conclusion' panel, creating an uneven grid structure.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -414,14 +420,14 @@
       "crop_guard"
     ],
     "evidence": {
-      "primary": "The 'Experiments' panel is densely packed with a large table and text, while the 'Results' panel has a large figure with significant empty space around it, creating a severe imbalance in visual weight within panels.",
-      "hierarchy_emphasis_error": "The section headers (e.g., 'Motivation', 'Method') are all styled identically, making it difficult to distinguish the main flow or prioritize content; the large, colorful diagram in 'Method' draws more attention than the key results.",
-      "asset_too_small": "The diagram in the 'HelloEval' section is too small to clearly read the labels and flow, especially the text inside the boxes and arrows."
+      "primary": "The 'Experiments' panel is densely packed with a large table and text, while the 'Results' panel has a large figure with significant empty space around it, creating a lopsided visual weight across the top row.",
+      "hierarchy_emphasis_error": "The section headers (e.g., 'Motivation', 'Method') are visually similar in size and style, making it hard to distinguish the main flow or focal point of the poster.",
+      "asset_too_small": "The diagram in the 'HelloEval' section is rendered too small to clearly read its labels and components."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\", \"crop_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Experiments' panel is densely packed with a large table and text, while the 'Results' panel has a large figure with significant empty space around it, creating a severe imbalance in visual weight within panels.\",\n    \"hierarchy_emphasis_error\": \"The section headers (e.g., 'Motivation', 'Method') are all styled identically, making it difficult to distinguish the main flow or prioritize content; the large, colorful diagram in 'Method' draws more attention than the key results.\",\n    \"asset_too_small\": \"The diagram in the 'HelloEval' section is too small to clearly read the labels and flow, especially the text inside the boxes and arrows.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\", \"crop_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Experiments' panel is densely packed with a large table and text, while the 'Results' panel has a large figure with significant empty space around it, creating a lopsided visual weight across the top row.\",\n    \"hierarchy_emphasis_error\": \"The section headers (e.g., 'Motivation', 'Method') are visually similar in size and style, making it hard to distinguish the main flow or focal point of the poster.\",\n    \"asset_too_small\": \"The diagram in the 'HelloEval' section is rendered too small to clearly read its labels and components.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -435,13 +441,15 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation / Background' and 'Problem / Challenge' panels have dense, tightly packed bullet points, while the 'Method / Framework' panel has a large figure and sparse text, creating a significant visual imbalance in space usage within panels.",
-      "secondary": "The section headers are visually uniform in size and color, making it difficult to distinguish the main flow or focal point of the poster, indicating a hierarchy emphasis error."
+      "primary": "The 'Motivation / Background' and 'Problem / Challenge' panels have densely packed bullet points with tight spacing, while the 'Method / Framework' panel has a large figure and sparse text, creating a visual imbalance within the top row.",
+      "secondary_issues": [
+        "The section headers (e.g., 'Key Findings') use the same size and color as other headers, making it difficult to distinguish the main content flow; the large blue footer also competes for attention with the main panels."
+      ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' and 'Problem / Challenge' panels have dense, tightly packed bullet points, while the 'Method / Framework' panel has a large figure and sparse text, creating a significant visual imbalance in space usage within panels.\",\n    \"secondary\": \"The section headers are visually uniform in size and color, making it difficult to distinguish the main flow or focal point of the poster, indicating a hierarchy emphasis error.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' and 'Problem / Challenge' panels have densely packed bullet points with tight spacing, while the 'Method / Framework' panel has a large figure and sparse text, creating a visual imbalance within the top row.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Key Findings') use the same size and color as other headers, making it difficult to distinguish the main content flow; the large blue footer also competes for attention with the main panels.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -455,13 +463,15 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Method' panel is densely packed with text and a large figure, creating uneven visual weight within panels.",
-      "secondary": "The section headers (e.g., 'Key Findings', 'Conclusion') use colored circles that are visually prominent and compete with the content for attention, disrupting the visual hierarchy."
+      "primary": "The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Method' panel is densely packed with text and a large figure, creating a lopsided visual weight across panels.",
+      "secondary_issues": [
+        "The section headers (e.g., 'Motivation', 'Method') are visually identical in size and color, making it difficult to distinguish the main flow or focal point of the poster."
+      ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Method' panel is densely packed with text and a large figure, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Key Findings', 'Conclusion') use colored circles that are visually prominent and compete with the content for attention, disrupting the visual hierarchy.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Method' panel is densely packed with text and a large figure, creating a lopsided visual weight across panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Method') are visually identical in size and color, making it difficult to distinguish the main flow or focal point of the poster.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -469,19 +479,26 @@
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
     "primary_issue": "space_imbalance",
     "secondary_issues": [
-      "hierarchy_emphasis_error"
+      "hierarchy_emphasis_error",
+      "asset_too_small"
     ],
     "guard_violations": [
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation' panel has very loose spacing between bullet points and large empty areas, while the 'Results' panel is densely packed with a large table, creating a severe imbalance in visual weight within panels.",
-      "secondary": "The section headers (e.g., 'State-of-the-Art Performance') use large, bold, colored text that draws more attention than the main content, disrupting the visual hierarchy."
+      "primary": "The 'Motivation' panel has very loose spacing between bullet points and large empty areas, while the 'Method' panel is densely packed with text and a figure, creating a lopsided visual weight across the top row.",
+      "secondary_issues": [
+        "The section headers (e.g., 'State-of-the-Art Performance') use a different, less prominent color than the main section titles, reducing visual hierarchy and making the conclusion less emphasized.",
+        "The figure in the 'Method' panel is too small to clearly read its labels and components, especially the text in the 'Inference' sub-panel."
+      ],
+      "guard_violations": [
+        "Text in the 'Conclusion' section is clipped at the bottom, particularly the last bullet point, indicating overflow."
+      ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has very loose spacing between bullet points and large empty areas, while the 'Results' panel is densely packed with a large table, creating a severe imbalance in visual weight within panels.\",\n    \"secondary\": \"The section headers (e.g., 'State-of-the-Art Performance') use large, bold, colored text that draws more attention than the main content, disrupting the visual hierarchy.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has very loose spacing between bullet points and large empty areas, while the 'Method' panel is densely packed with text and a figure, creating a lopsided visual weight across the top row.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'State-of-the-Art Performance') use a different, less prominent color than the main section titles, reducing visual hierarchy and making the conclusion less emphasized.\",\n      \"The figure in the 'Method' panel is too small to clearly read its labels and components, especially the text in the 'Inference' sub-panel.\"\n    ],\n    \"guard_violations\": [\n      \"Text in the 'Conclusion' section is clipped at the bottom, particularly the last bullet point, indicating overflow.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -491,19 +508,15 @@
     "secondary_issues": [
       "hierarchy_emphasis_error"
     ],
-    "guard_violations": [
-      "overflow_guard"
-    ],
+    "guard_violations": [],
     "evidence": {
       "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels.",
-      "secondary_issues": [
-        "The section headers (e.g., 'Motivation', 'Method') use the same size and color, making it hard to distinguish the main flow or focal point of the poster."
-      ]
+      "secondary_issues": "The section headers (e.g., 'Motivation', 'Method') are visually similar in size and color, making it hard to distinguish the main flow or focal point of the poster."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Method') use the same size and color, making it hard to distinguish the main flow or focal point of the poster.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels.\",\n    \"secondary_issues\": \"The section headers (e.g., 'Motivation', 'Method') are visually similar in size and color, making it hard to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -516,12 +529,12 @@
     "guard_violations": [],
     "evidence": {
       "primary": "The 'Experiments / Results' panel contains a large table that dominates its space, while the 'Key Findings' and 'Conclusion / Takeaways' panels have sparse content with excessive white space, creating a lopsided visual weight across the grid.",
-      "secondary": "The section headers are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster."
+      "secondary": "The section headers are visually uniform in size and color, making it difficult to distinguish the main flow or focal point of the poster, and the large red title at the top may draw too much attention away from the content."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Experiments / Results' panel contains a large table that dominates its space, while the 'Key Findings' and 'Conclusion / Takeaways' panels have sparse content with excessive white space, creating a lopsided visual weight across the grid.\",\n    \"secondary\": \"The section headers are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Experiments / Results' panel contains a large table that dominates its space, while the 'Key Findings' and 'Conclusion / Takeaways' panels have sparse content with excessive white space, creating a lopsided visual weight across the grid.\",\n    \"secondary\": \"The section headers are visually uniform in size and color, making it difficult to distinguish the main flow or focal point of the poster, and the large red title at the top may draw too much attention away from the content.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -529,19 +542,19 @@
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
     "primary_issue": "space_imbalance",
     "secondary_issues": [
-      "hierarchy_emphasis_error"
+      "structure_alignment_error"
     ],
     "guard_violations": [
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation / Background' and 'Problem / Challenge' panels have significantly more empty space and loosely spaced bullet points compared to the 'Method / Framework' panel, which is densely packed with text and a large figure, creating a lopsided visual weight across the top row.",
-      "secondary": "The section headers (e.g., 'Motivation / Background') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster, and the large figure in the 'Method' panel draws disproportionate attention away from the surrounding text."
+      "primary": "The 'Motivation / Background' and 'Problem / Challenge' panels have significantly more empty white space and loosely spaced bullet points compared to the 'Method / Framework' panel, which is densely packed with text and a large figure, creating a lopsided visual weight across the top row.",
+      "secondary": "The top row panels are not aligned at the grid level; the 'Method / Framework' panel is visually shifted right and does not align with the left edge of the other two panels, creating a misaligned grid structure."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' and 'Problem / Challenge' panels have significantly more empty space and loosely spaced bullet points compared to the 'Method / Framework' panel, which is densely packed with text and a large figure, creating a lopsided visual weight across the top row.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation / Background') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster, and the large figure in the 'Method' panel draws disproportionate attention away from the surrounding text.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' and 'Problem / Challenge' panels have significantly more empty white space and loosely spaced bullet points compared to the 'Method / Framework' panel, which is densely packed with text and a large figure, creating a lopsided visual weight across the top row.\",\n    \"secondary\": \"The top row panels are not aligned at the grid level; the 'Method / Framework' panel is visually shifted right and does not align with the left edge of the other two panels, creating a misaligned grid structure.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -556,14 +569,14 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation' panel has a large empty space below its bullet points, while the 'Problem' and 'Method' panels are densely packed, creating uneven visual weight within panels.",
-      "hierarchy_emphasis_error": "The section headers are all the same size and color, making it difficult to distinguish the main flow or focal point of the poster.",
+      "primary": "The 'Motivation' panel has very loose spacing between bullet points and large empty space below, while the 'Results' panel is densely packed with text and tables, creating a severe imbalance in visual weight within panels.",
+      "hierarchy_emphasis_error": "The section headers are all identical in size and color, making it difficult to distinguish the main flow or focal point of the poster.",
       "asset_too_small": "The graph illustration in the 'Method' panel is too small to clearly read the node labels and structure."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has a large empty space below its bullet points, while the 'Problem' and 'Method' panels are densely packed, creating uneven visual weight within panels.\",\n    \"hierarchy_emphasis_error\": \"The section headers are all the same size and color, making it difficult to distinguish the main flow or focal point of the poster.\",\n    \"asset_too_small\": \"The graph illustration in the 'Method' panel is too small to clearly read the node labels and structure.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has very loose spacing between bullet points and large empty space below, while the 'Results' panel is densely packed with text and tables, creating a severe imbalance in visual weight within panels.\",\n    \"hierarchy_emphasis_error\": \"The section headers are all identical in size and color, making it difficult to distinguish the main flow or focal point of the poster.\",\n    \"asset_too_small\": \"The graph illustration in the 'Method' panel is too small to clearly read the node labels and structure.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -571,21 +584,23 @@
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
     "primary_issue": "space_imbalance",
     "secondary_issues": [
+      "text_overload",
       "hierarchy_emphasis_error"
     ],
     "guard_violations": [
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Experiments / Results' panel contains a large figure that dominates the space, while the text above it is sparse, creating an uneven distribution of content within the panel; similarly, the 'Method / Framework' panel has a large figure with minimal accompanying text, leaving significant empty space.",
+      "primary": "The 'Motivation / Background' and 'Problem / Challenge' panels have dense, tightly packed bullet points, while the 'Method / Framework' panel has large empty space below the figure and text, creating a severe internal space imbalance within panels.",
       "secondary_issues": [
-        "The section headers (e.g., 'Motivation / Background', 'Problem / Challenge') are visually identical in size and color, making it difficult to distinguish the main flow or focal point of the poster."
+        "text_overload: Many text blocks, especially in the 'Motivation / Background' and 'Problem / Challenge' sections, are truncated with ellipses, indicating text overflow.",
+        "hierarchy_emphasis_error: The section headers are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster."
       ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Experiments / Results' panel contains a large figure that dominates the space, while the text above it is sparse, creating an uneven distribution of content within the panel; similarly, the 'Method / Framework' panel has a large figure with minimal accompanying text, leaving significant empty space.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation / Background', 'Problem / Challenge') are visually identical in size and color, making it difficult to distinguish the main flow or focal point of the poster.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"text_overload\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' and 'Problem / Challenge' panels have dense, tightly packed bullet points, while the 'Method / Framework' panel has large empty space below the figure and text, creating a severe internal space imbalance within panels.\",\n    \"secondary_issues\": [\n      \"text_overload: Many text blocks, especially in the 'Motivation / Background' and 'Problem / Challenge' sections, are truncated with ellipses, indicating text overflow.\",\n      \"hierarchy_emphasis_error: The section headers are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -593,19 +608,26 @@
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
     "primary_issue": "space_imbalance",
     "secondary_issues": [
-      "hierarchy_emphasis_error"
+      "text_overload",
+      "asset_too_small"
     ],
     "guard_violations": [
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Method' panel contains a large figure that occupies most of its space, leaving minimal room for text, while the 'Motivation' and 'Problem' panels have sparse content with excessive white space between bullet points, creating uneven visual weight within panels.",
-      "secondary": "The section headers are visually similar in size and style, making it difficult to distinguish the main flow of information; the 'Conclusion' section header is also overly emphasized with a purple accent, drawing attention away from the content."
+      "primary": "The 'Motivation' panel is densely packed with 5 bullet points, while the 'Method' panel has large empty space below its figure, creating a significant internal space imbalance within panels.",
+      "secondary_issues": [
+        "text_overload: The 'Motivation' and 'Conclusion' panels contain extensive text blocks that are difficult to scan quickly.",
+        "asset_too_small: The figures in the 'Method' and 'Results' panels are rendered too small to clearly read their axes and legends."
+      ],
+      "guard_violations": [
+        "overflow_guard: The text in the 'Method' panel's figure caption is truncated with an ellipsis, indicating overflow."
+      ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel contains a large figure that occupies most of its space, leaving minimal room for text, while the 'Motivation' and 'Problem' panels have sparse content with excessive white space between bullet points, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers are visually similar in size and style, making it difficult to distinguish the main flow of information; the 'Conclusion' section header is also overly emphasized with a purple accent, drawing attention away from the content.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"text_overload\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel is densely packed with 5 bullet points, while the 'Method' panel has large empty space below its figure, creating a significant internal space imbalance within panels.\",\n    \"secondary_issues\": [\n      \"text_overload: The 'Motivation' and 'Conclusion' panels contain extensive text blocks that are difficult to scan quickly.\",\n      \"asset_too_small: The figures in the 'Method' and 'Results' panels are rendered too small to clearly read their axes and legends.\"\n    ],\n    \"guard_violations\": [\n      \"overflow_guard: The text in the 'Method' panel's figure caption is truncated with an ellipsis, indicating overflow.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -613,17 +635,21 @@
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
     "primary_issue": "space_imbalance",
     "secondary_issues": [
-      "hierarchy_emphasis_error"
+      "hierarchy_emphasis_error",
+      "asset_too_small"
     ],
-    "guard_violations": [],
+    "guard_violations": [
+      "overflow_guard"
+    ],
     "evidence": {
-      "primary": "The 'Motivation' and 'Problem' panels have significantly more empty space and loosely spaced bullet points compared to the 'Method' and 'Experiments' panels, which are densely packed, creating a lopsided visual weight across the top row.",
-      "secondary": "The section headers (e.g., 'Key Findings', 'Conclusion') use a large, bold font and distinct color, drawing disproportionate attention away from the main content, especially in the bottom row where they compete with the central message."
+      "primary": "The 'Problem' panel is nearly empty with only three bullet points, while the 'Results' panel is densely packed with a large table, creating severe visual imbalance within panels.",
+      "hierarchy_emphasis_error": "The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it hard to distinguish the main flow or focal point of the poster.",
+      "asset_too_small": "The case study table in the 'Key Findings' panel is rendered too small to read its content clearly."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' and 'Problem' panels have significantly more empty space and loosely spaced bullet points compared to the 'Method' and 'Experiments' panels, which are densely packed, creating a lopsided visual weight across the top row.\",\n    \"secondary\": \"The section headers (e.g., 'Key Findings', 'Conclusion') use a large, bold font and distinct color, drawing disproportionate attention away from the main content, especially in the bottom row where they compete with the central message.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Problem' panel is nearly empty with only three bullet points, while the 'Results' panel is densely packed with a large table, creating severe visual imbalance within panels.\",\n    \"hierarchy_emphasis_error\": \"The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it hard to distinguish the main flow or focal point of the poster.\",\n    \"asset_too_small\": \"The case study table in the 'Key Findings' panel is rendered too small to read its content clearly.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -635,13 +661,13 @@
     ],
     "guard_violations": [],
     "evidence": {
-      "primary": "The 'Method / Framework' panel has a large figure occupying most of its space, leaving minimal room for text, while the 'Experiments / Results' panel has a small table at the bottom with excessive white space above it, creating uneven visual weight within panels.",
-      "secondary": "The section headers are all styled identically with the same color and size, making it difficult to distinguish the main flow or focal point of the poster."
+      "primary": "The 'Method / Framework' panel has a large figure occupying most of its space, leaving minimal room for text, while the 'Problem / Challenge' panel has sparse content with excessive white space around bullet points, creating uneven visual weight within panels.",
+      "secondary": "The section headers are visually similar in size and style, and the large red numbered circles in each panel draw attention away from the content, disrupting the visual hierarchy."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method / Framework' panel has a large figure occupying most of its space, leaving minimal room for text, while the 'Experiments / Results' panel has a small table at the bottom with excessive white space above it, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers are all styled identically with the same color and size, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method / Framework' panel has a large figure occupying most of its space, leaving minimal room for text, while the 'Problem / Challenge' panel has sparse content with excessive white space around bullet points, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers are visually similar in size and style, and the large red numbered circles in each panel draw attention away from the content, disrupting the visual hierarchy.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -656,13 +682,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The poster's grid is broken: the rightmost column is significantly wider than the left two, and the 'Experiments' and 'Conclusion' panels are misaligned with the top row, creating an unbalanced, non-grid structure.",
-      "secondary": "The 'Motivation' and 'Contributions' panels have uneven spacing between bullet points, while 'Experiments' is cramped; the figure in 'Experiments' is too small to read details, and text in 'Method' and 'Results' is clipped with ellipses."
+      "primary": "The rightmost column of panels (Experiments, Conclusion) is visually misaligned with the left and center columns, creating an unbalanced grid structure with empty space on the right.",
+      "secondary": "The 'Experiments' panel contains a small, hard-to-read figure, and the 'Results' panel's figure is also too small to discern details; additionally, the 'Motivation' and 'Contributions' panels have uneven spacing between bullet points, with some areas overly sparse and others dense."
     },
-    "confidence": 0.95,
+    "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The poster's grid is broken: the rightmost column is significantly wider than the left two, and the 'Experiments' and 'Conclusion' panels are misaligned with the top row, creating an unbalanced, non-grid structure.\",\n    \"secondary\": \"The 'Motivation' and 'Contributions' panels have uneven spacing between bullet points, while 'Experiments' is cramped; the figure in 'Experiments' is too small to read details, and text in 'Method' and 'Results' is clipped with ellipses.\"\n  },\n  \"confidence\": 0.95\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Experiments, Conclusion) is visually misaligned with the left and center columns, creating an unbalanced grid structure with empty space on the right.\",\n    \"secondary\": \"The 'Experiments' panel contains a small, hard-to-read figure, and the 'Results' panel's figure is also too small to discern details; additionally, the 'Motivation' and 'Contributions' panels have uneven spacing between bullet points, with some areas overly sparse and others dense.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_storyflow"
   },
   {
@@ -677,10 +703,10 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Datasets' and 'Benchmarks' panels contain large, dense tables that dominate their space, while the 'Motivation' and 'Conclusion' panels have sparse text with large empty areas, creating a lopsided visual weight across the grid.",
+      "primary": "The 'Datasets' and 'Benchmarks' panels contain dense, small tables that occupy most of their space, while the 'Motivation' and 'Conclusion' panels have large empty areas around their text, creating a severe imbalance in visual weight within panels.",
       "secondary_issues": [
-        "Text in the 'Conclusion', 'Overview', and 'Taxonomy' panels is truncated with ellipses, indicating text_overload.",
-        "The tables in 'Datasets' and 'Benchmarks' are rendered too small to read their content clearly, indicating asset_too_small."
+        "Text in the 'Conclusion', 'Overview', and 'Taxonomy' panels is truncated with ellipses, indicating text overload.",
+        "The tables in 'Datasets' and 'Benchmarks' are rendered too small to read their content clearly."
       ],
       "guard_violations": [
         "Text in the 'Conclusion', 'Overview', and 'Taxonomy' panels is clipped with ellipses, violating overflow_guard."
@@ -689,7 +715,7 @@
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"text_overload\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Datasets' and 'Benchmarks' panels contain large, dense tables that dominate their space, while the 'Motivation' and 'Conclusion' panels have sparse text with large empty areas, creating a lopsided visual weight across the grid.\",\n    \"secondary_issues\": [\n      \"Text in the 'Conclusion', 'Overview', and 'Taxonomy' panels is truncated with ellipses, indicating text_overload.\",\n      \"The tables in 'Datasets' and 'Benchmarks' are rendered too small to read their content clearly, indicating asset_too_small.\"\n    ],\n    \"guard_violations\": [\n      \"Text in the 'Conclusion', 'Overview', and 'Taxonomy' panels is clipped with ellipses, violating overflow_guard.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"text_overload\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Datasets' and 'Benchmarks' panels contain dense, small tables that occupy most of their space, while the 'Motivation' and 'Conclusion' panels have large empty areas around their text, creating a severe imbalance in visual weight within panels.\",\n    \"secondary_issues\": [\n      \"Text in the 'Conclusion', 'Overview', and 'Taxonomy' panels is truncated with ellipses, indicating text overload.\",\n      \"The tables in 'Datasets' and 'Benchmarks' are rendered too small to read their content clearly.\"\n    ],\n    \"guard_violations\": [\n      \"Text in the 'Conclusion', 'Overview', and 'Taxonomy' panels is clipped with ellipses, violating overflow_guard.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_minimal"
   },
   {
@@ -703,15 +729,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation' panel has five bullet points with large spacing, while the 'Problem' panel's chart and text are tightly packed, creating uneven visual weight within panels.",
-      "secondary_issues": [
-        "The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it hard to distinguish the main flow or focal point of the poster."
-      ]
+      "primary": "The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Problem' panel's chart occupies most of its space, and the 'Method' panel's figure is small relative to its text, creating uneven visual weight within panels.",
+      "secondary": "The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it hard to distinguish the main flow; the title is also not clearly emphasized over other elements."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing, while the 'Problem' panel's chart and text are tightly packed, creating uneven visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it hard to distinguish the main flow or focal point of the poster.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has five bullet points with large spacing and empty space below, while the 'Problem' panel's chart occupies most of its space, and the 'Method' panel's figure is small relative to its text, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it hard to distinguish the main flow; the title is also not clearly emphasized over other elements.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -723,13 +747,13 @@
     ],
     "guard_violations": [],
     "evidence": {
-      "primary": "The 'Method' panel (center top) has significantly more white space and loosely spaced bullet points compared to the 'Experiments' and 'Conclusion' panels, which are densely packed, creating a lopsided visual weight within the grid.",
-      "secondary": "The large, colorful numbered circles (e.g., 1, 2, 3, 4, 5, 6) are visually dominant and draw attention away from the actual content, especially in the 'Method' and 'Results' sections, disrupting the visual hierarchy."
+      "primary": "The 'Method' panel (center top) has a large, empty space above its bullet points, while the 'Experiments' panel (right top) is densely packed with text, creating a lopsided visual weight within the top row.",
+      "secondary": "The section headers (e.g., 'Motivation', 'Method') are visually similar in size and style, making it difficult to distinguish the main flow from supporting details, reducing visual hierarchy."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel (center top) has significantly more white space and loosely spaced bullet points compared to the 'Experiments' and 'Conclusion' panels, which are densely packed, creating a lopsided visual weight within the grid.\",\n    \"secondary\": \"The large, colorful numbered circles (e.g., 1, 2, 3, 4, 5, 6) are visually dominant and draw attention away from the actual content, especially in the 'Method' and 'Results' sections, disrupting the visual hierarchy.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel (center top) has a large, empty space above its bullet points, while the 'Experiments' panel (right top) is densely packed with text, creating a lopsided visual weight within the top row.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Method') are visually similar in size and style, making it difficult to distinguish the main flow from supporting details, reducing visual hierarchy.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_storyflow"
   },
   {
@@ -743,13 +767,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Experiments' panel contains a large table that dominates its space, while the 'Results' panel has a chart and text that are unevenly distributed, with significant empty space above the chart, creating internal space imbalance within panels.",
-      "secondary": "The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it difficult to distinguish the main flow or focal point, indicating a hierarchy emphasis error."
+      "primary": "The 'Experiments' panel contains a large table that dominates its space, while the 'Results' panel has a chart and text that are unevenly distributed, with significant empty space above the chart, creating internal imbalance within panels.",
+      "secondary": "The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Experiments' panel contains a large table that dominates its space, while the 'Results' panel has a chart and text that are unevenly distributed, with significant empty space above the chart, creating internal space imbalance within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it difficult to distinguish the main flow or focal point, indicating a hierarchy emphasis error.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Experiments' panel contains a large table that dominates its space, while the 'Results' panel has a chart and text that are unevenly distributed, with significant empty space above the chart, creating internal imbalance within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -757,66 +781,23 @@
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
     "primary_issue": "structure_alignment_error",
     "secondary_issues": [
-      "space_imbalance",
-      "hierarchy_emphasis_error"
+      "space_imbalance"
     ],
-    "guard_violations": [],
+    "guard_violations": [
+      "overflow_guard"
+    ],
     "evidence": {
-      "primary": "The rightmost column of panels (Experiments, Conclusion) is visually misaligned with the left two columns, creating a broken grid structure where the panels do not align vertically or fill the canvas evenly.",
-      "secondary": "Within the 'Method' panel, the figure and text are spaced too loosely, while the 'Experiments' panel is cramped with dense text and a small table; additionally, the section numbers (1-6) are oversized and visually dominate the content, distracting from the main messages."
+      "primary": "The poster's grid structure is broken: the rightmost column is significantly wider than the left two, and the bottom row panels are misaligned with the top row, creating an unbalanced and visually disjointed layout.",
+      "secondary": "Within the 'Method' and 'Experiments' panels, text is loosely spaced while other panels like 'Results' are more densely packed, indicating uneven space distribution."
     },
-    "confidence": 0.9,
+    "confidence": 0.95,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Experiments, Conclusion) is visually misaligned with the left two columns, creating a broken grid structure where the panels do not align vertically or fill the canvas evenly.\",\n    \"secondary\": \"Within the 'Method' panel, the figure and text are spaced too loosely, while the 'Experiments' panel is cramped with dense text and a small table; additionally, the section numbers (1-6) are oversized and visually dominate the content, distracting from the main messages.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The poster's grid structure is broken: the rightmost column is significantly wider than the left two, and the bottom row panels are misaligned with the top row, creating an unbalanced and visually disjointed layout.\",\n    \"secondary\": \"Within the 'Method' and 'Experiments' panels, text is loosely spaced while other panels like 'Results' are more densely packed, indicating uneven space distribution.\"\n  },\n  \"confidence\": 0.95\n}",
     "template": "template_storyflow"
   },
   {
     "run_id": "20260609_034941_Latent_Collaboration_in_Multi-_425eabae1cf5",
-    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
-    "primary_issue": "space_imbalance",
-    "secondary_issues": [
-      "text_overload",
-      "structure_alignment_error"
-    ],
-    "guard_violations": [
-      "overflow_guard"
-    ],
-    "evidence": {
-      "primary": "The 'Motivation' and 'Problem' panels on the left are densely packed with text and bullet points, while the 'Results' and 'Conclusion' panels on the right have significantly more empty space, creating a lopsided visual weight across the grid.",
-      "secondary_issues": [
-        "Text in multiple panels (e.g., 'Motivation', 'Experiments') is truncated with ellipses, indicating text_overload.",
-        "The grid structure is misaligned: the top row of panels has uneven heights and the rightmost column is visually narrower than the left, indicating structure_alignment_error."
-      ]
-    },
-    "confidence": 0.9,
-    "source": "vlm",
-    "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"text_overload\", \"structure_alignment_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' and 'Problem' panels on the left are densely packed with text and bullet points, while the 'Results' and 'Conclusion' panels on the right have significantly more empty space, creating a lopsided visual weight across the grid.\",\n    \"secondary_issues\": [\n      \"Text in multiple panels (e.g., 'Motivation', 'Experiments') is truncated with ellipses, indicating text_overload.\",\n      \"The grid structure is misaligned: the top row of panels has uneven heights and the rightmost column is visually narrower than the left, indicating structure_alignment_error.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
-    "template": "template_storyflow"
-  },
-  {
-    "run_id": "20260609_035207_Tree_Search_for_LLM_Agent_Rein_01c4c43c1418",
-    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
-    "primary_issue": "space_imbalance",
-    "secondary_issues": [
-      "hierarchy_emphasis_error"
-    ],
-    "guard_violations": [
-      "overflow_guard"
-    ],
-    "evidence": {
-      "primary": "The 'Method' and 'Results' panels contain large empty spaces around their figures and text, while the 'Motivation', 'Problem', and 'Conclusion' panels are densely packed with text, creating a lopsided visual weight across the grid.",
-      "secondary": "The large, colorful section numbers (e.g., red 1, green 4, purple 6) are visually dominant and draw attention away from the content, disrupting the visual hierarchy."
-    },
-    "confidence": 0.9,
-    "source": "vlm",
-    "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' and 'Results' panels contain large empty spaces around their figures and text, while the 'Motivation', 'Problem', and 'Conclusion' panels are densely packed with text, creating a lopsided visual weight across the grid.\",\n    \"secondary\": \"The large, colorful section numbers (e.g., red 1, green 4, purple 6) are visually dominant and draw attention away from the content, disrupting the visual hierarchy.\"\n  },\n  \"confidence\": 0.9\n}",
-    "template": "template_storyflow"
-  },
-  {
-    "run_id": "20260609_035303_INFORMATION_GAIN-BASED_POLICY__91fc4ebf7312",
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
     "primary_issue": "space_imbalance",
     "secondary_issues": [
@@ -827,16 +808,60 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation' panel (top-left) is densely packed with text and bullet points, while the 'Experiments' and 'Results' panels have large empty spaces above their content boxes, creating a severe visual imbalance within panels.",
+      "primary": "The 'Motivation' panel (1) has dense text and bullet points, while the 'Method' (3) and 'Experiments' (4) panels have large empty spaces above their figures and text, creating uneven visual weight within panels.",
       "secondary_issues": [
-        "The section headers (e.g., 'Motivation', 'Method') are visually similar in size and style, making it hard to distinguish the main flow from supporting content, indicating a hierarchy_emphasis_error.",
-        "The figures in the 'Method' and 'Key Findings' panels are rendered too small to discern their content, which is an asset_too_small issue."
+        "The section headers (e.g., 'Motivation', 'Method') are visually similar in size and style, making it hard to distinguish the main flow; the large numbered circles (1, 2, 3, etc.) are overly emphasized and distract from content.",
+        "The figures in 'Method', 'Experiments', and 'Results' are rendered too small to discern details, especially the diagram in 'Method' and the table in 'Results'."
       ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel (top-left) is densely packed with text and bullet points, while the 'Experiments' and 'Results' panels have large empty spaces above their content boxes, creating a severe visual imbalance within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Method') are visually similar in size and style, making it hard to distinguish the main flow from supporting content, indicating a hierarchy_emphasis_error.\",\n      \"The figures in the 'Method' and 'Key Findings' panels are rendered too small to discern their content, which is an asset_too_small issue.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel (1) has dense text and bullet points, while the 'Method' (3) and 'Experiments' (4) panels have large empty spaces above their figures and text, creating uneven visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Method') are visually similar in size and style, making it hard to distinguish the main flow; the large numbered circles (1, 2, 3, etc.) are overly emphasized and distract from content.\",\n      \"The figures in 'Method', 'Experiments', and 'Results' are rendered too small to discern details, especially the diagram in 'Method' and the table in 'Results'.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035207_Tree_Search_for_LLM_Agent_Rein_01c4c43c1418",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "structure_alignment_error",
+    "secondary_issues": [
+      "space_imbalance",
+      "asset_too_small"
+    ],
+    "guard_violations": [
+      "overflow_guard"
+    ],
+    "evidence": {
+      "primary": "The rightmost column of panels (Experiments, Conclusion) is significantly wider than the left two columns, creating a misaligned grid structure with uneven column widths.",
+      "space_imbalance": "The 'Method' panel has a large empty space below the figure, while the 'Experiments' panel is densely packed with text, indicating uneven space distribution within panels.",
+      "asset_too_small": "The figures in the 'Method' and 'Results' panels are rendered too small to clearly read their content or labels."
+    },
+    "confidence": 0.95,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Experiments, Conclusion) is significantly wider than the left two columns, creating a misaligned grid structure with uneven column widths.\",\n    \"space_imbalance\": \"The 'Method' panel has a large empty space below the figure, while the 'Experiments' panel is densely packed with text, indicating uneven space distribution within panels.\",\n    \"asset_too_small\": \"The figures in the 'Method' and 'Results' panels are rendered too small to clearly read their content or labels.\"\n  },\n  \"confidence\": 0.95\n}",
+    "template": "template_storyflow"
+  },
+  {
+    "run_id": "20260609_035303_INFORMATION_GAIN-BASED_POLICY__91fc4ebf7312",
+    "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
+    "primary_issue": "space_imbalance",
+    "secondary_issues": [
+      "hierarchy_emphasis_error"
+    ],
+    "guard_violations": [
+      "overflow_guard"
+    ],
+    "evidence": {
+      "primary": "The 'Motivation' panel (1) has dense text with tight spacing, while the 'Experiments' (3) and 'Results' (4) panels have large empty areas above their content boxes, creating uneven visual weight within panels.",
+      "secondary_issues": [
+        "The large, colorful numbered circles (e.g., 1, 2, 3, 4, 5, 6) are overly emphasized, drawing attention away from the core content and disrupting the visual hierarchy."
+      ]
+    },
+    "confidence": 0.9,
+    "source": "vlm",
+    "notes": "",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel (1) has dense text with tight spacing, while the 'Experiments' (3) and 'Results' (4) panels have large empty areas above their content boxes, creating uneven visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The large, colorful numbered circles (e.g., 1, 2, 3, 4, 5, 6) are overly emphasized, drawing attention away from the core content and disrupting the visual hierarchy.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_storyflow"
   },
   {
@@ -850,13 +875,15 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Method' panel contains a large empty placeholder for a figure and sparse text, while the 'Results' panel is densely packed with text and a small chart, creating a severe imbalance in visual weight within panels.",
-      "secondary": "The section headers (e.g., 'Motivation', 'Method') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster."
+      "primary": "The 'Method' panel contains a large empty space below the figure placeholder, while the 'Motivation' and 'Problem' panels are densely packed with text, creating uneven visual weight within panels.",
+      "secondary_issues": [
+        "The section numbers (e.g., 1, 2, 3, 4, 5, 6) are oversized and visually dominant, drawing attention away from the content, especially in the 'Conclusion' panel where the number 6 is disproportionately large."
+      ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel contains a large empty placeholder for a figure and sparse text, while the 'Results' panel is densely packed with text and a small chart, creating a severe imbalance in visual weight within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Method') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel contains a large empty space below the figure placeholder, while the 'Motivation' and 'Problem' panels are densely packed with text, creating uneven visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The section numbers (e.g., 1, 2, 3, 4, 5, 6) are oversized and visually dominant, drawing attention away from the content, especially in the 'Conclusion' panel where the number 6 is disproportionately large.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_storyflow"
   },
   {
@@ -865,17 +892,19 @@
     "primary_issue": "structure_alignment_error",
     "secondary_issues": [
       "space_imbalance",
-      "hierarchy_emphasis_error"
+      "asset_too_small"
     ],
-    "guard_violations": [],
+    "guard_violations": [
+      "overflow_guard"
+    ],
     "evidence": {
-      "primary": "The rightmost column (Overview) is significantly narrower than the other columns, and the panel for 'Overview' is not aligned with the grid of the other panels, creating a broken grid structure.",
-      "secondary": "The 'Motivation' panel has tightly packed bullet points while the 'Experiments' and 'Results' panels have large empty spaces above their content, indicating uneven space usage within panels. Additionally, the 'Overview' section is visually over-emphasized by its large number '7' and prominent placement, distracting from the main content flow."
+      "primary": "The rightmost column (Overview) is significantly narrower than the other columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight.",
+      "secondary": "Panel 3 (Experiments) and Panel 4 (Results) have large empty spaces above their content, while Panel 7 (Overview) is densely packed with text, indicating internal space imbalance; the figure in Panel 3 is too small to read its content clearly."
     },
-    "confidence": 0.95,
+    "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column (Overview) is significantly narrower than the other columns, and the panel for 'Overview' is not aligned with the grid of the other panels, creating a broken grid structure.\",\n    \"secondary\": \"The 'Motivation' panel has tightly packed bullet points while the 'Experiments' and 'Results' panels have large empty spaces above their content, indicating uneven space usage within panels. Additionally, the 'Overview' section is visually over-emphasized by its large number '7' and prominent placement, distracting from the main content flow.\"\n  },\n  \"confidence\": 0.95\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column (Overview) is significantly narrower than the other columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight.\",\n    \"secondary\": \"Panel 3 (Experiments) and Panel 4 (Results) have large empty spaces above their content, while Panel 7 (Overview) is densely packed with text, indicating internal space imbalance; the figure in Panel 3 is too small to read its content clearly.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_storyflow"
   },
   {
@@ -887,15 +916,13 @@
     ],
     "guard_violations": [],
     "evidence": {
-      "primary": "The 'Motivation' panel has a large amount of text with loose bullet spacing and empty space below, while the 'Method' and 'Data Synthesis' panels are more densely packed, creating a lopsided visual weight across the top row.",
-      "secondary_issues": [
-        "The section headers (e.g., 'Motivation', 'Method') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster."
-      ]
+      "primary": "The 'Motivation' panel has a large amount of text with wide spacing between bullet points, while the 'Method' and 'Data Synthesis' panels have much denser content and smaller figures, creating a significant visual imbalance across the top row.",
+      "secondary": "The section headers (e.g., 'Motivation', 'Method') are visually similar in size and color, making it difficult to distinguish the main flow or focal point of the poster."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has a large amount of text with loose bullet spacing and empty space below, while the 'Method' and 'Data Synthesis' panels are more densely packed, creating a lopsided visual weight across the top row.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Method') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has a large amount of text with wide spacing between bullet points, while the 'Method' and 'Data Synthesis' panels have much denser content and smaller figures, creating a significant visual imbalance across the top row.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Method') are visually similar in size and color, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -904,19 +931,19 @@
     "primary_issue": "structure_alignment_error",
     "secondary_issues": [
       "space_imbalance",
-      "hierarchy_emphasis_error"
+      "asset_too_small"
     ],
     "guard_violations": [
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The rightmost column (panel 7) is significantly narrower than the other columns, creating a misaligned grid structure with uneven column widths.",
-      "secondary": "Panel 7 has much more empty space than other panels, and the large section number '7' in a dark blue circle draws disproportionate attention compared to other section headers."
+      "primary": "The rightmost column (panel 7) is significantly narrower than the other panels, creating a misaligned grid structure with uneven column widths.",
+      "secondary": "Panel 7 has excessive empty space below its content, while panels like 3 and 5 have tightly packed content; the figures in panels 3 and 5 are too small to discern details."
     },
     "confidence": 0.95,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column (panel 7) is significantly narrower than the other columns, creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"Panel 7 has much more empty space than other panels, and the large section number '7' in a dark blue circle draws disproportionate attention compared to other section headers.\"\n  },\n  \"confidence\": 0.95\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column (panel 7) is significantly narrower than the other panels, creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"Panel 7 has excessive empty space below its content, while panels like 3 and 5 have tightly packed content; the figures in panels 3 and 5 are too small to discern details.\"\n  },\n  \"confidence\": 0.95\n}",
     "template": "template_storyflow"
   },
   {
@@ -931,13 +958,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The rightmost column of panels (Results and Conclusion) is significantly wider than the left two columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight.",
-      "secondary": "The 'Experiments' panel has a large empty space above the table, while the 'Results' panel has a small figure that is hard to read; the 'Method' panel's figure is also too small to discern details."
+      "primary": "The rightmost column is significantly underfilled, with large blank space below the 'Results' panel, while the left and center columns are densely packed, breaking the grid-level balance.",
+      "secondary": "The 'Experiments' and 'Results' panels have uneven internal spacing, with the 'Results' panel's figure and text area being too small to read clearly; the 'Method' panel's figure is also too small to discern details."
     },
-    "confidence": 0.95,
+    "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Results and Conclusion) is significantly wider than the left two columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight.\",\n    \"secondary\": \"The 'Experiments' panel has a large empty space above the table, while the 'Results' panel has a small figure that is hard to read; the 'Method' panel's figure is also too small to discern details.\"\n  },\n  \"confidence\": 0.95\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column is significantly underfilled, with large blank space below the 'Results' panel, while the left and center columns are densely packed, breaking the grid-level balance.\",\n    \"secondary\": \"The 'Experiments' and 'Results' panels have uneven internal spacing, with the 'Results' panel's figure and text area being too small to read clearly; the 'Method' panel's figure is also too small to discern details.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_storyflow"
   },
   {
@@ -952,9 +979,9 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Method / Framework' panel has a large blank space below the figure, while the 'Motivation / Background' panel is densely packed with text, creating uneven visual weight within panels.",
+      "primary": "The 'Motivation / Background' panel has very loose spacing between bullet points and large empty space below, while the 'Method / Framework' panel is densely packed with text and a small figure, creating uneven visual weight within panels.",
       "secondary_issues": [
-        "The section headers (e.g., 'Key Findings') use inconsistent colors and sizes, and the large red number '5' in the 'Conclusion / Takeaways' header draws undue attention away from the content.",
+        "The section headers (e.g., 'Key Findings') use inconsistent colors and sizes, and the large red number '5' in the top-right corner of the 'Key Findings' panel draws undue attention away from the content.",
         "The diagram in the 'Method / Framework' panel is too small to clearly read its components, making it difficult to understand the framework."
       ],
       "guard_violations": [
@@ -964,7 +991,7 @@
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method / Framework' panel has a large blank space below the figure, while the 'Motivation / Background' panel is densely packed with text, creating uneven visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Key Findings') use inconsistent colors and sizes, and the large red number '5' in the 'Conclusion / Takeaways' header draws undue attention away from the content.\",\n      \"The diagram in the 'Method / Framework' panel is too small to clearly read its components, making it difficult to understand the framework.\"\n    ],\n    \"guard_violations\": [\n      \"Text in the 'Problem / Challenge' panel is clipped at the bottom, showing an ellipsis.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation / Background' panel has very loose spacing between bullet points and large empty space below, while the 'Method / Framework' panel is densely packed with text and a small figure, creating uneven visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Key Findings') use inconsistent colors and sizes, and the large red number '5' in the top-right corner of the 'Key Findings' panel draws undue attention away from the content.\",\n      \"The diagram in the 'Method / Framework' panel is too small to clearly read its components, making it difficult to understand the framework.\"\n    ],\n    \"guard_violations\": [\n      \"Text in the 'Problem / Challenge' panel is clipped at the bottom, showing an ellipsis.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -978,13 +1005,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Method' panel contains a large figure that dominates its space, leaving minimal room for text, while the 'Motivation' and 'Problem' panels have sparse content with excessive white space and loosely spaced bullet points, creating uneven visual weight within panels.",
-      "secondary": "The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster."
+      "primary": "The 'Method' panel contains a large figure that dominates its space, leaving minimal room for text, while the 'Motivation' and 'Problem' panels have sparse content with excessive white space, creating uneven visual weight within panels.",
+      "secondary": "The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it difficult to distinguish the main flow of the poster, and the 'Conclusion' section's text is less emphasized compared to the large figure in 'Method'."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel contains a large figure that dominates its space, leaving minimal room for text, while the 'Motivation' and 'Problem' panels have sparse content with excessive white space and loosely spaced bullet points, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel contains a large figure that dominates its space, leaving minimal room for text, while the 'Motivation' and 'Problem' panels have sparse content with excessive white space, creating uneven visual weight within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it difficult to distinguish the main flow of the poster, and the 'Conclusion' section's text is less emphasized compared to the large figure in 'Method'.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -996,13 +1023,13 @@
     ],
     "guard_violations": [],
     "evidence": {
-      "primary": "The 'Research Background' and 'Research Problem' panels have significantly more white space and loosely spaced bullet points compared to the 'Method' and 'Conclusion' panels, which are densely packed, creating a lopsided visual weight across the top row.",
-      "secondary": "The section headers (e.g., 'Research Background', 'Method') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster."
+      "primary": "The 'Research Background' and 'Research Problem' panels have dense text with tight bullet spacing, while the 'Conclusion' panel is nearly empty, creating a severe visual imbalance within the top row.",
+      "secondary": "The section headers (e.g., 'Conclusion') are visually emphasized with large, colorful circles, drawing attention away from the content, which lacks a clear focal point."
     },
-    "confidence": 0.9,
+    "confidence": 0.95,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Research Background' and 'Research Problem' panels have significantly more white space and loosely spaced bullet points compared to the 'Method' and 'Conclusion' panels, which are densely packed, creating a lopsided visual weight across the top row.\",\n    \"secondary\": \"The section headers (e.g., 'Research Background', 'Method') are visually similar in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The 'Research Background' and 'Research Problem' panels have dense text with tight bullet spacing, while the 'Conclusion' panel is nearly empty, creating a severe visual imbalance within the top row.\",\n    \"secondary\": \"The section headers (e.g., 'Conclusion') are visually emphasized with large, colorful circles, drawing attention away from the content, which lacks a clear focal point.\"\n  },\n  \"confidence\": 0.95\n}",
     "template": "template_dashboard"
   },
   {
@@ -1010,21 +1037,26 @@
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
     "primary_issue": "space_imbalance",
     "secondary_issues": [
-      "hierarchy_emphasis_error"
+      "hierarchy_emphasis_error",
+      "asset_too_small"
     ],
     "guard_violations": [
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Method' and 'Dataset Bootstrapping' panels are densely packed with text and figures, creating a lopsided visual weight across the top row.",
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Method' and 'Dataset Bootstrapping' panels are densely packed with text and figures, creating uneven visual weight within panels.",
       "secondary_issues": [
-        "The section headers (e.g., 'Motivation', 'Method') are visually similar in size and color, making it hard to distinguish the main flow or focal point of the poster."
+        "The section headers (e.g., 'Motivation', 'Method') are visually similar in size and color, making it hard to distinguish the main flow; the large red number '1' in Motivation draws undue attention away from content.",
+        "The figures in 'Method' and 'Dataset Bootstrapping' are small and hard to read details, especially the text within the diagram boxes."
+      ],
+      "guard_violations": [
+        "Text in the 'Results' panel is clipped at the bottom, showing an ellipsis."
       ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Method' and 'Dataset Bootstrapping' panels are densely packed with text and figures, creating a lopsided visual weight across the top row.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Method') are visually similar in size and color, making it hard to distinguish the main flow or focal point of the poster.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Method' and 'Dataset Bootstrapping' panels are densely packed with text and figures, creating uneven visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Method') are visually similar in size and color, making it hard to distinguish the main flow; the large red number '1' in Motivation draws undue attention away from content.\",\n      \"The figures in 'Method' and 'Dataset Bootstrapping' are small and hard to read details, especially the text within the diagram boxes.\"\n    ],\n    \"guard_violations\": [\n      \"Text in the 'Results' panel is clipped at the bottom, showing an ellipsis.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -1038,39 +1070,35 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Method' and 'Experiments' panels contain large empty spaces above their content, while the 'Motivation' and 'Problem' panels are densely packed with text and bullet points, creating a lopsided visual weight across the grid.",
-      "secondary_issues": [
-        "The rightmost column of panels is significantly wider than the left two columns, and the bottom row panels are not aligned at the same baseline, indicating a grid-level structure misalignment."
-      ]
+      "primary": "The 'Method' and 'Experiments' panels contain large empty spaces above their content, while the 'Motivation' and 'Problem' panels are densely packed with text and bullet points, creating a lopsided visual weight within panels.",
+      "secondary": "The rightmost column of panels is significantly wider than the left two columns, and the bottom row of panels is misaligned vertically, with the 'Results' panel's header and content box not aligned with the others."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' and 'Experiments' panels contain large empty spaces above their content, while the 'Motivation' and 'Problem' panels are densely packed with text and bullet points, creating a lopsided visual weight across the grid.\",\n    \"secondary_issues\": [\n      \"The rightmost column of panels is significantly wider than the left two columns, and the bottom row panels are not aligned at the same baseline, indicating a grid-level structure misalignment.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"structure_alignment_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' and 'Experiments' panels contain large empty spaces above their content, while the 'Motivation' and 'Problem' panels are densely packed with text and bullet points, creating a lopsided visual weight within panels.\",\n    \"secondary\": \"The rightmost column of panels is significantly wider than the left two columns, and the bottom row of panels is misaligned vertically, with the 'Results' panel's header and content box not aligned with the others.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_storyflow"
   },
   {
     "run_id": "20260609_044437_Evaluating_LLM_Agent_Personali_91d748283c90",
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
-    "primary_issue": "space_imbalance",
+    "primary_issue": "structure_alignment_error",
     "secondary_issues": [
-      "hierarchy_emphasis_error",
+      "space_imbalance",
       "asset_too_small"
     ],
     "guard_violations": [
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Method' panel (panel 3) is visually overloaded with dense text and small bullet points, while the 'Experiments' panel (panel 4) is nearly empty, creating severe internal space imbalance within panels.",
-      "secondary_issues": [
-        "The large, colorful section numbers (e.g., red '1', green '4') are overly emphasized, drawing attention away from the content, indicating hierarchy_emphasis_error.",
-        "The figures in the 'Results' and 'Conclusion' panels are rendered too small to discern any details, indicating asset_too_small."
-      ]
+      "primary": "The rightmost column of panels (Experiments, Conclusion) is significantly narrower than the left and middle columns, creating a misaligned grid structure with uneven column widths.",
+      "space_imbalance": "The 'Method' panel has a very dense bullet list and small figures, while the 'Experiments' panel has large empty space around its text, indicating uneven space usage within panels.",
+      "asset_too_small": "The figures in the 'Results' and 'Conclusion' panels are rendered too small to discern their content clearly."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel (panel 3) is visually overloaded with dense text and small bullet points, while the 'Experiments' panel (panel 4) is nearly empty, creating severe internal space imbalance within panels.\",\n    \"secondary_issues\": [\n      \"The large, colorful section numbers (e.g., red '1', green '4') are overly emphasized, drawing attention away from the content, indicating hierarchy_emphasis_error.\",\n      \"The figures in the 'Results' and 'Conclusion' panels are rendered too small to discern any details, indicating asset_too_small.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Experiments, Conclusion) is significantly narrower than the left and middle columns, creating a misaligned grid structure with uneven column widths.\",\n    \"space_imbalance\": \"The 'Method' panel has a very dense bullet list and small figures, while the 'Experiments' panel has large empty space around its text, indicating uneven space usage within panels.\",\n    \"asset_too_small\": \"The figures in the 'Results' and 'Conclusion' panels are rendered too small to discern their content clearly.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_storyflow"
   },
   {
@@ -1085,12 +1113,12 @@
     ],
     "evidence": {
       "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is densely packed with text and a table, creating a significant visual imbalance within panels.",
-      "secondary": "The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it hard to distinguish the main flow of the poster, and the conclusion section's header is slightly misaligned with others."
+      "secondary": "The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is densely packed with text and a table, creating a significant visual imbalance within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Problem') are visually similar in size and style, making it hard to distinguish the main flow of the poster, and the conclusion section's header is slightly misaligned with others.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is densely packed with text and a table, creating a significant visual imbalance within panels.\",\n    \"secondary\": \"The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it difficult to distinguish the main flow or focal point of the poster.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -1105,13 +1133,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The rightmost column is significantly narrower than the other three, creating a misaligned grid structure where panels do not fill the canvas evenly.",
-      "secondary": "Panel 3 (Results) has excessive white space above the figure and below the title, while Panel 5 (Overview) is densely packed with text, indicating internal space imbalance. The large numbered circles (e.g., 1, 2, 3, 4, 5, 6, 7) are overly emphasized, drawing attention away from the content and disrupting visual hierarchy."
+      "primary": "The rightmost column is significantly narrower than the other three, creating a misaligned grid structure with uneven column widths and unbalanced visual weight.",
+      "secondary": "The 'Results' panel has excessive white space above its content, while the 'Conclusion' panel is densely packed; section headers (e.g., 'Motivation', 'Method') are visually similar, lacking clear visual hierarchy to guide the reader's attention."
     },
-    "confidence": 0.9,
+    "confidence": 0.95,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column is significantly narrower than the other three, creating a misaligned grid structure where panels do not fill the canvas evenly.\",\n    \"secondary\": \"Panel 3 (Results) has excessive white space above the figure and below the title, while Panel 5 (Overview) is densely packed with text, indicating internal space imbalance. The large numbered circles (e.g., 1, 2, 3, 4, 5, 6, 7) are overly emphasized, drawing attention away from the content and disrupting visual hierarchy.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column is significantly narrower than the other three, creating a misaligned grid structure with uneven column widths and unbalanced visual weight.\",\n    \"secondary\": \"The 'Results' panel has excessive white space above its content, while the 'Conclusion' panel is densely packed; section headers (e.g., 'Motivation', 'Method') are visually similar, lacking clear visual hierarchy to guide the reader's attention.\"\n  },\n  \"confidence\": 0.95\n}",
     "template": "template_storyflow"
   },
   {
@@ -1125,13 +1153,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Method' panel contains a large figure that dominates its space, leaving minimal room for text, while the 'Problem' panel has sparse content with excessive white space, creating uneven visual weight within panels.",
-      "secondary": "The 'Key Findings' section header is in a different color (purple) than other section headers (red, green, etc.), drawing undue attention away from the main content and disrupting visual hierarchy."
+      "primary": "The 'Method' panel contains a large figure that dominates its space, leaving minimal room for text, while the 'Problem' and 'Motivation' panels have sparse content with excessive white space, creating uneven visual weight within panels.",
+      "secondary": "The 'Key Findings' section header is emphasized with a purple color and larger font, drawing attention away from the more critical 'Results' and 'Conclusion' sections which use standard blue headers."
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel contains a large figure that dominates its space, leaving minimal room for text, while the 'Problem' panel has sparse content with excessive white space, creating uneven visual weight within panels.\",\n    \"secondary\": \"The 'Key Findings' section header is in a different color (purple) than other section headers (red, green, etc.), drawing undue attention away from the main content and disrupting visual hierarchy.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Method' panel contains a large figure that dominates its space, leaving minimal room for text, while the 'Problem' and 'Motivation' panels have sparse content with excessive white space, creating uneven visual weight within panels.\",\n    \"secondary\": \"The 'Key Findings' section header is emphasized with a purple color and larger font, drawing attention away from the more critical 'Results' and 'Conclusion' sections which use standard blue headers.\"\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -1143,20 +1171,22 @@
       "asset_too_small"
     ],
     "guard_violations": [
-      "overflow_guard",
-      "crop_guard"
+      "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Results' panel contains a very dense, unreadable table that occupies excessive space, while the 'Conclusion' panel is nearly empty, creating severe internal space imbalance within panels.",
+      "primary": "The 'Results' panel contains a very dense, narrow table that occupies disproportionate vertical space, while the 'Conclusion' panel is nearly empty, creating severe internal space imbalance within the bottom row.",
       "secondary_issues": [
-        "The 'Results' panel's table is so small and dense that its text is illegible, indicating text_overload and asset_too_small.",
-        "The table in the 'Results' panel is clipped and overflowed, and the figure in 'Experiments' is cropped, violating overflow_guard and crop_guard."
+        "text_overload: The 'Results' panel's table is extremely dense and text-heavy, making it hard to read.",
+        "asset_too_small: The figure in the 'Experiments' panel is small and its x-axis labels are difficult to read."
+      ],
+      "guard_violations": [
+        "overflow_guard: The text in the 'Results' panel's table is clipped and overflows its container, with ellipses visible."
       ]
     },
-    "confidence": 0.95,
+    "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"text_overload\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\", \"crop_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Results' panel contains a very dense, unreadable table that occupies excessive space, while the 'Conclusion' panel is nearly empty, creating severe internal space imbalance within panels.\",\n    \"secondary_issues\": [\n      \"The 'Results' panel's table is so small and dense that its text is illegible, indicating text_overload and asset_too_small.\",\n      \"The table in the 'Results' panel is clipped and overflowed, and the figure in 'Experiments' is cropped, violating overflow_guard and crop_guard.\"\n    ]\n  },\n  \"confidence\": 0.95\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"text_overload\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Results' panel contains a very dense, narrow table that occupies disproportionate vertical space, while the 'Conclusion' panel is nearly empty, creating severe internal space imbalance within the bottom row.\",\n    \"secondary_issues\": [\n      \"text_overload: The 'Results' panel's table is extremely dense and text-heavy, making it hard to read.\",\n      \"asset_too_small: The figure in the 'Experiments' panel is small and its x-axis labels are difficult to read.\"\n    ],\n    \"guard_violations\": [\n      \"overflow_guard: The text in the 'Results' panel's table is clipped and overflows its container, with ellipses visible.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -1171,13 +1201,13 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The rightmost column of panels (Results and Case Studies) is significantly wider than the left two columns, creating a misaligned grid structure with uneven column widths.",
-      "secondary": "The 'Motivation' and 'Problem' panels have tightly packed bullet points while the 'Method' and 'Conclusion' panels have excessive white space, indicating internal space imbalance; additionally, text in the 'Problem' panel is clipped with ellipses, indicating text overload."
+      "primary": "The rightmost column of panels is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths.",
+      "secondary": "The 'Method' and 'Results' panels have large empty spaces above their content, while the 'Conclusion' panel is densely packed; text in the 'Problem' and 'Case Studies' panels is truncated with ellipses."
     },
-    "confidence": 0.9,
+    "confidence": 0.95,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"text_overload\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels (Results and Case Studies) is significantly wider than the left two columns, creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"The 'Motivation' and 'Problem' panels have tightly packed bullet points while the 'Method' and 'Conclusion' panels have excessive white space, indicating internal space imbalance; additionally, text in the 'Problem' panel is clipped with ellipses, indicating text overload.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"text_overload\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"The 'Method' and 'Results' panels have large empty spaces above their content, while the 'Conclusion' panel is densely packed; text in the 'Problem' and 'Case Studies' panels is truncated with ellipses.\"\n  },\n  \"confidence\": 0.95\n}",
     "template": "template_storyflow"
   },
   {
@@ -1186,40 +1216,39 @@
     "primary_issue": "structure_alignment_error",
     "secondary_issues": [
       "space_imbalance",
-      "text_overload"
+      "hierarchy_emphasis_error"
     ],
-    "guard_violations": [
-      "overflow_guard"
-    ],
+    "guard_violations": [],
     "evidence": {
       "primary": "The rightmost column of panels is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight across the canvas.",
-      "secondary": "Within the 'Experiments' and 'Results' panels, bullet points are overly spaced while the 'Conclusion / Takeaways' panel is densely packed, indicating internal space imbalance; text in multiple bullet points is truncated with ellipses, indicating text overload."
+      "secondary": "Within the 'Experiments' and 'Results' panels, bullet points are loosely spaced while the 'Motivation / Background' panel is densely packed, indicating internal space imbalance; additionally, the large numbered circles (e.g., 1, 2, 3, 4, 5, 6) are visually dominant and draw attention away from the content, creating a hierarchy emphasis error."
     },
     "confidence": 0.95,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"text_overload\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight across the canvas.\",\n    \"secondary\": \"Within the 'Experiments' and 'Results' panels, bullet points are overly spaced while the 'Conclusion / Takeaways' panel is densely packed, indicating internal space imbalance; text in multiple bullet points is truncated with ellipses, indicating text overload.\"\n  },\n  \"confidence\": 0.95\n}",
+    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [],\n  \"evidence\": {\n    \"primary\": \"The rightmost column of panels is significantly narrower than the left two columns, creating a misaligned grid structure with uneven column widths and unbalanced visual weight across the canvas.\",\n    \"secondary\": \"Within the 'Experiments' and 'Results' panels, bullet points are loosely spaced while the 'Motivation / Background' panel is densely packed, indicating internal space imbalance; additionally, the large numbered circles (e.g., 1, 2, 3, 4, 5, 6) are visually dominant and draw attention away from the content, creating a hierarchy emphasis error.\"\n  },\n  \"confidence\": 0.95\n}",
     "template": "template_storyflow"
   },
   {
     "run_id": "20260609_064924_Align_before_Fuse_Vision_and_L_71aaa19baf2b",
     "labeler": "vlm:Qwen/Qwen3-VL-32B-Instruct#pass0",
-    "primary_issue": "structure_alignment_error",
+    "primary_issue": "space_imbalance",
     "secondary_issues": [
-      "space_imbalance",
       "hierarchy_emphasis_error"
     ],
     "guard_violations": [
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Conclusion' panel (5) is significantly narrower than the 'Results' panel (4), creating a misaligned grid structure with uneven column widths.",
-      "secondary": "The 'Motivation' panel has overly loose spacing between bullet points, while the 'Experiments' panel is densely packed, indicating space_imbalance; the section headers use inconsistent colors and sizes, reducing visual hierarchy clarity."
+      "primary": "The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels.",
+      "secondary_issues": [
+        "The section headers (e.g., 'Motivation', 'Method') are visually similar in size and color, making it hard to distinguish the main flow or focal point of the poster."
+      ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"structure_alignment_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Conclusion' panel (5) is significantly narrower than the 'Results' panel (4), creating a misaligned grid structure with uneven column widths.\",\n    \"secondary\": \"The 'Motivation' panel has overly loose spacing between bullet points, while the 'Experiments' panel is densely packed, indicating space_imbalance; the section headers use inconsistent colors and sizes, reducing visual hierarchy clarity.\"\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Method' panel is densely packed with text and a figure, creating uneven visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Method') are visually similar in size and color, making it hard to distinguish the main flow or focal point of the poster.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_classic"
   },
   {
@@ -1238,13 +1267,13 @@
         "The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it hard to distinguish the main flow or focal point of the poster."
       ],
       "guard_violations": [
-        "The table caption in the 'Problem' panel is truncated with an ellipsis, indicating text overflow."
+        "The table caption in the 'Problem' section is truncated with an ellipsis, indicating text overflow."
       ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is densely packed with text and a table, creating uneven visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it hard to distinguish the main flow or focal point of the poster.\"\n    ],\n    \"guard_violations\": [\n      \"The table caption in the 'Problem' panel is truncated with an ellipsis, indicating text overflow.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"space_imbalance\",\n  \"secondary_issues\": [\"hierarchy_emphasis_error\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Motivation' panel has large empty space below its bullet points, while the 'Problem' panel is densely packed with text and a table, creating uneven visual weight within panels.\",\n    \"secondary_issues\": [\n      \"The section headers (e.g., 'Motivation', 'Problem') are visually identical in size and style, making it hard to distinguish the main flow or focal point of the poster.\"\n    ],\n    \"guard_violations\": [\n      \"The table caption in the 'Problem' section is truncated with an ellipsis, indicating text overflow.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   },
   {
@@ -1259,16 +1288,19 @@
       "overflow_guard"
     ],
     "evidence": {
-      "primary": "The 'Results' section header is visually emphasized with a large green font, drawing attention away from the main title and creating a competing focal point, while the 'Key Findings' section has a less prominent purple header, disrupting the visual hierarchy.",
+      "primary": "The 'Results' section's title and first bullet point are visually emphasized with large green text, drawing disproportionate attention away from the more critical content in other sections like 'Method' and 'Key Findings', which lack such emphasis.",
       "secondary_issues": [
-        "In the 'Motivation' panel, bullet points are spaced too loosely, while the 'Conclusion' panel is densely packed, creating internal space imbalance.",
-        "The figure in the 'Experiments' panel is rendered too small to clearly read its content, especially the text in the interface screenshot."
+        "The 'Motivation' panel has very loose spacing between bullet points while the 'Conclusion' panel is densely packed, indicating space_imbalance within panels.",
+        "The figure in the 'Experiments' panel is too small to clearly read the interface details, indicating asset_too_small."
+      ],
+      "guard_violations": [
+        "Text in the 'Motivation' section's first bullet point is clipped at the bottom, indicating overflow_guard."
       ]
     },
     "confidence": 0.9,
     "source": "vlm",
     "notes": "",
-    "raw_content": "{\n  \"primary_issue\": \"hierarchy_emphasis_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Results' section header is visually emphasized with a large green font, drawing attention away from the main title and creating a competing focal point, while the 'Key Findings' section has a less prominent purple header, disrupting the visual hierarchy.\",\n    \"secondary_issues\": [\n      \"In the 'Motivation' panel, bullet points are spaced too loosely, while the 'Conclusion' panel is densely packed, creating internal space imbalance.\",\n      \"The figure in the 'Experiments' panel is rendered too small to clearly read its content, especially the text in the interface screenshot.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
+    "raw_content": "{\n  \"primary_issue\": \"hierarchy_emphasis_error\",\n  \"secondary_issues\": [\"space_imbalance\", \"asset_too_small\"],\n  \"guard_violations\": [\"overflow_guard\"],\n  \"evidence\": {\n    \"primary\": \"The 'Results' section's title and first bullet point are visually emphasized with large green text, drawing disproportionate attention away from the more critical content in other sections like 'Method' and 'Key Findings', which lack such emphasis.\",\n    \"secondary_issues\": [\n      \"The 'Motivation' panel has very loose spacing between bullet points while the 'Conclusion' panel is densely packed, indicating space_imbalance within panels.\",\n      \"The figure in the 'Experiments' panel is too small to clearly read the interface details, indicating asset_too_small.\"\n    ],\n    \"guard_violations\": [\n      \"Text in the 'Motivation' section's first bullet point is clipped at the bottom, indicating overflow_guard.\"\n    ]\n  },\n  \"confidence\": 0.9\n}",
     "template": "template_dashboard"
   }
 ]

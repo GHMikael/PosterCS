@@ -17,6 +17,7 @@ import csv
 import json
 from collections import Counter
 from pathlib import Path
+from typing import List
 
 from experiments.audit.taxonomy import REAL_ISSUES
 from experiments.audit.metrics_v2 import (
@@ -42,6 +43,18 @@ def _load_csv(p: Path) -> dict:
 def _load_vlm(p: Path) -> dict:
     # label_poster stores the run folder under "run_id"
     return {x["run_id"]: x["primary_issue"] for x in json.loads(p.read_text(encoding="utf-8"))}
+
+
+# Variant order for the prompt-gradient curve (low → high constraint).
+VARIANT_ORDER = ["direct", "narrowed", "grounded", "describe_classify"]
+
+
+def _discover_variants() -> List[str]:
+    """All vlm_qwen32b_<variant>.json in OUT, ordered by VARIANT_ORDER then name."""
+    found = [p.stem.replace("vlm_qwen32b_", "") for p in OUT.glob("vlm_qwen32b_*.json")]
+    ordered = [v for v in VARIANT_ORDER if v in found]
+    ordered += sorted(v for v in found if v not in VARIANT_ORDER)
+    return ordered
 
 
 def _acc(gold, pred) -> float:
@@ -93,8 +106,6 @@ def _variant(name, gold_map, vlm_map):
 def main() -> int:
     A = _load_csv(GOLD_DIR / "audit_v2_labels_annotatorA.csv")
     B = _load_csv(GOLD_DIR / "audit_v2_labels_annotatorB.csv")
-    direct = _load_vlm(OUT / "vlm_qwen32b_direct.json")
-    narrowed = _load_vlm(OUT / "vlm_qwen32b_narrowed.json")
     geom = {g["run_folder"]: g for g in json.loads((OUT / "geom_rules.json").read_text(encoding="utf-8"))}
 
     runs = sorted(A)
@@ -112,30 +123,53 @@ def main() -> int:
         t = tmpl.get(r, "?")
         by_tmpl.setdefault(t, Counter())[A[r]] += 1
 
-    dv = _variant("direct", A, direct)
-    nv = _variant("narrowed", A, narrowed)
+    # Discover all VLM variant result files (prompt-gradient levels).
+    variant_names = _discover_variants()
+    variant_maps = {v: _load_vlm(OUT / f"vlm_qwen32b_{v}.json") for v in variant_names}
+    variant_results = [_variant(v, A, variant_maps[v]) for v in variant_names]
 
     kappa_out = {"annotatorA_vs_B": (round(ab_kappa, 3) if ab_kappa is not None else None),
                  "n_common": len(common), "n_disagreements": len(disagreements),
                  "disagreements": [{"run": r, "A": a, "B": b} for r, a, b in disagreements]}
     (OUT / "kappa.json").write_text(json.dumps(kappa_out, ensure_ascii=False, indent=2), encoding="utf-8")
     (OUT / "confusion_matrix.json").write_text(
-        json.dumps({"direct": dv["confusion"], "narrowed": nv["confusion"]}, ensure_ascii=False, indent=2), encoding="utf-8")
+        json.dumps({r["variant"]: r["confusion"] for r in variant_results},
+                   ensure_ascii=False, indent=2), encoding="utf-8")
     with (OUT / "per_issue_table.csv").open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["variant", "class", "precision", "recall", "f1", "gold_support"])
-        for res in (dv, nv):
+        for res in variant_results:
             for c in LABELS:
                 m = res["per_class"][c]
                 w.writerow([res["variant"], c, m["precision"], m["recall"], m["f1"], m["support"]])
 
-    _write_findings(gold, by_tmpl, kappa_out, dv, nv, geom)
-    print(f"[analyze] verdict: direct={dv['verdict']['verdict']}  narrowed={nv['verdict']['verdict']}")
-    print(f"[analyze] wrote AUDIT_V2_FINDINGS.md + 3 artifacts to {OUT}")
+    # Prompt-gradient curve table — the headline result of the experiment.
+    curve_rows = []
+    for res in variant_results:
+        curve_rows.append({
+            "variant": res["variant"],
+            "accuracy": res["accuracy"],
+            "kappa_vlm_gold": res["kappa_vlm_gold"],
+            "vlm_top1_share": res["vlm_top1_share"],
+            "vlm_label_entropy": res["vlm_label_entropy"],
+            "none_recall": res["none_recall"],
+            "fp_rate_text_overload": res["fp_rate_text_overload"],
+            "fp_rate_space_imbalance": res["fp_rate_space_imbalance"],
+            "verdict": res["verdict"]["verdict"],
+        })
+    (OUT / "prompt_gradient_curve.json").write_text(
+        json.dumps(curve_rows, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    _write_findings(gold, by_tmpl, kappa_out, variant_results, geom)
+    print(f"[analyze] variants: {variant_names}")
+    for res in variant_results:
+        print(f"[analyze] {res['variant']:20s} acc={res['accuracy']:.3f} "
+              f"κ={res['kappa_vlm_gold']} verdict={res['verdict']['verdict']}")
+    print(f"[analyze] wrote AUDIT_V2_FINDINGS.md + prompt_gradient_curve.json to {OUT}")
     return 0
 
 
-def _write_findings(gold, by_tmpl, kappa_out, dv, nv, geom):
+def _write_findings(gold, by_tmpl, kappa_out, variant_results, geom):
     gdist = Counter(gold)
     overlap_nz = sum(1 for g in geom.values() if (g["overlap_count"] or 0) > 0)
     contrast_ok = all(g["contrast"]["ok"] for g in geom.values() if g["contrast"])
@@ -155,25 +189,41 @@ def _write_findings(gold, by_tmpl, kappa_out, dv, nv, geom):
     L("\n## Objective geom rules\n")
     L(f"- contrast: all themes WCAG-AA = **{contrast_ok}** → any VLM `low_contrast` is a false positive.")
     L(f"- overlap: {overlap_nz}/60 posters have ≥1 partial collision (rest clean).\n")
-    L("## VLM vs gold\n")
-    L("| metric | direct | narrowed |\n|---|---|---|")
+
+    # Variant header cells for the N-column tables.
+    vh = [r["variant"] for r in variant_results]
+    vcols = " | ".join(vh)
+    vcols_sep = "|".join(["---"] * len(vh))
+
+    L("## VLM vs gold (prompt-gradient)\n")
+    L(f"| metric | {vcols} |\n|---|{vcols_sep}|")
     for k, lab in [("accuracy", "accuracy"), ("prior_baseline_acc", "prior baseline"),
                    ("kappa_vlm_gold", "κ(VLM,gold)"), ("vlm_top1_share", "VLM top-1 share"),
                    ("vlm_label_entropy", "VLM label entropy"), ("none_recall", "recall(none)"),
                    ("fp_rate_space_imbalance", "FP rate space_imbalance"),
                    ("fp_rate_text_overload", "FP rate text_overload")]:
-        L(f"| {lab} | {dv[k]} | {nv[k]} |")
+        cells = " | ".join(str(r[k]) for r in variant_results)
+        L(f"| {lab} | {cells} |")
     L("\n**Per-class recall (VLM vs gold):**\n")
-    L("| class | gold_support | recall(direct) | recall(narrowed) |\n|---|---|---|---|")
+    L(f"| class | gold_support | " + " | ".join(f"recall({v})" for v in vh) + " |\n"
+      + "|---|---|" + "|".join(["---"] * len(vh)) + "|")
     for c in LABELS:
-        s = dv["per_class"][c]["support"]
+        s = variant_results[0]["per_class"][c]["support"]
         if s:
-            L(f"| {c} | {s} | {dv['per_class'][c]['recall']} | {nv['per_class'][c]['recall']} |")
+            cells = " | ".join(str(r["per_class"][c]["recall"]) for r in variant_results)
+            L(f"| {c} | {s} | {cells} |")
     L("\n## Verdict\n")
-    for res in (dv, nv):
+    for res in variant_results:
         v = res["verdict"]
         L(f"- **{res['variant']}: {v['verdict']}** — S1={v['S1_unreliable']} S2={v['S2_reliable']} S3={v['S3_routed']}; "
           f"reliable={v['reliable_classes']} blind={v['blind_classes']} (support≥{MIN_SUPPORT})")
+    L("\n## Prompt-gradient curve (constraint → reliability)\n")
+    L("| variant | accuracy | κ | top1_share | none_recall | FP_text_overload | FP_space_imbalance | verdict |\n"
+      "|---|---|---|---|---|---|---|---|")
+    for r in variant_results:
+        v = r["verdict"]
+        L(f"| {r['variant']} | {r['accuracy']} | {r['kappa_vlm_gold']} | {r['vlm_top1_share']} | "
+          f"{r['none_recall']} | {r['fp_rate_text_overload']} | {r['fp_rate_space_imbalance']} | {v['verdict']} |")
     if kappa_out["disagreements"]:
         L("\n## A/B disagreements (for adjudication)\n")
         for d in kappa_out["disagreements"]:
