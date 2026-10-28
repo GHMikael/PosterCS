@@ -1,0 +1,112 @@
+{
+  "version": "external_natural20_inference_manifest_v2_preprocessed",
+  "created_at_utc": "2026-10-08T02:35:55.176853+00:00",
+  "dataset": "Paper2Poster/Paper2Poster author-created posters",
+  "gold_loaded": false,
+  "gold_freeze_sha256": "5d67dcdff282e0dbda547d7aff402aa33492c69d3ff72217d23f35103fbadbf0",
+  "preprocessing_manifest": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/09_external_natural20/external_natural20_inference_preprocessing_v1.json",
+  "preprocessing_manifest_sha256": "f3b451676c302e3b9487d1468350d6e78c75ec08c9fc60669346003ad8fc55bc",
+  "record_count": 20,
+  "records": [
+    {
+      "sample_id": "EN01",
+      "image_path": "data/external/images/EN01.png",
+      "sha256": "323fe1e7ccb87d4d529ea9fd261c3c56dcd44d91e5a4b6e9125eabbddec2db6c"
+    },
+    {
+      "sample_id": "EN02",
+      "image_path": "data/external/images/EN02.png",
+      "sha256": "aed2d9ec54f35526368acfe9115ebf3a9b8167d38b563688b861a3723f00044d"
+    },
+    {
+      "sample_id": "EN03",
+      "image_path": "data/external/images/EN03.png",
+      "sha256": "02faf6a32392fde2cff0911060a4a9a196c282430ee29f12abe6af2c1f1967b1"
+    },
+    {
+      "sample_id": "EN04",
+      "image_path": "data/external/images/EN04.png",
+      "sha256": "187a6634f5203721396a427f490af9da99c8709db9745a15441982a90c1f42ed"
+    },
+    {
+      "sample_id": "EN05",
+      "image_path": "data/external/images/EN05.png",
+      "sha256": "54605c6dcbb8f3776610ba56bb606a9c382eec5af2fb19ad4ffef00f14b536d3"
+    },
+    {
+      "sample_id": "EN06",
+      "image_path": "data/external/images/EN06.png",
+      "sha256": "bf27c7df5560f560111de057f36f0d4c434556a3fcd6bf9cbdabbde1f0c947db"
+    },
+    {
+      "sample_id": "EN07",
+      "image_path": "data/external/images/EN07.png",
+      "sha256": "cc0af60877e03605da96af741562c044a8bd8145a8ad35924ac7dd20129d10a0"
+    },
+    {
+      "sample_id": "EN08",
+      "image_path": "data/external/images/EN08.png",
+      "sha256": "384a14716c9af3deec513900aac41c4d49fc074f3687e975bfab55431c153140"
+    },
+    {
+      "sample_id": "EN09",
+      "image_path": "data/external/images/EN09.png",
+      "sha256": "789da638f72325d9d5c1de9d67a7f4a4f65ab794f0b907bfafb10b562d6041a0"
+    },
+    {
+      "sample_id": "EN10",
+      "image_path": "data/external/images/EN10.png",
+      "sha256": "26675e60fd6531be8f55e89c7707281fad7bc645eb1d65fc097b88f213c717d5"
+    },
+    {
+      "sample_id": "EN11",
+      "image_path": "data/external/images/EN11.png",
+      "sha256": "3455b721d8911a3102f4696eb557430e6c1e711fe39428b787d879cdf24000e0"
+    },
+    {
+      "sample_id": "EN12",
+      "image_path": "data/external/images/EN12.png",
+      "sha256": "dbfa9dfe8a8b82be9dbcba1c42ca2854886f72d2e5ffc759ecedf0a607ec16d7"
+    },
+    {
+      "sample_id": "EN13",
+      "image_path": "data/external/images/EN13.png",
+      "sha256": "f6ef41ae11dc6738cbda637dde1a2593a0e582d9244ff9ca4b3110fef6b3226d"
+    },
+    {
+      "sample_id": "EN14",
+      "image_path": "data/external/images/EN14.png",
+      "sha256": "887aa78d44d64834426ec0bf0d952b3daa6f142902972606fd8c8244ec443d59"
+    },
+    {
+      "sample_id": "EN15",
+      "image_path": "data/external/images/EN15.png",
+      "sha256": "b1dca19d6eeb89624c0d317f53219ef57ae1af2dba0c2f5b30d5398c8d9e0b73"
+    },
+    {
+      "sample_id": "EN16",
+      "image_path": "data/external/images/EN16.png",
+      "sha256": "89644f38126125e83633105f68f31c1a9de17368bf5ba0ba2e743d068985061f"
+    },
+    {
+      "sample_id": "EN17",
+      "image_path": "data/external/images/EN17.png",
+      "sha256": "34ae1a2c3df14ba5ad18c2b8f39782e284bc6b33a55fc47c3ce315035f32511e"
+    },
+    {
+      "sample_id": "EN18",
+      "image_path": "data/external/images/EN18.png",
+      "sha256": "aaa86f7357b63678f51abed60c5c34b358eca254c27da609f89b7b9137ac1c6d"
+    },
+    {
+      "sample_id": "EN19",
+      "image_path": "data/external/images/EN19.png",
+      "sha256": "d4e226cd0de5f78b5b9d7e7d5ea6570b6e9e0827ddef3b6d757914733156f7eb"
+    },
+    {
+      "sample_id": "EN20",
+      "image_path": "data/external/images/EN20.png",
+      "sha256": "fc41748c0bb29102b2a22879170530187903caee7f6aca3fb2e8aaee546608e8"
+    }
+  ]
+}

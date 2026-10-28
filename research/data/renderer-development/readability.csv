@@ -1,0 +1,33 @@
+run_folder,template,human_primary,human_secondary,human_notes,picture_count,min_display_short_side_1080px,min_display_area_1080px2,min_median_detail_height_1080px,max_edge_density,pictures_with_risk_flags
+20260609_030028_Automated_Evaluation_of_Person_b3a1b1bcaa11,template_dashboard,text_overload,asset_too_small,整体感觉还行，但是文字密度要点过高 ，读起来累，还有左下角的图有点看不清图中的文字,3,84.2,47883.3,2.31,0.2287,3
+20260609_212513_EduIllustrate_Towards_Scalable_91ebd47f4903,template_dashboard,asset_too_small,text_overload,整体布局也没啥问题，但是图片多导致基本都看不清图片里面的文字,4,137.7,47387.5,1.76,0.108,4
+20260609_031113_DataGovBench_Benchmarking_LLM__0848906204dd,template_dashboard,asset_too_small,text_overload,框架图本身文字信息内容就多 和正常图片占位一样的话 基本啥也看不见,3,177.5,37336.7,2.2,0.1611,3
+20260609_031542_LeanRAG_Knowledge-Graph-Based__24e848eba9fe,template_classic,asset_too_small,text_overload,实验数据图和框架图根本看不清 文字有点密,3,84.2,40250.9,3.25,0.1983,3
+20260609_041103_InfiFusion_A_Unified_Framework_91741a511b2b,template_classic,asset_too_small,text_overload,那个架构图和实验数据图基本啥也看不见 文字稍微密了点,3,118.8,21338.9,1.6,0.1559,3
+20260609_031231_Teaching_Language_Models_to_Cr_1bb5aaf1ca62,template_classic,asset_too_small,text_overload,还是左下角那张图有点被挤压的啥也看不见,3,125.3,21518.9,2.87,0.1362,3
+20260609_022821_A_Comprehensive_Survey_of_Rewa_028f962461b9,template_dashboard,asset_too_small,space_imbalance,布局有点不平衡 图片里面的文字都太小了 还有第三部分result有留白,3,114.0,46774.3,3.85,0.2363,3
+20260609_023433_Test-Time_Preference_Optimizat_6b985b677181,template_classic,asset_too_small,space_imbalance,框架图和那个折线图太小了 看不清图里面的内容 conclusion地方有一半留白,3,114.9,32529.0,1.64,0.1904,3
+"20260609_023510_Seeing,_Listening,_Remembering_5b5ef16d0aec",template_classic,asset_too_small,text_overload,整体不错 除了框架图太小 其他都挺合理的,3,114.9,37408.4,1.58,0.1436,3
+20260609_023950_MLP_Memory_A_Retriever-Pretrai_ae89635e3e92,template_classic,asset_too_small,space_imbalance,整体不错 除了框架图太小 其他都挺合理的,3,125.3,39458.6,3.05,0.1038,3
+20260609_024001_Generalist_Reward_Models_Found_657081bc5ee8,template_classic,asset_too_small,space_imbalance,图太小 有留白,3,114.9,21733.2,1.66,0.1606,3
+20260609_024412_LLMS'_INTERNAL_STATES_RETAIN_T_a64e1943af91,template_classic,text_overload,,这张海报的图表现的还不错 能大概看清楚字 因为图的尺寸刚刚好适配分配的空间,3,125.3,51007.6,3.78,0.1693,3
+20260609_024809_One_SPACE_to_Rule_Them_All_Joi_b087d09deca9,template_classic,asset_too_small,,图太小,4,95.1,39243.7,3.66,0.129,4
+20260609_024834_Revisiting_Hallucination_Detec_ca5d974cf3fd,template_classic,other,,方法部分内容重复 结论有一半留白,2,210.1,73805.9,4.51,0.1478,2
+20260609_024836_Know_Your_Limits_A_Survey_of_A_345fd4c78f2e,template_dashboard,asset_too_small,space_imbalance,实验那个图太奇怪了 布局左右导致图里面的文字太小 keyfindings里面的图上下布局被压扁了 啥也看不见内容,3,94.7,9557.6,0.95,0.1982,3
+20260609_025032_From_Efficiency_to_Adaptivity__3483ab1db1f8,template_classic,asset_too_small,,方法的图简直啥也看不见 被压扁了,1,210.1,57024.5,3.24,0.1639,1
+20260609_025105_Crossing_the_Reward_Bridge_Exp_3931671c5534,template_storyflow,structure_alignment_error,asset_too_small,这个布局都歪了 然后所有的图只有一点点,3,52.1,3901.9,0.78,0.1438,3
+20260609_025220_Is_Chain-of-Thought_Reasoning__0a77c3c5f24d,template_storyflow,asset_too_small,structure_alignment_error,布局有问题,4,30.5,1026.1,0.47,0.1925,4
+20260609_025510_TAKE_A_STEP_BACK_EVOKING_REASO_efd7e7bea9bb,template_storyflow,structure_alignment_error,asset_too_small,这个布局都歪了 然后所有的图只有一点点,3,52.1,3606.3,0.76,0.1563,3
+20260609_025515_MEMTRACK_Evaluating_Long-Term__b8f5d698d757,template_dashboard,asset_too_small,,方法图和实验图里面的文字太小了 看不见,3,95.3,39499.8,2.36,0.1541,3
+20260609_025546_Constitutional_AI_Harmlessness_ffa46538873c,template_classic,asset_too_small,,这个方法图内容看不见 其他几个图还将就看看,4,125.3,27553.7,3.29,0.0756,4
+20260609_025852_ESSAYBENCH_Evaluating_Large_La_16f4e934923a,template_dashboard,asset_too_small,,几个图内容看不清,4,112.9,48980.5,2.9,0.1526,4
+20260609_025904_Multi-Agent-as-Judge_Aligning__9ece80d6b03f,template_storyflow,structure_alignment_error,asset_too_small,这个布局都歪了 然后所有的图只有一点点,3,49.8,2594.3,0.67,0.1505,3
+20260609_030306_Agent-as-a-Judge_Evaluate_Agen_1dee0b26a38b,template_dashboard,asset_too_small,,框架图的内容看不清,3,94.8,48297.8,1.88,0.1784,3
+20260609_030815_HELLOBENCH_EVALUATING_LONG_TEX_078a8e42438f,template_dashboard,asset_too_small,,这张整体布局看起来不错 但是Method和HelloEval板块的图里面文字看不清,4,100.9,33533.2,2.44,0.1678,4
+20260609_031655_Query-Based_Router_by_Dual_Con_ca7853cdbd31,template_classic,asset_too_small,,这个结果里面的图片有点被压扁了,3,125.3,25479.2,3.69,0.1413,3
+20260609_031955_Multimodal_Retrieval-Reflectio_90b3ba39356e,template_classic,text_overload,asset_too_small,这张海报文字内容有点太多了 然后Method的框架图里面根本看不清 因为那个图里面内容太多了,2,125.3,26459.8,1.71,0.1196,2
+20260609_032530_Agentic_Search-Enhanced_Large__2fa60d8ceb94,template_classic,asset_too_small,,框架图看不清内容 实验图也看不清,2,125.3,28210.0,2.82,0.1245,2
+20260609_033143_Reachability_of_Independent_Se_5e8f4e632965,template_classic,asset_too_small,,实验图看不见内容,3,114.9,33464.8,3.44,0.1682,3
+20260609_033459_LongRAG_Enhancing_Retrieval-Au_20eda233c56a,template_classic,asset_too_small,,框架图看不清内容,3,109.9,35598.9,1.83,0.1161,3
+20260609_033644_AQA_Adaptive_Question_Answerin_7686221c4c02,template_classic,asset_too_small,,方法图啥也看不见 然后结果图片内容太多 也看不清,3,125.3,23892.2,1.62,0.1429,3
+20260609_033812_Linear_Graph_Retrieval_Augment_26e5b004d601,template_dashboard,asset_too_small,,这个方法结果keyfindings里面的三张图都看不见内容,4,103.9,32079.9,1.56,0.1399,4

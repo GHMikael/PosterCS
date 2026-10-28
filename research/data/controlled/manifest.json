@@ -1,0 +1,343 @@
+{
+  "dataset": "hybrid_controlled48_confirmation_v1",
+  "gold_included": false,
+  "source_freeze_manifest_sha256": "6702e0f89a01367dd8d377aa3ff652fb6e646bfb02faeba5e9f4e87b34692730",
+  "records": [
+    {
+      "sample_id": "HC01-control",
+      "image_path": "data/controlled/pairs/HC01/control.png",
+      "sha256": "ee892490b6069cfb8b1bdf54fb7e397158060fe7be8ed6e84d529018be7cf9ec",
+      "pair_id": "HC01",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC01-mutation",
+      "image_path": "data/controlled/pairs/HC01/mutation.png",
+      "sha256": "51549f7cef4a70c5064a86c7d2de40f2f8cb42598918e21ccc2d3b1439aef237",
+      "pair_id": "HC01",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC02-control",
+      "image_path": "data/controlled/pairs/HC02/control.png",
+      "sha256": "38ea99a1278b66c1958a48465d6a1edce380088822b917b43596c507b6e25fe2",
+      "pair_id": "HC02",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC02-mutation",
+      "image_path": "data/controlled/pairs/HC02/mutation.png",
+      "sha256": "7fdf8dab9464430df1db3f456269c22b1a1289feac47a56c2c2dcca3a904ebe4",
+      "pair_id": "HC02",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC03-control",
+      "image_path": "data/controlled/pairs/HC03/control.png",
+      "sha256": "494474b79a91248e6193f5a1f5f5eab8dceb13e79259381e039ad5245a918bd0",
+      "pair_id": "HC03",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC03-mutation",
+      "image_path": "data/controlled/pairs/HC03/mutation.png",
+      "sha256": "1726c39dd389341807da45c268d268ccba1ab617d57036b8b398351f30f90e82",
+      "pair_id": "HC03",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC04-control",
+      "image_path": "data/controlled/pairs/HC04/control.png",
+      "sha256": "46e3ae47c57de4341a25fd16c1188f15b71181595a0824fd096a0f6bf2164bdf",
+      "pair_id": "HC04",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC04-mutation",
+      "image_path": "data/controlled/pairs/HC04/mutation.png",
+      "sha256": "50d7b4569acff19ff1dba31dcdc7f03e81aee97a584e8c82f07094727fa3f51c",
+      "pair_id": "HC04",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC05-control",
+      "image_path": "data/controlled/pairs/HC05/control.png",
+      "sha256": "17977eae6ba45befa5a4d6f4a26abe905580ab917c7de41eaf944ee61733758e",
+      "pair_id": "HC05",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC05-mutation",
+      "image_path": "data/controlled/pairs/HC05/mutation.png",
+      "sha256": "b24d513ef74f6962538510867df6f96a1e338151f0ff181e6f6c9384c8bbe8e9",
+      "pair_id": "HC05",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC06-control",
+      "image_path": "data/controlled/pairs/HC06/control.png",
+      "sha256": "652fc9e9d028b2c9068a251f491742d89964c992d212fa77ab2c40b1a8c11a8a",
+      "pair_id": "HC06",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC06-mutation",
+      "image_path": "data/controlled/pairs/HC06/mutation.png",
+      "sha256": "49c83df925b0da007fd50a185b9e28194eb51baa5f89110094dd8d201f489b76",
+      "pair_id": "HC06",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC07-control",
+      "image_path": "data/controlled/pairs/HC07/control.png",
+      "sha256": "f14ec869df6dda55d763505c2d5952a3b6644c569ab8617f80c2b44b2e526e53",
+      "pair_id": "HC07",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC07-mutation",
+      "image_path": "data/controlled/pairs/HC07/mutation.png",
+      "sha256": "ad9a6accc03a4f566ebffac132dcb472539e3df94d242ab9cf033ddcb2dbd47f",
+      "pair_id": "HC07",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC08-control",
+      "image_path": "data/controlled/pairs/HC08/control.png",
+      "sha256": "a4c1093b74c73cd09902c1336aac789f810ce85fa8bdf7a551caeac3af535ad2",
+      "pair_id": "HC08",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC08-mutation",
+      "image_path": "data/controlled/pairs/HC08/mutation.png",
+      "sha256": "7c8b58ce61efcc175c2597e2a8f75d7fab6e369b9e50130c2d49b8d0811e5cac",
+      "pair_id": "HC08",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC09-control",
+      "image_path": "data/controlled/pairs/HC09/control.png",
+      "sha256": "5601f04adf1e8d319d58b6633e732dcafc66ef9c67f87e86bdcaba89f0ea8bd7",
+      "pair_id": "HC09",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC09-mutation",
+      "image_path": "data/controlled/pairs/HC09/mutation.png",
+      "sha256": "71d3a27e7b0a940e289ca81a50e93cc016a11ddfaf15a4d7c1fc2776b35022d4",
+      "pair_id": "HC09",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC10-control",
+      "image_path": "data/controlled/pairs/HC10/control.png",
+      "sha256": "1e5b130023032075971cd16347e3af15e967b80312c76360c53ff270de0e4117",
+      "pair_id": "HC10",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC10-mutation",
+      "image_path": "data/controlled/pairs/HC10/mutation.png",
+      "sha256": "37af7ee21de6bcaf76a1407f4e132f60da8de159a1a27804366a2501e07114ab",
+      "pair_id": "HC10",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC11-control",
+      "image_path": "data/controlled/pairs/HC11/control.png",
+      "sha256": "09b31cc41cd429fbc641980583cf4aaa9d058f325b16b0f69aa13057b76c7a9a",
+      "pair_id": "HC11",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC11-mutation",
+      "image_path": "data/controlled/pairs/HC11/mutation.png",
+      "sha256": "335f52d043aaae0b56918abb9388440a48e5301203c5f30bf38b008d54f223a9",
+      "pair_id": "HC11",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC12-control",
+      "image_path": "data/controlled/pairs/HC12/control.png",
+      "sha256": "992bed5003551485a3def2f30f1a11e43cc2e032a4a038e8da261cce12c060fc",
+      "pair_id": "HC12",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC12-mutation",
+      "image_path": "data/controlled/pairs/HC12/mutation.png",
+      "sha256": "c6981b1c7d49274ec69aa05d9c344ef89076b492fee1b3f87ebacb20ee29fbb6",
+      "pair_id": "HC12",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC13-control",
+      "image_path": "data/controlled/pairs/HC13/control.png",
+      "sha256": "0a08d2f3f9b9e414d73ef1de99c9de834f8d9bf4f31b8c25e9e1a61d7bb8496f",
+      "pair_id": "HC13",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC13-mutation",
+      "image_path": "data/controlled/pairs/HC13/mutation.png",
+      "sha256": "729100f7b0a01b6a556456d53e7776c2bd9d0788ff1573ea0d4e104aa772f424",
+      "pair_id": "HC13",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC14-control",
+      "image_path": "data/controlled/pairs/HC14/control.png",
+      "sha256": "b18c855840b65c4cf8b4a9471731a41824f7e578a2c92d4cb6fbc35166785210",
+      "pair_id": "HC14",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC14-mutation",
+      "image_path": "data/controlled/pairs/HC14/mutation.png",
+      "sha256": "75c703d97669aa0e98f31bd01545c074a5d2ad8b838968635cbbbb4ef779c34f",
+      "pair_id": "HC14",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC15-control",
+      "image_path": "data/controlled/pairs/HC15/control.png",
+      "sha256": "b9b3a8db4e2ed7042a358e5ad56631471a2b29ffea94ce97c4ae1581ff0e0070",
+      "pair_id": "HC15",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC15-mutation",
+      "image_path": "data/controlled/pairs/HC15/mutation.png",
+      "sha256": "b946ee25e076ebcc411bb995cdafc7edcb301ab58ebe04fd4cfee27ee1e900af",
+      "pair_id": "HC15",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC16-control",
+      "image_path": "data/controlled/pairs/HC16/control.png",
+      "sha256": "d27b159916c084445e920ede2e46a12528afcca304f39e57d0c3ae1bb7b7db19",
+      "pair_id": "HC16",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC16-mutation",
+      "image_path": "data/controlled/pairs/HC16/mutation.png",
+      "sha256": "66348e1557ad3fb1999c63636f6dfc649ec2b0fc6b6dc762c35cace3eb0d67cf",
+      "pair_id": "HC16",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC17-control",
+      "image_path": "data/controlled/pairs/HC17/control.png",
+      "sha256": "2218bec7a066f756e703c36357043d31b262b136f194d821b5f33111c21655bb",
+      "pair_id": "HC17",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC17-mutation",
+      "image_path": "data/controlled/pairs/HC17/mutation.png",
+      "sha256": "df3a5e0935e37e45f36460120f553d73d3c3bf68ba8297301cd775bdbe09c835",
+      "pair_id": "HC17",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC18-control",
+      "image_path": "data/controlled/pairs/HC18/control.png",
+      "sha256": "b5899c4376e2cda12f884e0491cad9fec2566f67eacb82b1a9a5cd311df64324",
+      "pair_id": "HC18",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC18-mutation",
+      "image_path": "data/controlled/pairs/HC18/mutation.png",
+      "sha256": "b41deebf6fca92934dda919c0ae21145a7d1597891030d7d08bfd2ccd81c22ef",
+      "pair_id": "HC18",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC19-control",
+      "image_path": "data/controlled/pairs/HC19/control.png",
+      "sha256": "f88e2907c4917f1650f30d296abab1bad4b013d1bb883422cf1edafa2c8e6ace",
+      "pair_id": "HC19",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC19-mutation",
+      "image_path": "data/controlled/pairs/HC19/mutation.png",
+      "sha256": "7cf509efbd55b83bb965f47e09f68c3fccfcf9456233f55ee398afd3c085ca7d",
+      "pair_id": "HC19",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC20-control",
+      "image_path": "data/controlled/pairs/HC20/control.png",
+      "sha256": "b57d65b100053e5d81801db52f45e65681ef6f2c15a5ca7a6881ac8438f94eaa",
+      "pair_id": "HC20",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC20-mutation",
+      "image_path": "data/controlled/pairs/HC20/mutation.png",
+      "sha256": "0078882a1034c8af124cac4aa58cad258fe043f327a7b83ea2909b64a9240450",
+      "pair_id": "HC20",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC21-control",
+      "image_path": "data/controlled/pairs/HC21/control.png",
+      "sha256": "642f7ddb2e9f6df8353dcc54e5a0f4a488d14b9da364ac0d3708e8d3a5a352e8",
+      "pair_id": "HC21",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC21-mutation",
+      "image_path": "data/controlled/pairs/HC21/mutation.png",
+      "sha256": "fa173bc5fd8735a04b9476e19bc22d9dd84a931e3073ee2db6615571a6ccd83e",
+      "pair_id": "HC21",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC22-control",
+      "image_path": "data/controlled/pairs/HC22/control.png",
+      "sha256": "9fdc792899be2e1b15c4ab1cf9cd3244f2f468469084d490726c5d3b4b67f7ae",
+      "pair_id": "HC22",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC22-mutation",
+      "image_path": "data/controlled/pairs/HC22/mutation.png",
+      "sha256": "93f9bce761d87e3d4d0ff09f4df1945e7bb9f03a70fafa2b8cdd5f5b74bea76f",
+      "pair_id": "HC22",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC23-control",
+      "image_path": "data/controlled/pairs/HC23/control.png",
+      "sha256": "0cf12beb8214eb6233741632884a55fbf39c4403338de5989d82b821bfb08e83",
+      "pair_id": "HC23",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC23-mutation",
+      "image_path": "data/controlled/pairs/HC23/mutation.png",
+      "sha256": "869f7705ee9e1065b3aa30a6493a9666b378a2708c97091d4e8a2a293eed2af2",
+      "pair_id": "HC23",
+      "variant": "mutation"
+    },
+    {
+      "sample_id": "HC24-control",
+      "image_path": "data/controlled/pairs/HC24/control.png",
+      "sha256": "049657a46291e3385f5984a01ad7cb75f7158136a8176a810628e7431c2c574b",
+      "pair_id": "HC24",
+      "variant": "control"
+    },
+    {
+      "sample_id": "HC24-mutation",
+      "image_path": "data/controlled/pairs/HC24/mutation.png",
+      "sha256": "2b006a31d9f3c9732dead79f5817e1d835e7a96e7f7f377dd8285b49fb3a9649",
+      "pair_id": "HC24",
+      "variant": "mutation"
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "rule_version": "rule_v1",
+  "date": "2026-09-28",
+  "input_resolution": {
+    "width": 2400,
+    "height": 1350,
+    "normalized_height": 1080
+  },
+  "decision_schema": [
+    "positive",
+    "negative",
+    "abstain",
+    "not_applicable"
+  ],
+  "development_data": "RuleDev accepted-pairs v1 (33 pairs / 66 images)",
+  "formal88_used_for_tuning": false,
+  "rules": {
+    "R1R": {
+      "label": "body_text_too_small",
+      "track": "raster",
+      "status": "active",
+      "kind": "low",
+      "features": [
+        "body_line_height_p25_px1080"
+      ],
+      "applicability": null,
+      "thresholds": {
+        "positive_max": 10.0,
+        "negative_min": 18.0
+      },
+      "disabled_reason": null,
+      "development_metrics": {
+        "full": {
+          "n_pairs": 5,
+          "pair_success_rate": 0.4,
+          "mutation_positive_rate": 0.6,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 0.8,
+          "control_fpr": 0.0,
+          "coverage": 0.7,
+          "abstention_rate": 0.3,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 0.4,
+          "mutation_positive_rate": 0.6,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 0.8,
+          "control_fpr": 0.0,
+          "coverage": 0.7,
+          "abstention_rate": 0.3,
+          "not_applicable_rate": 0.0
+        }
+      }
+    },
+    "R1S": {
+      "label": "body_text_too_small",
+      "track": "source",
+      "status": "active",
+      "kind": "low",
+      "features": [
+        "source_body_font_min_pt"
+      ],
+      "applicability": null,
+      "thresholds": {
+        "positive_max": 8.0,
+        "negative_min": 12.0
+      },
+      "disabled_reason": null,
+      "development_metrics": {
+        "full": {
+          "n_pairs": 5,
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        }
+      }
+    },
+    "R2R": {
+      "label": "figure_detail_unreadable",
+      "track": "raster",
+      "status": "disabled_abstain",
+      "kind": "disabled",
+      "features": [
+        "ocr_line_count"
+      ],
+      "applicability": null,
+      "thresholds": null,
+      "disabled_reason": "No validated raster figure localization; whole-poster OCR count is confounded by text volume.",
+      "development_metrics": {
+        "full": {
+          "n_pairs": 6,
+          "pair_success_rate": 0.0,
+          "mutation_positive_rate": 0.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 0.0,
+          "control_fpr": 0.0,
+          "coverage": 0.0,
+          "abstention_rate": 1.0,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 0.0,
+          "mutation_positive_rate": 0.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 0.0,
+          "control_fpr": 0.0,
+          "coverage": 0.0,
+          "abstention_rate": 1.0,
+          "not_applicable_rate": 0.0
+        }
+      }
+    },
+    "R2S": {
+      "label": "figure_detail_unreadable",
+      "track": "source",
+      "status": "active",
+      "kind": "low",
+      "features": [
+        "source_picture_detail_p25_min_display_px"
+      ],
+      "applicability": {
+        "source_picture_count__min": 1
+      },
+      "thresholds": {
+        "positive_max": 2.0,
+        "negative_min": 5.5
+      },
+      "disabled_reason": null,
+      "development_metrics": {
+        "full": {
+          "n_pairs": 6,
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        }
+      }
+    },
+    "R3R": {
+      "label": "text_overload",
+      "track": "raster",
+      "status": "active",
+      "kind": "high",
+      "features": [
+        "ocr_character_count"
+      ],
+      "applicability": null,
+      "thresholds": {
+        "positive_min": 800,
+        "negative_max": 725
+      },
+      "disabled_reason": null,
+      "development_metrics": {
+        "full": {
+          "n_pairs": 5,
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        }
+      }
+    },
+    "R3S": {
+      "label": "text_overload",
+      "track": "source",
+      "status": "active",
+      "kind": "high_all",
+      "features": [
+        "source_character_count",
+        "source_text_density_max"
+      ],
+      "applicability": null,
+      "thresholds": {
+        "positive_min_0": 850,
+        "positive_min_1": 3500,
+        "negative_max_0": 775,
+        "negative_max_1": 3250
+      },
+      "disabled_reason": null,
+      "development_metrics": {
+        "full": {
+          "n_pairs": 5,
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        }
+      }
+    },
+    "R4R": {
+      "label": "space_imbalance",
+      "track": "raster",
+      "status": "active",
+      "kind": "high_all",
+      "features": [
+        "foreground_left_right_abs_diff",
+        "grid_occupancy_std"
+      ],
+      "applicability": null,
+      "thresholds": {
+        "positive_min_0": 0.07,
+        "positive_min_1": 0.2,
+        "negative_max_0": 0.03,
+        "negative_max_1": 0.205
+      },
+      "disabled_reason": null,
+      "development_metrics": {
+        "full": {
+          "n_pairs": 6,
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 0.6666666666666666,
+          "mutation_positive_rate": 0.6666666666666666,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 0.8333333333333334,
+          "abstention_rate": 0.16666666666666666,
+          "not_applicable_rate": 0.0
+        }
+      }
+    },
+    "R4S": {
+      "label": "space_imbalance",
+      "track": "source",
+      "status": "active",
+      "kind": "high_all",
+      "features": [
+        "source_largest_empty_grid_rect_ratio",
+        "source_content_left_right_abs_diff"
+      ],
+      "applicability": null,
+      "thresholds": {
+        "positive_min_0": 0.09,
+        "positive_min_1": 0.2,
+        "negative_max_0": 0.0,
+        "negative_max_1": 0.1
+      },
+      "disabled_reason": null,
+      "development_metrics": {
+        "full": {
+          "n_pairs": 6,
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 0.8333333333333334,
+          "mutation_positive_rate": 0.8333333333333334,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 0.9166666666666666,
+          "abstention_rate": 0.08333333333333333,
+          "not_applicable_rate": 0.0
+        }
+      }
+    },
+    "R5R": {
+      "label": "alignment_error",
+      "track": "raster",
+      "status": "active",
+      "kind": "high",
+      "features": [
+        "large_panel_grid_alignment_max_residual_norm"
+      ],
+      "applicability": {
+        "large_panel_candidate_count__min": 4,
+        "large_panel_edges_in_clusters__min": 12
+      },
+      "thresholds": {
+        "positive_min": 0.024,
+        "negative_max": 0.016
+      },
+      "disabled_reason": null,
+      "development_metrics": {
+        "full": {
+          "n_pairs": 5,
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 0.8,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 0.8,
+          "control_fpr": 0.0,
+          "coverage": 0.9,
+          "abstention_rate": 0.1,
+          "not_applicable_rate": 0.0
+        }
+      }
+    },
+    "R5S": {
+      "label": "alignment_error",
+      "track": "source",
+      "status": "active",
+      "kind": "derived_named_panel_misalignment",
+      "features": [
+        "source_named_panel_count",
+        "source_named_panel_edges_in_clusters"
+      ],
+      "applicability": {
+        "source_named_panel_count__min": 4
+      },
+      "thresholds": {
+        "positive_min": 0.08,
+        "negative_max": 0.0
+      },
+      "disabled_reason": null,
+      "development_metrics": {
+        "full": {
+          "n_pairs": 5,
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        }
+      }
+    },
+    "R6R": {
+      "label": "overlap_or_clipping",
+      "track": "raster",
+      "status": "disabled_abstain",
+      "kind": "disabled",
+      "features": [
+        "ellipsis_token_count",
+        "edge_touching_ocr_word_count"
+      ],
+      "applicability": null,
+      "thresholds": null,
+      "disabled_reason": "OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient.",
+      "development_metrics": {
+        "full": {
+          "n_pairs": 6,
+          "pair_success_rate": 0.0,
+          "mutation_positive_rate": 0.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 0.0,
+          "control_fpr": 0.0,
+          "coverage": 0.0,
+          "abstention_rate": 1.0,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 0.0,
+          "mutation_positive_rate": 0.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 0.0,
+          "control_fpr": 0.0,
+          "coverage": 0.0,
+          "abstention_rate": 1.0,
+          "not_applicable_rate": 0.0
+        }
+      }
+    },
+    "R6S": {
+      "label": "overlap_or_clipping",
+      "track": "source",
+      "status": "active",
+      "kind": "binary_all",
+      "features": [
+        "source_ellipsis_token_count",
+        "source_content_overlap_pair_count"
+      ],
+      "applicability": null,
+      "thresholds": {
+        "positive_min_0": 1,
+        "positive_min_1": 1,
+        "negative_max_0": 0,
+        "negative_max_1": 0
+      },
+      "disabled_reason": null,
+      "development_metrics": {
+        "full": {
+          "n_pairs": 6,
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        },
+        "lopo": {
+          "pair_success_rate": 1.0,
+          "mutation_positive_rate": 1.0,
+          "mutation_negative_rate": 0.0,
+          "control_negative_rate": 1.0,
+          "control_fpr": 0.0,
+          "coverage": 1.0,
+          "abstention_rate": 0.0,
+          "not_applicable_rate": 0.0
+        }
+      }
+    }
+  },
+  "deferred_labels": {
+    "weak_hierarchy": "always_abstain",
+    "asset_missing_or_broken": "not_calibrated_in_rule_v1",
+    "other": "always_human_review"
+  }
+}

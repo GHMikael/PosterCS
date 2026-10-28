@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "postercs-audit"
+version = "0.1.0"
+description = "Reproducible scientific-poster auditing experiments for PosterCS"
+requires-python = ">=3.11"
+dependencies = [
+  "jsonschema",
+  "numpy",
+  "pandas",
+  "Pillow",
+  "python-dotenv",
+  "PyYAML",
+  "scipy",
+]
+
+[project.optional-dependencies]
+vision = ["opencv-python", "pytesseract", "python-pptx"]
+providers = ["google-genai", "openai"]
+test = ["pytest"]
+
+[project.scripts]
+postercs-audit = "postercs_audit.inference.runner:main"
+postercs-score = "postercs_audit.evaluation.score:main"
+postercs-features = "postercs_audit.features.extract:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

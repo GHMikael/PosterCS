@@ -1,0 +1,39 @@
+models:
+  gemini_flash:
+    provider: gemini
+    model: gemini-3.8-flash
+    api_key_env: GEMINI_API_KEY
+    thinking_budget: 0
+    temperature: 0
+    enabled: true
+
+  qwen_vl_8b:
+    provider: qwen
+    model: Qwen/Qwen3-VL-8B-Instruct
+    api_key_env: Qwen_API_KEY
+    base_url: https://api.siliconflow.cn/v1
+    image_detail: high
+    structured_mode: json_object
+    temperature: 0
+    enabled: true
+
+  qwen_vl_32b:
+    provider: qwen
+    model: Qwen/Qwen3-VL-32B-Instruct
+    api_key_env: Qwen_API_KEY
+    base_url: https://api.siliconflow.cn/v1
+    image_detail: high
+    structured_mode: json_object
+    temperature: 0
+    enabled: true
+
+  glm_vl_flash:
+    provider: glm
+    model: glm-4.6v-flash
+    api_key_env: ZHIPU_API_KEY
+    base_url: https://open.bigmodel.cn/api/paas/v4
+    image_detail: high
+    structured_mode: json_object
+    image_probe_verified: true
+    temperature: 0
+    enabled: true

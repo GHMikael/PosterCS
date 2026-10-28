@@ -1,0 +1,712 @@
+{
+  "status": "images_frozen_labels_pending",
+  "sample_count": 88,
+  "natural_count": 40,
+  "controlled_count": 48,
+  "records": [
+    {
+      "sample_id": "FN16-d292d834be",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_024001_Generalist_Reward_Models_Found_657081bc5ee8/pptx/iter_1.png",
+      "sha256": "de049c4ee711e66b6c9a277e696b4e33a4cf94542fdd0f710097f6b06929071d",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN11-8fc8d063f1",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_033143_Reachability_of_Independent_Se_5e8f4e632965/after.png",
+      "sha256": "e3d83f0f97953fc76c8f50229e79ac0b59f45b0a16ee3af61f54d77e09796be7",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN06-c173b75b90",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_043303_Rethinking_Progression_of_Memo_21045ec2feae/pptx/iter_1.png",
+      "sha256": "625b0ec02994eb42222d0838c24e49887e27e336b53c0b1796c68f6a02c6f5aa",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN07-d4d0a2c267",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_031542_LeanRAG_Knowledge-Graph-Based__24e848eba9fe/after.png",
+      "sha256": "6acf6e391d6d2b0e712a68590c328a0d7243cbee53b45e79ab3fa92a5e615147",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN15-faff390436",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_035626_BELLE_A_Bi-Level_Multi-Agent_R_48c95073681f/pptx/iter_1.png",
+      "sha256": "1e7b2c78b509cf5f86d1d884e4205bd8104531cf696eaa052d661d45fb063c9d",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN08-ec63ae3513",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_050055_Evaluating_LLM_Agents_as_Lifel_3015deb5f266/after.png",
+      "sha256": "bb4ab254fb2102400cb13317ae466cfe7e64eef53c6cadc5990d9672a531ba5b",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN10-d014bda6ee",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_024809_One_SPACE_to_Rule_Them_All_Joi_b087d09deca9/after.png",
+      "sha256": "d53f93325eb6e745be5e5e34c46b42143bb6e1df41699f4ad7521fdcd8f02584",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN09-2b8c6c0ee2",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_044437_Evaluating_LLM_Agent_Personali_91d748283c90/after.png",
+      "sha256": "3e6aa3bda31cc6c207d11fe86727569d795de3002d81c9b7fd27b306660fed53",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN06-13a8a896ac",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_043303_Rethinking_Progression_of_Memo_21045ec2feae/after.png",
+      "sha256": "4e23dde1548467e6a4a0d56737461ff54bb8fb04d6f345cfe8f746c348dfa727",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN11-fa67d044a5",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_033143_Reachability_of_Independent_Se_5e8f4e632965/pptx/iter_1.png",
+      "sha256": "7fddac28aa2ec3a8b18a374dddd232365d5593e6706ffb782cc317662cadc96b",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN01-c5ac8d5d1c",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_042727_CODE2VIDEO_A_CODE-CENTRIC_PARA_32b909330b0a/after.png",
+      "sha256": "d9de14a87db4a6d443a9dd0d07b4ed971b4097ebfe403b1302d405c0bb059d4b",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN08-75a206361c",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_050055_Evaluating_LLM_Agents_as_Lifel_3015deb5f266/pptx/iter_1.png",
+      "sha256": "170b127e675f26bc35cb8381cdcf97c02e5da0c8ede3a1aa39033325ab2de255",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN16-6c0740f1db",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_024001_Generalist_Reward_Models_Found_657081bc5ee8/after.png",
+      "sha256": "c6f11a8e2c2de646203d9506b2261ab86857cfad8cccfe896aa81d8e4d7538b3",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN10-c5224f4084",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_024809_One_SPACE_to_Rule_Them_All_Joi_b087d09deca9/pptx/iter_1.png",
+      "sha256": "61fe5f59b2f777ff8e117ac7280ee503e84d259dda63c7afa2f210567beb4733",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN02-91c77d6ad7",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_035207_Tree_Search_for_LLM_Agent_Rein_01c4c43c1418/pptx/iter_1.png",
+      "sha256": "f9edd53ed58f12cdfe5529b2c3d1c4e672e2df9178468984549031d32fe1eb9c",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN09-a76c3efc01",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_044437_Evaluating_LLM_Agent_Personali_91d748283c90/pptx/iter_1.png",
+      "sha256": "b8d6e677d3a68928c560cbb39914c5f402b530cea28e66d9ab15aa61af6db375",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN07-2187460d99",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_031542_LeanRAG_Knowledge-Graph-Based__24e848eba9fe/pptx/iter_1.png",
+      "sha256": "39cd72c6455699736942444ab4dc197a65096f49edc6019acdc7caea6dd11273",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN12-7028dd714a",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_034844_EvoAgentX_An_Automated_Framewo_3113cc1e4e25/pptx/iter_1.png",
+      "sha256": "186f6d2b78041f5f67dd8a8279d5777c2bc3a4e6b6f078ffdf153dddc471620c",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN05-0d1a0524d5",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_065706_GME_Improving_Universal_Multim_cae3c40103dc/after.png",
+      "sha256": "4699a62351aac6233ece2f48d51c52d18b86c417fbaa2a75241730197e11e05f",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN14-b95a41f508",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_023950_MLP_Memory_A_Retriever-Pretrai_ae89635e3e92/after.png",
+      "sha256": "85a9274a58aa0207f0cd6988e13ed53f8202d91a2fc321d8949b2b071620d9cd",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN03-1c427dbdda",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_031231_Teaching_Language_Models_to_Cr_1bb5aaf1ca62/pptx/iter_1.png",
+      "sha256": "4d936b3fae67bd0903029bf2cb4df668c2ede6bb3fa9f489326abae00022f5c8",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN04-d40f31dca4",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_030815_HELLOBENCH_EVALUATING_LONG_TEX_078a8e42438f/pptx/iter_1.png",
+      "sha256": "8f3b42d15a6de10b2766413473ea8b587db48bf088e126b650247d93289ae796",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN18-bb5e6d3751",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_040432_Difficulty-Aware_Agentic_Orche_a37cd9381ae1/pptx/iter_1.png",
+      "sha256": "46a78323336a0e49ec1fc65f8082ae2f9170ff5268ed963965b11babb0c48fa3",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN19-ea361001ed",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_054045_Retrieval-Augmented_Generation_935b29f80d65/after.png",
+      "sha256": "d8bed66b7e6ba5ffdd5fd3b428439569d8add494f5092bbfdc990fe1f7ee3e6f",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN13-540b7ccda3",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_030306_Agent-as-a-Judge_Evaluate_Agen_1dee0b26a38b/after.png",
+      "sha256": "4b854208495d4f6a4801f9f9a0443f169d0831d7476e1a2fc9a1980773b12880",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN01-9ebba61a00",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_042727_CODE2VIDEO_A_CODE-CENTRIC_PARA_32b909330b0a/pptx/iter_1.png",
+      "sha256": "60098d94d7ad9092ecc912d87ce5feea3a9834634deb6de47c5ee74fc3cf0c8c",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN18-51ccde8d81",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_040432_Difficulty-Aware_Agentic_Orche_a37cd9381ae1/after.png",
+      "sha256": "0d802cc71274a4d2c5184b8f55056636d43d5d20e87bd7146a5113676202df8f",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN15-8f5b2a8a80",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_035626_BELLE_A_Bi-Level_Multi-Agent_R_48c95073681f/after.png",
+      "sha256": "983a5a079150c15a7d8066218062926aa373c9056ca36e4946fca0193acc8b6b",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN04-7eea923889",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_030815_HELLOBENCH_EVALUATING_LONG_TEX_078a8e42438f/after.png",
+      "sha256": "c9e8f52e350121d780e87a4cc3e4cf82947052e0eac520d7a678d591407c0b26",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN19-9045308874",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_054045_Retrieval-Augmented_Generation_935b29f80d65/pptx/iter_1.png",
+      "sha256": "345716a44fa5436e093d224d665b23db50c32909890eb1bd1246cc4d49f86c9a",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN20-e444c63cbf",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_050619_AGENTIC_RETRIEVAL-AUGMENTED_GE_c550595ca0d9/pptx/iter_1.png",
+      "sha256": "89f86a55eb5c4fcc180ba85726e052b287150888159d2bb5e71f1ca08071263b",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN17-224610b00d",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_033644_AQA_Adaptive_Question_Answerin_7686221c4c02/pptx/iter_1.png",
+      "sha256": "fdd86ba9e1042ef4656968d49a404fb97f7d19545f7ba32bce9cbc72bf9e7199",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN17-6a4921e0ea",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_033644_AQA_Adaptive_Question_Answerin_7686221c4c02/after.png",
+      "sha256": "d2249425795b657d60c81d7e6582ffc7b838cc1bf95f88ece49039c2c0312f35",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN20-fc295f7350",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_050619_AGENTIC_RETRIEVAL-AUGMENTED_GE_c550595ca0d9/after.png",
+      "sha256": "75a568f293497c42feaa20937c31f516a90cbab0c1ead5c6119134e341810ae8",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN03-c455d98516",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_031231_Teaching_Language_Models_to_Cr_1bb5aaf1ca62/after.png",
+      "sha256": "db8603cbaca2d99446730c244e30264efd9bfecb8e15fab2ab9f1b42697be76c",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN13-525b88387f",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_030306_Agent-as-a-Judge_Evaluate_Agen_1dee0b26a38b/pptx/iter_1.png",
+      "sha256": "82829d178f31751870bcedfc5b93da3132213be938d5e701e09a839884b6ca5f",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN12-a39c014045",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_034844_EvoAgentX_An_Automated_Framewo_3113cc1e4e25/after.png",
+      "sha256": "f429107336656a3460e4561adc56232bdbaf4df65369736b6b1e965afe1e43bc",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN02-a15020b5f0",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/natural40/assets/20260609_035207_Tree_Search_for_LLM_Agent_Rein_01c4c43c1418/after.png",
+      "sha256": "3961197d0e971323cbedd8b41125131ef0f156ba31fd48bbf3e296a26e19dfab",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN05-f8ea6c5f4b",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_065706_GME_Improving_Universal_Multim_cae3c40103dc/pptx/iter_1.png",
+      "sha256": "0ce9154088aa45588b62fc76d985efff628ebdb8c4d88ba525d1193a98ac9ff8",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FN14-2b8e7751b4",
+      "dataset": "natural40",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/outputs/runs/20260609_023950_MLP_Memory_A_Retriever-Pretrai_ae89635e3e92/pptx/iter_1.png",
+      "sha256": "901b92e51022e2be96c079af4987a653feb726342d16e8552b6e3ceaa27ee16f",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC01-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC01/control.png",
+      "sha256": "96c06739bae48884cf9ae4cb64a4d7d80d605adbd6b13344bbc0ee9c2fb69d32",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC01-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC01/mutation.png",
+      "sha256": "3ed2a046cf54d5db8ff8e88cb88d771f314f5401209d17a13f015b1d1c41f4eb",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC02-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC02/control.png",
+      "sha256": "fd7f44d0e780ccc5507b4a9c087bae3e9d1643b33cc3a9d6b03e1e81b148ef73",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC02-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC02/mutation.png",
+      "sha256": "e29e6eb693560fd7de9b62b3c1fc2f7353480b1104f0fe343605e839c09ecd3f",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC03-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC03/control.png",
+      "sha256": "d789254d122278ec13aa277cf1fda03d4a25caef4e9d6be297328873b80ce62c",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC03-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC03/mutation.png",
+      "sha256": "de9535b09ae1e6a4ab9cef5113f82391483535a877c5ee35fa906a46ac9b7a5e",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC04-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC04/control.png",
+      "sha256": "88539230f573c8c21c717f8af4e70d1727f361820a038aa8a77940957bbd43c3",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC04-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC04/mutation.png",
+      "sha256": "2287c92dd7ff1e964a5ea2ea20da0b8dfa653ab5aa7136b2dc42ca0242723828",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC05-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC05/control.png",
+      "sha256": "c99a52d6eafcaa85f739a018ec52966b9bbf2112aaa3e17d7d9501896102009d",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC05-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC05/mutation.png",
+      "sha256": "4c1352d12fe1ddb3eb7c3fbb3a39cf5b5c486e9226bdb42e5de0a247343faee5",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC06-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC06/control.png",
+      "sha256": "cc7007aff9bd3265efc11724017cd74e8c11ca4073fcc5b07d226f6165966de1",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC06-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC06/mutation.png",
+      "sha256": "560b14096bd04ae508484c65bd7751af26bbcf4d36b70249f92ec43c30ae2303",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC07-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC07/control.png",
+      "sha256": "87350a33ad67896573bc4d19ea4846dbd37dd099363b533a766eaf0237ac5cb6",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC07-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC07/mutation.png",
+      "sha256": "6b2add75c676db2964e7b8a4d5d19061c318e97a784e107741dd8e2bf9b6b0ab",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC08-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC08/control.png",
+      "sha256": "8af6665638a3e8f4cafc30f53d6ff9783530738d192e5b69daf6d24ddb3b1b3b",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC08-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC08/mutation.png",
+      "sha256": "2f742eb7510307d48756019e3eaa1b738023aa261b380fe1e884406037b14dde",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC09-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC09/control.png",
+      "sha256": "695da94685cb84b244f4891e8b9db46ce3e83b6613be81ddf2b52517513d6800",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC09-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC09/mutation.png",
+      "sha256": "854a337f2478c98ad07c85aefe07f9b7b231cd2e19fb9c0e638fbc2f6df2523f",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC10-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC10/control.png",
+      "sha256": "93bf2e878e073b81b80ca44e028f2740dd98148014e821cfc3a967300b901381",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC10-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC10/mutation.png",
+      "sha256": "d9c6c5edb0bd34680689b0ad835bc71c725e519e89d9289a221c6c1002345781",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC11-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC11/control.png",
+      "sha256": "b2dc04f5c662330d011ec6f164b9ecd8af8617c0d5fbe9f4631a4f27774cd789",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC11-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC11/mutation.png",
+      "sha256": "2a5e1ca0fb98e3136310ce1b11b265fd4da95b46727056c905891ee2999c2e09",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC12-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/revision_v3/assets/FC12/control_v3.png",
+      "sha256": "e6543f69b7b3b56695196d151d97c881ac770e6157e7aa0bdd4ac15fd09cb0ff",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC12-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/revision_v3/assets/FC12/mutation_v3.png",
+      "sha256": "8be20f6344cc2126455d6e85782ad0a2bdbb9ae1ef5efe5ddbf2db5c9d6108b7",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC13-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC13/control.png",
+      "sha256": "d1cd14865be43669f2ddca3beaad595ee7bed9de2a9d6fea9bdfbf494e37e9f6",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC13-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC13/mutation.png",
+      "sha256": "b6e672516a4746567a0a0e36154355668526b7aef9077e1ab1a1008f830465b9",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC14-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC14/control.png",
+      "sha256": "2be3a63ed8e80fbda1b5403ea76f94884c5496e7fe1e61e311865221b64ed7fd",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC14-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC14/mutation.png",
+      "sha256": "181fdb813b873674eba5dd58ab88719c5aa19e1e0fc234cb5e532823ae8a805f",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC15-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC15/control.png",
+      "sha256": "0a18ad830d9942b2b845fe0be89c99f68d44136afd856010f12c444e2719c6a9",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC15-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC15/mutation.png",
+      "sha256": "a34288d1df1a40037bf9a52bfc8ab20803aa7ef859e02972da1f5105caf785f5",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC16-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC16/control.png",
+      "sha256": "1d330d79f03c739587fdcdf3f1084b4a5a1145c45a9b3f95cbba2aa1f201a1d1",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC16-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC16/mutation.png",
+      "sha256": "25ad1d0167357280665a89907e3889fc92708ea3418bbb01a4ab43a6fe65c532",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC17-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC17/control.png",
+      "sha256": "f573437cb3864ab2863cc618c1bb40ac1ff33b7065be64e6efa0874ed8d57c5c",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC17-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/revision_v2/assets/FC17/mutation_v2.png",
+      "sha256": "e506d4fc78fdd90eba08024d32bc58d716b8d2161c8fb52c35119ef7338707ff",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC18-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC18/control.png",
+      "sha256": "cd3a8df0b32cd0ed039b56bce9ef63323f9638428520f00351b7ecb8ebbcdfa4",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC18-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/revision_v2/assets/FC18/mutation_v2.png",
+      "sha256": "69887b49c4469e011995389e91b2faea526623c3e40d964b36f73e611fcd2ce8",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC19-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC19/control.png",
+      "sha256": "25e5ba7031ba7a01cc126b6bec01a7fc213920c79d09cc8b5809d3ebc595fee6",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC19-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/revision_v2/assets/FC19/mutation_v2.png",
+      "sha256": "2ae20b91dd19419c936bf1d17221089b8e0a137d5f53ac819ca52a3b653c48cd",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC20-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC20/control.png",
+      "sha256": "e6620bcee896176807bdadfe58a368b82ab084a0d5b94b4ccdd4dff177df39a6",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC20-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/revision_v2/assets/FC20/mutation_v2.png",
+      "sha256": "04aeae9c3e1058bf0838dbf2564e53e9f2ab22ac6c01346bc6eb966072c6ec5f",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC21-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC21/control.png",
+      "sha256": "ca78c9dce75a925911c6e1b0160620778531fe325c68bfcd0fd72e4b988c0e1c",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC21-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/revision_v3/assets/FC21/mutation_v3.png",
+      "sha256": "c387686ed2c93cdb6a635c783de7adfd2d6a80966d42367309effbbc84ef5c86",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC22-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC22/control.png",
+      "sha256": "229d9bde11b09e854dfd150be224acc024f52bb6314051df433eb532aa0e06b7",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC22-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/revision_v3/assets/FC22/mutation_v3.png",
+      "sha256": "2627bc9af6afea26de600b71539a28c45a597ae6908ed0975aa702a3495b69b9",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC23-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC23/control.png",
+      "sha256": "cfde64bc18bbe0cdb651b36d47c7ac91cc908b2bf25921343d51f9df45253f30",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC23-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/revision_v3/assets/FC23/mutation_v3.png",
+      "sha256": "cbd4a1e221d20fb87512f846c03a9f01de92f5445a9e92650f63c1ffdb98d998",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC24-control",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/assets/FC24/control.png",
+      "sha256": "5b0114cf0c5595315f46d73f0ad2ae403e9c93747b26f154673ab1afda2b6cc1",
+      "width": 2400,
+      "height": 1350
+    },
+    {
+      "sample_id": "FC24-mutation",
+      "dataset": "controlled48",
+      "image_path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/05_formal_experiment/controlled48/revision_v3/assets/FC24/mutation_v3.png",
+      "sha256": "4302327ec9462e96cf01ab10e8ac331f980ac4ef12bb40159c4269ef4b454e36",
+      "width": 2400,
+      "height": 1350
+    }
+  ]
+}

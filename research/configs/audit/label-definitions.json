@@ -1,0 +1,16 @@
+{
+  "taxonomy_version": "PosterCS-v4.2-frozen",
+  "main_analysis_severities": [2, 3],
+  "labels": {
+    "body_text_too_small": "Substantive body text cannot be read continuously because of font size, contrast, or line spacing.",
+    "figure_detail_unreadable": "Labels, nodes, numbers, legends, or other details required to understand a figure or table cannot be read in the full-poster view.",
+    "text_overload": "Text remains technically readable, but its total amount, long passages, or bullet count prevents rapid scanning of the main message.",
+    "space_imbalance": "A large uninformative blank area coexists with crowding elsewhere, or visual weight is clearly and unintentionally concentrated on one side.",
+    "alignment_error": "Grid, column width, margin, panel boundary, or baseline has a visible non-design misalignment.",
+    "weak_hierarchy": "The entry point, reading order, or key conclusion is unclear, or secondary elements incorrectly dominate attention.",
+    "overlap_or_clipping": "Meaningful text or imagery is occluded, crosses a boundary, is visibly truncated, or loses content; an ellipsis counts only when the visible sentence is semantically incomplete.",
+    "asset_missing_or_broken": "An empty placeholder, loading failure, corrupted fragment, or erroneous stretching or rotation is visible.",
+    "other": "A moderate or severe visible defect that cannot be mapped to another label."
+  },
+  "none_definition": "No visible defect reaches moderate or severe severity. Minor issues may still be recorded."
+}

@@ -1,0 +1,50 @@
+{
+  "version": "hybrid_routing_policy_v1",
+  "status": "frozen_candidate_for_independent_hybrid_test",
+  "formal88_role": "Model choice informed by prior benchmark; routing effectiveness is not claimed until Hybrid-Test.",
+  "global": {
+    "rule_positive": "accept when detector has localized/structural evidence, except figure readability which also needs VLM importance confirmation",
+    "rule_abstain": "send to assigned VLM; preserve abstention if VLM lacks localized evidence",
+    "rule_negative": "suppress same-label VLM allegation only for active high-coverage source rule; otherwise retain review path",
+    "not_applicable": "VLM or human review; never map to none"
+  },
+  "routes": {
+    "body_text_too_small": {
+      "primary": "R1S_then_R1R",
+      "borderline_vlm": "Gemini-P2"
+    },
+    "figure_detail_unreadable": {
+      "primary": "R2S_scale_gate",
+      "semantic_importance_vlm": "Gemini-P2",
+      "raster_rule": "abstain"
+    },
+    "text_overload": {
+      "primary": "R3S_then_R3R",
+      "borderline_vlm": "Gemini-P2"
+    },
+    "space_imbalance": {
+      "primary": "R4S_then_R4R",
+      "borderline_vlm": "Qwen32B-P3"
+    },
+    "alignment_error": {
+      "primary": "R5S_when_named_grid_else_R5R",
+      "borderline_vlm": "Gemini-P2"
+    },
+    "overlap_or_clipping": {
+      "primary": "R6S",
+      "raster_fallback": "VLM_with_localized_evidence",
+      "raster_rule": "abstain"
+    },
+    "weak_hierarchy": {
+      "primary": "Gemini-P2",
+      "rule": "abstain"
+    },
+    "asset_missing_or_broken": {
+      "primary": "future_source_hard_failure_rule",
+      "current": "human_review"
+    },
+    "other": {
+      "primary": "human_review"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PosterCS VLM audit prediction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["issues", "primary_issue", "no_issue_reason", "audit_summary"],
+  "properties": {
+    "issues": {
+      "type": "array",
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "severity", "region", "evidence", "confidence", "recommended_action"],
+        "properties": {
+          "label": {"type": "string", "enum": ["body_text_too_small", "figure_detail_unreadable", "text_overload", "space_imbalance", "alignment_error", "weak_hierarchy", "overlap_or_clipping", "asset_missing_or_broken", "other"]},
+          "severity": {"type": "integer", "enum": [1, 2, 3]},
+          "region": {"type": "string", "minLength": 1, "maxLength": 120},
+          "evidence": {"type": "string", "minLength": 1, "maxLength": 600},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "recommended_action": {"type": "string", "minLength": 1, "maxLength": 400}
+        }
+      }
+    },
+    "primary_issue": {"type": "string", "enum": ["none", "body_text_too_small", "figure_detail_unreadable", "text_overload", "space_imbalance", "alignment_error", "weak_hierarchy", "overlap_or_clipping", "asset_missing_or_broken", "other"]},
+    "no_issue_reason": {"type": "string", "maxLength": 400},
+    "audit_summary": {"type": "string", "minLength": 1, "maxLength": 600}
+  }
+}

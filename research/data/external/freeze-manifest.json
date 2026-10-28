@@ -1,0 +1,68 @@
+{
+  "version": "external_natural20_gold_freeze_v1",
+  "frozen_at_utc": "2026-10-08T02:24:31.530898+00:00",
+  "sample_count": 20,
+  "gold_status": "frozen",
+  "inference_allowed": true,
+  "label_counts_moderate_or_severe": {
+    "body_text_too_small": 8,
+    "figure_detail_unreadable": 7,
+    "space_imbalance": 1,
+    "text_overload": 6
+  },
+  "primary_counts": {
+    "body_text_too_small": 5,
+    "figure_detail_unreadable": 4,
+    "none": 8,
+    "text_overload": 3
+  },
+  "provenance": {
+    "a_full_blind_review": 20,
+    "b_independent_stratified_review": 10,
+    "a_b_label_set_agreement": "9/10",
+    "a_b_primary_agreement": "9/10",
+    "final_adjudications": 2
+  },
+  "files": [
+    {
+      "path": "EXTERNAL_NATURAL20_PROTOCOL_v1.md",
+      "sha256": "12e854440a25630598470587e1214682f2fc8dfa0b66409f961b4e4883aabc25",
+      "bytes": 4900
+    },
+    {
+      "path": "external_natural20_asset_freeze_manifest_v1.json",
+      "sha256": "d685e7105c11ee844b831232e28962bb665861424434f298072637eea4ad485e",
+      "bytes": 4378
+    },
+    {
+      "path": "external_natural20_intake_v1.csv",
+      "sha256": "78284cd9c4c0e9e78fb161c97e62f870cebdeed8fbe876f36a79b8f667e44092",
+      "bytes": 7898
+    },
+    {
+      "path": "human_review_A.csv",
+      "sha256": "1eb85106252b437bf3f5b5fff621f4103bce28f8262386585b6ccd7c095ea7b8",
+      "bytes": 13556
+    },
+    {
+      "path": "independent_B_subset.csv",
+      "sha256": "f1682cfd3afe96504858c03ea8376f2e151feb154964c6e5eaea3d64c074caac",
+      "bytes": 7922
+    },
+    {
+      "path": "A_B_agreement_report_v1.md",
+      "sha256": "b6bd8c6eb0286f1fb9caf9d668785a4e3ed48e89d0e8ddbdfd31fbc4815f43c8",
+      "bytes": 1724
+    },
+    {
+      "path": "adjudication_queue.csv",
+      "sha256": "99a8bf7d94e9e4cd0b6ae28f470c73e778b5bbdf58233718f2104c5da86aee5a",
+      "bytes": 5056
+    },
+    {
+      "path": "external_natural20_gold_v1.csv",
+      "sha256": "661867aead8262060007f4ea90a206a5da1a3b8a135a901846dbe9330436c116",
+      "bytes": 11007
+    }
+  ]
+}

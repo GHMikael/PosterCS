@@ -1,0 +1,48 @@
+{
+  "version": "controlled48_confirmation_v1",
+  "gold_loaded_only_at_scoring": true,
+  "hybrid_policy": "hybrid_routing_policy_v1",
+  "samples": 48,
+  "pairs": 24,
+  "systems": [
+    "gemini_p2",
+    "qwen32b_p3",
+    "rule_raster_v1",
+    "rule_cascade_v1",
+    "hybrid_v1"
+  ],
+  "inputs": {
+    "scoring_code": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/06_hybrid_test68/controlled48/evaluate_confirmation.py",
+      "sha256": "6202c09fc7a42d694df67eba2c9902985352c29c65e99972ead1652665025818"
+    },
+    "confirmation_protocol": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/06_hybrid_test68/controlled48/CONFIRMATION_PROTOCOL_v1.md",
+      "sha256": "ca31cca99d5309841b9360c25657577ad68f4bae8155df9ed1dc9d04255c2f06"
+    },
+    "rule_config": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/05_threshold_freeze/rule_v1.json",
+      "sha256": "a110163a8660ed2fb185056f1f6c0bfe6f2ac00e54e6f55a190466fb7147329f"
+    },
+    "routing_policy": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/05_threshold_freeze/hybrid_routing_policy_v1.json",
+      "sha256": "e34cf548e25fb85b1daebff57417336d1ed21069e44ec272e6f0fc3167e1fbb9"
+    },
+    "gold": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/06_hybrid_test68/controlled48/controlled_gold_v1.csv",
+      "sha256": "e7002d0675dac4144fc3daf8ec4b74f8db9288dbbb33104b3f38bc6c22ace926"
+    },
+    "rules": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/06_hybrid_test68/controlled48/results_v1/rule_decisions_v1.csv",
+      "sha256": "54aeccd2a1ab13e11e1858b5e92ff86c5332011ac0cae5cbc58dd6748ba2c985"
+    },
+    "gemini_manifest": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/06_inference/runs/hybrid_controlled48_gemini_p2_v1/run_manifest.json",
+      "sha256": "0668780143ff9338f62dfa06f3d88069cfb9768f7cf00c99065b7487f6744aa5"
+    },
+    "qwen_manifest": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/06_inference/runs/hybrid_controlled48_qwen32b_p3_v1/run_manifest.json",
+      "sha256": "400328206c53c85c3531f15168409d0990234017f0d5f1bdaf3573e4ab14a344"
+    }
+  }
+}

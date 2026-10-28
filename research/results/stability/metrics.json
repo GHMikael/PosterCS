@@ -1,0 +1,817 @@
+{
+  "version": "c48_stability_results_v1",
+  "summaries": {
+    "gemini_flash_p2": {
+      "n_images": 12,
+      "three_way_exact_label_set_agreement": 0.08333333333333333,
+      "mean_pairwise_jaccard": 0.5694444444444444,
+      "three_way_primary_agreement": 0.5,
+      "mean_elapsed_seconds": 6.177158333333334,
+      "runs": [
+        "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/06_inference/runs/hybrid_controlled48_gemini_p2_v1",
+        "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/06_inference/runs/c48_stability_gemini_p2_v1_rep2",
+        "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/06_inference/runs/c48_stability_gemini_p2_v1_rep3"
+      ]
+    },
+    "qwen32b_p3": {
+      "n_images": 12,
+      "three_way_exact_label_set_agreement": 0.9166666666666666,
+      "mean_pairwise_jaccard": 0.9444444444444445,
+      "three_way_primary_agreement": 0.8333333333333334,
+      "mean_elapsed_seconds": 38.14231111111111,
+      "runs": [
+        "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/06_inference/runs/hybrid_controlled48_qwen32b_p3_v1",
+        "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/06_inference/runs/c48_stability_qwen32b_p3_v1_rep2",
+        "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/06_inference/runs/c48_stability_qwen32b_p3_v1_rep3"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC03-control",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable",
+          "space_imbalance"
+        ],
+        [
+          "figure_detail_unreadable",
+          "other",
+          "space_imbalance"
+        ],
+        [
+          "figure_detail_unreadable",
+          "other"
+        ]
+      ],
+      "repeat_primary": [
+        "space_imbalance",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.5555555555555555,
+      "three_way_primary_agreement": false,
+      "all_three_common_labels": [
+        "figure_detail_unreadable"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        4.1216,
+        9.0546,
+        6.3911
+      ]
+    },
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC03-mutation",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable",
+          "space_imbalance"
+        ],
+        [
+          "figure_detail_unreadable",
+          "space_imbalance"
+        ],
+        [
+          "body_text_too_small",
+          "space_imbalance"
+        ]
+      ],
+      "repeat_primary": [
+        "space_imbalance",
+        "space_imbalance",
+        "space_imbalance"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.5555555555555555,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "space_imbalance"
+      ],
+      "pairwise_common_severity_exact": 0.6666666666666666,
+      "repeat_elapsed_seconds": [
+        4.5108,
+        6.8872,
+        9.8542
+      ]
+    },
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC07-control",
+      "repeat_labels": [
+        [
+          "asset_missing_or_broken",
+          "other"
+        ],
+        [
+          "asset_missing_or_broken",
+          "space_imbalance"
+        ],
+        [
+          "asset_missing_or_broken",
+          "space_imbalance"
+        ]
+      ],
+      "repeat_primary": [
+        "asset_missing_or_broken",
+        "space_imbalance",
+        "space_imbalance"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.5555555555555555,
+      "three_way_primary_agreement": false,
+      "all_three_common_labels": [
+        "asset_missing_or_broken"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        3.6875,
+        6.4197,
+        5.4255
+      ]
+    },
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC07-mutation",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable",
+          "other"
+        ],
+        [
+          "figure_detail_unreadable",
+          "other",
+          "space_imbalance"
+        ],
+        [
+          "figure_detail_unreadable",
+          "space_imbalance"
+        ]
+      ],
+      "repeat_primary": [
+        "figure_detail_unreadable",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.5555555555555555,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "figure_detail_unreadable"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        6.06,
+        7.3878,
+        5.6792
+      ]
+    },
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC09-control",
+      "repeat_labels": [
+        [
+          "other"
+        ],
+        [
+          "other",
+          "space_imbalance"
+        ],
+        [
+          "other",
+          "space_imbalance"
+        ]
+      ],
+      "repeat_primary": [
+        "other",
+        "other",
+        "other"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.6666666666666666,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "other"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        5.84,
+        6.1564,
+        7.1077
+      ]
+    },
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC09-mutation",
+      "repeat_labels": [
+        [],
+        [
+          "space_imbalance"
+        ],
+        [
+          "space_imbalance"
+        ]
+      ],
+      "repeat_primary": [
+        "none",
+        "space_imbalance",
+        "space_imbalance"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.3333333333333333,
+      "three_way_primary_agreement": false,
+      "all_three_common_labels": [],
+      "pairwise_common_severity_exact": 0.3333333333333333,
+      "repeat_elapsed_seconds": [
+        3.8857,
+        6.9703,
+        5.1733
+      ]
+    },
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC16-control",
+      "repeat_labels": [
+        [
+          "space_imbalance"
+        ],
+        [
+          "space_imbalance"
+        ],
+        [
+          "space_imbalance"
+        ]
+      ],
+      "repeat_primary": [
+        "space_imbalance",
+        "space_imbalance",
+        "space_imbalance"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "space_imbalance"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        4.0548,
+        7.2014,
+        5.8865
+      ]
+    },
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC16-mutation",
+      "repeat_labels": [
+        [
+          "other",
+          "space_imbalance"
+        ],
+        [
+          "space_imbalance"
+        ],
+        [
+          "asset_missing_or_broken",
+          "other",
+          "space_imbalance"
+        ]
+      ],
+      "repeat_primary": [
+        "space_imbalance",
+        "space_imbalance",
+        "asset_missing_or_broken"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.5,
+      "three_way_primary_agreement": false,
+      "all_three_common_labels": [
+        "space_imbalance"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        4.4027,
+        10.519,
+        7.9766
+      ]
+    },
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC18-control",
+      "repeat_labels": [
+        [
+          "space_imbalance"
+        ],
+        [
+          "other",
+          "space_imbalance"
+        ],
+        [
+          "space_imbalance"
+        ]
+      ],
+      "repeat_primary": [
+        "space_imbalance",
+        "space_imbalance",
+        "space_imbalance"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.6666666666666666,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "space_imbalance"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        4.3001,
+        7.6001,
+        4.7537
+      ]
+    },
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC18-mutation",
+      "repeat_labels": [
+        [
+          "asset_missing_or_broken",
+          "other",
+          "space_imbalance"
+        ],
+        [
+          "asset_missing_or_broken",
+          "other",
+          "space_imbalance"
+        ],
+        [
+          "other",
+          "space_imbalance"
+        ]
+      ],
+      "repeat_primary": [
+        "space_imbalance",
+        "space_imbalance",
+        "space_imbalance"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.7777777777777777,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "other",
+        "space_imbalance"
+      ],
+      "pairwise_common_severity_exact": 0.7777777777777778,
+      "repeat_elapsed_seconds": [
+        4.723,
+        7.8303,
+        6.5515
+      ]
+    },
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC24-control",
+      "repeat_labels": [
+        [
+          "space_imbalance"
+        ],
+        [],
+        []
+      ],
+      "repeat_primary": [
+        "space_imbalance",
+        "none",
+        "none"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.3333333333333333,
+      "three_way_primary_agreement": false,
+      "all_three_common_labels": [],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        4.6932,
+        6.0316,
+        9.8765
+      ]
+    },
+    {
+      "model": "gemini_flash_p2",
+      "sample_id": "HC24-mutation",
+      "repeat_labels": [
+        [
+          "asset_missing_or_broken"
+        ],
+        [
+          "overlap_or_clipping"
+        ],
+        [
+          "overlap_or_clipping"
+        ]
+      ],
+      "repeat_primary": [
+        "asset_missing_or_broken",
+        "overlap_or_clipping",
+        "overlap_or_clipping"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.3333333333333333,
+      "three_way_primary_agreement": false,
+      "all_three_common_labels": [],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        3.9046,
+        6.1187,
+        5.3408
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC03-control",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ]
+      ],
+      "repeat_primary": [
+        "figure_detail_unreadable",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "figure_detail_unreadable"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        38.901,
+        32.4996,
+        29.6821
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC03-mutation",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ]
+      ],
+      "repeat_primary": [
+        "figure_detail_unreadable",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "figure_detail_unreadable"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        37.2144,
+        17.3829,
+        46.2496
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC07-control",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ]
+      ],
+      "repeat_primary": [
+        "figure_detail_unreadable",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "figure_detail_unreadable"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        50.0808,
+        67.5623,
+        24.8749
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC07-mutation",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ]
+      ],
+      "repeat_primary": [
+        "figure_detail_unreadable",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "figure_detail_unreadable"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        46.5847,
+        26.6191,
+        19.3239
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC09-control",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ]
+      ],
+      "repeat_primary": [
+        "figure_detail_unreadable",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "figure_detail_unreadable"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        49.3841,
+        43.9234,
+        17.2622
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC09-mutation",
+      "repeat_labels": [
+        [],
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ]
+      ],
+      "repeat_primary": [
+        "none",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": false,
+      "mean_pairwise_jaccard": 0.3333333333333333,
+      "three_way_primary_agreement": false,
+      "all_three_common_labels": [],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        14.6853,
+        22.4892,
+        68.1553
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC16-control",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ]
+      ],
+      "repeat_primary": [
+        "figure_detail_unreadable",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "figure_detail_unreadable"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        24.7942,
+        17.8707,
+        13.116
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC16-mutation",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable",
+          "space_imbalance"
+        ],
+        [
+          "figure_detail_unreadable",
+          "space_imbalance"
+        ],
+        [
+          "figure_detail_unreadable",
+          "space_imbalance"
+        ]
+      ],
+      "repeat_primary": [
+        "space_imbalance",
+        "space_imbalance",
+        "space_imbalance"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "figure_detail_unreadable",
+        "space_imbalance"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        89.8905,
+        33.3389,
+        52.408
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC18-control",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ]
+      ],
+      "repeat_primary": [
+        "figure_detail_unreadable",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "figure_detail_unreadable"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        21.6537,
+        86.4775,
+        39.5283
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC18-mutation",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ]
+      ],
+      "repeat_primary": [
+        "figure_detail_unreadable",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "figure_detail_unreadable"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        26.0486,
+        45.8315,
+        39.6333
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC24-control",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ],
+        [
+          "figure_detail_unreadable"
+        ]
+      ],
+      "repeat_primary": [
+        "figure_detail_unreadable",
+        "figure_detail_unreadable",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": true,
+      "all_three_common_labels": [
+        "figure_detail_unreadable"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        23.7459,
+        31.348,
+        15.9691
+      ]
+    },
+    {
+      "model": "qwen32b_p3",
+      "sample_id": "HC24-mutation",
+      "repeat_labels": [
+        [
+          "figure_detail_unreadable",
+          "overlap_or_clipping"
+        ],
+        [
+          "figure_detail_unreadable",
+          "overlap_or_clipping"
+        ],
+        [
+          "figure_detail_unreadable",
+          "overlap_or_clipping"
+        ]
+      ],
+      "repeat_primary": [
+        "figure_detail_unreadable",
+        "overlap_or_clipping",
+        "figure_detail_unreadable"
+      ],
+      "three_way_exact_label_set": true,
+      "mean_pairwise_jaccard": 1.0,
+      "three_way_primary_agreement": false,
+      "all_three_common_labels": [
+        "figure_detail_unreadable",
+        "overlap_or_clipping"
+      ],
+      "pairwise_common_severity_exact": 1.0,
+      "repeat_elapsed_seconds": [
+        62.4511,
+        65.0066,
+        31.1365
+      ]
+    }
+  ]
+}

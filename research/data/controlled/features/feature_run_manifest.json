@@ -1,0 +1,57 @@
+{
+  "feature_version": "t8a_feature_v1",
+  "created_at_utc": "2026-09-28T10:06:52.159026+00:00",
+  "purpose": "T8-A continuous feature extraction; no labels and no defect thresholds",
+  "development_datasets": [
+    "pilot20",
+    "calibration10"
+  ],
+  "formal88_used": false,
+  "sample_count": 48,
+  "settings": {
+    "grid_rows": 4,
+    "grid_cols": 8,
+    "grid_blank_occupancy_preprocessing_cutoff": 0.15,
+    "body_top_ratio": 0.12,
+    "body_bottom_ratio": 0.96,
+    "ocr_config": "tesseract --psm 11",
+    "workers": 4
+  },
+  "runtime": {
+    "python": "3.12.7",
+    "opencv": "4.11.0",
+    "tesseract": "5.5.3"
+  },
+  "input_manifest": {
+    "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/06_hybrid_test68/controlled48/feature_manifest.csv",
+    "sha256": "7eac7401f93aac906991a8f3e210d382eeba584117bcc91d53f1f2c0441c3c79"
+  },
+  "implementation": {
+    "feature_core.py": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/03_feature_extraction/feature_core.py",
+      "sha256": "bdf73a55f9f7a42d6f21881cf9292be2ba50848c34ff7629ca30276eebc2853c"
+    },
+    "build_dev_manifest.py": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/03_feature_extraction/build_dev_manifest.py",
+      "sha256": "2d66a27c597e8a800d1642751e66d0dab29f92df274127eb74b3617e3809b044"
+    },
+    "extract_dev_features.py": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/03_feature_extraction/extract_dev_features.py",
+      "sha256": "9bd283de22def82b424a2775464bca889b6d66cdfb8e8e01987fed33684052ae"
+    }
+  },
+  "outputs": {
+    "poster_features.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/06_hybrid_test68/controlled48/features_v1/poster_features.csv",
+      "sha256": "de44744f10b4a6a92c7c2e7c0ffc6c3bc212c8e797fa85f6ee868ac080f176fb"
+    },
+    "raster_regions.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/06_hybrid_test68/controlled48/features_v1/raster_regions.csv",
+      "sha256": "a59114e6da383f07977772a05c413d27f998f498f4ff34465c75548e79e05f50"
+    },
+    "source_regions.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/06_hybrid_test68/controlled48/features_v1/source_regions.csv",
+      "sha256": "56b76ca286d1e3fb745c85f2991129e1bc7bff7e1d8f1db02830dfa7bb0a75ab"
+    }
+  }
+}

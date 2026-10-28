@@ -1,0 +1,5 @@
+comparison_role,primary_system,comparator,paired_correctness_delta,hybrid_only_correct,comparator_only_correct,exact_mcnemar_p,holm_family,holm_adjusted_p,interpretation
+primary,hybrid_v1,rule_cascade_v1,0.041666666666666664,1,0,1.0,not_applicable,1.0,No evidence that Hybrid-v1 improves paired correctness over the Source-aware Rule cascade.
+secondary,hybrid_v1,gemini_p2,0.4166666666666667,10,0,0.001953125,three_secondary_C48_comparisons,0.00390625,Hybrid-v1 exceeds the image-only Gemini operating point on paired correctness.
+secondary,hybrid_v1,qwen32b_p3,0.3333333333333333,8,0,0.0078125,three_secondary_C48_comparisons,0.0078125,Hybrid-v1 exceeds the image-only Qwen operating point on paired correctness.
+secondary,hybrid_v1,rule_raster_v1,0.625,15,0,0.00006103515625,three_secondary_C48_comparisons,0.00018310546875,Hybrid-v1 exceeds the raster-only baseline on paired correctness.

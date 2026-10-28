@@ -1,0 +1,241 @@
+system,sample_id,pair_id,variant,gold_labels_json,predicted_labels_json
+gemini_p2,HC01-control,HC01,control,[],"[""other"", ""space_imbalance""]"
+gemini_p2,HC01-mutation,HC01,mutation,"[""body_text_too_small""]","[""other"", ""space_imbalance""]"
+gemini_p2,HC02-control,HC02,control,[],"[""other""]"
+gemini_p2,HC02-mutation,HC02,mutation,"[""body_text_too_small""]","[""body_text_too_small"", ""space_imbalance""]"
+gemini_p2,HC03-control,HC03,control,[],"[""figure_detail_unreadable"", ""space_imbalance""]"
+gemini_p2,HC03-mutation,HC03,mutation,"[""body_text_too_small""]","[""figure_detail_unreadable"", ""space_imbalance""]"
+gemini_p2,HC04-control,HC04,control,[],"[""space_imbalance""]"
+gemini_p2,HC04-mutation,HC04,mutation,"[""body_text_too_small""]","[""body_text_too_small"", ""space_imbalance""]"
+gemini_p2,HC05-control,HC05,control,[],"[""other""]"
+gemini_p2,HC05-mutation,HC05,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""space_imbalance""]"
+gemini_p2,HC06-control,HC06,control,[],"[""space_imbalance""]"
+gemini_p2,HC06-mutation,HC06,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""space_imbalance""]"
+gemini_p2,HC07-control,HC07,control,[],"[""asset_missing_or_broken"", ""other""]"
+gemini_p2,HC07-mutation,HC07,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""other""]"
+gemini_p2,HC08-control,HC08,control,[],"[""other""]"
+gemini_p2,HC08-mutation,HC08,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""other""]"
+gemini_p2,HC09-control,HC09,control,[],"[""other""]"
+gemini_p2,HC09-mutation,HC09,mutation,"[""text_overload""]",[]
+gemini_p2,HC10-control,HC10,control,[],"[""space_imbalance""]"
+gemini_p2,HC10-mutation,HC10,mutation,"[""text_overload""]","[""overlap_or_clipping"", ""space_imbalance""]"
+gemini_p2,HC11-control,HC11,control,[],"[""figure_detail_unreadable"", ""other"", ""space_imbalance""]"
+gemini_p2,HC11-mutation,HC11,mutation,"[""text_overload""]","[""figure_detail_unreadable""]"
+gemini_p2,HC12-control,HC12,control,[],"[""figure_detail_unreadable""]"
+gemini_p2,HC12-mutation,HC12,mutation,"[""text_overload""]",[]
+gemini_p2,HC13-control,HC13,control,[],"[""other""]"
+gemini_p2,HC13-mutation,HC13,mutation,"[""space_imbalance""]","[""asset_missing_or_broken"", ""other""]"
+gemini_p2,HC14-control,HC14,control,[],"[""other"", ""space_imbalance""]"
+gemini_p2,HC14-mutation,HC14,mutation,"[""space_imbalance""]","[""asset_missing_or_broken"", ""space_imbalance""]"
+gemini_p2,HC15-control,HC15,control,[],"[""figure_detail_unreadable"", ""space_imbalance""]"
+gemini_p2,HC15-mutation,HC15,mutation,"[""space_imbalance""]","[""asset_missing_or_broken"", ""other""]"
+gemini_p2,HC16-control,HC16,control,[],"[""space_imbalance""]"
+gemini_p2,HC16-mutation,HC16,mutation,"[""space_imbalance""]","[""other"", ""space_imbalance""]"
+gemini_p2,HC17-control,HC17,control,[],"[""other"", ""space_imbalance""]"
+gemini_p2,HC17-mutation,HC17,mutation,"[""alignment_error""]","[""asset_missing_or_broken""]"
+gemini_p2,HC18-control,HC18,control,[],"[""space_imbalance""]"
+gemini_p2,HC18-mutation,HC18,mutation,"[""alignment_error""]","[""asset_missing_or_broken"", ""other"", ""space_imbalance""]"
+gemini_p2,HC19-control,HC19,control,[],"[""space_imbalance""]"
+gemini_p2,HC19-mutation,HC19,mutation,"[""alignment_error""]","[""overlap_or_clipping"", ""space_imbalance""]"
+gemini_p2,HC20-control,HC20,control,[],"[""other""]"
+gemini_p2,HC20-mutation,HC20,mutation,"[""alignment_error""]","[""alignment_error"", ""asset_missing_or_broken""]"
+gemini_p2,HC21-control,HC21,control,[],"[""other"", ""space_imbalance""]"
+gemini_p2,HC21-mutation,HC21,mutation,"[""overlap_or_clipping""]","[""overlap_or_clipping""]"
+gemini_p2,HC22-control,HC22,control,[],"[""space_imbalance""]"
+gemini_p2,HC22-mutation,HC22,mutation,"[""overlap_or_clipping""]","[""overlap_or_clipping"", ""space_imbalance""]"
+gemini_p2,HC23-control,HC23,control,[],"[""space_imbalance""]"
+gemini_p2,HC23-mutation,HC23,mutation,"[""overlap_or_clipping""]","[""asset_missing_or_broken"", ""figure_detail_unreadable""]"
+gemini_p2,HC24-control,HC24,control,[],"[""space_imbalance""]"
+gemini_p2,HC24-mutation,HC24,mutation,"[""overlap_or_clipping""]","[""asset_missing_or_broken""]"
+qwen32b_p3,HC01-control,HC01,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC01-mutation,HC01,mutation,"[""body_text_too_small""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC02-control,HC02,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC02-mutation,HC02,mutation,"[""body_text_too_small""]",[]
+qwen32b_p3,HC03-control,HC03,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC03-mutation,HC03,mutation,"[""body_text_too_small""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC04-control,HC04,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC04-mutation,HC04,mutation,"[""body_text_too_small""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC05-control,HC05,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC05-mutation,HC05,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC06-control,HC06,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC06-mutation,HC06,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC07-control,HC07,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC07-mutation,HC07,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC08-control,HC08,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC08-mutation,HC08,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC09-control,HC09,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC09-mutation,HC09,mutation,"[""text_overload""]",[]
+qwen32b_p3,HC10-control,HC10,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC10-mutation,HC10,mutation,"[""text_overload""]","[""figure_detail_unreadable"", ""text_overload""]"
+qwen32b_p3,HC11-control,HC11,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC11-mutation,HC11,mutation,"[""text_overload""]","[""figure_detail_unreadable"", ""text_overload""]"
+qwen32b_p3,HC12-control,HC12,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC12-mutation,HC12,mutation,"[""text_overload""]","[""figure_detail_unreadable"", ""text_overload""]"
+qwen32b_p3,HC13-control,HC13,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC13-mutation,HC13,mutation,"[""space_imbalance""]","[""space_imbalance""]"
+qwen32b_p3,HC14-control,HC14,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC14-mutation,HC14,mutation,"[""space_imbalance""]","[""figure_detail_unreadable"", ""space_imbalance""]"
+qwen32b_p3,HC15-control,HC15,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC15-mutation,HC15,mutation,"[""space_imbalance""]","[""space_imbalance""]"
+qwen32b_p3,HC16-control,HC16,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC16-mutation,HC16,mutation,"[""space_imbalance""]","[""figure_detail_unreadable"", ""space_imbalance""]"
+qwen32b_p3,HC17-control,HC17,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC17-mutation,HC17,mutation,"[""alignment_error""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC18-control,HC18,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC18-mutation,HC18,mutation,"[""alignment_error""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC19-control,HC19,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC19-mutation,HC19,mutation,"[""alignment_error""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC20-control,HC20,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC20-mutation,HC20,mutation,"[""alignment_error""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC21-control,HC21,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC21-mutation,HC21,mutation,"[""overlap_or_clipping""]","[""figure_detail_unreadable"", ""overlap_or_clipping""]"
+qwen32b_p3,HC22-control,HC22,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC22-mutation,HC22,mutation,"[""overlap_or_clipping""]","[""overlap_or_clipping""]"
+qwen32b_p3,HC23-control,HC23,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC23-mutation,HC23,mutation,"[""overlap_or_clipping""]","[""figure_detail_unreadable"", ""overlap_or_clipping""]"
+qwen32b_p3,HC24-control,HC24,control,[],"[""figure_detail_unreadable""]"
+qwen32b_p3,HC24-mutation,HC24,mutation,"[""overlap_or_clipping""]","[""figure_detail_unreadable"", ""overlap_or_clipping""]"
+rule_raster_v1,HC01-control,HC01,control,[],[]
+rule_raster_v1,HC01-mutation,HC01,mutation,"[""body_text_too_small""]",[]
+rule_raster_v1,HC02-control,HC02,control,[],[]
+rule_raster_v1,HC02-mutation,HC02,mutation,"[""body_text_too_small""]",[]
+rule_raster_v1,HC03-control,HC03,control,[],[]
+rule_raster_v1,HC03-mutation,HC03,mutation,"[""body_text_too_small""]",[]
+rule_raster_v1,HC04-control,HC04,control,[],[]
+rule_raster_v1,HC04-mutation,HC04,mutation,"[""body_text_too_small""]",[]
+rule_raster_v1,HC05-control,HC05,control,[],[]
+rule_raster_v1,HC05-mutation,HC05,mutation,"[""figure_detail_unreadable""]",[]
+rule_raster_v1,HC06-control,HC06,control,[],[]
+rule_raster_v1,HC06-mutation,HC06,mutation,"[""figure_detail_unreadable""]",[]
+rule_raster_v1,HC07-control,HC07,control,[],[]
+rule_raster_v1,HC07-mutation,HC07,mutation,"[""figure_detail_unreadable""]",[]
+rule_raster_v1,HC08-control,HC08,control,[],[]
+rule_raster_v1,HC08-mutation,HC08,mutation,"[""figure_detail_unreadable""]",[]
+rule_raster_v1,HC09-control,HC09,control,[],[]
+rule_raster_v1,HC09-mutation,HC09,mutation,"[""text_overload""]","[""text_overload""]"
+rule_raster_v1,HC10-control,HC10,control,[],[]
+rule_raster_v1,HC10-mutation,HC10,mutation,"[""text_overload""]","[""text_overload""]"
+rule_raster_v1,HC11-control,HC11,control,[],[]
+rule_raster_v1,HC11-mutation,HC11,mutation,"[""text_overload""]","[""text_overload""]"
+rule_raster_v1,HC12-control,HC12,control,[],[]
+rule_raster_v1,HC12-mutation,HC12,mutation,"[""text_overload""]","[""text_overload""]"
+rule_raster_v1,HC13-control,HC13,control,[],[]
+rule_raster_v1,HC13-mutation,HC13,mutation,"[""space_imbalance""]",[]
+rule_raster_v1,HC14-control,HC14,control,[],[]
+rule_raster_v1,HC14-mutation,HC14,mutation,"[""space_imbalance""]",[]
+rule_raster_v1,HC15-control,HC15,control,[],[]
+rule_raster_v1,HC15-mutation,HC15,mutation,"[""space_imbalance""]",[]
+rule_raster_v1,HC16-control,HC16,control,[],[]
+rule_raster_v1,HC16-mutation,HC16,mutation,"[""space_imbalance""]",[]
+rule_raster_v1,HC17-control,HC17,control,[],[]
+rule_raster_v1,HC17-mutation,HC17,mutation,"[""alignment_error""]",[]
+rule_raster_v1,HC18-control,HC18,control,[],[]
+rule_raster_v1,HC18-mutation,HC18,mutation,"[""alignment_error""]",[]
+rule_raster_v1,HC19-control,HC19,control,[],[]
+rule_raster_v1,HC19-mutation,HC19,mutation,"[""alignment_error""]",[]
+rule_raster_v1,HC20-control,HC20,control,[],[]
+rule_raster_v1,HC20-mutation,HC20,mutation,"[""alignment_error""]",[]
+rule_raster_v1,HC21-control,HC21,control,[],[]
+rule_raster_v1,HC21-mutation,HC21,mutation,"[""overlap_or_clipping""]",[]
+rule_raster_v1,HC22-control,HC22,control,[],[]
+rule_raster_v1,HC22-mutation,HC22,mutation,"[""overlap_or_clipping""]",[]
+rule_raster_v1,HC23-control,HC23,control,[],[]
+rule_raster_v1,HC23-mutation,HC23,mutation,"[""overlap_or_clipping""]",[]
+rule_raster_v1,HC24-control,HC24,control,[],[]
+rule_raster_v1,HC24-mutation,HC24,mutation,"[""overlap_or_clipping""]",[]
+rule_cascade_v1,HC01-control,HC01,control,[],[]
+rule_cascade_v1,HC01-mutation,HC01,mutation,"[""body_text_too_small""]",[]
+rule_cascade_v1,HC02-control,HC02,control,[],[]
+rule_cascade_v1,HC02-mutation,HC02,mutation,"[""body_text_too_small""]","[""body_text_too_small""]"
+rule_cascade_v1,HC03-control,HC03,control,[],[]
+rule_cascade_v1,HC03-mutation,HC03,mutation,"[""body_text_too_small""]",[]
+rule_cascade_v1,HC04-control,HC04,control,[],[]
+rule_cascade_v1,HC04-mutation,HC04,mutation,"[""body_text_too_small""]","[""body_text_too_small""]"
+rule_cascade_v1,HC05-control,HC05,control,[],[]
+rule_cascade_v1,HC05-mutation,HC05,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+rule_cascade_v1,HC06-control,HC06,control,[],[]
+rule_cascade_v1,HC06-mutation,HC06,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+rule_cascade_v1,HC07-control,HC07,control,[],[]
+rule_cascade_v1,HC07-mutation,HC07,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+rule_cascade_v1,HC08-control,HC08,control,[],[]
+rule_cascade_v1,HC08-mutation,HC08,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+rule_cascade_v1,HC09-control,HC09,control,[],[]
+rule_cascade_v1,HC09-mutation,HC09,mutation,"[""text_overload""]","[""text_overload""]"
+rule_cascade_v1,HC10-control,HC10,control,[],[]
+rule_cascade_v1,HC10-mutation,HC10,mutation,"[""text_overload""]","[""text_overload""]"
+rule_cascade_v1,HC11-control,HC11,control,[],[]
+rule_cascade_v1,HC11-mutation,HC11,mutation,"[""text_overload""]","[""text_overload""]"
+rule_cascade_v1,HC12-control,HC12,control,[],[]
+rule_cascade_v1,HC12-mutation,HC12,mutation,"[""text_overload""]","[""text_overload""]"
+rule_cascade_v1,HC13-control,HC13,control,[],[]
+rule_cascade_v1,HC13-mutation,HC13,mutation,"[""space_imbalance""]","[""space_imbalance""]"
+rule_cascade_v1,HC14-control,HC14,control,[],[]
+rule_cascade_v1,HC14-mutation,HC14,mutation,"[""space_imbalance""]","[""space_imbalance""]"
+rule_cascade_v1,HC15-control,HC15,control,[],[]
+rule_cascade_v1,HC15-mutation,HC15,mutation,"[""space_imbalance""]","[""space_imbalance""]"
+rule_cascade_v1,HC16-control,HC16,control,[],[]
+rule_cascade_v1,HC16-mutation,HC16,mutation,"[""space_imbalance""]","[""space_imbalance""]"
+rule_cascade_v1,HC17-control,HC17,control,[],[]
+rule_cascade_v1,HC17-mutation,HC17,mutation,"[""alignment_error""]",[]
+rule_cascade_v1,HC18-control,HC18,control,[],[]
+rule_cascade_v1,HC18-mutation,HC18,mutation,"[""alignment_error""]",[]
+rule_cascade_v1,HC19-control,HC19,control,[],[]
+rule_cascade_v1,HC19-mutation,HC19,mutation,"[""alignment_error""]",[]
+rule_cascade_v1,HC20-control,HC20,control,[],[]
+rule_cascade_v1,HC20-mutation,HC20,mutation,"[""alignment_error""]",[]
+rule_cascade_v1,HC21-control,HC21,control,[],[]
+rule_cascade_v1,HC21-mutation,HC21,mutation,"[""overlap_or_clipping""]","[""overlap_or_clipping""]"
+rule_cascade_v1,HC22-control,HC22,control,[],[]
+rule_cascade_v1,HC22-mutation,HC22,mutation,"[""overlap_or_clipping""]","[""overlap_or_clipping""]"
+rule_cascade_v1,HC23-control,HC23,control,[],[]
+rule_cascade_v1,HC23-mutation,HC23,mutation,"[""overlap_or_clipping""]","[""overlap_or_clipping""]"
+rule_cascade_v1,HC24-control,HC24,control,[],[]
+rule_cascade_v1,HC24-mutation,HC24,mutation,"[""overlap_or_clipping""]","[""overlap_or_clipping""]"
+hybrid_v1,HC01-control,HC01,control,[],[]
+hybrid_v1,HC01-mutation,HC01,mutation,"[""body_text_too_small""]",[]
+hybrid_v1,HC02-control,HC02,control,[],[]
+hybrid_v1,HC02-mutation,HC02,mutation,"[""body_text_too_small""]","[""body_text_too_small""]"
+hybrid_v1,HC03-control,HC03,control,[],"[""figure_detail_unreadable""]"
+hybrid_v1,HC03-mutation,HC03,mutation,"[""body_text_too_small""]","[""figure_detail_unreadable""]"
+hybrid_v1,HC04-control,HC04,control,[],[]
+hybrid_v1,HC04-mutation,HC04,mutation,"[""body_text_too_small""]","[""body_text_too_small""]"
+hybrid_v1,HC05-control,HC05,control,[],[]
+hybrid_v1,HC05-mutation,HC05,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+hybrid_v1,HC06-control,HC06,control,[],[]
+hybrid_v1,HC06-mutation,HC06,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+hybrid_v1,HC07-control,HC07,control,[],[]
+hybrid_v1,HC07-mutation,HC07,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+hybrid_v1,HC08-control,HC08,control,[],[]
+hybrid_v1,HC08-mutation,HC08,mutation,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+hybrid_v1,HC09-control,HC09,control,[],[]
+hybrid_v1,HC09-mutation,HC09,mutation,"[""text_overload""]","[""text_overload""]"
+hybrid_v1,HC10-control,HC10,control,[],[]
+hybrid_v1,HC10-mutation,HC10,mutation,"[""text_overload""]","[""text_overload""]"
+hybrid_v1,HC11-control,HC11,control,[],"[""figure_detail_unreadable""]"
+hybrid_v1,HC11-mutation,HC11,mutation,"[""text_overload""]","[""figure_detail_unreadable"", ""text_overload""]"
+hybrid_v1,HC12-control,HC12,control,[],"[""figure_detail_unreadable""]"
+hybrid_v1,HC12-mutation,HC12,mutation,"[""text_overload""]","[""text_overload""]"
+hybrid_v1,HC13-control,HC13,control,[],[]
+hybrid_v1,HC13-mutation,HC13,mutation,"[""space_imbalance""]","[""space_imbalance""]"
+hybrid_v1,HC14-control,HC14,control,[],[]
+hybrid_v1,HC14-mutation,HC14,mutation,"[""space_imbalance""]","[""space_imbalance""]"
+hybrid_v1,HC15-control,HC15,control,[],"[""figure_detail_unreadable""]"
+hybrid_v1,HC15-mutation,HC15,mutation,"[""space_imbalance""]","[""space_imbalance""]"
+hybrid_v1,HC16-control,HC16,control,[],[]
+hybrid_v1,HC16-mutation,HC16,mutation,"[""space_imbalance""]","[""space_imbalance""]"
+hybrid_v1,HC17-control,HC17,control,[],[]
+hybrid_v1,HC17-mutation,HC17,mutation,"[""alignment_error""]",[]
+hybrid_v1,HC18-control,HC18,control,[],[]
+hybrid_v1,HC18-mutation,HC18,mutation,"[""alignment_error""]",[]
+hybrid_v1,HC19-control,HC19,control,[],[]
+hybrid_v1,HC19-mutation,HC19,mutation,"[""alignment_error""]",[]
+hybrid_v1,HC20-control,HC20,control,[],[]
+hybrid_v1,HC20-mutation,HC20,mutation,"[""alignment_error""]","[""alignment_error""]"
+hybrid_v1,HC21-control,HC21,control,[],[]
+hybrid_v1,HC21-mutation,HC21,mutation,"[""overlap_or_clipping""]","[""overlap_or_clipping""]"
+hybrid_v1,HC22-control,HC22,control,[],[]
+hybrid_v1,HC22-mutation,HC22,mutation,"[""overlap_or_clipping""]","[""overlap_or_clipping""]"
+hybrid_v1,HC23-control,HC23,control,[],[]
+hybrid_v1,HC23-mutation,HC23,mutation,"[""overlap_or_clipping""]","[""figure_detail_unreadable"", ""overlap_or_clipping""]"
+hybrid_v1,HC24-control,HC24,control,[],[]
+hybrid_v1,HC24-mutation,HC24,mutation,"[""overlap_or_clipping""]","[""overlap_or_clipping""]"

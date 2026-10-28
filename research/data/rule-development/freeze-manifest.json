@@ -1,0 +1,106 @@
+{
+  "status": "frozen",
+  "stage": "T8-B",
+  "frozen_at_utc": "2026-09-28T05:15:31.701231+00:00",
+  "generated_pairs": 36,
+  "accepted_pairs": 33,
+  "accepted_images": 66,
+  "per_label": {
+    "alignment_error": 5,
+    "body_text_too_small": 5,
+    "figure_detail_unreadable": 6,
+    "overlap_or_clipping": 6,
+    "space_imbalance": 6,
+    "text_overload": 5
+  },
+  "excluded": [
+    {
+      "pair_id": "RD01",
+      "target_label": "body_text_too_small",
+      "target_visible": "yes",
+      "control_clean": "no",
+      "extra_primary_issue": ""
+    },
+    {
+      "pair_id": "RD15",
+      "target_label": "text_overload",
+      "target_visible": "no",
+      "control_clean": "yes",
+      "extra_primary_issue": ""
+    },
+    {
+      "pair_id": "RD29",
+      "target_label": "alignment_error",
+      "target_visible": "yes",
+      "control_clean": "no",
+      "extra_primary_issue": ""
+    }
+  ],
+  "formal88_used_for_tuning": false,
+  "files": {
+    "RULEDEV_PROTOCOL_v1.md": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/RULEDEV_PROTOCOL_v1.md",
+      "sha256": "6be4a960594ca2f9a04f91fe88de04465a96539efa6c9221e3ecbf3de384d8b8"
+    },
+    "injection_manifest.json": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/injection_manifest.json",
+      "sha256": "be15cfacae925bb5a3e299dc2d37bc30f11895b872dc6007bb8b5ab2070f9e98"
+    },
+    "pair_review.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/pair_review.csv",
+      "sha256": "215f9a370c2dcf3906ff88d384aad74490abc5d43575cae156c639fb07b7215c"
+    },
+    "pair_review_round1.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/pair_review_round1.csv",
+      "sha256": "2645849ecf12f950d1281275bdcb524f8d7ad4e8d2813b54bb003223cc0f1999"
+    },
+    "pair_review_round2.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/pair_review_round2.csv",
+      "sha256": "06dc123878038721d3e6bacc1672df02647273d221bec6c40859a4fc76b9d05d"
+    },
+    "pair_review_round3.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/pair_review_round3.csv",
+      "sha256": "57ccb7f413cd07aafae8bdc7698833604e83d3eb261cdca501db7b4d9da6eff9"
+    },
+    "accepted_pairs_v1.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/accepted_pairs_v1.csv",
+      "sha256": "3572930b130aa27c304f28e00bd75e018be61d87a1fea355f17d95f4035cbb3d"
+    },
+    "accepted_images_v1.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/accepted_images_v1.csv",
+      "sha256": "119b11bbca0f8e545f0013fb8060abc96830dcf9aef9cba55fd1bc9c7a40ff2e"
+    },
+    "RULEDEV_CLOSEOUT_v1.md": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/RULEDEV_CLOSEOUT_v1.md",
+      "sha256": "8104d40d2d99f83044f852c377f82cefc904c58e0ae65dcfd43f77705edd9bd0"
+    },
+    "accepted_poster_features_v1.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/features_v1/accepted_poster_features_v1.csv",
+      "sha256": "c2a8c5071130ba0687a1aafd4a57a7d8c3dd833b89afbb645d2311dfac6e404a"
+    },
+    "accepted_raster_regions_v1.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/features_v1/accepted_raster_regions_v1.csv",
+      "sha256": "ef84791aa926571137964a359c6f107e18f70b79b873b808edc596b278eda34a"
+    },
+    "accepted_source_regions_v1.csv": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/features_v1/accepted_source_regions_v1.csv",
+      "sha256": "7ff0e6de8c57a51b45aa450634ea473cb90807aeda9288d5dcc18943d7381b29"
+    },
+    "AUTOMATED_QA_v1.json": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/AUTOMATED_QA_v1.json",
+      "sha256": "ba67b6fe135c19dc92d613b5edefce0fb0aef08caede8f48c8f1fc3e06639b2e"
+    },
+    "build_ruledev72.py": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/build_ruledev72.py",
+      "sha256": "e724b4bab24426fedced5fa5e190c366f9a0d528d83e1cf3622d365e6ab81a46"
+    },
+    "validate_ruledev72.py": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/validate_ruledev72.py",
+      "sha256": "cfb265577287b25bb2ddbf0e0461cd2741a5869d274b625110c965b1ebd84065"
+    },
+    "finalize_ruledev.py": {
+      "path": "/Users/mikaelsnow/Documents/ECNU/Paper_Comment_Poster/PosterCS/audit_v2_rewrite/08_rule_hybrid_repair/04_ruledev72/finalize_ruledev.py",
+      "sha256": "b999cc08bb7c85487358d3f97f3e0e5615a5da4cc5cf79a9e1d586732f076faa"
+    }
+  }
+}

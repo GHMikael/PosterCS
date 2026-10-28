@@ -1,0 +1,5 @@
+primary_system,comparator,paired_correctness_delta,hybrid_only_correct,comparator_only_correct,p_value
+hybrid_v1,gemini_p2,0.4166666666666667,10,0,0.001953125
+hybrid_v1,qwen32b_p3,0.3333333333333333,8,0,0.0078125
+hybrid_v1,rule_raster_v1,0.625,15,0,6.103515625e-05
+hybrid_v1,rule_cascade_v1,0.041666666666666664,1,0,1.0

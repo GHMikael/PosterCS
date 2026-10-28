@@ -1,0 +1,16 @@
+run_kind: external_natural20
+seed: 20261008
+dataset_manifest: ../data/external/manifest.json
+development_only: false
+sample_ids: []
+prompt_ids:
+  - evidence-grounded
+model_keys:
+  - qwen_vl_32b
+temperature: null
+max_output_tokens: 1800
+max_attempts: 5
+retry_base_seconds: 5
+timeout_seconds: 120
+verify_image_hashes: true
+output_root: ../runs

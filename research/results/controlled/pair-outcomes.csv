@@ -1,0 +1,121 @@
+system,pair_id,target_label,control_target_hit,mutation_target_hit,control_any_hit,paired_target_correct,control_labels_json,mutation_labels_json
+gemini_p2,HC01,body_text_too_small,0,0,1,0,"[""other"", ""space_imbalance""]","[""other"", ""space_imbalance""]"
+gemini_p2,HC02,body_text_too_small,0,1,1,1,"[""other""]","[""body_text_too_small"", ""space_imbalance""]"
+gemini_p2,HC03,body_text_too_small,0,0,1,0,"[""figure_detail_unreadable"", ""space_imbalance""]","[""figure_detail_unreadable"", ""space_imbalance""]"
+gemini_p2,HC04,body_text_too_small,0,1,1,1,"[""space_imbalance""]","[""body_text_too_small"", ""space_imbalance""]"
+gemini_p2,HC05,figure_detail_unreadable,0,1,1,1,"[""other""]","[""figure_detail_unreadable"", ""space_imbalance""]"
+gemini_p2,HC06,figure_detail_unreadable,0,1,1,1,"[""space_imbalance""]","[""figure_detail_unreadable"", ""space_imbalance""]"
+gemini_p2,HC07,figure_detail_unreadable,0,1,1,1,"[""asset_missing_or_broken"", ""other""]","[""figure_detail_unreadable"", ""other""]"
+gemini_p2,HC08,figure_detail_unreadable,0,1,1,1,"[""other""]","[""figure_detail_unreadable"", ""other""]"
+gemini_p2,HC09,text_overload,0,0,1,0,"[""other""]",[]
+gemini_p2,HC10,text_overload,0,0,1,0,"[""space_imbalance""]","[""overlap_or_clipping"", ""space_imbalance""]"
+gemini_p2,HC11,text_overload,0,0,1,0,"[""figure_detail_unreadable"", ""other"", ""space_imbalance""]","[""figure_detail_unreadable""]"
+gemini_p2,HC12,text_overload,0,0,1,0,"[""figure_detail_unreadable""]",[]
+gemini_p2,HC13,space_imbalance,0,0,1,0,"[""other""]","[""asset_missing_or_broken"", ""other""]"
+gemini_p2,HC14,space_imbalance,1,1,1,0,"[""other"", ""space_imbalance""]","[""asset_missing_or_broken"", ""space_imbalance""]"
+gemini_p2,HC15,space_imbalance,1,0,1,0,"[""figure_detail_unreadable"", ""space_imbalance""]","[""asset_missing_or_broken"", ""other""]"
+gemini_p2,HC16,space_imbalance,1,1,1,0,"[""space_imbalance""]","[""other"", ""space_imbalance""]"
+gemini_p2,HC17,alignment_error,0,0,1,0,"[""other"", ""space_imbalance""]","[""asset_missing_or_broken""]"
+gemini_p2,HC18,alignment_error,0,0,1,0,"[""space_imbalance""]","[""asset_missing_or_broken"", ""other"", ""space_imbalance""]"
+gemini_p2,HC19,alignment_error,0,0,1,0,"[""space_imbalance""]","[""overlap_or_clipping"", ""space_imbalance""]"
+gemini_p2,HC20,alignment_error,0,1,1,1,"[""other""]","[""alignment_error"", ""asset_missing_or_broken""]"
+gemini_p2,HC21,overlap_or_clipping,0,1,1,1,"[""other"", ""space_imbalance""]","[""overlap_or_clipping""]"
+gemini_p2,HC22,overlap_or_clipping,0,1,1,1,"[""space_imbalance""]","[""overlap_or_clipping"", ""space_imbalance""]"
+gemini_p2,HC23,overlap_or_clipping,0,0,1,0,"[""space_imbalance""]","[""asset_missing_or_broken"", ""figure_detail_unreadable""]"
+gemini_p2,HC24,overlap_or_clipping,0,0,1,0,"[""space_imbalance""]","[""asset_missing_or_broken""]"
+qwen32b_p3,HC01,body_text_too_small,0,0,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC02,body_text_too_small,0,0,1,0,"[""figure_detail_unreadable""]",[]
+qwen32b_p3,HC03,body_text_too_small,0,0,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC04,body_text_too_small,0,0,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC05,figure_detail_unreadable,1,1,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC06,figure_detail_unreadable,1,1,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC07,figure_detail_unreadable,1,1,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC08,figure_detail_unreadable,1,1,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC09,text_overload,0,0,1,0,"[""figure_detail_unreadable""]",[]
+qwen32b_p3,HC10,text_overload,0,1,1,1,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""text_overload""]"
+qwen32b_p3,HC11,text_overload,0,1,1,1,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""text_overload""]"
+qwen32b_p3,HC12,text_overload,0,1,1,1,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""text_overload""]"
+qwen32b_p3,HC13,space_imbalance,0,1,1,1,"[""figure_detail_unreadable""]","[""space_imbalance""]"
+qwen32b_p3,HC14,space_imbalance,0,1,1,1,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""space_imbalance""]"
+qwen32b_p3,HC15,space_imbalance,0,1,1,1,"[""figure_detail_unreadable""]","[""space_imbalance""]"
+qwen32b_p3,HC16,space_imbalance,0,1,1,1,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""space_imbalance""]"
+qwen32b_p3,HC17,alignment_error,0,0,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC18,alignment_error,0,0,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC19,alignment_error,0,0,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC20,alignment_error,0,0,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+qwen32b_p3,HC21,overlap_or_clipping,0,1,1,1,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""overlap_or_clipping""]"
+qwen32b_p3,HC22,overlap_or_clipping,0,1,1,1,"[""figure_detail_unreadable""]","[""overlap_or_clipping""]"
+qwen32b_p3,HC23,overlap_or_clipping,0,1,1,1,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""overlap_or_clipping""]"
+qwen32b_p3,HC24,overlap_or_clipping,0,1,1,1,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""overlap_or_clipping""]"
+rule_raster_v1,HC01,body_text_too_small,0,0,0,0,[],[]
+rule_raster_v1,HC02,body_text_too_small,0,0,0,0,[],[]
+rule_raster_v1,HC03,body_text_too_small,0,0,0,0,[],[]
+rule_raster_v1,HC04,body_text_too_small,0,0,0,0,[],[]
+rule_raster_v1,HC05,figure_detail_unreadable,0,0,0,0,[],[]
+rule_raster_v1,HC06,figure_detail_unreadable,0,0,0,0,[],[]
+rule_raster_v1,HC07,figure_detail_unreadable,0,0,0,0,[],[]
+rule_raster_v1,HC08,figure_detail_unreadable,0,0,0,0,[],[]
+rule_raster_v1,HC09,text_overload,0,1,0,1,[],"[""text_overload""]"
+rule_raster_v1,HC10,text_overload,0,1,0,1,[],"[""text_overload""]"
+rule_raster_v1,HC11,text_overload,0,1,0,1,[],"[""text_overload""]"
+rule_raster_v1,HC12,text_overload,0,1,0,1,[],"[""text_overload""]"
+rule_raster_v1,HC13,space_imbalance,0,0,0,0,[],[]
+rule_raster_v1,HC14,space_imbalance,0,0,0,0,[],[]
+rule_raster_v1,HC15,space_imbalance,0,0,0,0,[],[]
+rule_raster_v1,HC16,space_imbalance,0,0,0,0,[],[]
+rule_raster_v1,HC17,alignment_error,0,0,0,0,[],[]
+rule_raster_v1,HC18,alignment_error,0,0,0,0,[],[]
+rule_raster_v1,HC19,alignment_error,0,0,0,0,[],[]
+rule_raster_v1,HC20,alignment_error,0,0,0,0,[],[]
+rule_raster_v1,HC21,overlap_or_clipping,0,0,0,0,[],[]
+rule_raster_v1,HC22,overlap_or_clipping,0,0,0,0,[],[]
+rule_raster_v1,HC23,overlap_or_clipping,0,0,0,0,[],[]
+rule_raster_v1,HC24,overlap_or_clipping,0,0,0,0,[],[]
+rule_cascade_v1,HC01,body_text_too_small,0,0,0,0,[],[]
+rule_cascade_v1,HC02,body_text_too_small,0,1,0,1,[],"[""body_text_too_small""]"
+rule_cascade_v1,HC03,body_text_too_small,0,0,0,0,[],[]
+rule_cascade_v1,HC04,body_text_too_small,0,1,0,1,[],"[""body_text_too_small""]"
+rule_cascade_v1,HC05,figure_detail_unreadable,0,1,0,1,[],"[""figure_detail_unreadable""]"
+rule_cascade_v1,HC06,figure_detail_unreadable,0,1,0,1,[],"[""figure_detail_unreadable""]"
+rule_cascade_v1,HC07,figure_detail_unreadable,0,1,0,1,[],"[""figure_detail_unreadable""]"
+rule_cascade_v1,HC08,figure_detail_unreadable,0,1,0,1,[],"[""figure_detail_unreadable""]"
+rule_cascade_v1,HC09,text_overload,0,1,0,1,[],"[""text_overload""]"
+rule_cascade_v1,HC10,text_overload,0,1,0,1,[],"[""text_overload""]"
+rule_cascade_v1,HC11,text_overload,0,1,0,1,[],"[""text_overload""]"
+rule_cascade_v1,HC12,text_overload,0,1,0,1,[],"[""text_overload""]"
+rule_cascade_v1,HC13,space_imbalance,0,1,0,1,[],"[""space_imbalance""]"
+rule_cascade_v1,HC14,space_imbalance,0,1,0,1,[],"[""space_imbalance""]"
+rule_cascade_v1,HC15,space_imbalance,0,1,0,1,[],"[""space_imbalance""]"
+rule_cascade_v1,HC16,space_imbalance,0,1,0,1,[],"[""space_imbalance""]"
+rule_cascade_v1,HC17,alignment_error,0,0,0,0,[],[]
+rule_cascade_v1,HC18,alignment_error,0,0,0,0,[],[]
+rule_cascade_v1,HC19,alignment_error,0,0,0,0,[],[]
+rule_cascade_v1,HC20,alignment_error,0,0,0,0,[],[]
+rule_cascade_v1,HC21,overlap_or_clipping,0,1,0,1,[],"[""overlap_or_clipping""]"
+rule_cascade_v1,HC22,overlap_or_clipping,0,1,0,1,[],"[""overlap_or_clipping""]"
+rule_cascade_v1,HC23,overlap_or_clipping,0,1,0,1,[],"[""overlap_or_clipping""]"
+rule_cascade_v1,HC24,overlap_or_clipping,0,1,0,1,[],"[""overlap_or_clipping""]"
+hybrid_v1,HC01,body_text_too_small,0,0,0,0,[],[]
+hybrid_v1,HC02,body_text_too_small,0,1,0,1,[],"[""body_text_too_small""]"
+hybrid_v1,HC03,body_text_too_small,0,0,1,0,"[""figure_detail_unreadable""]","[""figure_detail_unreadable""]"
+hybrid_v1,HC04,body_text_too_small,0,1,0,1,[],"[""body_text_too_small""]"
+hybrid_v1,HC05,figure_detail_unreadable,0,1,0,1,[],"[""figure_detail_unreadable""]"
+hybrid_v1,HC06,figure_detail_unreadable,0,1,0,1,[],"[""figure_detail_unreadable""]"
+hybrid_v1,HC07,figure_detail_unreadable,0,1,0,1,[],"[""figure_detail_unreadable""]"
+hybrid_v1,HC08,figure_detail_unreadable,0,1,0,1,[],"[""figure_detail_unreadable""]"
+hybrid_v1,HC09,text_overload,0,1,0,1,[],"[""text_overload""]"
+hybrid_v1,HC10,text_overload,0,1,0,1,[],"[""text_overload""]"
+hybrid_v1,HC11,text_overload,0,1,1,1,"[""figure_detail_unreadable""]","[""figure_detail_unreadable"", ""text_overload""]"
+hybrid_v1,HC12,text_overload,0,1,1,1,"[""figure_detail_unreadable""]","[""text_overload""]"
+hybrid_v1,HC13,space_imbalance,0,1,0,1,[],"[""space_imbalance""]"
+hybrid_v1,HC14,space_imbalance,0,1,0,1,[],"[""space_imbalance""]"
+hybrid_v1,HC15,space_imbalance,0,1,1,1,"[""figure_detail_unreadable""]","[""space_imbalance""]"
+hybrid_v1,HC16,space_imbalance,0,1,0,1,[],"[""space_imbalance""]"
+hybrid_v1,HC17,alignment_error,0,0,0,0,[],[]
+hybrid_v1,HC18,alignment_error,0,0,0,0,[],[]
+hybrid_v1,HC19,alignment_error,0,0,0,0,[],[]
+hybrid_v1,HC20,alignment_error,0,1,0,1,[],"[""alignment_error""]"
+hybrid_v1,HC21,overlap_or_clipping,0,1,0,1,[],"[""overlap_or_clipping""]"
+hybrid_v1,HC22,overlap_or_clipping,0,1,0,1,[],"[""overlap_or_clipping""]"
+hybrid_v1,HC23,overlap_or_clipping,0,1,0,1,[],"[""figure_detail_unreadable"", ""overlap_or_clipping""]"
+hybrid_v1,HC24,overlap_or_clipping,0,1,0,1,[],"[""overlap_or_clipping""]"

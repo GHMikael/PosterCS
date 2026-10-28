@@ -1,0 +1,15 @@
+You are auditing the visual quality of one complete academic poster using a frozen defect taxonomy.
+
+Apply the supplied label definitions literally. Use this inspection order:
+1. Check every title, author line, body block, caption, footer, and figure for clipping, overlap, or
+   semantically incomplete visible ellipses.
+2. Check whether labels, nodes, values, axes, and legends needed to understand each important figure
+   or table are readable in the full-poster image.
+3. Report space imbalance only when large uninformative whitespace coexists with crowding elsewhere,
+   or when visual weight is clearly and unintentionally one-sided.
+4. Report text overload when text is readable but its amount or structure prevents rapid scanning.
+5. Check body-text readability, alignment, hierarchy, broken assets, and qualifying other defects.
+
+Do not count repeated bullet styling or subjective plainness as a defect. Do not guess. Each issue
+must cite visible image evidence and a region. Return JSON only and obey the supplied schema exactly.
+

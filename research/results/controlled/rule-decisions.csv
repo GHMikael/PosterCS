@@ -1,0 +1,577 @@
+sample_id,pair_id,variant,label,decision,severity,risk_score,region,evidence_source,evidence,rule_id,rule_version
+HC01-control,HC01,control,body_text_too_small,abstain,,0.25,,raster,"{""body_line_height_p25_px1080"": 16.0}",R1R,rule_v1
+HC01-control,HC01,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC01-control,HC01,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 49.0}",R2R,rule_v1
+HC01-control,HC01,control,figure_detail_unreadable,abstain,,0.425306,,source,"{""source_picture_detail_p25_min_display_px"": 4.01142890044997}",R2S,rule_v1
+HC01-control,HC01,control,text_overload,abstain,,0.226667,,raster,"{""ocr_character_count"": 742.0}",R3R,rule_v1
+HC01-control,HC01,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 652.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC01-control,HC01,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0557302469135802, ""grid_occupancy_std"": 0.1697368270000746}",R4R,rule_v1
+HC01-control,HC01,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0374999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC01-control,HC01,control,alignment_error,abstain,,0.592593,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0207407407407407}",R5R,rule_v1
+HC01-control,HC01,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC01-control,HC01,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC01-control,HC01,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC01-mutation,HC01,mutation,body_text_too_small,abstain,,0.625,,raster,"{""body_line_height_p25_px1080"": 13.0}",R1R,rule_v1
+HC01-mutation,HC01,mutation,body_text_too_small,abstain,,0.875,,source,"{""source_body_font_min_pt"": 8.5}",R1S,rule_v1
+HC01-mutation,HC01,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 41.0}",R2R,rule_v1
+HC01-mutation,HC01,mutation,figure_detail_unreadable,abstain,,0.425306,,source,"{""source_picture_detail_p25_min_display_px"": 4.01142890044997}",R2S,rule_v1
+HC01-mutation,HC01,mutation,text_overload,abstain,,0.226667,,raster,"{""ocr_character_count"": 742.0}",R3R,rule_v1
+HC01-mutation,HC01,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 652.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC01-mutation,HC01,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0476697530864197, ""grid_occupancy_std"": 0.1748337782591711}",R4R,rule_v1
+HC01-mutation,HC01,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0374999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC01-mutation,HC01,mutation,alignment_error,abstain,,0.592593,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0207407407407407}",R5R,rule_v1
+HC01-mutation,HC01,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC01-mutation,HC01,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC01-mutation,HC01,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC02-control,HC02,control,body_text_too_small,abstain,,0.35,,raster,"{""body_line_height_p25_px1080"": 15.2}",R1R,rule_v1
+HC02-control,HC02,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC02-control,HC02,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 55.0}",R2R,rule_v1
+HC02-control,HC02,control,figure_detail_unreadable,abstain,,0.429714,,source,"{""source_picture_detail_p25_min_display_px"": 3.996}",R2S,rule_v1
+HC02-control,HC02,control,text_overload,abstain,,0.226667,,raster,"{""ocr_character_count"": 742.0}",R3R,rule_v1
+HC02-control,HC02,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC02-control,HC02,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0040685185185185, ""grid_occupancy_std"": 0.1092808146655331}",R4R,rule_v1
+HC02-control,HC02,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0124999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC02-control,HC02,control,alignment_error,abstain,,0.407407,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0192592592592592}",R5R,rule_v1
+HC02-control,HC02,control,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC02-control,HC02,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC02-control,HC02,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC02-mutation,HC02,mutation,body_text_too_small,abstain,,0.7,,raster,"{""body_line_height_p25_px1080"": 12.4}",R1R,rule_v1
+HC02-mutation,HC02,mutation,body_text_too_small,positive,2.0,1.0,,source,"{""source_body_font_min_pt"": 6.8}",R1S,rule_v1
+HC02-mutation,HC02,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 50.0}",R2R,rule_v1
+HC02-mutation,HC02,mutation,figure_detail_unreadable,abstain,,0.429714,,source,"{""source_picture_detail_p25_min_display_px"": 3.996}",R2S,rule_v1
+HC02-mutation,HC02,mutation,text_overload,abstain,,0.4,,raster,"{""ocr_character_count"": 755.0}",R3R,rule_v1
+HC02-mutation,HC02,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC02-mutation,HC02,mutation,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0149228395061728, ""grid_occupancy_std"": 0.1121429088930937}",R4R,rule_v1
+HC02-mutation,HC02,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0124999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC02-mutation,HC02,mutation,alignment_error,abstain,,0.407407,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0192592592592592}",R5R,rule_v1
+HC02-mutation,HC02,mutation,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC02-mutation,HC02,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC02-mutation,HC02,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC03-control,HC03,control,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC03-control,HC03,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC03-control,HC03,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 40.0}",R2R,rule_v1
+HC03-control,HC03,control,figure_detail_unreadable,abstain,,0.985143,,source,"{""source_picture_detail_p25_min_display_px"": 2.052}",R2S,rule_v1
+HC03-control,HC03,control,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 650.0}",R3R,rule_v1
+HC03-control,HC03,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 648.0, ""source_text_density_max"": 3059.6488718515448}",R3S,rule_v1
+HC03-control,HC03,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0161419753086419, ""grid_occupancy_std"": 0.1144123516801469}",R4R,rule_v1
+HC03-control,HC03,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.03125, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC03-control,HC03,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0081481481481481, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC03-control,HC03,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC03-control,HC03,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC03-control,HC03,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC03-mutation,HC03,mutation,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC03-mutation,HC03,mutation,body_text_too_small,abstain,,0.875,,source,"{""source_body_font_min_pt"": 8.5}",R1S,rule_v1
+HC03-mutation,HC03,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 35.0}",R2R,rule_v1
+HC03-mutation,HC03,mutation,figure_detail_unreadable,abstain,,0.985143,,source,"{""source_picture_detail_p25_min_display_px"": 2.052}",R2S,rule_v1
+HC03-mutation,HC03,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 658.0}",R3R,rule_v1
+HC03-mutation,HC03,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 648.0, ""source_text_density_max"": 3059.6488718515448}",R3S,rule_v1
+HC03-mutation,HC03,mutation,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0080277777777778, ""grid_occupancy_std"": 0.1139579496041188}",R4R,rule_v1
+HC03-mutation,HC03,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.03125, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC03-mutation,HC03,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0081481481481481, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC03-mutation,HC03,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC03-mutation,HC03,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC03-mutation,HC03,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC04-control,HC04,control,body_text_too_small,abstain,,0.35,,raster,"{""body_line_height_p25_px1080"": 15.2}",R1R,rule_v1
+HC04-control,HC04,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC04-control,HC04,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 44.0}",R2R,rule_v1
+HC04-control,HC04,control,figure_detail_unreadable,abstain,,0.614858,,source,"{""source_picture_detail_p25_min_display_px"": 3.3479976377952756}",R2S,rule_v1
+HC04-control,HC04,control,text_overload,abstain,,0.066667,,raster,"{""ocr_character_count"": 730.0}",R3R,rule_v1
+HC04-control,HC04,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 651.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC04-control,HC04,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0356141975308642, ""grid_occupancy_std"": 0.1078133962965539}",R4R,rule_v1
+HC04-control,HC04,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.01, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC04-control,HC04,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0083333333333333, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC04-control,HC04,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC04-control,HC04,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC04-control,HC04,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC04-mutation,HC04,mutation,body_text_too_small,abstain,,0.65,,raster,"{""body_line_height_p25_px1080"": 12.8}",R1R,rule_v1
+HC04-mutation,HC04,mutation,body_text_too_small,positive,2.0,1.0,,source,"{""source_body_font_min_pt"": 6.8}",R1S,rule_v1
+HC04-mutation,HC04,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 40.0}",R2R,rule_v1
+HC04-mutation,HC04,mutation,figure_detail_unreadable,abstain,,0.614858,,source,"{""source_picture_detail_p25_min_display_px"": 3.3479976377952756}",R2S,rule_v1
+HC04-mutation,HC04,mutation,text_overload,abstain,,0.186667,,raster,"{""ocr_character_count"": 739.0}",R3R,rule_v1
+HC04-mutation,HC04,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 651.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC04-mutation,HC04,mutation,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0257635802469135, ""grid_occupancy_std"": 0.1105576107028737}",R4R,rule_v1
+HC04-mutation,HC04,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.01, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC04-mutation,HC04,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0083333333333333, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC04-mutation,HC04,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC04-mutation,HC04,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC04-mutation,HC04,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC05-control,HC05,control,body_text_too_small,abstain,,0.25,,raster,"{""body_line_height_p25_px1080"": 16.0}",R1R,rule_v1
+HC05-control,HC05,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC05-control,HC05,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 48.0}",R2R,rule_v1
+HC05-control,HC05,control,figure_detail_unreadable,abstain,,0.425306,,source,"{""source_picture_detail_p25_min_display_px"": 4.01142890044997}",R2S,rule_v1
+HC05-control,HC05,control,text_overload,abstain,,0.2,,raster,"{""ocr_character_count"": 740.0}",R3R,rule_v1
+HC05-control,HC05,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC05-control,HC05,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0555055555555555, ""grid_occupancy_std"": 0.1698388717850579}",R4R,rule_v1
+HC05-control,HC05,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0374999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC05-control,HC05,control,alignment_error,abstain,,0.592593,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0207407407407407}",R5R,rule_v1
+HC05-control,HC05,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC05-control,HC05,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC05-control,HC05,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC05-mutation,HC05,mutation,body_text_too_small,negative,,0.0,,raster,"{""body_line_height_p25_px1080"": 18.4}",R1R,rule_v1
+HC05-mutation,HC05,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC05-mutation,HC05,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 37.0}",R2R,rule_v1
+HC05-mutation,HC05,mutation,figure_detail_unreadable,positive,2.0,1.0,,source,"{""source_picture_detail_p25_min_display_px"": 1.671428708520821}",R2S,rule_v1
+HC05-mutation,HC05,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 638.0}",R3R,rule_v1
+HC05-mutation,HC05,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC05-mutation,HC05,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0555055555555555, ""grid_occupancy_std"": 0.1698388717850579}",R4R,rule_v1
+HC05-mutation,HC05,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0374999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC05-mutation,HC05,mutation,alignment_error,abstain,,0.592593,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0207407407407407}",R5R,rule_v1
+HC05-mutation,HC05,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC05-mutation,HC05,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC05-mutation,HC05,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC06-control,HC06,control,body_text_too_small,abstain,,0.35,,raster,"{""body_line_height_p25_px1080"": 15.2}",R1R,rule_v1
+HC06-control,HC06,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC06-control,HC06,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 56.0}",R2R,rule_v1
+HC06-control,HC06,control,figure_detail_unreadable,abstain,,0.429714,,source,"{""source_picture_detail_p25_min_display_px"": 3.996}",R2S,rule_v1
+HC06-control,HC06,control,text_overload,abstain,,0.24,,raster,"{""ocr_character_count"": 743.0}",R3R,rule_v1
+HC06-control,HC06,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 650.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC06-control,HC06,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0037919753086419, ""grid_occupancy_std"": 0.1097687099862609}",R4R,rule_v1
+HC06-control,HC06,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0124999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC06-control,HC06,control,alignment_error,abstain,,0.407407,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0192592592592592}",R5R,rule_v1
+HC06-control,HC06,control,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC06-control,HC06,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC06-control,HC06,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC06-mutation,HC06,mutation,body_text_too_small,abstain,,0.05,,raster,"{""body_line_height_p25_px1080"": 17.6}",R1R,rule_v1
+HC06-mutation,HC06,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC06-mutation,HC06,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 42.0}",R2R,rule_v1
+HC06-mutation,HC06,mutation,figure_detail_unreadable,positive,2.0,1.0,,source,"{""source_picture_detail_p25_min_display_px"": 1.998}",R2S,rule_v1
+HC06-mutation,HC06,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 636.0}",R3R,rule_v1
+HC06-mutation,HC06,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 650.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC06-mutation,HC06,mutation,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0002561728395061, ""grid_occupancy_std"": 0.1095983964781979}",R4R,rule_v1
+HC06-mutation,HC06,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0124999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC06-mutation,HC06,mutation,alignment_error,abstain,,0.407407,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0192592592592592}",R5R,rule_v1
+HC06-mutation,HC06,mutation,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC06-mutation,HC06,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC06-mutation,HC06,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC07-control,HC07,control,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC07-control,HC07,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC07-control,HC07,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 38.0}",R2R,rule_v1
+HC07-control,HC07,control,figure_detail_unreadable,abstain,,0.838571,,source,"{""source_picture_detail_p25_min_display_px"": 2.5650000000000004}",R2S,rule_v1
+HC07-control,HC07,control,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 659.0}",R3R,rule_v1
+HC07-control,HC07,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 652.0, ""source_text_density_max"": 3059.6488718515448}",R3S,rule_v1
+HC07-control,HC07,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0186253086419753, ""grid_occupancy_std"": 0.1121365463778689}",R4R,rule_v1
+HC07-control,HC07,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.03125, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC07-control,HC07,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0081481481481481, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC07-control,HC07,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC07-control,HC07,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC07-control,HC07,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC07-mutation,HC07,mutation,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC07-mutation,HC07,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC07-mutation,HC07,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 36.0}",R2R,rule_v1
+HC07-mutation,HC07,mutation,figure_detail_unreadable,positive,2.0,1.0,,source,"{""source_picture_detail_p25_min_display_px"": 1.1115000000000002}",R2S,rule_v1
+HC07-mutation,HC07,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 639.0}",R3R,rule_v1
+HC07-mutation,HC07,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 652.0, ""source_text_density_max"": 3059.6488718515448}",R3S,rule_v1
+HC07-mutation,HC07,mutation,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0202907407407407, ""grid_occupancy_std"": 0.1123271668503543}",R4R,rule_v1
+HC07-mutation,HC07,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.03125, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC07-mutation,HC07,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0081481481481481, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC07-mutation,HC07,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC07-mutation,HC07,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC07-mutation,HC07,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC08-control,HC08,control,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC08-control,HC08,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC08-control,HC08,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 39.0}",R2R,rule_v1
+HC08-control,HC08,control,figure_detail_unreadable,abstain,,0.296001,,source,"{""source_picture_detail_p25_min_display_px"": 4.463996850393701}",R2S,rule_v1
+HC08-control,HC08,control,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 666.0}",R3R,rule_v1
+HC08-control,HC08,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC08-control,HC08,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0415462962962963, ""grid_occupancy_std"": 0.1074390187675046}",R4R,rule_v1
+HC08-control,HC08,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.01, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC08-control,HC08,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0083333333333333, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC08-control,HC08,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC08-control,HC08,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC08-control,HC08,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC08-mutation,HC08,mutation,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC08-mutation,HC08,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC08-mutation,HC08,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 37.0}",R2R,rule_v1
+HC08-mutation,HC08,mutation,figure_detail_unreadable,positive,2.0,1.0,,source,"{""source_picture_detail_p25_min_display_px"": 1.6739988188976378}",R2S,rule_v1
+HC08-mutation,HC08,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 638.0}",R3R,rule_v1
+HC08-mutation,HC08,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC08-mutation,HC08,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0431098765432098, ""grid_occupancy_std"": 0.1076832043826794}",R4R,rule_v1
+HC08-mutation,HC08,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.01, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC08-mutation,HC08,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0083333333333333, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC08-mutation,HC08,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC08-mutation,HC08,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC08-mutation,HC08,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC09-control,HC09,control,body_text_too_small,abstain,,0.175,,raster,"{""body_line_height_p25_px1080"": 16.6}",R1R,rule_v1
+HC09-control,HC09,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC09-control,HC09,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 47.0}",R2R,rule_v1
+HC09-control,HC09,control,figure_detail_unreadable,abstain,,0.425306,,source,"{""source_picture_detail_p25_min_display_px"": 4.01142890044997}",R2S,rule_v1
+HC09-control,HC09,control,text_overload,abstain,,0.053333,,raster,"{""ocr_character_count"": 729.0}",R3R,rule_v1
+HC09-control,HC09,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 648.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC09-control,HC09,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0580265432098765, ""grid_occupancy_std"": 0.1698517530637736}",R4R,rule_v1
+HC09-control,HC09,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0374999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC09-control,HC09,control,alignment_error,abstain,,0.592593,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0207407407407407}",R5R,rule_v1
+HC09-control,HC09,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC09-control,HC09,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC09-control,HC09,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC09-mutation,HC09,mutation,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC09-mutation,HC09,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC09-mutation,HC09,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 57.0}",R2R,rule_v1
+HC09-mutation,HC09,mutation,figure_detail_unreadable,abstain,,0.425306,,source,"{""source_picture_detail_p25_min_display_px"": 4.01142890044997}",R2S,rule_v1
+HC09-mutation,HC09,mutation,text_overload,positive,2.0,1.0,,raster,"{""ocr_character_count"": 1060.0}",R3R,rule_v1
+HC09-mutation,HC09,mutation,text_overload,abstain,,0.621442,,source,"{""source_character_count"": 993.0, ""source_text_density_max"": 3405.360499164359}",R3S,rule_v1
+HC09-mutation,HC09,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0459623456790123, ""grid_occupancy_std"": 0.1638679898713023}",R4R,rule_v1
+HC09-mutation,HC09,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0374999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC09-mutation,HC09,mutation,alignment_error,abstain,,0.592593,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0207407407407407}",R5R,rule_v1
+HC09-mutation,HC09,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC09-mutation,HC09,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC09-mutation,HC09,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC10-control,HC10,control,body_text_too_small,abstain,,0.35,,raster,"{""body_line_height_p25_px1080"": 15.2}",R1R,rule_v1
+HC10-control,HC10,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC10-control,HC10,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 54.0}",R2R,rule_v1
+HC10-control,HC10,control,figure_detail_unreadable,abstain,,0.429714,,source,"{""source_picture_detail_p25_min_display_px"": 3.996}",R2S,rule_v1
+HC10-control,HC10,control,text_overload,abstain,,0.2,,raster,"{""ocr_character_count"": 740.0}",R3R,rule_v1
+HC10-control,HC10,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 651.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC10-control,HC10,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0038358024691358, ""grid_occupancy_std"": 0.1095889737616508}",R4R,rule_v1
+HC10-control,HC10,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0124999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC10-control,HC10,control,alignment_error,abstain,,0.407407,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0192592592592592}",R5R,rule_v1
+HC10-control,HC10,control,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC10-control,HC10,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC10-control,HC10,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC10-mutation,HC10,mutation,body_text_too_small,abstain,,0.5,,raster,"{""body_line_height_p25_px1080"": 14.0}",R1R,rule_v1
+HC10-mutation,HC10,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC10-mutation,HC10,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 65.0}",R2R,rule_v1
+HC10-mutation,HC10,mutation,figure_detail_unreadable,abstain,,0.429714,,source,"{""source_picture_detail_p25_min_display_px"": 3.996}",R2S,rule_v1
+HC10-mutation,HC10,mutation,text_overload,positive,2.0,1.0,,raster,"{""ocr_character_count"": 1074.0}",R3R,rule_v1
+HC10-mutation,HC10,mutation,text_overload,positive,2.0,1.0,,source,"{""source_character_count"": 996.0, ""source_text_density_max"": 3979.800071350026}",R3S,rule_v1
+HC10-mutation,HC10,mutation,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0061839506172839, ""grid_occupancy_std"": 0.1212451575920691}",R4R,rule_v1
+HC10-mutation,HC10,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0124999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC10-mutation,HC10,mutation,alignment_error,abstain,,0.407407,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0192592592592592}",R5R,rule_v1
+HC10-mutation,HC10,mutation,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC10-mutation,HC10,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC10-mutation,HC10,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC11-control,HC11,control,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC11-control,HC11,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC11-control,HC11,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 39.0}",R2R,rule_v1
+HC11-control,HC11,control,figure_detail_unreadable,abstain,,0.985143,,source,"{""source_picture_detail_p25_min_display_px"": 2.052}",R2S,rule_v1
+HC11-control,HC11,control,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 664.0}",R3R,rule_v1
+HC11-control,HC11,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 3059.6488718515448}",R3S,rule_v1
+HC11-control,HC11,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0138876543209876, ""grid_occupancy_std"": 0.1133702941374463}",R4R,rule_v1
+HC11-control,HC11,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.03125, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC11-control,HC11,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0081481481481481, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC11-control,HC11,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC11-control,HC11,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC11-control,HC11,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC11-mutation,HC11,mutation,body_text_too_small,negative,,0.0,,raster,"{""body_line_height_p25_px1080"": 18.4}",R1R,rule_v1
+HC11-mutation,HC11,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC11-mutation,HC11,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 49.0}",R2R,rule_v1
+HC11-mutation,HC11,mutation,figure_detail_unreadable,abstain,,0.985143,,source,"{""source_picture_detail_p25_min_display_px"": 2.052}",R2S,rule_v1
+HC11-mutation,HC11,mutation,text_overload,positive,2.0,1.0,,raster,"{""ocr_character_count"": 949.0}",R3R,rule_v1
+HC11-mutation,HC11,mutation,text_overload,abstain,,0.0,,source,"{""source_character_count"": 966.0, ""source_text_density_max"": 3120.7608546821416}",R3S,rule_v1
+HC11-mutation,HC11,mutation,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0039061728395061, ""grid_occupancy_std"": 0.1114760914436193}",R4R,rule_v1
+HC11-mutation,HC11,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.03125, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC11-mutation,HC11,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0081481481481481, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC11-mutation,HC11,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC11-mutation,HC11,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC11-mutation,HC11,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC12-control,HC12,control,body_text_too_small,abstain,,0.3,,raster,"{""body_line_height_p25_px1080"": 15.6}",R1R,rule_v1
+HC12-control,HC12,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC12-control,HC12,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 42.0}",R2R,rule_v1
+HC12-control,HC12,control,figure_detail_unreadable,abstain,,0.575001,,source,"{""source_picture_detail_p25_min_display_px"": 3.487497539370079}",R2S,rule_v1
+HC12-control,HC12,control,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 725.0}",R3R,rule_v1
+HC12-control,HC12,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 650.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC12-control,HC12,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0360543209876543, ""grid_occupancy_std"": 0.1078148682855696}",R4R,rule_v1
+HC12-control,HC12,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.01, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC12-control,HC12,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0083333333333333, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC12-control,HC12,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC12-control,HC12,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC12-control,HC12,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC12-mutation,HC12,mutation,body_text_too_small,abstain,,0.2,,raster,"{""body_line_height_p25_px1080"": 16.4}",R1R,rule_v1
+HC12-mutation,HC12,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC12-mutation,HC12,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 58.0}",R2R,rule_v1
+HC12-mutation,HC12,mutation,figure_detail_unreadable,abstain,,0.614858,,source,"{""source_picture_detail_p25_min_display_px"": 3.3479976377952756}",R2S,rule_v1
+HC12-mutation,HC12,mutation,text_overload,positive,2.0,1.0,,raster,"{""ocr_character_count"": 1090.0}",R3R,rule_v1
+HC12-mutation,HC12,mutation,text_overload,positive,2.0,1.0,,source,"{""source_character_count"": 1030.0, ""source_text_density_max"": 3617.991880562885}",R3S,rule_v1
+HC12-mutation,HC12,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0497117283950617, ""grid_occupancy_std"": 0.1159381133865252}",R4R,rule_v1
+HC12-mutation,HC12,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.01, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC12-mutation,HC12,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0083333333333333, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC12-mutation,HC12,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC12-mutation,HC12,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC12-mutation,HC12,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC13-control,HC13,control,body_text_too_small,abstain,,0.25,,raster,"{""body_line_height_p25_px1080"": 16.0}",R1R,rule_v1
+HC13-control,HC13,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC13-control,HC13,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 50.0}",R2R,rule_v1
+HC13-control,HC13,control,figure_detail_unreadable,abstain,,0.425306,,source,"{""source_picture_detail_p25_min_display_px"": 4.01142890044997}",R2S,rule_v1
+HC13-control,HC13,control,text_overload,abstain,,0.226667,,raster,"{""ocr_character_count"": 742.0}",R3R,rule_v1
+HC13-control,HC13,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 652.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC13-control,HC13,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0557302469135802, ""grid_occupancy_std"": 0.1697368270000746}",R4R,rule_v1
+HC13-control,HC13,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0374999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC13-control,HC13,control,alignment_error,abstain,,0.592593,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0207407407407407}",R5R,rule_v1
+HC13-control,HC13,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC13-control,HC13,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC13-control,HC13,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC13-mutation,HC13,mutation,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC13-mutation,HC13,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC13-mutation,HC13,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 47.0}",R2R,rule_v1
+HC13-mutation,HC13,mutation,figure_detail_unreadable,abstain,,0.662245,,source,"{""source_picture_detail_p25_min_display_px"": 3.1821431181454094}",R2S,rule_v1
+HC13-mutation,HC13,mutation,text_overload,abstain,,0.12,,raster,"{""ocr_character_count"": 734.0}",R3R,rule_v1
+HC13-mutation,HC13,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 652.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC13-mutation,HC13,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.1086938271604938, ""grid_occupancy_std"": 0.1873672115298235}",R4R,rule_v1
+HC13-mutation,HC13,mutation,space_imbalance,positive,2.0,1.0,,source,"{""source_content_left_right_abs_diff"": 0.2231249999999999, ""source_largest_empty_grid_rect_ratio"": 0.1875}",R4S,rule_v1
+HC13-mutation,HC13,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": null, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC13-mutation,HC13,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC13-mutation,HC13,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC13-mutation,HC13,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC14-control,HC14,control,body_text_too_small,abstain,,0.35,,raster,"{""body_line_height_p25_px1080"": 15.2}",R1R,rule_v1
+HC14-control,HC14,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC14-control,HC14,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 55.0}",R2R,rule_v1
+HC14-control,HC14,control,figure_detail_unreadable,abstain,,0.429714,,source,"{""source_picture_detail_p25_min_display_px"": 3.996}",R2S,rule_v1
+HC14-control,HC14,control,text_overload,abstain,,0.226667,,raster,"{""ocr_character_count"": 742.0}",R3R,rule_v1
+HC14-control,HC14,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC14-control,HC14,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0041444444444444, ""grid_occupancy_std"": 0.1093162488467218}",R4R,rule_v1
+HC14-control,HC14,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0124999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC14-control,HC14,control,alignment_error,abstain,,0.407407,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0192592592592592}",R5R,rule_v1
+HC14-control,HC14,control,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC14-control,HC14,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC14-control,HC14,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC14-mutation,HC14,mutation,body_text_too_small,abstain,,0.1,,raster,"{""body_line_height_p25_px1080"": 17.2}",R1R,rule_v1
+HC14-mutation,HC14,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC14-mutation,HC14,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 45.0}",R2R,rule_v1
+HC14-mutation,HC14,mutation,figure_detail_unreadable,abstain,,0.777959,,source,"{""source_picture_detail_p25_min_display_px"": 2.7771430849269025}",R2S,rule_v1
+HC14-mutation,HC14,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 704.0}",R3R,rule_v1
+HC14-mutation,HC14,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC14-mutation,HC14,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.1021518518518518, ""grid_occupancy_std"": 0.1266249337395946}",R4R,rule_v1
+HC14-mutation,HC14,mutation,space_imbalance,positive,2.0,1.0,,source,"{""source_content_left_right_abs_diff"": 0.3425, ""source_largest_empty_grid_rect_ratio"": 0.28125}",R4S,rule_v1
+HC14-mutation,HC14,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": null, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC14-mutation,HC14,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC14-mutation,HC14,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC14-mutation,HC14,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC15-control,HC15,control,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC15-control,HC15,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC15-control,HC15,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 40.0}",R2R,rule_v1
+HC15-control,HC15,control,figure_detail_unreadable,abstain,,0.985143,,source,"{""source_picture_detail_p25_min_display_px"": 2.052}",R2S,rule_v1
+HC15-control,HC15,control,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 654.0}",R3R,rule_v1
+HC15-control,HC15,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 648.0, ""source_text_density_max"": 3059.6488718515448}",R3S,rule_v1
+HC15-control,HC15,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0161438271604938, ""grid_occupancy_std"": 0.1144370241524384}",R4R,rule_v1
+HC15-control,HC15,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.03125, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC15-control,HC15,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0081481481481481, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC15-control,HC15,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC15-control,HC15,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC15-control,HC15,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC15-mutation,HC15,mutation,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC15-mutation,HC15,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC15-mutation,HC15,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 47.0}",R2R,rule_v1
+HC15-mutation,HC15,mutation,figure_detail_unreadable,abstain,,0.601633,,source,"{""source_picture_detail_p25_min_display_px"": 3.3942859926884363}",R2S,rule_v1
+HC15-mutation,HC15,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 721.0}",R3R,rule_v1
+HC15-mutation,HC15,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 648.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC15-mutation,HC15,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0594549382716049, ""grid_occupancy_std"": 0.1207779529632523}",R4R,rule_v1
+HC15-mutation,HC15,mutation,space_imbalance,positive,2.0,1.0,,source,"{""source_content_left_right_abs_diff"": 0.2231249999999999, ""source_largest_empty_grid_rect_ratio"": 0.1875}",R4S,rule_v1
+HC15-mutation,HC15,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": null, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC15-mutation,HC15,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC15-mutation,HC15,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC15-mutation,HC15,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC16-control,HC16,control,body_text_too_small,abstain,,0.35,,raster,"{""body_line_height_p25_px1080"": 15.2}",R1R,rule_v1
+HC16-control,HC16,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC16-control,HC16,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 43.0}",R2R,rule_v1
+HC16-control,HC16,control,figure_detail_unreadable,abstain,,0.614858,,source,"{""source_picture_detail_p25_min_display_px"": 3.3479976377952756}",R2S,rule_v1
+HC16-control,HC16,control,text_overload,abstain,,0.04,,raster,"{""ocr_character_count"": 728.0}",R3R,rule_v1
+HC16-control,HC16,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 651.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC16-control,HC16,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0359086419753086, ""grid_occupancy_std"": 0.1077393770268292}",R4R,rule_v1
+HC16-control,HC16,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.01, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC16-control,HC16,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0083333333333333, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC16-control,HC16,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC16-control,HC16,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC16-control,HC16,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC16-mutation,HC16,mutation,body_text_too_small,negative,,0.0,,raster,"{""body_line_height_p25_px1080"": 18.4}",R1R,rule_v1
+HC16-mutation,HC16,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC16-mutation,HC16,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 45.0}",R2R,rule_v1
+HC16-mutation,HC16,mutation,figure_detail_unreadable,abstain,,0.777959,,source,"{""source_picture_detail_p25_min_display_px"": 2.7771430849269025}",R2S,rule_v1
+HC16-mutation,HC16,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 701.0}",R3R,rule_v1
+HC16-mutation,HC16,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 651.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC16-mutation,HC16,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.102779012345679, ""grid_occupancy_std"": 0.1267989736444172}",R4R,rule_v1
+HC16-mutation,HC16,mutation,space_imbalance,positive,2.0,1.0,,source,"{""source_content_left_right_abs_diff"": 0.3425, ""source_largest_empty_grid_rect_ratio"": 0.28125}",R4S,rule_v1
+HC16-mutation,HC16,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": null, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC16-mutation,HC16,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC16-mutation,HC16,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC16-mutation,HC16,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC17-control,HC17,control,body_text_too_small,abstain,,0.175,,raster,"{""body_line_height_p25_px1080"": 16.6}",R1R,rule_v1
+HC17-control,HC17,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC17-control,HC17,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 47.0}",R2R,rule_v1
+HC17-control,HC17,control,figure_detail_unreadable,abstain,,0.425306,,source,"{""source_picture_detail_p25_min_display_px"": 4.01142890044997}",R2S,rule_v1
+HC17-control,HC17,control,text_overload,abstain,,0.093333,,raster,"{""ocr_character_count"": 732.0}",R3R,rule_v1
+HC17-control,HC17,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC17-control,HC17,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0555055555555555, ""grid_occupancy_std"": 0.1698388717850579}",R4R,rule_v1
+HC17-control,HC17,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0374999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC17-control,HC17,control,alignment_error,abstain,,0.592593,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0207407407407407}",R5R,rule_v1
+HC17-control,HC17,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC17-control,HC17,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC17-control,HC17,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC17-mutation,HC17,mutation,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC17-mutation,HC17,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC17-mutation,HC17,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 45.0}",R2R,rule_v1
+HC17-mutation,HC17,mutation,figure_detail_unreadable,abstain,,0.425306,,source,"{""source_picture_detail_p25_min_display_px"": 4.01142890044997}",R2S,rule_v1
+HC17-mutation,HC17,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 721.0}",R3R,rule_v1
+HC17-mutation,HC17,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC17-mutation,HC17,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0355339506172839, ""grid_occupancy_std"": 0.1633871255139348}",R4R,rule_v1
+HC17-mutation,HC17,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0537499999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC17-mutation,HC17,mutation,alignment_error,abstain,,0.592593,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0207407407407407}",R5R,rule_v1
+HC17-mutation,HC17,mutation,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC17-mutation,HC17,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC17-mutation,HC17,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC18-control,HC18,control,body_text_too_small,abstain,,0.35,,raster,"{""body_line_height_p25_px1080"": 15.2}",R1R,rule_v1
+HC18-control,HC18,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC18-control,HC18,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 56.0}",R2R,rule_v1
+HC18-control,HC18,control,figure_detail_unreadable,abstain,,0.429714,,source,"{""source_picture_detail_p25_min_display_px"": 3.996}",R2S,rule_v1
+HC18-control,HC18,control,text_overload,abstain,,0.253333,,raster,"{""ocr_character_count"": 744.0}",R3R,rule_v1
+HC18-control,HC18,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 650.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC18-control,HC18,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0045709876543209, ""grid_occupancy_std"": 0.1100571483508981}",R4R,rule_v1
+HC18-control,HC18,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0124999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC18-control,HC18,control,alignment_error,abstain,,0.407407,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0192592592592592}",R5R,rule_v1
+HC18-control,HC18,control,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC18-control,HC18,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC18-control,HC18,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC18-mutation,HC18,mutation,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC18-mutation,HC18,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC18-mutation,HC18,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 51.0}",R2R,rule_v1
+HC18-mutation,HC18,mutation,figure_detail_unreadable,abstain,,0.429714,,source,"{""source_picture_detail_p25_min_display_px"": 3.996}",R2S,rule_v1
+HC18-mutation,HC18,mutation,text_overload,abstain,,0.053333,,raster,"{""ocr_character_count"": 729.0}",R3R,rule_v1
+HC18-mutation,HC18,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 650.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC18-mutation,HC18,mutation,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.005324074074074, ""grid_occupancy_std"": 0.1103865406217}",R4R,rule_v1
+HC18-mutation,HC18,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0218749999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC18-mutation,HC18,mutation,alignment_error,abstain,,0.407407,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0192592592592592}",R5R,rule_v1
+HC18-mutation,HC18,mutation,alignment_error,abstain,,0.694444,,source,"{""derived_unclustered_edge_ratio"": 0.05555555555555558, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 34.0}",R5S,rule_v1
+HC18-mutation,HC18,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC18-mutation,HC18,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC19-control,HC19,control,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC19-control,HC19,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC19-control,HC19,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 39.0}",R2R,rule_v1
+HC19-control,HC19,control,figure_detail_unreadable,abstain,,0.985143,,source,"{""source_picture_detail_p25_min_display_px"": 2.052}",R2S,rule_v1
+HC19-control,HC19,control,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 654.0}",R3R,rule_v1
+HC19-control,HC19,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 652.0, ""source_text_density_max"": 3059.6488718515448}",R3S,rule_v1
+HC19-control,HC19,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0139574074074074, ""grid_occupancy_std"": 0.1133964889879665}",R4R,rule_v1
+HC19-control,HC19,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.03125, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC19-control,HC19,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0081481481481481, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC19-control,HC19,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC19-control,HC19,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC19-control,HC19,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC19-mutation,HC19,mutation,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC19-mutation,HC19,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC19-mutation,HC19,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 36.0}",R2R,rule_v1
+HC19-mutation,HC19,mutation,figure_detail_unreadable,abstain,,0.985143,,source,"{""source_picture_detail_p25_min_display_px"": 2.052}",R2S,rule_v1
+HC19-mutation,HC19,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 645.0}",R3R,rule_v1
+HC19-mutation,HC19,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 652.0, ""source_text_density_max"": 3059.6488718515448}",R3S,rule_v1
+HC19-mutation,HC19,mutation,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0136320987654321, ""grid_occupancy_std"": 0.1138104693036487}",R4R,rule_v1
+HC19-mutation,HC19,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.03, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC19-mutation,HC19,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0081481481481481, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC19-mutation,HC19,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC19-mutation,HC19,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC19-mutation,HC19,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC20-control,HC20,control,body_text_too_small,abstain,,0.325,,raster,"{""body_line_height_p25_px1080"": 15.4}",R1R,rule_v1
+HC20-control,HC20,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC20-control,HC20,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 45.0}",R2R,rule_v1
+HC20-control,HC20,control,figure_detail_unreadable,abstain,,0.614858,,source,"{""source_picture_detail_p25_min_display_px"": 3.3479976377952756}",R2S,rule_v1
+HC20-control,HC20,control,text_overload,abstain,,0.146667,,raster,"{""ocr_character_count"": 736.0}",R3R,rule_v1
+HC20-control,HC20,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC20-control,HC20,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0356067901234568, ""grid_occupancy_std"": 0.1074745563067147}",R4R,rule_v1
+HC20-control,HC20,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.01, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC20-control,HC20,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0083333333333333, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC20-control,HC20,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC20-control,HC20,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC20-control,HC20,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC20-mutation,HC20,mutation,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC20-mutation,HC20,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC20-mutation,HC20,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 41.0}",R2R,rule_v1
+HC20-mutation,HC20,mutation,figure_detail_unreadable,abstain,,0.614858,,source,"{""source_picture_detail_p25_min_display_px"": 3.3479976377952756}",R2S,rule_v1
+HC20-mutation,HC20,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 724.0}",R3R,rule_v1
+HC20-mutation,HC20,mutation,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC20-mutation,HC20,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0352413580246913, ""grid_occupancy_std"": 0.1080354984932668}",R4R,rule_v1
+HC20-mutation,HC20,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0125, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC20-mutation,HC20,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0083333333333333, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC20-mutation,HC20,mutation,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC20-mutation,HC20,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC20-mutation,HC20,mutation,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC21-control,HC21,control,body_text_too_small,abstain,,0.25,,raster,"{""body_line_height_p25_px1080"": 16.0}",R1R,rule_v1
+HC21-control,HC21,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC21-control,HC21,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 48.0}",R2R,rule_v1
+HC21-control,HC21,control,figure_detail_unreadable,abstain,,0.425306,,source,"{""source_picture_detail_p25_min_display_px"": 4.01142890044997}",R2S,rule_v1
+HC21-control,HC21,control,text_overload,abstain,,0.106667,,raster,"{""ocr_character_count"": 733.0}",R3R,rule_v1
+HC21-control,HC21,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 648.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC21-control,HC21,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0580265432098765, ""grid_occupancy_std"": 0.1698517530637736}",R4R,rule_v1
+HC21-control,HC21,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0374999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC21-control,HC21,control,alignment_error,abstain,,0.592593,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0207407407407407}",R5R,rule_v1
+HC21-control,HC21,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC21-control,HC21,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC21-control,HC21,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC21-mutation,HC21,mutation,body_text_too_small,abstain,,0.225,,raster,"{""body_line_height_p25_px1080"": 16.2}",R1R,rule_v1
+HC21-mutation,HC21,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC21-mutation,HC21,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 49.0}",R2R,rule_v1
+HC21-mutation,HC21,mutation,figure_detail_unreadable,abstain,,0.425306,,source,"{""source_picture_detail_p25_min_display_px"": 4.01142890044997}",R2S,rule_v1
+HC21-mutation,HC21,mutation,text_overload,abstain,,0.106667,,raster,"{""ocr_character_count"": 733.0}",R3R,rule_v1
+HC21-mutation,HC21,mutation,text_overload,abstain,,0.0,,source,"{""source_character_count"": 651.0, ""source_text_density_max"": 4464.2853481205475}",R3S,rule_v1
+HC21-mutation,HC21,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0573790123456789, ""grid_occupancy_std"": 0.1697227433945762}",R4R,rule_v1
+HC21-mutation,HC21,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0374999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC21-mutation,HC21,mutation,alignment_error,abstain,,0.592593,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0207407407407407}",R5R,rule_v1
+HC21-mutation,HC21,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC21-mutation,HC21,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC21-mutation,HC21,mutation,overlap_or_clipping,positive,2.0,1.0,,source,"{""source_content_overlap_pair_count"": 1.0, ""source_ellipsis_token_count"": 1.0}",R6S,rule_v1
+HC22-control,HC22,control,body_text_too_small,abstain,,0.35,,raster,"{""body_line_height_p25_px1080"": 15.2}",R1R,rule_v1
+HC22-control,HC22,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC22-control,HC22,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 51.0}",R2R,rule_v1
+HC22-control,HC22,control,figure_detail_unreadable,abstain,,0.429714,,source,"{""source_picture_detail_p25_min_display_px"": 3.996}",R2S,rule_v1
+HC22-control,HC22,control,text_overload,abstain,,0.093333,,raster,"{""ocr_character_count"": 732.0}",R3R,rule_v1
+HC22-control,HC22,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 651.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC22-control,HC22,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.004066049382716, ""grid_occupancy_std"": 0.1099131603353457}",R4R,rule_v1
+HC22-control,HC22,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0124999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC22-control,HC22,control,alignment_error,abstain,,0.407407,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0192592592592592}",R5R,rule_v1
+HC22-control,HC22,control,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC22-control,HC22,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC22-control,HC22,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC22-mutation,HC22,mutation,body_text_too_small,abstain,,0.35,,raster,"{""body_line_height_p25_px1080"": 15.2}",R1R,rule_v1
+HC22-mutation,HC22,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC22-mutation,HC22,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 57.0}",R2R,rule_v1
+HC22-mutation,HC22,mutation,figure_detail_unreadable,abstain,,0.429714,,source,"{""source_picture_detail_p25_min_display_px"": 3.996}",R2S,rule_v1
+HC22-mutation,HC22,mutation,text_overload,abstain,,0.093333,,raster,"{""ocr_character_count"": 732.0}",R3R,rule_v1
+HC22-mutation,HC22,mutation,text_overload,abstain,,0.0,,source,"{""source_character_count"": 654.0, ""source_text_density_max"": 4464.2853481205475}",R3S,rule_v1
+HC22-mutation,HC22,mutation,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0032302469135802, ""grid_occupancy_std"": 0.1097097958512911}",R4R,rule_v1
+HC22-mutation,HC22,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.0124999999999999, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC22-mutation,HC22,mutation,alignment_error,abstain,,0.407407,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0192592592592592}",R5R,rule_v1
+HC22-mutation,HC22,mutation,alignment_error,abstain,,0.347222,,source,"{""derived_unclustered_edge_ratio"": 0.02777777777777779, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 35.0}",R5S,rule_v1
+HC22-mutation,HC22,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC22-mutation,HC22,mutation,overlap_or_clipping,positive,2.0,1.0,,source,"{""source_content_overlap_pair_count"": 1.0, ""source_ellipsis_token_count"": 1.0}",R6S,rule_v1
+HC23-control,HC23,control,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC23-control,HC23,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC23-control,HC23,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 39.0}",R2R,rule_v1
+HC23-control,HC23,control,figure_detail_unreadable,abstain,,0.985143,,source,"{""source_picture_detail_p25_min_display_px"": 2.052}",R2S,rule_v1
+HC23-control,HC23,control,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 659.0}",R3R,rule_v1
+HC23-control,HC23,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 3059.6488718515448}",R3S,rule_v1
+HC23-control,HC23,control,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0135265432098765, ""grid_occupancy_std"": 0.1135744010019435}",R4R,rule_v1
+HC23-control,HC23,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.03125, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC23-control,HC23,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0081481481481481, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC23-control,HC23,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC23-control,HC23,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC23-control,HC23,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC23-mutation,HC23,mutation,body_text_too_small,abstain,,0.15,,raster,"{""body_line_height_p25_px1080"": 16.8}",R1R,rule_v1
+HC23-mutation,HC23,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC23-mutation,HC23,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 37.0}",R2R,rule_v1
+HC23-mutation,HC23,mutation,figure_detail_unreadable,abstain,,0.985143,,source,"{""source_picture_detail_p25_min_display_px"": 2.052}",R2S,rule_v1
+HC23-mutation,HC23,mutation,text_overload,negative,,0.0,,raster,"{""ocr_character_count"": 649.0}",R3R,rule_v1
+HC23-mutation,HC23,mutation,text_overload,abstain,,0.0,,source,"{""source_character_count"": 656.0, ""source_text_density_max"": 4464.2853481205475}",R3S,rule_v1
+HC23-mutation,HC23,mutation,space_imbalance,negative,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0126179012345679, ""grid_occupancy_std"": 0.1132000579652174}",R4R,rule_v1
+HC23-mutation,HC23,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.03125, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC23-mutation,HC23,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0081481481481481, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC23-mutation,HC23,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC23-mutation,HC23,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC23-mutation,HC23,mutation,overlap_or_clipping,positive,2.0,1.0,,source,"{""source_content_overlap_pair_count"": 1.0, ""source_ellipsis_token_count"": 1.0}",R6S,rule_v1
+HC24-control,HC24,control,body_text_too_small,abstain,,0.35,,raster,"{""body_line_height_p25_px1080"": 15.2}",R1R,rule_v1
+HC24-control,HC24,control,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC24-control,HC24,control,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 46.0}",R2R,rule_v1
+HC24-control,HC24,control,figure_detail_unreadable,abstain,,0.614858,,source,"{""source_picture_detail_p25_min_display_px"": 3.3479976377952756}",R2S,rule_v1
+HC24-control,HC24,control,text_overload,abstain,,0.173333,,raster,"{""ocr_character_count"": 738.0}",R3R,rule_v1
+HC24-control,HC24,control,text_overload,negative,,0.0,,source,"{""source_character_count"": 650.0, ""source_text_density_max"": 2969.348415454893}",R3S,rule_v1
+HC24-control,HC24,control,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0353438271604938, ""grid_occupancy_std"": 0.1079431771763004}",R4R,rule_v1
+HC24-control,HC24,control,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.01, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC24-control,HC24,control,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0083333333333333, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC24-control,HC24,control,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC24-control,HC24,control,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC24-control,HC24,control,overlap_or_clipping,negative,,0.0,,source,"{""source_content_overlap_pair_count"": 0.0, ""source_ellipsis_token_count"": 0.0}",R6S,rule_v1
+HC24-mutation,HC24,mutation,body_text_too_small,abstain,,0.35,,raster,"{""body_line_height_p25_px1080"": 15.2}",R1R,rule_v1
+HC24-mutation,HC24,mutation,body_text_too_small,abstain,,0.375,,source,"{""source_body_font_min_pt"": 10.5}",R1S,rule_v1
+HC24-mutation,HC24,mutation,figure_detail_unreadable,abstain,,,,raster,"{""abstain_reason"": ""No validated raster figure localization; whole-poster OCR count is confounded by text volume."", ""ocr_line_count"": 44.0}",R2R,rule_v1
+HC24-mutation,HC24,mutation,figure_detail_unreadable,abstain,,0.614858,,source,"{""source_picture_detail_p25_min_display_px"": 3.3479976377952756}",R2S,rule_v1
+HC24-mutation,HC24,mutation,text_overload,abstain,,0.093333,,raster,"{""ocr_character_count"": 732.0}",R3R,rule_v1
+HC24-mutation,HC24,mutation,text_overload,abstain,,0.0,,source,"{""source_character_count"": 653.0, ""source_text_density_max"": 4464.2853481205475}",R3S,rule_v1
+HC24-mutation,HC24,mutation,space_imbalance,abstain,,0.0,,raster,"{""foreground_left_right_abs_diff"": 0.0350351851851852, ""grid_occupancy_std"": 0.10723386001676}",R4R,rule_v1
+HC24-mutation,HC24,mutation,space_imbalance,negative,,0.0,,source,"{""source_content_left_right_abs_diff"": 0.01, ""source_largest_empty_grid_rect_ratio"": 0.0}",R4S,rule_v1
+HC24-mutation,HC24,mutation,alignment_error,not_applicable,,,,raster,"{""large_panel_grid_alignment_max_residual_norm"": 0.0083333333333333, ""not_applicable_reason"": ""applicability_gate_failed""}",R5R,rule_v1
+HC24-mutation,HC24,mutation,alignment_error,negative,,0.0,,source,"{""derived_unclustered_edge_ratio"": 0.0, ""source_named_panel_count"": 9.0, ""source_named_panel_edges_in_clusters"": 36.0}",R5S,rule_v1
+HC24-mutation,HC24,mutation,overlap_or_clipping,abstain,,,,raster,"{""abstain_reason"": ""OCR ellipsis misses 5/6 mutations and fires once on a clean control; localized raster evidence is insufficient."", ""edge_touching_ocr_word_count"": 0.0, ""ellipsis_token_count"": 0.0}",R6R,rule_v1
+HC24-mutation,HC24,mutation,overlap_or_clipping,positive,2.0,1.0,,source,"{""source_content_overlap_pair_count"": 1.0, ""source_ellipsis_token_count"": 1.0}",R6S,rule_v1
